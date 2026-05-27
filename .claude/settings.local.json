@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm -v)",
+      "Bash(pnpm create *)",
+      "Bash(mkdir -p /tmp/voc-backup)",
+      "Bash(mv CLAUDE.md vocab-app-spec.md /tmp/voc-backup/)"
+    ]
+  }
+}
