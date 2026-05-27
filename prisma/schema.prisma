@@ -1,0 +1,133 @@
+// Vocabulary Learning Web App — Prisma schema
+// SQLite local file: prisma/dev.db
+// Note: SQLite không hỗ trợ String[] native nên `tags` lưu dạng JSON string
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Deck {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  color       String   @default("#3b82f6")
+  icon        String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  cards       Card[]
+  stories     Story[]
+}
+
+model Card {
+  id                 String   @id @default(cuid())
+  deckId             String
+  deck               Deck     @relation(fields: [deckId], references: [id], onDelete: Cascade)
+
+  word               String
+  meaning            String
+  partOfSpeech       String?
+  phonetic           String?
+  example            String?
+  exampleTranslation String?
+  note               String?
+  imageUrl           String?
+  audioUrl           String?
+  tags               String   @default("[]")
+
+  easeFactor         Float    @default(2.5)
+  interval           Int      @default(0)
+  repetitions        Int      @default(0)
+  nextReviewDate     DateTime @default(now())
+  state              String   @default("NEW")
+  lapses             Int      @default(0)
+
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+
+  reviewLogs         ReviewLog[]
+  storyCards         StoryCard[]
+
+  @@index([deckId])
+  @@index([nextReviewDate])
+  @@index([state])
+}
+
+model ReviewLog {
+  id               String   @id @default(cuid())
+  cardId           String
+  card             Card     @relation(fields: [cardId], references: [id], onDelete: Cascade)
+  rating           Int
+  reviewedAt       DateTime @default(now())
+  timeTakenMs      Int      @default(0)
+  previousInterval Int      @default(0)
+  newInterval      Int      @default(0)
+
+  @@index([cardId])
+  @@index([reviewedAt])
+}
+
+model DailyStat {
+  id            String   @id @default(cuid())
+  date          DateTime @unique
+  cardsReviewed Int      @default(0)
+  cardsLearned  Int      @default(0)
+  correctCount  Int      @default(0)
+  totalCount    Int      @default(0)
+  timeSpentSec  Int      @default(0)
+  xpEarned      Int      @default(0)
+}
+
+model UserProgress {
+  id              String    @id @default("singleton")
+  currentStreak   Int       @default(0)
+  longestStreak   Int       @default(0)
+  lastStudyDate   DateTime?
+  totalXp         Int       @default(0)
+  level           Int       @default(1)
+  dailyGoal       Int       @default(20)
+  freezeTokens    Int       @default(2)
+}
+
+model Achievement {
+  id         String   @id
+  unlockedAt DateTime @default(now())
+}
+
+model Story {
+  id         String      @id @default(cuid())
+  deckId     String
+  deck       Deck        @relation(fields: [deckId], references: [id], onDelete: Cascade)
+
+  title      String
+  content    String
+  imageUrl   String?
+  audioUrl   String?
+
+  readCount  Int         @default(0)
+  lastReadAt DateTime?
+
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+
+  storyCards StoryCard[]
+
+  @@index([deckId])
+}
+
+model StoryCard {
+  id      String @id @default(cuid())
+  storyId String
+  story   Story  @relation(fields: [storyId], references: [id], onDelete: Cascade)
+  cardId  String
+  card    Card   @relation(fields: [cardId], references: [id], onDelete: Cascade)
+  order   Int
+
+  @@unique([storyId, cardId])
+  @@index([storyId])
+  @@index([cardId])
+}

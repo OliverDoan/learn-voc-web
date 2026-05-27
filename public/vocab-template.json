@@ -1,0 +1,40 @@
+{
+  "deck": {
+    "name": "Deck mẫu",
+    "description": "Mô tả ngắn về deck (tùy chọn)",
+    "color": "#3b82f6",
+    "icon": "📚"
+  },
+  "cards": [
+    {
+      "word": "apple",
+      "meaning": "quả táo",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈæp.əl/",
+      "example": "I eat an apple every day.",
+      "exampleTranslation": "Tôi ăn một quả táo mỗi ngày.",
+      "note": "Trái cây phổ biến",
+      "tags": ["fruit", "food", "basic"]
+    },
+    {
+      "word": "run",
+      "meaning": "chạy",
+      "partOfSpeech": "verb",
+      "phonetic": "/rʌn/",
+      "example": "She runs in the park every morning.",
+      "exampleTranslation": "Cô ấy chạy bộ trong công viên mỗi sáng.",
+      "note": null,
+      "tags": ["action", "sport"]
+    },
+    {
+      "word": "beautiful",
+      "meaning": "đẹp",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˈbjuː.tɪ.fəl/",
+      "example": "The sunset is beautiful tonight.",
+      "exampleTranslation": "Hoàng hôn tối nay thật đẹp.",
+      "note": "Dùng cho người và vật",
+      "tags": ["appearance"]
+    }
+  ]
+}
