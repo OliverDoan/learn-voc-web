@@ -143,6 +143,12 @@ level = floor(sqrt(totalXp / 100)) + 1
 - ✅ **Phase 3**: Quiz multiple choice + typing + listening
 - ✅ **Phase 4**: Story (truyện chêm) — editor + view + fill-in-blank quiz
 - ✅ **Phase 5**: Dashboard + stats charts + heatmap 365 ngày + achievements
+- 🔄 **Phase 6 — IELTS module** (band 5.0 – 6.5)
+  - ✅ 6.1 Foundation: trang `/ielts` overview + 4 sub-page guide (Listening / Reading / Writing / Speaking) + `lib/ielts-content.ts`
+  - ⏳ 6.2 Reading practice: schema `ReadingPassage` + `ReadingQuestion`, MCQ / T-F-NG / Matching
+  - ⏳ 6.3 Listening practice: schema `ListeningTest` + audio storage, fill-in-blank + MCQ
+  - ⏳ 6.4 Writing practice: `WritingPrompt` + `WritingSubmission`, AI chấm (Claude API)
+  - ⏳ 6.5 Speaking practice: `SpeakingPrompt` + `SpeakingRecording`, MediaRecorder + AI chấm
 
 ## Quick start
 

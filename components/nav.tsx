@@ -2,17 +2,35 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BookOpen, Home, BarChart3, Layers, Settings, Trophy } from "lucide-react";
+import {
+  BarChart3,
+  BookOpen,
+  GraduationCap,
+  Home,
+  Layers,
+  Settings,
+  Trophy,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./theme-toggle";
 
-const items = [
-  { href: "/", label: "Trang chủ", icon: Home },
-  { href: "/decks", label: "Decks", icon: Layers },
-  { href: "/stats", label: "Thống kê", icon: BarChart3 },
-  { href: "/achievements", label: "Huy hiệu", icon: Trophy },
-  { href: "/settings", label: "Cài đặt", icon: Settings },
+interface NavItem {
+  href: string;
+  label: string;
+  icon: typeof Home;
+  mobile?: boolean;
+}
+
+const items: NavItem[] = [
+  { href: "/", label: "Trang chủ", icon: Home, mobile: true },
+  { href: "/decks", label: "Decks", icon: Layers, mobile: true },
+  { href: "/ielts", label: "IELTS", icon: GraduationCap, mobile: true },
+  { href: "/stats", label: "Thống kê", icon: BarChart3, mobile: true },
+  { href: "/achievements", label: "Huy hiệu", icon: Trophy, mobile: false },
+  { href: "/settings", label: "Cài đặt", icon: Settings, mobile: true },
 ];
+
+const mobileItems = items.filter((i) => i.mobile);
 
 export function Nav() {
   const pathname = usePathname();
@@ -58,7 +76,7 @@ export function MobileNav() {
   return (
     <nav className="md:hidden fixed bottom-0 inset-x-0 z-40 border-t bg-card/95 backdrop-blur">
       <ul className="grid grid-cols-5">
-        {items.map((item) => {
+        {mobileItems.map((item) => {
           const active =
             item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
           return (
