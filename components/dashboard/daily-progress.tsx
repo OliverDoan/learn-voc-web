@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import { Settings2 } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 
 interface DailyProgressProps {
@@ -18,9 +20,18 @@ export function DailyProgress({ reviewed, goal }: DailyProgressProps) {
         </span>
       </div>
       <Progress value={reviewed} max={goal} className="h-3" />
-      <p className="mt-2 text-xs text-muted-foreground">
-        {pct >= 100 ? "🎉 Hoàn thành! Quá tuyệt." : `${pct}% — cố lên!`}
-      </p>
+      <div className="mt-2 flex items-center justify-between">
+        <p className="text-xs text-muted-foreground">
+          {pct >= 100 ? "🎉 Hoàn thành! Quá tuyệt." : `${pct}% — cố lên!`}
+        </p>
+        <Link
+          href="/settings"
+          className="flex items-center gap-1 text-xs text-muted-foreground transition-colors hover:text-primary"
+        >
+          <Settings2 className="h-3 w-3" />
+          Đổi mục tiêu
+        </Link>
+      </div>
     </div>
   );
 }

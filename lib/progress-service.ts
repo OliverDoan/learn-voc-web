@@ -20,6 +20,18 @@ export async function getUserProgress() {
   });
 }
 
+export async function updateUserProgress(patch: {
+  dailyGoal?: number;
+  freezeTokens?: number;
+}) {
+  // Đảm bảo record singleton tồn tại trước khi update
+  await getUserProgress();
+  return prisma.userProgress.update({
+    where: { id: SINGLETON_PROGRESS_ID },
+    data: patch,
+  });
+}
+
 export async function recordStudyActivity(now: Date = new Date()) {
   const progress = await getUserProgress();
   const today = startOfDay(now);

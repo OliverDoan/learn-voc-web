@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BookOpen, Home, BarChart3, Layers, Trophy } from "lucide-react";
+import { BookOpen, Home, BarChart3, Layers, Settings, Trophy } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./theme-toggle";
 
@@ -11,6 +11,7 @@ const items = [
   { href: "/decks", label: "Decks", icon: Layers },
   { href: "/stats", label: "Thống kê", icon: BarChart3 },
   { href: "/achievements", label: "Huy hiệu", icon: Trophy },
+  { href: "/settings", label: "Cài đặt", icon: Settings },
 ];
 
 export function Nav() {
@@ -56,7 +57,7 @@ export function MobileNav() {
 
   return (
     <nav className="md:hidden fixed bottom-0 inset-x-0 z-40 border-t bg-card/95 backdrop-blur">
-      <ul className="grid grid-cols-4">
+      <ul className="grid grid-cols-5">
         {items.map((item) => {
           const active =
             item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
