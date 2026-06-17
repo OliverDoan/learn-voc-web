@@ -6,8 +6,14 @@ import { speak } from "@/lib/tts";
 import { displayRootWord } from "@/lib/utils";
 import type { QueueCard } from "@/lib/daily-queue";
 
+// Chỉ những field cần để hiển thị thẻ — cả QueueCard (SRS) lẫn Card đều thoả.
+export type FlashcardData = Pick<
+  QueueCard,
+  "word" | "meaning" | "partOfSpeech" | "rootWord" | "phonetic" | "example" | "exampleTranslation"
+>;
+
 interface FlashcardProps {
-  card: QueueCard;
+  card: FlashcardData;
   flipped: boolean;
   onFlip: () => void;
   reverse?: boolean;
@@ -94,7 +100,7 @@ function FaceShell({ children }: { children: React.ReactNode }) {
   );
 }
 
-function WordFace({ card }: { card: QueueCard }) {
+function WordFace({ card }: { card: FlashcardData }) {
   return (
     <FaceShell>
       <div className="flex items-center gap-3">
@@ -112,7 +118,7 @@ function WordFace({ card }: { card: QueueCard }) {
   );
 }
 
-function MeaningFace({ card }: { card: QueueCard }) {
+function MeaningFace({ card }: { card: FlashcardData }) {
   return (
     <FaceShell>
       <div className="eyebrow !text-[#7eb0ff]">Đảo chiều · Việt → Anh</div>
@@ -127,7 +133,7 @@ function MeaningFace({ card }: { card: QueueCard }) {
   );
 }
 
-function BackFace({ card, reverse }: { card: QueueCard; reverse: boolean }) {
+function BackFace({ card, reverse }: { card: FlashcardData; reverse: boolean }) {
   const root = displayRootWord(card.word, card.rootWord);
   return (
     <div

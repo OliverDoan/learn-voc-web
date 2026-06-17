@@ -27,6 +27,8 @@ export default function StudyPage({ params }: PageProps) {
     return raw.split(",").map((s) => s.trim()).filter(Boolean);
   }, [searchParams]);
   const isSubset = !!subsetIds && subsetIds.length > 0;
+  // deckId ảo "all" (ôn liên deck) → thoát về dashboard
+  const backHref = deckId === "all" ? "/" : `/decks/${deckId}`;
 
   const { data: queue, isLoading, refetch } = useStudyQueue(deckId, subsetIds);
   const submit = useSubmitReview();
@@ -123,13 +125,13 @@ export default function StudyPage({ params }: PageProps) {
   }
 
   if (!queue || queue.length === 0) {
-    return <EmptyQueue deckId={deckId} />;
+    return <EmptyQueue backHref={backHref} />;
   }
 
   if (done) {
     return (
       <SessionDone
-        deckId={deckId}
+        backHref={backHref}
         total={total}
         correct={correct}
         xp={totalXp}
@@ -160,7 +162,7 @@ export default function StudyPage({ params }: PageProps) {
       <div className="mb-4 w-full">
         <div className="mb-2 flex items-center justify-between text-sm">
           <Link
-            href={`/decks/${deckId}`}
+            href={backHref}
             className="flex items-center gap-1 text-muted-foreground hover:text-foreground"
           >
             <ArrowLeft className="h-4 w-4" /> Thoát
@@ -215,7 +217,7 @@ export default function StudyPage({ params }: PageProps) {
   );
 }
 
-function EmptyQueue({ deckId }: { deckId: string }) {
+function EmptyQueue({ backHref }: { backHref: string }) {
   return (
     <div className="container mx-auto max-w-xl p-6 text-center">
       <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
@@ -225,21 +227,21 @@ function EmptyQueue({ deckId }: { deckId: string }) {
       <p className="mb-6 text-muted-foreground">
         Bạn đã ôn hết các từ đến hạn. Hãy thêm từ mới hoặc quay lại sau.
       </p>
-      <Link href={`/decks/${deckId}`}>
-        <Button variant="outline" className="rounded-full">Quay lại deck</Button>
+      <Link href={backHref}>
+        <Button variant="outline" className="rounded-full">Quay lại</Button>
       </Link>
     </div>
   );
 }
 
 function SessionDone({
-  deckId,
+  backHref,
   total,
   correct,
   xp,
   onAgain,
 }: {
-  deckId: string;
+  backHref: string;
   total: number;
   correct: number;
   xp: number;
@@ -262,8 +264,8 @@ function SessionDone({
         <Button onClick={onAgain} variant="outline" className="rounded-full">
           Tải thêm từ
         </Button>
-        <Link href={`/decks/${deckId}`}>
-          <Button className="rounded-full">Về deck</Button>
+        <Link href={backHref}>
+          <Button className="rounded-full">Xong</Button>
         </Link>
       </div>
     </div>

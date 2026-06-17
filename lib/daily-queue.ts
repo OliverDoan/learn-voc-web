@@ -57,7 +57,7 @@ export async function getReviewQueue(
 
   if (opts.cardIds && opts.cardIds.length > 0) {
     const cards = await prisma.card.findMany({
-      where: { deckId, id: { in: [...opts.cardIds] } },
+      where: { deckId, id: { in: [...opts.cardIds] }, deletedAt: null },
     });
     const byId = new Map(cards.map((c) => [c.id, c] as const));
     return opts.cardIds.flatMap((id) => {
@@ -75,6 +75,7 @@ export async function getReviewQueue(
   const reviewCards = await prisma.card.findMany({
     where: {
       deckId,
+      deletedAt: null,
       state: { not: "NEW" },
       nextReviewDate: { lte: now },
     },
@@ -84,7 +85,7 @@ export async function getReviewQueue(
   const remaining = Math.max(0, dailyGoal - reviewCards.length);
   const newCards = remaining > 0
     ? await prisma.card.findMany({
-        where: { deckId, state: "NEW" },
+        where: { deckId, deletedAt: null, state: "NEW" },
         orderBy: { createdAt: "asc" },
         take: remaining,
       })
@@ -93,13 +94,58 @@ export async function getReviewQueue(
   return [...reviewCards, ...newCards].map(toQueueCard);
 }
 
+/**
+ * Hàng đợi ôn tập GỘP TẤT CẢ DECK: thẻ đến hạn (mọi deck) + bù thẻ NEW tới dailyGoal.
+ */
+export async function getGlobalReviewQueue(): Promise<QueueCard[]> {
+  const now = new Date();
+  const progress = await prisma.userProgress.findUnique({
+    where: { id: SINGLETON_PROGRESS_ID },
+  });
+  const dailyGoal = progress?.dailyGoal ?? DEFAULT_DAILY_GOAL;
+
+  const reviewCards = await prisma.card.findMany({
+    where: {
+      deletedAt: null,
+      deck: { deletedAt: null },
+      state: { not: "NEW" },
+      nextReviewDate: { lte: now },
+    },
+    orderBy: [{ state: "asc" }, { nextReviewDate: "asc" }],
+  });
+
+  const remaining = Math.max(0, dailyGoal - reviewCards.length);
+  const newCards = remaining > 0
+    ? await prisma.card.findMany({
+        where: { deletedAt: null, deck: { deletedAt: null }, state: "NEW" },
+        orderBy: { createdAt: "asc" },
+        take: remaining,
+      })
+    : [];
+
+  return [...reviewCards, ...newCards].map(toQueueCard);
+}
+
+/** Lấy đúng các thẻ theo danh sách id (cross-deck), giữ thứ tự truyền vào. */
+export async function getCardsByIds(ids: readonly string[]): Promise<QueueCard[]> {
+  if (ids.length === 0) return [];
+  const cards = await prisma.card.findMany({
+    where: { id: { in: [...ids] }, deletedAt: null, deck: { deletedAt: null } },
+  });
+  const byId = new Map(cards.map((c) => [c.id, c] as const));
+  return ids.flatMap((id) => {
+    const c = byId.get(id);
+    return c ? [toQueueCard(c)] : [];
+  });
+}
+
 export async function countDueCards(deckId: string): Promise<{ due: number; newCount: number }> {
   const now = new Date();
   const [due, newCount] = await Promise.all([
     prisma.card.count({
-      where: { deckId, state: { not: "NEW" }, nextReviewDate: { lte: now } },
+      where: { deckId, deletedAt: null, state: { not: "NEW" }, nextReviewDate: { lte: now } },
     }),
-    prisma.card.count({ where: { deckId, state: "NEW" } }),
+    prisma.card.count({ where: { deckId, deletedAt: null, state: "NEW" } }),
   ]);
   return { due, newCount };
 }

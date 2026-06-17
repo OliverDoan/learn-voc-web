@@ -1,6 +1,6 @@
 "use client";
 
-import { X } from "lucide-react";
+import { Star, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
@@ -23,6 +23,8 @@ interface CardsFilterBarProps {
   selectedTags: string[];
   onToggleTag: (tag: string) => void;
   onClearTags: () => void;
+  favoriteOnly: boolean;
+  onToggleFavoriteOnly: () => void;
   matchCount: number;
   totalCount: number;
 }
@@ -34,11 +36,13 @@ export function CardsFilterBar({
   selectedTags,
   onToggleTag,
   onClearTags,
+  favoriteOnly,
+  onToggleFavoriteOnly,
   matchCount,
   totalCount,
 }: CardsFilterBarProps) {
   const hasTagFilter = selectedTags.length > 0;
-  const isFiltering = state !== "ALL" || hasTagFilter;
+  const isFiltering = state !== "ALL" || hasTagFilter || favoriteOnly;
 
   return (
     <div className="mb-4 space-y-2">
@@ -58,6 +62,20 @@ export function CardsFilterBar({
             {opt.label}
           </button>
         ))}
+        <button
+          type="button"
+          onClick={onToggleFavoriteOnly}
+          className={cn(
+            "inline-flex items-center gap-1 rounded-md border px-3 py-1 text-xs transition-colors",
+            favoriteOnly
+              ? "border-amber-400 bg-amber-400/10 text-amber-500"
+              : "border-border text-muted-foreground hover:border-amber-400/40 hover:text-foreground",
+          )}
+          aria-pressed={favoriteOnly}
+        >
+          <Star className={cn("h-3 w-3", favoriteOnly && "fill-current")} />
+          Yêu thích
+        </button>
         {isFiltering ? (
           <span className="ml-auto text-xs text-muted-foreground">
             {matchCount} / {totalCount} từ

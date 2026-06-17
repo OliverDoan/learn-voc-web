@@ -45,7 +45,11 @@ export async function PATCH(req: NextRequest, { params }: RouteParams) {
 export async function DELETE(_req: NextRequest, { params }: RouteParams) {
   try {
     const { cardId } = await params;
-    await prisma.card.delete({ where: { id: cardId } });
+    // Soft delete: chuyển vào thùng rác thay vì xoá vĩnh viễn
+    await prisma.card.update({
+      where: { id: cardId },
+      data: { deletedAt: new Date() },
+    });
     return ok({ id: cardId });
   } catch (error) {
     return handleError(error);

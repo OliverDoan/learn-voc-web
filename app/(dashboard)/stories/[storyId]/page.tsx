@@ -1,15 +1,16 @@
 "use client";
 
-import { use, useEffect, useState } from "react";
+import { use, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ArrowLeft, BookOpen, Eye, EyeOff, Pencil, Target, Trash2, Volume2 } from "lucide-react";
+import { ArrowLeft, BookOpen, Eye, EyeOff, Pencil, Square, Target, Trash2, Volume2 } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
+import { useConfirm } from "@/components/ui/confirm-dialog";
 import { StoryRenderer } from "@/components/story/story-renderer";
 import { useDeleteStory, useMarkStoryRead, useStory } from "@/hooks/use-stories";
-import { countWordTokens, plainText } from "@/lib/story-parser";
-import { speak, stopSpeaking } from "@/lib/tts";
+import { countWordTokens, parseStory } from "@/lib/story-parser";
+import { speakAsync, stopSpeaking } from "@/lib/tts";
 
 interface PageProps {
   params: Promise<{ storyId: string }>;
@@ -21,16 +22,44 @@ export default function StoryViewPage({ params }: PageProps) {
   const [showMeanings, setShowMeanings] = useState(false);
   const [hideWords, setHideWords] = useState(false);
   const [marked, setMarked] = useState(false);
+  const [reading, setReading] = useState(false);
+  const readCancelRef = useRef(false);
 
   const { data: story, isLoading } = useStory(storyId);
   const markRead = useMarkStoryRead();
   const deleteStory = useDeleteStory();
+  const { confirm, confirmDialog } = useConfirm();
 
-  useEffect(() => () => stopSpeaking(), []);
+  useEffect(
+    () => () => {
+      readCancelRef.current = true;
+      stopSpeaking();
+    },
+    [],
+  );
 
-  const handleReadAloud = () => {
+  // Đọc truyện đúng ngôn ngữ: phần văn tiếng Việt (vi-VN), từ chêm tiếng Anh (en-US).
+  const handleReadAloud = async () => {
     if (!story) return;
-    speak(plainText(story.content), "en-US", 0.9);
+    if (reading) {
+      readCancelRef.current = true;
+      stopSpeaking();
+      setReading(false);
+      return;
+    }
+    readCancelRef.current = false;
+    setReading(true);
+    const tokens = parseStory(story.content);
+    for (const tok of tokens) {
+      if (readCancelRef.current) break;
+      if (tok.type === "text") {
+        const text = tok.text.trim();
+        if (text) await speakAsync(text, "vi-VN", 0.95);
+      } else {
+        await speakAsync(tok.word, "en-US", 0.95);
+      }
+    }
+    if (!readCancelRef.current) setReading(false);
   };
 
   const handleMarkRead = async () => {
@@ -45,7 +74,12 @@ export default function StoryViewPage({ params }: PageProps) {
   };
 
   const handleDelete = async () => {
-    if (!story || !confirm(`Xoá truyện "${story.title}"?`)) return;
+    if (!story) return;
+    const ok = await confirm({
+      title: `Xoá truyện "${story.title}"?`,
+      description: "Truyện chêm sẽ bị xoá. Hành động này không thể hoàn tác.",
+    });
+    if (!ok) return;
     try {
       await deleteStory.mutateAsync(storyId);
       toast.success("Đã xoá truyện");
@@ -105,8 +139,14 @@ export default function StoryViewPage({ params }: PageProps) {
       </div>
 
       <div className="mb-6 flex flex-wrap justify-center gap-2">
-        <Button variant="outline" size="sm" className="rounded-full" onClick={handleReadAloud}>
-          <Volume2 className="h-4 w-4" /> Đọc to
+        <Button
+          variant={reading ? "default" : "outline"}
+          size="sm"
+          className="rounded-full"
+          onClick={handleReadAloud}
+        >
+          {reading ? <Square className="h-4 w-4 fill-current" /> : <Volume2 className="h-4 w-4" />}
+          {reading ? "Dừng" : "Đọc to"}
         </Button>
         <Button
           variant="outline"
@@ -159,6 +199,7 @@ export default function StoryViewPage({ params }: PageProps) {
           {marked ? "Đã đánh dấu" : "Đã đọc xong (+10 XP)"}
         </Button>
       </div>
+      {confirmDialog}
     </div>
   );
 }

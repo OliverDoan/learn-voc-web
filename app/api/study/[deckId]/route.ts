@@ -1,6 +1,10 @@
 import { NextRequest } from "next/server";
 import { handleError, ok } from "@/lib/api-helpers";
-import { getReviewQueue } from "@/lib/daily-queue";
+import {
+  getCardsByIds,
+  getGlobalReviewQueue,
+  getReviewQueue,
+} from "@/lib/daily-queue";
 
 interface RouteParams {
   params: Promise<{ deckId: string }>;
@@ -14,12 +18,23 @@ export async function GET(req: NextRequest, { params }: RouteParams) {
     const url = new URL(req.url);
     const idsParam = url.searchParams.get("ids")?.trim();
 
-    if (idsParam) {
-      const cardIds = idsParam
-        .split(",")
-        .map((s) => s.trim())
-        .filter(Boolean)
-        .slice(0, MAX_SUBSET);
+    const cardIds = idsParam
+      ? idsParam
+          .split(",")
+          .map((s) => s.trim())
+          .filter(Boolean)
+          .slice(0, MAX_SUBSET)
+      : null;
+
+    // deckId ảo "all" → ôn liên deck (gộp mọi deck)
+    if (deckId === "all") {
+      const queue = cardIds
+        ? await getCardsByIds(cardIds)
+        : await getGlobalReviewQueue();
+      return ok(queue);
+    }
+
+    if (cardIds) {
       const queue = await getReviewQueue(deckId, { cardIds });
       return ok(queue);
     }

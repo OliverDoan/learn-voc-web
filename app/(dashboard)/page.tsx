@@ -4,10 +4,11 @@ import { useMemo } from "react";
 import Link from "next/link";
 import { format } from "date-fns";
 import { vi } from "date-fns/locale";
-import { Award, Check, Layers, Loader2, Play } from "lucide-react";
+import { Award, Check, Layers, Loader2, Play, TriangleAlert } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useDecks } from "@/hooks/use-decks";
 import { useProgress, useStats } from "@/hooks/use-progress";
+import { useWeakWords } from "@/hooks/use-weak-words";
 import type { DeckWithCounts } from "@/lib/types";
 
 const VN_DAYS = ["CN", "T2", "T3", "T4", "T5", "T6", "T7"];
@@ -16,6 +17,7 @@ export default function DashboardPage() {
   const { data: decks } = useDecks();
   const { data: progress, isLoading: pLoading } = useProgress();
   const { data: stats, isLoading: sLoading } = useStats(365);
+  const { data: weakWords } = useWeakWords();
 
   const totalDue = useMemo(
     () => (decks ? decks.reduce((sum, d) => sum + d.due, 0) : 0),
@@ -30,8 +32,6 @@ export default function DashboardPage() {
         .slice(0, 4),
     [decks],
   );
-
-  const firstDueDeckId = dueDecks[0]?.id ?? decks?.[0]?.id;
 
   const matureCount = useMemo(
     () => stats?.stateDistribution.find((s) => s.state === "MATURE")?.count ?? 0,
@@ -108,14 +108,14 @@ export default function DashboardPage() {
             </div>
           )}
 
-          {firstDueDeckId ? (
-            <Link href={`/study/${firstDueDeckId}`}>
+          {totalDue > 0 ? (
+            <Link href="/study/all">
               <Button
                 variant="outline"
                 className="mt-3.5 w-full rounded-full border-[1.5px] border-primary py-6 text-sm font-bold text-primary hover:bg-primary/5"
               >
                 <Play className="h-4 w-4" />
-                Ôn tất cả {totalDue} từ
+                Ôn tất cả {totalDue} từ (mọi deck)
               </Button>
             </Link>
           ) : null}
@@ -187,6 +187,49 @@ export default function DashboardPage() {
           </Link>
         </div>
       </div>
+
+      {/* Từ hay sai */}
+      {weakWords && weakWords.length > 0 ? (
+        <section className="mt-8">
+          <div className="mb-3.5 flex items-center justify-between gap-3">
+            <h2 className="flex items-center gap-2 text-[15.5px] font-bold">
+              <TriangleAlert className="h-4 w-4 text-warning" />
+              Từ hay sai
+            </h2>
+            <Link
+              href={`/study/all?ids=${weakWords.slice(0, 20).map((w) => w.id).join(",")}`}
+            >
+              <Button
+                size="sm"
+                className="rounded-full shadow-[0_8px_20px_rgba(23,61,201,.28)]"
+              >
+                <Play className="h-3.5 w-3.5" />
+                Ôn {Math.min(weakWords.length, 20)} từ này
+              </Button>
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+            {weakWords.slice(0, 6).map((w) => (
+              <Link
+                key={w.id}
+                href={`/study/all?ids=${w.id}`}
+                className="flex items-center gap-3 rounded-[14px] border bg-card p-3.5 transition-colors hover:border-primary"
+              >
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-baseline gap-2">
+                    <span className="truncate font-bold">{w.word}</span>
+                    <span className="truncate text-xs text-muted-foreground">{w.meaning}</span>
+                  </div>
+                  <div className="mt-0.5 text-[11px] text-muted-foreground">{w.deckName}</div>
+                </div>
+                <span className="font-mono shrink-0 rounded-full bg-destructive/10 px-2.5 py-1 text-xs font-bold text-destructive">
+                  sai {w.wrong}/{w.total}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       {/* Decks shortcut */}
       <section className="mt-8">

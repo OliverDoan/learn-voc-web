@@ -42,7 +42,15 @@ export const cardCreateSchema = z.object({
   wordForms: wordFormsSchema.optional().nullable(),
 });
 
-export const cardUpdateSchema = cardCreateSchema.partial().omit({ deckId: true });
+export const cardUpdateSchema = cardCreateSchema
+  .partial()
+  .omit({ deckId: true })
+  .extend({
+    favorite: z.boolean().optional(),
+    // Bỏ .default([]) của cardCreateSchema: khi update mà không gửi `tags`,
+    // field phải là undefined (không động tới) thay vì [] (vô tình xoá hết tag).
+    tags: z.array(z.string().trim().min(1).max(30)).max(10).optional(),
+  });
 
 export const cardImportItemSchema = z.object({
   word: z.string().trim().min(1).max(120),
@@ -74,6 +82,14 @@ export type DeckImportInput = z.infer<typeof deckImportSchema>;
 
 export type CardCreateInput = z.infer<typeof cardCreateSchema>;
 export type CardUpdateInput = z.infer<typeof cardUpdateSchema>;
+
+// Thao tác trên thùng rác: khôi phục hoặc xoá vĩnh viễn
+export const trashActionSchema = z.object({
+  action: z.enum(["restore", "purge"]),
+  ids: z.array(z.string().min(1)).min(1, "Không có thẻ nào được chọn").max(1000),
+});
+
+export type TrashActionInput = z.infer<typeof trashActionSchema>;
 
 export const reviewSchema = z.object({
   cardId: z.string().min(1),

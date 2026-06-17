@@ -9,6 +9,7 @@ import {
   CheckCircle2,
   Headphones,
   Keyboard,
+  LayoutGrid,
   ListChecks,
   Loader2,
   PenLine,
@@ -26,6 +27,7 @@ import { ListeningQuiz } from "@/components/quiz/listening-quiz";
 import { GapFillQuiz } from "@/components/quiz/gap-fill-quiz";
 import { WordFormationQuiz } from "@/components/quiz/word-formation-quiz";
 import { MatchingGameLauncher } from "@/components/quiz/matching-game";
+import { TestModeQuiz } from "@/components/quiz/test-mode-quiz";
 import { useCards } from "@/hooks/use-cards";
 import { useSubmitReview } from "@/hooks/use-study";
 import { haptic } from "@/lib/haptic";
@@ -39,7 +41,8 @@ type QuizMode =
   | "listening"
   | "gap-fill"
   | "word-formation"
-  | "matching";
+  | "matching"
+  | "test";
 type QuizDirection = "word-to-meaning" | "meaning-to-word";
 
 interface PageProps {
@@ -53,10 +56,10 @@ const MODES: { id: QuizMode; label: string; icon: LucideIcon; desc: string; minC
   { id: "gap-fill", label: "Điền từ vào câu", icon: PenLine, desc: "Điền từ còn thiếu vào câu ví dụ", minCards: 1 },
   { id: "word-formation", label: "Biến đổi từ", icon: Repeat, desc: "Biến đổi từ gốc sang đúng dạng từ loại", minCards: 1 },
   { id: "matching", label: "Ghép cặp", icon: Puzzle, desc: "Ghép 6 cặp từ ↔ nghĩa, tính thời gian", minCards: 6 },
+  { id: "test", label: "Làm bài", icon: LayoutGrid, desc: "Lưới câu hỏi, nhảy tự do giữa các câu", minCards: 4 },
 ];
 
-const REVERSE_MODES: QuizMode[] = ["multiple-choice", "typing"];
-const QUIZ_LIMIT = 10;
+const REVERSE_MODES: QuizMode[] = ["multiple-choice", "typing", "test"];
 
 export default function QuizPage({ params }: PageProps) {
   const { deckId } = use(params);
@@ -105,7 +108,7 @@ export default function QuizPage({ params }: PageProps) {
 
   const quizCards = useMemo(() => {
     if (!mode) return [];
-    return [...poolForMode(mode)].sort(() => Math.random() - 0.5).slice(0, QUIZ_LIMIT);
+    return [...poolForMode(mode)].sort(() => Math.random() - 0.5);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mode, sourceCards, gapFillPool, wordFormPool]);
 
@@ -164,7 +167,7 @@ export default function QuizPage({ params }: PageProps) {
           </Button>
         </div>
         <p className="mb-6 text-sm text-muted-foreground">
-          10 câu ngẫu nhiên (hoặc 6 cặp cho ghép cặp). Đảo chiều áp dụng cho Trắc nghiệm và Gõ từ.
+          Toàn bộ từ trong deck theo thứ tự ngẫu nhiên (ghép cặp tính theo lượt 6 cặp). Đảo chiều áp dụng cho Trắc nghiệm và Gõ từ.
         </p>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {MODES.map((m) => {
@@ -201,6 +204,19 @@ export default function QuizPage({ params }: PageProps) {
 
   const direction: QuizDirection =
     reverse && REVERSE_MODES.includes(mode) ? "meaning-to-word" : "word-to-meaning";
+
+  if (mode === "test") {
+    return (
+      <TestModeQuiz
+        cards={quizCards}
+        allCards={sourceCards}
+        deckId={deckId}
+        direction={direction}
+        reverseActive={reverse}
+        onExit={() => setMode(null)}
+      />
+    );
+  }
 
   return (
     <QuizRunner

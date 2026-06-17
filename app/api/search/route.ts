@@ -29,6 +29,7 @@ export async function GET(req: NextRequest) {
     const [decks, cards, stories] = await Promise.all([
       prisma.deck.findMany({
         where: {
+          deletedAt: null,
           OR: [
             { name: { contains: q } },
             { description: { contains: q } },
@@ -40,6 +41,8 @@ export async function GET(req: NextRequest) {
       }),
       prisma.card.findMany({
         where: {
+          deletedAt: null,
+          deck: { deletedAt: null },
           OR: [
             { word: { contains: q } },
             { meaning: { contains: q } },
@@ -57,6 +60,7 @@ export async function GET(req: NextRequest) {
       }),
       prisma.story.findMany({
         where: {
+          deck: { deletedAt: null },
           OR: [
             { title: { contains: q } },
             { content: { contains: q } },

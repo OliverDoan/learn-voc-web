@@ -35,6 +35,7 @@ export function useSubmitReview() {
       qc.invalidateQueries({ queryKey: ["cards"] });
       qc.invalidateQueries({ queryKey: ["progress"] });
       qc.invalidateQueries({ queryKey: ["stats"] });
+      qc.invalidateQueries({ queryKey: ["weak-words"] });
     },
   });
 }

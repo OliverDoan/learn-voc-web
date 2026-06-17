@@ -7,12 +7,15 @@ import {
   ArrowLeft,
   BookOpen,
   Check,
+  Layers,
+  Mic,
   Pencil,
   Play,
   Plus,
   Sprout,
   Square,
   SquareCheck,
+  Star,
   Trash2,
   Upload,
   Volume2,
@@ -22,6 +25,7 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
+import { useConfirm } from "@/components/ui/confirm-dialog";
 import { CardFormDialog } from "@/components/deck/card-form-dialog";
 import { DeckFormDialog } from "@/components/deck/deck-form-dialog";
 import { ImportCardsDialog } from "@/components/deck/import-cards-dialog";
@@ -29,8 +33,8 @@ import { ExportButton } from "@/components/deck/export-cards-dialog";
 import { ReadAllButton } from "@/components/deck/read-all-button";
 import { CardsFilterBar, type CardStateFilter } from "@/components/deck/cards-filter-bar";
 import { StoryList } from "@/components/story/story-list";
-import { useCards, useDeleteCard } from "@/hooks/use-cards";
-import { useDeck, useDeleteDeck } from "@/hooks/use-decks";
+import { useCards, useDeleteCard, useRestoreCard, useToggleFavorite } from "@/hooks/use-cards";
+import { useDeck, useDeleteDeck, useRestoreDeck } from "@/hooks/use-decks";
 import { displayRootWord, parseTags } from "@/lib/utils";
 import { speak } from "@/lib/tts";
 import type { Card as CardType } from "@/lib/types";
@@ -65,6 +69,7 @@ export default function DeckDetailPage({ params }: PageProps) {
   const [search, setSearch] = useState("");
   const [stateFilter, setStateFilter] = useState<CardStateFilter>("ALL");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [favoriteOnly, setFavoriteOnly] = useState(false);
   const [selectedIds, setSelectedIds] = useState<Set<string>>(() => new Set());
 
   const { data: deck, isLoading: deckLoading } = useDeck(deckId);
@@ -74,7 +79,11 @@ export default function DeckDetailPage({ params }: PageProps) {
     state: stateFilter === "ALL" ? undefined : stateFilter,
   });
   const deleteCardMut = useDeleteCard();
+  const restoreCardMut = useRestoreCard();
+  const toggleFavoriteMut = useToggleFavorite();
   const deleteDeckMut = useDeleteDeck();
+  const restoreDeckMut = useRestoreDeck();
+  const { confirm, confirmDialog } = useConfirm();
 
   const availableTags = useMemo(() => {
     if (!cards) return [] as string[];
@@ -87,12 +96,15 @@ export default function DeckDetailPage({ params }: PageProps) {
 
   const filteredCards = useMemo<CardType[]>(() => {
     if (!cards) return [];
-    if (selectedTags.length === 0) return cards;
     return cards.filter((c) => {
-      const tags = parseTags(c.tags);
-      return selectedTags.every((t) => tags.includes(t));
+      if (favoriteOnly && !c.favorite) return false;
+      if (selectedTags.length > 0) {
+        const tags = parseTags(c.tags);
+        if (!selectedTags.every((t) => tags.includes(t))) return false;
+      }
+      return true;
     });
-  }, [cards, selectedTags]);
+  }, [cards, selectedTags, favoriteOnly]);
 
   const toggleTag = (tag: string) => {
     setSelectedTags((prev) =>
@@ -138,22 +150,75 @@ export default function DeckDetailPage({ params }: PageProps) {
     router.push(`/quiz/${deckId}?ids=${encodeURIComponent(ids)}`);
   };
 
+  const goFlashcardsSelected = () => {
+    if (selectedIds.size === 0) return;
+    const ids = Array.from(selectedIds).join(",");
+    router.push(`/flashcards/${deckId}?ids=${encodeURIComponent(ids)}`);
+  };
+
+  const goPronounceSelected = () => {
+    if (selectedIds.size === 0) return;
+    const ids = Array.from(selectedIds).join(",");
+    router.push(`/pronounce/${deckId}?ids=${encodeURIComponent(ids)}`);
+  };
+
+  const handleToggleFavorite = async (card: CardType) => {
+    try {
+      await toggleFavoriteMut.mutateAsync({ cardId: card.id, favorite: !card.favorite });
+      toast.success(card.favorite ? "Đã bỏ yêu thích" : "Đã thêm vào yêu thích");
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : "Lỗi khi cập nhật yêu thích");
+    }
+  };
+
   const handleDeleteCard = async (cardId: string) => {
-    if (!confirm("Xoá từ này?")) return;
+    const ok = await confirm({
+      title: "Xoá từ này?",
+      description: "Từ sẽ được chuyển vào Thùng rác — bạn có thể khôi phục bất cứ lúc nào.",
+    });
+    if (!ok) return;
     try {
       await deleteCardMut.mutateAsync(cardId);
-      toast.success("Đã xoá từ");
+      toast.success("Đã chuyển từ vào thùng rác", {
+        action: {
+          label: "Hoàn tác",
+          onClick: async () => {
+            try {
+              await restoreCardMut.mutateAsync(cardId);
+              toast.success("Đã khôi phục từ");
+            } catch (error) {
+              toast.error(error instanceof Error ? error.message : "Không khôi phục được");
+            }
+          },
+        },
+      });
     } catch (error) {
       toast.error(error instanceof Error ? error.message : "Lỗi khi xoá");
     }
   };
 
   const handleDeleteDeck = async () => {
-    if (!confirm(`Xoá deck "${deck?.name}" và toàn bộ ${deck?._count.cards} từ?`)) return;
+    const ok = await confirm({
+      title: `Xoá deck "${deck?.name}"?`,
+      description: `Deck cùng ${deck?._count.cards} từ sẽ được chuyển vào Thùng rác — bạn có thể khôi phục bất cứ lúc nào.`,
+    });
+    if (!ok) return;
     try {
       await deleteDeckMut.mutateAsync(deckId);
-      toast.success("Đã xoá deck");
       router.push("/decks");
+      toast.success("Đã chuyển deck vào thùng rác", {
+        action: {
+          label: "Hoàn tác",
+          onClick: async () => {
+            try {
+              await restoreDeckMut.mutateAsync(deckId);
+              toast.success("Đã khôi phục deck");
+            } catch (error) {
+              toast.error(error instanceof Error ? error.message : "Không khôi phục được");
+            }
+          },
+        },
+      });
     } catch (error) {
       toast.error(error instanceof Error ? error.message : "Lỗi khi xoá");
     }
@@ -208,10 +273,22 @@ export default function DeckDetailPage({ params }: PageProps) {
               Bắt đầu ôn
             </Button>
           </Link>
+          <Link href={`/flashcards/${deckId}`}>
+            <Button variant="outline">
+              <Layers className="h-4 w-4" />
+              Flashcard
+            </Button>
+          </Link>
           <Link href={`/quiz/${deckId}`}>
             <Button variant="outline">
               <BookOpen className="h-4 w-4" />
               Quiz
+            </Button>
+          </Link>
+          <Link href={`/pronounce/${deckId}`}>
+            <Button variant="outline">
+              <Mic className="h-4 w-4" />
+              Phát âm
             </Button>
           </Link>
           <ReadAllButton cards={cards ?? []} />
@@ -253,6 +330,8 @@ export default function DeckDetailPage({ params }: PageProps) {
         selectedTags={selectedTags}
         onToggleTag={toggleTag}
         onClearTags={() => setSelectedTags([])}
+        favoriteOnly={favoriteOnly}
+        onToggleFavoriteOnly={() => setFavoriteOnly((v) => !v)}
         matchCount={filteredCards.length}
         totalCount={cards?.length ?? 0}
       />
@@ -332,6 +411,23 @@ export default function DeckDetailPage({ params }: PageProps) {
                   aria-label="Phát âm"
                 >
                   <Volume2 className="h-4 w-4" />
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="mt-0.5 shrink-0"
+                  onClick={() => handleToggleFavorite(card)}
+                  aria-label={card.favorite ? "Bỏ yêu thích" : "Thêm yêu thích"}
+                  aria-pressed={card.favorite}
+                  title={card.favorite ? "Bỏ yêu thích" : "Thêm yêu thích"}
+                >
+                  <Star
+                    className={`h-4 w-4 ${
+                      card.favorite
+                        ? "fill-amber-400 text-amber-400"
+                        : "text-muted-foreground"
+                    }`}
+                  />
                 </Button>
                 <div className="min-w-0 flex-1">
                   <div className="flex flex-wrap items-baseline gap-2">
@@ -437,8 +533,14 @@ export default function DeckDetailPage({ params }: PageProps) {
                 <Button size="sm" onClick={goStudySelected}>
                   <Play className="h-4 w-4" /> Ôn
                 </Button>
+                <Button size="sm" variant="outline" onClick={goFlashcardsSelected}>
+                  <Layers className="h-4 w-4" /> Lật thẻ
+                </Button>
                 <Button size="sm" variant="outline" onClick={goQuizSelected}>
                   <BookOpen className="h-4 w-4" /> Quiz
+                </Button>
+                <Button size="sm" variant="outline" onClick={goPronounceSelected}>
+                  <Mic className="h-4 w-4" /> Phát âm
                 </Button>
                 <Button size="sm" variant="ghost" onClick={clearSelection}>
                   <X className="h-4 w-4" /> Bỏ chọn
@@ -448,6 +550,7 @@ export default function DeckDetailPage({ params }: PageProps) {
           </div>
         </div>
       ) : null}
+      {confirmDialog}
     </div>
   );
 }

@@ -17,10 +17,14 @@ model Deck {
   description String?
   color       String   @default("#3b82f6")
   icon        String?
+  // Soft delete: null = đang dùng, có giá trị = đã chuyển vào thùng rác
+  deletedAt   DateTime?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
   cards       Card[]
   stories     Story[]
+
+  @@index([deletedAt])
 }
 
 model Card {
@@ -43,6 +47,8 @@ model Card {
   order              Int      @default(0)
   // JSON các dạng từ cho bài word formation: {"noun":..,"verb":..,"adjective":..,"adverb":..}
   wordForms          String?
+  // Đánh dấu từ yêu thích — bật/tắt bằng icon ngôi sao
+  favorite           Boolean  @default(false)
 
   easeFactor         Float    @default(2.5)
   interval           Int      @default(0)
@@ -50,6 +56,9 @@ model Card {
   nextReviewDate     DateTime @default(now())
   state              String   @default("NEW")
   lapses             Int      @default(0)
+
+  // Soft delete: null = đang dùng, có giá trị = đã chuyển vào thùng rác
+  deletedAt          DateTime?
 
   createdAt          DateTime @default(now())
   updatedAt          DateTime @updatedAt
@@ -60,6 +69,8 @@ model Card {
   @@index([deckId])
   @@index([nextReviewDate])
   @@index([state])
+  @@index([deletedAt])
+  @@index([favorite])
 }
 
 model ReviewLog {

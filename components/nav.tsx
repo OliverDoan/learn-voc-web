@@ -9,6 +9,8 @@ import {
   Home,
   Layers,
   Settings,
+  Star,
+  Trash2,
   Trophy,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -23,9 +25,11 @@ interface NavItem {
 const items: NavItem[] = [
   { href: "/", label: "Trang chủ", icon: Home, mobile: true },
   { href: "/decks", label: "Decks", icon: Layers, mobile: true },
+  { href: "/favorites", label: "Yêu thích", icon: Star, mobile: false },
   { href: "/ielts", label: "IELTS", icon: GraduationCap, mobile: true },
   { href: "/stats", label: "Thống kê", icon: BarChart3, mobile: true },
   { href: "/achievements", label: "Huy hiệu", icon: Trophy, mobile: false },
+  { href: "/trash", label: "Thùng rác", icon: Trash2, mobile: false },
   { href: "/settings", label: "Cài đặt", icon: Settings, mobile: true },
 ];
 
@@ -35,7 +39,7 @@ export function Nav() {
   const pathname = usePathname();
 
   return (
-    <aside className="hidden md:flex w-56 shrink-0 flex-col border-r bg-card p-4">
+    <aside className="hidden md:flex w-56 shrink-0 flex-col border-r bg-card p-4 sticky top-0 h-screen overflow-y-auto">
       <Link href="/" className="mb-7 flex items-center gap-2.5 px-2 pt-1">
         <span className="flex h-8 w-8 items-center justify-center rounded-[9px] bg-primary text-primary-foreground shadow-[0_12px_28px_rgba(23,61,201,.32)]">
           <BookOpen className="h-[18px] w-[18px]" />
@@ -63,18 +67,6 @@ export function Nav() {
           );
         })}
       </nav>
-
-      <div className="mt-auto pt-4">
-        <div className="flex items-center gap-2.5 rounded-xl bg-muted px-3 py-2.5">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
-            M
-          </span>
-          <div className="leading-tight">
-            <div className="text-[13px] font-semibold">Minh</div>
-            <div className="text-[11px] text-muted-foreground">Học viên</div>
-          </div>
-        </div>
-      </div>
     </aside>
   );
 }

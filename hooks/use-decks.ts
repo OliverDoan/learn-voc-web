@@ -3,14 +3,24 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { apiDelete, apiFetch, apiPatch, apiPost } from "@/lib/api-client";
 import type { Deck, DeckWithCounts } from "@/lib/types";
-import type { DeckCreateInput, DeckImportInput, DeckUpdateInput } from "@/lib/schemas";
+import type {
+  DeckCreateInput,
+  DeckImportInput,
+  DeckUpdateInput,
+  TrashActionInput,
+} from "@/lib/schemas";
 
 export const DECKS_KEY = ["decks"] as const;
+export const DECK_TRASH_KEY = ["decks", "trash"] as const;
 
 export interface DeckImportResponse {
   deckId: string;
   deckName: string;
   count: number;
+}
+
+export interface TrashDeck extends Deck {
+  _count: { cards: number; stories: number };
 }
 
 export function useDecks() {
@@ -60,6 +70,45 @@ export function useDeleteDeck() {
   const qc = useQueryClient();
   return useMutation({
     mutationFn: (deckId: string) => apiDelete<{ id: string }>(`/api/decks/${deckId}`),
-    onSuccess: () => qc.invalidateQueries({ queryKey: DECKS_KEY }),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: DECKS_KEY });
+      qc.invalidateQueries({ queryKey: DECK_TRASH_KEY });
+    },
+  });
+}
+
+export function useDeckTrash() {
+  return useQuery({
+    queryKey: DECK_TRASH_KEY,
+    queryFn: () => apiFetch<TrashDeck[]>("/api/decks/trash"),
+  });
+}
+
+export function useDeckTrashAction() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (input: TrashActionInput) =>
+      apiPost<{ count: number; action: string }>("/api/decks/trash", input),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: DECKS_KEY });
+      qc.invalidateQueries({ queryKey: DECK_TRASH_KEY });
+      qc.invalidateQueries({ queryKey: ["cards"] });
+    },
+  });
+}
+
+/** Khôi phục nhanh 1 deck (dùng cho nút Hoàn tác sau khi xoá). */
+export function useRestoreDeck() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (deckId: string) =>
+      apiPost<{ count: number; action: string }>("/api/decks/trash", {
+        action: "restore",
+        ids: [deckId],
+      }),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: DECKS_KEY });
+      qc.invalidateQueries({ queryKey: DECK_TRASH_KEY });
+    },
   });
 }

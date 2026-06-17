@@ -14,6 +14,7 @@ export async function GET(req: NextRequest) {
 
     const cards = await prisma.card.findMany({
       where: {
+        deletedAt: null,
         ...(deckId ? { deckId } : {}),
         ...(stateFilter ? { state: stateFilter } : {}),
         ...(search

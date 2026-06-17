@@ -27,10 +27,14 @@ export async function GET(req: NextRequest) {
         where: { date: { gte: start, lte: new Date(end.getTime() + DAY_MS - 1) } },
         orderBy: { date: "asc" },
       }),
-      prisma.card.count(),
-      prisma.card.groupBy({ by: ["state"], _count: { _all: true } }),
+      prisma.card.count({ where: { deletedAt: null, deck: { deletedAt: null } } }),
+      prisma.card.groupBy({
+        by: ["state"],
+        where: { deletedAt: null, deck: { is: { deletedAt: null } } },
+        _count: { _all: true },
+      }),
       prisma.card.findMany({
-        where: { lapses: { gt: 0 } },
+        where: { lapses: { gt: 0 }, deletedAt: null, deck: { deletedAt: null } },
         orderBy: [{ lapses: "desc" }, { updatedAt: "desc" }],
         take: 10,
         select: { id: true, word: true, meaning: true, lapses: true, state: true, deckId: true },

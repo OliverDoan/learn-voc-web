@@ -10,7 +10,11 @@ export async function POST(req: NextRequest) {
     const { action, ids, targetDeckId, tags } = bulkCardsSchema.parse(body);
 
     if (action === "delete") {
-      const res = await prisma.card.deleteMany({ where: { id: { in: ids } } });
+      // Soft delete: chuyển vào thùng rác
+      const res = await prisma.card.updateMany({
+        where: { id: { in: ids }, deletedAt: null },
+        data: { deletedAt: new Date() },
+      });
       return ok({ count: res.count, action });
     }
 
@@ -44,7 +48,7 @@ export async function POST(req: NextRequest) {
     if (action === "tag") {
       if (!tags || tags.length === 0) return fail("Thiếu tags", 400);
       const cards = await prisma.card.findMany({
-        where: { id: { in: ids } },
+        where: { id: { in: ids }, deletedAt: null },
         select: { id: true, tags: true },
       });
       let count = 0;

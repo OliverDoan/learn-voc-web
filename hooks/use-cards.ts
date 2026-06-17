@@ -8,7 +8,19 @@ import type {
   CardCreateInput,
   CardImportInput,
   CardUpdateInput,
+  TrashActionInput,
 } from "@/lib/schemas";
+
+export const TRASH_KEY = ["cards", "trash"] as const;
+export const FAVORITES_KEY = ["cards", "favorites"] as const;
+
+export interface TrashCard extends Card {
+  deck: { id: string; name: string; color: string; icon: string | null };
+}
+
+export interface FavoriteCard extends Card {
+  deck: { id: string; name: string; color: string; icon: string | null };
+}
 
 export function useCards(params: { deckId?: string; state?: string; q?: string } = {}) {
   const qs = new URLSearchParams();
@@ -42,6 +54,27 @@ export function useUpdateCard(cardId: string) {
   });
 }
 
+/** Bật/tắt đánh dấu yêu thích cho 1 thẻ. */
+export function useToggleFavorite() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: ({ cardId, favorite }: { cardId: string; favorite: boolean }) =>
+      apiPatch<Card>(`/api/cards/${cardId}`, { favorite }),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["cards"] });
+      qc.invalidateQueries({ queryKey: FAVORITES_KEY });
+    },
+  });
+}
+
+/** Danh sách từ yêu thích across tất cả deck. */
+export function useFavorites() {
+  return useQuery({
+    queryKey: FAVORITES_KEY,
+    queryFn: () => apiFetch<FavoriteCard[]>("/api/cards/favorites"),
+  });
+}
+
 export function useDeleteCard() {
   const qc = useQueryClient();
   return useMutation({
@@ -49,6 +82,43 @@ export function useDeleteCard() {
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ["cards"] });
       qc.invalidateQueries({ queryKey: ["decks"] });
+      qc.invalidateQueries({ queryKey: TRASH_KEY });
+    },
+  });
+}
+
+export function useTrash() {
+  return useQuery({
+    queryKey: TRASH_KEY,
+    queryFn: () => apiFetch<TrashCard[]>("/api/cards/trash"),
+  });
+}
+
+export function useTrashAction() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (input: TrashActionInput) =>
+      apiPost<{ count: number; action: string }>("/api/cards/trash", input),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["cards"] });
+      qc.invalidateQueries({ queryKey: ["decks"] });
+    },
+  });
+}
+
+/** Khôi phục nhanh 1 thẻ (dùng cho nút Hoàn tác sau khi xoá). */
+export function useRestoreCard() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (cardId: string) =>
+      apiPost<{ count: number; action: string }>("/api/cards/trash", {
+        action: "restore",
+        ids: [cardId],
+      }),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["cards"] });
+      qc.invalidateQueries({ queryKey: ["decks"] });
+      qc.invalidateQueries({ queryKey: TRASH_KEY });
     },
   });
 }
@@ -74,6 +144,7 @@ export function useBulkCards() {
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ["cards"] });
       qc.invalidateQueries({ queryKey: ["decks"] });
+      qc.invalidateQueries({ queryKey: TRASH_KEY });
     },
   });
 }

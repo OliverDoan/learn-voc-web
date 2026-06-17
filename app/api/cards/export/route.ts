@@ -18,7 +18,7 @@ export async function GET(req: NextRequest) {
     if (!deck) return fail("Deck không tồn tại", 404);
 
     const cards = await prisma.card.findMany({
-      where: { deckId },
+      where: { deckId, deletedAt: null },
       orderBy: { createdAt: "asc" },
       select: {
         word: true,

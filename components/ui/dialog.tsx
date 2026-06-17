@@ -26,13 +26,13 @@ export function Dialog({ open, onOpenChange, children }: DialogProps) {
 
   if (!open) return null;
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       <div
         className="absolute inset-0 bg-black/60 backdrop-blur-sm"
         onClick={() => onOpenChange(false)}
         aria-hidden="true"
       />
-      <div className="relative z-10 w-full max-w-lg max-h-[90vh] overflow-y-auto">{children}</div>
+      <div className="relative z-10 w-full max-w-lg">{children}</div>
     </div>
   );
 }
@@ -45,7 +45,7 @@ export function DialogContent({ className, children, onClose, ...props }: Dialog
   return (
     <div
       className={cn(
-        "mx-4 rounded-lg border bg-card p-6 shadow-lg",
+        "relative max-h-[90vh] overflow-y-auto rounded-lg border bg-card p-6 shadow-lg",
         className,
       )}
       {...props}
@@ -54,7 +54,7 @@ export function DialogContent({ className, children, onClose, ...props }: Dialog
         <button
           type="button"
           onClick={onClose}
-          className="absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100"
+          className="absolute right-4 top-4 z-10 rounded-sm bg-card/80 opacity-70 transition-opacity hover:opacity-100"
           aria-label="Đóng"
         >
           <X className="h-4 w-4" />

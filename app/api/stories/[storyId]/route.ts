@@ -48,7 +48,7 @@ export async function PATCH(req: NextRequest, { params }: RouteParams) {
       const tokens = extractWords(data.content);
       const wordSet = Array.from(new Set(tokens.map((t) => t.word.toLowerCase())));
       const cards = await prisma.card.findMany({
-        where: { deckId: existing.deckId, word: { in: wordSet } },
+        where: { deckId: existing.deckId, word: { in: wordSet }, deletedAt: null },
       });
       const wordToCard = new Map<string, string>();
       for (const c of cards) wordToCard.set(c.word.toLowerCase(), c.id);

@@ -18,6 +18,8 @@ function makeCard(overrides: Partial<Card>): Card {
     audioUrl: null,
     tags: "[]",
     wordForms: null,
+    favorite: false,
+    deletedAt: null,
     easeFactor: 2.5,
     interval: 0,
     repetitions: 0,

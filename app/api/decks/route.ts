@@ -6,9 +6,10 @@ import { deckCreateSchema } from "@/lib/schemas";
 export async function GET() {
   try {
     const decks = await prisma.deck.findMany({
+      where: { deletedAt: null },
       orderBy: { createdAt: "desc" },
       include: {
-        _count: { select: { cards: true, stories: true } },
+        _count: { select: { cards: { where: { deletedAt: null } }, stories: true } },
       },
     });
     const now = new Date();
@@ -16,9 +17,14 @@ export async function GET() {
       decks.map(async (d) => {
         const [due, newCount] = await Promise.all([
           prisma.card.count({
-            where: { deckId: d.id, state: { not: "NEW" }, nextReviewDate: { lte: now } },
+            where: {
+              deckId: d.id,
+              deletedAt: null,
+              state: { not: "NEW" },
+              nextReviewDate: { lte: now },
+            },
           }),
-          prisma.card.count({ where: { deckId: d.id, state: "NEW" } }),
+          prisma.card.count({ where: { deckId: d.id, deletedAt: null, state: "NEW" } }),
         ]);
         return { ...d, due, newCount };
       }),

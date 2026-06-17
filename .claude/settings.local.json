@@ -71,7 +71,16 @@
       "Bash(echo \"exit=$?\")",
       "Bash(git check-ignore *)",
       "WebFetch(domain:api.anthropic.com)",
-      "Bash(awk '{print $5, $9}')"
+      "Bash(awk '{print $5, $9}')",
+      "Bash(sed -n '30,60p' app/api/search/route.ts)",
+      "Bash(sed -n '10,30p' app/api/cards/export/route.ts)",
+      "Bash(cd *)",
+      "Bash(sed -n '25,40p' app/api/stats/route.ts)",
+      "Bash(sed -n '40,60p' \"app/api/stories/[storyId]/route.ts\")",
+      "Bash(sed -n '40,75p' app/api/cards/bulk/route.ts)",
+      "Bash(xargs ls -la)",
+      "Bash(timeout 60 pnpm prisma migrate dev --name add_card_favorite)",
+      "Bash(pnpm prisma *)"
     ]
   }
 }

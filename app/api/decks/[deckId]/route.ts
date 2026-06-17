@@ -10,9 +10,9 @@ interface RouteParams {
 export async function GET(_req: NextRequest, { params }: RouteParams) {
   try {
     const { deckId } = await params;
-    const deck = await prisma.deck.findUnique({
-      where: { id: deckId },
-      include: { _count: { select: { cards: true, stories: true } } },
+    const deck = await prisma.deck.findFirst({
+      where: { id: deckId, deletedAt: null },
+      include: { _count: { select: { cards: { where: { deletedAt: null } }, stories: true } } },
     });
     if (!deck) return fail("Không tìm thấy deck", 404);
     return ok(deck);
@@ -36,7 +36,11 @@ export async function PATCH(req: NextRequest, { params }: RouteParams) {
 export async function DELETE(_req: NextRequest, { params }: RouteParams) {
   try {
     const { deckId } = await params;
-    await prisma.deck.delete({ where: { id: deckId } });
+    // Soft delete: chuyển deck vào thùng rác (các thẻ tự ẩn theo, không mất dữ liệu)
+    await prisma.deck.update({
+      where: { id: deckId },
+      data: { deletedAt: new Date() },
+    });
     return ok({ id: deckId });
   } catch (error) {
     return handleError(error);

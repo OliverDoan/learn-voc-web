@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
     const wordSet = Array.from(new Set(tokens.map((t) => t.word.toLowerCase())));
 
     const existingCards = await prisma.card.findMany({
-      where: { deckId, word: { in: wordSet } },
+      where: { deckId, word: { in: wordSet }, deletedAt: null },
     });
     const wordToCard = new Map<string, string>();
     for (const c of existingCards) wordToCard.set(c.word.toLowerCase(), c.id);

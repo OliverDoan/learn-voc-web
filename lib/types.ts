@@ -4,6 +4,7 @@ export interface Deck {
   description: string | null;
   color: string;
   icon: string | null;
+  deletedAt: string | null;
   createdAt: string;
   updatedAt: string;
 }
@@ -31,12 +32,14 @@ export interface Card {
   tags: string;
   // JSON string các dạng từ: {"noun":"beauty","adjective":"beautiful",...}
   wordForms: string | null;
+  favorite: boolean;
   easeFactor: number;
   interval: number;
   repetitions: number;
   nextReviewDate: string;
   state: string;
   lapses: number;
+  deletedAt: string | null;
   createdAt: string;
   updatedAt: string;
 }
