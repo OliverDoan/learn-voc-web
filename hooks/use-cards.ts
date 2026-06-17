@@ -7,6 +7,7 @@ import type {
   BulkCardsInput,
   CardCreateInput,
   CardImportInput,
+  CardReorderInput,
   CardUpdateInput,
   TrashActionInput,
 } from "@/lib/schemas";
@@ -64,6 +65,16 @@ export function useToggleFavorite() {
       qc.invalidateQueries({ queryKey: ["cards"] });
       qc.invalidateQueries({ queryKey: FAVORITES_KEY });
     },
+  });
+}
+
+/** Sắp xếp lại thứ tự thẻ trong deck (kéo-thả). */
+export function useReorderCards() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (input: CardReorderInput) =>
+      apiPatch<{ count: number }>("/api/cards/reorder", input),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ["cards"] }),
   });
 }
 

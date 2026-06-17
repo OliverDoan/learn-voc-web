@@ -127,3 +127,11 @@ export const bulkCardsSchema = z.object({
 });
 
 export type BulkCardsInput = z.infer<typeof bulkCardsSchema>;
+
+// Sắp xếp lại thứ tự thẻ trong 1 deck: orderedIds theo đúng thứ tự mới
+export const cardReorderSchema = z.object({
+  deckId: z.string().min(1),
+  orderedIds: z.array(z.string().min(1)).min(1, "Danh sách trống").max(2000),
+});
+
+export type CardReorderInput = z.infer<typeof cardReorderSchema>;

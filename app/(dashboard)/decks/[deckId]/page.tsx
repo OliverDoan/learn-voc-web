@@ -1,12 +1,13 @@
 "use client";
 
-import { use, useMemo, useState } from "react";
+import { use, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
   ArrowLeft,
   BookOpen,
   Check,
+  GripVertical,
   Layers,
   Mic,
   Pencil,
@@ -33,7 +34,13 @@ import { ExportButton } from "@/components/deck/export-cards-dialog";
 import { ReadAllButton } from "@/components/deck/read-all-button";
 import { CardsFilterBar, type CardStateFilter } from "@/components/deck/cards-filter-bar";
 import { StoryList } from "@/components/story/story-list";
-import { useCards, useDeleteCard, useRestoreCard, useToggleFavorite } from "@/hooks/use-cards";
+import {
+  useCards,
+  useDeleteCard,
+  useReorderCards,
+  useRestoreCard,
+  useToggleFavorite,
+} from "@/hooks/use-cards";
 import { useDeck, useDeleteDeck, useRestoreDeck } from "@/hooks/use-decks";
 import { displayRootWord, parseTags } from "@/lib/utils";
 import { speak } from "@/lib/tts";
@@ -72,6 +79,12 @@ export default function DeckDetailPage({ params }: PageProps) {
   const [favoriteOnly, setFavoriteOnly] = useState(false);
   const [selectedIds, setSelectedIds] = useState<Set<string>>(() => new Set());
 
+  // Kéo-thả sắp xếp thứ tự (chỉ khi không lọc/tìm kiếm)
+  const [orderedCards, setOrderedCards] = useState<CardType[]>([]);
+  const [dragId, setDragId] = useState<string | null>(null);
+  const [overId, setOverId] = useState<string | null>(null);
+  const dragArmed = useRef(false);
+
   const { data: deck, isLoading: deckLoading } = useDeck(deckId);
   const { data: cards, isLoading: cardsLoading } = useCards({
     deckId,
@@ -81,6 +94,7 @@ export default function DeckDetailPage({ params }: PageProps) {
   const deleteCardMut = useDeleteCard();
   const restoreCardMut = useRestoreCard();
   const toggleFavoriteMut = useToggleFavorite();
+  const reorderMut = useReorderCards();
   const deleteDeckMut = useDeleteDeck();
   const restoreDeckMut = useRestoreDeck();
   const { confirm, confirmDialog } = useConfirm();
@@ -106,10 +120,50 @@ export default function DeckDetailPage({ params }: PageProps) {
     });
   }, [cards, selectedTags, favoriteOnly]);
 
+  // Đồng bộ danh sách thứ tự cục bộ từ server (dùng cho kéo-thả lạc quan)
+  useEffect(() => {
+    if (cards) setOrderedCards(cards);
+  }, [cards]);
+
+  // Chỉ cho kéo-thả khi đang xem TẤT CẢ thẻ theo thứ tự gốc (không lọc/tìm)
+  const canReorder =
+    search.trim() === "" &&
+    stateFilter === "ALL" &&
+    selectedTags.length === 0 &&
+    !favoriteOnly;
+
+  const displayCards =
+    canReorder && orderedCards.length > 0 ? orderedCards : filteredCards;
+
   const toggleTag = (tag: string) => {
     setSelectedTags((prev) =>
       prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag],
     );
+  };
+
+  const handleDrop = async (targetId: string) => {
+    const sourceId = dragId;
+    setDragId(null);
+    setOverId(null);
+    dragArmed.current = false;
+    if (!sourceId || sourceId === targetId) return;
+
+    const from = orderedCards.findIndex((c) => c.id === sourceId);
+    const to = orderedCards.findIndex((c) => c.id === targetId);
+    if (from === -1 || to === -1) return;
+
+    const previous = orderedCards;
+    const next = [...orderedCards];
+    const [moved] = next.splice(from, 1);
+    next.splice(to, 0, moved);
+    setOrderedCards(next); // cập nhật lạc quan
+
+    try {
+      await reorderMut.mutateAsync({ deckId, orderedIds: next.map((c) => c.id) });
+    } catch (error) {
+      setOrderedCards(previous); // revert nếu lỗi
+      toast.error(error instanceof Error ? error.message : "Lỗi khi sắp xếp");
+    }
   };
 
   const toggleSelectCard = (cardId: string) => {
@@ -356,6 +410,10 @@ export default function DeckDetailPage({ params }: PageProps) {
             <span className="text-muted-foreground">
               Đã chọn <strong className="text-primary">{selectedIds.size}</strong> từ
             </span>
+          ) : canReorder ? (
+            <span className="inline-flex items-center gap-1 text-muted-foreground">
+              <GripVertical className="h-3.5 w-3.5" /> Kéo để sắp xếp lại thứ tự
+            </span>
           ) : null}
         </div>
       ) : null}
@@ -380,16 +438,61 @@ export default function DeckDetailPage({ params }: PageProps) {
         </div>
       ) : (
         <ul className="space-y-2 pb-24">
-          {filteredCards.map((card) => {
+          {displayCards.map((card) => {
             const tags = parseTags(card.tags);
             const isSelected = selectedIds.has(card.id);
+            const isDragging = dragId === card.id;
+            const isOver = overId === card.id && dragId !== card.id;
             return (
               <li
                 key={card.id}
+                draggable={canReorder}
+                onDragStart={(e) => {
+                  if (!canReorder || !dragArmed.current) {
+                    e.preventDefault();
+                    return;
+                  }
+                  setDragId(card.id);
+                  e.dataTransfer.effectAllowed = "move";
+                }}
+                onDragOver={(e) => {
+                  if (!canReorder || !dragId) return;
+                  e.preventDefault();
+                  e.dataTransfer.dropEffect = "move";
+                  if (overId !== card.id) setOverId(card.id);
+                }}
+                onDrop={(e) => {
+                  if (!canReorder) return;
+                  e.preventDefault();
+                  handleDrop(card.id);
+                }}
+                onDragEnd={() => {
+                  setDragId(null);
+                  setOverId(null);
+                  dragArmed.current = false;
+                }}
                 className={`group flex items-start gap-3 rounded-lg border bg-card p-4 transition-colors hover:bg-accent/30 ${
                   isSelected ? "border-primary/60 bg-primary/5" : ""
+                } ${isDragging ? "opacity-40" : ""} ${
+                  isOver ? "border-primary ring-2 ring-primary/40" : ""
                 }`}
               >
+                {canReorder ? (
+                  <button
+                    type="button"
+                    onMouseDown={() => {
+                      dragArmed.current = true;
+                    }}
+                    onMouseUp={() => {
+                      dragArmed.current = false;
+                    }}
+                    className="mt-1 flex h-5 w-5 shrink-0 cursor-grab items-center justify-center text-muted-foreground hover:text-foreground active:cursor-grabbing"
+                    aria-label="Kéo để sắp xếp"
+                    title="Kéo để sắp xếp lại thứ tự"
+                  >
+                    <GripVertical className="h-4 w-4" />
+                  </button>
+                ) : null}
                 <button
                   type="button"
                   onClick={() => toggleSelectCard(card.id)}
