@@ -3,53 +3,61 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* NewEra Inc. Design System — electric blue đơn sắc, light theme */
 :root {
-  --background: #ffffff;
-  --foreground: #0a0a0a;
+  --background: #f6f7fb;
+  --foreground: #111111;
   --card: #ffffff;
-  --card-foreground: #0a0a0a;
+  --card-foreground: #111111;
   --popover: #ffffff;
-  --popover-foreground: #0a0a0a;
-  --primary: #3b82f6;
+  --popover-foreground: #111111;
+  --primary: #173dc9;
   --primary-foreground: #ffffff;
-  --secondary: #f4f4f5;
-  --secondary-foreground: #18181b;
-  --muted: #f4f4f5;
-  --muted-foreground: #71717a;
-  --accent: #f4f4f5;
-  --accent-foreground: #18181b;
-  --destructive: #ef4444;
+  --secondary: #eef1fb;
+  --secondary-foreground: #173dc9;
+  --muted: #f6f7fb;
+  --muted-foreground: #676767;
+  --accent: #eef1fb;
+  --accent-foreground: #173dc9;
+  --destructive: #d83a3a;
   --destructive-foreground: #ffffff;
-  --success: #22c55e;
-  --warning: #f59e0b;
-  --border: #e4e4e7;
-  --input: #e4e4e7;
-  --ring: #3b82f6;
-  --radius: 0.5rem;
+  --success: #1f9d57;
+  --warning: #d98a00;
+  --border: #efefef;
+  --input: #cfcfcf;
+  --ring: #173dc9;
+  --radius: 0.875rem;
+
+  /* NewEra brand tokens */
+  --royal: #00004f;
+  --electric: #173dc9;
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #fafafa;
-  --card: #171717;
-  --card-foreground: #fafafa;
-  --popover: #171717;
-  --popover-foreground: #fafafa;
-  --primary: #3b82f6;
+  --background: #00021f;
+  --foreground: #eaf0ff;
+  --card: #0a0e33;
+  --card-foreground: #eaf0ff;
+  --popover: #0a0e33;
+  --popover-foreground: #eaf0ff;
+  --primary: #4d7cff;
   --primary-foreground: #ffffff;
-  --secondary: #27272a;
-  --secondary-foreground: #fafafa;
-  --muted: #27272a;
-  --muted-foreground: #a1a1aa;
-  --accent: #27272a;
-  --accent-foreground: #fafafa;
-  --destructive: #ef4444;
+  --secondary: #131a45;
+  --secondary-foreground: #cdd9ff;
+  --muted: #0a0e33;
+  --muted-foreground: #9aa7d6;
+  --accent: #131a45;
+  --accent-foreground: #cdd9ff;
+  --destructive: #ff6b6b;
   --destructive-foreground: #ffffff;
-  --success: #22c55e;
-  --warning: #f59e0b;
-  --border: #27272a;
-  --input: #27272a;
-  --ring: #3b82f6;
+  --success: #4ade80;
+  --warning: #fbbf24;
+  --border: #1a2150;
+  --input: #1a2150;
+  --ring: #4d7cff;
+
+  --royal: #00004f;
+  --electric: #4d7cff;
 }
 
 @theme inline {
@@ -77,8 +85,13 @@
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-royal: var(--royal);
+  --color-electric: var(--electric);
+  --font-sans: var(--font-be-vietnam);
+  --font-mono: var(--font-dm-sans);
+  --font-display: var(--font-poppins);
+  --font-serif: var(--font-lora);
+  --font-brand: var(--font-space-grotesk);
 }
 
 * {
@@ -93,7 +106,44 @@ body {
 }
 
 .font-phonetic {
-  font-family: var(--font-mono), JetBrains Mono, monospace;
+  font-family: var(--font-mono), "DM Sans", system-ui, monospace;
+}
+
+/* NewEra typography helpers */
+.font-display {
+  font-family: var(--font-display), "Poppins", sans-serif;
+}
+.font-serif {
+  font-family: var(--font-serif), "Lora", Georgia, serif;
+}
+.font-brand {
+  font-family: var(--font-brand), "Space Grotesk", sans-serif;
+}
+
+/* Eyebrow label: nhãn uppercase kèm gạch ngang xanh (NewEra) */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono), "DM Sans", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+.eyebrow::before {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background: var(--primary);
+  display: inline-block;
+  flex: none;
+}
+
+/* Nút pill NewEra */
+.btn-pill {
+  border-radius: 999px;
 }
 
 /* Card flip 3D */

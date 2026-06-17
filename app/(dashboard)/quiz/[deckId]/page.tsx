@@ -3,7 +3,20 @@
 import { use, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { ArrowLeft, ArrowLeftRight, CheckCircle2, Loader2, Sparkles } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowLeftRight,
+  CheckCircle2,
+  Headphones,
+  Keyboard,
+  ListChecks,
+  Loader2,
+  PenLine,
+  Puzzle,
+  Repeat,
+  Sparkles,
+  type LucideIcon,
+} from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -33,13 +46,13 @@ interface PageProps {
   params: Promise<{ deckId: string }>;
 }
 
-const MODES: { id: QuizMode; label: string; emoji: string; desc: string; minCards: number }[] = [
-  { id: "multiple-choice", label: "Trắc nghiệm", emoji: "📝", desc: "Chọn đáp án đúng trong 4 lựa chọn", minCards: 4 },
-  { id: "typing", label: "Gõ từ", emoji: "⌨️", desc: "Gõ lại từ/nghĩa theo chiều đã chọn", minCards: 1 },
-  { id: "listening", label: "Nghe", emoji: "🎧", desc: "Nghe và gõ lại từ", minCards: 1 },
-  { id: "gap-fill", label: "Điền từ vào câu", emoji: "✍️", desc: "Điền từ còn thiếu vào câu ví dụ", minCards: 1 },
-  { id: "word-formation", label: "Biến đổi từ", emoji: "🔁", desc: "Biến đổi từ gốc sang đúng dạng từ loại", minCards: 1 },
-  { id: "matching", label: "Ghép cặp", emoji: "🧩", desc: "Ghép 6 cặp từ ↔ nghĩa, tính thời gian", minCards: 6 },
+const MODES: { id: QuizMode; label: string; icon: LucideIcon; desc: string; minCards: number }[] = [
+  { id: "multiple-choice", label: "Trắc nghiệm", icon: ListChecks, desc: "Chọn đáp án đúng trong 4 lựa chọn", minCards: 4 },
+  { id: "typing", label: "Gõ từ", icon: Keyboard, desc: "Gõ lại từ/nghĩa theo chiều đã chọn", minCards: 1 },
+  { id: "listening", label: "Nghe", icon: Headphones, desc: "Nghe và gõ lại từ", minCards: 1 },
+  { id: "gap-fill", label: "Điền từ vào câu", icon: PenLine, desc: "Điền từ còn thiếu vào câu ví dụ", minCards: 1 },
+  { id: "word-formation", label: "Biến đổi từ", icon: Repeat, desc: "Biến đổi từ gốc sang đúng dạng từ loại", minCards: 1 },
+  { id: "matching", label: "Ghép cặp", icon: Puzzle, desc: "Ghép 6 cặp từ ↔ nghĩa, tính thời gian", minCards: 6 },
 ];
 
 const REVERSE_MODES: QuizMode[] = ["multiple-choice", "typing"];
@@ -142,6 +155,7 @@ export default function QuizPage({ params }: PageProps) {
             type="button"
             variant={reverse ? "default" : "outline"}
             size="sm"
+            className="rounded-full"
             onClick={toggleReverse}
             title="Đảo chiều: thấy nghĩa, đoán/chọn từ tiếng Anh"
           >
@@ -161,11 +175,13 @@ export default function QuizPage({ params }: PageProps) {
                 key={m.id}
                 disabled={disabled}
                 onClick={() => setMode(m.id)}
-                className="rounded-xl border bg-card p-6 text-left transition-all hover:border-primary hover:shadow-md disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:border-border disabled:hover:shadow-none"
+                className="flex min-h-[180px] flex-col rounded-2xl border-[1.5px] bg-card p-5 text-left transition-all hover:border-primary hover:shadow-md disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:border-border disabled:hover:shadow-none"
               >
-                <div className="mb-2 text-3xl">{m.emoji}</div>
-                <div className="font-semibold">{m.label}</div>
-                <div className="mt-1 text-xs text-muted-foreground">{m.desc}</div>
+                <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-[13px] bg-primary/[0.08] text-primary">
+                  <m.icon className="h-6 w-6" />
+                </span>
+                <div className="text-[17px] font-bold tracking-tight">{m.label}</div>
+                <div className="mt-1.5 text-[13px] leading-snug text-muted-foreground">{m.desc}</div>
                 {disabled ? (
                   <div className="mt-2 text-[10px] text-destructive">
                     {m.id === "gap-fill"

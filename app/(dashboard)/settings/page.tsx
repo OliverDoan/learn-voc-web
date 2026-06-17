@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Loader2, Save, Target } from "lucide-react";
+import { Loader2, Palette, Save, Target } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { useProgress, useUpdateProgress } from "@/hooks/use-progress";
 
 const PRESETS = [10, 20, 30, 50] as const;
@@ -58,6 +59,17 @@ export default function SettingsPage() {
           Tuỳ chỉnh mục tiêu học và các thông số cá nhân.
         </p>
       </header>
+
+      <section className="rounded-2xl border bg-card p-5">
+        <div className="mb-4 flex items-center gap-2">
+          <Palette className="h-5 w-5 text-primary" />
+          <h2 className="text-lg font-semibold">Giao diện</h2>
+        </div>
+        <p className="mb-4 text-sm text-muted-foreground">
+          Chọn chế độ hiển thị: sáng, tối, hoặc theo hệ thống của thiết bị.
+        </p>
+        <ThemeToggle className="flex-wrap" />
+      </section>
 
       <section className="rounded-2xl border bg-card p-5">
         <div className="mb-4 flex items-center gap-2">

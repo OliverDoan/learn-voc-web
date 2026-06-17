@@ -5,8 +5,8 @@ export const THEME_STORAGE_KEY = "voca-theme";
 
 export function resolveTheme(theme: Theme): ResolvedTheme {
   if (theme === "system") {
-    if (typeof window === "undefined") return "dark";
-    return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    if (typeof window === "undefined") return "light";
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   }
   return theme;
 }

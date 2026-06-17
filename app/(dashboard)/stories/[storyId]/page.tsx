@@ -3,10 +3,9 @@
 import { use, useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ArrowLeft, Eye, EyeOff, Pencil, Target, Trash2, Volume2 } from "lucide-react";
+import { ArrowLeft, BookOpen, Eye, EyeOff, Pencil, Target, Trash2, Volume2 } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { StoryRenderer } from "@/components/story/story-renderer";
 import { useDeleteStory, useMarkStoryRead, useStory } from "@/hooks/use-stories";
 import { countWordTokens, plainText } from "@/lib/story-parser";
@@ -95,20 +94,24 @@ export default function StoryViewPage({ params }: PageProps) {
         />
       ) : null}
 
-      <h1 className="mb-2 text-3xl font-bold">{story.title}</h1>
-      <div className="mb-6 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-        <Badge variant="secondary">{wordCount} từ chêm</Badge>
-        <span>·</span>
-        <span>{story.readCount} lần đọc</span>
+      <div className="mb-6 text-center">
+        <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+          <BookOpen className="h-6 w-6" />
+        </span>
+        <h1 className="mt-3 text-3xl font-bold tracking-tight">{story.title}</h1>
+        <div className="font-mono mt-2 text-[13px] uppercase tracking-wider text-muted-foreground">
+          {wordCount} từ chêm · {story.readCount} lần đọc
+        </div>
       </div>
 
-      <div className="mb-6 flex flex-wrap gap-2">
-        <Button variant="outline" size="sm" onClick={handleReadAloud}>
+      <div className="mb-6 flex flex-wrap justify-center gap-2">
+        <Button variant="outline" size="sm" className="rounded-full" onClick={handleReadAloud}>
           <Volume2 className="h-4 w-4" /> Đọc to
         </Button>
         <Button
           variant="outline"
           size="sm"
+          className="rounded-full"
           onClick={() => setShowMeanings(!showMeanings)}
         >
           {showMeanings ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
@@ -117,28 +120,42 @@ export default function StoryViewPage({ params }: PageProps) {
         <Button
           variant={hideWords ? "default" : "outline"}
           size="sm"
+          className="rounded-full"
           onClick={() => setHideWords(!hideWords)}
         >
           <Target className="h-4 w-4" />
           {hideWords ? "Hiện từ" : "Ẩn từ chêm"}
         </Button>
         <Link href={`/stories/${storyId}/fill`}>
-          <Button variant="secondary" size="sm">
+          <Button variant="secondary" size="sm" className="rounded-full">
             Quiz điền từ
           </Button>
         </Link>
       </div>
 
-      <article className="rounded-xl border bg-card p-6">
+      <article className="rounded-2xl border bg-card p-8 shadow-[0_24px_64px_rgba(0,13,139,.08)] md:px-12">
         <StoryRenderer
           content={story.content}
           showMeanings={showMeanings}
           hideWords={hideWords}
         />
+        <div className="font-mono mt-8 flex flex-wrap items-center justify-center gap-2 text-[12.5px] text-muted-foreground">
+          <span className="inline-flex items-center gap-1.5">
+            <span className="inline-block h-3 w-3 rounded bg-primary/15 [border-bottom:2px_solid_var(--primary)]" />
+            từ vựng chêm
+          </span>
+          <span>·</span>
+          <span>chạm vào từ để xem nghĩa &amp; nghe phát âm</span>
+        </div>
       </article>
 
       <div className="mt-6 flex justify-center">
-        <Button size="lg" onClick={handleMarkRead} disabled={marked || markRead.isPending}>
+        <Button
+          size="lg"
+          className="rounded-full px-8 shadow-[0_8px_20px_rgba(23,61,201,.28)]"
+          onClick={handleMarkRead}
+          disabled={marked || markRead.isPending}
+        >
           {marked ? "Đã đánh dấu" : "Đã đọc xong (+10 XP)"}
         </Button>
       </div>

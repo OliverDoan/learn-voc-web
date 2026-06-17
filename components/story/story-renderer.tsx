@@ -5,7 +5,6 @@ import { Volume2, X } from "lucide-react";
 import { parseStory } from "@/lib/story-parser";
 import { speak } from "@/lib/tts";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 
 interface StoryRendererProps {
   content: string;
@@ -24,7 +23,12 @@ export function StoryRenderer({
   const [opened, setOpened] = useState<number | null>(null);
 
   return (
-    <div className={cn("leading-loose whitespace-pre-wrap text-lg", className)}>
+    <div
+      className={cn(
+        "font-serif whitespace-pre-wrap text-[19px] leading-[2] text-[#252525] dark:text-foreground",
+        className,
+      )}
+    >
       {tokens.map((tok, i) => {
         if (tok.type === "text") {
           return <span key={i}>{tok.text}</span>;
@@ -36,44 +40,62 @@ export function StoryRenderer({
               type="button"
               onClick={() => setOpened(open ? null : i)}
               className={cn(
-                "px-0.5 font-semibold transition-colors",
+                "font-sans font-semibold transition-colors",
                 hideWords
-                  ? "rounded-md bg-primary/20 px-2 text-transparent underline decoration-primary decoration-wavy"
-                  : "text-primary border-b border-dotted border-primary/70 hover:bg-primary/10",
+                  ? "mx-0.5 rounded-md bg-primary/15 px-2 text-transparent underline decoration-primary decoration-wavy"
+                  : cn(
+                      "rounded-md px-1.5 text-[0.9em] text-primary",
+                      open
+                        ? "bg-primary/15 [border-bottom:2px_solid_var(--primary)]"
+                        : "bg-primary/10 [border-bottom:2px_solid_rgba(23,61,201,.4)]",
+                    ),
               )}
               aria-label={`${tok.word} — ${tok.meaning}`}
             >
               {hideWords ? "___" : tok.word}
             </button>
             {showMeanings && !hideWords ? (
-              <span className="ml-1 text-xs text-muted-foreground">({tok.meaning})</span>
+              <span className="font-sans ml-1 text-xs text-muted-foreground">({tok.meaning})</span>
             ) : null}
             {open ? (
               <span
-                className="absolute left-1/2 top-full z-10 mt-2 -translate-x-1/2 whitespace-normal rounded-md border bg-popover px-3 py-2 text-sm shadow-lg"
-                style={{ minWidth: 200 }}
+                className="font-sans absolute bottom-[calc(100%+12px)] left-1/2 z-10 -translate-x-1/2 whitespace-normal rounded-2xl px-4 py-3 text-left text-white shadow-[0_18px_40px_rgba(0,13,139,.4)]"
+                style={{ minWidth: 220, background: "#00004F" }}
               >
                 <button
                   type="button"
                   onClick={() => setOpened(null)}
-                  className="absolute right-1 top-1 rounded p-0.5 hover:bg-muted"
+                  className="absolute right-2 top-2 rounded p-0.5 text-white/60 hover:bg-white/10"
                   aria-label="Đóng"
                 >
-                  <X className="h-3 w-3" />
+                  <X className="h-3.5 w-3.5" />
                 </button>
-                <div className="pr-4 font-semibold">{tok.word}</div>
-                <div className="text-muted-foreground">{tok.meaning}</div>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="mt-1 h-6 px-2 text-xs"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    speak(tok.word);
+                <span className="flex items-center gap-2 pr-5">
+                  <span className="text-base font-bold">{tok.word}</span>
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      speak(tok.word);
+                    }}
+                    className="ml-auto text-[#9cc2ff] hover:opacity-80"
+                    aria-label="Phát âm"
+                  >
+                    <Volume2 className="h-4 w-4" />
+                  </button>
+                </span>
+                <span className="mt-1.5 block text-[15px] font-semibold text-[#dde6ff]">
+                  {tok.meaning}
+                </span>
+                {/* arrow */}
+                <span
+                  className="absolute left-1/2 top-full h-0 w-0 -translate-x-1/2"
+                  style={{
+                    borderLeft: "8px solid transparent",
+                    borderRight: "8px solid transparent",
+                    borderTop: "9px solid #00004F",
                   }}
-                >
-                  <Volume2 className="h-3 w-3" /> Phát âm
-                </Button>
+                />
               </span>
             ) : null}
           </span>

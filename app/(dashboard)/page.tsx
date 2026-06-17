@@ -2,51 +2,39 @@
 
 import { useMemo } from "react";
 import Link from "next/link";
-import { ArrowRight, Loader2, Play, Sparkles, Target, Trophy } from "lucide-react";
+import { format } from "date-fns";
+import { vi } from "date-fns/locale";
+import { Award, Check, Layers, Loader2, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
-import { DeckCard } from "@/components/deck/deck-card";
-import { StreakBadge } from "@/components/dashboard/streak-badge";
-import { DailyProgress } from "@/components/dashboard/daily-progress";
-import { Heatmap } from "@/components/dashboard/heatmap";
 import { useDecks } from "@/hooks/use-decks";
 import { useProgress, useStats } from "@/hooks/use-progress";
-import { xpToNextLevel } from "@/lib/xp";
+import type { DeckWithCounts } from "@/lib/types";
 
-function greeting() {
-  const h = new Date().getHours();
-  if (h < 11) return "Chào buổi sáng";
-  if (h < 14) return "Chào buổi trưa";
-  if (h < 18) return "Chào buổi chiều";
-  return "Chào buổi tối";
-}
+const VN_DAYS = ["CN", "T2", "T3", "T4", "T5", "T6", "T7"];
 
 export default function DashboardPage() {
   const { data: decks } = useDecks();
   const { data: progress, isLoading: pLoading } = useProgress();
   const { data: stats, isLoading: sLoading } = useStats(365);
 
-  const today = useMemo(() => {
-    if (!stats) return null;
-    return stats.series[stats.series.length - 1] ?? null;
-  }, [stats]);
-
   const totalDue = useMemo(
     () => (decks ? decks.reduce((sum, d) => sum + d.due, 0) : 0),
     [decks],
   );
-  const totalNew = useMemo(
-    () => (decks ? decks.reduce((sum, d) => sum + d.newCount, 0) : 0),
-    [decks],
-  );
-  const totalCards = useMemo(
-    () => (decks ? decks.reduce((sum, d) => sum + d._count.cards, 0) : 0),
+
+  const dueDecks = useMemo(
+    () =>
+      (decks ?? [])
+        .filter((d) => d.due > 0)
+        .sort((a, b) => b.due - a.due)
+        .slice(0, 4),
     [decks],
   );
 
+  const firstDueDeckId = dueDecks[0]?.id ?? decks?.[0]?.id;
+
   const matureCount = useMemo(
-    () =>
-      stats?.stateDistribution.find((s) => s.state === "MATURE")?.count ?? 0,
+    () => stats?.stateDistribution.find((s) => s.state === "MATURE")?.count ?? 0,
     [stats],
   );
 
@@ -58,7 +46,18 @@ export default function DashboardPage() {
     return total === 0 ? 0 : Math.round((correct / total) * 100);
   }, [stats]);
 
-  const xpInfo = progress ? xpToNextLevel(progress.totalXp) : null;
+  const weekStrip = useMemo(() => {
+    const last7 = (stats?.series ?? []).slice(-7);
+    const todayKey = format(new Date(), "yyyy-MM-dd");
+    return last7.map((d) => {
+      const date = new Date(d.date);
+      return {
+        label: VN_DAYS[date.getDay()],
+        done: d.reviewed > 0,
+        today: format(date, "yyyy-MM-dd") === todayKey,
+      };
+    });
+  }, [stats]);
 
   if (pLoading || sLoading) {
     return (
@@ -68,169 +67,199 @@ export default function DashboardPage() {
     );
   }
 
+  const streak = progress?.currentStreak ?? 0;
+  const dateLabel = format(new Date(), "EEEE · dd / MM", { locale: vi });
+
   return (
-    <div className="container mx-auto max-w-6xl space-y-6 p-6">
-      <header className="flex flex-wrap items-center justify-between gap-4">
+    <div className="container mx-auto max-w-6xl p-6 md:p-8">
+      {/* eyebrow + greeting */}
+      <span className="eyebrow capitalize">{dateLabel}</span>
+      <h1 className="mt-2.5 text-2xl font-bold tracking-tight md:text-[26px]">
+        Hôm nay học gì nào?
+      </h1>
+      <p className="mt-1 text-sm text-muted-foreground">
+        {streak > 0
+          ? `Bạn đang ở chuỗi ${streak} ngày — hoàn thành ôn tập để giữ lửa nhé.`
+          : "Bắt đầu ôn tập hôm nay để khởi động chuỗi ngày học."}
+      </p>
+
+      <div className="mt-6 grid grid-cols-1 gap-5 lg:grid-cols-[1.55fr_1fr]">
+        {/* MAIN — cần ôn hôm nay */}
         <div>
-          <h1 className="text-2xl font-bold md:text-3xl">
-            {greeting()}, học từ chưa? 👋
-          </h1>
-          <p className="text-sm text-muted-foreground">
-            Mỗi ngày 1 chút, từ vựng vững như đá.
-          </p>
-        </div>
-        {progress && xpInfo ? (
-          <div className="rounded-2xl border bg-card px-4 py-3">
-            <p className="text-xs text-muted-foreground">Level {progress.level}</p>
-            <p className="font-bold">{progress.totalXp} XP</p>
-            <Progress value={xpInfo.pct} className="mt-1 h-1.5 w-32" />
+          <div className="mb-3.5 flex items-center justify-between">
+            <h2 className="text-[15.5px] font-bold">Cần ôn hôm nay</h2>
+            <span className="font-mono rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary">
+              {totalDue} từ
+            </span>
           </div>
-        ) : null}
-      </header>
 
-      <section className="grid grid-cols-1 gap-4 md:grid-cols-3">
-        {progress ? (
-          <StreakBadge
-            current={progress.currentStreak}
-            longest={progress.longestStreak}
-            freezeTokens={progress.freezeTokens}
-          />
-        ) : null}
-        {progress ? (
-          <DailyProgress reviewed={today?.reviewed ?? 0} goal={progress.dailyGoal} />
-        ) : null}
-        <div className="grid grid-cols-3 gap-2 rounded-2xl border bg-card p-4 text-center">
-          <SmallStat label="Tổng" value={totalCards} icon="📚" />
-          <SmallStat label="Thuộc" value={matureCount} icon="🧠" />
-          <SmallStat label="Đúng 7d" value={`${accuracy7d}%`} icon="🎯" />
+          {dueDecks.length === 0 ? (
+            <div className="rounded-[14px] border bg-card p-8 text-center">
+              <Check className="mx-auto mb-2 h-7 w-7 text-success" />
+              <p className="text-sm text-muted-foreground">
+                Tuyệt vời! Không còn từ nào cần ôn hôm nay.
+              </p>
+            </div>
+          ) : (
+            <div className="flex flex-col gap-2.5">
+              {dueDecks.map((d) => (
+                <DueDeckRow key={d.id} deck={d} />
+              ))}
+            </div>
+          )}
+
+          {firstDueDeckId ? (
+            <Link href={`/study/${firstDueDeckId}`}>
+              <Button
+                variant="outline"
+                className="mt-3.5 w-full rounded-full border-[1.5px] border-primary py-6 text-sm font-bold text-primary hover:bg-primary/5"
+              >
+                <Play className="h-4 w-4" />
+                Ôn tất cả {totalDue} từ
+              </Button>
+            </Link>
+          ) : null}
         </div>
-      </section>
 
-      <section className="grid grid-cols-1 gap-4 md:grid-cols-3">
-        <ActionCard
-          icon={<Play className="h-5 w-5" />}
-          accent="orange"
-          label="Cần ôn"
-          value={totalDue}
-          desc="từ đang chờ bạn"
-          href={decks && decks.length > 0 ? `/decks/${decks[0].id}` : "/decks"}
-          cta="Vào học"
-        />
-        <ActionCard
-          icon={<Sparkles className="h-5 w-5" />}
-          accent="blue"
-          label="Từ mới"
-          value={totalNew}
-          desc="chưa học lần nào"
-          href="/decks"
-          cta="Khám phá"
-        />
-        <ActionCard
-          icon={<Target className="h-5 w-5" />}
-          accent="green"
-          label="Hôm nay"
-          value={today?.learned ?? 0}
-          desc="từ mới đã học"
-          href="/stats"
-          cta="Xem stats"
-        />
-      </section>
+        {/* SIDE column */}
+        <div className="flex flex-col gap-3.5">
+          {/* Tuần này */}
+          <div className="rounded-[14px] border bg-card p-4">
+            <div className="mb-3.5 text-[13px] font-bold">Tuần này</div>
+            <div className="flex justify-between">
+              {weekStrip.length === 0 ? (
+                <span className="text-xs text-muted-foreground">Chưa có dữ liệu</span>
+              ) : (
+                weekStrip.map((d, i) => (
+                  <div key={i} className="text-center">
+                    <div
+                      className={
+                        d.done
+                          ? "flex h-7 w-7 items-center justify-center rounded-lg bg-primary text-primary-foreground"
+                          : d.today
+                            ? "flex h-7 w-7 items-center justify-center rounded-lg border-[1.5px] border-primary bg-primary/10 text-primary"
+                            : "flex h-7 w-7 items-center justify-center rounded-lg border bg-muted text-muted-foreground"
+                      }
+                    >
+                      {d.done ? <Check className="h-4 w-4" /> : (
+                        <span className="font-display text-xs font-semibold">{d.label}</span>
+                      )}
+                    </div>
+                    <div
+                      className={`mt-1.5 text-[10.5px] ${d.today ? "font-semibold text-primary" : "text-muted-foreground"}`}
+                    >
+                      {d.label}
+                    </div>
+                  </div>
+                ))
+              )}
+            </div>
+          </div>
 
-      {stats ? (
-        <section>
-          <Heatmap series={stats.series} />
-        </section>
-      ) : null}
+          {/* stats card */}
+          <div className="flex flex-col gap-3 rounded-[14px] border bg-card p-4">
+            <div className="flex items-center justify-between">
+              <span className="text-[13px] text-muted-foreground">Từ đã thuộc</span>
+              <span className="font-display text-[17px] font-bold">{matureCount}</span>
+            </div>
+            <div className="h-px bg-border" />
+            <div className="flex items-center justify-between">
+              <span className="text-[13px] text-muted-foreground">Độ chính xác</span>
+              <span className="font-display text-[17px] font-bold text-primary">
+                {accuracy7d}%
+              </span>
+            </div>
+          </div>
 
-      <section>
-        <div className="mb-3 flex items-center justify-between">
-          <h2 className="text-lg font-semibold">Decks của bạn</h2>
+          {/* badge gradient card */}
           <Link
-            href="/decks"
-            className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+            href="/achievements"
+            className="flex items-center gap-3 rounded-[14px] p-4 text-white shadow-[0_18px_40px_rgba(23,61,201,.32)]"
+            style={{ background: "linear-gradient(160deg,#00004F 0%,#173DC9 100%)" }}
           >
-            Tất cả <ArrowRight className="h-4 w-4" />
+            <Award className="h-6 w-6 shrink-0" />
+            <div className="leading-snug">
+              <div className="text-[13px] font-bold">Huy hiệu của bạn</div>
+              <div className="text-[11.5px] opacity-85">
+                Học đều đặn để mở khoá các thành tựu vui.
+              </div>
+            </div>
+          </Link>
+        </div>
+      </div>
+
+      {/* Decks shortcut */}
+      <section className="mt-8">
+        <div className="mb-3.5 flex items-center justify-between">
+          <h2 className="text-[15.5px] font-bold">Decks của bạn</h2>
+          <Link href="/decks" className="text-sm text-primary hover:underline">
+            Tất cả →
           </Link>
         </div>
         {!decks || decks.length === 0 ? (
-          <div className="rounded-xl border border-dashed py-12 text-center">
+          <div className="rounded-[14px] border border-dashed bg-card py-12 text-center">
             <p className="mb-4 text-muted-foreground">Chưa có deck nào</p>
             <Link href="/decks">
-              <Button>Tạo deck đầu tiên</Button>
+              <Button className="rounded-full">Tạo deck đầu tiên</Button>
             </Link>
           </div>
         ) : (
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {decks.slice(0, 6).map((d) => (
-              <DeckCard key={d.id} deck={d} />
+          <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+            {decks.slice(0, 4).map((d) => (
+              <DueDeckRow key={d.id} deck={d} hideAction />
             ))}
           </div>
         )}
       </section>
-
-      <section className="rounded-2xl border bg-card p-5">
-        <Trophy className="mb-2 h-6 w-6 text-yellow-500" />
-        <h3 className="font-semibold">Mở khoá huy hiệu</h3>
-        <p className="mb-3 text-sm text-muted-foreground">
-          Học đều đặn để mở các thành tựu vui.
-        </p>
-        <Link
-          href="/achievements"
-          className="text-sm text-primary hover:underline"
-        >
-          Xem tất cả →
-        </Link>
-      </section>
     </div>
   );
 }
 
-function SmallStat({
-  label,
-  value,
-  icon,
-}: {
-  label: string;
-  value: number | string;
-  icon: string;
-}) {
-  return (
-    <div>
-      <div className="text-xl">{icon}</div>
-      <div className="text-lg font-bold">{value}</div>
-      <div className="text-[10px] text-muted-foreground">{label}</div>
-    </div>
-  );
+interface DueDeckRowProps {
+  deck: DeckWithCounts;
+  hideAction?: boolean;
 }
 
-interface ActionCardProps {
-  icon: React.ReactNode;
-  accent: "orange" | "blue" | "green";
-  label: string;
-  value: number;
-  desc: string;
-  href: string;
-  cta: string;
-}
+function DueDeckRow({ deck, hideAction }: DueDeckRowProps) {
+  const total = deck._count.cards || 1;
+  const learnedPct = Math.round(((total - deck.newCount) / total) * 100);
+  const accent = deck.color || "#173DC9";
 
-function ActionCard({ icon, accent, label, value, desc, href, cta }: ActionCardProps) {
-  const colors = {
-    orange: "border-orange-500/30 from-orange-500/15 to-orange-500/5 text-orange-500",
-    blue: "border-blue-500/30 from-blue-500/15 to-blue-500/5 text-blue-500",
-    green: "border-green-500/30 from-green-500/15 to-green-500/5 text-green-500",
-  };
   return (
-    <Link
-      href={href}
-      className={`group flex flex-col rounded-2xl border bg-gradient-to-br p-5 transition-all hover:shadow-md ${colors[accent]}`}
-    >
-      <div className="mb-2">{icon}</div>
-      <div className="text-xs uppercase tracking-wider text-muted-foreground">{label}</div>
-      <div className="my-1 text-4xl font-bold text-foreground">{value}</div>
-      <div className="mb-3 text-xs text-muted-foreground">{desc}</div>
-      <span className="mt-auto inline-flex items-center gap-1 text-sm font-medium">
-        {cta} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+    <div className="flex items-center gap-3.5 rounded-[14px] border bg-card p-3.5 shadow-[0_1px_2px_rgba(0,0,13,.05)]">
+      <span
+        className="flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-[11px] text-white"
+        style={{ background: accent }}
+      >
+        <Layers className="h-5 w-5" />
       </span>
-    </Link>
+      <div className="min-w-0 flex-1">
+        <div className="truncate text-sm font-bold">{deck.name}</div>
+        <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-border">
+          <div
+            className="h-full rounded-full"
+            style={{ width: `${learnedPct}%`, background: accent }}
+          />
+        </div>
+      </div>
+      {hideAction ? null : (
+        <>
+          <div className="shrink-0 text-right">
+            <div className="font-display text-[19px] font-bold leading-none text-primary">
+              {deck.due}
+            </div>
+            <div className="mt-0.5 text-[10.5px] text-muted-foreground">cần ôn</div>
+          </div>
+          <Link href={`/study/${deck.id}`} className="shrink-0">
+            <Button
+              size="sm"
+              className="rounded-full px-4 shadow-[0_8px_20px_rgba(23,61,201,.28)]"
+            >
+              Ôn
+            </Button>
+          </Link>
+        </>
+      )}
+    </div>
   );
 }

@@ -69,7 +69,9 @@
       "Bash(pnpm gen:examples)",
       "Bash(pnpm gen:examples:dict)",
       "Bash(echo \"exit=$?\")",
-      "Bash(git check-ignore *)"
+      "Bash(git check-ignore *)",
+      "WebFetch(domain:api.anthropic.com)",
+      "Bash(awk '{print $5, $9}')"
     ]
   }
 }

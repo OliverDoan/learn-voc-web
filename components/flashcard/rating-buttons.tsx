@@ -1,8 +1,7 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { RATING_LABELS, type Rating } from "@/lib/constants";
+import { type Rating } from "@/lib/constants";
 import { haptic } from "@/lib/haptic";
 import type { IntervalPreview } from "@/lib/srs";
 
@@ -13,46 +12,64 @@ interface RatingButtonsProps {
 }
 
 function formatInterval(days: number): string {
-  if (days < 1) return "<1d";
-  if (days < 30) return `${days}d`;
-  if (days < 365) return `${Math.round(days / 30)}mo`;
-  return `${Math.round(days / 365)}y`;
+  if (days < 1) return "1 phút";
+  if (days < 30) return `${days} ngày`;
+  if (days < 365) return `${Math.round(days / 30)} tháng`;
+  return `${Math.round(days / 365)} năm`;
 }
 
-const COLORS: Record<Rating, string> = {
-  1: "bg-red-500 hover:bg-red-600",
-  2: "bg-orange-500 hover:bg-orange-600",
-  3: "bg-green-500 hover:bg-green-600",
-  4: "bg-emerald-600 hover:bg-emerald-700",
-};
+interface Item {
+  rating: Rating;
+  label: string;
+  interval: number;
+  color: string;
+}
 
 export function RatingButtons({ intervals, onRate, disabled }: RatingButtonsProps) {
-  const items: Array<{ rating: Rating; interval: number; key: string }> = [
-    { rating: 1, interval: intervals.again, key: "1" },
-    { rating: 2, interval: intervals.hard, key: "2" },
-    { rating: 3, interval: intervals.good, key: "3" },
-    { rating: 4, interval: intervals.easy, key: "4" },
+  const items: Item[] = [
+    { rating: 1, label: "Lại", interval: intervals.again, color: "#ff8f8f" },
+    { rating: 2, label: "Khó", interval: intervals.hard, color: "#ffd27a" },
+    { rating: 3, label: "Tốt", interval: intervals.good, color: "#8fe3b4" },
+    { rating: 4, label: "Dễ", interval: intervals.easy, color: "#ffffff" },
   ];
+
   return (
-    <div className="grid w-full max-w-xl grid-cols-4 gap-2">
-      {items.map(({ rating, interval, key }) => (
-        <Button
-          key={rating}
-          disabled={disabled}
-          onClick={() => {
-            haptic(rating === 1 ? "fail" : rating >= 3 ? "success" : "warn");
-            onRate(rating);
-          }}
-          className={cn(
-            "flex h-auto flex-col gap-1 py-3 text-white",
-            COLORS[rating],
-          )}
-        >
-          <span className="text-sm font-bold">{RATING_LABELS[rating]}</span>
-          <span className="text-xs opacity-90">{formatInterval(interval)}</span>
-          <span className="text-[10px] opacity-70">[{key}]</span>
-        </Button>
-      ))}
+    <div
+      className="flex w-full max-w-xl overflow-hidden rounded-2xl"
+      style={{ border: "1px solid rgba(255,255,255,.14)", background: "#00004F" }}
+    >
+      {items.map((it, i) => {
+        const isEasy = it.rating === 4;
+        return (
+          <button
+            key={it.rating}
+            type="button"
+            disabled={disabled}
+            onClick={() => {
+              haptic(it.rating === 1 ? "fail" : it.rating >= 3 ? "success" : "warn");
+              onRate(it.rating);
+            }}
+            className={cn(
+              "flex-1 px-2 py-4 text-center transition-colors disabled:opacity-50",
+              !isEasy && "hover:bg-white/5",
+            )}
+            style={{
+              borderRight: i < items.length - 1 ? "1px solid rgba(255,255,255,.12)" : undefined,
+              background: isEasy ? "#173DC9" : undefined,
+            }}
+          >
+            <div className="text-[14.5px] font-bold" style={{ color: it.color }}>
+              {it.label}
+            </div>
+            <div
+              className="font-phonetic mt-0.5 text-[10.5px]"
+              style={{ color: isEasy ? "rgba(255,255,255,.75)" : "rgba(255,255,255,.5)" }}
+            >
+              {formatInterval(it.interval)}
+            </div>
+          </button>
+        );
+      })}
     </div>
   );
 }

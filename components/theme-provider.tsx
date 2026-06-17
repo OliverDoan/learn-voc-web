@@ -32,12 +32,12 @@ function applyClass(resolved: ResolvedTheme) {
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>("system");
-  const [resolved, setResolved] = useState<ResolvedTheme>("dark");
+  const [theme, setThemeState] = useState<Theme>("light");
+  const [resolved, setResolved] = useState<ResolvedTheme>("light");
 
   useEffect(() => {
     const stored = localStorage.getItem(THEME_STORAGE_KEY);
-    const initial: Theme = isTheme(stored) ? stored : "system";
+    const initial: Theme = isTheme(stored) ? stored : "light";
     setThemeState(initial);
     const r = resolveTheme(initial);
     setResolved(r);

@@ -12,7 +12,6 @@ import {
   Trophy,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { ThemeToggle } from "./theme-toggle";
 
 interface NavItem {
   href: string;
@@ -36,10 +35,12 @@ export function Nav() {
   const pathname = usePathname();
 
   return (
-    <aside className="hidden md:flex w-56 shrink-0 flex-col border-r bg-card/40 p-4">
-      <Link href="/" className="mb-8 flex items-center gap-2 px-2">
-        <BookOpen className="h-6 w-6 text-primary" />
-        <span className="text-lg font-bold">VocaLearn</span>
+    <aside className="hidden md:flex w-56 shrink-0 flex-col border-r bg-card p-4">
+      <Link href="/" className="mb-7 flex items-center gap-2.5 px-2 pt-1">
+        <span className="flex h-8 w-8 items-center justify-center rounded-[9px] bg-primary text-primary-foreground shadow-[0_12px_28px_rgba(23,61,201,.32)]">
+          <BookOpen className="h-[18px] w-[18px]" />
+        </span>
+        <span className="font-brand text-lg font-bold tracking-tight">VocaLearn</span>
       </Link>
       <nav className="flex flex-col gap-1">
         {items.map((item) => {
@@ -50,13 +51,13 @@ export function Nav() {
               key={item.href}
               href={item.href}
               className={cn(
-                "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                "flex items-center gap-3 rounded-[10px] px-3 py-2.5 text-sm font-medium transition-colors",
                 active
-                  ? "bg-primary/10 text-primary"
+                  ? "bg-primary/10 text-primary shadow-[inset_3px_0_0_var(--primary)]"
                   : "text-muted-foreground hover:bg-accent hover:text-foreground",
               )}
             >
-              <item.icon className="h-4 w-4" />
+              <item.icon className="h-[18px] w-[18px]" />
               {item.label}
             </Link>
           );
@@ -64,7 +65,15 @@ export function Nav() {
       </nav>
 
       <div className="mt-auto pt-4">
-        <ThemeToggle compact className="w-full justify-around" />
+        <div className="flex items-center gap-2.5 rounded-xl bg-muted px-3 py-2.5">
+          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
+            M
+          </span>
+          <div className="leading-tight">
+            <div className="text-[13px] font-semibold">Minh</div>
+            <div className="text-[11px] text-muted-foreground">Học viên</div>
+          </div>
+        </div>
       </div>
     </aside>
   );
@@ -96,13 +105,5 @@ export function MobileNav() {
         })}
       </ul>
     </nav>
-  );
-}
-
-export function MobileThemeToggle() {
-  return (
-    <div className="md:hidden fixed top-3 right-3 z-30">
-      <ThemeToggle compact />
-    </div>
   );
 }

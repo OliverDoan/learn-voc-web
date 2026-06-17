@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Plus, Loader2, Upload } from "lucide-react";
+import { Layers, Plus, Loader2, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { DeckCard } from "@/components/deck/deck-card";
 import { DeckFormDialog } from "@/components/deck/deck-form-dialog";
@@ -15,17 +15,24 @@ export default function DecksPage() {
 
   return (
     <div className="container mx-auto max-w-6xl p-6">
-      <div className="mb-6 flex items-center justify-between">
+      <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-2xl font-bold">Decks</h1>
           <p className="text-sm text-muted-foreground">Nhóm từ vựng theo chủ đề</p>
         </div>
-        <div className="flex gap-2">
-          <Button variant="outline" onClick={() => setOpenImport(true)}>
+        <div className="flex flex-wrap gap-2">
+          <Button
+            variant="outline"
+            className="flex-1 rounded-full sm:flex-none"
+            onClick={() => setOpenImport(true)}
+          >
             <Upload className="h-4 w-4" />
             Import deck
           </Button>
-          <Button onClick={() => setOpenCreate(true)}>
+          <Button
+            className="flex-1 rounded-full shadow-[0_8px_20px_rgba(23,61,201,.28)] sm:flex-none"
+            onClick={() => setOpenCreate(true)}
+          >
             <Plus className="h-4 w-4" />
             Tạo deck
           </Button>
@@ -54,13 +61,15 @@ export default function DecksPage() {
 
 function EmptyState({ onCreate }: { onCreate: () => void }) {
   return (
-    <div className="flex flex-col items-center justify-center rounded-xl border border-dashed py-16 text-center">
-      <div className="mb-4 text-6xl">📚</div>
+    <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed bg-card py-16 text-center">
+      <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+        <Layers className="h-8 w-8" />
+      </div>
       <h3 className="mb-2 text-lg font-semibold">Chưa có deck nào</h3>
       <p className="mb-6 max-w-xs text-sm text-muted-foreground">
         Tạo deck đầu tiên để bắt đầu tổ chức từ vựng của bạn
       </p>
-      <Button onClick={onCreate}>
+      <Button onClick={onCreate} className="rounded-full">
         <Plus className="h-4 w-4" /> Tạo deck đầu tiên
       </Button>
     </div>

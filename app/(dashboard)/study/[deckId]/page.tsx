@@ -3,7 +3,7 @@
 import { use, useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { ArrowLeft, ArrowLeftRight, CheckCircle2, Loader2, Sparkles } from "lucide-react";
+import { ArrowLeft, ArrowLeftRight, CheckCircle2, Loader2, PartyPopper, Sparkles } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -202,7 +202,11 @@ export default function StudyPage({ params }: PageProps) {
             disabled={submit.isPending}
           />
         ) : (
-          <Button onClick={() => setFlipped(true)} size="lg">
+          <Button
+            onClick={() => setFlipped(true)}
+            size="lg"
+            className="rounded-full px-8 shadow-[0_8px_20px_rgba(23,61,201,.28)]"
+          >
             Hiện đáp án (Space)
           </Button>
         )}
@@ -214,13 +218,15 @@ export default function StudyPage({ params }: PageProps) {
 function EmptyQueue({ deckId }: { deckId: string }) {
   return (
     <div className="container mx-auto max-w-xl p-6 text-center">
-      <div className="mb-4 text-6xl">🎉</div>
+      <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+        <PartyPopper className="h-8 w-8" />
+      </div>
       <h2 className="mb-2 text-2xl font-bold">Không có từ nào cần ôn!</h2>
       <p className="mb-6 text-muted-foreground">
         Bạn đã ôn hết các từ đến hạn. Hãy thêm từ mới hoặc quay lại sau.
       </p>
       <Link href={`/decks/${deckId}`}>
-        <Button variant="outline">Quay lại deck</Button>
+        <Button variant="outline" className="rounded-full">Quay lại deck</Button>
       </Link>
     </div>
   );
@@ -242,9 +248,9 @@ function SessionDone({
   const accuracy = total === 0 ? 0 : Math.round((correct / total) * 100);
   return (
     <div className="container mx-auto max-w-xl p-6 text-center">
-      <CheckCircle2 className="mx-auto mb-4 h-16 w-16 text-green-500" />
+      <CheckCircle2 className="mx-auto mb-4 h-16 w-16 text-success" />
       <h2 className="mb-2 text-2xl font-bold">Hoàn thành phiên học!</h2>
-      <p className="mb-6 text-muted-foreground">Cố lên, mỗi ngày một chút thôi 💪</p>
+      <p className="mb-6 text-muted-foreground">Cố lên, mỗi ngày một chút thôi.</p>
 
       <div className="mb-6 grid grid-cols-3 gap-3">
         <Stat label="Đã ôn" value={total.toString()} />
@@ -253,11 +259,11 @@ function SessionDone({
       </div>
 
       <div className="flex justify-center gap-3">
-        <Button onClick={onAgain} variant="outline">
+        <Button onClick={onAgain} variant="outline" className="rounded-full">
           Tải thêm từ
         </Button>
         <Link href={`/decks/${deckId}`}>
-          <Button>Về deck</Button>
+          <Button className="rounded-full">Về deck</Button>
         </Link>
       </div>
     </div>
