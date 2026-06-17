@@ -26,6 +26,7 @@ import { CardFormDialog } from "@/components/deck/card-form-dialog";
 import { DeckFormDialog } from "@/components/deck/deck-form-dialog";
 import { ImportCardsDialog } from "@/components/deck/import-cards-dialog";
 import { ExportButton } from "@/components/deck/export-cards-dialog";
+import { ReadAllButton } from "@/components/deck/read-all-button";
 import { CardsFilterBar, type CardStateFilter } from "@/components/deck/cards-filter-bar";
 import { StoryList } from "@/components/story/story-list";
 import { useCards, useDeleteCard } from "@/hooks/use-cards";
@@ -213,6 +214,7 @@ export default function DeckDetailPage({ params }: PageProps) {
               Quiz
             </Button>
           </Link>
+          <ReadAllButton cards={cards ?? []} />
           <Button variant="outline" size="icon" onClick={() => setOpenEditDeck(true)}>
             <Pencil className="h-4 w-4" />
           </Button>
