@@ -5,7 +5,12 @@ import { NextRequest, NextResponse } from "next/server";
  * Chỉ bật khi BOTH biến BASIC_AUTH_USER và BASIC_AUTH_PASSWORD được đặt.
  * Bỏ trống → cho qua (vd môi trường dev).
  */
+// TẠM TẮT đăng nhập — true = cho qua tất cả. Đổi thành false để bật lại Basic Auth.
+const AUTH_DISABLED: boolean = true;
+
 export function middleware(req: NextRequest) {
+  if (AUTH_DISABLED) return NextResponse.next();
+
   const user = process.env.BASIC_AUTH_USER;
   const pass = process.env.BASIC_AUTH_PASSWORD;
   if (!user || !pass) return NextResponse.next();
