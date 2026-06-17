@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && prisma migrate deploy && next build",
     "start": "next start",
+    "postinstall": "prisma generate",
     "lint": "eslint",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -16,7 +17,9 @@
     "db:seed": "tsx prisma/seed.ts",
     "import:vocab": "tsx --env-file=.env scripts/import-vocab-full.ts",
     "gen:examples": "tsx --env-file=.env scripts/generate-examples.ts",
-    "gen:examples:dict": "tsx --env-file=.env scripts/generate-examples-dict.ts"
+    "gen:examples:dict": "tsx --env-file=.env scripts/generate-examples-dict.ts",
+    "data:export": "tsx --env-file=.env scripts/export-data.ts",
+    "data:load": "tsx --env-file=.env scripts/load-data.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.99.0",

@@ -1,21 +1,27 @@
+-- CreateSchema
+CREATE SCHEMA IF NOT EXISTS "public";
+
 -- CreateTable
 CREATE TABLE "Deck" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    "id" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "description" TEXT,
     "color" TEXT NOT NULL DEFAULT '#3b82f6',
     "icon" TEXT,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" DATETIME NOT NULL
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "Deck_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "Card" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    "id" TEXT NOT NULL,
     "deckId" TEXT NOT NULL,
     "word" TEXT NOT NULL,
     "meaning" TEXT NOT NULL,
     "partOfSpeech" TEXT,
+    "rootWord" TEXT,
     "phonetic" TEXT,
     "example" TEXT,
     "exampleTranslation" TEXT,
@@ -23,82 +29,93 @@ CREATE TABLE "Card" (
     "imageUrl" TEXT,
     "audioUrl" TEXT,
     "tags" TEXT NOT NULL DEFAULT '[]',
-    "easeFactor" REAL NOT NULL DEFAULT 2.5,
+    "order" INTEGER NOT NULL DEFAULT 0,
+    "wordForms" TEXT,
+    "easeFactor" DOUBLE PRECISION NOT NULL DEFAULT 2.5,
     "interval" INTEGER NOT NULL DEFAULT 0,
     "repetitions" INTEGER NOT NULL DEFAULT 0,
-    "nextReviewDate" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "nextReviewDate" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "state" TEXT NOT NULL DEFAULT 'NEW',
     "lapses" INTEGER NOT NULL DEFAULT 0,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" DATETIME NOT NULL,
-    CONSTRAINT "Card_deckId_fkey" FOREIGN KEY ("deckId") REFERENCES "Deck" ("id") ON DELETE CASCADE ON UPDATE CASCADE
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "Card_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "ReviewLog" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    "id" TEXT NOT NULL,
     "cardId" TEXT NOT NULL,
     "rating" INTEGER NOT NULL,
-    "reviewedAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "reviewedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "timeTakenMs" INTEGER NOT NULL DEFAULT 0,
     "previousInterval" INTEGER NOT NULL DEFAULT 0,
     "newInterval" INTEGER NOT NULL DEFAULT 0,
-    CONSTRAINT "ReviewLog_cardId_fkey" FOREIGN KEY ("cardId") REFERENCES "Card" ("id") ON DELETE CASCADE ON UPDATE CASCADE
+
+    CONSTRAINT "ReviewLog_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "DailyStat" (
-    "id" TEXT NOT NULL PRIMARY KEY,
-    "date" DATETIME NOT NULL,
+    "id" TEXT NOT NULL,
+    "date" TIMESTAMP(3) NOT NULL,
     "cardsReviewed" INTEGER NOT NULL DEFAULT 0,
     "cardsLearned" INTEGER NOT NULL DEFAULT 0,
     "correctCount" INTEGER NOT NULL DEFAULT 0,
     "totalCount" INTEGER NOT NULL DEFAULT 0,
     "timeSpentSec" INTEGER NOT NULL DEFAULT 0,
-    "xpEarned" INTEGER NOT NULL DEFAULT 0
+    "xpEarned" INTEGER NOT NULL DEFAULT 0,
+
+    CONSTRAINT "DailyStat_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "UserProgress" (
-    "id" TEXT NOT NULL PRIMARY KEY DEFAULT 'singleton',
+    "id" TEXT NOT NULL DEFAULT 'singleton',
     "currentStreak" INTEGER NOT NULL DEFAULT 0,
     "longestStreak" INTEGER NOT NULL DEFAULT 0,
-    "lastStudyDate" DATETIME,
+    "lastStudyDate" TIMESTAMP(3),
     "totalXp" INTEGER NOT NULL DEFAULT 0,
     "level" INTEGER NOT NULL DEFAULT 1,
     "dailyGoal" INTEGER NOT NULL DEFAULT 20,
-    "freezeTokens" INTEGER NOT NULL DEFAULT 2
+    "freezeTokens" INTEGER NOT NULL DEFAULT 2,
+
+    CONSTRAINT "UserProgress_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "Achievement" (
-    "id" TEXT NOT NULL PRIMARY KEY,
-    "unlockedAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+    "id" TEXT NOT NULL,
+    "unlockedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT "Achievement_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "Story" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    "id" TEXT NOT NULL,
     "deckId" TEXT NOT NULL,
     "title" TEXT NOT NULL,
     "content" TEXT NOT NULL,
     "imageUrl" TEXT,
     "audioUrl" TEXT,
     "readCount" INTEGER NOT NULL DEFAULT 0,
-    "lastReadAt" DATETIME,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" DATETIME NOT NULL,
-    CONSTRAINT "Story_deckId_fkey" FOREIGN KEY ("deckId") REFERENCES "Deck" ("id") ON DELETE CASCADE ON UPDATE CASCADE
+    "lastReadAt" TIMESTAMP(3),
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "Story_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "StoryCard" (
-    "id" TEXT NOT NULL PRIMARY KEY,
+    "id" TEXT NOT NULL,
     "storyId" TEXT NOT NULL,
     "cardId" TEXT NOT NULL,
     "order" INTEGER NOT NULL,
-    CONSTRAINT "StoryCard_storyId_fkey" FOREIGN KEY ("storyId") REFERENCES "Story" ("id") ON DELETE CASCADE ON UPDATE CASCADE,
-    CONSTRAINT "StoryCard_cardId_fkey" FOREIGN KEY ("cardId") REFERENCES "Card" ("id") ON DELETE CASCADE ON UPDATE CASCADE
+
+    CONSTRAINT "StoryCard_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateIndex
@@ -130,3 +147,19 @@ CREATE INDEX "StoryCard_cardId_idx" ON "StoryCard"("cardId");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "StoryCard_storyId_cardId_key" ON "StoryCard"("storyId", "cardId");
+
+-- AddForeignKey
+ALTER TABLE "Card" ADD CONSTRAINT "Card_deckId_fkey" FOREIGN KEY ("deckId") REFERENCES "Deck"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "ReviewLog" ADD CONSTRAINT "ReviewLog_cardId_fkey" FOREIGN KEY ("cardId") REFERENCES "Card"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Story" ADD CONSTRAINT "Story_deckId_fkey" FOREIGN KEY ("deckId") REFERENCES "Deck"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "StoryCard" ADD CONSTRAINT "StoryCard_storyId_fkey" FOREIGN KEY ("storyId") REFERENCES "Story"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "StoryCard" ADD CONSTRAINT "StoryCard_cardId_fkey" FOREIGN KEY ("cardId") REFERENCES "Card"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+

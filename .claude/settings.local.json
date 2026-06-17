@@ -67,7 +67,9 @@
       "Bash(npx vitest *)",
       "Bash(echo \"EXIT tsc: $?\")",
       "Bash(pnpm gen:examples)",
-      "Bash(pnpm gen:examples:dict)"
+      "Bash(pnpm gen:examples:dict)",
+      "Bash(echo \"exit=$?\")",
+      "Bash(git check-ignore *)"
     ]
   }
 }
