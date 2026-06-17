@@ -13,7 +13,10 @@
     "prisma:migrate": "prisma migrate dev",
     "prisma:generate": "prisma generate",
     "prisma:studio": "prisma studio",
-    "db:seed": "tsx prisma/seed.ts"
+    "db:seed": "tsx prisma/seed.ts",
+    "import:vocab": "tsx --env-file=.env scripts/import-vocab-full.ts",
+    "gen:examples": "tsx --env-file=.env scripts/generate-examples.ts",
+    "gen:examples:dict": "tsx --env-file=.env scripts/generate-examples-dict.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.99.0",
@@ -46,6 +49,7 @@
     "dotenv": "^17.4.2",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
+    "exceljs": "^4.4.0",
     "jsdom": "^29.1.1",
     "prisma": "^6.19.3",
     "tailwindcss": "^4",

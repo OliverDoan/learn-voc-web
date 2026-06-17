@@ -10,6 +10,7 @@ import {
   Pencil,
   Play,
   Plus,
+  Sprout,
   Square,
   SquareCheck,
   Trash2,
@@ -29,7 +30,7 @@ import { CardsFilterBar, type CardStateFilter } from "@/components/deck/cards-fi
 import { StoryList } from "@/components/story/story-list";
 import { useCards, useDeleteCard } from "@/hooks/use-cards";
 import { useDeck, useDeleteDeck } from "@/hooks/use-decks";
-import { parseTags } from "@/lib/utils";
+import { displayRootWord, parseTags } from "@/lib/utils";
 import { speak } from "@/lib/tts";
 import type { Card as CardType } from "@/lib/types";
 
@@ -348,6 +349,13 @@ export default function DeckDetailPage({ params }: PageProps) {
                     </Badge>
                   </div>
                   <p className="mt-1 text-sm">{card.meaning}</p>
+                  {displayRootWord(card.word, card.rootWord) ? (
+                    <div className="mt-1.5 inline-flex items-center gap-1.5 rounded-md bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">
+                      <Sprout className="h-3 w-3 shrink-0" />
+                      <span className="text-muted-foreground">Từ gốc:</span>
+                      <span>{displayRootWord(card.word, card.rootWord)}</span>
+                    </div>
+                  ) : null}
                   {card.example ? (
                     <p className="mt-1 text-xs italic text-muted-foreground">
                       &ldquo;{card.example}&rdquo;

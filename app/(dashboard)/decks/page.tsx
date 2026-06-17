@@ -1,14 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { Plus, Loader2 } from "lucide-react";
+import { Plus, Loader2, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { DeckCard } from "@/components/deck/deck-card";
 import { DeckFormDialog } from "@/components/deck/deck-form-dialog";
+import { ImportDeckDialog } from "@/components/deck/import-deck-dialog";
 import { useDecks } from "@/hooks/use-decks";
 
 export default function DecksPage() {
   const [openCreate, setOpenCreate] = useState(false);
+  const [openImport, setOpenImport] = useState(false);
   const { data: decks, isLoading } = useDecks();
 
   return (
@@ -18,10 +20,16 @@ export default function DecksPage() {
           <h1 className="text-2xl font-bold">Decks</h1>
           <p className="text-sm text-muted-foreground">Nhóm từ vựng theo chủ đề</p>
         </div>
-        <Button onClick={() => setOpenCreate(true)}>
-          <Plus className="h-4 w-4" />
-          Tạo deck
-        </Button>
+        <div className="flex gap-2">
+          <Button variant="outline" onClick={() => setOpenImport(true)}>
+            <Upload className="h-4 w-4" />
+            Import deck
+          </Button>
+          <Button onClick={() => setOpenCreate(true)}>
+            <Plus className="h-4 w-4" />
+            Tạo deck
+          </Button>
+        </div>
       </div>
 
       {isLoading ? (
@@ -39,6 +47,7 @@ export default function DecksPage() {
       )}
 
       <DeckFormDialog open={openCreate} onOpenChange={setOpenCreate} />
+      <ImportDeckDialog open={openImport} onOpenChange={setOpenImport} />
     </div>
   );
 }

@@ -20,6 +20,8 @@ export interface Card {
   word: string;
   meaning: string;
   partOfSpeech: string | null;
+  // Từ gốc + loại từ, vd "progress (noun, verb)"
+  rootWord: string | null;
   phonetic: string | null;
   example: string | null;
   exampleTranslation: string | null;
@@ -27,6 +29,8 @@ export interface Card {
   imageUrl: string | null;
   audioUrl: string | null;
   tags: string;
+  // JSON string các dạng từ: {"noun":"beauty","adjective":"beautiful",...}
+  wordForms: string | null;
   easeFactor: number;
   interval: number;
   repetitions: number;

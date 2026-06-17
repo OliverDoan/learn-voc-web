@@ -5,6 +5,21 @@ export function cn(...inputs: ClassValue[]): string {
   return twMerge(clsx(inputs));
 }
 
+/**
+ * Trả về chuỗi "Từ gốc" để hiển thị, hoặc null nếu từ gốc chính là từ đó
+ * (vd word="journey", rootWord="journey (n/v)" → ẩn cho gọn).
+ * So sánh phần từ trước dấu ngoặc, không phân biệt hoa thường.
+ */
+export function displayRootWord(
+  word: string,
+  rootWord: string | null | undefined,
+): string | null {
+  if (!rootWord) return null;
+  const base = rootWord.replace(/\s*\([^)]*\)\s*$/, "").trim().toLowerCase();
+  if (base === word.trim().toLowerCase()) return null;
+  return rootWord;
+}
+
 export function parseTags(tagsJson: string | null | undefined): string[] {
   if (!tagsJson) return [];
   try {

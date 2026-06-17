@@ -1,10 +1,10 @@
 "use client";
 
-import { Pencil, Trash2, Volume2 } from "lucide-react";
+import { Pencil, Sprout, Trash2, Volume2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { speak } from "@/lib/tts";
-import { parseTags } from "@/lib/utils";
+import { displayRootWord, parseTags } from "@/lib/utils";
 import type { Card } from "@/lib/types";
 
 const stateColors: Record<string, "default" | "secondary" | "success" | "warning" | "outline"> = {
@@ -82,6 +82,13 @@ export function CardListItem({
           </Badge>
         </div>
         <p className="mt-1 text-sm">{card.meaning}</p>
+        {displayRootWord(card.word, card.rootWord) ? (
+          <div className="mt-1.5 inline-flex items-center gap-1.5 rounded-md bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">
+            <Sprout className="h-3 w-3 shrink-0" />
+            <span className="text-muted-foreground">Từ gốc:</span>
+            <span>{displayRootWord(card.word, card.rootWord)}</span>
+          </div>
+        ) : null}
         {card.example ? (
           <p className="mt-1 text-xs italic text-muted-foreground">
             &ldquo;{card.example}&rdquo;

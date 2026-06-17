@@ -31,6 +31,8 @@ model Card {
   word               String
   meaning            String
   partOfSpeech       String?
+  // Từ gốc + loại từ, vd "progress (noun, verb)" — hiển thị nguồn gốc của từ
+  rootWord           String?
   phonetic           String?
   example            String?
   exampleTranslation String?
@@ -38,6 +40,9 @@ model Card {
   imageUrl           String?
   audioUrl           String?
   tags               String   @default("[]")
+  order              Int      @default(0)
+  // JSON các dạng từ cho bài word formation: {"noun":..,"verb":..,"adjective":..,"adverb":..}
+  wordForms          String?
 
   easeFactor         Float    @default(2.5)
   interval           Int      @default(0)

@@ -3,6 +3,7 @@ import { prisma } from "@/lib/db";
 import { fail, handleError, ok } from "@/lib/api-helpers";
 import { cardUpdateSchema } from "@/lib/schemas";
 import { stringifyTags } from "@/lib/utils";
+import { stringifyWordForms } from "@/lib/word-forms";
 
 interface RouteParams {
   params: Promise<{ cardId: string }>;
@@ -24,7 +25,7 @@ export async function PATCH(req: NextRequest, { params }: RouteParams) {
     const { cardId } = await params;
     const body = await req.json();
     const parsed = cardUpdateSchema.parse(body);
-    const { tags, imageUrl, audioUrl, ...rest } = parsed;
+    const { tags, imageUrl, audioUrl, wordForms, ...rest } = parsed;
     const card = await prisma.card.update({
       where: { id: cardId },
       data: {
@@ -32,6 +33,7 @@ export async function PATCH(req: NextRequest, { params }: RouteParams) {
         ...(imageUrl !== undefined ? { imageUrl: imageUrl || null } : {}),
         ...(audioUrl !== undefined ? { audioUrl: audioUrl || null } : {}),
         ...(tags ? { tags: stringifyTags(tags) } : {}),
+        ...(wordForms !== undefined ? { wordForms: stringifyWordForms(wordForms) } : {}),
       },
     });
     return ok(card);

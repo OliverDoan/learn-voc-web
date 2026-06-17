@@ -3,9 +3,15 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { apiDelete, apiFetch, apiPatch, apiPost } from "@/lib/api-client";
 import type { Deck, DeckWithCounts } from "@/lib/types";
-import type { DeckCreateInput, DeckUpdateInput } from "@/lib/schemas";
+import type { DeckCreateInput, DeckImportInput, DeckUpdateInput } from "@/lib/schemas";
 
 export const DECKS_KEY = ["decks"] as const;
+
+export interface DeckImportResponse {
+  deckId: string;
+  deckName: string;
+  count: number;
+}
 
 export function useDecks() {
   return useQuery({
@@ -38,6 +44,15 @@ export function useUpdateDeck(deckId: string) {
       qc.invalidateQueries({ queryKey: DECKS_KEY });
       qc.invalidateQueries({ queryKey: ["decks", deckId] });
     },
+  });
+}
+
+export function useImportDeck() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (input: DeckImportInput) =>
+      apiPost<DeckImportResponse>("/api/decks/import", input),
+    onSuccess: () => qc.invalidateQueries({ queryKey: DECKS_KEY }),
   });
 }
 

@@ -20,8 +20,10 @@ import { useDebounce } from "@/hooks/use-debounce";
 import { useCreateCard, useUpdateCard } from "@/hooks/use-cards";
 import { apiFetch } from "@/lib/api-client";
 import { parseTags } from "@/lib/utils";
+import { parseWordForms, WORD_FORM_LABEL, WORD_FORM_ORDER } from "@/lib/word-forms";
 import { speak } from "@/lib/tts";
 import type { Card } from "@/lib/types";
+import type { WordFormsInput } from "@/lib/schemas";
 import type { DictionaryResult } from "@/lib/dictionary";
 
 interface CardFormDialogProps {
@@ -36,11 +38,13 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
   const [word, setWord] = useState(card?.word ?? "");
   const [meaning, setMeaning] = useState(card?.meaning ?? "");
   const [partOfSpeech, setPartOfSpeech] = useState(card?.partOfSpeech ?? "");
+  const [rootWord, setRootWord] = useState(card?.rootWord ?? "");
   const [phonetic, setPhonetic] = useState(card?.phonetic ?? "");
   const [example, setExample] = useState(card?.example ?? "");
   const [exampleTranslation, setExampleTranslation] = useState(card?.exampleTranslation ?? "");
   const [note, setNote] = useState(card?.note ?? "");
   const [tagsInput, setTagsInput] = useState(parseTags(card?.tags).join(", "));
+  const [wordForms, setWordForms] = useState<WordFormsInput>(() => parseWordForms(card?.wordForms));
 
   const debouncedWord = useDebounce(word, 500);
 
@@ -52,11 +56,13 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
       setWord(card?.word ?? "");
       setMeaning(card?.meaning ?? "");
       setPartOfSpeech(card?.partOfSpeech ?? "");
+      setRootWord(card?.rootWord ?? "");
       setPhonetic(card?.phonetic ?? "");
       setExample(card?.example ?? "");
       setExampleTranslation(card?.exampleTranslation ?? "");
       setNote(card?.note ?? "");
       setTagsInput(parseTags(card?.tags).join(", "));
+      setWordForms(parseWordForms(card?.wordForms));
     }
   }, [open, card]);
 
@@ -91,11 +97,13 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
       word: word.trim(),
       meaning: meaning.trim(),
       partOfSpeech: partOfSpeech || null,
+      rootWord: rootWord || null,
       phonetic: phonetic || null,
       example: example || null,
       exampleTranslation: exampleTranslation || null,
       note: note || null,
       tags,
+      wordForms,
     };
 
     try {
@@ -184,6 +192,16 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
           </div>
 
           <div className="space-y-2 md:col-span-2">
+            <Label htmlFor="root-word">Từ gốc</Label>
+            <Input
+              id="root-word"
+              value={rootWord ?? ""}
+              onChange={(e) => setRootWord(e.target.value)}
+              placeholder="progress (noun, verb)"
+            />
+          </div>
+
+          <div className="space-y-2 md:col-span-2">
             <Label htmlFor="example">Ví dụ</Label>
             <Textarea
               id="example"
@@ -203,6 +221,38 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
               rows={2}
               placeholder="Tôi ăn một quả táo mỗi ngày."
             />
+          </div>
+
+          <div className="space-y-2 md:col-span-2">
+            <Label>Các dạng từ (word forms — cho bài biến đổi từ)</Label>
+            <p className="text-xs text-muted-foreground">
+              Tuỳ chọn. Điền dạng danh/động/tính/trạng từ cùng họ để tạo bài word formation.
+            </p>
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {WORD_FORM_ORDER.map((pos) => (
+                <div key={pos} className="space-y-1">
+                  <Label htmlFor={`wf-${pos}`} className="text-xs text-muted-foreground">
+                    {WORD_FORM_LABEL[pos]}
+                  </Label>
+                  <Input
+                    id={`wf-${pos}`}
+                    value={wordForms[pos] ?? ""}
+                    onChange={(e) =>
+                      setWordForms((prev) => ({ ...prev, [pos]: e.target.value }))
+                    }
+                    placeholder={
+                      pos === "noun"
+                        ? "beauty"
+                        : pos === "verb"
+                          ? "beautify"
+                          : pos === "adjective"
+                            ? "beautiful"
+                            : "beautifully"
+                    }
+                  />
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="space-y-2 md:col-span-2">

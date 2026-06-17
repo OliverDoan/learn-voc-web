@@ -1,5 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { parseCsvImport, parseJsonImport } from "../import-parser";
+import {
+  deckNameFromFilename,
+  parseCsvImport,
+  parseDeckImport,
+  parseJsonImport,
+} from "../import-parser";
 
 describe("parseCsvImport", () => {
   it("parse CSV chuẩn với header đầy đủ", () => {
@@ -169,5 +174,96 @@ describe("parseJsonImport", () => {
     expect(result.cards[0].word).toBe("apple");
     expect(result.cards[0].meaning).toBe("quả táo");
     expect(result.cards[0].note).toBe("ghi chú");
+  });
+
+  it("parse rootWord và wordForms", () => {
+    const json = JSON.stringify({
+      cards: [
+        {
+          word: "progress",
+          meaning: "sự tiến bộ",
+          rootWord: "progress (noun, verb)",
+          wordForms: { noun: "progression", verb: "progress", adjective: "progressive" },
+        },
+      ],
+    });
+    const result = parseJsonImport(json);
+    expect(result.cards[0].rootWord).toBe("progress (noun, verb)");
+    expect(result.cards[0].wordForms).toEqual({
+      noun: "progression",
+      verb: "progress",
+      adjective: "progressive",
+    });
+  });
+
+  it("wordForms rỗng hoặc sai kiểu trả về null", () => {
+    const json = JSON.stringify({
+      cards: [{ word: "go", meaning: "đi", wordForms: { foo: "bar" } }],
+    });
+    const result = parseJsonImport(json);
+    expect(result.cards[0].wordForms).toBeNull();
+  });
+});
+
+describe("parseCsvImport - rootWord", () => {
+  it("parse cột rootWord", () => {
+    const csv = `word,meaning,rootWord
+progress,sự tiến bộ,"progress (noun, verb)"`;
+    const result = parseCsvImport(csv);
+    expect(result.cards[0].rootWord).toBe("progress (noun, verb)");
+    expect(result.cards[0].wordForms).toBeNull();
+  });
+});
+
+describe("deckNameFromFilename", () => {
+  it("bỏ phần mở rộng", () => {
+    expect(deckNameFromFilename("Unit 1.json")).toBe("Unit 1");
+    expect(deckNameFromFilename("vocab.csv")).toBe("vocab");
+  });
+  it("file không có tên trả về mặc định", () => {
+    expect(deckNameFromFilename(".json")).toBe("Deck mới");
+  });
+});
+
+describe("parseDeckImport", () => {
+  it("JSON: lấy deck metadata + cards", () => {
+    const json = JSON.stringify({
+      deck: { name: "Unit 1", description: "Bài học 1", color: "#ff0000", icon: "📘" },
+      cards: [{ word: "apple", meaning: "quả táo" }],
+    });
+    const result = parseDeckImport(json, "json", "fallback");
+    expect(result.deck).toEqual({
+      name: "Unit 1",
+      description: "Bài học 1",
+      color: "#ff0000",
+      icon: "📘",
+    });
+    expect(result.cards).toHaveLength(1);
+  });
+
+  it("JSON không có deck: dùng fallbackName + màu mặc định", () => {
+    const json = JSON.stringify({ cards: [{ word: "apple", meaning: "quả táo" }] });
+    const result = parseDeckImport(json, "json", "Tên từ file");
+    expect(result.deck.name).toBe("Tên từ file");
+    expect(result.deck.color).toBe("#3b82f6");
+    expect(result.deck.icon).toBeNull();
+  });
+
+  it("JSON màu sai định dạng: rơi về màu mặc định", () => {
+    const json = JSON.stringify({
+      deck: { name: "X", color: "red" },
+      cards: [{ word: "a", meaning: "b" }],
+    });
+    const result = parseDeckImport(json, "json", "fallback");
+    expect(result.deck.color).toBe("#3b82f6");
+  });
+
+  it("CSV: deck name từ fallbackName, cards từ file", () => {
+    const csv = `word,meaning
+apple,quả táo
+run,chạy`;
+    const result = parseDeckImport(csv, "csv", "Deck CSV");
+    expect(result.deck.name).toBe("Deck CSV");
+    expect(result.cards).toHaveLength(2);
   });
 });

@@ -10,13 +10,23 @@ import { Progress } from "@/components/ui/progress";
 import { MultipleChoice } from "@/components/quiz/multiple-choice";
 import { TypingQuiz } from "@/components/quiz/typing-quiz";
 import { ListeningQuiz } from "@/components/quiz/listening-quiz";
+import { GapFillQuiz } from "@/components/quiz/gap-fill-quiz";
+import { WordFormationQuiz } from "@/components/quiz/word-formation-quiz";
 import { MatchingGameLauncher } from "@/components/quiz/matching-game";
 import { useCards } from "@/hooks/use-cards";
 import { useSubmitReview } from "@/hooks/use-study";
 import { haptic } from "@/lib/haptic";
+import { gapFillEligibleCards } from "@/lib/gap-fill";
+import { wordFormEligibleCards } from "@/lib/word-forms";
 import type { Card } from "@/lib/types";
 
-type QuizMode = "multiple-choice" | "typing" | "listening" | "matching";
+type QuizMode =
+  | "multiple-choice"
+  | "typing"
+  | "listening"
+  | "gap-fill"
+  | "word-formation"
+  | "matching";
 type QuizDirection = "word-to-meaning" | "meaning-to-word";
 
 interface PageProps {
@@ -27,6 +37,8 @@ const MODES: { id: QuizMode; label: string; emoji: string; desc: string; minCard
   { id: "multiple-choice", label: "Trắc nghiệm", emoji: "📝", desc: "Chọn đáp án đúng trong 4 lựa chọn", minCards: 4 },
   { id: "typing", label: "Gõ từ", emoji: "⌨️", desc: "Gõ lại từ/nghĩa theo chiều đã chọn", minCards: 1 },
   { id: "listening", label: "Nghe", emoji: "🎧", desc: "Nghe và gõ lại từ", minCards: 1 },
+  { id: "gap-fill", label: "Điền từ vào câu", emoji: "✍️", desc: "Điền từ còn thiếu vào câu ví dụ", minCards: 1 },
+  { id: "word-formation", label: "Biến đổi từ", emoji: "🔁", desc: "Biến đổi từ gốc sang đúng dạng từ loại", minCards: 1 },
   { id: "matching", label: "Ghép cặp", emoji: "🧩", desc: "Ghép 6 cặp từ ↔ nghĩa, tính thời gian", minCards: 6 },
 ];
 
@@ -68,9 +80,21 @@ export default function QuizPage({ params }: PageProps) {
 
   const sourceCards = isSubset ? subsetCards : allCards ?? [];
 
+  // Pool đủ điều kiện cho các mode đặc thù (cần dữ liệu riêng)
+  const gapFillPool = useMemo(() => gapFillEligibleCards(sourceCards), [sourceCards]);
+  const wordFormPool = useMemo(() => wordFormEligibleCards(sourceCards), [sourceCards]);
+
+  const poolForMode = (m: QuizMode): Card[] => {
+    if (m === "gap-fill") return gapFillPool;
+    if (m === "word-formation") return wordFormPool;
+    return sourceCards;
+  };
+
   const quizCards = useMemo(() => {
-    return [...sourceCards].sort(() => Math.random() - 0.5).slice(0, QUIZ_LIMIT);
-  }, [sourceCards]);
+    if (!mode) return [];
+    return [...poolForMode(mode)].sort(() => Math.random() - 0.5).slice(0, QUIZ_LIMIT);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mode, sourceCards, gapFillPool, wordFormPool]);
 
   if (isLoading) {
     return (
@@ -130,7 +154,8 @@ export default function QuizPage({ params }: PageProps) {
         </p>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {MODES.map((m) => {
-            const disabled = sourceCards.length < m.minCards;
+            const available = poolForMode(m.id).length;
+            const disabled = available < m.minCards;
             return (
               <button
                 key={m.id}
@@ -143,7 +168,11 @@ export default function QuizPage({ params }: PageProps) {
                 <div className="mt-1 text-xs text-muted-foreground">{m.desc}</div>
                 {disabled ? (
                   <div className="mt-2 text-[10px] text-destructive">
-                    Cần {m.minCards} từ, hiện có {sourceCards.length}
+                    {m.id === "gap-fill"
+                      ? "Cần ≥1 từ có câu ví dụ chứa từ đó"
+                      : m.id === "word-formation"
+                        ? "Cần ≥1 từ có nhập các dạng word forms"
+                        : `Cần ${m.minCards} từ, hiện có ${available}`}
                   </div>
                 ) : null}
               </button>
@@ -194,8 +223,14 @@ function QuizRunner({
   const [done, setDone] = useState(false);
   const submit = useSubmitReview();
 
-  const total = cards.length;
-  const current = cards[index];
+  // Đóng băng danh sách thẻ khi bắt đầu phiên quiz. Mỗi lần submit review sẽ
+  // invalidate query ["cards"] khiến danh sách gốc bị refetch & xáo trộn lại;
+  // nếu không snapshot, thẻ hiện tại sẽ bị thay giữa chừng (nhấn 1 lần qua 2 từ).
+  const [frozenCards] = useState(() => cards);
+  const [frozenAllCards] = useState(() => allCards);
+
+  const total = frozenCards.length;
+  const current = frozenCards[index];
 
   if (mode === "matching") {
     return (
@@ -210,19 +245,19 @@ function QuizRunner({
           </button>
           <h2 className="text-sm font-semibold">🧩 Ghép cặp</h2>
         </div>
-        <MatchingGameLauncher deckId={deckId} cards={allCards} />
+        <MatchingGameLauncher deckId={deckId} cards={frozenAllCards} />
       </div>
     );
   }
 
   const options = useMemo(() => {
     if (!current) return [];
-    const distractors = allCards
+    const distractors = frozenAllCards
       .filter((c) => c.id !== current.id)
       .sort(() => Math.random() - 0.5)
       .slice(0, 3);
     return [current, ...distractors];
-  }, [current, allCards]);
+  }, [current, frozenAllCards]);
 
   const handleAnswer = async (isCorrect: boolean) => {
     if (!current) return;
@@ -308,6 +343,14 @@ function QuizRunner({
             key={current.id}
             question={current}
             direction={direction}
+            onAnswer={(c) => handleAnswer(c)}
+          />
+        ) : mode === "gap-fill" ? (
+          <GapFillQuiz key={current.id} question={current} onAnswer={(c) => handleAnswer(c)} />
+        ) : mode === "word-formation" ? (
+          <WordFormationQuiz
+            key={current.id}
+            question={current}
             onAnswer={(c) => handleAnswer(c)}
           />
         ) : (

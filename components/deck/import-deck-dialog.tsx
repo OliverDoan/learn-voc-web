@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import { Download, FileText, Upload } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -12,39 +13,44 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
-import { useImportCards } from "@/hooks/use-cards";
+import { useImportDeck } from "@/hooks/use-decks";
 import {
+  deckNameFromFilename,
   detectFormatByName,
-  parseCsvImport,
-  parseJsonImport,
+  parseDeckImport,
   type CardImport,
+  type DeckMeta,
   type ImportError,
 } from "@/lib/import-parser";
 
-interface ImportCardsDialogProps {
+interface ImportDeckDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  deckId: string;
 }
 
 interface ParseState {
   filename: string;
   format: "csv" | "json";
+  deck: DeckMeta;
   cards: CardImport[];
   errors: ImportError[];
 }
 
 const PREVIEW_LIMIT = 5;
 
-export function ImportCardsDialog({ open, onOpenChange, deckId }: ImportCardsDialogProps) {
+export function ImportDeckDialog({ open, onOpenChange }: ImportDeckDialogProps) {
+  const router = useRouter();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [parseState, setParseState] = useState<ParseState | null>(null);
-  const importMut = useImportCards();
+  const [deckName, setDeckName] = useState("");
+  const importMut = useImportDeck();
 
   const reset = () => {
     setParseState(null);
+    setDeckName("");
     if (fileInputRef.current) fileInputRef.current.value = "";
   };
 
@@ -61,8 +67,10 @@ export function ImportCardsDialog({ open, onOpenChange, deckId }: ImportCardsDia
     }
     try {
       const text = await file.text();
-      const result = format === "csv" ? parseCsvImport(text) : parseJsonImport(text);
+      const fallbackName = deckNameFromFilename(file.name);
+      const result = parseDeckImport(text, format, fallbackName);
       setParseState({ filename: file.name, format, ...result });
+      setDeckName(result.deck.name);
       if (result.cards.length === 0 && result.errors.length > 0) {
         toast.error("File không có từ hợp lệ");
       } else if (result.errors.length > 0) {
@@ -75,10 +83,19 @@ export function ImportCardsDialog({ open, onOpenChange, deckId }: ImportCardsDia
 
   const handleImport = async () => {
     if (!parseState || parseState.cards.length === 0) return;
+    const name = deckName.trim();
+    if (!name) {
+      toast.error("Tên deck không được trống");
+      return;
+    }
     try {
-      const res = await importMut.mutateAsync({ deckId, cards: parseState.cards });
-      toast.success(`Đã import ${res.count} từ mới`);
+      const res = await importMut.mutateAsync({
+        deck: { ...parseState.deck, name },
+        cards: parseState.cards,
+      });
+      toast.success(`Đã tạo deck "${res.deckName}" với ${res.count} từ`);
       handleClose(false);
+      router.push(`/decks/${res.deckId}`);
     } catch (error) {
       toast.error(error instanceof Error ? error.message : "Lỗi khi import");
     }
@@ -90,9 +107,10 @@ export function ImportCardsDialog({ open, onOpenChange, deckId }: ImportCardsDia
     <Dialog open={open} onOpenChange={handleClose}>
       <DialogContent onClose={() => handleClose(false)} className="max-w-2xl">
         <DialogHeader>
-          <DialogTitle>Import từ vựng từ file</DialogTitle>
+          <DialogTitle>Import deck từ file</DialogTitle>
           <DialogDescription>
-            Hỗ trợ file CSV và JSON. Tải template bên dưới để biết format chuẩn.
+            Tạo một deck mới kèm toàn bộ từ vựng từ file CSV hoặc JSON. Tải file mẫu bên dưới để
+            biết format chuẩn.
           </DialogDescription>
         </DialogHeader>
 
@@ -103,31 +121,32 @@ export function ImportCardsDialog({ open, onOpenChange, deckId }: ImportCardsDia
               Tải file mẫu
             </div>
             <div className="flex flex-wrap gap-2">
-              <a href="/vocab-template.csv" download>
+              <a href="/deck-template.json" download>
+                <Button type="button" variant="outline" size="sm">
+                  <FileText className="h-4 w-4" />
+                  Template JSON (đầy đủ)
+                </Button>
+              </a>
+              <a href="/deck-template.csv" download>
                 <Button type="button" variant="outline" size="sm">
                   <FileText className="h-4 w-4" />
                   Template CSV
                 </Button>
               </a>
-              <a href="/vocab-template.json" download>
-                <Button type="button" variant="outline" size="sm">
-                  <FileText className="h-4 w-4" />
-                  Template JSON
-                </Button>
-              </a>
             </div>
             <p className="mt-2 text-xs text-muted-foreground">
-              Bắt buộc: <code className="rounded bg-muted px-1">word</code>,{" "}
-              <code className="rounded bg-muted px-1">meaning</code>. Tùy chọn: partOfSpeech,
-              rootWord, phonetic, example, exampleTranslation, note, tags.
+              JSON hỗ trợ đầy đủ: thông tin deck (name, description, color, icon) +{" "}
+              <code className="rounded bg-muted px-1">rootWord</code>,{" "}
+              <code className="rounded bg-muted px-1">wordForms</code>. CSV chỉ chứa danh sách từ —
+              tên deck lấy từ tên file (sửa được bên dưới).
             </p>
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="import-file">Chọn file (.csv hoặc .json)</Label>
+            <Label htmlFor="import-deck-file">Chọn file (.csv hoặc .json)</Label>
             <input
               ref={fileInputRef}
-              id="import-file"
+              id="import-deck-file"
               type="file"
               accept=".csv,.json,text/csv,application/json"
               onChange={(e) => {
@@ -148,6 +167,17 @@ export function ImportCardsDialog({ open, onOpenChange, deckId }: ImportCardsDia
                     <Badge variant="warning">{parseState.errors.length} lỗi</Badge>
                   ) : null}
                 </div>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="import-deck-name">Tên deck</Label>
+                <Input
+                  id="import-deck-name"
+                  value={deckName}
+                  onChange={(e) => setDeckName(e.target.value)}
+                  placeholder="Tên deck mới"
+                  maxLength={80}
+                />
               </div>
 
               {parseState.cards.length > 0 ? (
@@ -200,7 +230,7 @@ export function ImportCardsDialog({ open, onOpenChange, deckId }: ImportCardsDia
             {isPending
               ? "Đang import..."
               : parseState
-                ? `Import ${parseState.cards.length} từ`
+                ? `Tạo deck (${parseState.cards.length} từ)`
                 : "Import"}
           </Button>
         </DialogFooter>

@@ -1,0 +1,59 @@
+{
+  "deck": {
+    "name": "Deck mẫu",
+    "description": "Mô tả ngắn về deck (tùy chọn)",
+    "color": "#3b82f6",
+    "icon": "📚"
+  },
+  "cards": [
+    {
+      "word": "progress",
+      "meaning": "sự tiến bộ",
+      "partOfSpeech": "noun",
+      "rootWord": "progress (noun, verb)",
+      "phonetic": "/ˈprəʊ.ɡres/",
+      "example": "She made great progress in English.",
+      "exampleTranslation": "Cô ấy đã tiến bộ rất nhiều trong tiếng Anh.",
+      "note": "Từ học thuật phổ biến",
+      "tags": ["academic", "basic"],
+      "wordForms": {
+        "noun": "progression",
+        "verb": "progress",
+        "adjective": "progressive",
+        "adverb": "progressively"
+      }
+    },
+    {
+      "word": "communicate",
+      "meaning": "giao tiếp",
+      "partOfSpeech": "verb",
+      "rootWord": "communicate (verb)",
+      "phonetic": "/kəˈmjuː.nɪ.keɪt/",
+      "example": "We communicate by email every day.",
+      "exampleTranslation": "Chúng tôi giao tiếp qua email mỗi ngày.",
+      "note": null,
+      "tags": ["communication"],
+      "wordForms": {
+        "noun": "communication",
+        "adjective": "communicative"
+      }
+    },
+    {
+      "word": "beautiful",
+      "meaning": "đẹp",
+      "partOfSpeech": "adjective",
+      "rootWord": "beauty (noun)",
+      "phonetic": "/ˈbjuː.tɪ.fəl/",
+      "example": "The sunset is beautiful tonight.",
+      "exampleTranslation": "Hoàng hôn tối nay thật đẹp.",
+      "note": "Dùng cho người và vật",
+      "tags": ["appearance"],
+      "wordForms": {
+        "noun": "beauty",
+        "verb": "beautify",
+        "adjective": "beautiful",
+        "adverb": "beautifully"
+      }
+    }
+  ]
+}

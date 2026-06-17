@@ -1,20 +1,27 @@
 import { NextRequest } from "next/server";
 import { prisma } from "@/lib/db";
-import { fail, handleError, ok } from "@/lib/api-helpers";
-import { cardImportSchema } from "@/lib/schemas";
+import { handleError, ok } from "@/lib/api-helpers";
+import { deckImportSchema } from "@/lib/schemas";
 import { stringifyTags } from "@/lib/utils";
 import { stringifyWordForms } from "@/lib/word-forms";
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const parsed = cardImportSchema.parse(body);
+    const parsed = deckImportSchema.parse(body);
 
-    const deck = await prisma.deck.findUnique({ where: { id: parsed.deckId } });
-    if (!deck) return fail("Deck không tồn tại", 404);
+    // Tạo deck mới rồi nạp toàn bộ card vào đó; giữ thứ tự theo file qua `order`.
+    const deck = await prisma.deck.create({
+      data: {
+        name: parsed.deck.name,
+        description: parsed.deck.description ?? null,
+        color: parsed.deck.color,
+        icon: parsed.deck.icon ?? null,
+      },
+    });
 
-    const data = parsed.cards.map((c) => ({
-      deckId: parsed.deckId,
+    const data = parsed.cards.map((c, idx) => ({
+      deckId: deck.id,
       word: c.word,
       meaning: c.meaning,
       partOfSpeech: c.partOfSpeech ?? null,
@@ -25,10 +32,15 @@ export async function POST(req: NextRequest) {
       note: c.note ?? null,
       tags: stringifyTags(c.tags),
       wordForms: stringifyWordForms(c.wordForms),
+      order: idx,
     }));
 
     const result = await prisma.card.createMany({ data });
-    return ok({ count: result.count }, undefined, 201);
+    return ok(
+      { deckId: deck.id, deckName: deck.name, count: result.count },
+      undefined,
+      201,
+    );
   } catch (error) {
     return handleError(error);
   }

@@ -15,11 +15,23 @@ export const deckUpdateSchema = deckCreateSchema.partial();
 export type DeckCreateInput = z.infer<typeof deckCreateSchema>;
 export type DeckUpdateInput = z.infer<typeof deckUpdateSchema>;
 
+export const wordFormsSchema = z
+  .object({
+    noun: z.string().trim().max(120).optional().nullable(),
+    verb: z.string().trim().max(120).optional().nullable(),
+    adjective: z.string().trim().max(120).optional().nullable(),
+    adverb: z.string().trim().max(120).optional().nullable(),
+  })
+  .partial();
+
+export type WordFormsInput = z.infer<typeof wordFormsSchema>;
+
 export const cardCreateSchema = z.object({
   deckId: z.string().min(1),
   word: z.string().trim().min(1, "Từ không được trống").max(120),
   meaning: z.string().trim().min(1, "Nghĩa không được trống").max(500),
   partOfSpeech: z.string().trim().max(30).optional().nullable(),
+  rootWord: z.string().trim().max(120).optional().nullable(),
   phonetic: z.string().trim().max(80).optional().nullable(),
   example: z.string().trim().max(500).optional().nullable(),
   exampleTranslation: z.string().trim().max(500).optional().nullable(),
@@ -27,6 +39,7 @@ export const cardCreateSchema = z.object({
   imageUrl: z.string().url().optional().nullable().or(z.literal("")),
   audioUrl: z.string().url().optional().nullable().or(z.literal("")),
   tags: z.array(z.string().trim().min(1).max(30)).max(10).default([]),
+  wordForms: wordFormsSchema.optional().nullable(),
 });
 
 export const cardUpdateSchema = cardCreateSchema.partial().omit({ deckId: true });
@@ -35,11 +48,13 @@ export const cardImportItemSchema = z.object({
   word: z.string().trim().min(1).max(120),
   meaning: z.string().trim().min(1).max(500),
   partOfSpeech: z.string().trim().max(30).optional().nullable(),
+  rootWord: z.string().trim().max(120).optional().nullable(),
   phonetic: z.string().trim().max(80).optional().nullable(),
   example: z.string().trim().max(500).optional().nullable(),
   exampleTranslation: z.string().trim().max(500).optional().nullable(),
   note: z.string().trim().max(1000).optional().nullable(),
   tags: z.array(z.string().trim().min(1).max(30)).max(10).default([]),
+  wordForms: wordFormsSchema.optional().nullable(),
 });
 
 export const cardImportSchema = z.object({
@@ -47,8 +62,15 @@ export const cardImportSchema = z.object({
   cards: z.array(cardImportItemSchema).min(1, "Không có từ nào để import").max(1000),
 });
 
+// Import nguyên deck mới: deck metadata + cards
+export const deckImportSchema = z.object({
+  deck: deckCreateSchema,
+  cards: z.array(cardImportItemSchema).min(1, "Không có từ nào để import").max(1000),
+});
+
 export type CardImportItemInput = z.infer<typeof cardImportItemSchema>;
 export type CardImportInput = z.infer<typeof cardImportSchema>;
+export type DeckImportInput = z.infer<typeof deckImportSchema>;
 
 export type CardCreateInput = z.infer<typeof cardCreateSchema>;
 export type CardUpdateInput = z.infer<typeof cardUpdateSchema>;

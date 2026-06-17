@@ -55,7 +55,19 @@
       "Bash(node *)",
       "Bash(env)",
       "Bash(printenv ANTHROPIC_API_KEY)",
-      "Bash(unset ANTHROPIC_API_KEY)"
+      "Bash(unset ANTHROPIC_API_KEY)",
+      "Bash(npx tsx *)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(lsof -ti:3000,3001)",
+      "Bash(awk '{print $2, $11, $12, $13}')",
+      "Bash(awk '{print $9}')",
+      "Bash(kill 69043 69049)",
+      "Bash(lsof -ti:3001)",
+      "Bash(PORT=3001 pnpm dev)",
+      "Bash(npx vitest *)",
+      "Bash(echo \"EXIT tsc: $?\")",
+      "Bash(pnpm gen:examples)",
+      "Bash(pnpm gen:examples:dict)"
     ]
   }
 }
