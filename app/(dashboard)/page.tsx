@@ -4,7 +4,7 @@ import { useMemo } from "react";
 import Link from "next/link";
 import { format } from "date-fns";
 import { vi } from "date-fns/locale";
-import { Award, Check, Layers, Loader2, Play, TriangleAlert } from "lucide-react";
+import { Check, Layers, Loader2, Play, TriangleAlert } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useDecks } from "@/hooks/use-decks";
 import { useProgress, useStats } from "@/hooks/use-progress";
@@ -170,21 +170,6 @@ export default function DashboardPage() {
               </span>
             </div>
           </div>
-
-          {/* badge gradient card */}
-          <Link
-            href="/achievements"
-            className="flex items-center gap-3 rounded-[14px] p-4 text-white shadow-[0_18px_40px_rgba(23,61,201,.32)]"
-            style={{ background: "linear-gradient(160deg,#00004F 0%,#173DC9 100%)" }}
-          >
-            <Award className="h-6 w-6 shrink-0" />
-            <div className="leading-snug">
-              <div className="text-[13px] font-bold">Huy hiệu của bạn</div>
-              <div className="text-[11.5px] opacity-85">
-                Học đều đặn để mở khoá các thành tựu vui.
-              </div>
-            </div>
-          </Link>
         </div>
       </div>
 
