@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   BookOpen,
+  BookText,
   GraduationCap,
   Home,
   Layers,
@@ -25,6 +26,7 @@ const items: NavItem[] = [
   { href: "/decks", label: "Decks", icon: Layers, mobile: true },
   { href: "/favorites", label: "Yêu thích", icon: Star, mobile: false },
   { href: "/ielts", label: "IELTS", icon: GraduationCap, mobile: true },
+  { href: "/grammar", label: "Ngữ pháp", icon: BookText, mobile: true },
   { href: "/trash", label: "Thùng rác", icon: Trash2, mobile: false },
   { href: "/settings", label: "Cài đặt", icon: Settings, mobile: true },
 ];
@@ -72,7 +74,7 @@ export function MobileNav() {
 
   return (
     <nav className="md:hidden fixed bottom-0 inset-x-0 z-40 border-t bg-card/95 backdrop-blur">
-      <ul className="grid grid-cols-4">
+      <ul className="grid grid-cols-5">
         {mobileItems.map((item) => {
           const active =
             item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
