@@ -24,16 +24,6 @@ export const RATING_COLORS: Record<Rating, string> = {
   4: "bg-emerald-600 hover:bg-emerald-700 text-white",
 };
 
-export const XP_REWARDS = {
-  REVIEW_GOOD: 5,
-  REVIEW_EASY: 7,
-  REVIEW_HARD: 3,
-  REVIEW_AGAIN: 1,
-  NEW_CARD: 10,
-  DAILY_GOAL: 50,
-  MAINTAIN_STREAK: 20,
-} as const;
-
 export const DEFAULT_DAILY_GOAL = 20;
 export const SINGLETON_PROGRESS_ID = "singleton";
 

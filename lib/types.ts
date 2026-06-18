@@ -77,16 +77,16 @@ export interface DailyStat {
   correctCount: number;
   totalCount: number;
   timeSpentSec: number;
-  xpEarned: number;
 }
 
 export interface UserProgress {
   id: string;
+  displayName: string | null;
+  avatarUrl: string | null;
+  bio: string | null;
   currentStreak: number;
   longestStreak: number;
   lastStudyDate: string | null;
-  totalXp: number;
-  level: number;
   dailyGoal: number;
   freezeTokens: number;
 }

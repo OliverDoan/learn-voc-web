@@ -8,7 +8,6 @@ import type { SRSOutput } from "@/lib/srs";
 
 interface ReviewResponse {
   card: unknown;
-  xpEarned: number;
   srs: SRSOutput;
   progress: unknown;
 }

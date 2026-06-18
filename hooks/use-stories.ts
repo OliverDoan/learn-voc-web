@@ -52,14 +52,3 @@ export function useDeleteStory() {
     onSuccess: () => qc.invalidateQueries({ queryKey: ["stories"] }),
   });
 }
-
-export function useMarkStoryRead() {
-  const qc = useQueryClient();
-  return useMutation({
-    mutationFn: (storyId: string) => apiPost<Story>(`/api/stories/${storyId}/read`, {}),
-    onSuccess: (_d, storyId) => {
-      qc.invalidateQueries({ queryKey: ["stories"] });
-      qc.invalidateQueries({ queryKey: ["stories", storyId] });
-    },
-  });
-}

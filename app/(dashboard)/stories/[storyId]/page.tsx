@@ -8,7 +8,7 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { useConfirm } from "@/components/ui/confirm-dialog";
 import { StoryRenderer } from "@/components/story/story-renderer";
-import { useDeleteStory, useMarkStoryRead, useStory } from "@/hooks/use-stories";
+import { useDeleteStory, useStory } from "@/hooks/use-stories";
 import { countWordTokens, parseStory } from "@/lib/story-parser";
 import { speakAsync, stopSpeaking } from "@/lib/tts";
 
@@ -21,12 +21,10 @@ export default function StoryViewPage({ params }: PageProps) {
   const router = useRouter();
   const [showMeanings, setShowMeanings] = useState(false);
   const [hideWords, setHideWords] = useState(false);
-  const [marked, setMarked] = useState(false);
   const [reading, setReading] = useState(false);
   const readCancelRef = useRef(false);
 
   const { data: story, isLoading } = useStory(storyId);
-  const markRead = useMarkStoryRead();
   const deleteStory = useDeleteStory();
   const { confirm, confirmDialog } = useConfirm();
 
@@ -62,16 +60,6 @@ export default function StoryViewPage({ params }: PageProps) {
     if (!readCancelRef.current) setReading(false);
   };
 
-  const handleMarkRead = async () => {
-    if (marked) return;
-    try {
-      await markRead.mutateAsync(storyId);
-      setMarked(true);
-      toast.success("Đã đánh dấu đọc xong!");
-    } catch (error) {
-      toast.error(error instanceof Error ? error.message : "Lỗi");
-    }
-  };
 
   const handleDelete = async () => {
     if (!story) return;
@@ -134,7 +122,7 @@ export default function StoryViewPage({ params }: PageProps) {
         </span>
         <h1 className="mt-3 text-3xl font-bold tracking-tight">{story.title}</h1>
         <div className="font-mono mt-2 text-[13px] uppercase tracking-wider text-muted-foreground">
-          {wordCount} từ chêm · {story.readCount} lần đọc
+          {wordCount} từ chêm
         </div>
       </div>
 
@@ -189,16 +177,6 @@ export default function StoryViewPage({ params }: PageProps) {
         </div>
       </article>
 
-      <div className="mt-6 flex justify-center">
-        <Button
-          size="lg"
-          className="rounded-full px-8 shadow-[0_8px_20px_rgba(23,61,201,.28)]"
-          onClick={handleMarkRead}
-          disabled={marked || markRead.isPending}
-        >
-          {marked ? "Đã đánh dấu" : "Đã đọc xong (+10 XP)"}
-        </Button>
-      </div>
       {confirmDialog}
     </div>
   );

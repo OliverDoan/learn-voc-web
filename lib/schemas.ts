@@ -103,11 +103,25 @@ export const reviewSchema = z.object({
 
 export type ReviewInput = z.infer<typeof reviewSchema>;
 
+// Ảnh truyện: ảnh tải lên (data URL base64, đã resize) hoặc URL ngoài.
+// Giới hạn ~3MB chuỗi để tránh payload quá lớn.
+const STORY_IMAGE_MAX_LENGTH = 3_000_000;
+
+const storyImageSchema = z
+  .string()
+  .max(STORY_IMAGE_MAX_LENGTH, "Ảnh quá lớn")
+  .refine(
+    (v) => v === "" || v.startsWith("data:image/") || /^https?:\/\//.test(v),
+    "Ảnh phải là ảnh tải lên hoặc URL hợp lệ",
+  )
+  .optional()
+  .nullable();
+
 export const storyCreateSchema = z.object({
   deckId: z.string().min(1),
   title: z.string().trim().min(1).max(120),
   content: z.string().trim().min(1).max(5000),
-  imageUrl: z.string().url().optional().nullable().or(z.literal("")),
+  imageUrl: storyImageSchema,
   audioUrl: z.string().url().optional().nullable().or(z.literal("")),
 });
 
@@ -116,9 +130,24 @@ export const storyUpdateSchema = storyCreateSchema.partial().omit({ deckId: true
 export type StoryCreateInput = z.infer<typeof storyCreateSchema>;
 export type StoryUpdateInput = z.infer<typeof storyUpdateSchema>;
 
+// Avatar lưu dạng data URL base64 (đã resize 256px) hoặc URL ngoài.
+// Giới hạn ~2MB chuỗi để tránh payload quá lớn.
+const AVATAR_MAX_LENGTH = 2_000_000;
+
 export const progressUpdateSchema = z.object({
   dailyGoal: z.number().int().min(1).max(200).optional(),
   freezeTokens: z.number().int().min(0).max(10).optional(),
+  displayName: z.string().trim().max(50, "Tên tối đa 50 ký tự").nullable().optional(),
+  bio: z.string().trim().max(280, "Giới thiệu tối đa 280 ký tự").nullable().optional(),
+  avatarUrl: z
+    .string()
+    .max(AVATAR_MAX_LENGTH, "Ảnh quá lớn")
+    .refine(
+      (v) => v === "" || v.startsWith("data:image/") || /^https?:\/\//.test(v),
+      "Avatar phải là ảnh tải lên hoặc URL hợp lệ",
+    )
+    .nullable()
+    .optional(),
 });
 
 export type ProgressUpdateInput = z.infer<typeof progressUpdateSchema>;

@@ -2,7 +2,7 @@
 
 import { useMemo, useRef, useState } from "react";
 import { toast } from "sonner";
-import { ChevronLeft, Loader2, Plus } from "lucide-react";
+import { ChevronLeft, ImagePlus, Loader2, Plus, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -12,6 +12,7 @@ import { StoryRenderer } from "./story-renderer";
 import { useCards } from "@/hooks/use-cards";
 import { useCreateStory, useUpdateStory } from "@/hooks/use-stories";
 import { countWordTokens, extractWords } from "@/lib/story-parser";
+import { fileToStoryImageDataUrl } from "@/lib/image";
 import type { StoryWithCards } from "@/lib/types";
 
 interface StoryEditorProps {
@@ -26,7 +27,9 @@ export function StoryEditor({ deckId, story, onDone, onCancel }: StoryEditorProp
   const [title, setTitle] = useState(story?.title ?? "");
   const [content, setContent] = useState(story?.content ?? "");
   const [imageUrl, setImageUrl] = useState(story?.imageUrl ?? "");
+  const [imageProcessing, setImageProcessing] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const imageInputRef = useRef<HTMLInputElement>(null);
 
   const { data: cards } = useCards({ deckId });
   const createMut = useCreateStory();
@@ -49,6 +52,22 @@ export function StoryEditor({ deckId, story, onDone, onCancel }: StoryEditorProp
       el.focus();
       el.setSelectionRange(start + tag.length, start + tag.length);
     }, 0);
+  };
+
+  // Chọn ảnh từ máy → resize và lưu thành data URL base64 (giống avatar).
+  const handlePickImage = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    e.target.value = ""; // reset để chọn lại cùng file vẫn kích hoạt onChange
+    if (!file) return;
+    setImageProcessing(true);
+    try {
+      const dataUrl = await fileToStoryImageDataUrl(file);
+      setImageUrl(dataUrl);
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : "Lỗi xử lý ảnh");
+    } finally {
+      setImageProcessing(false);
+    }
   };
 
   const isPending = createMut.isPending || updateMut.isPending;
@@ -108,13 +127,50 @@ export function StoryEditor({ deckId, story, onDone, onCancel }: StoryEditorProp
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="image">Ảnh minh hoạ (URL)</Label>
-            <Input
-              id="image"
-              value={imageUrl ?? ""}
-              onChange={(e) => setImageUrl(e.target.value)}
-              placeholder="https://..."
-            />
+            <Label htmlFor="image">Ảnh minh hoạ</Label>
+            <div className="flex items-center gap-2">
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => imageInputRef.current?.click()}
+                disabled={imageProcessing}
+              >
+                {imageProcessing ? (
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                ) : (
+                  <ImagePlus className="h-4 w-4" />
+                )}
+                {imageUrl ? "Đổi ảnh" : "Tải ảnh lên"}
+              </Button>
+              {imageUrl ? (
+                <Button
+                  type="button"
+                  variant="ghost"
+                  onClick={() => setImageUrl("")}
+                  className="text-muted-foreground hover:text-destructive"
+                >
+                  <Trash2 className="h-4 w-4" /> Xoá ảnh
+                </Button>
+              ) : null}
+              <input
+                ref={imageInputRef}
+                type="file"
+                accept="image/*"
+                className="hidden"
+                onChange={handlePickImage}
+              />
+            </div>
+            {!imageUrl.startsWith("data:") ? (
+              <Input
+                id="image"
+                value={imageUrl ?? ""}
+                onChange={(e) => setImageUrl(e.target.value)}
+                placeholder="hoặc dán URL ảnh: https://..."
+              />
+            ) : null}
+            <p className="text-xs text-muted-foreground">
+              Ảnh tải lên sẽ được nén &amp; lưu cùng truyện (tối đa 5MB).
+            </p>
           </div>
 
           <div className="space-y-2">

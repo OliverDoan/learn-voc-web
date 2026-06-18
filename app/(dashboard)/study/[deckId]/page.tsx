@@ -36,7 +36,6 @@ export default function StudyPage({ params }: PageProps) {
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [startedAt, setStartedAt] = useState(Date.now());
-  const [totalXp, setTotalXp] = useState(0);
   const [correct, setCorrect] = useState(0);
   const [done, setDone] = useState(false);
   const [reverse, setReverse] = useState(false);
@@ -83,13 +82,12 @@ export default function StudyPage({ params }: PageProps) {
       if (!current) return;
       const timeTakenMs = Date.now() - startedAt;
       try {
-        const res = await submit.mutateAsync({ cardId: current.id, rating, timeTakenMs });
-        setTotalXp((x) => x + res.xpEarned);
+        await submit.mutateAsync({ cardId: current.id, rating, timeTakenMs });
         if (rating >= 3) setCorrect((c) => c + 1);
 
         if (index + 1 >= total) {
           setDone(true);
-          toast.success(`Hoàn thành! +${totalXp + res.xpEarned} XP`);
+          toast.success("Hoàn thành phiên học! 🎉");
         } else {
           setIndex(index + 1);
           setFlipped(false);
@@ -98,7 +96,7 @@ export default function StudyPage({ params }: PageProps) {
         toast.error(error instanceof Error ? error.message : "Lỗi gửi review");
       }
     },
-    [current, index, total, totalXp, startedAt, submit],
+    [current, index, total, startedAt, submit],
   );
 
   useEffect(() => {
@@ -134,12 +132,10 @@ export default function StudyPage({ params }: PageProps) {
         backHref={backHref}
         total={total}
         correct={correct}
-        xp={totalXp}
         onAgain={() => {
           setIndex(0);
           setFlipped(false);
           setCorrect(0);
-          setTotalXp(0);
           setDone(false);
           refetch();
         }}
@@ -238,13 +234,11 @@ function SessionDone({
   backHref,
   total,
   correct,
-  xp,
   onAgain,
 }: {
   backHref: string;
   total: number;
   correct: number;
-  xp: number;
   onAgain: () => void;
 }) {
   const accuracy = total === 0 ? 0 : Math.round((correct / total) * 100);
@@ -254,10 +248,9 @@ function SessionDone({
       <h2 className="mb-2 text-2xl font-bold">Hoàn thành phiên học!</h2>
       <p className="mb-6 text-muted-foreground">Cố lên, mỗi ngày một chút thôi.</p>
 
-      <div className="mb-6 grid grid-cols-3 gap-3">
+      <div className="mb-6 grid grid-cols-2 gap-3">
         <Stat label="Đã ôn" value={total.toString()} />
         <Stat label="Đúng" value={`${accuracy}%`} />
-        <Stat label="XP" value={`+${xp}`} />
       </div>
 
       <div className="flex justify-center gap-3">

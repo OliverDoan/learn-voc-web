@@ -3,8 +3,7 @@ import { prisma } from "@/lib/db";
 import { fail, handleError, ok } from "@/lib/api-helpers";
 import { reviewSchema } from "@/lib/schemas";
 import { calculateNextReview } from "@/lib/srs";
-import { addXp, recordStudyActivity, upsertDailyStat } from "@/lib/progress-service";
-import { xpForReview } from "@/lib/xp";
+import { recordStudyActivity, upsertDailyStat } from "@/lib/progress-service";
 import type { Rating } from "@/lib/constants";
 
 export async function POST(req: NextRequest) {
@@ -48,24 +47,19 @@ export async function POST(req: NextRequest) {
       },
     });
 
-    const xpEarned = xpForReview(rating as Rating, wasNew);
     const now = new Date();
 
-    await Promise.all([
-      addXp(xpEarned),
-      upsertDailyStat(now, {
-        cardsReviewed: 1,
-        cardsLearned: wasNew ? 1 : 0,
-        correctCount: rating >= 3 ? 1 : 0,
-        totalCount: 1,
-        timeSpentSec: Math.round(timeTakenMs / 1000),
-        xpEarned,
-      }),
-    ]);
+    await upsertDailyStat(now, {
+      cardsReviewed: 1,
+      cardsLearned: wasNew ? 1 : 0,
+      correctCount: rating >= 3 ? 1 : 0,
+      totalCount: 1,
+      timeSpentSec: Math.round(timeTakenMs / 1000),
+    });
 
     const progress = await recordStudyActivity(now);
 
-    return ok({ card: updatedCard, xpEarned, srs: result, progress });
+    return ok({ card: updatedCard, srs: result, progress });
   } catch (error) {
     return handleError(error);
   }

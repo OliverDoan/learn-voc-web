@@ -65,7 +65,6 @@ lib/
   tts.ts                      # Web Speech API wrapper
   dictionary.ts               # Fetch định nghĩa
   db.ts                       # Prisma client singleton
-  xp.ts                       # XP, level
   achievements.ts             # Logic mở khóa
   story-parser.ts             # Parse [[word|nghĩa]] markup
 stores/
@@ -83,7 +82,7 @@ Xem `vocab-app-spec.md` section 2. Tóm tắt models:
 - `CardState` enum: `NEW | LEARNING | REVIEW | MATURE | SUSPENDED`
 - `ReviewLog` — lịch sử ôn
 - `DailyStat` — thống kê ngày
-- `UserProgress` — singleton: streak, xp, level, dailyGoal, freezeTokens
+- `UserProgress` — singleton: profile (displayName/avatarUrl/bio), streak, dailyGoal, freezeTokens
 - `Achievement` — huy hiệu mở khóa
 - `Story` — truyện chêm (content có markup `[[word|nghĩa]]`)
 - `StoryCard` — link Story ↔ Card
@@ -108,14 +107,6 @@ Cú pháp: `[[word|nghĩa]]`. Parser tách thành tokens: plain text hoặc word
 Ví dụ: `Tôi [[apple|quả táo]]` → `[{type:"text", text:"Tôi "}, {type:"word", word:"apple", meaning:"quả táo"}]`
 
 Render: word token = `<button class="font-bold text-primary underline-dotted">apple</button>` với tooltip nghĩa.
-
-## XP / Level
-
-```
-Good +5, Easy +7, Hard +3, Again +1, NEW +10
-Daily goal complete +50, Maintain streak +20
-level = floor(sqrt(totalXp / 100)) + 1
-```
 
 ## Conventions
 

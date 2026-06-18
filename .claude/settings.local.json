@@ -80,7 +80,10 @@
       "Bash(sed -n '40,75p' app/api/cards/bulk/route.ts)",
       "Bash(xargs ls -la)",
       "Bash(timeout 60 pnpm prisma migrate dev --name add_card_favorite)",
-      "Bash(pnpm prisma *)"
+      "Bash(pnpm prisma *)",
+      "Bash(grep -iE \"\\\\.\\(ts|tsx\\)$\")",
+      "Bash(npx next *)",
+      "Bash(grep -r \"FileReader\\\\|base64\\\\|multipart\\\\|Upload\\\\|imageUrl\" /Users/doanvietthuan/Documents/home/learn-voc-web --include=\"*.tsx\" --include=\"*.ts\" ! -path \"*/node_modules/*\" ! -path \"*/.next/*\")"
     ]
   }
 }

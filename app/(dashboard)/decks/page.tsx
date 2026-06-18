@@ -1,19 +1,31 @@
 "use client";
 
-import { useState } from "react";
-import { FileSpreadsheet, Layers, Plus, Loader2, Upload } from "lucide-react";
+import { useMemo, useState } from "react";
+import { Layers, Plus, Loader2, Search, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { DeckCard } from "@/components/deck/deck-card";
 import { DeckFormDialog } from "@/components/deck/deck-form-dialog";
 import { ImportDeckDialog } from "@/components/deck/import-deck-dialog";
-import { ExportPrintDialog } from "@/components/deck/export-print-dialog";
 import { useDecks } from "@/hooks/use-decks";
 
 export default function DecksPage() {
   const [openCreate, setOpenCreate] = useState(false);
   const [openImport, setOpenImport] = useState(false);
-  const [openExport, setOpenExport] = useState(false);
+  const [search, setSearch] = useState("");
   const { data: decks, isLoading } = useDecks();
+
+  // Lọc theo tên/mô tả deck (không phân biệt hoa thường).
+  const filteredDecks = useMemo(() => {
+    if (!decks) return [];
+    const q = search.trim().toLowerCase();
+    if (!q) return decks;
+    return decks.filter(
+      (deck) =>
+        deck.name.toLowerCase().includes(q) ||
+        (deck.description?.toLowerCase().includes(q) ?? false),
+    );
+  }, [decks, search]);
 
   return (
     <div className="container mx-auto max-w-6xl p-6">
@@ -23,15 +35,6 @@ export default function DecksPage() {
           <p className="text-sm text-muted-foreground">Nhóm từ vựng theo chủ đề</p>
         </div>
         <div className="flex flex-wrap gap-2">
-          <Button
-            variant="outline"
-            className="flex-1 rounded-full sm:flex-none"
-            onClick={() => setOpenExport(true)}
-            disabled={!decks || decks.length === 0}
-          >
-            <FileSpreadsheet className="h-4 w-4" />
-            Xuất để in
-          </Button>
           <Button
             variant="outline"
             className="flex-1 rounded-full sm:flex-none"
@@ -50,15 +53,31 @@ export default function DecksPage() {
         </div>
       </div>
 
+      {decks && decks.length > 0 ? (
+        <div className="relative mb-4 max-w-sm">
+          <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+          <Input
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Tìm deck theo tên hoặc mô tả..."
+            className="pl-9"
+          />
+        </div>
+      ) : null}
+
       {isLoading ? (
         <div className="flex justify-center py-12">
           <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
         </div>
       ) : !decks || decks.length === 0 ? (
         <EmptyState onCreate={() => setOpenCreate(true)} />
+      ) : filteredDecks.length === 0 ? (
+        <div className="rounded-2xl border border-dashed py-12 text-center text-sm text-muted-foreground">
+          Không tìm thấy deck nào khớp &ldquo;{search.trim()}&rdquo;.
+        </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {decks.map((deck) => (
+          {filteredDecks.map((deck) => (
             <DeckCard key={deck.id} deck={deck} />
           ))}
         </div>
@@ -66,7 +85,6 @@ export default function DecksPage() {
 
       <DeckFormDialog open={openCreate} onOpenChange={setOpenCreate} />
       <ImportDeckDialog open={openImport} onOpenChange={setOpenImport} />
-      <ExportPrintDialog open={openExport} onOpenChange={setOpenExport} decks={decks ?? []} />
     </div>
   );
 }

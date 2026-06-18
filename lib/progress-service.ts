@@ -1,6 +1,5 @@
 import { prisma } from "./db";
-import { SINGLETON_PROGRESS_ID, XP_REWARDS } from "./constants";
-import { levelFromXp } from "./xp";
+import { SINGLETON_PROGRESS_ID } from "./constants";
 
 function startOfDay(d: Date): Date {
   const x = new Date(d);
@@ -23,12 +22,39 @@ export async function getUserProgress() {
 export async function updateUserProgress(patch: {
   dailyGoal?: number;
   freezeTokens?: number;
+  displayName?: string | null;
+  bio?: string | null;
+  avatarUrl?: string | null;
 }) {
   // Đảm bảo record singleton tồn tại trước khi update
   await getUserProgress();
+  // Chuỗi rỗng → null để xoá giá trị (tên, bio, avatar)
+  const emptyToNull = (v: string | null | undefined) =>
+    v === undefined ? undefined : v === "" ? null : v;
   return prisma.userProgress.update({
     where: { id: SINGLETON_PROGRESS_ID },
-    data: patch,
+    data: {
+      dailyGoal: patch.dailyGoal,
+      freezeTokens: patch.freezeTokens,
+      displayName: emptyToNull(patch.displayName),
+      bio: emptyToNull(patch.bio),
+      avatarUrl: emptyToNull(patch.avatarUrl),
+    },
+  });
+}
+
+/**
+ * Đặt lại chuỗi streak hiện tại về 0 và xoá ngày học gần nhất.
+ * Giữ nguyên kỷ lục dài nhất (longestStreak) và freezeTokens.
+ */
+export async function resetStreak() {
+  await getUserProgress();
+  return prisma.userProgress.update({
+    where: { id: SINGLETON_PROGRESS_ID },
+    data: {
+      currentStreak: 0,
+      lastStudyDate: null,
+    },
   });
 }
 
@@ -39,11 +65,9 @@ export async function recordStudyActivity(now: Date = new Date()) {
   let currentStreak = progress.currentStreak;
   let longestStreak = progress.longestStreak;
   let freezeTokens = progress.freezeTokens;
-  let xpBonus = 0;
 
   if (!progress.lastStudyDate) {
     currentStreak = 1;
-    xpBonus += XP_REWARDS.MAINTAIN_STREAK;
   } else {
     const lastDay = startOfDay(progress.lastStudyDate);
     const diff = daysBetween(lastDay, today);
@@ -51,11 +75,9 @@ export async function recordStudyActivity(now: Date = new Date()) {
       // cùng ngày → không đổi streak
     } else if (diff === 1) {
       currentStreak += 1;
-      xpBonus += XP_REWARDS.MAINTAIN_STREAK;
     } else if (diff === 2 && freezeTokens > 0) {
       freezeTokens -= 1;
       currentStreak += 1;
-      xpBonus += XP_REWARDS.MAINTAIN_STREAK;
     } else {
       currentStreak = 1;
     }
@@ -70,25 +92,8 @@ export async function recordStudyActivity(now: Date = new Date()) {
       longestStreak,
       freezeTokens,
       lastStudyDate: now,
-      totalXp: { increment: xpBonus },
     },
   });
-}
-
-export async function addXp(amount: number) {
-  if (amount <= 0) return getUserProgress();
-  const updated = await prisma.userProgress.update({
-    where: { id: SINGLETON_PROGRESS_ID },
-    data: { totalXp: { increment: amount } },
-  });
-  const newLevel = levelFromXp(updated.totalXp);
-  if (newLevel !== updated.level) {
-    return prisma.userProgress.update({
-      where: { id: SINGLETON_PROGRESS_ID },
-      data: { level: newLevel },
-    });
-  }
-  return updated;
 }
 
 export async function upsertDailyStat(now: Date, patch: {
@@ -97,7 +102,6 @@ export async function upsertDailyStat(now: Date, patch: {
   correctCount?: number;
   totalCount?: number;
   timeSpentSec?: number;
-  xpEarned?: number;
 }) {
   const day = startOfDay(now);
   return prisma.dailyStat.upsert({
@@ -109,7 +113,6 @@ export async function upsertDailyStat(now: Date, patch: {
       correctCount: { increment: patch.correctCount ?? 0 },
       totalCount: { increment: patch.totalCount ?? 0 },
       timeSpentSec: { increment: patch.timeSpentSec ?? 0 },
-      xpEarned: { increment: patch.xpEarned ?? 0 },
     },
   });
 }

@@ -50,7 +50,6 @@ export async function GET(req: NextRequest) {
       learned: number;
       correct: number;
       total: number;
-      xp: number;
     }> = [];
     for (let i = 0; i < days; i++) {
       const day = new Date(start.getTime() + i * DAY_MS);
@@ -62,7 +61,6 @@ export async function GET(req: NextRequest) {
         learned: stat?.cardsLearned ?? 0,
         correct: stat?.correctCount ?? 0,
         total: stat?.totalCount ?? 0,
-        xp: stat?.xpEarned ?? 0,
       });
     }
 

@@ -1,17 +1,70 @@
 "use client";
 
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import { Loader2, Star, Volume2 } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { SelectMenu, type SelectOption } from "@/components/ui/select-menu";
 import { useFavorites, useToggleFavorite } from "@/hooks/use-cards";
 import { speak } from "@/lib/tts";
 import type { FavoriteCard } from "@/hooks/use-cards";
 
+/** Thông tin deck rút gọn để hiển thị nút lọc. */
+interface DeckFilterOption {
+  id: string;
+  name: string;
+  icon: string | null;
+  count: number;
+}
+
 export default function FavoritesPage() {
   const { data: cards, isLoading } = useFavorites();
   const toggleFavoriteMut = useToggleFavorite();
+
+  // null = hiển thị tất cả deck.
+  const [selectedDeckId, setSelectedDeckId] = useState<string | null>(null);
+
+  // Danh sách deck có trong từ yêu thích, kèm số lượng từ mỗi deck.
+  const deckOptions = useMemo<DeckFilterOption[]>(() => {
+    if (!cards) return [];
+    const map = new Map<string, DeckFilterOption>();
+    for (const card of cards) {
+      const existing = map.get(card.deck.id);
+      if (existing) {
+        existing.count += 1;
+      } else {
+        map.set(card.deck.id, {
+          id: card.deck.id,
+          name: card.deck.name,
+          icon: card.deck.icon,
+          count: 1,
+        });
+      }
+    }
+    return Array.from(map.values()).sort((a, b) => a.name.localeCompare(b.name));
+  }, [cards]);
+
+  const filteredCards = useMemo<FavoriteCard[]>(() => {
+    if (!cards) return [];
+    if (!selectedDeckId) return cards;
+    return cards.filter((card) => card.deck.id === selectedDeckId);
+  }, [cards, selectedDeckId]);
+
+  // Tuỳ chọn cho dropdown lọc: "Tất cả" + từng deck.
+  const selectOptions = useMemo<SelectOption[]>(() => {
+    const total = cards?.length ?? 0;
+    return [
+      { value: "", label: "Tất cả deck", count: total },
+      ...deckOptions.map((deck) => ({
+        value: deck.id,
+        label: deck.name,
+        icon: deck.icon ?? "📘",
+        count: deck.count,
+      })),
+    ];
+  }, [cards, deckOptions]);
 
   const handleUnfavorite = async (card: FavoriteCard) => {
     try {
@@ -49,9 +102,30 @@ export default function FavoritesPage() {
         </div>
       ) : (
         <>
-          <p className="mb-3 text-sm text-muted-foreground">{cards.length} từ</p>
+          {/* Lọc theo deck — chỉ hiện khi có từ ở ≥ 2 deck */}
+          {deckOptions.length > 1 ? (
+            <div className="mb-4 flex items-center gap-2">
+              <label
+                htmlFor="deck-filter"
+                className="shrink-0 text-sm text-muted-foreground"
+              >
+                Lọc theo deck
+              </label>
+              <SelectMenu
+                id="deck-filter"
+                value={selectedDeckId ?? ""}
+                onChange={(v) => setSelectedDeckId(v || null)}
+                options={selectOptions}
+                className="max-w-xs flex-1"
+              />
+            </div>
+          ) : null}
+
+          <p className="mb-3 text-sm text-muted-foreground">
+            {filteredCards.length} từ
+          </p>
           <ul className="space-y-2 pb-24">
-            {cards.map((card) => (
+            {filteredCards.map((card) => (
               <li
                 key={card.id}
                 className="flex items-start gap-3 rounded-lg border bg-card p-4 transition-colors hover:bg-accent/30"

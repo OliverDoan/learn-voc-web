@@ -18,7 +18,11 @@ import { Progress } from "@/components/ui/progress";
 import { useCards } from "@/hooks/use-cards";
 import { useDeck } from "@/hooks/use-decks";
 import { useSpeechRecognition, type SpeechResult } from "@/hooks/use-speech-recognition";
-import { isExactMatch } from "@/lib/speech-recognition";
+import { matchPronunciation } from "@/lib/speech-recognition";
+import {
+  getPronounceDifficulty,
+  thresholdForDifficulty,
+} from "@/lib/pronounce-settings";
 import { speak } from "@/lib/tts";
 import type { Card } from "@/lib/types";
 
@@ -58,6 +62,14 @@ export default function PronouncePage({ params }: PageProps) {
   const [heard, setHeard] = useState("");
   // Lưu kết quả đúng/sai theo cardId để tính điểm tổng kết.
   const [scores, setScores] = useState<Record<string, boolean>>({});
+  // Ngưỡng chấm theo độ khó người dùng chọn trong Cài đặt (đọc sau khi mount).
+  const [threshold, setThreshold] = useState<number>(() =>
+    thresholdForDifficulty("normal"),
+  );
+
+  useEffect(() => {
+    setThreshold(thresholdForDifficulty(getPronounceDifficulty()));
+  }, []);
 
   const total = cards.length;
   const current = cards[pos];
@@ -66,15 +78,20 @@ export default function PronouncePage({ params }: PageProps) {
     (result: SpeechResult) => {
       if (!current) return;
       setHeard(result.transcript);
-      const correct = isExactMatch(current.word, result.alternatives);
-      setAttempt(correct ? "correct" : "incorrect");
+      const { matched } = matchPronunciation(
+        current.word,
+        result.alternatives,
+        threshold,
+      );
+      setAttempt(matched ? "correct" : "incorrect");
+      const correct = matched;
       setScores((prev) => {
         // Chỉ ghi nhận lần đúng đầu tiên; không hạ điểm nếu thử lại sai.
         if (prev[current.id]) return prev;
         return { ...prev, [current.id]: correct };
       });
     },
-    [current],
+    [current, threshold],
   );
 
   const { supported, listening, interim, error, start, stop } = useSpeechRecognition({

@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import {
   BookOpen,
   BookText,
+  Focus,
   GraduationCap,
   Home,
   Layers,
@@ -13,6 +14,8 @@ import {
   Trash2,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Avatar } from "@/components/ui/avatar";
+import { useProgress } from "@/hooks/use-progress";
 
 interface NavItem {
   href: string;
@@ -27,6 +30,7 @@ const items: NavItem[] = [
   { href: "/favorites", label: "Yêu thích", icon: Star, mobile: false },
   { href: "/ielts", label: "IELTS", icon: GraduationCap, mobile: true },
   { href: "/grammar", label: "Ngữ pháp", icon: BookText, mobile: true },
+  { href: "/focus", label: "Tập trung", icon: Focus, mobile: false },
   { href: "/trash", label: "Thùng rác", icon: Trash2, mobile: false },
   { href: "/settings", label: "Cài đặt", icon: Settings, mobile: true },
 ];
@@ -35,6 +39,7 @@ const mobileItems = items.filter((i) => i.mobile);
 
 export function Nav() {
   const pathname = usePathname();
+  const { data: progress } = useProgress();
 
   return (
     <aside className="hidden md:flex w-56 shrink-0 flex-col border-r bg-card p-4 sticky top-0 h-screen overflow-y-auto">
@@ -65,6 +70,31 @@ export function Nav() {
           );
         })}
       </nav>
+
+      <Link
+        href="/settings"
+        className={cn(
+          "mt-auto flex items-center gap-3 rounded-[10px] border p-2.5 transition-colors",
+          pathname.startsWith("/settings")
+            ? "border-primary/40 bg-primary/5"
+            : "border-transparent hover:bg-accent",
+        )}
+      >
+        <Avatar
+          src={progress?.avatarUrl}
+          name={progress?.displayName ?? "Bạn"}
+          className="h-9 w-9"
+          size={14}
+        />
+        <div className="min-w-0 flex-1">
+          <p className="truncate text-sm font-medium">
+            {progress?.displayName?.trim() || "Hồ sơ của bạn"}
+          </p>
+          <p className="truncate text-xs text-muted-foreground">
+            🔥 {progress?.currentStreak ?? 0} ngày streak
+          </p>
+        </div>
+      </Link>
     </aside>
   );
 }

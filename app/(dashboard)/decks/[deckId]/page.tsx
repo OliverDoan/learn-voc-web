@@ -27,6 +27,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { useConfirm } from "@/components/ui/confirm-dialog";
+import { AutoScrollControls } from "@/components/ui/auto-scroll-controls";
 import { CardFormDialog } from "@/components/deck/card-form-dialog";
 import { DeckFormDialog } from "@/components/deck/deck-form-dialog";
 import { ImportCardsDialog } from "@/components/deck/import-cards-dialog";
@@ -355,6 +356,8 @@ export default function DeckDetailPage({ params }: PageProps) {
         </div>
       </div>
 
+      <StoryList deckId={deckId} />
+
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
         <Input
           value={search}
@@ -614,8 +617,6 @@ export default function DeckDetailPage({ params }: PageProps) {
         </ul>
       )}
 
-      <StoryList deckId={deckId} />
-
       <CardFormDialog
         open={openAddCard}
         onOpenChange={setOpenAddCard}
@@ -672,6 +673,9 @@ export default function DeckDetailPage({ params }: PageProps) {
         </div>
       ) : null}
       {confirmDialog}
+
+      {/* Tự cuộn lên/xuống — tiện khi danh sách từ dài */}
+      {displayCards.length > 4 ? <AutoScrollControls /> : null}
     </div>
   );
 }

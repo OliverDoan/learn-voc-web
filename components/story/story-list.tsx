@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { BookOpen, Eye, Plus } from "lucide-react";
+import { BookOpen, Plus } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -15,7 +15,7 @@ export function StoryList({ deckId }: StoryListProps) {
   const { data: stories, isLoading } = useStories(deckId);
 
   return (
-    <div className="mt-10">
+    <div className="mb-8">
       <div className="mb-3 flex items-center justify-between">
         <h2 className="text-lg font-semibold">⭐ Truyện chêm</h2>
         <Link href={`/decks/${deckId}/stories/new`}>
@@ -66,9 +66,6 @@ export function StoryList({ deckId }: StoryListProps) {
                     <BookOpen className="mr-1 h-3 w-3" />
                     {story._count.storyCards} từ
                   </Badge>
-                  <span className="flex items-center gap-1">
-                    <Eye className="h-3 w-3" /> {story.readCount}
-                  </span>
                 </div>
               </Link>
             </motion.li>

@@ -91,3 +91,92 @@ export function isExactMatch(target: string, alternatives: readonly string[]): b
   const normalizedTarget = normalizeForCompare(target);
   return alternatives.some((alt) => normalizeForCompare(alt) === normalizedTarget);
 }
+
+/**
+ * Khoảng cách Levenshtein (số phép chèn/xoá/thay tối thiểu) giữa hai chuỗi.
+ */
+export function levenshtein(a: string, b: string): number {
+  if (a === b) return 0;
+  if (a.length === 0) return b.length;
+  if (b.length === 0) return a.length;
+
+  // Chỉ giữ hai hàng của ma trận để tiết kiệm bộ nhớ.
+  let prev = Array.from({ length: b.length + 1 }, (_, i) => i);
+  let curr = new Array<number>(b.length + 1);
+
+  for (let i = 1; i <= a.length; i++) {
+    curr[0] = i;
+    for (let j = 1; j <= b.length; j++) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      curr[j] = Math.min(
+        curr[j - 1] + 1, // chèn
+        prev[j] + 1, // xoá
+        prev[j - 1] + cost, // thay
+      );
+    }
+    [prev, curr] = [curr, prev];
+  }
+
+  return prev[b.length];
+}
+
+/**
+ * Độ tương đồng 0..1 giữa hai chuỗi (1 = giống hệt) dựa trên Levenshtein.
+ */
+export function similarity(a: string, b: string): number {
+  const maxLen = Math.max(a.length, b.length);
+  if (maxLen === 0) return 1;
+  return 1 - levenshtein(a, b) / maxLen;
+}
+
+/**
+ * Ngưỡng độ tương đồng để coi là phát âm "đạt". Càng thấp càng dễ.
+ * 0.6 = chấp nhận phát âm gần đúng (sai ~40% ký tự vẫn qua).
+ */
+export const DEFAULT_MATCH_THRESHOLD = 0.6;
+
+/**
+ * Chấm phát âm theo kiểu khoan dung: đạt nếu BẤT KỲ phương án nhận dạng nào
+ * - trùng khớp tuyệt đối, hoặc
+ * - chứa từ đích như một token riêng (người dùng nói dư chữ), hoặc
+ * - có độ tương đồng >= threshold so với từ đích.
+ *
+ * Trả về độ tương đồng tốt nhất tìm được để hiển thị/ghi log nếu cần.
+ */
+export function matchPronunciation(
+  target: string,
+  alternatives: readonly string[],
+  threshold = DEFAULT_MATCH_THRESHOLD,
+): { matched: boolean; score: number } {
+  const normalizedTarget = normalizeForCompare(target);
+  if (!normalizedTarget) return { matched: false, score: 0 };
+
+  let best = 0;
+  for (const alt of alternatives) {
+    const normalizedAlt = normalizeForCompare(alt);
+    if (!normalizedAlt) continue;
+
+    // Khớp tuyệt đối.
+    if (normalizedAlt === normalizedTarget) return { matched: true, score: 1 };
+
+    // Từ đích xuất hiện như một token trong câu nghe được.
+    const tokens = normalizedAlt.split(" ");
+    if (tokens.includes(normalizedTarget)) return { matched: true, score: 1 };
+
+    // So khớp với cả câu và với từng token, lấy điểm cao nhất.
+    best = Math.max(best, similarity(normalizedTarget, normalizedAlt));
+    for (const token of tokens) {
+      best = Math.max(best, similarity(normalizedTarget, token));
+    }
+  }
+
+  return { matched: best >= threshold, score: best };
+}
+
+/**
+ * @deprecated Dùng {@link matchPronunciation} để chấm khoan dung hơn.
+ * Giữ lại để tương thích: đạt nếu độ tương đồng vượt ngưỡng mặc định.
+ */
+export function isCloseMatch(target: string, alternatives: readonly string[]): boolean {
+  return matchPronunciation(target, alternatives).matched;
+}

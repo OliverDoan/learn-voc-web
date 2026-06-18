@@ -98,16 +98,18 @@ model DailyStat {
   correctCount  Int      @default(0)
   totalCount    Int      @default(0)
   timeSpentSec  Int      @default(0)
-  xpEarned      Int      @default(0)
 }
 
 model UserProgress {
   id              String    @id @default("singleton")
+  // Hồ sơ cá nhân
+  displayName     String?
+  // Avatar lưu dạng data URL (base64) hoặc URL ngoài
+  avatarUrl       String?
+  bio             String?
   currentStreak   Int       @default(0)
   longestStreak   Int       @default(0)
   lastStudyDate   DateTime?
-  totalXp         Int       @default(0)
-  level           Int       @default(1)
   dailyGoal       Int       @default(20)
   freezeTokens    Int       @default(2)
 }

@@ -10,6 +10,8 @@ import "./globals.css";
 import { Providers } from "@/components/providers";
 import { PwaRegister } from "@/components/pwa-register";
 import { THEME_STORAGE_KEY } from "@/lib/theme";
+import { PALETTE_STORAGE_KEY } from "@/components/theme-provider";
+import { FOCUS_THEMES, PALETTE_VAR_KEYS } from "@/lib/focus-themes";
 
 // NewEra Inc. Design System fonts
 const beVietnam = Be_Vietnam_Pro({
@@ -72,15 +74,35 @@ interface RootLayoutProps {
   children: React.ReactNode;
 }
 
+// Map id → { surface, isDark, vars } để áp palette ngay trước khi paint
+const PALETTE_MAP = Object.fromEntries(
+  FOCUS_THEMES.map((t) => [t.id, { surface: t.surface, isDark: t.isDark, vars: t.vars }]),
+);
+
 const themeBootstrap = `
 (function(){
   try {
-    var stored = localStorage.getItem(${JSON.stringify(THEME_STORAGE_KEY)});
-    var theme = stored === "light" || stored === "dark" || stored === "system" ? stored : "light";
-    var resolved = theme === "system"
-      ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
-      : theme;
     var root = document.documentElement;
+    var palettes = ${JSON.stringify(PALETTE_MAP)};
+    var keys = ${JSON.stringify(PALETTE_VAR_KEYS)};
+    for (var i = 0; i < keys.length; i++) root.style.removeProperty(keys[i]);
+
+    var storedTheme = localStorage.getItem(${JSON.stringify(THEME_STORAGE_KEY)});
+    var theme = storedTheme === "light" || storedTheme === "dark" || storedTheme === "system" ? storedTheme : "light";
+
+    var storedPal = localStorage.getItem(${JSON.stringify(PALETTE_STORAGE_KEY)});
+    var p = storedPal && palettes[storedPal] ? palettes[storedPal] : null;
+
+    var resolved;
+    if (p && p.surface) {
+      for (var k in p.vars) root.style.setProperty(k, p.vars[k]);
+      root.style.setProperty("--background", p.surface);
+      resolved = p.isDark ? "dark" : "light";
+    } else {
+      resolved = theme === "system"
+        ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+        : theme;
+    }
     root.classList.toggle("dark", resolved === "dark");
     root.style.colorScheme = resolved;
   } catch (e) {
