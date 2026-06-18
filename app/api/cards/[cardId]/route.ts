@@ -25,7 +25,7 @@ export async function PATCH(req: NextRequest, { params }: RouteParams) {
     const { cardId } = await params;
     const body = await req.json();
     const parsed = cardUpdateSchema.parse(body);
-    const { tags, imageUrl, audioUrl, wordForms, ...rest } = parsed;
+    const { tags, synonyms, antonyms, imageUrl, audioUrl, wordForms, ...rest } = parsed;
     const card = await prisma.card.update({
       where: { id: cardId },
       data: {
@@ -34,6 +34,8 @@ export async function PATCH(req: NextRequest, { params }: RouteParams) {
         ...(audioUrl !== undefined ? { audioUrl: audioUrl || null } : {}),
         ...(tags ? { tags: stringifyTags(tags) } : {}),
         ...(wordForms !== undefined ? { wordForms: stringifyWordForms(wordForms) } : {}),
+        ...(synonyms !== undefined ? { synonyms: stringifyTags(synonyms) } : {}),
+        ...(antonyms !== undefined ? { antonyms: stringifyTags(antonyms) } : {}),
       },
     });
     return ok(card);

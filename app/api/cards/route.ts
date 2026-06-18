@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
     const deck = await prisma.deck.findUnique({ where: { id: parsed.deckId } });
     if (!deck) return fail("Deck không tồn tại", 404);
 
-    const { tags, imageUrl, audioUrl, wordForms, ...rest } = parsed;
+    const { tags, synonyms, antonyms, imageUrl, audioUrl, wordForms, ...rest } = parsed;
     // Thẻ mới xếp cuối deck: order = max hiện tại + 1
     const last = await prisma.card.findFirst({
       where: { deckId: parsed.deckId },
@@ -56,6 +56,8 @@ export async function POST(req: NextRequest) {
         audioUrl: audioUrl || null,
         tags: stringifyTags(tags),
         wordForms: stringifyWordForms(wordForms),
+        synonyms: stringifyTags(synonyms),
+        antonyms: stringifyTags(antonyms),
         order: (last?.order ?? -1) + 1,
       },
     });

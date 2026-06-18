@@ -40,6 +40,8 @@ export const cardCreateSchema = z.object({
   audioUrl: z.string().url().optional().nullable().or(z.literal("")),
   tags: z.array(z.string().trim().min(1).max(30)).max(10).default([]),
   wordForms: wordFormsSchema.optional().nullable(),
+  synonyms: z.array(z.string().trim().min(1).max(60)).max(20).default([]),
+  antonyms: z.array(z.string().trim().min(1).max(60)).max(20).default([]),
 });
 
 export const cardUpdateSchema = cardCreateSchema
@@ -47,9 +49,11 @@ export const cardUpdateSchema = cardCreateSchema
   .omit({ deckId: true })
   .extend({
     favorite: z.boolean().optional(),
-    // Bỏ .default([]) của cardCreateSchema: khi update mà không gửi `tags`,
-    // field phải là undefined (không động tới) thay vì [] (vô tình xoá hết tag).
+    // Bỏ .default([]) của cardCreateSchema: khi update mà không gửi field,
+    // phải là undefined (không động tới) thay vì [] (vô tình xoá sạch dữ liệu cũ).
     tags: z.array(z.string().trim().min(1).max(30)).max(10).optional(),
+    synonyms: z.array(z.string().trim().min(1).max(60)).max(20).optional(),
+    antonyms: z.array(z.string().trim().min(1).max(60)).max(20).optional(),
   });
 
 export const cardImportItemSchema = z.object({

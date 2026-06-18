@@ -44,6 +44,8 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
   const [exampleTranslation, setExampleTranslation] = useState(card?.exampleTranslation ?? "");
   const [note, setNote] = useState(card?.note ?? "");
   const [tagsInput, setTagsInput] = useState(parseTags(card?.tags).join(", "));
+  const [synonymsInput, setSynonymsInput] = useState(parseTags(card?.synonyms).join(", "));
+  const [antonymsInput, setAntonymsInput] = useState(parseTags(card?.antonyms).join(", "));
   const [wordForms, setWordForms] = useState<WordFormsInput>(() => parseWordForms(card?.wordForms));
 
   const debouncedWord = useDebounce(word, 500);
@@ -62,6 +64,8 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
       setExampleTranslation(card?.exampleTranslation ?? "");
       setNote(card?.note ?? "");
       setTagsInput(parseTags(card?.tags).join(", "));
+      setSynonymsInput(parseTags(card?.synonyms).join(", "));
+      setAntonymsInput(parseTags(card?.antonyms).join(", "));
       setWordForms(parseWordForms(card?.wordForms));
     }
   }, [open, card]);
@@ -80,6 +84,8 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
     if (!partOfSpeech && d.meanings[0]?.partOfSpeech) setPartOfSpeech(d.meanings[0].partOfSpeech);
     const firstDef = d.meanings[0]?.definitions[0];
     if (!example && firstDef?.example) setExample(firstDef.example);
+    if (!synonymsInput && d.synonyms.length > 0) setSynonymsInput(d.synonyms.join(", "));
+    if (!antonymsInput && d.antonyms.length > 0) setAntonymsInput(d.antonyms.join(", "));
   }, [dictQuery.data]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const isPending = createMut.isPending || updateMut.isPending;
@@ -88,10 +94,15 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
     if (!word.trim()) return toast.error("Từ không được trống");
     if (!meaning.trim()) return toast.error("Nghĩa không được trống");
 
-    const tags = tagsInput
-      .split(",")
-      .map((t) => t.trim())
-      .filter(Boolean);
+    const splitList = (value: string) =>
+      value
+        .split(",")
+        .map((t) => t.trim())
+        .filter(Boolean);
+
+    const tags = splitList(tagsInput);
+    const synonyms = splitList(synonymsInput);
+    const antonyms = splitList(antonymsInput);
 
     const payload = {
       word: word.trim(),
@@ -103,6 +114,8 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
       exampleTranslation: exampleTranslation || null,
       note: note || null,
       tags,
+      synonyms,
+      antonyms,
       wordForms,
     };
 
@@ -253,6 +266,26 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
                 </div>
               ))}
             </div>
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="synonyms">Đồng nghĩa (phân cách dấu phẩy)</Label>
+            <Input
+              id="synonyms"
+              value={synonymsInput}
+              onChange={(e) => setSynonymsInput(e.target.value)}
+              placeholder="glad, joyful"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="antonyms">Trái nghĩa (phân cách dấu phẩy)</Label>
+            <Input
+              id="antonyms"
+              value={antonymsInput}
+              onChange={(e) => setAntonymsInput(e.target.value)}
+              placeholder="sad, unhappy"
+            />
           </div>
 
           <div className="space-y-2 md:col-span-2">

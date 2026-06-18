@@ -32,6 +32,9 @@ export interface Card {
   tags: string;
   // JSON string các dạng từ: {"noun":"beauty","adjective":"beautiful",...}
   wordForms: string | null;
+  // JSON array string: ["happy","glad"]
+  synonyms: string | null;
+  antonyms: string | null;
   favorite: boolean;
   easeFactor: number;
   interval: number;

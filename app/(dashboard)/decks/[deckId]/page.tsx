@@ -440,6 +440,8 @@ export default function DeckDetailPage({ params }: PageProps) {
         <ul className="space-y-2 pb-24">
           {displayCards.map((card) => {
             const tags = parseTags(card.tags);
+            const synonyms = parseTags(card.synonyms);
+            const antonyms = parseTags(card.antonyms);
             const isSelected = selectedIds.has(card.id);
             const isDragging = dragId === card.id;
             const isOver = overId === card.id && dragId !== card.id;
@@ -561,6 +563,22 @@ export default function DeckDetailPage({ params }: PageProps) {
                     <p className="mt-1 text-xs italic text-muted-foreground">
                       &ldquo;{card.example}&rdquo;
                     </p>
+                  ) : null}
+                  {synonyms.length > 0 ? (
+                    <div className="mt-1.5 flex flex-wrap items-center gap-1.5 text-xs">
+                      <span className="font-medium text-emerald-600 dark:text-emerald-400">
+                        ≈ Đồng nghĩa:
+                      </span>
+                      <span className="text-muted-foreground">{synonyms.join(", ")}</span>
+                    </div>
+                  ) : null}
+                  {antonyms.length > 0 ? (
+                    <div className="mt-1 flex flex-wrap items-center gap-1.5 text-xs">
+                      <span className="font-medium text-rose-600 dark:text-rose-400">
+                        ↔ Trái nghĩa:
+                      </span>
+                      <span className="text-muted-foreground">{antonyms.join(", ")}</span>
+                    </div>
                   ) : null}
                   {tags.length > 0 ? (
                     <div className="mt-2 flex flex-wrap gap-1">

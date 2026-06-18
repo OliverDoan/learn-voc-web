@@ -47,6 +47,9 @@ model Card {
   order              Int      @default(0)
   // JSON các dạng từ cho bài word formation: {"noun":..,"verb":..,"adjective":..,"adverb":..}
   wordForms          String?
+  // JSON array từ đồng nghĩa / trái nghĩa, vd ["happy","glad"]
+  synonyms           String?
+  antonyms           String?
   // Đánh dấu từ yêu thích — bật/tắt bằng icon ngôi sao
   favorite           Boolean  @default(false)
 

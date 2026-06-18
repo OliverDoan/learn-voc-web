@@ -17,6 +17,8 @@
     "db:seed": "tsx prisma/seed.ts",
     "import:vocab": "tsx --env-file=.env scripts/import-vocab-full.ts",
     "gen:examples": "tsx --env-file=.env scripts/generate-examples.ts",
+    "data:synonyms": "tsx --env-file=.env scripts/fill-synonyms.ts",
+    "gen:synonyms": "tsx --env-file=.env scripts/generate-synonyms.ts",
     "gen:examples:dict": "tsx --env-file=.env scripts/generate-examples-dict.ts",
     "data:export": "tsx --env-file=.env scripts/export-data.ts",
     "data:load": "tsx --env-file=.env scripts/load-data.ts"
