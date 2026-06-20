@@ -476,7 +476,7 @@ export default function DeckDetailPage({ params }: PageProps) {
                   setOverId(null);
                   dragArmed.current = false;
                 }}
-                className={`group flex items-start gap-3 rounded-lg border bg-card p-4 transition-colors hover:bg-accent/30 ${
+                className={`group flex items-start gap-3 rounded-lg border bg-card p-4 transition-all hover:border-primary/40 hover:shadow-md ${
                   isSelected ? "border-primary/60 bg-primary/5" : ""
                 } ${isDragging ? "opacity-40" : ""} ${
                   isOver ? "border-primary ring-2 ring-primary/40" : ""

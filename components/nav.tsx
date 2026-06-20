@@ -9,6 +9,7 @@ import {
   GraduationCap,
   Home,
   Layers,
+  Search,
   Settings,
   Star,
   Trash2,
@@ -26,6 +27,7 @@ interface NavItem {
 
 const items: NavItem[] = [
   { href: "/", label: "Trang chủ", icon: Home, mobile: true },
+  { href: "/search", label: "Tra từ", icon: Search, mobile: false },
   { href: "/decks", label: "Decks", icon: Layers, mobile: true },
   { href: "/favorites", label: "Yêu thích", icon: Star, mobile: false },
   { href: "/ielts", label: "IELTS", icon: GraduationCap, mobile: true },

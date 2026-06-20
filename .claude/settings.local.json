@@ -83,7 +83,9 @@
       "Bash(pnpm prisma *)",
       "Bash(grep -iE \"\\\\.\\(ts|tsx\\)$\")",
       "Bash(npx next *)",
-      "Bash(grep -r \"FileReader\\\\|base64\\\\|multipart\\\\|Upload\\\\|imageUrl\" /Users/doanvietthuan/Documents/home/learn-voc-web --include=\"*.tsx\" --include=\"*.ts\" ! -path \"*/node_modules/*\" ! -path \"*/.next/*\")"
+      "Bash(grep -r \"FileReader\\\\|base64\\\\|multipart\\\\|Upload\\\\|imageUrl\" /Users/doanvietthuan/Documents/home/learn-voc-web --include=\"*.tsx\" --include=\"*.ts\" ! -path \"*/node_modules/*\" ! -path \"*/.next/*\")",
+      "Bash(sed -n '1,70p' app/api/cards/route.ts)",
+      "Bash(sed -n '28,40p' components/deck/card-form-dialog.tsx)"
     ]
   }
 }

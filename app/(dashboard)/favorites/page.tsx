@@ -128,7 +128,7 @@ export default function FavoritesPage() {
             {filteredCards.map((card) => (
               <li
                 key={card.id}
-                className="flex items-start gap-3 rounded-lg border bg-card p-4 transition-colors hover:bg-accent/30"
+                className="flex items-start gap-3 rounded-lg border bg-card p-4 transition-all hover:border-primary/40 hover:shadow-md"
               >
                 <Button
                   variant="ghost"

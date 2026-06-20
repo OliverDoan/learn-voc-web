@@ -42,10 +42,10 @@ export function CardListItem({
 
   return (
     <li
-      className={`group flex items-start gap-3 rounded-lg border p-4 transition-colors ${
+      className={`group flex items-start gap-3 rounded-lg border p-4 transition-all ${
         selected
           ? "border-primary bg-primary/5"
-          : "border-border bg-card hover:bg-accent/30"
+          : "border-border bg-card hover:border-primary/40 hover:shadow-md"
       }`}
     >
       <input

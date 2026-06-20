@@ -7,6 +7,7 @@ import { ArrowLeft, BookOpen, Eye, EyeOff, Pencil, Square, Target, Trash2, Volum
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { useConfirm } from "@/components/ui/confirm-dialog";
+import { ImageLightbox } from "@/components/ui/image-lightbox";
 import { StoryRenderer } from "@/components/story/story-renderer";
 import { useDeleteStory, useStory } from "@/hooks/use-stories";
 import { countWordTokens, parseStory } from "@/lib/story-parser";
@@ -108,11 +109,10 @@ export default function StoryViewPage({ params }: PageProps) {
       </div>
 
       {story.imageUrl ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
+        <ImageLightbox
           src={story.imageUrl}
           alt={story.title}
-          className="mb-6 max-h-[300px] w-full rounded-xl object-cover shadow-md"
+          className="mb-6 max-h-[300px] w-full rounded-xl shadow-md"
         />
       ) : null}
 
