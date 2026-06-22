@@ -40,6 +40,7 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
   const [meaning, setMeaning] = useState(card?.meaning ?? "");
   const [partOfSpeech, setPartOfSpeech] = useState(card?.partOfSpeech ?? "");
   const [rootWord, setRootWord] = useState(card?.rootWord ?? "");
+  const [rootWordMeaning, setRootWordMeaning] = useState(card?.rootWordMeaning ?? "");
   const [phonetic, setPhonetic] = useState(card?.phonetic ?? "");
   const [example, setExample] = useState(card?.example ?? "");
   const [exampleTranslation, setExampleTranslation] = useState(card?.exampleTranslation ?? "");
@@ -60,6 +61,7 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
       setMeaning(card?.meaning ?? "");
       setPartOfSpeech(card?.partOfSpeech ?? "");
       setRootWord(card?.rootWord ?? "");
+      setRootWordMeaning(card?.rootWordMeaning ?? "");
       setPhonetic(card?.phonetic ?? "");
       setExample(card?.example ?? "");
       setExampleTranslation(card?.exampleTranslation ?? "");
@@ -110,6 +112,7 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
       meaning: meaning.trim(),
       partOfSpeech: partOfSpeech || null,
       rootWord: rootWord || null,
+      rootWordMeaning: rootWordMeaning || null,
       phonetic: phonetic || null,
       example: example || null,
       exampleTranslation: exampleTranslation || null,
@@ -211,13 +214,23 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
             />
           </div>
 
-          <div className="space-y-2 md:col-span-2">
+          <div className="space-y-2">
             <Label htmlFor="root-word">Từ gốc</Label>
             <Input
               id="root-word"
               value={rootWord ?? ""}
               onChange={(e) => setRootWord(e.target.value)}
               placeholder="progress (noun, verb)"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="root-word-meaning">Nghĩa từ gốc</Label>
+            <Input
+              id="root-word-meaning"
+              value={rootWordMeaning ?? ""}
+              onChange={(e) => setRootWordMeaning(e.target.value)}
+              placeholder="tiến bộ; sự tiến triển"
             />
           </div>
 

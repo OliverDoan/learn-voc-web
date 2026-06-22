@@ -87,6 +87,9 @@ export function CardListItem({
             <Sprout className="h-3 w-3 shrink-0" />
             <span className="text-muted-foreground">Từ gốc:</span>
             <span>{displayRootWord(card.word, card.rootWord)}</span>
+            {card.rootWordMeaning ? (
+              <span className="font-normal text-muted-foreground">— {card.rootWordMeaning}</span>
+            ) : null}
           </div>
         ) : null}
         {card.example ? (

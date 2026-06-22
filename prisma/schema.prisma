@@ -1,6 +1,6 @@
 // Vocabulary Learning Web App — Prisma schema
-// SQLite local file: prisma/dev.db
-// Note: SQLite không hỗ trợ String[] native nên `tags` lưu dạng JSON string
+// PostgreSQL (DATABASE_URL)
+// Note: `tags`/`synonyms`/`antonyms` lưu dạng JSON string cho gọn, parse khi đọc
 
 generator client {
   provider = "prisma-client-js"
@@ -37,6 +37,8 @@ model Card {
   partOfSpeech       String?
   // Từ gốc + loại từ, vd "progress (noun, verb)" — hiển thị nguồn gốc của từ
   rootWord           String?
+  // Nghĩa tiếng Việt của từ gốc, vd "tiến bộ; sự tiến triển"
+  rootWordMeaning    String?
   phonetic           String?
   example            String?
   exampleTranslation String?

@@ -8,6 +8,7 @@ export interface QueueCard {
   meaning: string;
   partOfSpeech: string | null;
   rootWord: string | null;
+  rootWordMeaning: string | null;
   phonetic: string | null;
   example: string | null;
   exampleTranslation: string | null;
@@ -35,6 +36,7 @@ function toQueueCard(c: CardRow): QueueCard {
     meaning: c.meaning,
     partOfSpeech: c.partOfSpeech,
     rootWord: c.rootWord,
+    rootWordMeaning: c.rootWordMeaning,
     phonetic: c.phonetic,
     example: c.example,
     exampleTranslation: c.exampleTranslation,

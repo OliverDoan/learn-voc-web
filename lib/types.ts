@@ -23,6 +23,8 @@ export interface Card {
   partOfSpeech: string | null;
   // Từ gốc + loại từ, vd "progress (noun, verb)"
   rootWord: string | null;
+  // Nghĩa tiếng Việt của từ gốc
+  rootWordMeaning: string | null;
   phonetic: string | null;
   example: string | null;
   exampleTranslation: string | null;

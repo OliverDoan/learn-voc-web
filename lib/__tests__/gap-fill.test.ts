@@ -10,6 +10,7 @@ function makeCard(overrides: Partial<Card>): Card {
     meaning: "ở nước ngoài",
     partOfSpeech: "adverb",
     rootWord: null,
+    rootWordMeaning: null,
     phonetic: null,
     example: "She is studying abroad in Japan.",
     exampleTranslation: "Cô ấy đang du học ở Nhật.",

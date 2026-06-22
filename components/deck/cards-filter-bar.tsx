@@ -1,6 +1,6 @@
 "use client";
 
-import { Star, X } from "lucide-react";
+import { LayoutGrid, Star, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
@@ -25,6 +25,8 @@ interface CardsFilterBarProps {
   onClearTags: () => void;
   favoriteOnly: boolean;
   onToggleFavoriteOnly: () => void;
+  groupByTag: boolean;
+  onToggleGroupByTag: () => void;
   matchCount: number;
   totalCount: number;
 }
@@ -38,6 +40,8 @@ export function CardsFilterBar({
   onClearTags,
   favoriteOnly,
   onToggleFavoriteOnly,
+  groupByTag,
+  onToggleGroupByTag,
   matchCount,
   totalCount,
 }: CardsFilterBarProps) {
@@ -76,6 +80,22 @@ export function CardsFilterBar({
           <Star className={cn("h-3 w-3", favoriteOnly && "fill-current")} />
           Yêu thích
         </button>
+        {availableTags.length > 0 ? (
+          <button
+            type="button"
+            onClick={onToggleGroupByTag}
+            className={cn(
+              "inline-flex items-center gap-1 rounded-md border px-3 py-1 text-xs transition-colors",
+              groupByTag
+                ? "border-primary bg-primary/10 text-primary"
+                : "border-border text-muted-foreground hover:border-primary/40 hover:text-foreground",
+            )}
+            aria-pressed={groupByTag}
+          >
+            <LayoutGrid className="h-3 w-3" />
+            Nhóm theo chủ đề
+          </button>
+        ) : null}
         {isFiltering ? (
           <span className="ml-auto text-xs text-muted-foreground">
             {matchCount} / {totalCount} từ

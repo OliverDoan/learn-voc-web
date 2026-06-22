@@ -89,7 +89,9 @@
       "Bash(md5 -q app/favicon.ico)",
       "Bash(xxd app/favicon.ico)",
       "Bash(cp public/icons/icon.svg app/icon.svg)",
-      "Bash(rm app/favicon.ico)"
+      "Bash(rm app/favicon.ico)",
+      "Bash(npx dotenv *)",
+      "Bash(pnpm gen:root-meanings)"
     ]
   }
 }

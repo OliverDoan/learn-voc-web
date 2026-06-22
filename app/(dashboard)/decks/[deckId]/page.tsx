@@ -78,6 +78,7 @@ export default function DeckDetailPage({ params }: PageProps) {
   const [stateFilter, setStateFilter] = useState<CardStateFilter>("ALL");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [favoriteOnly, setFavoriteOnly] = useState(false);
+  const [groupByTag, setGroupByTag] = useState(false);
   const [selectedIds, setSelectedIds] = useState<Set<string>>(() => new Set());
 
   // Kéo-thả sắp xếp thứ tự (chỉ khi không lọc/tìm kiếm)
@@ -126,15 +127,38 @@ export default function DeckDetailPage({ params }: PageProps) {
     if (cards) setOrderedCards(cards);
   }, [cards]);
 
-  // Chỉ cho kéo-thả khi đang xem TẤT CẢ thẻ theo thứ tự gốc (không lọc/tìm)
+  // Chỉ cho kéo-thả khi đang xem TẤT CẢ thẻ theo thứ tự gốc (không lọc/tìm/nhóm)
   const canReorder =
     search.trim() === "" &&
     stateFilter === "ALL" &&
     selectedTags.length === 0 &&
-    !favoriteOnly;
+    !favoriteOnly &&
+    !groupByTag;
 
   const displayCards =
     canReorder && orderedCards.length > 0 ? orderedCards : filteredCards;
+
+  // Nhóm các từ đang hiển thị theo tag chủ đề (giữ thứ tự xuất hiện của tag)
+  const groupedCards = useMemo<{ tag: string; cards: CardType[] }[]>(() => {
+    if (!groupByTag) return [];
+    const order: string[] = [];
+    const map = new Map<string, CardType[]>();
+    const UNTAGGED = "Chưa phân loại";
+    for (const card of displayCards) {
+      const tags = parseTags(card.tags);
+      const key = tags[0] ?? UNTAGGED;
+      if (!map.has(key)) {
+        map.set(key, []);
+        order.push(key);
+      }
+      map.get(key)!.push(card);
+    }
+    // Đẩy nhóm "Chưa phân loại" xuống cuối cho gọn
+    order.sort((a, b) =>
+      a === UNTAGGED ? 1 : b === UNTAGGED ? -1 : 0,
+    );
+    return order.map((tag) => ({ tag, cards: map.get(tag)! }));
+  }, [groupByTag, displayCards]);
 
   const toggleTag = (tag: string) => {
     setSelectedTags((prev) =>
@@ -279,6 +303,185 @@ export default function DeckDetailPage({ params }: PageProps) {
     }
   };
 
+  const renderCard = (card: CardType) => {
+    const tags = parseTags(card.tags);
+    const synonyms = parseTags(card.synonyms);
+    const antonyms = parseTags(card.antonyms);
+    const isSelected = selectedIds.has(card.id);
+    const isDragging = dragId === card.id;
+    const isOver = overId === card.id && dragId !== card.id;
+    return (
+      <li
+        key={card.id}
+        draggable={canReorder}
+        onDragStart={(e) => {
+          if (!canReorder || !dragArmed.current) {
+            e.preventDefault();
+            return;
+          }
+          setDragId(card.id);
+          e.dataTransfer.effectAllowed = "move";
+        }}
+        onDragOver={(e) => {
+          if (!canReorder || !dragId) return;
+          e.preventDefault();
+          e.dataTransfer.dropEffect = "move";
+          if (overId !== card.id) setOverId(card.id);
+        }}
+        onDrop={(e) => {
+          if (!canReorder) return;
+          e.preventDefault();
+          handleDrop(card.id);
+        }}
+        onDragEnd={() => {
+          setDragId(null);
+          setOverId(null);
+          dragArmed.current = false;
+        }}
+        className={`group flex items-start gap-3 rounded-lg border bg-card p-4 transition-all hover:border-primary/40 hover:shadow-md ${
+          isSelected ? "border-primary/60 bg-primary/5" : ""
+        } ${isDragging ? "opacity-40" : ""} ${
+          isOver ? "border-primary ring-2 ring-primary/40" : ""
+        }`}
+      >
+        {canReorder ? (
+          <button
+            type="button"
+            onMouseDown={() => {
+              dragArmed.current = true;
+            }}
+            onMouseUp={() => {
+              dragArmed.current = false;
+            }}
+            className="mt-1 flex h-5 w-5 shrink-0 cursor-grab items-center justify-center text-muted-foreground hover:text-foreground active:cursor-grabbing"
+            aria-label="Kéo để sắp xếp"
+            title="Kéo để sắp xếp lại thứ tự"
+          >
+            <GripVertical className="h-4 w-4" />
+          </button>
+        ) : null}
+        <button
+          type="button"
+          onClick={() => toggleSelectCard(card.id)}
+          className={`mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded border transition-colors ${
+            isSelected
+              ? "border-primary bg-primary text-primary-foreground"
+              : "border-input hover:border-primary"
+          }`}
+          aria-label={isSelected ? "Bỏ chọn" : "Chọn từ"}
+          aria-pressed={isSelected}
+        >
+          {isSelected ? <Check className="h-3.5 w-3.5" /> : null}
+        </button>
+        <Button
+          variant="ghost"
+          size="icon"
+          className="mt-0.5 shrink-0"
+          onClick={() => speak(card.word)}
+          aria-label="Phát âm"
+        >
+          <Volume2 className="h-4 w-4" />
+        </Button>
+        <Button
+          variant="ghost"
+          size="icon"
+          className="mt-0.5 shrink-0"
+          onClick={() => handleToggleFavorite(card)}
+          aria-label={card.favorite ? "Bỏ yêu thích" : "Thêm yêu thích"}
+          aria-pressed={card.favorite}
+          title={card.favorite ? "Bỏ yêu thích" : "Thêm yêu thích"}
+        >
+          <Star
+            className={`h-4 w-4 ${
+              card.favorite
+                ? "fill-amber-400 text-amber-400"
+                : "text-muted-foreground"
+            }`}
+          />
+        </Button>
+        <div className="min-w-0 flex-1">
+          <div className="flex flex-wrap items-baseline gap-2">
+            <span className="font-semibold">{card.word}</span>
+            {card.phonetic ? (
+              <span className="font-phonetic text-xs text-muted-foreground">
+                {card.phonetic}
+              </span>
+            ) : null}
+            {card.partOfSpeech ? (
+              <Badge variant="outline" className="text-xs">
+                {card.partOfSpeech}
+              </Badge>
+            ) : null}
+            <Badge variant={stateColors[card.state] ?? "secondary"} className="text-xs">
+              {stateLabels[card.state] ?? card.state}
+            </Badge>
+          </div>
+          <p className="mt-1 text-sm">{card.meaning}</p>
+          {displayRootWord(card.word, card.rootWord) ? (
+            <div className="mt-1.5 inline-flex items-center gap-1.5 rounded-md bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">
+              <Sprout className="h-3 w-3 shrink-0" />
+              <span className="text-muted-foreground">Từ gốc:</span>
+              <span>{displayRootWord(card.word, card.rootWord)}</span>
+              {card.rootWordMeaning ? (
+                <span className="font-normal text-muted-foreground">
+                  — {card.rootWordMeaning}
+                </span>
+              ) : null}
+            </div>
+          ) : null}
+          {card.example ? (
+            <p className="mt-1 text-xs italic text-muted-foreground">
+              &ldquo;{card.example}&rdquo;
+            </p>
+          ) : null}
+          {synonyms.length > 0 ? (
+            <div className="mt-1.5 flex flex-wrap items-center gap-1.5 text-xs">
+              <span className="font-medium text-emerald-600 dark:text-emerald-400">
+                ≈ Đồng nghĩa:
+              </span>
+              <span className="text-muted-foreground">{synonyms.join(", ")}</span>
+            </div>
+          ) : null}
+          {antonyms.length > 0 ? (
+            <div className="mt-1 flex flex-wrap items-center gap-1.5 text-xs">
+              <span className="font-medium text-rose-600 dark:text-rose-400">
+                ↔ Trái nghĩa:
+              </span>
+              <span className="text-muted-foreground">{antonyms.join(", ")}</span>
+            </div>
+          ) : null}
+          {tags.length > 0 ? (
+            <div className="mt-2 flex flex-wrap gap-1">
+              {tags.map((tag) => (
+                <Badge key={tag} variant="secondary" className="text-xs">
+                  {tag}
+                </Badge>
+              ))}
+            </div>
+          ) : null}
+        </div>
+        <div className="flex shrink-0 gap-1 opacity-100 transition-opacity md:opacity-0 md:group-hover:opacity-100">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setEditingCard(card)}
+            aria-label="Sửa"
+          >
+            <Pencil className="h-4 w-4" />
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => handleDeleteCard(card.id)}
+            aria-label="Xoá"
+          >
+            <Trash2 className="h-4 w-4 text-destructive" />
+          </Button>
+        </div>
+      </li>
+    );
+  };
+
   if (deckLoading) {
     return <div className="container mx-auto max-w-5xl p-6">Đang tải...</div>;
   }
@@ -389,6 +592,8 @@ export default function DeckDetailPage({ params }: PageProps) {
         onClearTags={() => setSelectedTags([])}
         favoriteOnly={favoriteOnly}
         onToggleFavoriteOnly={() => setFavoriteOnly((v) => !v)}
+        groupByTag={groupByTag}
+        onToggleGroupByTag={() => setGroupByTag((v) => !v)}
         matchCount={filteredCards.length}
         totalCount={cards?.length ?? 0}
       />
@@ -439,182 +644,22 @@ export default function DeckDetailPage({ params }: PageProps) {
         <div className="rounded-xl border border-dashed py-10 text-center text-sm text-muted-foreground">
           Không có từ nào khớp bộ lọc.
         </div>
+      ) : groupByTag ? (
+        <div className="space-y-6 pb-24">
+          {groupedCards.map((group) => (
+            <section key={group.tag}>
+              <div className="mb-2 flex items-center gap-2">
+                <h2 className="text-sm font-semibold text-foreground">{group.tag}</h2>
+                <Badge variant="secondary" className="text-[10px]">
+                  {group.cards.length}
+                </Badge>
+              </div>
+              <ul className="space-y-2">{group.cards.map(renderCard)}</ul>
+            </section>
+          ))}
+        </div>
       ) : (
-        <ul className="space-y-2 pb-24">
-          {displayCards.map((card) => {
-            const tags = parseTags(card.tags);
-            const synonyms = parseTags(card.synonyms);
-            const antonyms = parseTags(card.antonyms);
-            const isSelected = selectedIds.has(card.id);
-            const isDragging = dragId === card.id;
-            const isOver = overId === card.id && dragId !== card.id;
-            return (
-              <li
-                key={card.id}
-                draggable={canReorder}
-                onDragStart={(e) => {
-                  if (!canReorder || !dragArmed.current) {
-                    e.preventDefault();
-                    return;
-                  }
-                  setDragId(card.id);
-                  e.dataTransfer.effectAllowed = "move";
-                }}
-                onDragOver={(e) => {
-                  if (!canReorder || !dragId) return;
-                  e.preventDefault();
-                  e.dataTransfer.dropEffect = "move";
-                  if (overId !== card.id) setOverId(card.id);
-                }}
-                onDrop={(e) => {
-                  if (!canReorder) return;
-                  e.preventDefault();
-                  handleDrop(card.id);
-                }}
-                onDragEnd={() => {
-                  setDragId(null);
-                  setOverId(null);
-                  dragArmed.current = false;
-                }}
-                className={`group flex items-start gap-3 rounded-lg border bg-card p-4 transition-all hover:border-primary/40 hover:shadow-md ${
-                  isSelected ? "border-primary/60 bg-primary/5" : ""
-                } ${isDragging ? "opacity-40" : ""} ${
-                  isOver ? "border-primary ring-2 ring-primary/40" : ""
-                }`}
-              >
-                {canReorder ? (
-                  <button
-                    type="button"
-                    onMouseDown={() => {
-                      dragArmed.current = true;
-                    }}
-                    onMouseUp={() => {
-                      dragArmed.current = false;
-                    }}
-                    className="mt-1 flex h-5 w-5 shrink-0 cursor-grab items-center justify-center text-muted-foreground hover:text-foreground active:cursor-grabbing"
-                    aria-label="Kéo để sắp xếp"
-                    title="Kéo để sắp xếp lại thứ tự"
-                  >
-                    <GripVertical className="h-4 w-4" />
-                  </button>
-                ) : null}
-                <button
-                  type="button"
-                  onClick={() => toggleSelectCard(card.id)}
-                  className={`mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded border transition-colors ${
-                    isSelected
-                      ? "border-primary bg-primary text-primary-foreground"
-                      : "border-input hover:border-primary"
-                  }`}
-                  aria-label={isSelected ? "Bỏ chọn" : "Chọn từ"}
-                  aria-pressed={isSelected}
-                >
-                  {isSelected ? <Check className="h-3.5 w-3.5" /> : null}
-                </button>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="mt-0.5 shrink-0"
-                  onClick={() => speak(card.word)}
-                  aria-label="Phát âm"
-                >
-                  <Volume2 className="h-4 w-4" />
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="mt-0.5 shrink-0"
-                  onClick={() => handleToggleFavorite(card)}
-                  aria-label={card.favorite ? "Bỏ yêu thích" : "Thêm yêu thích"}
-                  aria-pressed={card.favorite}
-                  title={card.favorite ? "Bỏ yêu thích" : "Thêm yêu thích"}
-                >
-                  <Star
-                    className={`h-4 w-4 ${
-                      card.favorite
-                        ? "fill-amber-400 text-amber-400"
-                        : "text-muted-foreground"
-                    }`}
-                  />
-                </Button>
-                <div className="min-w-0 flex-1">
-                  <div className="flex flex-wrap items-baseline gap-2">
-                    <span className="font-semibold">{card.word}</span>
-                    {card.phonetic ? (
-                      <span className="font-phonetic text-xs text-muted-foreground">
-                        {card.phonetic}
-                      </span>
-                    ) : null}
-                    {card.partOfSpeech ? (
-                      <Badge variant="outline" className="text-xs">
-                        {card.partOfSpeech}
-                      </Badge>
-                    ) : null}
-                    <Badge variant={stateColors[card.state] ?? "secondary"} className="text-xs">
-                      {stateLabels[card.state] ?? card.state}
-                    </Badge>
-                  </div>
-                  <p className="mt-1 text-sm">{card.meaning}</p>
-                  {displayRootWord(card.word, card.rootWord) ? (
-                    <div className="mt-1.5 inline-flex items-center gap-1.5 rounded-md bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">
-                      <Sprout className="h-3 w-3 shrink-0" />
-                      <span className="text-muted-foreground">Từ gốc:</span>
-                      <span>{displayRootWord(card.word, card.rootWord)}</span>
-                    </div>
-                  ) : null}
-                  {card.example ? (
-                    <p className="mt-1 text-xs italic text-muted-foreground">
-                      &ldquo;{card.example}&rdquo;
-                    </p>
-                  ) : null}
-                  {synonyms.length > 0 ? (
-                    <div className="mt-1.5 flex flex-wrap items-center gap-1.5 text-xs">
-                      <span className="font-medium text-emerald-600 dark:text-emerald-400">
-                        ≈ Đồng nghĩa:
-                      </span>
-                      <span className="text-muted-foreground">{synonyms.join(", ")}</span>
-                    </div>
-                  ) : null}
-                  {antonyms.length > 0 ? (
-                    <div className="mt-1 flex flex-wrap items-center gap-1.5 text-xs">
-                      <span className="font-medium text-rose-600 dark:text-rose-400">
-                        ↔ Trái nghĩa:
-                      </span>
-                      <span className="text-muted-foreground">{antonyms.join(", ")}</span>
-                    </div>
-                  ) : null}
-                  {tags.length > 0 ? (
-                    <div className="mt-2 flex flex-wrap gap-1">
-                      {tags.map((tag) => (
-                        <Badge key={tag} variant="secondary" className="text-xs">
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-                  ) : null}
-                </div>
-                <div className="flex shrink-0 gap-1 opacity-100 transition-opacity md:opacity-0 md:group-hover:opacity-100">
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={() => setEditingCard(card)}
-                    aria-label="Sửa"
-                  >
-                    <Pencil className="h-4 w-4" />
-                  </Button>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={() => handleDeleteCard(card.id)}
-                    aria-label="Xoá"
-                  >
-                    <Trash2 className="h-4 w-4 text-destructive" />
-                  </Button>
-                </div>
-              </li>
-            );
-          })}
-        </ul>
+        <ul className="space-y-2 pb-24">{displayCards.map(renderCard)}</ul>
       )}
 
       <CardFormDialog

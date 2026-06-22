@@ -10,7 +10,14 @@ import type { QueueCard } from "@/lib/daily-queue";
 // Chỉ những field cần để hiển thị thẻ — cả QueueCard (SRS) lẫn Card đều thoả.
 export type FlashcardData = Pick<
   QueueCard,
-  "word" | "meaning" | "partOfSpeech" | "rootWord" | "phonetic" | "example" | "exampleTranslation"
+  | "word"
+  | "meaning"
+  | "partOfSpeech"
+  | "rootWord"
+  | "rootWordMeaning"
+  | "phonetic"
+  | "example"
+  | "exampleTranslation"
 >;
 
 interface FlashcardProps {
@@ -189,6 +196,9 @@ function BackFace({ card, reverse }: { card: FlashcardData; reverse: boolean }) 
         >
           <Sprout className="h-3.5 w-3.5" />
           Từ gốc: {root}
+          {card.rootWordMeaning ? (
+            <span className="text-[#cfe0ff]/80">— {card.rootWordMeaning}</span>
+          ) : null}
         </div>
       ) : null}
 

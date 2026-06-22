@@ -26,6 +26,7 @@ export async function POST(req: NextRequest) {
       meaning: c.meaning,
       partOfSpeech: c.partOfSpeech ?? null,
       rootWord: c.rootWord ?? null,
+      rootWordMeaning: c.rootWordMeaning ?? null,
       phonetic: c.phonetic ?? null,
       example: c.example ?? null,
       exampleTranslation: c.exampleTranslation ?? null,
