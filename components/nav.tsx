@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
+  Blocks,
   BookOpen,
   BookText,
   Focus,
@@ -32,6 +33,7 @@ const items: NavItem[] = [
   { href: "/favorites", label: "Yêu thích", icon: Star, mobile: false },
   { href: "/ielts", label: "IELTS", icon: GraduationCap, mobile: true },
   { href: "/grammar", label: "Ngữ pháp", icon: BookText, mobile: true },
+  { href: "/word-formation", label: "Cấu tạo từ", icon: Blocks, mobile: false },
   { href: "/focus", label: "Tập trung", icon: Focus, mobile: false },
   { href: "/trash", label: "Thùng rác", icon: Trash2, mobile: false },
   { href: "/settings", label: "Cài đặt", icon: Settings, mobile: true },

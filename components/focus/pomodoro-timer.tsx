@@ -3,22 +3,7 @@
 import { Pause, Play, RotateCcw, SkipForward } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import {
-  PHASE_LABELS,
-  usePomodoro,
-  type PomodoroDurations,
-} from "@/hooks/use-pomodoro";
-
-interface Preset {
-  label: string;
-  durations: PomodoroDurations;
-}
-
-const PRESETS: Preset[] = [
-  { label: "25 / 5", durations: { focus: 25, shortBreak: 5, longBreak: 15 } },
-  { label: "45 / 15", durations: { focus: 45, shortBreak: 15, longBreak: 30 } },
-  { label: "50 / 10", durations: { focus: 50, shortBreak: 10, longBreak: 20 } },
-];
+import { PHASE_LABELS, usePomodoro } from "@/hooks/use-pomodoro";
 
 function formatTime(totalSeconds: number): string {
   const mm = Math.floor(totalSeconds / 60)
@@ -33,18 +18,8 @@ const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 
 /** Bộ đếm Pomodoro với vòng tiến độ, điều khiển và preset thời lượng. */
 export function PomodoroTimer() {
-  const {
-    phase,
-    secondsLeft,
-    isRunning,
-    completedFocus,
-    durations,
-    progress,
-    toggle,
-    reset,
-    skip,
-    setDurations,
-  } = usePomodoro();
+  const { phase, secondsLeft, isRunning, progress, toggle, reset, skip } =
+    usePomodoro();
 
   const isBreak = phase !== "focus";
 
@@ -115,31 +90,6 @@ export function PomodoroTimer() {
         <Button variant="outline" size="icon" onClick={skip} aria-label="Bỏ qua">
           <SkipForward className="h-4 w-4" />
         </Button>
-      </div>
-
-      {/* Số phiên đã hoàn thành + preset */}
-      <div className="flex flex-col items-center gap-3 text-sm text-muted-foreground">
-        <span>Đã hoàn thành: {completedFocus} phiên tập trung</span>
-        <div className="flex gap-2">
-          {PRESETS.map((preset) => {
-            const active = durations.focus === preset.durations.focus;
-            return (
-              <button
-                key={preset.label}
-                type="button"
-                onClick={() => setDurations(preset.durations)}
-                className={cn(
-                  "rounded-md border px-3 py-1.5 text-xs font-medium transition-colors",
-                  active
-                    ? "border-primary bg-primary/10 text-primary"
-                    : "border-border hover:bg-accent hover:text-foreground",
-                )}
-              >
-                {preset.label}
-              </button>
-            );
-          })}
-        </div>
       </div>
     </div>
   );

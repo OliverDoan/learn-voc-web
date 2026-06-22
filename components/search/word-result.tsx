@@ -4,6 +4,7 @@ import { Info, Volume2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { speak } from "@/lib/tts";
 import type { DictionaryResult } from "@/lib/dictionary";
+import { WordBreakdown } from "@/components/word-formation/word-breakdown";
 import { AddToDeckPanel } from "./add-to-deck-panel";
 
 interface WordResultProps {
@@ -54,6 +55,9 @@ export function WordResult({ result, existingDeckNames }: WordResultProps) {
           Từ này đã có trong: {existingDeckNames.join(", ")}
         </div>
       )}
+
+      {/* Gợi ý cấu tạo từ */}
+      <WordBreakdown word={result.word} alwaysShow />
 
       {/* Các nghĩa */}
       <div className="space-y-4">

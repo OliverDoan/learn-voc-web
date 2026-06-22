@@ -22,6 +22,7 @@ import { apiFetch } from "@/lib/api-client";
 import { parseTags } from "@/lib/utils";
 import { parseWordForms, WORD_FORM_LABEL, WORD_FORM_ORDER } from "@/lib/word-forms";
 import { speak } from "@/lib/tts";
+import { WordBreakdown } from "@/components/word-formation/word-breakdown";
 import type { Card } from "@/lib/types";
 import type { WordFormsInput } from "@/lib/schemas";
 import type { DictionaryResult } from "@/lib/dictionary";
@@ -172,6 +173,12 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
               ) : null}
             </div>
           </div>
+
+          {debouncedWord.trim().length > 3 ? (
+            <div className="md:col-span-2">
+              <WordBreakdown word={debouncedWord.trim()} />
+            </div>
+          ) : null}
 
           <div className="space-y-2 md:col-span-2">
             <Label htmlFor="meaning">Nghĩa (tiếng Việt)</Label>

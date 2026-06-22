@@ -2,14 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { X } from "lucide-react";
+import { Maximize, Minimize, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ClockDisplay } from "@/components/focus/clock-display";
 import { PomodoroTimer } from "@/components/focus/pomodoro-timer";
-import { DeckLauncher } from "@/components/focus/deck-launcher";
-import { ThemePicker } from "@/components/focus/theme-picker";
 import { useTheme } from "@/components/theme-provider";
 import { getFocusTheme } from "@/lib/focus-themes";
+import { useFullscreen } from "@/hooks/use-fullscreen";
 
 type FocusMode = "clock" | "pomodoro";
 
@@ -22,12 +21,22 @@ export default function FocusPage() {
   const [mode, setMode] = useState<FocusMode>("clock");
   const { palette } = useTheme();
   const focusTheme = getFocusTheme(palette);
+  const { isFullscreen, toggle: toggleFullscreen, exit: exitFullscreen } =
+    useFullscreen();
   // "Mặc định" → theo nền app; còn lại → gradient riêng cho trang Focus
   const background = focusTheme.surface ? focusTheme.background : undefined;
 
+  const handleExit = () => {
+    void exitFullscreen();
+    router.back();
+  };
+
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") router.back();
+      if (e.key !== "Escape") return;
+      // Đang toàn màn hình → để trình duyệt tự thoát fullscreen, chưa rời trang
+      if (document.fullscreenElement) return;
+      router.back();
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -57,24 +66,41 @@ export default function FocusPage() {
         ))}
       </div>
 
-      {/* Nút thoát */}
-      <button
-        type="button"
-        onClick={() => router.back()}
-        aria-label="Thoát focus mode"
-        className="absolute right-5 top-5 rounded-full p-2 text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
-      >
-        <X className="h-5 w-5" />
-      </button>
+      {/* Nút toàn màn hình + thoát */}
+      <div className="absolute right-5 top-5 flex items-center gap-1">
+        <button
+          type="button"
+          onClick={toggleFullscreen}
+          aria-label={isFullscreen ? "Thoát toàn màn hình" : "Toàn màn hình"}
+          title={isFullscreen ? "Thoát toàn màn hình" : "Toàn màn hình"}
+          className="rounded-full p-2 text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+        >
+          {isFullscreen ? (
+            <Minimize className="h-5 w-5" />
+          ) : (
+            <Maximize className="h-5 w-5" />
+          )}
+        </button>
+        <button
+          type="button"
+          onClick={handleExit}
+          aria-label="Thoát focus mode"
+          className="rounded-full p-2 text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+        >
+          <X className="h-5 w-5" />
+        </button>
+      </div>
 
       {/* Nội dung chính */}
       {mode === "clock" ? <ClockDisplay /> : <PomodoroTimer />}
 
-      {/* Khu vực dưới: lối tắt học + chọn màu chủ đề */}
-      <div className="absolute inset-x-0 bottom-6 flex flex-col items-center gap-6 px-4">
-        <DeckLauncher />
-        <ThemePicker />
-        <p className="text-xs text-muted-foreground/70">Nhấn Esc để thoát</p>
+      {/* Khu vực dưới: gợi ý thoát */}
+      <div className="absolute inset-x-0 bottom-6 flex flex-col items-center px-4">
+        <p className="text-xs text-muted-foreground/70">
+          {isFullscreen
+            ? "Nhấn Esc để thoát toàn màn hình"
+            : "Nhấn nút ⛶ để vào toàn màn hình • Esc để thoát"}
+        </p>
       </div>
     </div>
   );

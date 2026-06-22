@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sprout, Volume2 } from "lucide-react";
+import { Blocks, Sprout, Volume2 } from "lucide-react";
 import { speak } from "@/lib/tts";
 import { displayRootWord } from "@/lib/utils";
+import { analyzeWord } from "@/lib/word-formation";
 import type { QueueCard } from "@/lib/daily-queue";
 
 // Chỉ những field cần để hiển thị thẻ — cả QueueCard (SRS) lẫn Card đều thoả.
@@ -133,6 +134,25 @@ function MeaningFace({ card }: { card: FlashcardData }) {
   );
 }
 
+/** Gợi ý cấu tạo từ, hợp tông tối của thẻ. */
+function AffixHint({ word }: { word: string }) {
+  const a = analyzeWord(word);
+  if (!a.hasAny) return null;
+  const parts: string[] = [];
+  if (a.prefix) parts.push(`${a.prefix.label} (${a.prefix.meaning})`);
+  if (a.suffix) {
+    parts.push(
+      `${a.suffix.label} (${a.suffix.meaning}${a.suffix.makes ? ` → ${a.suffix.makes}` : ""})`,
+    );
+  }
+  return (
+    <div className="mt-3 flex max-w-sm items-center justify-center gap-1.5 text-[12.5px] text-white/55">
+      <Blocks className="h-3.5 w-3.5 shrink-0" />
+      <span>{parts.join(" · ")}</span>
+    </div>
+  );
+}
+
 function BackFace({ card, reverse }: { card: FlashcardData; reverse: boolean }) {
   const root = displayRootWord(card.word, card.rootWord);
   return (
@@ -171,6 +191,8 @@ function BackFace({ card, reverse }: { card: FlashcardData; reverse: boolean }) 
           Từ gốc: {root}
         </div>
       ) : null}
+
+      <AffixHint word={card.word} />
 
       {reverse && card.exampleTranslation ? (
         <p className="font-serif mt-3 max-w-sm text-xs italic text-white/50">
