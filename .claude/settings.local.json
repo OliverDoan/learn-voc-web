@@ -85,7 +85,11 @@
       "Bash(npx next *)",
       "Bash(grep -r \"FileReader\\\\|base64\\\\|multipart\\\\|Upload\\\\|imageUrl\" /Users/doanvietthuan/Documents/home/learn-voc-web --include=\"*.tsx\" --include=\"*.ts\" ! -path \"*/node_modules/*\" ! -path \"*/.next/*\")",
       "Bash(sed -n '1,70p' app/api/cards/route.ts)",
-      "Bash(sed -n '28,40p' components/deck/card-form-dialog.tsx)"
+      "Bash(sed -n '28,40p' components/deck/card-form-dialog.tsx)",
+      "Bash(md5 -q app/favicon.ico)",
+      "Bash(xxd app/favicon.ico)",
+      "Bash(cp public/icons/icon.svg app/icon.svg)",
+      "Bash(rm app/favicon.ico)"
     ]
   }
 }

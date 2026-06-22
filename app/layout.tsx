@@ -54,10 +54,7 @@ export const metadata: Metadata = {
     title: "VocaLearn",
     statusBarStyle: "black-translucent",
   },
-  icons: {
-    icon: "/icons/icon.svg",
-    apple: "/icons/icon.svg",
-  },
+  // Icon được xử lý qua file convention: app/icon.svg + app/apple-icon.svg
 };
 
 export const viewport: Viewport = {
