@@ -5,20 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
-export type CardStateFilter = "ALL" | "NEW" | "LEARNING" | "REVIEW" | "MATURE" | "SUSPENDED";
-
-const STATE_OPTIONS: { value: CardStateFilter; label: string }[] = [
-  { value: "ALL", label: "Tất cả" },
-  { value: "NEW", label: "Mới" },
-  { value: "LEARNING", label: "Đang học" },
-  { value: "REVIEW", label: "Ôn tập" },
-  { value: "MATURE", label: "Thuộc" },
-  { value: "SUSPENDED", label: "Tạm dừng" },
-];
-
 interface CardsFilterBarProps {
-  state: CardStateFilter;
-  onStateChange: (state: CardStateFilter) => void;
   availableTags: string[];
   selectedTags: string[];
   onToggleTag: (tag: string) => void;
@@ -32,8 +19,6 @@ interface CardsFilterBarProps {
 }
 
 export function CardsFilterBar({
-  state,
-  onStateChange,
   availableTags,
   selectedTags,
   onToggleTag,
@@ -46,26 +31,11 @@ export function CardsFilterBar({
   totalCount,
 }: CardsFilterBarProps) {
   const hasTagFilter = selectedTags.length > 0;
-  const isFiltering = state !== "ALL" || hasTagFilter || favoriteOnly;
+  const isFiltering = hasTagFilter || favoriteOnly;
 
   return (
     <div className="mb-4 space-y-2">
       <div className="flex flex-wrap items-center gap-1">
-        {STATE_OPTIONS.map((opt) => (
-          <button
-            key={opt.value}
-            type="button"
-            onClick={() => onStateChange(opt.value)}
-            className={cn(
-              "rounded-md border px-3 py-1 text-xs transition-colors",
-              state === opt.value
-                ? "border-primary bg-primary/10 text-primary"
-                : "border-border text-muted-foreground hover:border-primary/40 hover:text-foreground",
-            )}
-          >
-            {opt.label}
-          </button>
-        ))}
         <button
           type="button"
           onClick={onToggleFavoriteOnly}

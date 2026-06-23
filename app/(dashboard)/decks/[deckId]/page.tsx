@@ -33,7 +33,7 @@ import { DeckFormDialog } from "@/components/deck/deck-form-dialog";
 import { ImportCardsDialog } from "@/components/deck/import-cards-dialog";
 import { ExportButton } from "@/components/deck/export-cards-dialog";
 import { ReadAllButton } from "@/components/deck/read-all-button";
-import { CardsFilterBar, type CardStateFilter } from "@/components/deck/cards-filter-bar";
+import { CardsFilterBar } from "@/components/deck/cards-filter-bar";
 import { StoryList } from "@/components/story/story-list";
 import {
   useCards,
@@ -60,7 +60,6 @@ export default function DeckDetailPage({ params }: PageProps) {
   const [editingCard, setEditingCard] = useState<CardType | undefined>();
   const [detailCard, setDetailCard] = useState<CardType | undefined>();
   const [search, setSearch] = useState("");
-  const [stateFilter, setStateFilter] = useState<CardStateFilter>("ALL");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [favoriteOnly, setFavoriteOnly] = useState(false);
   const [groupByTag, setGroupByTag] = useState(false);
@@ -77,7 +76,6 @@ export default function DeckDetailPage({ params }: PageProps) {
   const { data: cards, isLoading: cardsLoading } = useCards({
     deckId,
     q: search,
-    state: stateFilter === "ALL" ? undefined : stateFilter,
   });
   const deleteCardMut = useDeleteCard();
   const restoreCardMut = useRestoreCard();
@@ -117,7 +115,6 @@ export default function DeckDetailPage({ params }: PageProps) {
   const canReorder =
     selectMode &&
     search.trim() === "" &&
-    stateFilter === "ALL" &&
     selectedTags.length === 0 &&
     !favoriteOnly &&
     !groupByTag;
@@ -544,8 +541,6 @@ export default function DeckDetailPage({ params }: PageProps) {
       </div>
 
       <CardsFilterBar
-        state={stateFilter}
-        onStateChange={setStateFilter}
         availableTags={availableTags}
         selectedTags={selectedTags}
         onToggleTag={toggleTag}
