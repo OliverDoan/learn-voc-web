@@ -73,6 +73,9 @@ export default function QuizPage({ params }: PageProps) {
     return new Set(raw.split(",").map((s) => s.trim()).filter(Boolean));
   }, [searchParams]);
   const isSubset = !!subsetIds && subsetIds.size > 0;
+  // deckId ảo "all" (quiz từ yêu thích / liên deck) → quay về trang Yêu thích
+  const backHref = deckId === "all" ? "/favorites" : `/decks/${deckId}`;
+  const backLabel = deckId === "all" ? "Về Yêu thích" : "Quay lại deck";
 
   useEffect(() => {
     const stored = localStorage.getItem("voca-quiz-reverse");
@@ -87,7 +90,7 @@ export default function QuizPage({ params }: PageProps) {
     });
   };
 
-  const { data: allCards, isLoading } = useCards({ deckId });
+  const { data: allCards, isLoading } = useCards(deckId === "all" ? {} : { deckId });
 
   const subsetCards = useMemo(() => {
     if (!allCards || !subsetIds) return allCards ?? [];
@@ -128,8 +131,8 @@ export default function QuizPage({ params }: PageProps) {
             ? "Không tìm thấy từ nào trong danh sách đã chọn."
             : "Cần ít nhất 1 từ trong deck để bắt đầu quiz."}
         </p>
-        <Link href={`/decks/${deckId}`}>
-          <Button variant="outline">Quay lại deck</Button>
+        <Link href={backHref}>
+          <Button variant="outline">{backLabel}</Button>
         </Link>
       </div>
     );
@@ -139,7 +142,7 @@ export default function QuizPage({ params }: PageProps) {
     return (
       <div className="container mx-auto max-w-3xl p-6">
         <Link
-          href={`/decks/${deckId}`}
+          href={backHref}
           className="mb-6 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
         >
           <ArrowLeft className="h-4 w-4" /> Quay lại
@@ -326,8 +329,8 @@ function QuizRunner({
           <Button variant="outline" onClick={onExit}>
             Chọn chế độ khác
           </Button>
-          <Link href={`/decks/${deckId}`}>
-            <Button>Về deck</Button>
+          <Link href={deckId === "all" ? "/favorites" : `/decks/${deckId}`}>
+            <Button>{deckId === "all" ? "Về Yêu thích" : "Về deck"}</Button>
           </Link>
         </div>
       </div>

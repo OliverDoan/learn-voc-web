@@ -2,7 +2,8 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { Loader2, Star, Volume2 } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { BookOpen, Layers, Loader2, Mic, Play, Star, Volume2 } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -20,6 +21,7 @@ interface DeckFilterOption {
 }
 
 export default function FavoritesPage() {
+  const router = useRouter();
   const { data: cards, isLoading } = useFavorites();
   const toggleFavoriteMut = useToggleFavorite();
 
@@ -65,6 +67,17 @@ export default function FavoritesPage() {
       })),
     ];
   }, [cards, deckOptions]);
+
+  // Bắt đầu một dạng bài tập với chính các từ yêu thích đang hiển thị (theo bộ lọc deck).
+  // Dùng deckId ảo "all" + danh sách ids để học liên deck — giống chế độ chọn từ trong deck.
+  const startExercise = (kind: "study" | "flashcards" | "quiz" | "pronounce") => {
+    const ids = filteredCards.map((c) => c.id).join(",");
+    if (!ids) {
+      toast.error("Không có từ yêu thích để luyện tập");
+      return;
+    }
+    router.push(`/${kind}/all?ids=${encodeURIComponent(ids)}`);
+  };
 
   const handleUnfavorite = async (card: FavoriteCard) => {
     try {
@@ -120,6 +133,34 @@ export default function FavoritesPage() {
               />
             </div>
           ) : null}
+
+          {/* Các dạng bài tập với chính các từ yêu thích — giống deck */}
+          <div className="mb-4 flex flex-wrap gap-2">
+            <Button size="sm" onClick={() => startExercise("study")}>
+              <Play className="h-4 w-4" /> Ôn
+            </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={() => startExercise("flashcards")}
+            >
+              <Layers className="h-4 w-4" /> Flashcard
+            </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={() => startExercise("quiz")}
+            >
+              <BookOpen className="h-4 w-4" /> Quiz
+            </Button>
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={() => startExercise("pronounce")}
+            >
+              <Mic className="h-4 w-4" /> Phát âm
+            </Button>
+          </div>
 
           <p className="mb-3 text-sm text-muted-foreground">
             {filteredCards.length} từ

@@ -20,6 +20,19 @@ export function displayRootWord(
   return rootWord;
 }
 
+/**
+ * Lớp màu cho badge "từ loại" (part of speech): danh/động/tính/trạng từ mỗi loại 1 màu.
+ * Khớp linh hoạt: "n"/"noun", "v"/"verb", "adj"/"adjective", "adv"/"adverb".
+ */
+export function posBadgeClass(pos: string | null | undefined): string {
+  const p = (pos ?? "").trim().toLowerCase();
+  if (/^adv/.test(p)) return "border-violet-400/40 bg-violet-400/10 text-violet-600 dark:text-violet-300";
+  if (/^adj/.test(p)) return "border-amber-400/40 bg-amber-400/10 text-amber-600 dark:text-amber-300";
+  if (/^n/.test(p)) return "border-blue-400/40 bg-blue-400/10 text-blue-600 dark:text-blue-300";
+  if (/^v/.test(p)) return "border-emerald-400/40 bg-emerald-400/10 text-emerald-600 dark:text-emerald-300";
+  return "border-border text-muted-foreground";
+}
+
 export function parseTags(tagsJson: string | null | undefined): string[] {
   if (!tagsJson) return [];
   try {

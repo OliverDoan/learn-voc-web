@@ -13,7 +13,6 @@ import {
   Pencil,
   Play,
   Plus,
-  Sprout,
   Square,
   SquareCheck,
   Star,
@@ -29,6 +28,7 @@ import { Input } from "@/components/ui/input";
 import { useConfirm } from "@/components/ui/confirm-dialog";
 import { AutoScrollControls } from "@/components/ui/auto-scroll-controls";
 import { CardFormDialog } from "@/components/deck/card-form-dialog";
+import { CardDetailDialog } from "@/components/deck/card-detail-dialog";
 import { DeckFormDialog } from "@/components/deck/deck-form-dialog";
 import { ImportCardsDialog } from "@/components/deck/import-cards-dialog";
 import { ExportButton } from "@/components/deck/export-cards-dialog";
@@ -43,25 +43,9 @@ import {
   useToggleFavorite,
 } from "@/hooks/use-cards";
 import { useDeck, useDeleteDeck, useRestoreDeck } from "@/hooks/use-decks";
-import { displayRootWord, parseTags } from "@/lib/utils";
+import { cn, parseTags, posBadgeClass } from "@/lib/utils";
 import { speak } from "@/lib/tts";
 import type { Card as CardType } from "@/lib/types";
-
-const stateColors: Record<string, "default" | "secondary" | "success" | "warning" | "outline"> = {
-  NEW: "secondary",
-  LEARNING: "warning",
-  REVIEW: "default",
-  MATURE: "success",
-  SUSPENDED: "outline",
-};
-
-const stateLabels: Record<string, string> = {
-  NEW: "Mới",
-  LEARNING: "Đang học",
-  REVIEW: "Ôn tập",
-  MATURE: "Thuộc",
-  SUSPENDED: "Tạm dừng",
-};
 
 interface PageProps {
   params: Promise<{ deckId: string }>;
@@ -74,11 +58,13 @@ export default function DeckDetailPage({ params }: PageProps) {
   const [openImport, setOpenImport] = useState(false);
   const [openEditDeck, setOpenEditDeck] = useState(false);
   const [editingCard, setEditingCard] = useState<CardType | undefined>();
+  const [detailCard, setDetailCard] = useState<CardType | undefined>();
   const [search, setSearch] = useState("");
   const [stateFilter, setStateFilter] = useState<CardStateFilter>("ALL");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [favoriteOnly, setFavoriteOnly] = useState(false);
   const [groupByTag, setGroupByTag] = useState(false);
+  const [selectMode, setSelectMode] = useState(false);
   const [selectedIds, setSelectedIds] = useState<Set<string>>(() => new Set());
 
   // Kéo-thả sắp xếp thứ tự (chỉ khi không lọc/tìm kiếm)
@@ -129,11 +115,20 @@ export default function DeckDetailPage({ params }: PageProps) {
 
   // Chỉ cho kéo-thả khi đang xem TẤT CẢ thẻ theo thứ tự gốc (không lọc/tìm/nhóm)
   const canReorder =
+    selectMode &&
     search.trim() === "" &&
     stateFilter === "ALL" &&
     selectedTags.length === 0 &&
     !favoriteOnly &&
     !groupByTag;
+
+  // Thoát chế độ chọn: tắt cờ và xoá lựa chọn hiện có
+  const toggleSelectMode = () => {
+    setSelectMode((prev) => {
+      if (prev) setSelectedIds(new Set());
+      return !prev;
+    });
+  };
 
   const displayCards =
     canReorder && orderedCards.length > 0 ? orderedCards : filteredCards;
@@ -304,9 +299,6 @@ export default function DeckDetailPage({ params }: PageProps) {
   };
 
   const renderCard = (card: CardType) => {
-    const tags = parseTags(card.tags);
-    const synonyms = parseTags(card.synonyms);
-    const antonyms = parseTags(card.antonyms);
     const isSelected = selectedIds.has(card.id);
     const isDragging = dragId === card.id;
     const isOver = overId === card.id && dragId !== card.id;
@@ -338,13 +330,13 @@ export default function DeckDetailPage({ params }: PageProps) {
           setOverId(null);
           dragArmed.current = false;
         }}
-        className={`group flex items-start gap-3 rounded-lg border bg-card p-4 transition-all hover:border-primary/40 hover:shadow-md ${
+        className={`group flex items-center gap-2 rounded-lg border bg-card px-3 py-2.5 transition-all hover:border-primary/40 hover:shadow-md ${
           isSelected ? "border-primary/60 bg-primary/5" : ""
         } ${isDragging ? "opacity-40" : ""} ${
           isOver ? "border-primary ring-2 ring-primary/40" : ""
         }`}
       >
-        {canReorder ? (
+        {selectMode && canReorder ? (
           <button
             type="button"
             onMouseDown={() => {
@@ -353,39 +345,72 @@ export default function DeckDetailPage({ params }: PageProps) {
             onMouseUp={() => {
               dragArmed.current = false;
             }}
-            className="mt-1 flex h-5 w-5 shrink-0 cursor-grab items-center justify-center text-muted-foreground hover:text-foreground active:cursor-grabbing"
+            className="flex h-5 w-5 shrink-0 cursor-grab items-center justify-center text-muted-foreground hover:text-foreground active:cursor-grabbing"
             aria-label="Kéo để sắp xếp"
             title="Kéo để sắp xếp lại thứ tự"
           >
             <GripVertical className="h-4 w-4" />
           </button>
         ) : null}
-        <button
-          type="button"
-          onClick={() => toggleSelectCard(card.id)}
-          className={`mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded border transition-colors ${
-            isSelected
-              ? "border-primary bg-primary text-primary-foreground"
-              : "border-input hover:border-primary"
-          }`}
-          aria-label={isSelected ? "Bỏ chọn" : "Chọn từ"}
-          aria-pressed={isSelected}
-        >
-          {isSelected ? <Check className="h-3.5 w-3.5" /> : null}
-        </button>
+        {selectMode ? (
+          <button
+            type="button"
+            onClick={() => toggleSelectCard(card.id)}
+            className={`flex h-5 w-5 shrink-0 items-center justify-center rounded border transition-colors ${
+              isSelected
+                ? "border-primary bg-primary text-primary-foreground"
+                : "border-input hover:border-primary"
+            }`}
+            aria-label={isSelected ? "Bỏ chọn" : "Chọn từ"}
+            aria-pressed={isSelected}
+          >
+            {isSelected ? <Check className="h-3.5 w-3.5" /> : null}
+          </button>
+        ) : null}
         <Button
           variant="ghost"
           size="icon"
-          className="mt-0.5 shrink-0"
+          className="h-8 w-8 shrink-0"
           onClick={() => speak(card.word)}
           aria-label="Phát âm"
         >
           <Volume2 className="h-4 w-4" />
         </Button>
+        <button
+          type="button"
+          onClick={() => setDetailCard(card)}
+          className="flex min-w-0 flex-1 flex-col gap-0.5 text-left"
+          title="Xem chi tiết"
+        >
+          <span className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+            <span className="font-semibold group-hover:text-primary group-hover:underline">
+              {card.word}
+            </span>
+            {card.phonetic ? (
+              <span className="font-phonetic text-xs text-muted-foreground">{card.phonetic}</span>
+            ) : null}
+            {card.partOfSpeech ? (
+              <span
+                className={cn(
+                  "rounded-full border px-2 py-0.5 text-xs font-medium",
+                  posBadgeClass(card.partOfSpeech),
+                )}
+              >
+                {card.partOfSpeech}
+              </span>
+            ) : null}
+            <span className="text-sm text-muted-foreground">{card.meaning}</span>
+          </span>
+          {card.example ? (
+            <span className="truncate text-xs italic text-muted-foreground">
+              &ldquo;{card.example}&rdquo;
+            </span>
+          ) : null}
+        </button>
         <Button
           variant="ghost"
           size="icon"
-          className="mt-0.5 shrink-0"
+          className="h-8 w-8 shrink-0"
           onClick={() => handleToggleFavorite(card)}
           aria-label={card.favorite ? "Bỏ yêu thích" : "Thêm yêu thích"}
           aria-pressed={card.favorite}
@@ -399,85 +424,6 @@ export default function DeckDetailPage({ params }: PageProps) {
             }`}
           />
         </Button>
-        <div className="min-w-0 flex-1">
-          <div className="flex flex-wrap items-baseline gap-2">
-            <span className="font-semibold">{card.word}</span>
-            {card.phonetic ? (
-              <span className="font-phonetic text-xs text-muted-foreground">
-                {card.phonetic}
-              </span>
-            ) : null}
-            {card.partOfSpeech ? (
-              <Badge variant="outline" className="text-xs">
-                {card.partOfSpeech}
-              </Badge>
-            ) : null}
-            <Badge variant={stateColors[card.state] ?? "secondary"} className="text-xs">
-              {stateLabels[card.state] ?? card.state}
-            </Badge>
-          </div>
-          <p className="mt-1 text-sm">{card.meaning}</p>
-          {displayRootWord(card.word, card.rootWord) ? (
-            <div className="mt-1.5 inline-flex items-center gap-1.5 rounded-md bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">
-              <Sprout className="h-3 w-3 shrink-0" />
-              <span className="text-muted-foreground">Từ gốc:</span>
-              <span>{displayRootWord(card.word, card.rootWord)}</span>
-              {card.rootWordMeaning ? (
-                <span className="font-normal text-muted-foreground">
-                  — {card.rootWordMeaning}
-                </span>
-              ) : null}
-            </div>
-          ) : null}
-          {card.example ? (
-            <p className="mt-1 text-xs italic text-muted-foreground">
-              &ldquo;{card.example}&rdquo;
-            </p>
-          ) : null}
-          {synonyms.length > 0 ? (
-            <div className="mt-1.5 flex flex-wrap items-center gap-1.5 text-xs">
-              <span className="font-medium text-emerald-600 dark:text-emerald-400">
-                ≈ Đồng nghĩa:
-              </span>
-              <span className="text-muted-foreground">{synonyms.join(", ")}</span>
-            </div>
-          ) : null}
-          {antonyms.length > 0 ? (
-            <div className="mt-1 flex flex-wrap items-center gap-1.5 text-xs">
-              <span className="font-medium text-rose-600 dark:text-rose-400">
-                ↔ Trái nghĩa:
-              </span>
-              <span className="text-muted-foreground">{antonyms.join(", ")}</span>
-            </div>
-          ) : null}
-          {tags.length > 0 ? (
-            <div className="mt-2 flex flex-wrap gap-1">
-              {tags.map((tag) => (
-                <Badge key={tag} variant="secondary" className="text-xs">
-                  {tag}
-                </Badge>
-              ))}
-            </div>
-          ) : null}
-        </div>
-        <div className="flex shrink-0 gap-1 opacity-100 transition-opacity md:opacity-0 md:group-hover:opacity-100">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setEditingCard(card)}
-            aria-label="Sửa"
-          >
-            <Pencil className="h-4 w-4" />
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => handleDeleteCard(card.id)}
-            aria-label="Xoá"
-          >
-            <Trash2 className="h-4 w-4 text-destructive" />
-          </Button>
-        </div>
       </li>
     );
   };
@@ -569,6 +515,20 @@ export default function DeckDetailPage({ params }: PageProps) {
           className="max-w-xs"
         />
         <div className="flex flex-wrap gap-2">
+          <Button
+            variant={selectMode ? "default" : "outline"}
+            onClick={toggleSelectMode}
+          >
+            {selectMode ? (
+              <>
+                <X className="h-4 w-4" /> Xong
+              </>
+            ) : (
+              <>
+                <SquareCheck className="h-4 w-4" /> Chọn / Sắp xếp
+              </>
+            )}
+          </Button>
           <ExportButton
             deckId={deckId}
             deckName={deck.name}
@@ -598,7 +558,7 @@ export default function DeckDetailPage({ params }: PageProps) {
         totalCount={cards?.length ?? 0}
       />
 
-      {filteredCards.length > 0 ? (
+      {selectMode && filteredCards.length > 0 ? (
         <div className="mb-2 flex items-center justify-between text-xs">
           <button
             type="button"
@@ -662,6 +622,19 @@ export default function DeckDetailPage({ params }: PageProps) {
         <ul className="space-y-2 pb-24">{displayCards.map(renderCard)}</ul>
       )}
 
+      <CardDetailDialog
+        open={!!detailCard}
+        onOpenChange={(o) => !o && setDetailCard(undefined)}
+        card={detailCard}
+        onEdit={(c) => {
+          setDetailCard(undefined);
+          setEditingCard(c);
+        }}
+        onDelete={(c) => {
+          setDetailCard(undefined);
+          handleDeleteCard(c.id);
+        }}
+      />
       <CardFormDialog
         open={openAddCard}
         onOpenChange={setOpenAddCard}

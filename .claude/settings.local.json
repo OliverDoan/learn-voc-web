@@ -91,7 +91,9 @@
       "Bash(cp public/icons/icon.svg app/icon.svg)",
       "Bash(rm app/favicon.ico)",
       "Bash(npx dotenv *)",
-      "Bash(pnpm gen:root-meanings)"
+      "Bash(pnpm gen:root-meanings)",
+      "Bash(npx eslint *)",
+      "Bash(grep -v \"set-state-in-effect\\\\|cascading renders\\\\|Effects are intended\\\\|external systems\\\\|Update external\\\\|Subscribe for\\\\|setState in a callback\\\\|recommended\\\\|setState\\(\\) directly\\\\|orderedCards\\\\|^\\\\s*$\\\\|^\\\\s*1[0-9][0-9] \\\\|useEffect\\\\|if \\(cards\\)\\\\|\\\\^\\\\^\\\\^\\\\|react.dev\\\\|>\")"
     ]
   }
 }
