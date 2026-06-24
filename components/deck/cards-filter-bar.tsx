@@ -3,13 +3,16 @@
 import { LayoutGrid, Star, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
+import { cn, POS_FILTERS, posBadgeClass, type PosKey } from "@/lib/utils";
 
 interface CardsFilterBarProps {
   availableTags: string[];
   selectedTags: string[];
   onToggleTag: (tag: string) => void;
   onClearTags: () => void;
+  availablePos: PosKey[];
+  selectedPos: PosKey[];
+  onTogglePos: (pos: PosKey) => void;
   favoriteOnly: boolean;
   onToggleFavoriteOnly: () => void;
   groupByTag: boolean;
@@ -23,6 +26,9 @@ export function CardsFilterBar({
   selectedTags,
   onToggleTag,
   onClearTags,
+  availablePos,
+  selectedPos,
+  onTogglePos,
   favoriteOnly,
   onToggleFavoriteOnly,
   groupByTag,
@@ -31,7 +37,7 @@ export function CardsFilterBar({
   totalCount,
 }: CardsFilterBarProps) {
   const hasTagFilter = selectedTags.length > 0;
-  const isFiltering = hasTagFilter || favoriteOnly;
+  const isFiltering = hasTagFilter || favoriteOnly || selectedPos.length > 0;
 
   return (
     <div className="mb-4 space-y-2">
@@ -72,6 +78,33 @@ export function CardsFilterBar({
           </span>
         ) : null}
       </div>
+
+      {availablePos.length > 0 ? (
+        <div className="flex flex-wrap items-center gap-1">
+          <span className="mr-1 text-[10px] uppercase tracking-wider text-muted-foreground">
+            Từ loại
+          </span>
+          {POS_FILTERS.filter((p) => availablePos.includes(p.key)).map(({ key, label }) => {
+            const active = selectedPos.includes(key);
+            return (
+              <button
+                key={key}
+                type="button"
+                onClick={() => onTogglePos(key)}
+                className={cn(
+                  "rounded-full border px-2 py-0.5 text-xs font-medium transition-colors",
+                  active
+                    ? posBadgeClass(key)
+                    : "border-border text-muted-foreground hover:border-primary/40 hover:text-foreground",
+                )}
+                aria-pressed={active}
+              >
+                {label}
+              </button>
+            );
+          })}
+        </div>
+      ) : null}
 
       {availableTags.length > 0 ? (
         <div className="flex flex-wrap items-center gap-1">

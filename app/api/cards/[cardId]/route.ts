@@ -3,7 +3,7 @@ import { prisma } from "@/lib/db";
 import { fail, handleError, ok } from "@/lib/api-helpers";
 import { cardUpdateSchema } from "@/lib/schemas";
 import { stringifyTags } from "@/lib/utils";
-import { stringifyWordForms } from "@/lib/word-forms";
+import { stringifyWordForms, stringifyWordFormMeanings } from "@/lib/word-forms";
 
 interface RouteParams {
   params: Promise<{ cardId: string }>;
@@ -25,7 +25,8 @@ export async function PATCH(req: NextRequest, { params }: RouteParams) {
     const { cardId } = await params;
     const body = await req.json();
     const parsed = cardUpdateSchema.parse(body);
-    const { tags, synonyms, antonyms, imageUrl, audioUrl, wordForms, ...rest } = parsed;
+    const { tags, synonyms, antonyms, imageUrl, audioUrl, wordForms, wordFormMeanings, ...rest } =
+      parsed;
     const card = await prisma.card.update({
       where: { id: cardId },
       data: {
@@ -34,6 +35,9 @@ export async function PATCH(req: NextRequest, { params }: RouteParams) {
         ...(audioUrl !== undefined ? { audioUrl: audioUrl || null } : {}),
         ...(tags ? { tags: stringifyTags(tags) } : {}),
         ...(wordForms !== undefined ? { wordForms: stringifyWordForms(wordForms) } : {}),
+        ...(wordFormMeanings !== undefined
+          ? { wordFormMeanings: stringifyWordFormMeanings(wordFormMeanings) }
+          : {}),
         ...(synonyms !== undefined ? { synonyms: stringifyTags(synonyms) } : {}),
         ...(antonyms !== undefined ? { antonyms: stringifyTags(antonyms) } : {}),
       },

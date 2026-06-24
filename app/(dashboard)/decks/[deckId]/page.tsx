@@ -43,7 +43,14 @@ import {
   useToggleFavorite,
 } from "@/hooks/use-cards";
 import { useDeck, useDeleteDeck, useRestoreDeck } from "@/hooks/use-decks";
-import { cn, parseTags, posBadgeClass } from "@/lib/utils";
+import {
+  cardPosCategories,
+  cn,
+  parseTags,
+  posBadgeClass,
+  POS_FILTERS,
+  type PosKey,
+} from "@/lib/utils";
 import { speak } from "@/lib/tts";
 import type { Card as CardType } from "@/lib/types";
 
@@ -62,6 +69,7 @@ export default function DeckDetailPage({ params }: PageProps) {
   const [search, setSearch] = useState("");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [favoriteOnly, setFavoriteOnly] = useState(false);
+  const [selectedPos, setSelectedPos] = useState<PosKey[]>([]);
   const [groupByTag, setGroupByTag] = useState(false);
   const [selectMode, setSelectMode] = useState(false);
   const [selectedIds, setSelectedIds] = useState<Set<string>>(() => new Set());
@@ -94,6 +102,16 @@ export default function DeckDetailPage({ params }: PageProps) {
     return Array.from(set).sort();
   }, [cards]);
 
+  // Các nhóm từ loại thực sự có trong deck (giữ thứ tự chuẩn của POS_FILTERS)
+  const availablePos = useMemo<PosKey[]>(() => {
+    if (!cards) return [];
+    const set = new Set<PosKey>();
+    for (const c of cards) {
+      for (const k of cardPosCategories(c.partOfSpeech)) set.add(k);
+    }
+    return POS_FILTERS.map((p) => p.key).filter((k) => set.has(k));
+  }, [cards]);
+
   const filteredCards = useMemo<CardType[]>(() => {
     if (!cards) return [];
     return cards.filter((c) => {
@@ -102,9 +120,13 @@ export default function DeckDetailPage({ params }: PageProps) {
         const tags = parseTags(c.tags);
         if (!selectedTags.every((t) => tags.includes(t))) return false;
       }
+      if (selectedPos.length > 0) {
+        const cats = cardPosCategories(c.partOfSpeech);
+        if (!selectedPos.some((p) => cats.includes(p))) return false;
+      }
       return true;
     });
-  }, [cards, selectedTags, favoriteOnly]);
+  }, [cards, selectedTags, favoriteOnly, selectedPos]);
 
   // Đồng bộ danh sách thứ tự cục bộ từ server (dùng cho kéo-thả lạc quan)
   useEffect(() => {
@@ -116,6 +138,7 @@ export default function DeckDetailPage({ params }: PageProps) {
     selectMode &&
     search.trim() === "" &&
     selectedTags.length === 0 &&
+    selectedPos.length === 0 &&
     !favoriteOnly &&
     !groupByTag;
 
@@ -155,6 +178,12 @@ export default function DeckDetailPage({ params }: PageProps) {
   const toggleTag = (tag: string) => {
     setSelectedTags((prev) =>
       prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag],
+    );
+  };
+
+  const togglePos = (pos: PosKey) => {
+    setSelectedPos((prev) =>
+      prev.includes(pos) ? prev.filter((p) => p !== pos) : [...prev, pos],
     );
   };
 
@@ -545,6 +574,9 @@ export default function DeckDetailPage({ params }: PageProps) {
         selectedTags={selectedTags}
         onToggleTag={toggleTag}
         onClearTags={() => setSelectedTags([])}
+        availablePos={availablePos}
+        selectedPos={selectedPos}
+        onTogglePos={togglePos}
         favoriteOnly={favoriteOnly}
         onToggleFavoriteOnly={() => setFavoriteOnly((v) => !v)}
         groupByTag={groupByTag}

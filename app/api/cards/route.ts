@@ -3,7 +3,7 @@ import { prisma } from "@/lib/db";
 import { fail, handleError, ok } from "@/lib/api-helpers";
 import { cardCreateSchema } from "@/lib/schemas";
 import { stringifyTags } from "@/lib/utils";
-import { stringifyWordForms } from "@/lib/word-forms";
+import { stringifyWordForms, stringifyWordFormMeanings } from "@/lib/word-forms";
 
 export async function GET(req: NextRequest) {
   try {
@@ -42,7 +42,8 @@ export async function POST(req: NextRequest) {
     const deck = await prisma.deck.findUnique({ where: { id: parsed.deckId } });
     if (!deck) return fail("Deck không tồn tại", 404);
 
-    const { tags, synonyms, antonyms, imageUrl, audioUrl, wordForms, ...rest } = parsed;
+    const { tags, synonyms, antonyms, imageUrl, audioUrl, wordForms, wordFormMeanings, ...rest } =
+      parsed;
     // Thẻ mới xếp cuối deck: order = max hiện tại + 1
     const last = await prisma.card.findFirst({
       where: { deckId: parsed.deckId },
@@ -56,6 +57,7 @@ export async function POST(req: NextRequest) {
         audioUrl: audioUrl || null,
         tags: stringifyTags(tags),
         wordForms: stringifyWordForms(wordForms),
+        wordFormMeanings: stringifyWordFormMeanings(wordFormMeanings),
         synonyms: stringifyTags(synonyms),
         antonyms: stringifyTags(antonyms),
         order: (last?.order ?? -1) + 1,

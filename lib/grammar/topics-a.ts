@@ -245,4 +245,362 @@ export const GRAMMAR_TOPICS_A: GrammarTopic[] = [
       },
     ],
   },
+  {
+    id: "adjectives",
+    level: "A",
+    name: "Adjectives",
+    nameVi: "Tính từ",
+    icon: "🎨",
+    summary:
+      "Tính từ mô tả/bổ nghĩa cho danh từ. Đứng TRƯỚC danh từ hoặc SAU động từ nối (be, seem, look...). Tính từ không bao giờ thêm 's' số nhiều.",
+    rules: [
+      {
+        title: "Vị trí của tính từ",
+        explanation:
+          "Tính từ đứng TRƯỚC danh từ (a red car) hoặc SAU động từ nối be/seem/look/feel/become/get (The car is red). Tính từ không đổi theo số nhiều.",
+        examples: [
+          { en: "She has a red car.", vi: "Cô ấy có một chiếc xe màu đỏ." },
+          { en: "The flowers are beautiful.", vi: "Những bông hoa thật đẹp." },
+        ],
+      },
+      {
+        title: "Dấu hiệu nhận biết tính từ (đuôi từ)",
+        explanation:
+          "Nhiều tính từ có đuôi đặc trưng: -ful (useful), -less (careless), -ous (famous), -al (natural), -ive (active), -able/-ible (comfortable, possible), -y (happy), -ic (basic), -ent/-ant (different, important), -ed/-ing (tired, exciting), -ish (childish), -like (childlike).",
+        examples: [
+          { en: "This is a useful tool.", vi: "Đây là một công cụ hữu ích." },
+          { en: "He is famous and successful.", vi: "Anh ấy nổi tiếng và thành đạt." },
+        ],
+      },
+      {
+        title: "Phân loại tính từ",
+        explanation:
+          "Tính từ gồm nhiều loại: (1) Mô tả/tính chất: beautiful, tall, happy; (2) Sở hữu: my, your, his, her, our, their; (3) Chỉ định: this, that, these, those; (4) Số lượng: some, many, few, three; (5) Nghi vấn: which, what, whose; (6) Phân phối: each, every, either, neither.",
+        examples: [
+          { en: "These red apples are mine.", vi: "Những quả táo đỏ này là của tôi." },
+          { en: "Each student has some books.", vi: "Mỗi học sinh có một vài cuốn sách." },
+        ],
+      },
+      {
+        title: "Trật tự nhiều tính từ (OSASCOMP)",
+        explanation:
+          "Khi có nhiều tính từ, sắp theo thứ tự: Ý kiến → Kích cỡ → Tuổi → Hình dạng → Màu sắc → Nguồn gốc → Chất liệu → Mục đích, rồi mới đến danh từ.",
+        examples: [
+          { en: "a lovely little old house", vi: "một ngôi nhà nhỏ cũ đáng yêu" },
+          { en: "a big black leather bag", vi: "một chiếc túi da đen to" },
+        ],
+      },
+      {
+        title: "Tính từ đuôi -ed và -ing",
+        explanation:
+          "Đuôi -ed mô tả CẢM XÚC của người (I'm bored = tôi thấy chán). Đuôi -ing mô tả TÍNH CHẤT của vật/sự việc gây ra cảm xúc đó (The film is boring = bộ phim nhàm chán).",
+        examples: [
+          { en: "I am interested in art.", vi: "Tôi thấy hứng thú với nghệ thuật." },
+          { en: "The book is interesting.", vi: "Cuốn sách thật thú vị." },
+        ],
+      },
+      {
+        title: "Tính từ vs trạng từ",
+        explanation:
+          "Tính từ bổ nghĩa cho DANH TỪ; trạng từ (thường thêm -ly) bổ nghĩa cho ĐỘNG TỪ/tính từ. He is a careful driver (tính từ) ↔ He drives carefully (trạng từ).",
+        examples: [
+          { en: "She is a quick runner.", vi: "Cô ấy là một người chạy nhanh." },
+          { en: "She runs quickly.", vi: "Cô ấy chạy nhanh." },
+        ],
+      },
+    ],
+    commonMistakes: [
+      "Thêm 's' vào tính từ số nhiều: 'two beautifuls girls' ❌ → 'two beautiful girls' ✅.",
+      "Nhầm -ed/-ing: nói 'I am boring' khi ý là 'tôi thấy chán' ❌ → 'I am bored' ✅.",
+      "Đặt tính từ sau danh từ kiểu tiếng Việt: 'a car red' ❌ → 'a red car' ✅.",
+      "Dùng tính từ thay trạng từ sau động từ: 'He runs quick' ❌ → 'He runs quickly' ✅.",
+    ],
+    exercises: [
+      {
+        id: "adj-1",
+        type: "mc",
+        prompt: "She bought a ___.",
+        options: [
+          "red beautiful dress",
+          "beautiful red dress",
+          "dress beautiful red",
+          "red dress beautiful",
+        ],
+        answer: "beautiful red dress",
+        explanation: "Trật tự: ý kiến (beautiful) đứng trước màu sắc (red), rồi đến danh từ.",
+      },
+      {
+        id: "adj-2",
+        type: "mc",
+        prompt: "The lesson was so ___ that I almost fell asleep.",
+        options: ["bored", "boring", "bore", "boredom"],
+        answer: "boring",
+        explanation: "Bài học GÂY ra cảm giác chán → dùng -ing (boring).",
+      },
+      {
+        id: "adj-3",
+        type: "mc",
+        prompt: "I'm really ___ in learning English.",
+        options: ["interesting", "interest", "interested", "interestingly"],
+        answer: "interested",
+        explanation: "Chủ thể là người CẢM THẤY hứng thú → dùng -ed (interested).",
+      },
+      {
+        id: "adj-4",
+        type: "mc",
+        prompt: "He speaks English very ___.",
+        options: ["good", "well", "goodly", "best"],
+        answer: "well",
+        explanation: "Bổ nghĩa cho động từ 'speaks' cần trạng từ; trạng từ của 'good' là 'well'.",
+      },
+      {
+        id: "adj-5",
+        type: "fill",
+        prompt: "Sắp xếp đúng trật tự: (Japanese / a / old / nice) car → ___ car",
+        answer: "a nice old Japanese",
+        accept: ["nice old Japanese", "a nice old japanese", "nice old japanese"],
+        explanation: "Trật tự: ý kiến (nice) → tuổi (old) → nguồn gốc (Japanese): a nice old Japanese car.",
+      },
+      {
+        id: "adj-6",
+        type: "mc",
+        prompt: "Từ nào dưới đây là TÍNH TỪ (dựa vào đuôi từ)?",
+        options: ["beauty", "beautiful", "beautify", "beautifully"],
+        answer: "beautiful",
+        explanation: "Đuôi -ful là dấu hiệu của tính từ. (beauty: danh từ, beautify: động từ, beautifully: trạng từ).",
+      },
+      {
+        id: "adj-7",
+        type: "mc",
+        prompt: "Trong câu 'These books are interesting', 'These' là loại tính từ nào?",
+        options: ["Chỉ định", "Sở hữu", "Số lượng", "Nghi vấn"],
+        answer: "Chỉ định",
+        explanation: "this/that/these/those là tính từ CHỈ ĐỊNH (demonstrative), xác định danh từ ở gần/xa.",
+      },
+    ],
+  },
+  {
+    id: "nouns",
+    level: "A",
+    name: "Nouns",
+    nameVi: "Danh từ",
+    icon: "📦",
+    summary:
+      "Danh từ chỉ người, vật, nơi chốn, khái niệm. Có thể làm chủ ngữ, tân ngữ, bổ ngữ; chia đếm được / không đếm được, chung / riêng.",
+    rules: [
+      {
+        title: "Chức năng của danh từ",
+        explanation:
+          "Danh từ có thể làm: CHỦ NGỮ (The dog barks), TÂN NGỮ (I love music), BỔ NGỮ sau 'to be' (She is a teacher), và đứng SAU GIỚI TỪ (in the box).",
+        examples: [
+          { en: "Happiness is important.", vi: "Hạnh phúc thì quan trọng. (chủ ngữ)" },
+          { en: "She is a doctor.", vi: "Cô ấy là bác sĩ. (bổ ngữ)" },
+        ],
+      },
+      {
+        title: "Phân loại danh từ",
+        explanation:
+          "Đếm được (a book → books) vs không đếm được (water, money, information); danh từ chung (city) vs danh từ riêng viết hoa (London); cụ thể (car) vs trừu tượng (love); danh từ tập hợp (family, team).",
+        examples: [
+          { en: "I bought three books.", vi: "Tôi đã mua ba cuốn sách." },
+          { en: "I need some information.", vi: "Tôi cần một ít thông tin." },
+        ],
+      },
+      {
+        title: "Số ít & số nhiều",
+        explanation:
+          "Số nhiều thường thêm -s; thêm -es sau s, x, ch, sh, o (boxes, watches); phụ âm + y → -ies (city → cities); bất quy tắc: man→men, child→children, foot→feet, tooth→teeth.",
+        examples: [
+          { en: "There are many cities in Vietnam.", vi: "Có nhiều thành phố ở Việt Nam." },
+          { en: "Two children are playing.", vi: "Hai đứa trẻ đang chơi." },
+        ],
+      },
+    ],
+    commonMistakes: [
+      "Thêm 's' cho danh từ không đếm được: 'informations', 'advices' ❌ → 'information', 'advice' ✅.",
+      "Dùng a/an với danh từ không đếm được: 'a money' ❌ → 'some money' ✅.",
+      "Quên đổi danh từ bất quy tắc: 'childs', 'foots' ❌ → 'children', 'feet' ✅.",
+    ],
+    exercises: [
+      {
+        id: "noun-1",
+        type: "mc",
+        prompt: "Dạng số nhiều của 'child' là ___.",
+        options: ["childs", "children", "childes", "child"],
+        answer: "children",
+        explanation: "child là danh từ bất quy tắc: child → children.",
+      },
+      {
+        id: "noun-2",
+        type: "mc",
+        prompt: "I need some ___ about this topic.",
+        options: ["information", "informations", "an information", "a information"],
+        answer: "information",
+        explanation: "information là danh từ không đếm được → không thêm 's', không dùng a/an.",
+      },
+      {
+        id: "noun-3",
+        type: "mc",
+        prompt: "Danh từ nào dưới đây KHÔNG đếm được?",
+        options: ["book", "car", "water", "apple"],
+        answer: "water",
+        explanation: "water (nước) là danh từ không đếm được.",
+      },
+    ],
+  },
+  {
+    id: "pronouns",
+    level: "A",
+    name: "Pronouns",
+    nameVi: "Đại từ",
+    icon: "🙋",
+    summary:
+      "Đại từ thay thế cho danh từ để tránh lặp. Gồm: chủ ngữ, tân ngữ, sở hữu, phản thân, nghi vấn, chỉ định và bất định.",
+    rules: [
+      {
+        title: "Đại từ chủ ngữ & tân ngữ",
+        explanation:
+          "Chủ ngữ: I, you, he, she, it, we, they (đứng TRƯỚC động từ). Tân ngữ: me, you, him, her, it, us, them (đứng SAU động từ hoặc giới từ).",
+        examples: [
+          { en: "They invited us to the party.", vi: "Họ mời chúng tôi đến bữa tiệc." },
+          { en: "He called me yesterday.", vi: "Anh ấy gọi tôi hôm qua." },
+        ],
+      },
+      {
+        title: "Tính từ sở hữu & đại từ sở hữu",
+        explanation:
+          "Tính từ sở hữu đi KÈM danh từ: my, your, his, her, its, our, their (my book). Đại từ sở hữu ĐỨNG MỘT MÌNH thay cho danh từ: mine, yours, his, hers, ours, theirs (It's mine).",
+        examples: [
+          { en: "This is my car. That one is yours.", vi: "Đây là xe của tôi. Chiếc kia là của bạn." },
+        ],
+      },
+      {
+        title: "Đại từ phản thân (reflexive)",
+        explanation:
+          "myself, yourself, himself, herself, itself, ourselves, yourselves, themselves — dùng khi chủ ngữ và tân ngữ là CÙNG một người/vật.",
+        examples: [
+          { en: "She taught herself English.", vi: "Cô ấy tự học tiếng Anh." },
+          { en: "Be careful! Don't hurt yourself.", vi: "Cẩn thận! Đừng làm mình bị thương." },
+        ],
+      },
+      {
+        title: "Nghi vấn, chỉ định & bất định",
+        explanation:
+          "Nghi vấn: who, whom, whose, what, which. Chỉ định: this, that, these, those. Bất định: someone/anyone/everyone/no one, something/anything/everything/nothing.",
+        examples: [
+          { en: "Who is at the door?", vi: "Ai ở cửa vậy?" },
+          { en: "Someone is waiting for you.", vi: "Có ai đó đang đợi bạn." },
+        ],
+      },
+    ],
+    commonMistakes: [
+      "Dùng đại từ chủ ngữ sau giới từ: 'between you and I' ❌ → 'between you and me' ✅.",
+      "Nhầm tính từ sở hữu với đại từ sở hữu: 'This book is my' ❌ → 'This book is mine' ✅.",
+      "its (sở hữu) vs it's (= it is): 'The cat licks it's paw' ❌ → 'its paw' ✅.",
+    ],
+    exercises: [
+      {
+        id: "pro-1",
+        type: "mc",
+        prompt: "She gave the keys to ___.",
+        options: ["I", "me", "my", "mine"],
+        answer: "me",
+        explanation: "Sau giới từ 'to' dùng đại từ tân ngữ → me.",
+      },
+      {
+        id: "pro-2",
+        type: "mc",
+        prompt: "That umbrella is ___ (của tôi).",
+        options: ["my", "mine", "me", "myself"],
+        answer: "mine",
+        explanation: "Đứng một mình thay danh từ → đại từ sở hữu 'mine'.",
+      },
+      {
+        id: "pro-3",
+        type: "mc",
+        prompt: "He cut ___ while shaving.",
+        options: ["him", "his", "himself", "he"],
+        answer: "himself",
+        explanation: "Chủ ngữ và tân ngữ cùng là 'he' → đại từ phản thân 'himself'.",
+      },
+    ],
+  },
+  {
+    id: "quantifiers",
+    level: "A",
+    name: "Quantifiers",
+    nameVi: "Từ định lượng",
+    icon: "🔢",
+    summary:
+      "Từ định lượng cho biết số lượng của danh từ: some/any, many/much/a lot of, (a) few/(a) little, how many/how much.",
+    rules: [
+      {
+        title: "some / any",
+        explanation:
+          "some dùng trong câu KHẲNG ĐỊNH và lời mời/đề nghị; any dùng trong câu PHỦ ĐỊNH và NGHI VẤN.",
+        examples: [
+          { en: "I have some money.", vi: "Tôi có một ít tiền." },
+          { en: "Do you have any questions?", vi: "Bạn có câu hỏi nào không?" },
+        ],
+      },
+      {
+        title: "many / much / a lot of",
+        explanation:
+          "many + danh từ ĐẾM ĐƯỢC số nhiều (many books); much + danh từ KHÔNG đếm được (much water); a lot of / lots of dùng được cho CẢ HAI.",
+        examples: [
+          { en: "There isn't much time.", vi: "Không còn nhiều thời gian." },
+          { en: "She has a lot of friends.", vi: "Cô ấy có nhiều bạn." },
+        ],
+      },
+      {
+        title: "(a) few / (a) little",
+        explanation:
+          "a few + đếm được (một vài, đủ dùng); few + đếm được (rất ít, không đủ). a little + không đếm được (một ít); little + không đếm được (rất ít, gần như không).",
+        examples: [
+          { en: "I have a few questions.", vi: "Tôi có một vài câu hỏi." },
+          { en: "There is little hope.", vi: "Có rất ít hy vọng." },
+        ],
+      },
+      {
+        title: "how many / how much",
+        explanation:
+          "how many + danh từ đếm được số nhiều (How many books?); how much + danh từ không đếm được, và dùng để HỎI GIÁ (How much is it?).",
+        examples: [
+          { en: "How many people came?", vi: "Bao nhiêu người đã đến?" },
+          { en: "How much sugar do you need?", vi: "Bạn cần bao nhiêu đường?" },
+        ],
+      },
+    ],
+    commonMistakes: [
+      "much + danh từ đếm được: 'much books' ❌ → 'many books' ✅.",
+      "many + danh từ không đếm được: 'many money' ❌ → 'much money' ✅.",
+      "Nhầm nghĩa: 'a little' (một ít, đủ dùng) khác 'little' (rất ít, gần như không có).",
+    ],
+    exercises: [
+      {
+        id: "qt-1",
+        type: "mc",
+        prompt: "How ___ money do you need?",
+        options: ["many", "much", "few", "a lot"],
+        answer: "much",
+        explanation: "money là danh từ không đếm được → how much.",
+      },
+      {
+        id: "qt-2",
+        type: "mc",
+        prompt: "There aren't ___ seats left.",
+        options: ["some", "any", "much", "a little"],
+        answer: "any",
+        explanation: "Câu phủ định → dùng 'any'.",
+      },
+      {
+        id: "qt-3",
+        type: "mc",
+        prompt: "I have ___ friends here, so I'm not lonely. (một vài)",
+        options: ["a few", "a little", "much", "little"],
+        answer: "a few",
+        explanation: "friends đếm được + nghĩa 'một vài, đủ' → a few.",
+      },
+    ],
+  },
 ];

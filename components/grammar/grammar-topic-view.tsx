@@ -1,18 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, BookOpen, Dumbbell, Lightbulb, TriangleAlert } from "lucide-react";
+import { ArrowLeft, BookOpen, Lightbulb, Table2, TriangleAlert } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { GrammarPractice } from "@/components/grammar/grammar-practice";
-import { useGrammarProgress } from "@/hooks/use-grammar-progress";
-import { GRAMMAR_LEVEL_LABEL, type GrammarTopic } from "@/lib/grammar";
+import { GRAMMAR_LEVEL_LABEL, type GrammarTable, type GrammarTopic } from "@/lib/grammar";
 
 interface GrammarTopicViewProps {
   topic: GrammarTopic;
 }
 
 export function GrammarTopicView({ topic }: GrammarTopicViewProps) {
-  const { recordScore } = useGrammarProgress();
+  const mistakes = topic.commonMistakes ?? [];
+  const tables = topic.tables ?? [];
 
   return (
     <div className="container mx-auto max-w-3xl space-y-6 p-6">
@@ -50,6 +49,11 @@ export function GrammarTopicView({ topic }: GrammarTopicViewProps) {
           <div key={i} className="rounded-2xl border bg-card p-5">
             <h3 className="font-semibold text-primary">{rule.title}</h3>
             <p className="mt-1 text-sm text-muted-foreground">{rule.explanation}</p>
+            {rule.formula ? (
+              <p className="mt-3 rounded-lg border border-primary/30 bg-primary/5 px-3 py-2 font-mono text-sm font-medium text-primary">
+                {rule.formula}
+              </p>
+            ) : null}
             <div className="mt-3 space-y-2">
               {rule.examples.map((ex, j) => (
                 <div key={j} className="rounded-lg border bg-background p-3">
@@ -62,14 +66,26 @@ export function GrammarTopicView({ topic }: GrammarTopicViewProps) {
         ))}
       </section>
 
+      {/* Bảng tổng hợp */}
+      {tables.length > 0 ? (
+        <section className="space-y-3">
+          <h2 className="flex items-center gap-2 text-lg font-semibold">
+            <Table2 className="h-5 w-5 text-primary" /> Bảng tổng hợp
+          </h2>
+          {tables.map((table, i) => (
+            <GrammarTableView key={i} table={table} />
+          ))}
+        </section>
+      ) : null}
+
       {/* Lỗi thường gặp */}
-      {topic.commonMistakes.length > 0 ? (
+      {mistakes.length > 0 ? (
         <section className="rounded-2xl border bg-card p-5">
           <h2 className="mb-3 flex items-center gap-2 text-lg font-semibold">
             <TriangleAlert className="h-5 w-5 text-amber-500" /> Lỗi thường gặp
           </h2>
           <ul className="space-y-2">
-            {topic.commonMistakes.map((m, i) => (
+            {mistakes.map((m, i) => (
               <li key={i} className="flex items-start gap-2 text-sm">
                 <Lightbulb className="mt-0.5 h-4 w-4 shrink-0 text-amber-500" />
                 <span className="text-muted-foreground">{m}</span>
@@ -78,17 +94,40 @@ export function GrammarTopicView({ topic }: GrammarTopicViewProps) {
           </ul>
         </section>
       ) : null}
+    </div>
+  );
+}
 
-      {/* Luyện tập */}
-      <section className="space-y-3">
-        <h2 className="flex items-center gap-2 text-lg font-semibold">
-          <Dumbbell className="h-5 w-5 text-primary" /> Luyện tập ({topic.exercises.length} câu)
-        </h2>
-        <GrammarPractice
-          exercises={topic.exercises}
-          onFinish={(percent) => recordScore(topic.id, percent)}
-        />
-      </section>
+function GrammarTableView({ table }: { table: GrammarTable }) {
+  return (
+    <div className="overflow-hidden rounded-2xl border bg-card">
+      {table.caption ? (
+        <p className="border-b bg-muted/40 px-4 py-2 text-sm font-semibold">{table.caption}</p>
+      ) : null}
+      <div className="overflow-x-auto">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b bg-muted/20 text-left">
+              {table.headers.map((h, i) => (
+                <th key={i} className="px-4 py-2.5 font-semibold text-foreground">
+                  {h}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {table.rows.map((row, i) => (
+              <tr key={i} className="border-b last:border-0">
+                {row.map((cell, j) => (
+                  <td key={j} className="px-4 py-2.5 align-top text-muted-foreground">
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

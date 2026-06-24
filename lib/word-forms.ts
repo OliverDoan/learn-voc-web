@@ -17,6 +17,14 @@ export const WORD_FORM_LABEL: Record<WordFormPOS, string> = {
   adverb: "Trạng từ",
 };
 
+// Viết tắt loại từ hiển thị trong bảng word formation: (n) (v) (a) (adv)
+export const WORD_FORM_ABBR: Record<WordFormPOS, string> = {
+  noun: "n",
+  verb: "v",
+  adjective: "a",
+  adverb: "adv",
+};
+
 export type WordForms = Partial<Record<WordFormPOS, string>>;
 
 /** Parse JSON wordForms từ DB; bỏ qua giá trị rỗng/không phải chuỗi. */
@@ -54,6 +62,10 @@ export function stringifyWordForms(
   }
   return Object.keys(cleaned).length > 0 ? JSON.stringify(cleaned) : null;
 }
+
+/** Nghĩa tiếng Việt cho từng dạng từ — cùng dạng dữ liệu pos → chuỗi. */
+export const parseWordFormMeanings = parseWordForms;
+export const stringifyWordFormMeanings = stringifyWordForms;
 
 export interface WordFormTarget {
   pos: WordFormPOS;

@@ -3,7 +3,7 @@ import { prisma } from "@/lib/db";
 import { handleError, ok } from "@/lib/api-helpers";
 import { deckImportSchema } from "@/lib/schemas";
 import { stringifyTags } from "@/lib/utils";
-import { stringifyWordForms } from "@/lib/word-forms";
+import { stringifyWordForms, stringifyWordFormMeanings } from "@/lib/word-forms";
 
 export async function POST(req: NextRequest) {
   try {
@@ -33,6 +33,7 @@ export async function POST(req: NextRequest) {
       note: c.note ?? null,
       tags: stringifyTags(c.tags),
       wordForms: stringifyWordForms(c.wordForms),
+      wordFormMeanings: stringifyWordFormMeanings(c.wordFormMeanings),
       order: idx,
     }));
 

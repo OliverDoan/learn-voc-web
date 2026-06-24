@@ -93,7 +93,9 @@
       "Bash(npx dotenv *)",
       "Bash(pnpm gen:root-meanings)",
       "Bash(npx eslint *)",
-      "Bash(grep -v \"set-state-in-effect\\\\|cascading renders\\\\|Effects are intended\\\\|external systems\\\\|Update external\\\\|Subscribe for\\\\|setState in a callback\\\\|recommended\\\\|setState\\(\\) directly\\\\|orderedCards\\\\|^\\\\s*$\\\\|^\\\\s*1[0-9][0-9] \\\\|useEffect\\\\|if \\(cards\\)\\\\|\\\\^\\\\^\\\\^\\\\|react.dev\\\\|>\")"
+      "Bash(grep -v \"set-state-in-effect\\\\|cascading renders\\\\|Effects are intended\\\\|external systems\\\\|Update external\\\\|Subscribe for\\\\|setState in a callback\\\\|recommended\\\\|setState\\(\\) directly\\\\|orderedCards\\\\|^\\\\s*$\\\\|^\\\\s*1[0-9][0-9] \\\\|useEffect\\\\|if \\(cards\\)\\\\|\\\\^\\\\^\\\\^\\\\|react.dev\\\\|>\")",
+      "Bash(grep -nE '^\\\\s*id: \"[a-z-]+\",$' lib/grammar/topics-a.ts)",
+      "Bash(grep -nE '^\\\\s*id: \"[a-z-]+\",$|^\\\\s*\\\\{$|^\\\\s*\\\\},$|GRAMMAR_TOPICS_POS' lib/grammar/topics-pos.ts)"
     ]
   }
 }

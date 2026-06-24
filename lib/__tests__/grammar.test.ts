@@ -51,15 +51,26 @@ describe("nội dung ngữ pháp toàn vẹn", () => {
     expect(getGrammarTopic("không-tồn-tại")).toBeUndefined();
   });
 
-  it("mỗi chủ đề có lý thuyết + bài tập, và đáp án trắc nghiệm nằm trong options", () => {
+  it("mỗi chủ đề có lý thuyết; nếu có bài tập thì id duy nhất & đáp án trắc nghiệm nằm trong options", () => {
     for (const topic of GRAMMAR_TOPICS) {
       expect(topic.rules.length).toBeGreaterThan(0);
-      expect(topic.exercises.length).toBeGreaterThan(0);
-      const exIds = topic.exercises.map((e) => e.id);
+      const exercises = topic.exercises ?? [];
+      const exIds = exercises.map((e) => e.id);
       expect(new Set(exIds).size).toBe(exIds.length); // id bài tập trong chủ đề là duy nhất
-      for (const ex of topic.exercises) {
+      for (const ex of exercises) {
         if (ex.type === "mc") {
           expect(ex.options).toContain(ex.answer);
+        }
+      }
+    }
+  });
+
+  it("bảng tổng hợp (nếu có) có số cột khớp giữa header và mọi hàng", () => {
+    for (const topic of GRAMMAR_TOPICS) {
+      for (const table of topic.tables ?? []) {
+        expect(table.headers.length).toBeGreaterThan(0);
+        for (const row of table.rows) {
+          expect(row.length).toBe(table.headers.length);
         }
       }
     }

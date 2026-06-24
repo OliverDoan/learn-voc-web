@@ -26,6 +26,18 @@ export const wordFormsSchema = z
 
 export type WordFormsInput = z.infer<typeof wordFormsSchema>;
 
+// Nghĩa tiếng Việt cho từng dạng từ — cùng cấu trúc, cho phép chuỗi dài hơn.
+export const wordFormMeaningsSchema = z
+  .object({
+    noun: z.string().trim().max(200).optional().nullable(),
+    verb: z.string().trim().max(200).optional().nullable(),
+    adjective: z.string().trim().max(200).optional().nullable(),
+    adverb: z.string().trim().max(200).optional().nullable(),
+  })
+  .partial();
+
+export type WordFormMeaningsInput = z.infer<typeof wordFormMeaningsSchema>;
+
 export const cardCreateSchema = z.object({
   deckId: z.string().min(1),
   word: z.string().trim().min(1, "Từ không được trống").max(120),
@@ -41,6 +53,7 @@ export const cardCreateSchema = z.object({
   audioUrl: z.string().url().optional().nullable().or(z.literal("")),
   tags: z.array(z.string().trim().min(1).max(30)).max(10).default([]),
   wordForms: wordFormsSchema.optional().nullable(),
+  wordFormMeanings: wordFormMeaningsSchema.optional().nullable(),
   synonyms: z.array(z.string().trim().min(1).max(60)).max(20).default([]),
   antonyms: z.array(z.string().trim().min(1).max(60)).max(20).default([]),
 });
@@ -69,6 +82,7 @@ export const cardImportItemSchema = z.object({
   note: z.string().trim().max(1000).optional().nullable(),
   tags: z.array(z.string().trim().min(1).max(30)).max(10).default([]),
   wordForms: wordFormsSchema.optional().nullable(),
+  wordFormMeanings: wordFormMeaningsSchema.optional().nullable(),
 });
 
 export const cardImportSchema = z.object({

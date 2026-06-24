@@ -14,6 +14,7 @@ import type {
 
 export const TRASH_KEY = ["cards", "trash"] as const;
 export const FAVORITES_KEY = ["cards", "favorites"] as const;
+export const ALL_WORDS_KEY = ["cards", "all-words"] as const;
 
 export interface TrashCard extends Card {
   deck: { id: string; name: string; color: string; icon: string | null };
@@ -22,6 +23,9 @@ export interface TrashCard extends Card {
 export interface FavoriteCard extends Card {
   deck: { id: string; name: string; color: string; icon: string | null };
 }
+
+/** Thẻ kèm thông tin deck nguồn (dùng cho trang tổng hợp tất cả từ). */
+export type CardWithDeck = FavoriteCard;
 
 export function useCards(params: { deckId?: string; state?: string; q?: string } = {}) {
   const qs = new URLSearchParams();
@@ -83,6 +87,14 @@ export function useFavorites() {
   return useQuery({
     queryKey: FAVORITES_KEY,
     queryFn: () => apiFetch<FavoriteCard[]>("/api/cards/favorites"),
+  });
+}
+
+/** Tổng hợp tất cả từ trong mọi deck (kèm thông tin deck nguồn). */
+export function useAllWords() {
+  return useQuery({
+    queryKey: ALL_WORDS_KEY,
+    queryFn: () => apiFetch<CardWithDeck[]>("/api/cards/all"),
   });
 }
 

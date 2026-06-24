@@ -20,11 +20,16 @@ import { useDebounce } from "@/hooks/use-debounce";
 import { useCreateCard, useUpdateCard } from "@/hooks/use-cards";
 import { apiFetch } from "@/lib/api-client";
 import { parseTags } from "@/lib/utils";
-import { parseWordForms, WORD_FORM_LABEL, WORD_FORM_ORDER } from "@/lib/word-forms";
+import {
+  parseWordForms,
+  parseWordFormMeanings,
+  WORD_FORM_LABEL,
+  WORD_FORM_ORDER,
+} from "@/lib/word-forms";
 import { speak } from "@/lib/tts";
 import { WordBreakdown } from "@/components/word-formation/word-breakdown";
 import type { Card } from "@/lib/types";
-import type { WordFormsInput } from "@/lib/schemas";
+import type { WordFormsInput, WordFormMeaningsInput } from "@/lib/schemas";
 import type { DictionaryResult } from "@/lib/dictionary";
 
 interface CardFormDialogProps {
@@ -49,6 +54,9 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
   const [synonymsInput, setSynonymsInput] = useState(parseTags(card?.synonyms).join(", "));
   const [antonymsInput, setAntonymsInput] = useState(parseTags(card?.antonyms).join(", "));
   const [wordForms, setWordForms] = useState<WordFormsInput>(() => parseWordForms(card?.wordForms));
+  const [wordFormMeanings, setWordFormMeanings] = useState<WordFormMeaningsInput>(() =>
+    parseWordFormMeanings(card?.wordFormMeanings),
+  );
 
   const debouncedWord = useDebounce(word, 500);
 
@@ -70,6 +78,7 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
       setSynonymsInput(parseTags(card?.synonyms).join(", "));
       setAntonymsInput(parseTags(card?.antonyms).join(", "));
       setWordForms(parseWordForms(card?.wordForms));
+      setWordFormMeanings(parseWordFormMeanings(card?.wordFormMeanings));
     }
   }, [open, card]);
 
@@ -121,6 +130,7 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
       synonyms,
       antonyms,
       wordForms,
+      wordFormMeanings,
     };
 
     try {
@@ -259,11 +269,11 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
           <div className="space-y-2 md:col-span-2">
             <Label>Các dạng từ (word forms — cho bài biến đổi từ)</Label>
             <p className="text-xs text-muted-foreground">
-              Tuỳ chọn. Điền dạng danh/động/tính/trạng từ cùng họ để tạo bài word formation.
+              Tuỳ chọn. Điền dạng cùng họ và nghĩa tiếng Việt của từng dạng.
             </p>
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <div className="space-y-2">
               {WORD_FORM_ORDER.map((pos) => (
-                <div key={pos} className="space-y-1">
+                <div key={pos} className="grid grid-cols-[5rem_1fr_1.2fr] items-center gap-2">
                   <Label htmlFor={`wf-${pos}`} className="text-xs text-muted-foreground">
                     {WORD_FORM_LABEL[pos]}
                   </Label>
@@ -281,6 +291,22 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
                           : pos === "adjective"
                             ? "beautiful"
                             : "beautifully"
+                    }
+                  />
+                  <Input
+                    id={`wfm-${pos}`}
+                    value={wordFormMeanings[pos] ?? ""}
+                    onChange={(e) =>
+                      setWordFormMeanings((prev) => ({ ...prev, [pos]: e.target.value }))
+                    }
+                    placeholder={
+                      pos === "noun"
+                        ? "vẻ đẹp"
+                        : pos === "verb"
+                          ? "làm đẹp"
+                          : pos === "adjective"
+                            ? "đẹp"
+                            : "một cách đẹp đẽ"
                     }
                   />
                 </div>

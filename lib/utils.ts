@@ -33,6 +33,34 @@ export function posBadgeClass(pos: string | null | undefined): string {
   return "border-border text-muted-foreground";
 }
 
+// Các nhóm từ loại dùng để lọc thẻ trong deck.
+export const POS_FILTERS = [
+  { key: "noun", label: "Danh từ" },
+  { key: "verb", label: "Động từ" },
+  { key: "adjective", label: "Tính từ" },
+  { key: "adverb", label: "Trạng từ" },
+] as const;
+
+export type PosKey = (typeof POS_FILTERS)[number]["key"];
+
+/**
+ * Phân loại chuỗi partOfSpeech thành các nhóm từ loại chuẩn.
+ * Tách theo ký tự không phải chữ cái nên xử lý được "adjective / noun", "n/v"...
+ * Thứ tự kiểm tra: adv trước v (vì "adverb" chứa "v"), adj trước n.
+ */
+export function cardPosCategories(pos: string | null | undefined): PosKey[] {
+  if (!pos) return [];
+  const tokens = pos.toLowerCase().split(/[^a-z]+/).filter(Boolean);
+  const set = new Set<PosKey>();
+  for (const t of tokens) {
+    if (t.startsWith("adv")) set.add("adverb");
+    else if (t.startsWith("adj")) set.add("adjective");
+    else if (t.startsWith("n")) set.add("noun");
+    else if (t.startsWith("v")) set.add("verb");
+  }
+  return [...set];
+}
+
 export function parseTags(tagsJson: string | null | undefined): string[] {
   if (!tagsJson) return [];
   try {

@@ -49,6 +49,8 @@ model Card {
   order              Int      @default(0)
   // JSON các dạng từ cho bài word formation: {"noun":..,"verb":..,"adjective":..,"adverb":..}
   wordForms          String?
+  // JSON nghĩa tiếng Việt cho từng dạng từ: {"noun":"năng lực","verb":"làm cho có thể",..}
+  wordFormMeanings   String?
   // JSON array từ đồng nghĩa / trái nghĩa, vd ["happy","glad"]
   synonyms           String?
   antonyms           String?

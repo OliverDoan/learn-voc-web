@@ -10,7 +10,16 @@ export interface GrammarExample {
 export interface GrammarRule {
   title: string;
   explanation: string;
+  /** Công thức/cấu trúc ngắn gọn, hiển thị nổi bật (vd: "S + V(s/es) + O"). */
+  formula?: string;
   examples: GrammarExample[];
+}
+
+/** Bảng tổng hợp: tiêu đề cột + các hàng dữ liệu. */
+export interface GrammarTable {
+  caption?: string;
+  headers: string[];
+  rows: string[][];
 }
 
 /** Bài tập trắc nghiệm: chọn 1 đáp án đúng trong options. */
@@ -43,8 +52,10 @@ export interface GrammarTopic {
   icon: string; // emoji
   summary: string;
   rules: GrammarRule[];
-  commonMistakes: string[];
-  exercises: GrammarExercise[];
+  /** Bảng tổng hợp (tuỳ chọn) — hiển thị sau phần lý thuyết. */
+  tables?: GrammarTable[];
+  commonMistakes?: string[];
+  exercises?: GrammarExercise[];
 }
 
 export const GRAMMAR_LEVEL_LABEL: Record<GrammarLevel, string> = {
