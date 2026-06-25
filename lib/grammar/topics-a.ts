@@ -743,42 +743,76 @@ export const GRAMMAR_TOPICS_A: GrammarTopic[] = [
     nameVi: "Từ định lượng",
     icon: "🔢",
     summary:
-      "Từ định lượng cho biết số lượng của danh từ: some/any, many/much/a lot of, (a) few/(a) little, how many/how much.",
+      "Từ định lượng là những từ chỉ số lượng của người, sự vật hoặc sự việc. Học theo 3 NHÓM: chỉ đi với danh từ không đếm được, chỉ đi với danh từ đếm được, và đi với cả hai.",
     rules: [
       {
-        title: "some / any",
+        title: "Định nghĩa",
         explanation:
-          "some dùng trong câu KHẲNG ĐỊNH và lời mời/đề nghị; any dùng trong câu PHỦ ĐỊNH và NGHI VẤN.",
+          "Từ định lượng (quantifiers) là những từ chỉ SỐ LƯỢNG của người, sự vật hoặc sự việc — đứng trước danh từ.",
         examples: [
-          { en: "I have some money.", vi: "Tôi có một ít tiền." },
+          { en: "some water, many books, a lot of friends", vi: "từ định lượng + danh từ" },
+        ],
+      },
+      {
+        title: "NHÓM 1 — Chỉ đi với danh từ KHÔNG đếm được",
+        explanation:
+          "Dùng cho danh từ không đếm được (water, money, time, information...): little, a little, much, a large amount of, a great deal of.",
+        examples: [
+          { en: "much / a little water", vi: "nhiều / một ít nước" },
+          { en: "a large amount of money", vi: "một lượng lớn tiền" },
+          { en: "a great deal of time", vi: "rất nhiều thời gian" },
+        ],
+      },
+      {
+        title: "NHÓM 2 — Chỉ đi với danh từ ĐẾM ĐƯỢC",
+        explanation:
+          "Dùng cho danh từ đếm được số nhiều (books, people, cars...): few, a few, many, several, a number of, the number of, a large number of, a great number of.",
+        examples: [
+          { en: "many / a few books", vi: "nhiều / một vài quyển sách" },
+          { en: "several people", vi: "một vài người" },
+          { en: "a large number of students", vi: "một số lượng lớn học sinh" },
+        ],
+      },
+      {
+        title: "NHÓM 3 — Đi với CẢ HAI loại danh từ",
+        explanation:
+          "Dùng được cho cả đếm được lẫn không đếm được: a lot of, lots of, some, any, plenty of, no, all.",
+        examples: [
+          { en: "a lot of friends / a lot of money", vi: "nhiều bạn / nhiều tiền" },
+          { en: "some water / some books", vi: "một ít nước / vài quyển sách" },
+          { en: "plenty of time / plenty of chairs", vi: "thừa thời gian / thừa ghế" },
+        ],
+      },
+      {
+        title: "Phân biệt (a) few / (a) little",
+        explanation:
+          "a few / a little = 'một ít, ĐỦ dùng' (nghĩa tích cực). few / little = 'rất ít, gần như KHÔNG' (nghĩa tiêu cực). few/a few + đếm được; little/a little + không đếm được.",
+        examples: [
+          { en: "I have a few friends here.", vi: "Tôi có vài người bạn ở đây. (đủ, vui)" },
+          { en: "There is little hope.", vi: "Có rất ít hy vọng. (gần như không)" },
+        ],
+      },
+      {
+        title: "some / any & how many / how much",
+        explanation:
+          "some: câu KHẲNG ĐỊNH và lời mời/đề nghị; any: câu PHỦ ĐỊNH và NGHI VẤN. how many + đếm được; how much + không đếm được (và hỏi giá).",
+        examples: [
           { en: "Do you have any questions?", vi: "Bạn có câu hỏi nào không?" },
-        ],
-      },
-      {
-        title: "many / much / a lot of",
-        explanation:
-          "many + danh từ ĐẾM ĐƯỢC số nhiều (many books); much + danh từ KHÔNG đếm được (much water); a lot of / lots of dùng được cho CẢ HAI.",
-        examples: [
-          { en: "There isn't much time.", vi: "Không còn nhiều thời gian." },
-          { en: "She has a lot of friends.", vi: "Cô ấy có nhiều bạn." },
-        ],
-      },
-      {
-        title: "(a) few / (a) little",
-        explanation:
-          "a few + đếm được (một vài, đủ dùng); few + đếm được (rất ít, không đủ). a little + không đếm được (một ít); little + không đếm được (rất ít, gần như không).",
-        examples: [
-          { en: "I have a few questions.", vi: "Tôi có một vài câu hỏi." },
-          { en: "There is little hope.", vi: "Có rất ít hy vọng." },
-        ],
-      },
-      {
-        title: "how many / how much",
-        explanation:
-          "how many + danh từ đếm được số nhiều (How many books?); how much + danh từ không đếm được, và dùng để HỎI GIÁ (How much is it?).",
-        examples: [
-          { en: "How many people came?", vi: "Bao nhiêu người đã đến?" },
           { en: "How much sugar do you need?", vi: "Bạn cần bao nhiêu đường?" },
+        ],
+      },
+    ],
+    tables: [
+      {
+        caption: "Nhóm từ định lượng theo loại danh từ",
+        headers: ["Không đếm được", "Đếm được", "Cả hai loại"],
+        rows: [
+          ["little", "few", "a lot of"],
+          ["a little", "a few", "lots of"],
+          ["much", "many", "some"],
+          ["a large amount of", "several", "any"],
+          ["a great deal of", "a number of / the number of", "plenty of"],
+          ["—", "a large/great number of", "no / all"],
         ],
       },
     ],
@@ -786,6 +820,7 @@ export const GRAMMAR_TOPICS_A: GrammarTopic[] = [
       "much + danh từ đếm được: 'much books' ❌ → 'many books' ✅.",
       "many + danh từ không đếm được: 'many money' ❌ → 'much money' ✅.",
       "Nhầm nghĩa: 'a little' (một ít, đủ dùng) khác 'little' (rất ít, gần như không có).",
+      "Dùng 'a number of' với danh từ không đếm được: 'a number of money' ❌ → 'an amount of money' ✅.",
     ],
     exercises: [
       {
@@ -811,6 +846,30 @@ export const GRAMMAR_TOPICS_A: GrammarTopic[] = [
         options: ["a few", "a little", "much", "little"],
         answer: "a few",
         explanation: "friends đếm được + nghĩa 'một vài, đủ' → a few.",
+      },
+      {
+        id: "qt-4",
+        type: "mc",
+        prompt: "They spent ___ time preparing for the trip. (rất nhiều — không đếm được)",
+        options: ["a great deal of", "a great number of", "many", "several"],
+        answer: "a great deal of",
+        explanation: "time không đếm được → dùng nhóm 1: 'a great deal of'.",
+      },
+      {
+        id: "qt-5",
+        type: "mc",
+        prompt: "___ students attended the lecture. (một số lượng lớn)",
+        options: ["A large amount of", "Much", "A large number of", "A little"],
+        answer: "A large number of",
+        explanation: "students đếm được → dùng nhóm 2: 'a large number of'.",
+      },
+      {
+        id: "qt-6",
+        type: "mc",
+        prompt: "Don't worry, we have ___ time. (thừa, đủ — dùng được cả hai loại)",
+        options: ["plenty of", "many", "few", "a number of"],
+        answer: "plenty of",
+        explanation: "'plenty of' thuộc nhóm 3, dùng được cho cả đếm được lẫn không đếm được.",
       },
     ],
   },
