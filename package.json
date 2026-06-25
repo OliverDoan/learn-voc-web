@@ -15,6 +15,7 @@
     "prisma:generate": "prisma generate",
     "prisma:studio": "prisma studio",
     "db:seed": "tsx prisma/seed.ts",
+    "add:deck": "tsx --env-file=.env scripts/add-deck.ts",
     "import:vocab": "tsx --env-file=.env scripts/import-vocab-full.ts",
     "gen:examples": "tsx --env-file=.env scripts/generate-examples.ts",
     "data:synonyms": "tsx --env-file=.env scripts/fill-synonyms.ts",
