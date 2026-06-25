@@ -386,40 +386,126 @@ export const GRAMMAR_TOPICS_A: GrammarTopic[] = [
     nameVi: "Danh từ",
     icon: "📦",
     summary:
-      "Danh từ chỉ người, vật, nơi chốn, khái niệm. Có thể làm chủ ngữ, tân ngữ, bổ ngữ; chia đếm được / không đếm được, chung / riêng.",
+      "Danh từ là từ chỉ người (person), sự vật (thing), địa điểm (place), khái niệm (idea), động vật (animal). Phân loại theo: số ít / số nhiều, riêng / chung, đếm được / không đếm được.",
     rules: [
       {
-        title: "Chức năng của danh từ",
+        title: "Định nghĩa",
         explanation:
-          "Danh từ có thể làm: CHỦ NGỮ (The dog barks), TÂN NGỮ (I love music), BỔ NGỮ sau 'to be' (She is a teacher), và đứng SAU GIỚI TỪ (in the box).",
+          "Danh từ là từ dùng để gọi tên: NGƯỜI (person), SỰ VẬT (thing), ĐỊA ĐIỂM (place), KHÁI NIỆM (idea), ĐỘNG VẬT (animal).",
         examples: [
-          { en: "Happiness is important.", vi: "Hạnh phúc thì quan trọng. (chủ ngữ)" },
-          { en: "She is a doctor.", vi: "Cô ấy là bác sĩ. (bổ ngữ)" },
+          { en: "teacher, table, London, freedom, lion", vi: "người, vật, nơi chốn, khái niệm, động vật" },
+          { en: "Happiness is important.", vi: "Hạnh phúc thì quan trọng." },
         ],
       },
       {
-        title: "Phân loại danh từ",
+        title: "Danh từ số ít (Singular nouns)",
         explanation:
-          "Đếm được (a book → books) vs không đếm được (water, money, information); danh từ chung (city) vs danh từ riêng viết hoa (London); cụ thể (car) vs trừu tượng (love); danh từ tập hợp (family, team).",
+          "Chỉ MỘT người/vật. Thường đi với a/an: 'a' trước phụ âm, 'an' trước nguyên âm (a, e, i, o, u).",
         examples: [
-          { en: "I bought three books.", vi: "Tôi đã mua ba cuốn sách." },
-          { en: "I need some information.", vi: "Tôi cần một ít thông tin." },
+          { en: "a lion", vi: "một con sư tử" },
+          { en: "an orange", vi: "một quả cam" },
         ],
       },
       {
-        title: "Số ít & số nhiều",
+        title: "Danh từ số nhiều (Plural nouns)",
         explanation:
-          "Số nhiều thường thêm -s; thêm -es sau s, x, ch, sh, o (boxes, watches); phụ âm + y → -ies (city → cities); bất quy tắc: man→men, child→children, foot→feet, tooth→teeth.",
+          "Chỉ HAI người/vật trở lên. Quy tắc thêm đuôi: + s (thông thường); + es (sau s, x, ch, sh, o); f/fe → -ves.",
         examples: [
-          { en: "There are many cities in Vietnam.", vi: "Có nhiều thành phố ở Việt Nam." },
-          { en: "Two children are playing.", vi: "Hai đứa trẻ đang chơi." },
+          { en: "pen → pens", vi: "+ s: cây bút" },
+          { en: "bus → buses, tomato → tomatoes, dish → dishes", vi: "+ es" },
+          { en: "wife → wives, wolf → wolves", vi: "+ ves (f/fe → ves)" },
+        ],
+      },
+      {
+        title: "Trường hợp danh từ kết thúc bằng 'y'",
+        explanation:
+          "NGUYÊN ÂM + y → chỉ thêm -s (a, e, i, o, u trước y). PHỤ ÂM + y → đổi y thành -ies.",
+        examples: [
+          { en: "boy → boys, day → days", vi: "nguyên âm + y → + s" },
+          { en: "lorry → lorries, city → cities", vi: "phụ âm + y → -ies" },
+        ],
+      },
+      {
+        title: "Một số ngoại lệ về số nhiều",
+        explanation:
+          "Một vài danh từ f/fe CHỈ thêm -s (roof → roofs, dwarf → dwarfs). Một số có HAI hình thái (scarf → scarfs/scarves, hoof → hoofs/hooves).",
+        examples: [
+          { en: "roof → roofs, dwarf → dwarfs", vi: "chỉ thêm -s" },
+          { en: "scarf → scarfs / scarves", vi: "khăn quàng (hai dạng)" },
+          { en: "hoof → hoofs / hooves", vi: "móng guốc (hai dạng)" },
+        ],
+      },
+      {
+        title: "Danh từ luôn ở dạng số nhiều",
+        explanation:
+          "Những danh từ chỉ vật có hai phần (đồ vật đôi) luôn dùng ở dạng số nhiều, đi với động từ số nhiều.",
+        examples: [
+          { en: "jeans (quần bò), trousers (quần dài)", vi: "luôn số nhiều" },
+          { en: "glasses (kính), pliers (kìm), noodles (mì sợi)", vi: "luôn số nhiều" },
+        ],
+      },
+      {
+        title: "Danh từ số nhiều bất quy tắc (Irregular plural nouns)",
+        explanation:
+          "Một số danh từ KHÔNG theo quy tắc thêm -s: đổi nguyên âm hoặc giữ nguyên hình thức.",
+        examples: [
+          { en: "fish → fish", vi: "giữ nguyên: con cá" },
+          { en: "tooth → teeth", vi: "đổi: cái răng" },
+          { en: "man → men, child → children, foot → feet", vi: "đàn ông, trẻ em, bàn chân" },
+        ],
+      },
+      {
+        title: "Danh từ riêng & danh từ chung (Proper & Common nouns)",
+        explanation:
+          "Danh từ RIÊNG gọi tên riêng của người/nơi chốn/tháng — luôn VIẾT HOA. Danh từ CHUNG gọi tên chung của một loại — viết thường.",
+        examples: [
+          { en: "Jack, Paris, August", vi: "danh từ riêng (viết hoa)" },
+          { en: "grape, tiger, milk", vi: "danh từ chung (viết thường)" },
+        ],
+      },
+      {
+        title: "Danh từ đếm được & không đếm được (Countable & Uncountable nouns)",
+        explanation:
+          "ĐẾM ĐƯỢC: có 2 hình thái số ít/số nhiều, đi với a/an và số đếm (a dog, two books). KHÔNG ĐẾM ĐƯỢC: luôn ở dạng số ít, KHÔNG dùng a/an — thường là chất lỏng, đồ ăn, đồ uống, khái niệm trừu tượng.",
+        examples: [
+          { en: "an orange → three oranges", vi: "đếm được: có số ít & số nhiều" },
+          { en: "a baby, two cats, three books", vi: "đếm được, đi với số đếm" },
+          { en: "water, milk, gold, rice, meat", vi: "không đếm được (chất lỏng/đồ ăn)" },
+          { en: "happiness, money", vi: "không đếm được (trừu tượng)" },
+        ],
+      },
+      {
+        title: "Danh từ đếm được có số ít = số nhiều",
+        explanation:
+          "Một số danh từ đếm được có dạng số ít và số nhiều GIỐNG NHAU, chỉ phân biệt bằng có 'a/an' (số ít) hay không (số nhiều).",
+        examples: [
+          { en: "a sheep → sheep", vi: "một con cừu → nhiều con cừu" },
+          { en: "a fish → fish", vi: "một con cá → nhiều con cá" },
+        ],
+      },
+    ],
+    tables: [
+      {
+        caption: "Quy tắc tạo danh từ số nhiều",
+        headers: ["Quy tắc", "Áp dụng khi", "Ví dụ"],
+        rows: [
+          ["+ s", "Hầu hết danh từ", "pen → pens"],
+          ["+ es", "Kết thúc s, x, ch, sh, o", "bus → buses, dish → dishes, tomato → tomatoes"],
+          ["+ s", "Nguyên âm + y", "boy → boys, day → days"],
+          ["+ ies", "Phụ âm + y", "lorry → lorries, city → cities"],
+          ["+ ves", "Kết thúc f / fe", "wife → wives, wolf → wolves"],
+          ["+ s (ngoại lệ)", "Một số f/fe", "roof → roofs, dwarf → dwarfs"],
+          ["Bất quy tắc", "Không theo quy tắc", "tooth → teeth, fish → fish, child → children"],
         ],
       },
     ],
     commonMistakes: [
       "Thêm 's' cho danh từ không đếm được: 'informations', 'advices' ❌ → 'information', 'advice' ✅.",
       "Dùng a/an với danh từ không đếm được: 'a money' ❌ → 'some money' ✅.",
-      "Quên đổi danh từ bất quy tắc: 'childs', 'foots' ❌ → 'children', 'feet' ✅.",
+      "Quên đổi danh từ bất quy tắc: 'childs', 'foots', 'tooths' ❌ → 'children', 'feet', 'teeth' ✅.",
+      "Không viết hoa danh từ riêng: 'paris', 'august' ❌ → 'Paris', 'August' ✅.",
+      "Đổi nhầm 'y' sau nguyên âm: 'boies', 'daies' ❌ → 'boys', 'days' ✅ (chỉ phụ âm + y mới thành -ies).",
+      "Dùng động từ số ít với danh từ luôn số nhiều: 'my jeans is...' ❌ → 'my jeans are...' ✅.",
     ],
     exercises: [
       {
@@ -445,6 +531,44 @@ export const GRAMMAR_TOPICS_A: GrammarTopic[] = [
         options: ["book", "car", "water", "apple"],
         answer: "water",
         explanation: "water (nước) là danh từ không đếm được.",
+      },
+      {
+        id: "noun-4",
+        type: "mc",
+        prompt: "Dạng số nhiều của 'wolf' là ___.",
+        options: ["wolfs", "wolfes", "wolves", "wol"],
+        answer: "wolves",
+        explanation: "Danh từ kết thúc bằng f/fe → bỏ f/fe thêm -ves: wolf → wolves.",
+      },
+      {
+        id: "noun-5",
+        type: "fill",
+        prompt: "Viết dạng số nhiều của 'lorry': ___",
+        answer: "lorries",
+        explanation: "Phụ âm + y → đổi y thành -ies: lorry → lorries.",
+      },
+      {
+        id: "noun-6",
+        type: "mc",
+        prompt: "Danh từ nào là danh từ RIÊNG (proper noun)?",
+        options: ["tiger", "milk", "Paris", "grape"],
+        answer: "Paris",
+        explanation: "Paris là tên riêng của một địa điểm → danh từ riêng, luôn viết hoa.",
+      },
+      {
+        id: "noun-7",
+        type: "fill",
+        prompt: "Viết dạng số nhiều của 'boy': ___",
+        answer: "boys",
+        explanation: "Nguyên âm (o) + y → chỉ thêm -s: boy → boys (không thành 'boies').",
+      },
+      {
+        id: "noun-8",
+        type: "mc",
+        prompt: "My new ___ very nice. (jeans)",
+        options: ["jeans is", "jeans are", "jean is", "jean are"],
+        answer: "jeans are",
+        explanation: "jeans luôn ở dạng số nhiều → đi với động từ số nhiều 'are'.",
       },
     ],
   },
