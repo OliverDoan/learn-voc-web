@@ -340,8 +340,44 @@ export const GRAMMAR_TOPICS_A: GrammarTopic[] = [
     nameVi: "Tính từ",
     icon: "🎨",
     summary:
-      "Tính từ mô tả/bổ nghĩa cho danh từ. Đứng TRƯỚC danh từ hoặc SAU động từ nối (be, seem, look...). Tính từ không bao giờ thêm 's' số nhiều.",
+      "Tính từ là từ bổ trợ cho danh từ/đại từ, miêu tả đặc tính của sự vật, hiện tượng. Phân loại: tính từ miêu tả, tính từ chỉ số, tính từ riêng. Đứng TRƯỚC danh từ hoặc SAU động từ nối; không thêm 's' số nhiều.",
     rules: [
+      {
+        title: "Định nghĩa",
+        explanation:
+          "Tính từ là từ BỔ TRỢ cho danh từ hoặc đại từ, giúp miêu tả các ĐẶC TÍNH của sự vật, hiện tượng mà danh từ/đại từ đó đề cập.",
+        examples: [
+          { en: "a beautiful house", vi: "một ngôi nhà đẹp (beautiful bổ trợ cho house)" },
+          { en: "She is happy.", vi: "Cô ấy vui. (happy miêu tả She)" },
+        ],
+      },
+      {
+        title: "Tính từ miêu tả (Descriptive adjectives)",
+        explanation:
+          "Miêu tả đặc tính của sự vật theo: TÍNH CHẤT (expensive, cheap), MÀU SẮC (gray, red), KÍCH CỠ (large, small), TRẠNG THÁI (hungry, tired), HÌNH DẠNG (round, square).",
+        examples: [
+          { en: "an expensive gray car", vi: "một chiếc xe màu xám đắt tiền" },
+          { en: "a large round table", vi: "một cái bàn tròn to" },
+        ],
+      },
+      {
+        title: "Tính từ chỉ số (Numeral adjectives)",
+        explanation:
+          "Cho biết số lượng/thứ tự: SỐ ĐẾM (cardinal: one, ten, twenty) chỉ số lượng; SỐ THỨ TỰ (ordinal: first, second, third) chỉ thứ tự.",
+        examples: [
+          { en: "ten students", vi: "mười học sinh (số đếm)" },
+          { en: "the second floor", vi: "tầng thứ hai (số thứ tự)" },
+        ],
+      },
+      {
+        title: "Tính từ riêng (Proper adjectives)",
+        explanation:
+          "Tạo từ DANH TỪ RIÊNG, luôn VIẾT HOA: tên quốc gia/dân tộc (Japanese, Vietnamese), tôn giáo (Buddhist, Catholic).",
+        examples: [
+          { en: "a Japanese singer", vi: "một ca sĩ người Nhật (tên quốc gia)" },
+          { en: "a Buddhist nation", vi: "một quốc gia theo đạo Phật (tôn giáo)" },
+        ],
+      },
       {
         title: "Vị trí của tính từ",
         explanation:
@@ -361,9 +397,9 @@ export const GRAMMAR_TOPICS_A: GrammarTopic[] = [
         ],
       },
       {
-        title: "Phân loại tính từ",
+        title: "Tính từ hạn định (đứng trước danh từ)",
         explanation:
-          "Tính từ gồm nhiều loại: (1) Mô tả/tính chất: beautiful, tall, happy; (2) Sở hữu: my, your, his, her, our, their; (3) Chỉ định: this, that, these, those; (4) Số lượng: some, many, few, three; (5) Nghi vấn: which, what, whose; (6) Phân phối: each, every, either, neither.",
+          "Ngoài 3 loại trên, còn các tính từ hạn định: Sở hữu (my, your, his...); Chỉ định (this, that, these, those); Số lượng (some, many, few); Nghi vấn (which, what, whose); Phân phối (each, every, either, neither).",
         examples: [
           { en: "These red apples are mine.", vi: "Những quả táo đỏ này là của tôi." },
           { en: "Each student has some books.", vi: "Mỗi học sinh có một vài cuốn sách." },
@@ -397,11 +433,25 @@ export const GRAMMAR_TOPICS_A: GrammarTopic[] = [
         ],
       },
     ],
+    tables: [
+      {
+        caption: "Đặc tính của tính từ miêu tả (Descriptive adjectives)",
+        headers: ["Đặc tính", "Ví dụ"],
+        rows: [
+          ["Tính chất", "expensive, cheap, useful, beautiful"],
+          ["Màu sắc", "gray, red, blue, white"],
+          ["Kích cỡ", "large, small, tall, short"],
+          ["Trạng thái", "hungry, tired, happy, broken"],
+          ["Hình dạng", "round, square, flat, triangular"],
+        ],
+      },
+    ],
     commonMistakes: [
       "Thêm 's' vào tính từ số nhiều: 'two beautifuls girls' ❌ → 'two beautiful girls' ✅.",
       "Nhầm -ed/-ing: nói 'I am boring' khi ý là 'tôi thấy chán' ❌ → 'I am bored' ✅.",
       "Đặt tính từ sau danh từ kiểu tiếng Việt: 'a car red' ❌ → 'a red car' ✅.",
       "Dùng tính từ thay trạng từ sau động từ: 'He runs quick' ❌ → 'He runs quickly' ✅.",
+      "Không viết hoa tính từ riêng: 'a japanese singer' ❌ → 'a Japanese singer' ✅.",
     ],
     exercises: [
       {
@@ -464,6 +514,21 @@ export const GRAMMAR_TOPICS_A: GrammarTopic[] = [
         options: ["Chỉ định", "Sở hữu", "Số lượng", "Nghi vấn"],
         answer: "Chỉ định",
         explanation: "this/that/these/those là tính từ CHỈ ĐỊNH (demonstrative), xác định danh từ ở gần/xa.",
+      },
+      {
+        id: "adj-8",
+        type: "mc",
+        prompt: "Tính từ chỉ MÀU SẮC trong nhóm tính từ miêu tả là ___.",
+        options: ["round", "hungry", "gray", "expensive"],
+        answer: "gray",
+        explanation: "gray (xám) chỉ màu sắc; round = hình dạng, hungry = trạng thái, expensive = tính chất.",
+      },
+      {
+        id: "adj-9",
+        type: "fill",
+        prompt: "Viết đúng tính từ riêng chỉ quốc tịch (Nhật Bản): a ___ singer",
+        answer: "Japanese",
+        explanation: "Tính từ riêng chỉ quốc tịch luôn viết hoa: Japanese.",
       },
     ],
   },
