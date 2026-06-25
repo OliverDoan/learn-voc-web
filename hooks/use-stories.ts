@@ -2,14 +2,14 @@
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { apiDelete, apiFetch, apiPatch, apiPost } from "@/lib/api-client";
-import type { Story, StoryWithCards } from "@/lib/types";
+import type { Story, StoryListItem, StoryWithCards } from "@/lib/types";
 import type { StoryCreateInput, StoryUpdateInput } from "@/lib/schemas";
 
 export function useStories(deckId?: string) {
   return useQuery({
     queryKey: ["stories", { deckId }],
     queryFn: () =>
-      apiFetch<Array<Story & { _count: { storyCards: number } }>>(
+      apiFetch<StoryListItem[]>(
         `/api/stories${deckId ? `?deckId=${deckId}` : ""}`,
       ),
   });

@@ -10,7 +10,10 @@ export async function GET(req: NextRequest) {
     const stories = await prisma.story.findMany({
       where: deckId ? { deckId } : {},
       orderBy: { createdAt: "desc" },
-      include: { _count: { select: { storyCards: true } } },
+      include: {
+        _count: { select: { storyCards: true } },
+        deck: { select: { id: true, name: true } },
+      },
     });
     return ok(stories);
   } catch (error) {

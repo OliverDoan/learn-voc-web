@@ -73,6 +73,12 @@ export interface StoryWithCards extends Story {
   }>;
 }
 
+// Story kèm tên deck + số từ chêm — dùng cho danh sách và trang đọc tất cả
+export interface StoryListItem extends Story {
+  _count: { storyCards: number };
+  deck: { id: string; name: string };
+}
+
 export interface DailyStat {
   id: string;
   date: string;

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   Blocks,
+  BookMarked,
   BookOpen,
   BookText,
   Focus,
@@ -31,6 +32,7 @@ const items: NavItem[] = [
   { href: "/", label: "Trang chủ", icon: Home, mobile: true },
   { href: "/search", label: "Tra từ", icon: Search, mobile: false },
   { href: "/decks", label: "Decks", icon: Layers, mobile: true },
+  { href: "/stories", label: "Truyện chêm", icon: BookMarked, mobile: false },
   { href: "/words", label: "Tất cả từ", icon: Library, mobile: false },
   { href: "/favorites", label: "Yêu thích", icon: Star, mobile: false },
   { href: "/ielts", label: "IELTS", icon: GraduationCap, mobile: true },
