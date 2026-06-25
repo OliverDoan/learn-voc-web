@@ -11,7 +11,7 @@ import { ImageLightbox } from "@/components/ui/image-lightbox";
 import { StoryRenderer } from "@/components/story/story-renderer";
 import { useDeleteStory, useStory } from "@/hooks/use-stories";
 import { countWordTokens, parseStory } from "@/lib/story-parser";
-import { speakAsync, stopSpeaking } from "@/lib/tts";
+import { isSpeakable, speakAsync, stopSpeaking } from "@/lib/tts";
 
 interface PageProps {
   params: Promise<{ storyId: string }>;
@@ -53,7 +53,7 @@ export default function StoryViewPage({ params }: PageProps) {
       if (readCancelRef.current) break;
       if (tok.type === "text") {
         const text = tok.text.trim();
-        if (text) await speakAsync(text, "vi-VN", 0.95);
+        if (isSpeakable(text)) await speakAsync(text, "vi-VN", 0.95);
       } else {
         await speakAsync(tok.word, "en-US", 0.95);
       }

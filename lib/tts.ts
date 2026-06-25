@@ -37,3 +37,11 @@ export function stopSpeaking(): void {
 export function isTtsAvailable(): boolean {
   return typeof window !== "undefined" && "speechSynthesis" in window;
 }
+
+/**
+ * Đoạn văn có nội dung đáng đọc không? Trả false nếu chỉ gồm dấu câu/khoảng trắng
+ * (vd ", " hoặc ". ") — để TTS không đọc thành "phẩy", "chấm".
+ */
+export function isSpeakable(text: string): boolean {
+  return /[\p{L}\p{N}]/u.test(text);
+}
