@@ -179,6 +179,18 @@ async function main() {
       });
     }
 
+    // Đồng bộ thứ tự thẻ trong deck theo thứ tự xuất hiện trong truyện:
+    // thẻ có trong truyện xếp trước (theo trật tự chêm), thẻ còn lại xếp sau.
+    const orderedCardIds = [
+      ...links.map((l) => l.cardId),
+      ...cards.map((c) => c.id).filter((id) => !links.some((l) => l.cardId === id)),
+    ];
+    await prisma.$transaction(
+      orderedCardIds.map((id, index) =>
+        prisma.card.update({ where: { id }, data: { order: index } }),
+      ),
+    );
+
     console.log(
       `✅ "${deckName}" → "${title}": link ${links.length}/${cards.length} thẻ` +
         (existing ? " (cập nhật)" : " (tạo mới)") +
