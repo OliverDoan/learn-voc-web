@@ -9,7 +9,9 @@ import { Button } from "@/components/ui/button";
 import { useConfirm } from "@/components/ui/confirm-dialog";
 import { ImageLightbox } from "@/components/ui/image-lightbox";
 import { StoryRenderer } from "@/components/story/story-renderer";
+import { ReadingSpeedControl } from "@/components/story/reading-speed-control";
 import { useDeleteStory, useStory } from "@/hooks/use-stories";
+import { useReadingRate } from "@/hooks/use-reading-rate";
 import { countWordTokens, parseStory } from "@/lib/story-parser";
 import { isSpeakable, speakAsync, stopSpeaking } from "@/lib/tts";
 
@@ -24,6 +26,10 @@ export default function StoryViewPage({ params }: PageProps) {
   const [hideWords, setHideWords] = useState(false);
   const [reading, setReading] = useState(false);
   const readCancelRef = useRef(false);
+  const { rate, setRate } = useReadingRate();
+  // Ref để vòng đọc đang chạy luôn thấy tốc độ mới nhất khi người dùng đổi giữa chừng
+  const rateRef = useRef(rate);
+  rateRef.current = rate;
 
   const { data: story, isLoading } = useStory(storyId);
   const deleteStory = useDeleteStory();
@@ -53,9 +59,9 @@ export default function StoryViewPage({ params }: PageProps) {
       if (readCancelRef.current) break;
       if (tok.type === "text") {
         const text = tok.text.trim();
-        if (isSpeakable(text)) await speakAsync(text, "vi-VN", 0.95);
+        if (isSpeakable(text)) await speakAsync(text, "vi-VN", rateRef.current);
       } else {
-        await speakAsync(tok.word, "en-US", 0.95);
+        await speakAsync(tok.word, "en-US", rateRef.current);
       }
     }
     if (!readCancelRef.current) setReading(false);
@@ -159,6 +165,7 @@ export default function StoryViewPage({ params }: PageProps) {
             Quiz điền từ
           </Button>
         </Link>
+        <ReadingSpeedControl rate={rate} onChange={setRate} />
       </div>
 
       <article className="rounded-2xl border bg-card p-8 shadow-[0_24px_64px_rgba(0,13,139,.08)] md:px-12">

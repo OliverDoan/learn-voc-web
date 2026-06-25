@@ -15,7 +15,9 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { StoryRenderer } from "@/components/story/story-renderer";
+import { ReadingSpeedControl } from "@/components/story/reading-speed-control";
 import { useStories } from "@/hooks/use-stories";
+import { useReadingRate } from "@/hooks/use-reading-rate";
 import { countWordTokens, parseStory } from "@/lib/story-parser";
 import { isSpeakable, speakAsync, stopSpeaking } from "@/lib/tts";
 import { cn } from "@/lib/utils";
@@ -35,6 +37,10 @@ export default function AllStoriesPage() {
   const [readingIndex, setReadingIndex] = useState<number | null>(null);
   // "Thẻ phiên đọc": mỗi lần bắt đầu đọc tăng 1; vòng lặp cũ tự thoát khi không còn khớp
   const genRef = useRef(0);
+  const { rate, setRate } = useReadingRate();
+  // Ref để vòng đọc đang chạy luôn thấy tốc độ mới nhất khi người dùng đổi giữa chừng
+  const rateRef = useRef(rate);
+  rateRef.current = rate;
 
   // Dừng đọc khi rời trang
   useEffect(
@@ -80,16 +86,16 @@ export default function AllStoriesPage() {
         ?.scrollIntoView({ behavior: "smooth", block: "start" });
 
       // Đọc tên truyện trước cho dễ theo dõi
-      await speakAsync(sorted[i].title, "vi-VN", 0.95);
+      await speakAsync(sorted[i].title, "vi-VN", rateRef.current);
       if (!alive()) return;
 
       for (const tok of parseStory(sorted[i].content)) {
         if (!alive()) return;
         if (tok.type === "text") {
           const text = tok.text.trim();
-          if (isSpeakable(text)) await speakAsync(text, "vi-VN", 0.95);
+          if (isSpeakable(text)) await speakAsync(text, "vi-VN", rateRef.current);
         } else {
-          await speakAsync(tok.word, "en-US", 0.95);
+          await speakAsync(tok.word, "en-US", rateRef.current);
         }
       }
     }
@@ -155,6 +161,7 @@ export default function AllStoriesPage() {
           <Target className="h-4 w-4" />
           {hideWords ? "Hiện từ" : "Ẩn từ chêm"}
         </Button>
+        <ReadingSpeedControl rate={rate} onChange={setRate} />
       </div>
 
       {isLoading ? (
