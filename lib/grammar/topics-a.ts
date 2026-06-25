@@ -579,41 +579,103 @@ export const GRAMMAR_TOPICS_A: GrammarTopic[] = [
     nameVi: "Đại từ",
     icon: "🙋",
     summary:
-      "Đại từ thay thế cho danh từ để tránh lặp. Gồm: chủ ngữ, tân ngữ, sở hữu, phản thân, nghi vấn, chỉ định và bất định.",
+      "Đại từ là từ được dùng để thay thế cho danh từ trong câu (tránh lặp). Gồm: chủ ngữ, tân ngữ, tính từ sở hữu, đại từ sở hữu, phản thân, nghi vấn, chỉ định và bất định.",
     rules: [
       {
-        title: "Đại từ chủ ngữ & tân ngữ",
+        title: "Định nghĩa",
         explanation:
-          "Chủ ngữ: I, you, he, she, it, we, they (đứng TRƯỚC động từ). Tân ngữ: me, you, him, her, it, us, them (đứng SAU động từ hoặc giới từ).",
+          "Đại từ là từ được dùng để THAY THẾ cho danh từ trong câu, giúp tránh lặp lại danh từ đã nhắc tới.",
         examples: [
+          { en: "Tom is tall. He is a student.", vi: "Tom cao. Cậu ấy là học sinh. (He thay Tom)" },
+          { en: "I bought a book. It is interesting.", vi: "Tôi mua một quyển sách. Nó thú vị." },
+        ],
+      },
+      {
+        title: "Đại từ chủ ngữ (Subject pronouns)",
+        explanation:
+          "Làm CHỦ NGỮ, đứng TRƯỚC động từ. Ngôi 1: I (số ít), we (số nhiều). Ngôi 2: you. Ngôi 3: he, she, it (số ít), they (số nhiều).",
+        examples: [
+          { en: "I, we, you, he, she, it, they", vi: "đại từ chủ ngữ" },
+          { en: "They are my friends.", vi: "Họ là bạn của tôi." },
+        ],
+      },
+      {
+        title: "Đại từ tân ngữ (Object pronouns)",
+        explanation:
+          "Làm TÂN NGỮ, đứng SAU động từ hoặc giới từ. Ngôi 1: me, us. Ngôi 2: you. Ngôi 3: him, her, it, them.",
+        examples: [
+          { en: "me, us, you, him, her, it, them", vi: "đại từ tân ngữ" },
           { en: "They invited us to the party.", vi: "Họ mời chúng tôi đến bữa tiệc." },
-          { en: "He called me yesterday.", vi: "Anh ấy gọi tôi hôm qua." },
         ],
       },
       {
-        title: "Tính từ sở hữu & đại từ sở hữu",
+        title: "Tính từ sở hữu (Possessive adjectives)",
         explanation:
-          "Tính từ sở hữu đi KÈM danh từ: my, your, his, her, its, our, their (my book). Đại từ sở hữu ĐỨNG MỘT MÌNH thay cho danh từ: mine, yours, his, hers, ours, theirs (It's mine).",
+          "Đi KÈM danh từ phía sau (my + book). Gồm: my, your, his, her, its, our, their.",
         examples: [
-          { en: "This is my car. That one is yours.", vi: "Đây là xe của tôi. Chiếc kia là của bạn." },
+          { en: "my, your, his, her, its, our, their", vi: "tính từ sở hữu + danh từ" },
+          { en: "This is my car.", vi: "Đây là xe của tôi." },
         ],
       },
       {
-        title: "Đại từ phản thân (reflexive)",
+        title: "Đại từ sở hữu (Possessive pronouns)",
+        explanation:
+          "ĐỨNG MỘT MÌNH, thay cho 'tính từ sở hữu + danh từ'. Gồm: mine, yours, his, hers, its, ours, theirs.",
+        examples: [
+          { en: "mine, yours, his, hers, its, ours, theirs", vi: "đại từ sở hữu (đứng một mình)" },
+          { en: "That car is mine.", vi: "Chiếc xe đó là của tôi." },
+        ],
+      },
+      {
+        title: "Đại từ phản thân (Reflexive pronouns)",
         explanation:
           "myself, yourself, himself, herself, itself, ourselves, yourselves, themselves — dùng khi chủ ngữ và tân ngữ là CÙNG một người/vật.",
         examples: [
           { en: "She taught herself English.", vi: "Cô ấy tự học tiếng Anh." },
-          { en: "Be careful! Don't hurt yourself.", vi: "Cẩn thận! Đừng làm mình bị thương." },
+          { en: "Don't hurt yourself.", vi: "Đừng làm mình bị thương." },
         ],
       },
       {
-        title: "Nghi vấn, chỉ định & bất định",
+        title: "Đại từ nghi vấn (Interrogative pronouns)",
         explanation:
-          "Nghi vấn: who, whom, whose, what, which. Chỉ định: this, that, these, those. Bất định: someone/anyone/everyone/no one, something/anything/everything/nothing.",
+          "Dùng để ĐẶT CÂU HỎI: what (cái gì), which (cái nào), who (ai - chủ ngữ), whom (ai - tân ngữ), whose (của ai).",
         examples: [
+          { en: "what, which, who, whom, whose", vi: "đại từ nghi vấn" },
           { en: "Who is at the door?", vi: "Ai ở cửa vậy?" },
-          { en: "Someone is waiting for you.", vi: "Có ai đó đang đợi bạn." },
+        ],
+      },
+      {
+        title: "Đại từ chỉ định (Demonstrative pronouns)",
+        explanation:
+          "Chỉ vào người/vật: this (này - số ít, ở gần), that (kia - số ít, ở xa), these (này - số nhiều), those (kia - số nhiều).",
+        examples: [
+          { en: "this, that, these, those", vi: "đại từ chỉ định" },
+          { en: "This is my book; those are yours.", vi: "Đây là sách của tôi; những cái kia là của bạn." },
+        ],
+      },
+      {
+        title: "Đại từ bất định (Indefinite pronouns)",
+        explanation:
+          "Chỉ người/vật/nơi chốn KHÔNG xác định: somebody/something/somewhere, anybody/anything/anywhere, nobody/nothing/nowhere, everybody/everything/everywhere.",
+        examples: [
+          { en: "somebody, anything, nowhere, everyone", vi: "đại từ bất định" },
+          { en: "Somebody is waiting for you.", vi: "Có ai đó đang đợi bạn." },
+        ],
+      },
+    ],
+    tables: [
+      {
+        caption: "Bảng tổng hợp đại từ nhân xưng",
+        headers: ["Chủ ngữ", "Tân ngữ", "Tính từ sở hữu", "Đại từ sở hữu", "Phản thân"],
+        rows: [
+          ["I", "me", "my", "mine", "myself"],
+          ["you", "you", "your", "yours", "yourself"],
+          ["he", "him", "his", "his", "himself"],
+          ["she", "her", "her", "hers", "herself"],
+          ["it", "it", "its", "its", "itself"],
+          ["we", "us", "our", "ours", "ourselves"],
+          ["you", "you", "your", "yours", "yourselves"],
+          ["they", "them", "their", "theirs", "themselves"],
         ],
       },
     ],
@@ -621,6 +683,7 @@ export const GRAMMAR_TOPICS_A: GrammarTopic[] = [
       "Dùng đại từ chủ ngữ sau giới từ: 'between you and I' ❌ → 'between you and me' ✅.",
       "Nhầm tính từ sở hữu với đại từ sở hữu: 'This book is my' ❌ → 'This book is mine' ✅.",
       "its (sở hữu) vs it's (= it is): 'The cat licks it's paw' ❌ → 'its paw' ✅.",
+      "Nhầm đại từ chỉ định số ít/số nhiều: 'this books' ❌ → 'these books' ✅.",
     ],
     exercises: [
       {
@@ -646,6 +709,30 @@ export const GRAMMAR_TOPICS_A: GrammarTopic[] = [
         options: ["him", "his", "himself", "he"],
         answer: "himself",
         explanation: "Chủ ngữ và tân ngữ cùng là 'he' → đại từ phản thân 'himself'.",
+      },
+      {
+        id: "pro-4",
+        type: "mc",
+        prompt: "___ books on the shelf are very old. (những quyển ở xa)",
+        options: ["This", "That", "These", "Those"],
+        answer: "Those",
+        explanation: "Số nhiều (books) + ở xa → đại từ/từ chỉ định 'those'.",
+      },
+      {
+        id: "pro-5",
+        type: "mc",
+        prompt: "___ is this bag? (hỏi của ai)",
+        options: ["Who", "Whom", "Whose", "Which"],
+        answer: "Whose",
+        explanation: "Hỏi quyền sở hữu 'của ai' → đại từ nghi vấn 'whose'.",
+      },
+      {
+        id: "pro-6",
+        type: "fill",
+        prompt: "Điền đại từ bất định: There is ___ in the room — it's completely empty. (không có ai)",
+        answer: "nobody",
+        explanation: "Phòng trống rỗng → 'nobody' (không có ai). 'no one' cũng đúng.",
+        accept: ["no one", "no-one"],
       },
     ],
   },
