@@ -170,37 +170,93 @@ export const GRAMMAR_TOPICS_A: GrammarTopic[] = [
       "a/an dùng cho danh từ đếm được số ít chưa xác định; the dùng cho danh từ đã xác định, duy nhất.",
     rules: [
       {
-        title: "a vs an",
+        title: "a vs an — xét ÂM, không xét chữ cái",
         explanation:
-          "Dùng 'a' trước âm phụ âm, 'an' trước âm nguyên âm (xét ÂM, không phải chữ cái): a university (âm /j/), an hour (âm /aʊ/).",
+          "Dùng 'a' trước âm phụ âm, 'an' trước âm nguyên âm: a university (âm /j/), an hour ('h' câm → âm /aʊ/), an MBA (âm /e/).",
         examples: [
           { en: "She has a dog.", vi: "Cô ấy có một con chó." },
           { en: "I waited for an hour.", vi: "Tôi đã đợi một tiếng." },
         ],
       },
       {
-        title: "the — danh từ xác định",
+        title: "Dùng a/an (mạo từ bất định) khi nào",
         explanation:
-          "Dùng 'the' khi cả người nói và người nghe biết rõ vật được nhắc; vật duy nhất (the sun); nhắc lại lần 2.",
+          "Danh từ đếm được số ít, nhắc đến lần đầu / chưa xác định; trước (tính từ +) danh từ; chỉ nghề nghiệp, quốc tịch; trong câu cảm thán What a/an…!; và một số cụm chỉ số lượng (a dozen, a lot of).",
         examples: [
-          { en: "Close the door, please.", vi: "Làm ơn đóng cửa lại." },
-          { en: "The Earth goes around the Sun.", vi: "Trái Đất quay quanh Mặt Trời." },
+          { en: "I've just bought a new car.", vi: "Tôi vừa mua một chiếc xe mới (nhắc lần đầu)." },
+          { en: "She is a nice girl.", vi: "Cô ấy là một cô gái dễ thương (a + tính từ + danh từ)." },
+          { en: "He is a doctor.", vi: "Anh ấy là bác sĩ (nghề nghiệp)." },
+          { en: "What a nice dress!", vi: "Cái váy đẹp quá! (câu cảm thán)." },
+          { en: "I bought a dozen eggs.", vi: "Tôi mua một tá trứng (cụm chỉ số lượng)." },
         ],
       },
       {
-        title: "Không dùng mạo từ (zero article)",
+        title: "Dùng the (mạo từ xác định) khi nào",
         explanation:
-          "Không dùng mạo từ với danh từ số nhiều/không đếm được mang nghĩa chung, tên riêng, bữa ăn, môn học.",
+          "Khi vật đã xác định: nhắc lại lần 2; vật duy nhất; có mệnh đề quan hệ/giới từ xác định; so sánh bậc nhất, số thứ tự, 'only'; nhạc cụ (play the…); phương tiện truyền thông (the radio); cả loài (the + danh từ số ít); tên gọi địa lý (đại dương, dãy núi); họ gia đình (the + họ + s).",
         examples: [
-          { en: "I like music.", vi: "Tôi thích âm nhạc." },
-          { en: "We have lunch at noon.", vi: "Chúng tôi ăn trưa lúc giữa trưa." },
+          { en: "It's a cat. The cat is fat.", vi: "Đó là một con mèo. Con mèo đó béo (nhắc lại)." },
+          { en: "The moon is bright tonight.", vi: "Đêm nay trăng sáng (vật duy nhất)." },
+          { en: "That is the girl whom I met yesterday.", vi: "Đó là cô gái tôi gặp hôm qua (mệnh đề quan hệ)." },
+          { en: "She is the tallest in class.", vi: "Cô ấy cao nhất lớp (so sánh bậc nhất)." },
+          { en: "He can play the violin.", vi: "Anh ấy biết chơi vĩ cầm (nhạc cụ)." },
+          { en: "The tiger is a wild animal.", vi: "Hổ là động vật hoang dã (cả loài)." },
+          { en: "We sailed across the Atlantic.", vi: "Chúng tôi vượt Đại Tây Dương (tên địa lý)." },
+          { en: "The Smiths are on holiday.", vi: "Gia đình nhà Smith đang đi nghỉ (họ gia đình)." },
+        ],
+      },
+      {
+        title: "the + tính từ = một nhóm người",
+        explanation:
+          "'the' + tính từ chỉ cả một tầng lớp/nhóm người (mang nghĩa số nhiều): the rich (người giàu), the poor (người nghèo), the old (người già).",
+        examples: [
+          { en: "We should help the poor.", vi: "Chúng ta nên giúp đỡ người nghèo." },
+          { en: "The rich often donate clothes or money.", vi: "Người giàu thường quyên góp quần áo hoặc tiền." },
+        ],
+      },
+      {
+        title: "Không dùng mạo từ (zero article Ø)",
+        explanation:
+          "Không dùng mạo từ với: danh từ chung chung/trừu tượng, tên riêng (người, tháng), môn thể thao, môn học, bữa ăn, tên bệnh, và 'by + phương tiện'.",
+        examples: [
+          { en: "Football is life.", vi: "Bóng đá là cuộc sống (nói chung)." },
+          { en: "Jack is my close friend.", vi: "Jack là bạn thân của tôi (tên riêng)." },
+          { en: "He can play badminton.", vi: "Anh ấy biết chơi cầu lông (môn thể thao)." },
+          { en: "I study English and Physics.", vi: "Tôi học tiếng Anh và Vật lý (môn học)." },
+          { en: "It's time for dinner.", vi: "Đến giờ ăn tối rồi (bữa ăn)." },
+          { en: "He died of cancer.", vi: "Ông ấy mất vì ung thư (tên bệnh)." },
+          { en: "I go to work by bus.", vi: "Tôi đi làm bằng xe buýt (by + phương tiện)." },
+        ],
+      },
+      {
+        title: "Nơi chốn: thêm 'the' đổi nghĩa",
+        explanation:
+          "Với một số nơi chốn, KHÔNG có 'the' = nghĩa chức năng chính (mục đích đến đó); CÓ 'the' = chỉ toà nhà/địa điểm cụ thể vì việc khác. Xem bảng bên dưới.",
+        examples: [
+          { en: "She goes to school every day.", vi: "Cô ấy đi học mỗi ngày (để học)." },
+          { en: "Her mom goes to the school to meet the teacher.", vi: "Mẹ cô ấy đến trường để gặp giáo viên (việc khác)." },
+        ],
+      },
+    ],
+    tables: [
+      {
+        caption: "Nơi chốn: không 'the' (chức năng) vs có 'the' (địa điểm cụ thể)",
+        headers: ["Không 'the' — mục đích chính", "Có 'the' — vì việc khác"],
+        rows: [
+          ["go to school — đi học", "go to the school — đến trường (vì việc khác)"],
+          ["go to church — đi lễ nhà thờ", "go to the church — đến nhà thờ (vì việc khác)"],
+          ["go to bed — đi ngủ", "go to the bed — đi đến chỗ cái giường"],
+          ["go to prison — đi tù", "go to the prison — đến nhà tù (thăm/làm việc)"],
         ],
       },
     ],
     commonMistakes: [
       "Dùng 'a' trước âm nguyên âm: 'a apple' ❌ → 'an apple' ✅.",
-      "Dùng 'the' với danh từ chung chung số nhiều: 'I love the dogs' (ý chung) ❌ → 'I love dogs' ✅.",
       "Quên 'an' trước 'hour' vì 'h' câm: 'a hour' ❌ → 'an hour' ✅.",
+      "Dùng 'the' với danh từ chung chung số nhiều: 'I love the dogs' (ý chung) ❌ → 'I love dogs' ✅.",
+      "Thêm mạo từ trước môn học/môn thể thao: 'play the football' ❌ → 'play football' ✅.",
+      "Quên 'the' trước nhạc cụ: 'play violin' ❌ → 'play the violin' ✅.",
+      "'go to the school' với nghĩa 'đi học' ❌ → 'go to school' ✅ (có 'the' = đến trường vì việc khác).",
     ],
     exercises: [
       {
@@ -242,6 +298,38 @@ export const GRAMMAR_TOPICS_A: GrammarTopic[] = [
         options: ["a", "an", "the", "(không có)"],
         answer: "an",
         explanation: "'h' trong hour câm, bắt đầu bằng âm nguyên âm → an.",
+      },
+      {
+        id: "ar-6",
+        type: "mc",
+        prompt: "She can play ___ violin beautifully.",
+        options: ["a", "an", "the", "(không có)"],
+        answer: "the",
+        explanation: "Trước nhạc cụ (play the + nhạc cụ) dùng the.",
+      },
+      {
+        id: "ar-7",
+        type: "mc",
+        prompt: "The government should help ___ poor.",
+        options: ["a", "an", "the", "(không có)"],
+        answer: "the",
+        explanation: "the + tính từ = nhóm người (người nghèo).",
+      },
+      {
+        id: "ar-8",
+        type: "mc",
+        prompt: "My favourite subjects are ___ English and Physics.",
+        options: ["a", "the", "(không có)", "an"],
+        answer: "(không có)",
+        explanation: "Tên môn học → không dùng mạo từ.",
+      },
+      {
+        id: "ar-9",
+        type: "mc",
+        prompt: "Every child must go to ___ school. (đi học)",
+        options: ["a", "the", "(không có)", "an"],
+        answer: "(không có)",
+        explanation: "'go to school' (đi học) — không 'the'; có 'the' nghĩa đến trường vì việc khác.",
       },
     ],
   },
