@@ -18,11 +18,6 @@ export function DeckCard({ deck }: DeckCardProps) {
         href={`/decks/${deck.id}`}
         className="group block overflow-hidden rounded-xl border bg-card transition-shadow hover:shadow-lg"
       >
-        <div
-          className="h-2 w-full"
-          style={{ backgroundColor: deck.color }}
-          aria-hidden="true"
-        />
         <div className="p-5">
           <div className="flex items-start gap-3">
             <div
