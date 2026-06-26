@@ -38,7 +38,8 @@ export function CardsTest({ cards }: CardsTestProps) {
   const wordOk = (c: Card) => norm(answers[c.id] ?? "") === norm(c.word);
   const posOk = (c: Card) => {
     const set = parsePos(c.partOfSpeech);
-    return set.size === 0 ? true : set.has(pos[c.id] ?? "noun");
+    // Chưa có dữ liệu từ loại → không tính sai; ngược lại phải chọn đúng (chưa chọn = sai).
+    return set.size === 0 ? true : set.has(pos[c.id] ?? "");
   };
   const rowOk = (c: Card) => wordOk(c) && posOk(c);
   // Từ loại đúng để hiện khi sai (giữ nguyên tiếng Anh: noun/verb/…).
@@ -143,11 +144,12 @@ export function CardsTest({ cards }: CardsTestProps) {
                   </td>
                   <td className="border-b border-r p-0 align-top">
                     <select
-                      value={pos[card.id] ?? "noun"}
+                      value={pos[card.id] ?? ""}
                       onChange={(e) => setPos((prev) => ({ ...prev, [card.id]: e.target.value }))}
                       disabled={graded}
                       className="w-full bg-transparent px-3 py-1.5 outline-none focus:bg-background focus:ring-1 focus:ring-inset focus:ring-primary disabled:opacity-100"
                     >
+                      <option value="">— chọn —</option>
                       {WORD_FORM_ORDER.map((p) => (
                         <option key={p} value={p}>
                           {p}
