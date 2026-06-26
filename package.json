@@ -71,6 +71,10 @@
       "prisma",
       "@prisma/client",
       "esbuild"
+    ],
+    "ignoredBuiltDependencies": [
+      "sharp",
+      "unrs-resolver"
     ]
   }
 }
