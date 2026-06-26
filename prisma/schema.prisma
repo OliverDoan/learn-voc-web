@@ -17,6 +17,8 @@ model Deck {
   description String?
   color       String   @default("#3b82f6")
   icon        String?
+  // Cột tùy chỉnh dạng bảng (Excel-like): JSON [{id,name,values:{cardId:value}}]
+  customColumns String @default("[]")
   // Soft delete: null = đang dùng, có giá trị = đã chuyển vào thùng rác
   deletedAt   DateTime?
   createdAt   DateTime @default(now())

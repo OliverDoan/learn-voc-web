@@ -9,6 +9,7 @@ import {
   Check,
   GripVertical,
   Layers,
+  List,
   Mic,
   Pencil,
   Play,
@@ -16,6 +17,7 @@ import {
   Square,
   SquareCheck,
   Star,
+  Table2,
   Trash2,
   Upload,
   Volume2,
@@ -34,6 +36,7 @@ import { ImportCardsDialog } from "@/components/deck/import-cards-dialog";
 import { ExportButton } from "@/components/deck/export-cards-dialog";
 import { ReadAllButton } from "@/components/deck/read-all-button";
 import { CardsFilterBar } from "@/components/deck/cards-filter-bar";
+import { CardsTable } from "@/components/deck/cards-table";
 import { StoryList } from "@/components/story/story-list";
 import {
   useCards,
@@ -71,6 +74,7 @@ export default function DeckDetailPage({ params }: PageProps) {
   const [favoriteOnly, setFavoriteOnly] = useState(false);
   const [selectedPos, setSelectedPos] = useState<PosKey[]>([]);
   const [groupByTag, setGroupByTag] = useState(false);
+  const [viewMode, setViewMode] = useState<"list" | "table">("list");
   const [selectMode, setSelectMode] = useState(false);
   const [selectedIds, setSelectedIds] = useState<Set<string>>(() => new Set());
 
@@ -613,6 +617,35 @@ export default function DeckDetailPage({ params }: PageProps) {
         </div>
       ) : null}
 
+      {cards && cards.length > 0 ? (
+        <div className="mb-3 inline-flex rounded-lg border bg-card p-0.5">
+          <button
+            type="button"
+            onClick={() => setViewMode("list")}
+            className={cn(
+              "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
+              viewMode === "list"
+                ? "bg-primary text-primary-foreground"
+                : "text-muted-foreground hover:text-foreground",
+            )}
+          >
+            <List className="h-4 w-4" /> Danh sách
+          </button>
+          <button
+            type="button"
+            onClick={() => setViewMode("table")}
+            className={cn(
+              "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
+              viewMode === "table"
+                ? "bg-primary text-primary-foreground"
+                : "text-muted-foreground hover:text-foreground",
+            )}
+          >
+            <Table2 className="h-4 w-4" /> Bảng
+          </button>
+        </div>
+      ) : null}
+
       {cardsLoading ? (
         <p className="text-center text-muted-foreground">Đang tải...</p>
       ) : !cards || cards.length === 0 ? (
@@ -631,6 +664,8 @@ export default function DeckDetailPage({ params }: PageProps) {
         <div className="rounded-xl border border-dashed py-10 text-center text-sm text-muted-foreground">
           Không có từ nào khớp bộ lọc.
         </div>
+      ) : viewMode === "table" && deck ? (
+        <CardsTable cards={displayCards} deck={deck} />
       ) : groupByTag ? (
         <div className="space-y-6 pb-24">
           {groupedCards.map((group) => (

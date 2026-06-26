@@ -4,6 +4,8 @@ export interface Deck {
   description: string | null;
   color: string;
   icon: string | null;
+  // JSON string các cột tùy chỉnh dạng bảng (parse bằng lib/custom-columns)
+  customColumns: string;
   deletedAt: string | null;
   createdAt: string;
   updatedAt: string;

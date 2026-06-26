@@ -8,6 +8,8 @@ export const deckCreateSchema = z.object({
     .regex(/^#[0-9a-fA-F]{6}$/, "Màu phải dạng hex #RRGGBB")
     .default("#3b82f6"),
   icon: z.string().max(8).optional().nullable(),
+  // JSON cột tùy chỉnh dạng bảng — lưu dạng chuỗi, parse khi đọc
+  customColumns: z.string().max(200_000).optional(),
 });
 
 export const deckUpdateSchema = deckCreateSchema.partial();
