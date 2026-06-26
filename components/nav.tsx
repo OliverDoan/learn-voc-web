@@ -13,6 +13,7 @@ import {
   Home,
   Layers,
   Library,
+  Menu,
   PanelLeftClose,
   PanelLeftOpen,
   Search,
@@ -162,29 +163,84 @@ export function Nav() {
 
 export function MobileNav() {
   const pathname = usePathname();
+  const [moreOpen, setMoreOpen] = useState(false);
+
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
+  // 4 mục chính + nút "Thêm" mở bảng chứa toàn bộ mục.
+  const primary = mobileItems.slice(0, 4);
+  const onPrimary = primary.some((i) => isActive(i.href));
 
   return (
-    <nav className="md:hidden fixed bottom-0 inset-x-0 z-40 border-t bg-card/95 backdrop-blur">
-      <ul className="grid grid-cols-5">
-        {mobileItems.map((item) => {
-          const active =
-            item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
-          return (
-            <li key={item.href}>
-              <Link
-                href={item.href}
-                className={cn(
-                  "flex flex-col items-center gap-1 py-2 text-xs",
-                  active ? "text-primary" : "text-muted-foreground",
-                )}
-              >
-                <item.icon className="h-5 w-5" />
-                <span>{item.label}</span>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-    </nav>
+    <>
+      {moreOpen ? (
+        <div className="md:hidden">
+          <div
+            className="fixed inset-0 z-40 bg-black/40"
+            onClick={() => setMoreOpen(false)}
+          />
+          <div className="fixed inset-x-0 bottom-0 z-50 rounded-t-2xl border-t bg-card p-4 pb-6 shadow-[0_-12px_40px_rgba(0,0,0,.15)]">
+            <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-muted" />
+            <div className="grid grid-cols-4 gap-2">
+              {items.map((item) => {
+                const active = isActive(item.href);
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMoreOpen(false)}
+                    className={cn(
+                      "flex flex-col items-center gap-1.5 rounded-xl p-3 text-center text-xs font-medium transition-colors",
+                      active
+                        ? "bg-primary/10 text-primary"
+                        : "text-muted-foreground hover:bg-accent",
+                    )}
+                  >
+                    <item.icon className="h-5 w-5" />
+                    <span className="leading-tight">{item.label}</span>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      ) : null}
+
+      <nav className="md:hidden fixed bottom-0 inset-x-0 z-40 border-t bg-card/95 backdrop-blur">
+        <ul className="grid grid-cols-5">
+          {primary.map((item) => {
+            const active = isActive(item.href);
+            return (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className={cn(
+                    "flex flex-col items-center gap-1 py-2 text-xs",
+                    active ? "text-primary" : "text-muted-foreground",
+                  )}
+                >
+                  <item.icon className="h-5 w-5" />
+                  <span>{item.label}</span>
+                </Link>
+              </li>
+            );
+          })}
+          <li>
+            <button
+              type="button"
+              onClick={() => setMoreOpen((o) => !o)}
+              className={cn(
+                "flex w-full flex-col items-center gap-1 py-2 text-xs",
+                moreOpen || !onPrimary ? "text-primary" : "text-muted-foreground",
+              )}
+              aria-label="Thêm mục"
+            >
+              <Menu className="h-5 w-5" />
+              <span>Thêm</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </>
   );
 }
