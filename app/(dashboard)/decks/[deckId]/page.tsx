@@ -484,14 +484,14 @@ export default function DeckDetailPage({ params }: PageProps) {
       </Link>
 
       <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
-        <div className="flex items-center gap-4">
+        <div className="flex min-w-0 items-center gap-4">
           <div
-            className="flex h-14 w-14 items-center justify-center rounded-xl text-2xl"
+            className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl text-2xl"
             style={{ backgroundColor: `${deck.color}20`, color: deck.color }}
           >
             {deck.icon ?? "📘"}
           </div>
-          <div>
+          <div className="min-w-0">
             <h1 className="text-2xl font-bold">{deck.name}</h1>
             {deck.description ? (
               <p className="text-sm text-muted-foreground">{deck.description}</p>
@@ -502,7 +502,7 @@ export default function DeckDetailPage({ params }: PageProps) {
           </div>
         </div>
 
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2">
           <Link href={`/study/${deckId}`}>
             <Button>
               <Play className="h-4 w-4" />
