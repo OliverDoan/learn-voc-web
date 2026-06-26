@@ -12,6 +12,7 @@ import {
   Layers,
   List,
   Mic,
+  MoreVertical,
   Pencil,
   Play,
   Plus,
@@ -77,6 +78,7 @@ export default function DeckDetailPage({ params }: PageProps) {
   const [selectedPos, setSelectedPos] = useState<PosKey[]>([]);
   const [groupByTag, setGroupByTag] = useState(false);
   const [viewMode, setViewMode] = useState<"list" | "table" | "test">("list");
+  const [actionsOpen, setActionsOpen] = useState(false);
   const [selectMode, setSelectMode] = useState(false);
   const [selectedIds, setSelectedIds] = useState<Set<string>>(() => new Set());
 
@@ -502,38 +504,75 @@ export default function DeckDetailPage({ params }: PageProps) {
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <Link href={`/study/${deckId}`}>
             <Button>
               <Play className="h-4 w-4" />
               Bắt đầu ôn
             </Button>
           </Link>
-          <Link href={`/flashcards/${deckId}`}>
-            <Button variant="outline">
-              <Layers className="h-4 w-4" />
-              Flashcard
-            </Button>
-          </Link>
-          <Link href={`/quiz/${deckId}`}>
-            <Button variant="outline">
-              <BookOpen className="h-4 w-4" />
-              Quiz
-            </Button>
-          </Link>
-          <Link href={`/pronounce/${deckId}`}>
-            <Button variant="outline">
-              <Mic className="h-4 w-4" />
-              Phát âm
-            </Button>
-          </Link>
           <ReadAllButton cards={cards ?? []} />
-          <Button variant="outline" size="icon" onClick={() => setOpenEditDeck(true)}>
-            <Pencil className="h-4 w-4" />
-          </Button>
-          <Button variant="outline" size="icon" onClick={handleDeleteDeck}>
-            <Trash2 className="h-4 w-4 text-destructive" />
-          </Button>
+
+          {/* Gom các hành động phụ vào menu ⋯ */}
+          <div className="relative">
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={() => setActionsOpen((o) => !o)}
+              aria-label="Thêm hành động"
+            >
+              <MoreVertical className="h-4 w-4" />
+            </Button>
+            {actionsOpen ? (
+              <>
+                <div className="fixed inset-0 z-20" onClick={() => setActionsOpen(false)} />
+                <div className="absolute right-0 top-full z-30 mt-1 w-48 rounded-lg border bg-card p-1.5 shadow-lg">
+                  <Link
+                    href={`/flashcards/${deckId}`}
+                    onClick={() => setActionsOpen(false)}
+                    className="flex items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
+                  >
+                    <Layers className="h-4 w-4" /> Flashcard
+                  </Link>
+                  <Link
+                    href={`/quiz/${deckId}`}
+                    onClick={() => setActionsOpen(false)}
+                    className="flex items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
+                  >
+                    <BookOpen className="h-4 w-4" /> Quiz
+                  </Link>
+                  <Link
+                    href={`/pronounce/${deckId}`}
+                    onClick={() => setActionsOpen(false)}
+                    className="flex items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
+                  >
+                    <Mic className="h-4 w-4" /> Phát âm
+                  </Link>
+                  <div className="my-1 h-px bg-border" />
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setActionsOpen(false);
+                      setOpenEditDeck(true);
+                    }}
+                    className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
+                  >
+                    <Pencil className="h-4 w-4" /> Sửa deck
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setActionsOpen(false);
+                      handleDeleteDeck();
+                    }}
+                    className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm text-destructive hover:bg-destructive/10"
+                  >
+                    <Trash2 className="h-4 w-4" /> Xoá deck
+                  </button>
+                </div>
+              </>
+            ) : null}
+          </div>
         </div>
       </div>
 
