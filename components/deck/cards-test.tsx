@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { Check, RotateCcw, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { WORD_FORM_LABEL, WORD_FORM_ORDER } from "@/lib/word-forms";
 import type { Card } from "@/lib/types";
 
 interface CardsTestProps {
@@ -12,24 +13,50 @@ interface CardsTestProps {
 
 const norm = (s: string) => s.trim().toLowerCase().replace(/\s+/g, " ");
 
+// Tập từ loại đúng của thẻ (card.partOfSpeech có thể là "adjective / noun"…).
+function parsePos(s: string | null): Set<string> {
+  if (!s) return new Set();
+  return new Set(
+    s
+      .toLowerCase()
+      .split(/[/,]/)
+      .map((x) => x.trim())
+      .filter((x) => (WORD_FORM_ORDER as readonly string[]).includes(x)),
+  );
+}
+
 /**
  * Chế độ kiểm tra: hiện nghĩa tiếng Việt, người dùng gõ từ tiếng Anh,
  * bấm "Chấm điểm" để xem đúng bao nhiêu câu, sai câu nào (hiện đáp án đúng).
  */
 export function CardsTest({ cards }: CardsTestProps) {
   const [answers, setAnswers] = useState<Record<string, string>>({});
+  // Từ loại chọn cho mỗi từ; mặc định "noun".
+  const [pos, setPos] = useState<Record<string, string>>({});
   const [graded, setGraded] = useState(false);
 
+  const wordOk = (c: Card) => norm(answers[c.id] ?? "") === norm(c.word);
+  const posOk = (c: Card) => {
+    const set = parsePos(c.partOfSpeech);
+    return set.size === 0 ? true : set.has(pos[c.id] ?? "noun");
+  };
+  const rowOk = (c: Card) => wordOk(c) && posOk(c);
+  // Nhãn từ loại đúng để hiện khi sai.
+  const correctPosLabel = (c: Card) =>
+    [...parsePos(c.partOfSpeech)]
+      .map((p) => WORD_FORM_LABEL[p as keyof typeof WORD_FORM_LABEL] ?? p)
+      .join(" / ");
+
   const result = useMemo(() => {
-    const correct = cards.filter((c) => norm(answers[c.id] ?? "") === norm(c.word)).length;
+    const correct = cards.filter((c) => norm(answers[c.id] ?? "") === norm(c.word) && posOk(c)).length;
     const answered = cards.filter((c) => (answers[c.id] ?? "").trim() !== "").length;
     return { correct, answered, total: cards.length };
-  }, [cards, answers]);
-
-  const isCorrect = (c: Card) => norm(answers[c.id] ?? "") === norm(c.word);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cards, answers, pos]);
 
   const reset = () => {
     setAnswers({});
+    setPos({});
     setGraded(false);
   };
 
@@ -81,6 +108,7 @@ export function CardsTest({ cards }: CardsTestProps) {
               <th className="border-b border-r px-3 py-2 text-left font-semibold">
                 Từ tiếng Anh (đáp án của bạn)
               </th>
+              <th className="border-b border-r px-3 py-2 text-left font-semibold">Từ loại</th>
               {graded ? (
                 <th className="border-b px-3 py-2 text-left font-semibold">Kết quả</th>
               ) : null}
@@ -88,7 +116,7 @@ export function CardsTest({ cards }: CardsTestProps) {
           </thead>
           <tbody>
             {cards.map((card, i) => {
-              const ok = isCorrect(card);
+              const ok = rowOk(card);
               return (
                 <tr
                   key={card.id}
@@ -116,6 +144,20 @@ export function CardsTest({ cards }: CardsTestProps) {
                       spellCheck={false}
                     />
                   </td>
+                  <td className="border-b border-r p-0 align-top">
+                    <select
+                      value={pos[card.id] ?? "noun"}
+                      onChange={(e) => setPos((prev) => ({ ...prev, [card.id]: e.target.value }))}
+                      disabled={graded}
+                      className="w-full bg-transparent px-3 py-1.5 outline-none focus:bg-background focus:ring-1 focus:ring-inset focus:ring-primary disabled:opacity-100"
+                    >
+                      {WORD_FORM_ORDER.map((p) => (
+                        <option key={p} value={p}>
+                          {WORD_FORM_LABEL[p]} ({p})
+                        </option>
+                      ))}
+                    </select>
+                  </td>
                   {graded ? (
                     <td className="border-b px-3 py-1.5 align-top">
                       {ok ? (
@@ -123,8 +165,15 @@ export function CardsTest({ cards }: CardsTestProps) {
                           <Check className="h-4 w-4" /> Đúng
                         </span>
                       ) : (
-                        <span className="inline-flex items-center gap-1 text-destructive">
-                          <X className="h-4 w-4" /> {card.word}
+                        <span className="flex flex-col gap-0.5 text-destructive">
+                          {!wordOk(card) ? (
+                            <span className="inline-flex items-center gap-1">
+                              <X className="h-4 w-4" /> {card.word}
+                            </span>
+                          ) : null}
+                          {!posOk(card) ? (
+                            <span className="text-xs">từ loại: {correctPosLabel(card)}</span>
+                          ) : null}
                         </span>
                       )}
                     </td>
