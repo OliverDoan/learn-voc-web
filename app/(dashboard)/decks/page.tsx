@@ -95,7 +95,7 @@ export default function DecksPage() {
                 </span>
                 <div className="h-px flex-1 bg-border" />
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="flex flex-col gap-2">
                 {group.decks.map((deck) => (
                   <DeckCard key={deck.id} deck={deck} />
                 ))}
