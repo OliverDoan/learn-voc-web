@@ -7,6 +7,7 @@ import {
   ArrowLeft,
   BookOpen,
   Check,
+  ClipboardCheck,
   GripVertical,
   Layers,
   List,
@@ -37,6 +38,7 @@ import { ExportButton } from "@/components/deck/export-cards-dialog";
 import { ReadAllButton } from "@/components/deck/read-all-button";
 import { CardsFilterBar } from "@/components/deck/cards-filter-bar";
 import { CardsTable } from "@/components/deck/cards-table";
+import { CardsTest } from "@/components/deck/cards-test";
 import { StoryList } from "@/components/story/story-list";
 import {
   useCards,
@@ -74,7 +76,7 @@ export default function DeckDetailPage({ params }: PageProps) {
   const [favoriteOnly, setFavoriteOnly] = useState(false);
   const [selectedPos, setSelectedPos] = useState<PosKey[]>([]);
   const [groupByTag, setGroupByTag] = useState(false);
-  const [viewMode, setViewMode] = useState<"list" | "table">("list");
+  const [viewMode, setViewMode] = useState<"list" | "table" | "test">("list");
   const [selectMode, setSelectMode] = useState(false);
   const [selectedIds, setSelectedIds] = useState<Set<string>>(() => new Set());
 
@@ -643,6 +645,18 @@ export default function DeckDetailPage({ params }: PageProps) {
           >
             <Table2 className="h-4 w-4" /> Bảng
           </button>
+          <button
+            type="button"
+            onClick={() => setViewMode("test")}
+            className={cn(
+              "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
+              viewMode === "test"
+                ? "bg-primary text-primary-foreground"
+                : "text-muted-foreground hover:text-foreground",
+            )}
+          >
+            <ClipboardCheck className="h-4 w-4" /> Kiểm tra
+          </button>
         </div>
       ) : null}
 
@@ -664,6 +678,8 @@ export default function DeckDetailPage({ params }: PageProps) {
         <div className="rounded-xl border border-dashed py-10 text-center text-sm text-muted-foreground">
           Không có từ nào khớp bộ lọc.
         </div>
+      ) : viewMode === "test" ? (
+        <CardsTest cards={displayCards} />
       ) : viewMode === "table" && deck ? (
         <CardsTable cards={displayCards} deck={deck} />
       ) : groupByTag ? (
