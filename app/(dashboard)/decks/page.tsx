@@ -8,6 +8,7 @@ import { DeckCard } from "@/components/deck/deck-card";
 import { DeckFormDialog } from "@/components/deck/deck-form-dialog";
 import { ImportDeckDialog } from "@/components/deck/import-deck-dialog";
 import { useDecks } from "@/hooks/use-decks";
+import { groupDecksByTopic } from "@/lib/deck-topics";
 
 export default function DecksPage() {
   const [openCreate, setOpenCreate] = useState(false);
@@ -26,6 +27,12 @@ export default function DecksPage() {
         (deck.description?.toLowerCase().includes(q) ?? false),
     );
   }, [decks, search]);
+
+  // Gom deck thành topic (mỗi 5 unit), bỏ topic rỗng sau khi lọc.
+  const topicGroups = useMemo(
+    () => groupDecksByTopic(filteredDecks).filter((g) => g.decks.length > 0),
+    [filteredDecks],
+  );
 
   return (
     <div className="container mx-auto max-w-6xl p-6">
@@ -76,9 +83,24 @@ export default function DecksPage() {
           Không tìm thấy deck nào khớp &ldquo;{search.trim()}&rdquo;.
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {filteredDecks.map((deck) => (
-            <DeckCard key={deck.id} deck={deck} />
+        <div className="space-y-8">
+          {topicGroups.map((group) => (
+            <section key={group.key}>
+              <div className="mb-3 flex items-center gap-3">
+                <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+                  {group.title}
+                </h2>
+                <span className="font-mono text-xs text-muted-foreground/70">
+                  {group.decks.length} deck
+                </span>
+                <div className="h-px flex-1 bg-border" />
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {group.decks.map((deck) => (
+                  <DeckCard key={deck.id} deck={deck} />
+                ))}
+              </div>
+            </section>
           ))}
         </div>
       )}
