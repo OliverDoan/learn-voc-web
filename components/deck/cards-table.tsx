@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { Columns3, Plus, Trash2, X } from "lucide-react";
+import { useRef, useState } from "react";
+import { Columns3, Plus, Trash2 } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { useUpdateDeck } from "@/hooks/use-decks";
@@ -39,20 +39,21 @@ function formatWordForms(json: string | null): string {
 export function CardsTable({ cards, deck }: CardsTableProps) {
   const updateDeck = useUpdateDeck(deck.id);
 
-  // Ẩn/hiện cột built-in — lưu localStorage theo deck.
-  const [hidden, setHidden] = useState<Set<string>>(new Set());
-  useEffect(() => {
+  // Ẩn/hiện cột — lưu localStorage theo deck (khởi tạo ngay, không cần effect).
+  const [hidden, setHidden] = useState<Set<string>>(() => {
+    if (typeof window === "undefined") return new Set();
     try {
       const raw = localStorage.getItem(`voc-table-cols:${deck.id}`);
-      if (raw) setHidden(new Set(JSON.parse(raw) as string[]));
+      return raw ? new Set(JSON.parse(raw) as string[]) : new Set();
     } catch {
-      /* bỏ qua */
+      return new Set();
     }
-  }, [deck.id]);
+  });
   const toggleHidden = (key: string) => {
     setHidden((prev) => {
       const next = new Set(prev);
-      next.has(key) ? next.delete(key) : next.add(key);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
       try {
         localStorage.setItem(`voc-table-cols:${deck.id}`, JSON.stringify([...next]));
       } catch {
@@ -62,16 +63,9 @@ export function CardsTable({ cards, deck }: CardsTableProps) {
     });
   };
 
-  // Cột tùy chỉnh — local state, đồng bộ với server, lưu khi đổi.
+  // Cột tùy chỉnh — local state (khởi tạo từ server), lưu khi đổi.
   const [columns, setColumns] = useState<CustomColumn[]>(() => parseCustomColumns(deck.customColumns));
   const lastSaved = useRef(deck.customColumns);
-  useEffect(() => {
-    // Chỉ đồng bộ lại khi dữ liệu server KHÁC bản vừa lưu (thay đổi từ nơi khác).
-    if (deck.customColumns !== lastSaved.current) {
-      lastSaved.current = deck.customColumns;
-      setColumns(parseCustomColumns(deck.customColumns));
-    }
-  }, [deck.customColumns]);
 
   // Lưu xuống server (bỏ qua nếu không đổi so với bản đã lưu).
   const persist = (next: CustomColumn[]) => {
@@ -107,6 +101,7 @@ export function CardsTable({ cards, deck }: CardsTableProps) {
 
   const [menuOpen, setMenuOpen] = useState(false);
   const visibleBuiltin = BUILTIN.filter((b) => !hidden.has(b.key));
+  const visibleColumns = columns.filter((c) => !hidden.has(c.id));
 
   return (
     <div className="pb-24">
@@ -134,6 +129,26 @@ export function CardsTable({ cards, deck }: CardsTableProps) {
                     {b.label}
                   </label>
                 ))}
+                {columns.length > 0 ? (
+                  <>
+                    <p className="px-2 pb-1 pt-2 text-xs font-semibold text-muted-foreground">
+                      Cột tùy chỉnh
+                    </p>
+                    {columns.map((col) => (
+                      <label
+                        key={col.id}
+                        className="flex cursor-pointer items-center gap-2 rounded-md px-2 py-1.5 text-sm hover:bg-accent"
+                      >
+                        <input
+                          type="checkbox"
+                          checked={!hidden.has(col.id)}
+                          onChange={() => toggleHidden(col.id)}
+                        />
+                        <span className="truncate">{col.name || "(không tên)"}</span>
+                      </label>
+                    ))}
+                  </>
+                ) : null}
               </div>
             </>
           ) : null}
@@ -158,7 +173,7 @@ export function CardsTable({ cards, deck }: CardsTableProps) {
                   {b.label}
                 </th>
               ))}
-              {columns.map((col) => (
+              {visibleColumns.map((col) => (
                 <th key={col.id} className="border-b border-r px-2 py-1.5 text-left font-semibold">
                   <div className="flex items-center gap-1">
                     <input
@@ -209,7 +224,7 @@ export function CardsTable({ cards, deck }: CardsTableProps) {
                     {b.get(card)}
                   </td>
                 ))}
-                {columns.map((col) => (
+                {visibleColumns.map((col) => (
                   <td key={col.id} className="border-b border-r p-0 align-top">
                     <input
                       value={col.values[card.id] ?? ""}
