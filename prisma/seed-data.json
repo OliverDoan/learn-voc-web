@@ -1,144 +1,14 @@
 {
   "decks": [
     {
-      "id": "cmpzd45h80000o9pfojdqo64z",
-      "name": "Unit 8: Sự thật về thủ đô",
-      "description": "Từ vựng về mặt trái đô thị: ô nhiễm, tội phạm, quá tải dân số",
-      "color": "#ef4444",
-      "icon": "🏚️",
-      "deletedAt": null,
-      "createdAt": "2026-06-04T10:38:33.404Z",
-      "updatedAt": "2026-06-04T10:38:33.404Z"
-    },
-    {
-      "id": "cmqsy97xr0043o955z9itq79d",
-      "name": "Unit 19: Chuyển sang ăn uống lành mạnh",
-      "description": "Bộ từ vựng Unit 19",
-      "color": "#fbbf24",
-      "icon": null,
-      "deletedAt": null,
-      "createdAt": "2026-06-25T03:35:40.911Z",
-      "updatedAt": "2026-06-25T04:12:25.170Z"
-    },
-    {
-      "id": "cmqsy9d1k005go955zzowylty",
-      "name": "Unit 20: Khu vườn rau trái sau nhà",
-      "description": "Bộ từ vựng Unit 20",
-      "color": "#818cf8",
-      "icon": null,
-      "deletedAt": null,
-      "createdAt": "2026-06-25T03:35:47.529Z",
-      "updatedAt": "2026-06-25T04:12:25.422Z"
-    },
-    {
       "id": "cmpnxzepg0000o9twunz4wa2s",
       "name": "Unit 1: Giấc mơ du học",
       "description": "Từ vựng về học ngoại ngữ, giao tiếp, du học",
-      "color": "#10b981",
+      "color": "#3b82f6",
       "icon": "🌍",
       "deletedAt": null,
       "createdAt": "2026-05-27T10:49:29.908Z",
-      "updatedAt": "2026-06-25T04:12:20.546Z"
-    },
-    {
-      "id": "cmpo28i150000o9qb9de8je6y",
-      "name": "Unit 3: Tôi và biệt danh Sunny",
-      "description": "Truyện chêm về giới thiệu bản thân, quê hương, địa chỉ",
-      "color": "#f59e0b",
-      "icon": "📚",
-      "deletedAt": null,
-      "createdAt": "2026-05-27T12:48:32.585Z",
-      "updatedAt": "2026-06-25T04:12:21.056Z"
-    },
-    {
-      "id": "cmpo2b81u0000o914kx8fw8sz",
-      "name": "Unit 4: Ngày hội nghề nghiệp",
-      "description": "Truyện chêm về nghề nghiệp và ngày hội tuyển dụng",
-      "color": "#f59e0b",
-      "icon": "💼",
-      "deletedAt": null,
-      "createdAt": "2026-05-27T12:50:39.618Z",
-      "updatedAt": "2026-06-25T04:12:21.314Z"
-    },
-    {
-      "id": "cmpzaox580000o9bea3n8dtxj",
-      "name": "Unit 6: Bài học chi tiêu của tôi",
-      "description": "Từ vựng về tiền bạc, chi tiêu và quản lý tài chính",
-      "color": "#6366f1",
-      "icon": "💰",
-      "deletedAt": null,
-      "createdAt": "2026-06-04T09:30:43.533Z",
-      "updatedAt": "2026-06-25T04:12:21.568Z"
-    },
-    {
-      "id": "cmpzda3r10000o9cyvu9hze95",
-      "name": "Unit 9: Căn hộ mới của tôi và bạn gái",
-      "description": "Từ vựng về nhà ở, căn hộ, nội thất và trang trí",
-      "color": "#8b5cf6",
-      "icon": "🛋️",
-      "deletedAt": null,
-      "createdAt": "2026-06-04T10:43:11.102Z",
-      "updatedAt": "2026-06-25T04:12:21.816Z"
-    },
-    {
-      "id": "cmqhiwpus0000o9zk69lp6ax3",
-      "name": "Unit 10: Khu phố mới của tôi và bạn gái",
-      "description": "Bộ từ vựng Unit 10",
-      "color": "#84cc16",
-      "icon": null,
-      "deletedAt": null,
-      "createdAt": "2026-06-17T03:40:35.428Z",
-      "updatedAt": "2026-06-25T04:12:22.061Z"
-    },
-    {
-      "id": "cmqhiwpvk001do9zkvkgseajx",
-      "name": "Unit 11: Chuyến du lịch đầu tiên của hai người",
-      "description": "Bộ từ vựng Unit 11",
-      "color": "#06b6d4",
-      "icon": null,
-      "deletedAt": null,
-      "createdAt": "2026-06-17T03:40:35.457Z",
-      "updatedAt": "2026-06-25T04:12:22.325Z"
-    },
-    {
-      "id": "cmqhiwpwf002qo9zkvynf1ccr",
-      "name": "Unit 12: Một ngày tham quan cùng nhau",
-      "description": "Bộ từ vựng Unit 12",
-      "color": "#d946ef",
-      "icon": null,
-      "deletedAt": null,
-      "createdAt": "2026-06-17T03:40:35.488Z",
-      "updatedAt": "2026-06-25T04:12:22.585Z"
-    },
-    {
-      "id": "cmqhiwpxr0043o9zkwr7iejvr",
-      "name": "Unit 13: Mùa cưới và lễ hội",
-      "description": "Bộ từ vựng Unit 13",
-      "color": "#eab308",
-      "icon": null,
-      "deletedAt": null,
-      "createdAt": "2026-06-17T03:40:35.535Z",
-      "updatedAt": "2026-06-25T04:12:22.874Z"
-    },
-    {
-      "id": "cmqhiwpym005go9zktdy2orqz",
-      "name": "Unit 14: Khác biệt văn hoá của tôi và bạn gái",
-      "description": "Bộ từ vựng Unit 14",
-      "color": "#22c55e",
-      "icon": null,
-      "deletedAt": null,
-      "createdAt": "2026-06-17T03:40:35.566Z",
-      "updatedAt": "2026-06-25T04:12:23.146Z"
-    },
-    {
-      "id": "cmqhiwpzc006to9zk5qkvc4i6",
-      "name": "Unit 15: Bạn gái và thời tiết quê tôi",
-      "description": "Bộ từ vựng Unit 15",
-      "color": "#a855f7",
-      "icon": null,
-      "deletedAt": null,
-      "createdAt": "2026-06-17T03:40:35.592Z",
-      "updatedAt": "2026-06-25T04:12:23.406Z"
+      "updatedAt": "2026-06-26T06:15:08.165Z"
     },
     {
       "id": "cmpnyahmi0000o9ohm5dijv72",
@@ -148,57 +18,187 @@
       "icon": "🎓",
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.905Z",
-      "updatedAt": "2026-06-25T04:12:23.652Z"
+      "updatedAt": "2026-06-26T06:15:08.940Z"
+    },
+    {
+      "id": "cmpo28i150000o9qb9de8je6y",
+      "name": "Unit 3: Tôi và biệt danh Sunny",
+      "description": "Truyện chêm về giới thiệu bản thân, quê hương, địa chỉ",
+      "color": "#ec4899",
+      "icon": "☀️",
+      "deletedAt": null,
+      "createdAt": "2026-05-27T12:48:32.585Z",
+      "updatedAt": "2026-06-26T06:15:09.456Z"
+    },
+    {
+      "id": "cmpo2b81u0000o914kx8fw8sz",
+      "name": "Unit 4: Ngày hội nghề nghiệp",
+      "description": "Truyện chêm về nghề nghiệp và ngày hội tuyển dụng",
+      "color": "#f59e0b",
+      "icon": "💼",
+      "deletedAt": null,
+      "createdAt": "2026-05-27T12:50:39.618Z",
+      "updatedAt": "2026-06-26T06:15:09.980Z"
     },
     {
       "id": "cmpodf0i20000o97tk2lntfmd",
       "name": "Unit 5: Hành trình tìm việc của tôi",
       "description": "21 từ vựng chủ đề Việc làm — Sự nghiệp, trích từ truyện chêm 'Hành trình tìm việc của tôi'.",
-      "color": "#f59e0b",
-      "icon": "💼",
+      "color": "#10b981",
+      "icon": "📝",
       "deletedAt": null,
       "createdAt": "2026-05-27T18:01:32.234Z",
-      "updatedAt": "2026-06-25T04:12:23.911Z"
+      "updatedAt": "2026-06-26T06:15:10.506Z"
+    },
+    {
+      "id": "cmpzaox580000o9bea3n8dtxj",
+      "name": "Unit 6: Bài học chi tiêu của tôi",
+      "description": "Từ vựng về tiền bạc, chi tiêu và quản lý tài chính",
+      "color": "#3b82f6",
+      "icon": "💰",
+      "deletedAt": null,
+      "createdAt": "2026-06-04T09:30:43.533Z",
+      "updatedAt": "2026-06-26T06:15:11.029Z"
     },
     {
       "id": "cmpzcdqph0000o9chw6tgb0p4",
       "name": "Unit 7: Tôi và bạn gái khám phá thủ đô",
       "description": "Từ vựng về thành phố, đô thị và cuộc sống nơi phố thị",
-      "color": "#06b6d4",
+      "color": "#8b5cf6",
       "icon": "🏙️",
       "deletedAt": null,
       "createdAt": "2026-06-04T10:18:01.206Z",
-      "updatedAt": "2026-06-25T04:12:24.164Z"
+      "updatedAt": "2026-06-26T06:15:11.552Z"
+    },
+    {
+      "id": "cmpzd45h80000o9pfojdqo64z",
+      "name": "Unit 8: Sự thật về thủ đô",
+      "description": "Từ vựng về mặt trái đô thị: ô nhiễm, tội phạm, quá tải dân số",
+      "color": "#ec4899",
+      "icon": "🚧",
+      "deletedAt": null,
+      "createdAt": "2026-06-04T10:38:33.404Z",
+      "updatedAt": "2026-06-26T06:15:12.157Z"
+    },
+    {
+      "id": "cmpzda3r10000o9cyvu9hze95",
+      "name": "Unit 9: Căn hộ mới của tôi và bạn gái",
+      "description": "Từ vựng về nhà ở, căn hộ, nội thất và trang trí",
+      "color": "#f59e0b",
+      "icon": "🏠",
+      "deletedAt": null,
+      "createdAt": "2026-06-04T10:43:11.102Z",
+      "updatedAt": "2026-06-26T06:15:12.649Z"
+    },
+    {
+      "id": "cmqhiwpus0000o9zk69lp6ax3",
+      "name": "Unit 10: Khu phố mới của tôi và bạn gái",
+      "description": "Bộ từ vựng Unit 10",
+      "color": "#10b981",
+      "icon": "🏘️",
+      "deletedAt": null,
+      "createdAt": "2026-06-17T03:40:35.428Z",
+      "updatedAt": "2026-06-26T06:15:13.137Z"
+    },
+    {
+      "id": "cmqhiwpvk001do9zkvkgseajx",
+      "name": "Unit 11: Chuyến du lịch đầu tiên của hai người",
+      "description": "Bộ từ vựng Unit 11",
+      "color": "#3b82f6",
+      "icon": "✈️",
+      "deletedAt": null,
+      "createdAt": "2026-06-17T03:40:35.457Z",
+      "updatedAt": "2026-06-26T06:15:13.651Z"
+    },
+    {
+      "id": "cmqhiwpwf002qo9zkvynf1ccr",
+      "name": "Unit 12: Một ngày tham quan cùng nhau",
+      "description": "Bộ từ vựng Unit 12",
+      "color": "#8b5cf6",
+      "icon": "🏛️",
+      "deletedAt": null,
+      "createdAt": "2026-06-17T03:40:35.488Z",
+      "updatedAt": "2026-06-26T06:15:14.176Z"
+    },
+    {
+      "id": "cmqhiwpxr0043o9zkwr7iejvr",
+      "name": "Unit 13: Mùa cưới và lễ hội",
+      "description": "Bộ từ vựng Unit 13",
+      "color": "#ec4899",
+      "icon": "🎉",
+      "deletedAt": null,
+      "createdAt": "2026-06-17T03:40:35.535Z",
+      "updatedAt": "2026-06-26T06:15:14.700Z"
+    },
+    {
+      "id": "cmqhiwpym005go9zktdy2orqz",
+      "name": "Unit 14: Khác biệt văn hoá của tôi và bạn gái",
+      "description": "Bộ từ vựng Unit 14",
+      "color": "#f59e0b",
+      "icon": "🛕",
+      "deletedAt": null,
+      "createdAt": "2026-06-17T03:40:35.566Z",
+      "updatedAt": "2026-06-26T06:15:15.225Z"
+    },
+    {
+      "id": "cmqhiwpzc006to9zk5qkvc4i6",
+      "name": "Unit 15: Bạn gái và thời tiết quê tôi",
+      "description": "Bộ từ vựng Unit 15",
+      "color": "#10b981",
+      "icon": "⛅",
+      "deletedAt": null,
+      "createdAt": "2026-06-17T03:40:35.592Z",
+      "updatedAt": "2026-06-26T06:15:15.753Z"
     },
     {
       "id": "cmqsy8s000000o955l89j9t6f",
       "name": "Unit 16: Bữa tối tôi và bạn gái cùng nấu",
       "description": "Bộ từ vựng Unit 16",
-      "color": "#0ea5e9",
-      "icon": null,
+      "color": "#3b82f6",
+      "icon": "🍳",
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:20.257Z",
-      "updatedAt": "2026-06-25T04:12:24.408Z"
+      "updatedAt": "2026-06-26T06:15:16.273Z"
     },
     {
       "id": "cmqsy8xni001do9556sahdzuj",
       "name": "Unit 17: Một tối ở quán và bài học detox",
       "description": "Bộ từ vựng Unit 17",
-      "color": "#f43f5e",
-      "icon": null,
+      "color": "#8b5cf6",
+      "icon": "🍻",
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:27.583Z",
-      "updatedAt": "2026-06-25T04:12:24.671Z"
+      "updatedAt": "2026-06-26T06:15:16.859Z"
     },
     {
       "id": "cmqsy92qm002qo955etek5fwn",
       "name": "Unit 18: Tôi tập nấu theo công thức",
       "description": "Bộ từ vựng Unit 18",
-      "color": "#34d399",
-      "icon": null,
+      "color": "#ec4899",
+      "icon": "👨‍🍳",
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:34.174Z",
-      "updatedAt": "2026-06-25T04:12:24.916Z"
+      "updatedAt": "2026-06-26T06:15:17.346Z"
+    },
+    {
+      "id": "cmqsy97xr0043o955z9itq79d",
+      "name": "Unit 19: Chuyển sang ăn uống lành mạnh",
+      "description": "Bộ từ vựng Unit 19",
+      "color": "#f59e0b",
+      "icon": "🥗",
+      "deletedAt": null,
+      "createdAt": "2026-06-25T03:35:40.911Z",
+      "updatedAt": "2026-06-26T06:15:17.845Z"
+    },
+    {
+      "id": "cmqsy9d1k005go955zzowylty",
+      "name": "Unit 20: Khu vườn rau trái sau nhà",
+      "description": "Bộ từ vựng Unit 20",
+      "color": "#10b981",
+      "icon": "🌱",
+      "deletedAt": null,
+      "createdAt": "2026-06-25T03:35:47.529Z",
+      "updatedAt": "2026-06-26T06:15:18.371Z"
     }
   ],
   "cards": [
