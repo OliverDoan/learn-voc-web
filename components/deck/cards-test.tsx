@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { Check, RotateCcw, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { WORD_FORM_LABEL, WORD_FORM_ORDER } from "@/lib/word-forms";
+import { WORD_FORM_ORDER } from "@/lib/word-forms";
 import type { Card } from "@/lib/types";
 
 interface CardsTestProps {
@@ -41,11 +41,8 @@ export function CardsTest({ cards }: CardsTestProps) {
     return set.size === 0 ? true : set.has(pos[c.id] ?? "noun");
   };
   const rowOk = (c: Card) => wordOk(c) && posOk(c);
-  // Nhãn từ loại đúng để hiện khi sai.
-  const correctPosLabel = (c: Card) =>
-    [...parsePos(c.partOfSpeech)]
-      .map((p) => WORD_FORM_LABEL[p as keyof typeof WORD_FORM_LABEL] ?? p)
-      .join(" / ");
+  // Từ loại đúng để hiện khi sai (giữ nguyên tiếng Anh: noun/verb/…).
+  const correctPosLabel = (c: Card) => [...parsePos(c.partOfSpeech)].join(" / ");
 
   const result = useMemo(() => {
     const correct = cards.filter((c) => norm(answers[c.id] ?? "") === norm(c.word) && posOk(c)).length;
@@ -153,7 +150,7 @@ export function CardsTest({ cards }: CardsTestProps) {
                     >
                       {WORD_FORM_ORDER.map((p) => (
                         <option key={p} value={p}>
-                          {WORD_FORM_LABEL[p]} ({p})
+                          {p}
                         </option>
                       ))}
                     </select>
