@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { StoryRenderer } from "@/components/story/story-renderer";
 import { ReadingSpeedControl } from "@/components/story/reading-speed-control";
+import { AutoScrollControls } from "@/components/ui/auto-scroll-controls";
 import { useStories } from "@/hooks/use-stories";
 import { useReadingRate } from "@/hooks/use-reading-rate";
 import { countWordTokens, parseStory } from "@/lib/story-parser";
@@ -238,6 +239,8 @@ export default function AllStoriesPage() {
           })}
         </div>
       )}
+
+      {!isLoading && sorted.length > 0 ? <AutoScrollControls /> : null}
     </div>
   );
 }
