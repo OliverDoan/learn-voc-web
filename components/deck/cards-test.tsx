@@ -68,7 +68,7 @@ export function CardsTest({ cards }: CardsTestProps) {
         )}
       </div>
 
-      <div className="overflow-x-auto rounded-xl border">
+      <div className="overflow-x-auto rounded-xl border bg-card">
         <table className="w-full border-collapse text-sm">
           <thead className="sticky top-0 z-10 bg-muted/60 backdrop-blur">
             <tr>
