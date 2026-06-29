@@ -20,22 +20,6 @@ import {
 import { speak } from "@/lib/tts";
 import type { Card } from "@/lib/types";
 
-const stateColors: Record<string, "default" | "secondary" | "success" | "warning" | "outline"> = {
-  NEW: "secondary",
-  LEARNING: "warning",
-  REVIEW: "default",
-  MATURE: "success",
-  SUSPENDED: "outline",
-};
-
-const stateLabels: Record<string, string> = {
-  NEW: "Mới",
-  LEARNING: "Đang học",
-  REVIEW: "Ôn tập",
-  MATURE: "Thuộc",
-  SUSPENDED: "Tạm dừng",
-};
-
 interface CardDetailDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -95,12 +79,6 @@ export function CardDetailDialog({
         </DialogHeader>
 
         <div className="space-y-4">
-          <div className="flex flex-wrap items-center gap-2">
-            <Badge variant={stateColors[card.state] ?? "secondary"} className="text-xs">
-              {stateLabels[card.state] ?? card.state}
-            </Badge>
-          </div>
-
           <p className="text-lg font-medium">{card.meaning}</p>
 
           {root ? (
@@ -160,22 +138,24 @@ export function CardDetailDialog({
                               <span className={isCurrent ? "font-semibold text-primary" : "font-medium"}>
                                 {value}
                               </span>
-                              <Button
-                                variant="ghost"
-                                size="icon"
-                                className="h-6 w-6 shrink-0"
-                                onClick={() => speak(value)}
-                                aria-label={`Phát âm ${value}`}
-                              >
-                                <Volume2 className="h-3.5 w-3.5" />
-                              </Button>
+                              <span className="text-muted-foreground">
+                                ({WORD_FORM_ABBR[pos]})
+                              </span>
                             </span>
-                          </td>
-                          <td className="w-12 px-2 py-2 align-top text-muted-foreground">
-                            ({WORD_FORM_ABBR[pos]})
                           </td>
                           <td className="px-3 py-2 align-top text-muted-foreground">
                             {meaning ?? ""}
+                          </td>
+                          <td className="w-10 px-2 py-2 align-top text-right">
+                            <Button
+                              variant="ghost"
+                              size="icon"
+                              className="h-6 w-6 shrink-0"
+                              onClick={() => speak(value)}
+                              aria-label={`Phát âm ${value}`}
+                            >
+                              <Volume2 className="h-3.5 w-3.5" />
+                            </Button>
                           </td>
                         </tr>
                       );

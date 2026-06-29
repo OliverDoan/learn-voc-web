@@ -16,6 +16,7 @@ import {
   Pencil,
   Play,
   Plus,
+  Sprout,
   Square,
   SquareCheck,
   Star,
@@ -52,6 +53,7 @@ import { useDeck, useDeleteDeck, useRestoreDeck } from "@/hooks/use-decks";
 import {
   cardPosCategories,
   cn,
+  displayRootWord,
   parseTags,
   posBadgeClass,
   POS_FILTERS,
@@ -435,6 +437,16 @@ export default function DeckDetailPage({ params }: PageProps) {
             ) : null}
             <span className="text-sm text-muted-foreground">{card.meaning}</span>
           </span>
+          {displayRootWord(card.word, card.rootWord) ? (
+            <span className="inline-flex flex-wrap items-center gap-1 text-xs text-primary">
+              <Sprout className="h-3 w-3 shrink-0" />
+              <span className="text-muted-foreground">Từ gốc:</span>
+              <span className="font-medium">{displayRootWord(card.word, card.rootWord)}</span>
+              {card.rootWordMeaning ? (
+                <span className="text-muted-foreground">— {card.rootWordMeaning}</span>
+              ) : null}
+            </span>
+          ) : null}
           {card.example ? (
             <span className="truncate text-xs italic text-muted-foreground">
               &ldquo;{card.example}&rdquo;
