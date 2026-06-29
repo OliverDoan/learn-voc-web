@@ -123,6 +123,7 @@ export function StoryEditor({ deckId, story, onDone, onCancel }: StoryEditorProp
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder="VD: Buổi sáng yên bình"
+              className="bg-card shadow-sm"
             />
           </div>
 
@@ -166,6 +167,7 @@ export function StoryEditor({ deckId, story, onDone, onCancel }: StoryEditorProp
                 value={imageUrl ?? ""}
                 onChange={(e) => setImageUrl(e.target.value)}
                 placeholder="hoặc dán URL ảnh: https://..."
+                className="bg-card shadow-sm"
               />
             ) : null}
             <p className="text-xs text-muted-foreground">
@@ -184,7 +186,7 @@ export function StoryEditor({ deckId, story, onDone, onCancel }: StoryEditorProp
               value={content}
               onChange={(e) => setContent(e.target.value)}
               rows={14}
-              className="font-mono text-sm"
+              className="bg-card font-mono text-sm shadow-sm"
               placeholder={
                 "Sáng nay tôi [[wake up|thức dậy]] lúc 6h, cảm thấy [[exhausted|kiệt sức]]..."
               }

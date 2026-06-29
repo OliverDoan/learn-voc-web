@@ -49,7 +49,7 @@ export function CardsFilterBar({
             "inline-flex items-center gap-1 rounded-md border px-3 py-1 text-xs transition-colors",
             favoriteOnly
               ? "border-amber-400 bg-amber-400/10 text-amber-500"
-              : "border-border text-muted-foreground hover:border-amber-400/40 hover:text-foreground",
+              : "border-border bg-card text-muted-foreground shadow-sm hover:border-amber-400/40 hover:text-foreground",
           )}
           aria-pressed={favoriteOnly}
         >
@@ -64,7 +64,7 @@ export function CardsFilterBar({
               "inline-flex items-center gap-1 rounded-md border px-3 py-1 text-xs transition-colors",
               groupByTag
                 ? "border-primary bg-primary/10 text-primary"
-                : "border-border text-muted-foreground hover:border-primary/40 hover:text-foreground",
+                : "border-border bg-card text-muted-foreground shadow-sm hover:border-primary/40 hover:text-foreground",
             )}
             aria-pressed={groupByTag}
           >
@@ -95,7 +95,7 @@ export function CardsFilterBar({
                   "rounded-full border px-2 py-0.5 text-xs font-medium transition-colors",
                   active
                     ? posBadgeClass(key)
-                    : "border-border text-muted-foreground hover:border-primary/40 hover:text-foreground",
+                    : "border-border bg-card text-muted-foreground shadow-sm hover:border-primary/40 hover:text-foreground",
                 )}
                 aria-pressed={active}
               >
@@ -122,7 +122,7 @@ export function CardsFilterBar({
                   "rounded-full border px-2 py-0.5 text-xs transition-colors",
                   active
                     ? "border-primary bg-primary/15 text-primary"
-                    : "border-border text-muted-foreground hover:border-primary/40 hover:text-foreground",
+                    : "border-border bg-card text-muted-foreground shadow-sm hover:border-primary/40 hover:text-foreground",
                 )}
               >
                 {tag}

@@ -654,7 +654,7 @@ export default function DeckDetailPage({ params }: PageProps) {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Tìm từ hoặc nghĩa..."
-          className="max-w-xs"
+          className="max-w-xs bg-card shadow-sm"
         />
         <div className="flex flex-wrap gap-2">
           <Button
