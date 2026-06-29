@@ -27,8 +27,25 @@ model Deck {
   updatedAt   DateTime @updatedAt
   cards       Card[]
   stories     Story[]
+  activities  DeckActivity[]
 
   @@index([deletedAt])
+}
+
+// Theo dõi hoàn thành từng dạng bài tập của một deck (để biết "đã làm hết bài tập chưa").
+model DeckActivity {
+  id           String   @id @default(cuid())
+  deckId       String
+  deck         Deck     @relation(fields: [deckId], references: [id], onDelete: Cascade)
+  // Loại hoạt động: study | multiple-choice | typing | listening | gap-fill | word-formation | matching | test | flashcards | pronounce
+  activity     String
+  // Độ chính xác tốt nhất (0-100). null = dạng không chấm điểm (matching, flashcards)
+  bestAccuracy Int?
+  completedAt  DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@unique([deckId, activity])
+  @@index([deckId])
 }
 
 model Card {

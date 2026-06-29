@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, RotateCcw, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useRecordDeckActivity } from "@/hooks/use-decks";
 import { cn } from "@/lib/utils";
 import type { Card } from "@/lib/types";
 
@@ -255,6 +256,7 @@ function Column({ title, slots, matched, selectedKey, wrongKey, onClick }: Colum
 
 export function MatchingGameLauncher({ deckId, cards }: { deckId: string; cards: Card[] }) {
   const [round, setRound] = useState(0);
+  const recordActivity = useRecordDeckActivity(deckId);
   return (
     <div className="flex flex-col items-center gap-4">
       <MatchingGame
@@ -262,7 +264,8 @@ export function MatchingGameLauncher({ deckId, cards }: { deckId: string; cards:
         deckId={deckId}
         cards={cards}
         onComplete={() => {
-          /* result rendered inside component */
+          // Ghép cặp không chấm điểm: hoàn thành = đã làm (accuracy null). Bỏ qua deck ảo "all".
+          if (deckId !== "all") recordActivity.mutate({ activity: "matching", accuracy: null });
         }}
       />
       <Button variant="outline" onClick={() => setRound((r) => r + 1)}>

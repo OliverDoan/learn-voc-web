@@ -1,6 +1,6 @@
 "use client";
 
-import { use, useEffect, useMemo, useState } from "react";
+import { use, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import {
@@ -30,7 +30,7 @@ import { WordFormationQuiz } from "@/components/quiz/word-formation-quiz";
 import { MatchingGameLauncher } from "@/components/quiz/matching-game";
 import { TestModeQuiz } from "@/components/quiz/test-mode-quiz";
 import { useCards } from "@/hooks/use-cards";
-import { useDeck } from "@/hooks/use-decks";
+import { useDeck, useRecordDeckActivity } from "@/hooks/use-decks";
 import { useSubmitReview } from "@/hooks/use-study";
 import { haptic } from "@/lib/haptic";
 import { gapFillEligibleCards } from "@/lib/gap-fill";
@@ -278,6 +278,8 @@ function QuizRunner({
   const [correct, setCorrect] = useState(0);
   const [done, setDone] = useState(false);
   const submit = useSubmitReview();
+  const recordActivity = useRecordDeckActivity(deckId);
+  const recordedRef = useRef(false);
 
   // Đóng băng danh sách thẻ khi bắt đầu phiên quiz. Mỗi lần submit review sẽ
   // invalidate query ["cards"] khiến danh sách gốc bị refetch & xáo trộn lại;
@@ -335,7 +337,17 @@ function QuizRunner({
     setDone(false);
     setIndex(0);
     setCorrect(0);
+    recordedRef.current = false;
   }, [mode]);
+
+  // Ghi nhận hoàn thành dạng quiz (kèm độ chính xác) khi kết thúc phiên — chỉ cho deck thật.
+  useEffect(() => {
+    if (done && !recordedRef.current && deckId !== "all" && total > 0) {
+      recordedRef.current = true;
+      recordActivity.mutate({ activity: mode, accuracy: Math.round((correct / total) * 100) });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [done, deckId, total, correct, mode]);
 
   if (done) {
     const pct = total === 0 ? 0 : Math.round((correct / total) * 100);

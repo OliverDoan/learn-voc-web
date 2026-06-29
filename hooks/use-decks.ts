@@ -74,6 +74,22 @@ export function useSetDeckLearned(deckId: string) {
   });
 }
 
+/** Ghi nhận hoàn thành một dạng bài tập của deck (cập nhật thanh progress + điều kiện mở khóa). */
+export function useRecordDeckActivity(deckId: string) {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (input: { activity: string; accuracy?: number | null }) =>
+      apiPost<{ activity: string; bestAccuracy: number | null }>(
+        `/api/decks/${deckId}/activity`,
+        input,
+      ),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["decks", deckId] });
+      qc.invalidateQueries({ queryKey: DECKS_KEY });
+    },
+  });
+}
+
 export function useImportDeck() {
   const qc = useQueryClient();
   return useMutation({

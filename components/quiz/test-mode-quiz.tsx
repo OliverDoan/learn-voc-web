@@ -1,12 +1,13 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowLeft, Check, CheckCircle2, Volume2, X } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
+import { useRecordDeckActivity } from "@/hooks/use-decks";
 import { useSubmitReview } from "@/hooks/use-study";
 import { haptic } from "@/lib/haptic";
 import { speak } from "@/lib/tts";
@@ -43,6 +44,8 @@ export function TestModeQuiz({
   onExit,
 }: TestModeQuizProps) {
   const submit = useSubmitReview();
+  const recordActivity = useRecordDeckActivity(deckId);
+  const recordedRef = useRef(false);
 
   // Đóng băng danh sách câu hỏi + đáp án khi vào phiên (tránh refetch xáo trộn giữa chừng).
   const [questions] = useState(() => cards);
@@ -84,6 +87,15 @@ export function TestModeQuiz({
     () => Array.from(answers.values()).filter((a) => a.correct).length,
     [answers],
   );
+
+  // Ghi nhận hoàn thành dạng "Làm bài" (kèm độ chính xác) khi nộp — chỉ cho deck thật.
+  useEffect(() => {
+    if (done && !recordedRef.current && deckId !== "all" && total > 0) {
+      recordedRef.current = true;
+      recordActivity.mutate({ activity: "test", accuracy: Math.round((correctCount / total) * 100) });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [done, deckId, total, correctCount]);
 
   if (!current) return null;
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { use, useCallback, useEffect, useMemo, useState } from "react";
+import { use, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { ArrowLeft, ArrowLeftRight, CheckCircle2, Loader2, Lock, PartyPopper, Sparkles } from "lucide-react";
@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Flashcard } from "@/components/flashcard/flashcard";
 import { RatingButtons } from "@/components/flashcard/rating-buttons";
-import { useDeck } from "@/hooks/use-decks";
+import { useDeck, useRecordDeckActivity } from "@/hooks/use-decks";
 import { useStudyQueue, useSubmitReview } from "@/hooks/use-study";
 import { previewIntervals } from "@/lib/srs";
 import { speak } from "@/lib/tts";
@@ -35,6 +35,8 @@ export default function StudyPage({ params }: PageProps) {
   // Bỏ qua kiểm tra khóa với ôn liên deck ("all") hoặc ôn tập tập con tự chọn.
   const { data: deck } = useDeck(deckId === "all" || isSubset ? undefined : deckId);
   const submit = useSubmitReview();
+  const recordActivity = useRecordDeckActivity(deckId);
+  const recordedRef = useRef(false);
 
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
@@ -117,6 +119,15 @@ export default function StudyPage({ params }: PageProps) {
     return () => window.removeEventListener("keydown", onKey);
   }, [flipped, handleRate, done]);
 
+  // Ghi nhận hoàn thành dạng "Học (SRS)" (kèm độ chính xác) khi xong phiên — chỉ cho deck thật.
+  useEffect(() => {
+    if (done && !recordedRef.current && deckId !== "all" && total > 0) {
+      recordedRef.current = true;
+      recordActivity.mutate({ activity: "study", accuracy: Math.round((correct / total) * 100) });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [done, deckId, total, correct]);
+
   if (isLoading) {
     return (
       <div className="flex h-[60vh] items-center justify-center">
@@ -144,6 +155,7 @@ export default function StudyPage({ params }: PageProps) {
           setFlipped(false);
           setCorrect(0);
           setDone(false);
+          recordedRef.current = false;
           refetch();
         }}
       />

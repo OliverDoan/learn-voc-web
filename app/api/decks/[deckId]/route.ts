@@ -2,7 +2,9 @@ import { NextRequest } from "next/server";
 import { prisma } from "@/lib/db";
 import { fail, handleError, ok } from "@/lib/api-helpers";
 import { computeDeckLockStatus } from "@/lib/deck-progress";
+import { buildExerciseStatus } from "@/lib/deck-activities";
 import { deckUpdateSchema } from "@/lib/schemas";
+import type { Card } from "@/lib/types";
 
 interface RouteParams {
   params: Promise<{ deckId: string }>;
@@ -25,7 +27,22 @@ export async function GET(_req: NextRequest, { params }: RouteParams) {
       learned: deck.learnedAt != null,
       locked: false,
     };
-    return ok({ ...deck, learned: status.learned, locked: status.locked });
+    // Trạng thái các dạng bài tập khả dụng (để vẽ thanh progress + gating).
+    const [cards, activityRows] = await Promise.all([
+      prisma.card.findMany({ where: { deckId, deletedAt: null } }),
+      prisma.deckActivity.findMany({
+        where: { deckId },
+        select: { activity: true, bestAccuracy: true },
+      }),
+    ]);
+    const { exercises, allDone } = buildExerciseStatus(cards as unknown as Card[], activityRows);
+    return ok({
+      ...deck,
+      learned: status.learned,
+      locked: status.locked,
+      exercises,
+      exercisesDone: allDone,
+    });
   } catch (error) {
     return handleError(error);
   }

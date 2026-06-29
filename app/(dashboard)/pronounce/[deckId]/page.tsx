@@ -1,6 +1,6 @@
 "use client";
 
-import { use, useCallback, useEffect, useMemo, useState } from "react";
+import { use, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import {
@@ -16,7 +16,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { useCards } from "@/hooks/use-cards";
-import { useDeck } from "@/hooks/use-decks";
+import { useDeck, useRecordDeckActivity } from "@/hooks/use-decks";
 import { useSpeechRecognition, type SpeechResult } from "@/hooks/use-speech-recognition";
 import { matchPronunciation } from "@/lib/speech-recognition";
 import {
@@ -66,6 +66,8 @@ export default function PronouncePage({ params }: PageProps) {
   const [threshold, setThreshold] = useState<number>(() =>
     thresholdForDifficulty("normal"),
   );
+  const recordActivity = useRecordDeckActivity(deckId);
+  const recordedRef = useRef(false);
 
   useEffect(() => {
     setThreshold(thresholdForDifficulty(getPronounceDifficulty()));
@@ -115,6 +117,7 @@ export default function PronouncePage({ params }: PageProps) {
     resetAttempt();
     setScores({});
     setPos(0);
+    recordedRef.current = false;
   }, [stop, resetAttempt]);
 
   const retry = useCallback(() => {
@@ -146,6 +149,16 @@ export default function PronouncePage({ params }: PageProps) {
     () => Object.values(scores).filter(Boolean).length,
     [scores],
   );
+
+  // Ghi nhận hoàn thành dạng "Phát âm" (kèm độ chính xác) khi xem kết quả — chỉ cho deck thật.
+  const finished = total > 0 && pos >= total;
+  useEffect(() => {
+    if (finished && !recordedRef.current && deckId !== "all") {
+      recordedRef.current = true;
+      recordActivity.mutate({ activity: "pronounce", accuracy: Math.round((correctCount / total) * 100) });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [finished, deckId, correctCount, total]);
 
   if (isLoading) {
     return (

@@ -13,6 +13,21 @@ export interface Deck {
   updatedAt: string;
 }
 
+// Một bản ghi hoàn thành dạng bài tập (best-accuracy). Trả về từ endpoint ghi nhận.
+export interface DeckActivityRecord {
+  activity: string;
+  bestAccuracy: number | null;
+}
+
+// Trạng thái một dạng bài tập khả dụng của deck (server tính, dùng cho thanh progress).
+export interface DeckExerciseStatus {
+  key: string;
+  label: string;
+  scored: boolean;
+  done: boolean;
+  bestAccuracy: number | null;
+}
+
 export interface DeckWithCounts extends Deck {
   _count: { cards: number; stories: number };
   due: number;
@@ -20,6 +35,9 @@ export interface DeckWithCounts extends Deck {
   // Trạng thái suy diễn (server tính từ learnedAt + thứ tự Unit)
   learned: boolean;
   locked: boolean;
+  // Chỉ có ở chi tiết deck: các dạng bài tập khả dụng + cờ đã làm hết.
+  exercises?: DeckExerciseStatus[];
+  exercisesDone?: boolean;
 }
 
 export interface Card {

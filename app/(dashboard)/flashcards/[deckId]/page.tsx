@@ -1,6 +1,6 @@
 "use client";
 
-import { use, useCallback, useEffect, useMemo, useState } from "react";
+import { use, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import {
@@ -18,7 +18,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Flashcard } from "@/components/flashcard/flashcard";
 import { useCards } from "@/hooks/use-cards";
-import { useDeck } from "@/hooks/use-decks";
+import { useDeck, useRecordDeckActivity } from "@/hooks/use-decks";
 import { speak } from "@/lib/tts";
 import type { Card } from "@/lib/types";
 
@@ -70,6 +70,11 @@ export default function FlashcardsPage({ params }: PageProps) {
   const [shuffled, setShuffled] = useState(false);
   const [autoSpeak, setAutoSpeak] = useState(true);
 
+  // Theo dõi đã xem hết thẻ chưa để ghi nhận hoàn thành dạng "Lật thẻ" (không chấm điểm).
+  const recordActivity = useRecordDeckActivity(deckId);
+  const viewedRef = useRef<Set<number>>(new Set());
+  const fcRecordedRef = useRef(false);
+
   // Khôi phục tuỳ chọn đã lưu.
   useEffect(() => {
     setReverse(localStorage.getItem("voca-fc-reverse") === "1");
@@ -81,10 +86,23 @@ export default function FlashcardsPage({ params }: PageProps) {
     setOrder(shuffled ? shuffleArray(baseCards) : baseCards);
     setPos(0);
     setFlipped(false);
+    viewedRef.current = new Set();
+    fcRecordedRef.current = false;
   }, [baseCards, shuffled]);
 
   const total = order.length;
   const current = order[pos];
+
+  // Đánh dấu vị trí đã xem; khi xem hết 1 lượt thì ghi nhận hoàn thành "Lật thẻ".
+  useEffect(() => {
+    if (total === 0) return;
+    viewedRef.current.add(pos);
+    if (viewedRef.current.size >= total && !fcRecordedRef.current && deckId !== "all") {
+      fcRecordedRef.current = true;
+      recordActivity.mutate({ activity: "flashcards", accuracy: null });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pos, total, deckId]);
 
   // Tự phát âm tiếng Anh khi sang thẻ mới (mặt từ).
   useEffect(() => {

@@ -35,6 +35,7 @@ import { useConfirm } from "@/components/ui/confirm-dialog";
 import { AutoScrollControls } from "@/components/ui/auto-scroll-controls";
 import { PageLoader } from "@/components/ui/page-loader";
 import { CardFormDialog } from "@/components/deck/card-form-dialog";
+import { DeckExerciseProgress } from "@/components/deck/deck-exercise-progress";
 import { CardDetailDialog } from "@/components/deck/card-detail-dialog";
 import { DeckFormDialog } from "@/components/deck/deck-form-dialog";
 import { ImportCardsDialog } from "@/components/deck/import-cards-dialog";
@@ -535,8 +536,18 @@ export default function DeckDetailPage({ params }: PageProps) {
           )}
           <Button
             variant={deck.learned ? "default" : "outline"}
-            disabled={deck.locked || setLearnedMut.isPending}
-            title={deck.locked ? "Hoàn thành các Unit trước để mở khóa" : undefined}
+            disabled={
+              deck.locked ||
+              setLearnedMut.isPending ||
+              (!deck.learned && !deck.exercisesDone)
+            }
+            title={
+              deck.locked
+                ? "Hoàn thành các Unit trước để mở khóa"
+                : !deck.learned && !deck.exercisesDone
+                  ? "Cần làm hết các dạng bài tập trước"
+                  : undefined
+            }
             onClick={async () => {
               try {
                 await setLearnedMut.mutateAsync(!deck.learned);
@@ -631,6 +642,10 @@ export default function DeckDetailPage({ params }: PageProps) {
           </div>
         </div>
       </div>
+
+      {!deck.locked ? (
+        <DeckExerciseProgress exercises={deck.exercises ?? []} />
+      ) : null}
 
       <StoryList deckId={deckId} />
 

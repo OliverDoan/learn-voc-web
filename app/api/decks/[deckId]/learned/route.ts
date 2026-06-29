@@ -2,6 +2,8 @@ import { NextRequest } from "next/server";
 import { prisma } from "@/lib/db";
 import { fail, handleError, ok } from "@/lib/api-helpers";
 import { isDeckUnlocked } from "@/lib/deck-progress";
+import { allExercisesDone } from "@/lib/deck-activities";
+import type { Card } from "@/lib/types";
 
 interface RouteParams {
   params: Promise<{ deckId: string }>;
@@ -16,6 +18,18 @@ export async function POST(_req: NextRequest, { params }: RouteParams) {
 
     if (!(await isDeckUnlocked(deckId))) {
       return fail("Cần học xong các Unit trước để mở khóa deck này", 400);
+    }
+
+    // Bắt buộc làm hết các dạng bài tập khả dụng trước khi đánh dấu học xong.
+    const [cards, activities] = await Promise.all([
+      prisma.card.findMany({ where: { deckId, deletedAt: null } }),
+      prisma.deckActivity.findMany({
+        where: { deckId },
+        select: { activity: true, bestAccuracy: true },
+      }),
+    ]);
+    if (!allExercisesDone(cards as unknown as Card[], activities)) {
+      return fail("Cần hoàn thành tất cả dạng bài tập của deck trước khi đánh dấu học xong", 400);
     }
 
     const updated = await prisma.deck.update({

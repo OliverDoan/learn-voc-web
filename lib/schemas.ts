@@ -186,3 +186,22 @@ export const cardReorderSchema = z.object({
 });
 
 export type CardReorderInput = z.infer<typeof cardReorderSchema>;
+
+// Ghi nhận hoàn thành một dạng bài tập của deck
+export const deckActivitySchema = z.object({
+  activity: z.enum([
+    "study",
+    "multiple-choice",
+    "typing",
+    "listening",
+    "gap-fill",
+    "word-formation",
+    "matching",
+    "test",
+    "flashcards",
+    "pronounce",
+  ]),
+  accuracy: z.number().int().min(0).max(100).optional().nullable(),
+});
+
+export type DeckActivityInput = z.infer<typeof deckActivitySchema>;
