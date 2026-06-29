@@ -8,6 +8,7 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { useConfirm } from "@/components/ui/confirm-dialog";
 import { ImageLightbox } from "@/components/ui/image-lightbox";
+import { PageLoader } from "@/components/ui/page-loader";
 import { StoryRenderer } from "@/components/story/story-renderer";
 import { ReadingSpeedControl } from "@/components/story/reading-speed-control";
 import { useDeleteStory, useStory } from "@/hooks/use-stories";
@@ -85,7 +86,7 @@ export default function StoryViewPage({ params }: PageProps) {
   };
 
   if (isLoading) {
-    return <div className="p-6">Đang tải...</div>;
+    return <PageLoader />;
   }
   if (!story) {
     return <div className="p-6">Không tìm thấy truyện</div>;
@@ -118,7 +119,8 @@ export default function StoryViewPage({ params }: PageProps) {
         <ImageLightbox
           src={story.imageUrl}
           alt={story.title}
-          className="mb-6 max-h-[300px] w-full rounded-xl shadow-md"
+          className="mb-6 w-full rounded-xl shadow-md"
+          imgClassName="h-auto w-full object-contain"
         />
       ) : null}
 

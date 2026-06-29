@@ -32,6 +32,7 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { useConfirm } from "@/components/ui/confirm-dialog";
 import { AutoScrollControls } from "@/components/ui/auto-scroll-controls";
+import { PageLoader } from "@/components/ui/page-loader";
 import { CardFormDialog } from "@/components/deck/card-form-dialog";
 import { CardDetailDialog } from "@/components/deck/card-detail-dialog";
 import { DeckFormDialog } from "@/components/deck/deck-form-dialog";
@@ -475,7 +476,7 @@ export default function DeckDetailPage({ params }: PageProps) {
   };
 
   if (deckLoading) {
-    return <div className="container mx-auto max-w-5xl p-6">Đang tải...</div>;
+    return <PageLoader />;
   }
   if (!deck) {
     return (
@@ -712,7 +713,7 @@ export default function DeckDetailPage({ params }: PageProps) {
       ) : null}
 
       {cardsLoading ? (
-        <p className="text-center text-muted-foreground">Đang tải...</p>
+        <PageLoader className="min-h-[40vh]" />
       ) : !cards || cards.length === 0 ? (
         <div className="flex flex-col items-center rounded-xl border border-dashed py-12 text-center">
           <p className="mb-4 text-muted-foreground">Chưa có từ nào</p>

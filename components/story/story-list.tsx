@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { BookOpen, Plus } from "lucide-react";
+import { BookOpen, Loader2, Plus } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -26,7 +26,9 @@ export function StoryList({ deckId }: StoryListProps) {
       </div>
 
       {isLoading ? (
-        <p className="text-sm text-muted-foreground">Đang tải...</p>
+        <div className="flex justify-center py-6">
+          <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
+        </div>
       ) : !stories || stories.length === 0 ? (
         <div className="rounded-xl border border-dashed p-8 text-center">
           <p className="mb-3 text-sm text-muted-foreground">
