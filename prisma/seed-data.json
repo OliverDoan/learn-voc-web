@@ -93,7 +93,7 @@
     {
       "id": "cmqhiwpus0000o9zk69lp6ax3",
       "name": "Unit 10: Khu phố mới của tôi và bạn gái",
-      "description": "Bộ từ vựng Unit 10",
+      "description": "Từ vựng về khu phố, hàng xóm và tiện ích quanh nhà",
       "color": "#10b981",
       "icon": "🏘️",
       "deletedAt": null,
@@ -103,7 +103,7 @@
     {
       "id": "cmqhiwpvk001do9zkvkgseajx",
       "name": "Unit 11: Chuyến du lịch đầu tiên của hai người",
-      "description": "Bộ từ vựng Unit 11",
+      "description": "Từ vựng về du lịch: đặt vé, hành trình và trải nghiệm",
       "color": "#3b82f6",
       "icon": "✈️",
       "deletedAt": null,
@@ -113,7 +113,7 @@
     {
       "id": "cmqhiwpwf002qo9zkvynf1ccr",
       "name": "Unit 12: Một ngày tham quan cùng nhau",
-      "description": "Bộ từ vựng Unit 12",
+      "description": "Từ vựng về tham quan, danh lam thắng cảnh và di tích",
       "color": "#8b5cf6",
       "icon": "🏛️",
       "deletedAt": null,
@@ -123,7 +123,7 @@
     {
       "id": "cmqhiwpxr0043o9zkwr7iejvr",
       "name": "Unit 13: Mùa cưới và lễ hội",
-      "description": "Bộ từ vựng Unit 13",
+      "description": "Từ vựng về đám cưới, lễ hội và phong tục truyền thống",
       "color": "#ec4899",
       "icon": "🎉",
       "deletedAt": null,
@@ -133,7 +133,7 @@
     {
       "id": "cmqhiwpym005go9zktdy2orqz",
       "name": "Unit 14: Khác biệt văn hoá của tôi và bạn gái",
-      "description": "Bộ từ vựng Unit 14",
+      "description": "Từ vựng về văn hoá, phong tục và khác biệt vùng miền",
       "color": "#f59e0b",
       "icon": "🛕",
       "deletedAt": null,
@@ -143,7 +143,7 @@
     {
       "id": "cmqhiwpzc006to9zk5qkvc4i6",
       "name": "Unit 15: Bạn gái và thời tiết quê tôi",
-      "description": "Bộ từ vựng Unit 15",
+      "description": "Từ vựng về thời tiết, khí hậu và các mùa trong năm",
       "color": "#10b981",
       "icon": "⛅",
       "deletedAt": null,
@@ -153,7 +153,7 @@
     {
       "id": "cmqsy8s000000o955l89j9t6f",
       "name": "Unit 16: Bữa tối tôi và bạn gái cùng nấu",
-      "description": "Bộ từ vựng Unit 16",
+      "description": "Từ vựng về nấu ăn, món ăn và nguyên liệu bữa tối",
       "color": "#3b82f6",
       "icon": "🍳",
       "deletedAt": null,
@@ -163,7 +163,7 @@
     {
       "id": "cmqsy8xni001do9556sahdzuj",
       "name": "Unit 17: Một tối ở quán và bài học detox",
-      "description": "Bộ từ vựng Unit 17",
+      "description": "Từ vựng về đồ uống, quán xá và lối sống lành mạnh",
       "color": "#8b5cf6",
       "icon": "🍻",
       "deletedAt": null,
@@ -173,7 +173,7 @@
     {
       "id": "cmqsy92qm002qo955etek5fwn",
       "name": "Unit 18: Tôi tập nấu theo công thức",
-      "description": "Bộ từ vựng Unit 18",
+      "description": "Từ vựng về công thức nấu ăn và các bước chế biến",
       "color": "#ec4899",
       "icon": "👨‍🍳",
       "deletedAt": null,
@@ -183,7 +183,7 @@
     {
       "id": "cmqsy97xr0043o955z9itq79d",
       "name": "Unit 19: Chuyển sang ăn uống lành mạnh",
-      "description": "Bộ từ vựng Unit 19",
+      "description": "Từ vựng về dinh dưỡng, thực phẩm lành mạnh và ăn kiêng",
       "color": "#f59e0b",
       "icon": "🥗",
       "deletedAt": null,
@@ -193,7 +193,7 @@
     {
       "id": "cmqsy9d1k005go955zzowylty",
       "name": "Unit 20: Khu vườn rau trái sau nhà",
-      "description": "Bộ từ vựng Unit 20",
+      "description": "Từ vựng về làm vườn, rau củ và cây ăn trái",
       "color": "#10b981",
       "icon": "🌱",
       "deletedAt": null,

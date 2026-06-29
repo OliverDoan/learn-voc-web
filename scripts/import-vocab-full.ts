@@ -111,7 +111,7 @@ async function main() {
       deck = await prisma.deck.create({
         data: {
           name: ws.name.trim(),
-          description: `Bộ từ vựng ${ws.name.trim()}`,
+          description: "",
           color: DECK_COLORS[(n - 1) % DECK_COLORS.length],
         },
       });
