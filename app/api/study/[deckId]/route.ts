@@ -5,6 +5,7 @@ import {
   getGlobalReviewQueue,
   getReviewQueue,
 } from "@/lib/daily-queue";
+import { isDeckUnlocked } from "@/lib/deck-progress";
 
 interface RouteParams {
   params: Promise<{ deckId: string }>;
@@ -37,6 +38,11 @@ export async function GET(req: NextRequest, { params }: RouteParams) {
     if (cardIds) {
       const queue = await getReviewQueue(deckId, { cardIds });
       return ok(queue);
+    }
+
+    // Deck bị khóa (Unit trước chưa học xong) → trả queue rỗng để trang Học hiện màn hình khóa.
+    if (!(await isDeckUnlocked(deckId))) {
+      return ok([]);
     }
 
     const limitParam = url.searchParams.get("limit");

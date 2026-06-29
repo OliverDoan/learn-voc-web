@@ -6,6 +6,8 @@ export interface Deck {
   icon: string | null;
   // JSON string các cột tùy chỉnh dạng bảng (parse bằng lib/custom-columns)
   customColumns: string;
+  // Thời điểm đánh dấu "đã học xong" (null = chưa). Dùng cho khóa tuần tự.
+  learnedAt: string | null;
   deletedAt: string | null;
   createdAt: string;
   updatedAt: string;
@@ -15,6 +17,9 @@ export interface DeckWithCounts extends Deck {
   _count: { cards: number; stories: number };
   due: number;
   newCount: number;
+  // Trạng thái suy diễn (server tính từ learnedAt + thứ tự Unit)
+  learned: boolean;
+  locked: boolean;
 }
 
 export interface Card {

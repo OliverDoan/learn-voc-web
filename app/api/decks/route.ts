@@ -1,6 +1,7 @@
 import { NextRequest } from "next/server";
 import { prisma } from "@/lib/db";
 import { handleError, ok } from "@/lib/api-helpers";
+import { computeDeckLockStatus } from "@/lib/deck-progress";
 import { deckCreateSchema } from "@/lib/schemas";
 
 export async function GET() {
@@ -13,6 +14,7 @@ export async function GET() {
       },
     });
     const now = new Date();
+    const lockStatus = computeDeckLockStatus(decks);
     const enriched = await Promise.all(
       decks.map(async (d) => {
         const [due, newCount] = await Promise.all([
@@ -26,7 +28,8 @@ export async function GET() {
           }),
           prisma.card.count({ where: { deckId: d.id, deletedAt: null, state: "NEW" } }),
         ]);
-        return { ...d, due, newCount };
+        const status = lockStatus.get(d.id) ?? { learned: d.learnedAt != null, locked: false };
+        return { ...d, due, newCount, learned: status.learned, locked: status.locked };
       }),
     );
     return ok(enriched);

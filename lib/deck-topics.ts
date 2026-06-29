@@ -1,3 +1,4 @@
+import { getDeckUnitNumber } from "@/lib/deck-progress";
 import type { DeckWithCounts } from "@/lib/types";
 
 /** Số deck mỗi topic. */
@@ -20,10 +21,7 @@ export interface DeckTopicGroup {
 }
 
 /** Lấy số thứ tự Unit từ tên deck ("Unit 10: ..." → 10); không có → null. */
-function unitNumber(name: string): number | null {
-  const match = name.match(/unit\s*(\d+)/i);
-  return match ? Number(match[1]) : null;
-}
+const unitNumber = getDeckUnitNumber;
 
 /**
  * Gom các deck thành topic, mỗi topic gồm tối đa 5 unit liên tiếp

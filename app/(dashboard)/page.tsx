@@ -19,15 +19,16 @@ export default function DashboardPage() {
   const { data: stats, isLoading: sLoading } = useStats(365);
   const { data: weakWords } = useWeakWords();
 
+  // Chỉ tính deck đã mở khóa (deck bị khóa chưa thể ôn/quiz).
   const totalDue = useMemo(
-    () => (decks ? decks.reduce((sum, d) => sum + d.due, 0) : 0),
+    () => (decks ? decks.filter((d) => !d.locked).reduce((sum, d) => sum + d.due, 0) : 0),
     [decks],
   );
 
   const dueDecks = useMemo(
     () =>
       (decks ?? [])
-        .filter((d) => d.due > 0)
+        .filter((d) => !d.locked && d.due > 0)
         .sort((a, b) => b.due - a.due)
         .slice(0, 4),
     [decks],

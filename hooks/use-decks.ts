@@ -57,6 +57,23 @@ export function useUpdateDeck(deckId: string) {
   });
 }
 
+/** Đánh dấu / bỏ đánh dấu deck đã học xong (mở khóa tuần tự kiểu Duolingo). */
+export function useSetDeckLearned(deckId: string) {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (learned: boolean) =>
+      learned
+        ? apiPost<Deck>(`/api/decks/${deckId}/learned`, {})
+        : apiDelete<Deck>(`/api/decks/${deckId}/learned`),
+    onSuccess: () => {
+      // Toàn bộ trạng thái khóa của các deck khác có thể đổi → làm mới danh sách.
+      qc.invalidateQueries({ queryKey: DECKS_KEY });
+      qc.invalidateQueries({ queryKey: ["decks", deckId] });
+      qc.invalidateQueries({ queryKey: ["stats"] });
+    },
+  });
+}
+
 export function useImportDeck() {
   const qc = useQueryClient();
   return useMutation({

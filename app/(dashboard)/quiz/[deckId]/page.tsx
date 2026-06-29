@@ -12,6 +12,7 @@ import {
   LayoutGrid,
   ListChecks,
   Loader2,
+  Lock,
   PenLine,
   Puzzle,
   Repeat,
@@ -29,6 +30,7 @@ import { WordFormationQuiz } from "@/components/quiz/word-formation-quiz";
 import { MatchingGameLauncher } from "@/components/quiz/matching-game";
 import { TestModeQuiz } from "@/components/quiz/test-mode-quiz";
 import { useCards } from "@/hooks/use-cards";
+import { useDeck } from "@/hooks/use-decks";
 import { useSubmitReview } from "@/hooks/use-study";
 import { haptic } from "@/lib/haptic";
 import { gapFillEligibleCards } from "@/lib/gap-fill";
@@ -91,6 +93,8 @@ export default function QuizPage({ params }: PageProps) {
   };
 
   const { data: allCards, isLoading } = useCards(deckId === "all" ? {} : { deckId });
+  // Bỏ qua kiểm tra khóa với quiz liên deck ("all") hoặc tập con tự chọn.
+  const { data: deck } = useDeck(deckId === "all" || isSubset ? undefined : deckId);
 
   const subsetCards = useMemo(() => {
     if (!allCards || !subsetIds) return allCards ?? [];
@@ -119,6 +123,23 @@ export default function QuizPage({ params }: PageProps) {
     return (
       <div className="flex h-[60vh] items-center justify-center">
         <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
+      </div>
+    );
+  }
+
+  if (deck?.locked) {
+    return (
+      <div className="container mx-auto max-w-xl p-6 text-center">
+        <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-muted text-muted-foreground">
+          <Lock className="h-8 w-8" />
+        </div>
+        <h2 className="mb-2 text-2xl font-bold">Deck đang khóa</h2>
+        <p className="mb-6 text-muted-foreground">
+          Hãy hoàn thành (đánh dấu &ldquo;đã học xong&rdquo;) các Unit trước để mở khóa quiz của deck này.
+        </p>
+        <Link href={backHref}>
+          <Button variant="outline">{backLabel}</Button>
+        </Link>
       </div>
     );
   }

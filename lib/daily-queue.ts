@@ -106,10 +106,13 @@ export async function getGlobalReviewQueue(): Promise<QueueCard[]> {
   });
   const dailyGoal = progress?.dailyGoal ?? DEFAULT_DAILY_GOAL;
 
+  // Ôn gộp chỉ lấy thẻ từ deck ĐÃ HỌC XONG (learnedAt != null).
+  const learnedDeckFilter = { deletedAt: null, learnedAt: { not: null } } as const;
+
   const reviewCards = await prisma.card.findMany({
     where: {
       deletedAt: null,
-      deck: { deletedAt: null },
+      deck: learnedDeckFilter,
       state: { not: "NEW" },
       nextReviewDate: { lte: now },
     },
@@ -119,7 +122,7 @@ export async function getGlobalReviewQueue(): Promise<QueueCard[]> {
   const remaining = Math.max(0, dailyGoal - reviewCards.length);
   const newCards = remaining > 0
     ? await prisma.card.findMany({
-        where: { deletedAt: null, deck: { deletedAt: null }, state: "NEW" },
+        where: { deletedAt: null, deck: learnedDeckFilter, state: "NEW" },
         orderBy: { createdAt: "asc" },
         take: remaining,
       })

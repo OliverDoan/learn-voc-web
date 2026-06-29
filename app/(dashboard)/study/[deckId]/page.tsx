@@ -3,12 +3,13 @@
 import { use, useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { ArrowLeft, ArrowLeftRight, CheckCircle2, Loader2, PartyPopper, Sparkles } from "lucide-react";
+import { ArrowLeft, ArrowLeftRight, CheckCircle2, Loader2, Lock, PartyPopper, Sparkles } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Flashcard } from "@/components/flashcard/flashcard";
 import { RatingButtons } from "@/components/flashcard/rating-buttons";
+import { useDeck } from "@/hooks/use-decks";
 import { useStudyQueue, useSubmitReview } from "@/hooks/use-study";
 import { previewIntervals } from "@/lib/srs";
 import { speak } from "@/lib/tts";
@@ -31,6 +32,8 @@ export default function StudyPage({ params }: PageProps) {
   const backHref = deckId === "all" ? "/" : `/decks/${deckId}`;
 
   const { data: queue, isLoading, refetch } = useStudyQueue(deckId, subsetIds);
+  // Bỏ qua kiểm tra khóa với ôn liên deck ("all") hoặc ôn tập tập con tự chọn.
+  const { data: deck } = useDeck(deckId === "all" || isSubset ? undefined : deckId);
   const submit = useSubmitReview();
 
   const [index, setIndex] = useState(0);
@@ -122,6 +125,10 @@ export default function StudyPage({ params }: PageProps) {
     );
   }
 
+  if (deck?.locked) {
+    return <LockedScreen backHref={backHref} />;
+  }
+
   if (!queue || queue.length === 0) {
     return <EmptyQueue backHref={backHref} />;
   }
@@ -209,6 +216,23 @@ export default function StudyPage({ params }: PageProps) {
           </Button>
         )}
       </div>
+    </div>
+  );
+}
+
+function LockedScreen({ backHref }: { backHref: string }) {
+  return (
+    <div className="container mx-auto max-w-xl p-6 text-center">
+      <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-muted text-muted-foreground">
+        <Lock className="h-8 w-8" />
+      </div>
+      <h2 className="mb-2 text-2xl font-bold">Deck đang khóa</h2>
+      <p className="mb-6 text-muted-foreground">
+        Hãy hoàn thành (đánh dấu &ldquo;đã học xong&rdquo;) các Unit trước để mở khóa deck này.
+      </p>
+      <Link href={backHref}>
+        <Button variant="outline" className="rounded-full">Quay lại</Button>
+      </Link>
     </div>
   );
 }

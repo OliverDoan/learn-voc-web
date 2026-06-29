@@ -11,6 +11,7 @@ import {
   GripVertical,
   Layers,
   List,
+  Lock,
   Mic,
   MoreVertical,
   Pencil,
@@ -50,7 +51,7 @@ import {
   useRestoreCard,
   useToggleFavorite,
 } from "@/hooks/use-cards";
-import { useDeck, useDeleteDeck, useRestoreDeck } from "@/hooks/use-decks";
+import { useDeck, useDeleteDeck, useRestoreDeck, useSetDeckLearned } from "@/hooks/use-decks";
 import {
   cardPosCategories,
   cn,
@@ -102,6 +103,7 @@ export default function DeckDetailPage({ params }: PageProps) {
   const reorderMut = useReorderCards();
   const deleteDeckMut = useDeleteDeck();
   const restoreDeckMut = useRestoreDeck();
+  const setLearnedMut = useSetDeckLearned(deckId);
   const { confirm, confirmDialog } = useConfirm();
 
   const availableTags = useMemo(() => {
@@ -518,12 +520,44 @@ export default function DeckDetailPage({ params }: PageProps) {
         </div>
 
         <div className="flex flex-wrap items-center gap-2">
-          <Link href={`/study/${deckId}`}>
-            <Button>
-              <Play className="h-4 w-4" />
-              Bắt đầu ôn
+          {deck.locked ? (
+            <Button disabled title="Hoàn thành deck trước để mở khóa">
+              <Lock className="h-4 w-4" />
+              Đang khóa
             </Button>
-          </Link>
+          ) : (
+            <Link href={`/study/${deckId}`}>
+              <Button>
+                <Play className="h-4 w-4" />
+                Bắt đầu ôn
+              </Button>
+            </Link>
+          )}
+          <Button
+            variant={deck.learned ? "default" : "outline"}
+            disabled={deck.locked || setLearnedMut.isPending}
+            title={deck.locked ? "Hoàn thành các Unit trước để mở khóa" : undefined}
+            onClick={async () => {
+              try {
+                await setLearnedMut.mutateAsync(!deck.learned);
+                toast.success(
+                  deck.learned ? "Đã bỏ đánh dấu học xong" : "Đã đánh dấu học xong 🎉",
+                );
+              } catch (error) {
+                toast.error(error instanceof Error ? error.message : "Lỗi cập nhật");
+              }
+            }}
+          >
+            {deck.learned ? (
+              <>
+                <SquareCheck className="h-4 w-4" /> Đã học xong
+              </>
+            ) : (
+              <>
+                <Check className="h-4 w-4" /> Đánh dấu học xong
+              </>
+            )}
+          </Button>
           <ReadAllButton cards={cards ?? []} />
 
           {/* Gom các hành động phụ vào menu ⋯ */}
@@ -547,13 +581,22 @@ export default function DeckDetailPage({ params }: PageProps) {
                   >
                     <Layers className="h-4 w-4" /> Flashcard
                   </Link>
-                  <Link
-                    href={`/quiz/${deckId}`}
-                    onClick={() => setActionsOpen(false)}
-                    className="flex items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
-                  >
-                    <BookOpen className="h-4 w-4" /> Quiz
-                  </Link>
+                  {deck.locked ? (
+                    <div
+                      className="flex cursor-not-allowed items-center gap-2 rounded-md px-2 py-2 text-sm text-muted-foreground/60"
+                      title="Hoàn thành deck trước để mở khóa"
+                    >
+                      <Lock className="h-4 w-4" /> Quiz (đang khóa)
+                    </div>
+                  ) : (
+                    <Link
+                      href={`/quiz/${deckId}`}
+                      onClick={() => setActionsOpen(false)}
+                      className="flex items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
+                    >
+                      <BookOpen className="h-4 w-4" /> Quiz
+                    </Link>
+                  )}
                   <Link
                     href={`/pronounce/${deckId}`}
                     onClick={() => setActionsOpen(false)}
@@ -800,13 +843,24 @@ export default function DeckDetailPage({ params }: PageProps) {
                 </span>
               </div>
               <div className="flex flex-wrap items-center gap-2">
-                <Button size="sm" onClick={goStudySelected}>
+                <Button
+                  size="sm"
+                  onClick={goStudySelected}
+                  disabled={deck.locked}
+                  title={deck.locked ? "Hoàn thành deck trước để mở khóa" : undefined}
+                >
                   <Play className="h-4 w-4" /> Ôn
                 </Button>
                 <Button size="sm" variant="outline" onClick={goFlashcardsSelected}>
                   <Layers className="h-4 w-4" /> Lật thẻ
                 </Button>
-                <Button size="sm" variant="outline" onClick={goQuizSelected}>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  onClick={goQuizSelected}
+                  disabled={deck.locked}
+                  title={deck.locked ? "Hoàn thành deck trước để mở khóa" : undefined}
+                >
                   <BookOpen className="h-4 w-4" /> Quiz
                 </Button>
                 <Button size="sm" variant="outline" onClick={goPronounceSelected}>
