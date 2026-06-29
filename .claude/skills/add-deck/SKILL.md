@@ -60,23 +60,29 @@ pnpm add:deck tmp-deck.json
 ```
 Script validate bằng Zod (báo lỗi rõ nếu sai field), tạo deck + thẻ, giữ thứ tự theo file.
 
-### 4. Cập nhật note "cùng họ từ" (word family chéo deck)
-Sau khi thêm từ mới, kiểm tra xem có từ nào **cùng họ từ** (word formation: đổi từ
-loại; hoặc từ ghép cùng gốc) với từ ở deck khác không. Nếu có:
+### 4. Cập nhật note quan hệ giữa các từ chéo deck
+Sau khi thêm từ mới, kiểm tra quan hệ của chúng với từ ở deck khác. Có **2 loại note**
+(lưu chung trong field `note`, mỗi loại một dòng marker riêng):
 
-1. Mở `scripts/add-wordfamily-notes.ts`, thêm cụm mới vào mảng `FAMILIES`
-   (mỗi family = danh sách `word` chính xác, lowercase). Ví dụ thêm
-   `["healthy", "unhealthy", "health"]`.
-2. Chạy lại (idempotent — tự xoá dòng cũ, chỉ ghi family chéo ≥ 2 deck):
-   ```bash
-   pnpm notes:wordfamily          # DRY-RUN, xem trước
-   APPLY=1 pnpm notes:wordfamily  # ghi thật vào field note
-   ```
-Note hiện dạng `📚 Cùng họ từ: engineering (n) – Unit 2` lúc học. Quy ước phân loại:
-- **A. Word family thật** (derivation, đổi từ loại) — luôn thêm.
-- **B. Từ ghép cùng gốc** (vd `roommate`↔`room`) — thêm nếu muốn.
+- `📚 Cùng họ từ` — **word family**: derivation (đổi từ loại) hoặc từ ghép cùng gốc.
+- `🔗 Từ liên quan` — **đồng nghĩa / cùng trường nghĩa** (vd `chance`↔`opportunity`).
+
+Mở `scripts/add-wordfamily-notes.ts`, thêm cụm mới vào mảng tương ứng (mỗi cụm =
+danh sách `word` chính xác, lowercase):
+- Word family → thêm vào `FAMILIES`, vd `["healthy", "unhealthy", "health"]`.
+- Từ liên quan → thêm vào `RELATED`, vd `["chef", "cook"]` (đầu bếp).
+
+Rồi chạy lại (idempotent — tự xoá dòng marker cũ, chỉ ghi cụm chéo ≥ 2 deck):
+```bash
+pnpm notes:wordfamily          # DRY-RUN, xem trước
+APPLY=1 pnpm notes:wordfamily  # ghi thật vào field note
+```
+Note hiện dạng `📚 Cùng họ từ: engineering (n) – Unit 2` lúc học. Quy ước:
+- **Word family**: A = derivation (luôn thêm), B = từ ghép cùng gốc (`roommate`↔`room`).
+- **Từ liên quan**: ưu tiên đồng nghĩa / cùng trường nghĩa rõ ràng; có thể là cặp đối
+  lập gần (`modern`↔`traditional`). Tránh nhóm quá rộng gây nhiễu.
 - **Trùng từ y hệt khác deck** (cùng `word`, cùng nghĩa) — KHÔNG phải word family;
-  báo người dùng cân nhắc xoá bớt (giống cách xử lý từ trùng), đừng ghi note.
+  báo người dùng cân nhắc xoá bớt, đừng ghi note.
 - Cẩn thận **dương tính giả** cùng chữ nhưng khác gốc (vd `career`≠`care`,
   `generous`≠`general`) — không gom.
 

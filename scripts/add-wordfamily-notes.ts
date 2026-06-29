@@ -1,21 +1,22 @@
 /**
- * Ghi quan hệ "cùng họ từ" (word family) chéo deck vào field `note` của từng card.
- * Idempotent: tự xoá dòng "📚 Cùng họ từ" cũ trước khi ghi lại, giữ nguyên phần note khác.
+ * Ghi quan hệ giữa các từ chéo deck vào field `note`:
+ *   📚 Cùng họ từ   = word family (derivation / từ ghép cùng gốc)
+ *   🔗 Từ liên quan = đồng nghĩa / cùng trường nghĩa
+ * Idempotent: tự xoá các dòng marker cũ trước khi ghi lại, giữ phần note khác.
  *
  * Mặc định DRY-RUN (chỉ in, không ghi). Ghi thật: APPLY=1.
- * Chạy: npx tsx --env-file=.env scripts/add-wordfamily-notes.ts
- *       APPLY=1 npx tsx --env-file=.env scripts/add-wordfamily-notes.ts
+ * Chạy: pnpm notes:wordfamily            (xem trước)
+ *       APPLY=1 pnpm notes:wordfamily    (ghi thật)
  */
 import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 const DRY = process.env.APPLY !== "1";
-const MARKER = "📚 Cùng họ từ";
+const MARK_FAM = "📚 Cùng họ từ";
+const MARK_REL = "🔗 Từ liên quan";
 
-// Mỗi family = danh sách từ thành viên (so khớp chính xác, lowercase).
-// A = word family thật, B = từ ghép cùng gốc, C = borderline (secretary↔secret).
+// Word family (A: derivation đổi từ loại, B: từ ghép cùng gốc, C: borderline).
 const FAMILIES: string[][] = [
-  // A. Word family (đổi từ loại)
   ["beginner", "beginning"],
   ["memorise", "memory"],
   ["engineering", "engineer"],
@@ -42,13 +43,51 @@ const FAMILIES: string[][] = [
   ["lover", "lovely", "loved one"],
   ["season", "seasoning"],
   ["useless", "useful"],
-  // B. Từ ghép cùng gốc
   ["hometown", "homestay"],
   ["housewife", "housemate"],
   ["room", "roommate"],
   ["stir-fry", "stir"],
-  // C. Borderline
   ["secretary", "secret"],
+];
+
+// Từ liên quan (đồng nghĩa / cùng trường nghĩa). Mỗi nhóm cần >= 2 deck mới ghi.
+const RELATED: string[][] = [
+  ["chance", "opportunity"], // cơ hội
+  ["expensive", "pricey"], // đắt đỏ
+  ["cheap", "affordable", "reasonable"], // rẻ / phải chăng / hợp lý
+  ["cook", "chef"], // đầu bếp
+  ["yummy", "tasty", "delicious"], // ngon
+  ["awful", "nasty", "terrible", "crappy"], // tệ / kinh khủng
+  ["visitor", "tourist", "guest"], // khách / du khách
+  ["scared", "nervous"], // sợ / lo lắng
+  ["bustling", "lively", "vibrant"], // nhộn nhịp / sôi động
+  ["crowded", "cramped"], // đông đúc / chật chội
+  ["district", "neighbourhood", "area", "block"], // khu vực / khu phố
+  ["highway", "alley", "pavement", "route"], // đường / lối đi
+  ["accommodation", "flat", "place"], // chỗ ở / nơi
+  ["topic", "subject"], // chủ đề
+  ["course", "curriculum"], // khoá học / chương trình
+  ["understand", "know"], // hiểu / biết
+  ["announce", "inform", "tell"], // thông báo
+  ["improve", "develop"], // cải thiện / phát triển
+  ["common", "popular", "normal", "familiar", "typical"], // phổ biến / bình thường
+  ["difficulty", "challenging", "complicated"], // khó / thử thách / phức tạp
+  ["comfortable", "cosy", "chilled", "pleasant"], // thoải mái / dễ chịu
+  ["safe", "security"], // an toàn / an ninh
+  ["avoid", "escape"], // tránh / trốn
+  ["surprise", "amazing"], // bất ngờ / kinh ngạc
+  ["control", "manage"], // điều khiển / quản lý
+  ["modern", "traditional"], // hiện đại <-> truyền thống
+  ["religion", "Buddhist", "believe", "pray", "priest"], // tôn giáo
+  ["holiday", "leisure"], // nghỉ ngơi / thời gian rảnh
+  ["view", "sightseeing"], // khung cảnh / ngắm cảnh
+  ["boil", "grill", "stir-fry", "roast"], // cách nấu
+  ["stir", "pour", "add", "mix"], // thao tác bếp
+  ["groceries", "ingredient"], // nguyên liệu / thực phẩm
+  ["taste", "flavour"], // nếm / hương vị
+  ["sweet", "savoury", "spicy", "oily", "sour"], // vị (hương vị)
+  ["hangry", "thirsty", "hunger"], // đói / khát
+  ["crop", "plant", "harvest"], // trồng trọt
 ];
 
 function unitNum(deckName: string): number {
@@ -67,24 +106,48 @@ function posShort(pos: string | null): string {
     .trim();
 }
 
-/** Bỏ dòng marker cũ, giữ phần còn lại của note. */
-function stripMarker(note: string | null): string {
+/** Bỏ các dòng marker cũ, giữ phần còn lại của note. */
+function stripMarkers(note: string | null): string {
   if (!note) return "";
   return note
     .split("\n")
-    .filter((line) => !line.startsWith(MARKER))
+    .filter((line) => !line.startsWith(MARK_FAM) && !line.startsWith(MARK_REL))
     .join("\n")
     .trim();
 }
 
+type CardRow = { id: string; word: string; partOfSpeech: string | null; note: string | null; deck: { name: string } };
+type Member = { word: string; pos: string; unit: number };
+
+/** cardId -> danh sách thành viên khác (cùng nhóm, đã loại chính nó). */
+function buildRelations(groups: string[][], byWord: Map<string, CardRow[]>): Map<string, Member[]> {
+  const result = new Map<string, Member[]>();
+  for (const group of groups) {
+    const cards = group.flatMap((w) => byWord.get(w.toLowerCase()) ?? []);
+    if (new Set(cards.map((c) => c.deck.name)).size < 2) continue; // chỉ ghi nhóm chéo deck
+    for (const self of cards) {
+      const others = cards
+        .filter((o) => o.id !== self.id)
+        .map((o) => ({ word: o.word, pos: posShort(o.partOfSpeech), unit: unitNum(o.deck.name) }))
+        .sort((a, b) => a.unit - b.unit);
+      if (others.length) result.set(self.id, others);
+    }
+  }
+  return result;
+}
+
+function formatLine(marker: string, members: Member[]): string {
+  const list = members.map((m) => `${m.word}${m.pos ? ` (${m.pos})` : ""} – Unit ${m.unit}`).join(", ");
+  return `${marker}: ${list}`;
+}
+
 async function main() {
-  const cards = await prisma.card.findMany({
+  const cards = (await prisma.card.findMany({
     where: { deletedAt: null, deck: { deletedAt: null } },
     include: { deck: true },
-  });
+  })) as CardRow[];
 
-  // word(lowercase) -> các card khớp
-  const byWord = new Map<string, typeof cards>();
+  const byWord = new Map<string, CardRow[]>();
   for (const c of cards) {
     const key = c.word.trim().toLowerCase();
     const arr = byWord.get(key) ?? [];
@@ -92,44 +155,24 @@ async function main() {
     byWord.set(key, arr);
   }
 
-  // cardId -> danh sách "thành viên khác" cần ghi
-  const noteFor = new Map<string, { word: string; pos: string; unit: number }[]>();
-
-  for (const fam of FAMILIES) {
-    // gom mọi card thuộc family
-    const memberCards = fam.flatMap((w) => byWord.get(w.toLowerCase()) ?? []);
-    const decks = new Set(memberCards.map((c) => c.deckId));
-    if (decks.size < 2) continue; // chỉ ghi family chéo deck
-
-    for (const self of memberCards) {
-      const others = memberCards
-        .filter((o) => o.id !== self.id)
-        .map((o) => ({ word: o.word, pos: posShort(o.partOfSpeech), unit: unitNum(o.deck.name) }))
-        .sort((a, b) => a.unit - b.unit);
-      if (others.length) noteFor.set(self.id, others);
-    }
-  }
+  const famRel = buildRelations(FAMILIES, byWord);
+  const relRel = buildRelations(RELATED, byWord);
 
   let changed = 0;
   for (const c of cards) {
-    const others = noteFor.get(c.id);
-    const base = stripMarker(c.note);
-    let newNote: string | null;
-    if (others && others.length) {
-      const list = others.map((o) => `${o.word}${o.pos ? ` (${o.pos})` : ""} – Unit ${o.unit}`).join(", ");
-      const line = others.length === 1 ? `${MARKER}: ${list}` : `${MARKER}: ${list}`;
-      newNote = base ? `${base}\n${line}` : line;
-    } else {
-      // không thuộc family -> đảm bảo không còn marker cũ sót
-      newNote = base || null;
-    }
+    const base = stripMarkers(c.note);
+    const lines: string[] = [];
+    const fam = famRel.get(c.id);
+    const rel = relRel.get(c.id);
+    if (fam) lines.push(formatLine(MARK_FAM, fam));
+    if (rel) lines.push(formatLine(MARK_REL, rel));
 
-    if (newNote !== (c.note ?? null) && (others?.length || (c.note && c.note.includes(MARKER)))) {
+    const newNote = [base, ...lines].filter(Boolean).join("\n") || null;
+    const hadMarker = !!c.note && (c.note.includes(MARK_FAM) || c.note.includes(MARK_REL));
+    if (newNote !== (c.note ?? null) && (lines.length || hadMarker)) {
       changed++;
       console.log(`U${unitNum(c.deck.name)} ${c.word.padEnd(16)} => ${newNote?.replace(/\n/g, " ⏎ ")}`);
-      if (!DRY) {
-        await prisma.card.update({ where: { id: c.id }, data: { note: newNote } });
-      }
+      if (!DRY) await prisma.card.update({ where: { id: c.id }, data: { note: newNote } });
     }
   }
 
