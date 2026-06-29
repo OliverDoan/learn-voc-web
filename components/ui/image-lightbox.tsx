@@ -9,13 +9,15 @@ interface ImageLightboxProps {
   alt: string;
   /** Class cho ảnh thu nhỏ (giữ nguyên kiểu hiển thị sẵn có). */
   className?: string;
+  /** Class cho thẻ <img> bên trong. Mặc định crop (object-cover). */
+  imgClassName?: string;
 }
 
 /**
  * Ảnh thu nhỏ; nhấn vào sẽ mở overlay xem ảnh phóng to.
  * Nhấn ra ngoài, nút X hoặc phím Esc để đóng.
  */
-export function ImageLightbox({ src, alt, className }: ImageLightboxProps) {
+export function ImageLightbox({ src, alt, className, imgClassName }: ImageLightboxProps) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -40,7 +42,7 @@ export function ImageLightbox({ src, alt, className }: ImageLightboxProps) {
         className={cn("group relative block cursor-zoom-in overflow-hidden", className)}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={src} alt={alt} className="h-full w-full object-cover" />
+        <img src={src} alt={alt} className={cn("h-full w-full object-cover", imgClassName)} />
         <span className="absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition-all group-hover:bg-black/25 group-hover:opacity-100">
           <ZoomIn className="h-7 w-7 text-white drop-shadow" />
         </span>

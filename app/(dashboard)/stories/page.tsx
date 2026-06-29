@@ -6,6 +6,7 @@ import {
   BookOpen,
   Eye,
   EyeOff,
+  Image as ImageIcon,
   Library,
   Play,
   Square,
@@ -17,6 +18,8 @@ import { Badge } from "@/components/ui/badge";
 import { StoryRenderer } from "@/components/story/story-renderer";
 import { ReadingSpeedControl } from "@/components/story/reading-speed-control";
 import { AutoScrollControls } from "@/components/ui/auto-scroll-controls";
+import { PageLoader } from "@/components/ui/page-loader";
+import { Tooltip } from "@/components/ui/tooltip";
 import { useStories } from "@/hooks/use-stories";
 import { useReadingRate } from "@/hooks/use-reading-rate";
 import { countWordTokens, parseStory } from "@/lib/story-parser";
@@ -34,6 +37,8 @@ export default function AllStoriesPage() {
   const { data: stories, isLoading } = useStories();
   const [showMeanings, setShowMeanings] = useState(false);
   const [hideWords, setHideWords] = useState(false);
+  // Chế độ chỉ xem ảnh: ẩn tiêu đề + từ chêm + văn bản, chỉ hiện ảnh truyện
+  const [imageOnly, setImageOnly] = useState(false);
   // index của truyện đang được đọc to (null = không đọc)
   const [readingIndex, setReadingIndex] = useState<number | null>(null);
   // "Thẻ phiên đọc": mỗi lần bắt đầu đọc tăng 1; vòng lặp cũ tự thoát khi không còn khớp
@@ -66,6 +71,8 @@ export default function AllStoriesPage() {
     () => sorted.reduce((sum, s) => sum + countWordTokens(s.content), 0),
     [sorted],
   );
+
+  const hasImages = useMemo(() => sorted.some((s) => Boolean(s.imageUrl)), [sorted]);
 
   const stopReading = () => {
     genRef.current += 1; // vô hiệu hoá vòng đọc hiện tại
@@ -130,52 +137,106 @@ export default function AllStoriesPage() {
 
       {/* Thanh điều khiển dính ở đầu trang */}
       <div className="sticky top-2 z-20 mb-6 flex flex-wrap justify-center gap-2 rounded-full border bg-card/95 p-2 shadow-sm backdrop-blur">
-        <Button
-          variant={readingIndex !== null ? "default" : "outline"}
-          size="sm"
-          className="rounded-full"
-          onClick={handleToggleReadAll}
-          disabled={isLoading || sorted.length === 0}
-        >
-          {readingIndex !== null ? (
-            <Square className="h-4 w-4 fill-current" />
-          ) : (
-            <Volume2 className="h-4 w-4" />
-          )}
-          {readingIndex !== null ? "Dừng" : "Đọc to toàn bộ"}
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          className="rounded-full"
-          onClick={() => setShowMeanings((v) => !v)}
-        >
-          {showMeanings ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-          {showMeanings ? "Ẩn nghĩa" : "Hiện nghĩa"}
-        </Button>
-        <Button
-          variant={hideWords ? "default" : "outline"}
-          size="sm"
-          className="rounded-full"
-          onClick={() => setHideWords((v) => !v)}
-        >
-          <Target className="h-4 w-4" />
-          {hideWords ? "Hiện từ" : "Ẩn từ chêm"}
-        </Button>
-        <ReadingSpeedControl rate={rate} onChange={setRate} />
+        {!imageOnly ? (
+          <>
+            <Tooltip label={readingIndex !== null ? "Dừng" : "Đọc to toàn bộ"}>
+              <Button
+                variant={readingIndex !== null ? "default" : "outline"}
+                size="icon"
+                className="rounded-full"
+                aria-label={readingIndex !== null ? "Dừng" : "Đọc to toàn bộ"}
+                onClick={handleToggleReadAll}
+                disabled={isLoading || sorted.length === 0}
+              >
+                {readingIndex !== null ? (
+                  <Square className="h-4 w-4 fill-current" />
+                ) : (
+                  <Volume2 className="h-4 w-4" />
+                )}
+              </Button>
+            </Tooltip>
+            <Tooltip label={showMeanings ? "Ẩn nghĩa" : "Hiện nghĩa"}>
+              <Button
+                variant="outline"
+                size="icon"
+                className="rounded-full"
+                aria-label={showMeanings ? "Ẩn nghĩa" : "Hiện nghĩa"}
+                onClick={() => setShowMeanings((v) => !v)}
+              >
+                {showMeanings ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+              </Button>
+            </Tooltip>
+            <Tooltip label={hideWords ? "Hiện từ" : "Ẩn từ chêm"}>
+              <Button
+                variant={hideWords ? "default" : "outline"}
+                size="icon"
+                className="rounded-full"
+                aria-label={hideWords ? "Hiện từ" : "Ẩn từ chêm"}
+                onClick={() => setHideWords((v) => !v)}
+              >
+                <Target className="h-4 w-4" />
+              </Button>
+            </Tooltip>
+            <ReadingSpeedControl rate={rate} onChange={setRate} />
+          </>
+        ) : null}
+        <Tooltip label={imageOnly ? "Xem đầy đủ" : "Chỉ xem ảnh"}>
+          <Button
+            variant={imageOnly ? "default" : "outline"}
+            size="icon"
+            className="rounded-full"
+            aria-label={imageOnly ? "Xem đầy đủ" : "Chỉ xem ảnh"}
+            onClick={() => {
+              // Dừng đọc khi chuyển sang chế độ chỉ xem ảnh
+              if (!imageOnly && readingIndex !== null) stopReading();
+              setImageOnly((v) => !v);
+            }}
+          >
+            <ImageIcon className="h-4 w-4" />
+          </Button>
+        </Tooltip>
       </div>
 
       {isLoading ? (
-        <p className="text-center text-sm text-muted-foreground">Đang tải...</p>
+        <PageLoader className="min-h-[40vh]" />
       ) : sorted.length === 0 ? (
         <div className="rounded-2xl border border-dashed p-10 text-center">
           <p className="text-sm text-muted-foreground">
             Chưa có truyện chêm nào. Hãy tạo truyện trong từng deck.
           </p>
         </div>
+      ) : imageOnly && !hasImages ? (
+        <div className="rounded-2xl border border-dashed p-10 text-center">
+          <p className="text-sm text-muted-foreground">
+            Chưa có truyện nào kèm ảnh để xem.
+          </p>
+        </div>
       ) : (
         <div className="space-y-10">
           {sorted.map((story, i) => {
+            // Chế độ chỉ xem ảnh: bỏ qua truyện không có ảnh, chỉ hiện ảnh có link mở truyện
+            if (imageOnly) {
+              if (!story.imageUrl) return null;
+              return (
+                <Link
+                  key={story.id}
+                  href={`/stories/${story.id}`}
+                  className="group relative block overflow-hidden rounded-2xl shadow-[0_24px_64px_rgba(0,13,139,.08)] transition-transform hover:scale-[1.01]"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={story.imageUrl}
+                    alt={story.title}
+                    className="h-auto w-full object-contain"
+                  />
+                  {/* Tên deck dạng overlay góc trên trái */}
+                  <span className="absolute left-3 top-3 inline-flex max-w-[calc(100%-1.5rem)] items-center gap-1 truncate rounded-full bg-black/60 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
+                    <BookOpen className="h-3 w-3 shrink-0" />
+                    {story.deck.name}
+                  </span>
+                </Link>
+              );
+            }
             const reading = readingIndex === i;
             return (
               <article
@@ -213,7 +274,7 @@ export default function AllStoriesPage() {
                   <img
                     src={story.imageUrl}
                     alt={story.title}
-                    className="mb-5 max-h-[300px] w-full rounded-xl object-cover shadow-md"
+                    className="mb-5 h-auto w-full rounded-xl object-contain shadow-md"
                   />
                 ) : null}
 
