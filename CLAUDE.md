@@ -8,7 +8,7 @@
 - **Framework**: Next.js 14+ (App Router) + TypeScript
 - **Styling**: Tailwind CSS + shadcn/ui
 - **State**: Zustand (client), TanStack Query (server cache)
-- **DB**: SQLite + Prisma (local file `prisma/dev.db`)
+- **DB**: PostgreSQL (Neon) + Prisma — connection qua `DATABASE_URL` (file `prisma/dev.db` SQLite cũ đã bỏ, không dùng nữa)
 - **Animation**: Framer Motion
 - **Charts**: Recharts
 - **Icons**: Lucide React
@@ -87,7 +87,7 @@ Xem `vocab-app-spec.md` section 2. Tóm tắt models:
 - `Story` — truyện chêm (content có markup `[[word|nghĩa]]`)
 - `StoryCard` — link Story ↔ Card
 
-> SQLite không hỗ trợ `String[]` native — dùng JSON string (parse khi đọc) hoặc relation table cho `tags`.
+> `tags`/`synonyms`/`antonyms` lưu dạng JSON string (parse khi đọc) cho gọn — giữ từ thời SQLite, vẫn dùng vậy trên Postgres.
 
 ## SRS Algorithm (SM-2)
 

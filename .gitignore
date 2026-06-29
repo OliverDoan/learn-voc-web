@@ -42,3 +42,8 @@ yarn-error.log*
 next-env.d.ts
 
 /node_modules/.prisma/client
+
+# local SQLite (legacy, app dùng Postgres/Neon)
+prisma/dev.db
+prisma/*.db
+prisma/*.db-journal
