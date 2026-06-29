@@ -24,7 +24,8 @@
     "gen:root-meanings": "tsx --env-file=.env scripts/generate-root-meanings.ts",
     "gen:examples:dict": "tsx --env-file=.env scripts/generate-examples-dict.ts",
     "data:export": "tsx --env-file=.env scripts/export-data.ts",
-    "data:load": "tsx --env-file=.env scripts/load-data.ts"
+    "data:load": "tsx --env-file=.env scripts/load-data.ts",
+    "notes:wordfamily": "tsx --env-file=.env scripts/add-wordfamily-notes.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.99.0",

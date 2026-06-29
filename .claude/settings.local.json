@@ -112,7 +112,23 @@
       "Bash(pnpm run *)",
       "Bash(nslookup ep-autumn-shadow-aiay052q.c-4.us-east-1.aws.neon.tech)",
       "Bash(grep -nA3 \"deckUpdateSchema\" lib/schemas.ts)",
-      "Bash(xargs -I{} sh -c 'echo \"{}\"; grep -c customColumns \"{}\"')"
+      "Bash(xargs -I{} sh -c 'echo \"{}\"; grep -c customColumns \"{}\"')",
+      "Bash(cat)",
+      "Bash(cp /tmp/sync-desc.ts ./scripts/_sync-desc-temp.ts)",
+      "Bash(grep -E \"^/Users.*\\\\.\\(ts|tsx\\)$\")",
+      "Bash(sqlite3 prisma/dev.db -json \"SELECT d.name AS deck, c.word AS word, COALESCE\\(c.partOfSpeech,''\\) AS pos, COALESCE\\(c.rootWord,''\\) AS root FROM Card c JOIN Deck d ON d.id=c.deckId ORDER BY d.name, c.[order];\")",
+      "Bash(python3 -)",
+      "Bash(python3 -c \"import datetime; print\\('U1/U7 updated:', datetime.datetime.fromtimestamp\\(1781667635218/1000\\)\\)\")",
+      "Bash(cp prisma/dev.db prisma/dev.db.bak-stale)",
+      "Bash(rm prisma/dev.db)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(git checkout *)",
+      "Bash(rm -f prisma/dev.db.bak-stale)",
+      "Bash(git rm *)",
+      "Bash(printf '\\\\n# local SQLite \\(legacy, app dùng Postgres/Neon\\)\\\\nprisma/dev.db\\\\nprisma/*.db\\\\nprisma/*.db-journal\\\\n')",
+      "Bash(awk '{print $5, $NF}')",
+      "Bash(APPLY=1 npx tsx --env-file=.env scripts/add-wordfamily-notes.ts)",
+      "Read(//Users/doanvietthuan/.claude/**)"
     ]
   }
 }

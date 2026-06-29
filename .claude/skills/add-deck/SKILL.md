@@ -60,13 +60,33 @@ pnpm add:deck tmp-deck.json
 ```
 Script validate bằng Zod (báo lỗi rõ nếu sai field), tạo deck + thẻ, giữ thứ tự theo file.
 
-### 4. Đồng bộ seed + dọn dẹp
+### 4. Cập nhật note "cùng họ từ" (word family chéo deck)
+Sau khi thêm từ mới, kiểm tra xem có từ nào **cùng họ từ** (word formation: đổi từ
+loại; hoặc từ ghép cùng gốc) với từ ở deck khác không. Nếu có:
+
+1. Mở `scripts/add-wordfamily-notes.ts`, thêm cụm mới vào mảng `FAMILIES`
+   (mỗi family = danh sách `word` chính xác, lowercase). Ví dụ thêm
+   `["healthy", "unhealthy", "health"]`.
+2. Chạy lại (idempotent — tự xoá dòng cũ, chỉ ghi family chéo ≥ 2 deck):
+   ```bash
+   pnpm notes:wordfamily          # DRY-RUN, xem trước
+   APPLY=1 pnpm notes:wordfamily  # ghi thật vào field note
+   ```
+Note hiện dạng `📚 Cùng họ từ: engineering (n) – Unit 2` lúc học. Quy ước phân loại:
+- **A. Word family thật** (derivation, đổi từ loại) — luôn thêm.
+- **B. Từ ghép cùng gốc** (vd `roommate`↔`room`) — thêm nếu muốn.
+- **Trùng từ y hệt khác deck** (cùng `word`, cùng nghĩa) — KHÔNG phải word family;
+  báo người dùng cân nhắc xoá bớt (giống cách xử lý từ trùng), đừng ghi note.
+- Cẩn thận **dương tính giả** cùng chữ nhưng khác gốc (vd `career`≠`care`,
+  `generous`≠`general`) — không gom.
+
+### 5. Đồng bộ seed + dọn dẹp
 ```bash
 pnpm data:export        # cập nhật prisma/seed-data.json từ DB
 ```
 Rồi **xoá file tạm** `tmp-deck.json`.
 
-### 5. Xác minh
+### 6. Xác minh
 Báo lại cho người dùng: tên deck, số thẻ đã tạo. Có thể kiểm tra nhanh:
 ```bash
 npx tsx --env-file=.env -e 'import {PrismaClient} from "@prisma/client"; const p=new PrismaClient(); p.deck.findFirst({where:{name:{contains:"Unit 16"}},include:{_count:{select:{cards:true}}}}).then(d=>{console.log(d?.name, d?._count.cards);return p.$disconnect()})'
