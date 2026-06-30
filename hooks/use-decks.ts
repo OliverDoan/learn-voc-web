@@ -78,7 +78,7 @@ export function useSetDeckLearned(deckId: string) {
 export function useRecordDeckActivity(deckId: string) {
   const qc = useQueryClient();
   return useMutation({
-    mutationFn: (input: { activity: string; accuracy?: number | null }) =>
+    mutationFn: (input: { activity: string; accuracy?: number | null; wrongCardIds?: string[] }) =>
       apiPost<{ activity: string; bestAccuracy: number | null }>(
         `/api/decks/${deckId}/activity`,
         input,

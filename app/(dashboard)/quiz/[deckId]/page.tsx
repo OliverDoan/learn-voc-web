@@ -29,6 +29,7 @@ import { GapFillQuiz } from "@/components/quiz/gap-fill-quiz";
 import { WordFormationQuiz } from "@/components/quiz/word-formation-quiz";
 import { MatchingGameLauncher } from "@/components/quiz/matching-game";
 import { TestModeQuiz } from "@/components/quiz/test-mode-quiz";
+import { PrevWrongBadge } from "@/components/quiz/prev-wrong-badge";
 import { useCards } from "@/hooks/use-cards";
 import { useDeck, useRecordDeckActivity } from "@/hooks/use-decks";
 import { useSubmitReview } from "@/hooks/use-study";
@@ -229,6 +230,9 @@ export default function QuizPage({ params }: PageProps) {
   const direction: QuizDirection =
     reverse && REVERSE_MODES.includes(mode) ? "meaning-to-word" : "word-to-meaning";
 
+  // ID các thẻ làm sai ở lần gần nhất của ĐÚNG dạng này — để đánh dấu khi làm lại.
+  const prevWrongIds = deck?.exercises?.find((e) => e.key === mode)?.wrongCardIds ?? [];
+
   if (mode === "test") {
     return (
       <TestModeQuiz
@@ -237,6 +241,7 @@ export default function QuizPage({ params }: PageProps) {
         deckId={deckId}
         direction={direction}
         reverseActive={reverse}
+        prevWrongIds={prevWrongIds}
         onExit={() => setMode(null)}
       />
     );
@@ -250,6 +255,7 @@ export default function QuizPage({ params }: PageProps) {
       deckId={deckId}
       direction={direction}
       reverseActive={reverse && REVERSE_MODES.includes(mode)}
+      prevWrongIds={prevWrongIds}
       onExit={() => setMode(null)}
     />
   );
@@ -262,6 +268,7 @@ interface QuizRunnerProps {
   deckId: string;
   direction: QuizDirection;
   reverseActive: boolean;
+  prevWrongIds: string[];
   onExit: () => void;
 }
 
@@ -272,6 +279,7 @@ function QuizRunner({
   deckId,
   direction,
   reverseActive,
+  prevWrongIds,
   onExit,
 }: QuizRunnerProps) {
   const [index, setIndex] = useState(0);
@@ -280,6 +288,10 @@ function QuizRunner({
   const submit = useSubmitReview();
   const recordActivity = useRecordDeckActivity(deckId);
   const recordedRef = useRef(false);
+  // Tập thẻ sai của lần trước (đóng băng đầu phiên) để đánh dấu badge.
+  const [prevWrongSet] = useState(() => new Set(prevWrongIds));
+  // Thu thập thẻ làm sai trong phiên hiện tại (ghi đè khi kết thúc).
+  const wrongIdsRef = useRef<Set<string>>(new Set());
 
   // Đóng băng danh sách thẻ khi bắt đầu phiên quiz. Mỗi lần submit review sẽ
   // invalidate query ["cards"] khiến danh sách gốc bị refetch & xáo trộn lại;
@@ -327,6 +339,7 @@ function QuizRunner({
       toast.error(error instanceof Error ? error.message : "Lỗi gửi review");
     }
     if (isCorrect) setCorrect((c) => c + 1);
+    else wrongIdsRef.current.add(current.id);
     setTimeout(() => {
       if (index + 1 >= total) setDone(true);
       else setIndex(index + 1);
@@ -338,13 +351,18 @@ function QuizRunner({
     setIndex(0);
     setCorrect(0);
     recordedRef.current = false;
+    wrongIdsRef.current = new Set();
   }, [mode]);
 
-  // Ghi nhận hoàn thành dạng quiz (kèm độ chính xác) khi kết thúc phiên — chỉ cho deck thật.
+  // Ghi nhận hoàn thành dạng quiz (kèm độ chính xác + danh sách câu sai) khi kết thúc phiên — chỉ cho deck thật.
   useEffect(() => {
     if (done && !recordedRef.current && deckId !== "all" && total > 0) {
       recordedRef.current = true;
-      recordActivity.mutate({ activity: mode, accuracy: Math.round((correct / total) * 100) });
+      recordActivity.mutate({
+        activity: mode,
+        accuracy: Math.round((correct / total) * 100),
+        wrongCardIds: Array.from(wrongIdsRef.current),
+      });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [done, deckId, total, correct, mode]);
@@ -396,6 +414,12 @@ function QuizRunner({
         </div>
         <Progress value={index + 1} max={total} />
       </div>
+
+      {current && prevWrongSet.has(current.id) ? (
+        <div className="mb-1 flex w-full justify-center">
+          <PrevWrongBadge show />
+        </div>
+      ) : null}
 
       <div className="my-6 flex w-full justify-center">
         {mode === "multiple-choice" ? (

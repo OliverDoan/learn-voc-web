@@ -70,6 +70,19 @@ export function eligibleActivities(cards: readonly Card[]): DeckActivityKey[] {
 export interface ActivityRecord {
   activity: string;
   bestAccuracy: number | null;
+  // JSON array ID thẻ sai lần gần nhất (tuỳ chọn — cũ có thể chưa có cột này)
+  wrongCardIds?: string | null;
+}
+
+/** Parse an toàn cột wrongCardIds (JSON string) thành mảng ID. */
+export function parseWrongCardIds(raw: string | null | undefined): string[] {
+  if (!raw) return [];
+  try {
+    const arr = JSON.parse(raw);
+    return Array.isArray(arr) ? arr.filter((x): x is string => typeof x === "string") : [];
+  } catch {
+    return [];
+  }
 }
 
 /**
@@ -104,6 +117,8 @@ export interface ExerciseStatus {
   scored: boolean;
   done: boolean;
   bestAccuracy: number | null;
+  // ID các thẻ làm sai ở lần gần nhất (để đánh dấu khi làm lại)
+  wrongCardIds: string[];
 }
 
 /** Dựng danh sách trạng thái các dạng khả dụng + cờ đã hoàn thành hết. */
@@ -120,6 +135,7 @@ export function buildExerciseStatus(
       scored: def.scored,
       done: isActivityDone(key, records),
       bestAccuracy: byKey.get(key)?.bestAccuracy ?? null,
+      wrongCardIds: parseWrongCardIds(byKey.get(key)?.wrongCardIds),
     };
   });
   return { exercises, allDone: exercises.length > 0 && exercises.every((e) => e.done) };

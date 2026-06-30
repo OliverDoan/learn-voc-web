@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Flashcard } from "@/components/flashcard/flashcard";
 import { RatingButtons } from "@/components/flashcard/rating-buttons";
+import { PrevWrongBadge } from "@/components/quiz/prev-wrong-badge";
 import { useDeck, useRecordDeckActivity } from "@/hooks/use-decks";
 import { useStudyQueue, useSubmitReview } from "@/hooks/use-study";
 import { previewIntervals } from "@/lib/srs";
@@ -37,6 +38,8 @@ export default function StudyPage({ params }: PageProps) {
   const submit = useSubmitReview();
   const recordActivity = useRecordDeckActivity(deckId);
   const recordedRef = useRef(false);
+  // Câu sai lần gần nhất (từ deck) để đánh dấu + thu thập câu sai lần này ("Again" = rating 1).
+  const wrongIdsRef = useRef<Set<string>>(new Set());
 
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
@@ -52,6 +55,12 @@ export default function StudyPage({ params }: PageProps) {
     const stored = localStorage.getItem("voca-study-reverse");
     if (stored === "1") setReverse(true);
   }, []);
+
+  // Câu sai lần gần nhất (ổn định suốt phiên — chỉ đổi sau khi nộp, lúc đã ở màn kết quả).
+  const prevWrongSet = useMemo(
+    () => new Set(deck?.exercises?.find((e) => e.key === "study")?.wrongCardIds ?? []),
+    [deck],
+  );
 
   useEffect(() => {
     setStartedAt(Date.now());
@@ -89,6 +98,8 @@ export default function StudyPage({ params }: PageProps) {
       try {
         await submit.mutateAsync({ cardId: current.id, rating, timeTakenMs });
         if (rating >= 3) setCorrect((c) => c + 1);
+        // "Again" (rating 1) = không nhớ được = câu sai.
+        if (rating === 1) wrongIdsRef.current.add(current.id);
 
         if (index + 1 >= total) {
           setDone(true);
@@ -123,7 +134,11 @@ export default function StudyPage({ params }: PageProps) {
   useEffect(() => {
     if (done && !recordedRef.current && deckId !== "all" && total > 0) {
       recordedRef.current = true;
-      recordActivity.mutate({ activity: "study", accuracy: Math.round((correct / total) * 100) });
+      recordActivity.mutate({
+        activity: "study",
+        accuracy: Math.round((correct / total) * 100),
+        wrongCardIds: Array.from(wrongIdsRef.current),
+      });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [done, deckId, total, correct]);
@@ -156,6 +171,7 @@ export default function StudyPage({ params }: PageProps) {
           setCorrect(0);
           setDone(false);
           recordedRef.current = false;
+          wrongIdsRef.current = new Set();
           refetch();
         }}
       />
@@ -200,6 +216,12 @@ export default function StudyPage({ params }: PageProps) {
         </div>
         <Progress value={index + 1} max={total} />
       </div>
+
+      {prevWrongSet.has(current.id) ? (
+        <div className="flex w-full justify-center">
+          <PrevWrongBadge show />
+        </div>
+      ) : null}
 
       <div className="my-6 flex w-full justify-center">
         <Flashcard

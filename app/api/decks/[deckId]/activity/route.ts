@@ -17,7 +17,7 @@ export async function POST(req: NextRequest, { params }: RouteParams) {
     const deck = await prisma.deck.findFirst({ where: { id: deckId, deletedAt: null } });
     if (!deck) return fail("Không tìm thấy deck", 404);
 
-    const { activity, accuracy } = deckActivitySchema.parse(await req.json());
+    const { activity, accuracy, wrongCardIds } = deckActivitySchema.parse(await req.json());
 
     const existing = await prisma.deckActivity.findUnique({
       where: { deckId_activity: { deckId, activity } },
@@ -29,10 +29,17 @@ export async function POST(req: NextRequest, { params }: RouteParams) {
         ? (existing?.bestAccuracy ?? null)
         : Math.max(accuracy, existing?.bestAccuracy ?? 0);
 
+    // Danh sách câu sai luôn phản ánh LẦN GẦN NHẤT: gửi mảng (kể cả rỗng) => ghi đè;
+    // không gửi (undefined) => giữ nguyên giá trị cũ.
+    const nextWrongCardIds =
+      wrongCardIds === undefined
+        ? (existing?.wrongCardIds ?? "[]")
+        : JSON.stringify(wrongCardIds);
+
     const record = await prisma.deckActivity.upsert({
       where: { deckId_activity: { deckId, activity } },
-      update: { bestAccuracy: nextAccuracy, completedAt: new Date() },
-      create: { deckId, activity, bestAccuracy: nextAccuracy },
+      update: { bestAccuracy: nextAccuracy, wrongCardIds: nextWrongCardIds, completedAt: new Date() },
+      create: { deckId, activity, bestAccuracy: nextAccuracy, wrongCardIds: nextWrongCardIds },
     });
 
     return ok({ activity: record.activity, bestAccuracy: record.bestAccuracy });

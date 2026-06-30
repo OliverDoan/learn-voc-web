@@ -26,6 +26,8 @@ export interface DeckExerciseStatus {
   scored: boolean;
   done: boolean;
   bestAccuracy: number | null;
+  // ID các thẻ làm sai ở lần gần nhất (để đánh dấu "lần trước bạn sai từ này")
+  wrongCardIds: string[];
 }
 
 export interface DeckWithCounts extends Deck {

@@ -32,7 +32,7 @@ export async function GET(_req: NextRequest, { params }: RouteParams) {
       prisma.card.findMany({ where: { deckId, deletedAt: null } }),
       prisma.deckActivity.findMany({
         where: { deckId },
-        select: { activity: true, bestAccuracy: true },
+        select: { activity: true, bestAccuracy: true, wrongCardIds: true },
       }),
     ]);
     const { exercises, allDone } = buildExerciseStatus(cards as unknown as Card[], activityRows);

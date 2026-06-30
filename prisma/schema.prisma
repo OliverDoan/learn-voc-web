@@ -41,6 +41,8 @@ model DeckActivity {
   activity     String
   // Độ chính xác tốt nhất (0-100). null = dạng không chấm điểm (matching, flashcards)
   bestAccuracy Int?
+  // JSON array ID các thẻ làm SAI ở LẦN GẦN NHẤT (ghi đè mỗi lần làm) — để đánh dấu "lần trước bạn sai từ này"
+  wrongCardIds String   @default("[]")
   completedAt  DateTime @default(now())
   updatedAt    DateTime @updatedAt
 

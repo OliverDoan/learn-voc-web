@@ -7,6 +7,7 @@ import { ArrowLeft, Check, CheckCircle2, Volume2, X } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
+import { PrevWrongBadge } from "@/components/quiz/prev-wrong-badge";
 import { useRecordDeckActivity } from "@/hooks/use-decks";
 import { useSubmitReview } from "@/hooks/use-study";
 import { haptic } from "@/lib/haptic";
@@ -22,6 +23,7 @@ interface TestModeQuizProps {
   deckId: string;
   direction: QuizDirection;
   reverseActive: boolean;
+  prevWrongIds: string[];
   onExit: () => void;
 }
 
@@ -41,11 +43,14 @@ export function TestModeQuiz({
   deckId,
   direction,
   reverseActive,
+  prevWrongIds,
   onExit,
 }: TestModeQuizProps) {
   const submit = useSubmitReview();
   const recordActivity = useRecordDeckActivity(deckId);
   const recordedRef = useRef(false);
+  // Tập thẻ sai của lần trước (đóng băng đầu phiên) để đánh dấu.
+  const [prevWrongSet] = useState(() => new Set(prevWrongIds));
 
   // Đóng băng danh sách câu hỏi + đáp án khi vào phiên (tránh refetch xáo trộn giữa chừng).
   const [questions] = useState(() => cards);
@@ -88,11 +93,18 @@ export function TestModeQuiz({
     [answers],
   );
 
-  // Ghi nhận hoàn thành dạng "Làm bài" (kèm độ chính xác) khi nộp — chỉ cho deck thật.
+  // Ghi nhận hoàn thành dạng "Làm bài" (kèm độ chính xác + câu sai) khi nộp — chỉ cho deck thật.
   useEffect(() => {
     if (done && !recordedRef.current && deckId !== "all" && total > 0) {
       recordedRef.current = true;
-      recordActivity.mutate({ activity: "test", accuracy: Math.round((correctCount / total) * 100) });
+      const wrongCardIds = Array.from(answers.entries())
+        .filter(([, a]) => !a.correct)
+        .map(([id]) => id);
+      recordActivity.mutate({
+        activity: "test",
+        accuracy: Math.round((correctCount / total) * 100),
+        wrongCardIds,
+      });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [done, deckId, total, correctCount]);
@@ -165,9 +177,12 @@ export function TestModeQuiz({
                   type="button"
                   onClick={() => setIndex(i)}
                   aria-label={`Câu ${i + 1}`}
+                  title={!a && prevWrongSet.has(q.id) ? "Lần trước bạn sai từ này" : undefined}
                   className={cn(
                     "flex aspect-square items-center justify-center rounded-lg border text-sm font-semibold transition-colors",
-                    !a && "bg-card text-foreground hover:border-primary",
+                    !a && !prevWrongSet.has(q.id) && "bg-card text-foreground hover:border-primary",
+                    !a && prevWrongSet.has(q.id) &&
+                      "border-amber-500/60 bg-amber-500/10 text-amber-600 hover:border-amber-500 dark:text-amber-400",
                     a?.correct && "border-green-500 bg-green-500/15 text-green-600 dark:text-green-400",
                     a && !a.correct && "border-red-500 bg-red-500/15 text-red-600 dark:text-red-400",
                     isCurrent && "ring-2 ring-primary ring-offset-1 ring-offset-background",
@@ -206,8 +221,11 @@ export function TestModeQuiz({
 
         {/* Cột phải: câu hỏi hiện tại */}
         <div className="min-w-0 flex-1">
-          <div className="mb-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-            Câu {index + 1}
+          <div className="mb-2 flex items-center justify-between gap-2">
+            <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              Câu {index + 1}
+            </span>
+            <PrevWrongBadge show={prevWrongSet.has(current.id)} />
           </div>
           <div className="mb-6 flex flex-col items-center rounded-2xl border bg-card p-8 text-center shadow-md">
             <p className="mb-2 text-xs uppercase tracking-wider text-muted-foreground">

@@ -17,6 +17,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { useCards } from "@/hooks/use-cards";
 import { useDeck, useRecordDeckActivity } from "@/hooks/use-decks";
+import { PrevWrongBadge } from "@/components/quiz/prev-wrong-badge";
 import { useSpeechRecognition, type SpeechResult } from "@/hooks/use-speech-recognition";
 import { matchPronunciation } from "@/lib/speech-recognition";
 import {
@@ -68,6 +69,12 @@ export default function PronouncePage({ params }: PageProps) {
   );
   const recordActivity = useRecordDeckActivity(deckId);
   const recordedRef = useRef(false);
+  // Tập thẻ sai của lần gần nhất (từ deck) để đánh dấu "lần trước bạn sai từ này".
+  // Dữ liệu ổn định suốt phiên (chỉ đổi sau khi nộp, lúc đó đã ở màn kết quả).
+  const prevWrongSet = useMemo(
+    () => new Set(deck?.exercises?.find((e) => e.key === "pronounce")?.wrongCardIds ?? []),
+    [deck],
+  );
 
   useEffect(() => {
     setThreshold(thresholdForDifficulty(getPronounceDifficulty()));
@@ -155,7 +162,15 @@ export default function PronouncePage({ params }: PageProps) {
   useEffect(() => {
     if (finished && !recordedRef.current && deckId !== "all") {
       recordedRef.current = true;
-      recordActivity.mutate({ activity: "pronounce", accuracy: Math.round((correctCount / total) * 100) });
+      // Câu sai = thẻ đã thử nhưng kết quả false (thẻ bỏ qua không tính là sai).
+      const wrongCardIds = Object.entries(scores)
+        .filter(([, ok]) => !ok)
+        .map(([id]) => id);
+      recordActivity.mutate({
+        activity: "pronounce",
+        accuracy: Math.round((correctCount / total) * 100),
+        wrongCardIds,
+      });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [finished, deckId, correctCount, total]);
@@ -278,6 +293,10 @@ export default function PronouncePage({ params }: PageProps) {
           </div>
         ) : null}
         <p className="mt-3 text-sm text-white/55">{current.meaning}</p>
+
+        {prevWrongSet.has(current.id) ? (
+          <PrevWrongBadge show className="mt-3" />
+        ) : null}
 
         {/* Khu vực phản hồi */}
         <div className="mt-6 min-h-[64px] w-full">
