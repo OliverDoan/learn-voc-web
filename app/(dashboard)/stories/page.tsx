@@ -9,6 +9,7 @@ import {
   Image as ImageIcon,
   Library,
   Play,
+  Repeat,
   Square,
   Target,
   Volume2,
@@ -16,6 +17,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { StoryRenderer } from "@/components/story/story-renderer";
+import { StoryDeckPicker, type DeckOption } from "@/components/story/story-deck-picker";
 import { ReadingSpeedControl } from "@/components/story/reading-speed-control";
 import { AutoScrollControls } from "@/components/ui/auto-scroll-controls";
 import { PageLoader } from "@/components/ui/page-loader";
@@ -41,12 +43,35 @@ export default function AllStoriesPage() {
   const [imageOnly, setImageOnly] = useState(false);
   // index của truyện đang được đọc to (null = không đọc)
   const [readingIndex, setReadingIndex] = useState<number | null>(null);
+  // ID các deck BỊ BỎ CHỌN (rỗng = đọc tất cả). Mô hình loại trừ để mặc định là chọn hết.
+  const [excludedDeckIds, setExcludedDeckIds] = useState<Set<string>>(new Set());
+  // Lặp lại: đọc xong danh sách thì quay lại đầu, lặp đến khi dừng.
+  const [loop, setLoop] = useState(false);
   // "Thẻ phiên đọc": mỗi lần bắt đầu đọc tăng 1; vòng lặp cũ tự thoát khi không còn khớp
   const genRef = useRef(0);
   const { rate, setRate } = useReadingRate();
-  // Ref để vòng đọc đang chạy luôn thấy tốc độ mới nhất khi người dùng đổi giữa chừng
+  // Ref để vòng đọc đang chạy luôn thấy tốc độ / cờ lặp mới nhất khi người dùng đổi giữa chừng
   const rateRef = useRef(rate);
   rateRef.current = rate;
+  // Đồng bộ cờ lặp vào ref để vòng đọc đang chạy thấy giá trị mới nhất.
+  const loopRef = useRef(loop);
+  useEffect(() => {
+    loopRef.current = loop;
+  }, [loop]);
+
+  // Khôi phục lựa chọn deck + cờ lặp từ localStorage (chạy client-side, tránh lỗi SSR).
+  useEffect(() => {
+    try {
+      const rawEx = localStorage.getItem("voca-stories-excluded");
+      if (rawEx) {
+        const ids = JSON.parse(rawEx);
+        if (Array.isArray(ids)) setExcludedDeckIds(new Set(ids.filter((x) => typeof x === "string")));
+      }
+      setLoop(localStorage.getItem("voca-stories-loop") === "1");
+    } catch {
+      // localStorage hỏng/không hợp lệ → giữ mặc định
+    }
+  }, []);
 
   // Dừng đọc khi rời trang
   useEffect(
@@ -67,12 +92,29 @@ export default function AllStoriesPage() {
     });
   }, [stories]);
 
-  const totalWords = useMemo(
-    () => sorted.reduce((sum, s) => sum + countWordTokens(s.content), 0),
-    [sorted],
+  // Danh sách deck (suy ra từ truyện đã tải), giữ thứ tự Unit như `sorted`.
+  const decks = useMemo<DeckOption[]>(() => {
+    const map = new Map<string, DeckOption>();
+    for (const s of sorted) {
+      const cur = map.get(s.deck.id);
+      if (cur) cur.count += 1;
+      else map.set(s.deck.id, { id: s.deck.id, name: s.deck.name, count: 1 });
+    }
+    return Array.from(map.values());
+  }, [sorted]);
+
+  // Truyện thực sự được hiển thị / đọc = đã sắp xếp, lọc theo deck đang chọn.
+  const visible = useMemo(
+    () => sorted.filter((s) => !excludedDeckIds.has(s.deck.id)),
+    [sorted, excludedDeckIds],
   );
 
-  const hasImages = useMemo(() => sorted.some((s) => Boolean(s.imageUrl)), [sorted]);
+  const totalWords = useMemo(
+    () => visible.reduce((sum, s) => sum + countWordTokens(s.content), 0),
+    [visible],
+  );
+
+  const hasImages = useMemo(() => visible.some((s) => Boolean(s.imageUrl)), [visible]);
 
   const stopReading = () => {
     genRef.current += 1; // vô hiệu hoá vòng đọc hiện tại
@@ -80,33 +122,42 @@ export default function AllStoriesPage() {
     setReadingIndex(null);
   };
 
-  // Đọc liền mạch từ truyện thứ `start` đến hết: văn tiếng Việt (vi-VN) + từ chêm (en-US)
+  // Đọc liền mạch từ truyện thứ `start` (index trong `visible`) đến hết:
+  // văn tiếng Việt (vi-VN) + từ chêm (en-US). Nếu bật "lặp lại" thì quay vòng từ đầu.
   const readFrom = async (start: number) => {
     stopSpeaking(); // ngắt mọi giọng đang phát trước khi bắt đầu phiên mới
     const gen = (genRef.current += 1);
     const alive = () => genRef.current === gen;
+    // Đóng băng danh sách của phiên đọc này để index ổn định suốt vòng lặp.
+    const list = visible;
+    if (list.length === 0) return;
 
-    for (let i = start; i < sorted.length; i++) {
-      if (!alive()) return;
-      setReadingIndex(i);
-      document
-        .getElementById(`story-${sorted[i].id}`)
-        ?.scrollIntoView({ behavior: "smooth", block: "start" });
-
-      // Đọc tên truyện trước cho dễ theo dõi
-      await speakAsync(sorted[i].title, "vi-VN", rateRef.current);
-      if (!alive()) return;
-
-      for (const tok of parseStory(sorted[i].content)) {
+    let first = true;
+    do {
+      for (let i = first ? start : 0; i < list.length; i++) {
         if (!alive()) return;
-        if (tok.type === "text") {
-          const text = tok.text.trim();
-          if (isSpeakable(text)) await speakAsync(text, "vi-VN", rateRef.current);
-        } else {
-          await speakAsync(tok.word, "en-US", rateRef.current);
+        setReadingIndex(i);
+        document
+          .getElementById(`story-${list[i].id}`)
+          ?.scrollIntoView({ behavior: "smooth", block: "start" });
+
+        // Đọc tên truyện trước cho dễ theo dõi
+        await speakAsync(list[i].title, "vi-VN", rateRef.current);
+        if (!alive()) return;
+
+        for (const tok of parseStory(list[i].content)) {
+          if (!alive()) return;
+          if (tok.type === "text") {
+            const text = tok.text.trim();
+            if (isSpeakable(text)) await speakAsync(text, "vi-VN", rateRef.current);
+          } else {
+            await speakAsync(tok.word, "en-US", rateRef.current);
+          }
         }
       }
-    }
+      first = false;
+    } while (loopRef.current && alive());
+
     if (alive()) setReadingIndex(null);
   };
 
@@ -116,6 +167,52 @@ export default function AllStoriesPage() {
       return;
     }
     void readFrom(0);
+  };
+
+  // Đổi lựa chọn deck giữa chừng làm xáo trộn index → dừng đọc trước khi đổi.
+  const persistExcluded = (next: Set<string>) => {
+    try {
+      localStorage.setItem("voca-stories-excluded", JSON.stringify(Array.from(next)));
+    } catch {
+      /* bỏ qua lỗi localStorage */
+    }
+  };
+
+  const toggleDeck = (id: string) => {
+    if (readingIndex !== null) stopReading();
+    setExcludedDeckIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      persistExcluded(next);
+      return next;
+    });
+  };
+
+  const selectAllDecks = () => {
+    if (readingIndex !== null) stopReading();
+    const next = new Set<string>();
+    setExcludedDeckIds(next);
+    persistExcluded(next);
+  };
+
+  const clearAllDecks = () => {
+    if (readingIndex !== null) stopReading();
+    const next = new Set(decks.map((d) => d.id));
+    setExcludedDeckIds(next);
+    persistExcluded(next);
+  };
+
+  const toggleLoop = () => {
+    setLoop((prev) => {
+      const next = !prev;
+      try {
+        localStorage.setItem("voca-stories-loop", next ? "1" : "0");
+      } catch {
+        /* bỏ qua lỗi localStorage */
+      }
+      return next;
+    });
   };
 
   return (
@@ -130,10 +227,21 @@ export default function AllStoriesPage() {
         </p>
         {!isLoading && sorted.length > 0 ? (
           <div className="font-mono mt-2 text-[13px] uppercase tracking-wider text-muted-foreground">
-            {sorted.length} truyện · {totalWords} từ chêm
+            {visible.length} truyện · {totalWords} từ chêm
           </div>
         ) : null}
       </div>
+
+      {/* Bộ chọn deck muốn đọc */}
+      {!isLoading && decks.length > 0 ? (
+        <StoryDeckPicker
+          decks={decks}
+          excluded={excludedDeckIds}
+          onToggle={toggleDeck}
+          onSelectAll={selectAllDecks}
+          onClear={clearAllDecks}
+        />
+      ) : null}
 
       {/* Thanh điều khiển dính ở đầu trang */}
       <div className="sticky top-2 z-20 mb-6 flex flex-wrap justify-center gap-2 rounded-full border bg-card/95 p-2 shadow-sm backdrop-blur">
@@ -146,13 +254,24 @@ export default function AllStoriesPage() {
                 className="rounded-full"
                 aria-label={readingIndex !== null ? "Dừng" : "Đọc to toàn bộ"}
                 onClick={handleToggleReadAll}
-                disabled={isLoading || sorted.length === 0}
+                disabled={isLoading || visible.length === 0}
               >
                 {readingIndex !== null ? (
                   <Square className="h-4 w-4 fill-current" />
                 ) : (
                   <Volume2 className="h-4 w-4" />
                 )}
+              </Button>
+            </Tooltip>
+            <Tooltip label={loop ? "Tắt lặp lại" : "Lặp lại (đọc đi đọc lại)"}>
+              <Button
+                variant={loop ? "default" : "outline"}
+                size="icon"
+                className="rounded-full"
+                aria-label={loop ? "Tắt lặp lại" : "Bật lặp lại"}
+                onClick={toggleLoop}
+              >
+                <Repeat className="h-4 w-4" />
               </Button>
             </Tooltip>
             <Tooltip label={showMeanings ? "Ẩn nghĩa" : "Hiện nghĩa"}>
@@ -205,6 +324,12 @@ export default function AllStoriesPage() {
             Chưa có truyện chêm nào. Hãy tạo truyện trong từng deck.
           </p>
         </div>
+      ) : visible.length === 0 ? (
+        <div className="rounded-2xl border border-dashed p-10 text-center">
+          <p className="text-sm text-muted-foreground">
+            Chưa chọn deck nào. Hãy chọn ít nhất một deck ở phần &ldquo;Chọn deck&rdquo; phía trên.
+          </p>
+        </div>
       ) : imageOnly && !hasImages ? (
         <div className="rounded-2xl border border-dashed p-10 text-center">
           <p className="text-sm text-muted-foreground">
@@ -213,7 +338,7 @@ export default function AllStoriesPage() {
         </div>
       ) : (
         <div className="space-y-10">
-          {sorted.map((story, i) => {
+          {visible.map((story, i) => {
             // Chế độ chỉ xem ảnh: bỏ qua truyện không có ảnh, chỉ hiện ảnh có link mở truyện
             if (imageOnly) {
               if (!story.imageUrl) return null;
@@ -301,7 +426,7 @@ export default function AllStoriesPage() {
         </div>
       )}
 
-      {!isLoading && sorted.length > 0 ? <AutoScrollControls /> : null}
+      {!isLoading && visible.length > 0 ? <AutoScrollControls /> : null}
     </div>
   );
 }
