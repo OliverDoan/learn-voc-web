@@ -8,6 +8,7 @@ import {
   BookOpen,
   Check,
   ClipboardCheck,
+  Download,
   GripVertical,
   Layers,
   List,
@@ -39,7 +40,7 @@ import { DeckExerciseProgress } from "@/components/deck/deck-exercise-progress";
 import { CardDetailDialog } from "@/components/deck/card-detail-dialog";
 import { DeckFormDialog } from "@/components/deck/deck-form-dialog";
 import { ImportCardsDialog } from "@/components/deck/import-cards-dialog";
-import { ExportButton } from "@/components/deck/export-cards-dialog";
+import { ExportCardsDialog } from "@/components/deck/export-cards-dialog";
 import { ReadAllButton } from "@/components/deck/read-all-button";
 import { CardsFilterBar } from "@/components/deck/cards-filter-bar";
 import { CardsTable } from "@/components/deck/cards-table";
@@ -74,6 +75,9 @@ export default function DeckDetailPage({ params }: PageProps) {
   const router = useRouter();
   const [openAddCard, setOpenAddCard] = useState(false);
   const [openImport, setOpenImport] = useState(false);
+  const [openExport, setOpenExport] = useState(false);
+  // Menu gộp các thao tác của bảng từ (Chọn/Sắp xếp, Thêm từ, Xuất, Import)
+  const [toolbarOpen, setToolbarOpen] = useState(false);
   const [openEditDeck, setOpenEditDeck] = useState(false);
   const [editingCard, setEditingCard] = useState<CardType | undefined>();
   const [detailCard, setDetailCard] = useState<CardType | undefined>();
@@ -656,32 +660,70 @@ export default function DeckDetailPage({ params }: PageProps) {
           placeholder="Tìm từ hoặc nghĩa..."
           className="max-w-xs bg-card shadow-sm"
         />
-        <div className="flex flex-wrap gap-2">
+        <div className="relative">
           <Button
             variant={selectMode ? "default" : "outline"}
-            onClick={toggleSelectMode}
+            onClick={() => setToolbarOpen((o) => !o)}
           >
-            {selectMode ? (
-              <>
-                <X className="h-4 w-4" /> Xong
-              </>
-            ) : (
-              <>
-                <SquareCheck className="h-4 w-4" /> Chọn / Sắp xếp
-              </>
-            )}
+            <MoreVertical className="h-4 w-4" />
+            {selectMode ? "Đang chọn / sắp xếp" : "Thao tác"}
           </Button>
-          <ExportButton
-            deckId={deckId}
-            deckName={deck.name}
-            cardCount={deck._count.cards}
-          />
-          <Button variant="outline" onClick={() => setOpenImport(true)}>
-            <Upload className="h-4 w-4" /> Import
-          </Button>
-          <Button onClick={() => setOpenAddCard(true)}>
-            <Plus className="h-4 w-4" /> Thêm từ
-          </Button>
+          {toolbarOpen ? (
+            <>
+              <div className="fixed inset-0 z-20" onClick={() => setToolbarOpen(false)} />
+              <div className="absolute right-0 top-full z-30 mt-1 w-52 rounded-lg border bg-card p-1.5 shadow-lg">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setToolbarOpen(false);
+                    setOpenAddCard(true);
+                  }}
+                  className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
+                >
+                  <Plus className="h-4 w-4" /> Thêm từ
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setToolbarOpen(false);
+                    toggleSelectMode();
+                  }}
+                  className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
+                >
+                  {selectMode ? (
+                    <>
+                      <X className="h-4 w-4" /> Xong chọn / sắp xếp
+                    </>
+                  ) : (
+                    <>
+                      <SquareCheck className="h-4 w-4" /> Chọn / Sắp xếp
+                    </>
+                  )}
+                </button>
+                <div className="my-1 h-px bg-border" />
+                <button
+                  type="button"
+                  onClick={() => {
+                    setToolbarOpen(false);
+                    setOpenExport(true);
+                  }}
+                  className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
+                >
+                  <Download className="h-4 w-4" /> Xuất
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setToolbarOpen(false);
+                    setOpenImport(true);
+                  }}
+                  className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
+                >
+                  <Upload className="h-4 w-4" /> Import
+                </button>
+              </div>
+            </>
+          ) : null}
         </div>
       </div>
 
@@ -843,6 +885,13 @@ export default function DeckDetailPage({ params }: PageProps) {
         open={openImport}
         onOpenChange={setOpenImport}
         deckId={deckId}
+      />
+      <ExportCardsDialog
+        open={openExport}
+        onOpenChange={setOpenExport}
+        deckId={deckId}
+        deckName={deck.name}
+        cardCount={deck._count.cards}
       />
 
       {selectedIds.size > 0 ? (
