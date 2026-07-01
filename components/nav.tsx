@@ -8,7 +8,6 @@ import {
   BookMarked,
   BookOpen,
   BookText,
-  Focus,
   GraduationCap,
   Home,
   Layers,
@@ -42,7 +41,6 @@ const items: NavItem[] = [
   { href: "/ielts", label: "IELTS", icon: GraduationCap, mobile: true },
   { href: "/grammar", label: "Ngữ pháp", icon: BookText, mobile: true },
   { href: "/word-formation", label: "Cấu tạo từ", icon: Blocks, mobile: false },
-  { href: "/focus", label: "Tập trung", icon: Focus, mobile: false },
   { href: "/trash", label: "Thùng rác", icon: Trash2, mobile: false },
   { href: "/settings", label: "Cài đặt", icon: Settings, mobile: true },
 ];

@@ -1,6 +1,8 @@
 "use client";
 
-import { Loader2, Palette } from "lucide-react";
+import Link from "next/link";
+import { Focus, Loader2, Palette } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { ThemePicker } from "@/components/focus/theme-picker";
 import { ProfileSection } from "@/components/settings/profile-section";
@@ -51,6 +53,22 @@ export default function SettingsPage() {
       </section>
 
       <PronounceSection />
+
+      <section className="rounded-2xl border bg-card p-5">
+        <div className="mb-4 flex items-center gap-2">
+          <Focus className="h-5 w-5 text-primary" />
+          <h2 className="text-lg font-semibold">Chế độ tập trung</h2>
+        </div>
+        <p className="mb-4 text-sm text-muted-foreground">
+          Màn hình toàn cảnh với đồng hồ thời gian thực hoặc bộ đếm Pomodoro để tập
+          trung học. Nhấn Esc để thoát.
+        </p>
+        <Link href="/focus">
+          <Button>
+            <Focus className="h-4 w-4" /> Mở chế độ tập trung
+          </Button>
+        </Link>
+      </section>
 
       <DailyGoalSection progress={progress} />
 
