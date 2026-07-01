@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, type ReactNode } from "react";
 import { Columns3, Plus, Trash2 } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -21,19 +21,78 @@ interface CardsTableProps {
 }
 
 // Cột built-in (chỉ xem) — STT luôn hiện, các cột còn lại có thể ẩn.
-const BUILTIN: Array<{ key: string; label: string; get: (c: Card) => string }> = [
-  { key: "word", label: "Từ vựng", get: (c) => c.word },
-  { key: "phonetic", label: "Phiên âm", get: (c) => c.phonetic ?? "" },
-  { key: "meaning", label: "Nghĩa tiếng Việt", get: (c) => c.meaning },
-  { key: "rootWord", label: "Từ gốc", get: (c) => c.rootWord ?? "" },
-  { key: "wordForm", label: "Word Form", get: (c) => formatWordForms(c.wordForms) },
-];
+// `className` (tuỳ chọn) áp cho cả header lẫn ô để chỉnh độ rộng từng cột.
+// `wrap` = cho phép xuống hàng; mặc định các cột giữ trên một dòng (nowrap).
+const BUILTIN: Array<{
+  key: string;
+  label: string;
+  get: (c: Card) => ReactNode;
+  className?: string;
+  wrap?: boolean;
+}> = [
+    {
+      key: "word",
+      label: "Từ vựng",
+      get: (c) => {
+        const pos = abbrPartOfSpeech(c.partOfSpeech);
+        return (
+          <span>
+            {c.word}
+            {pos ? <span className="ml-1.5 font-normal text-muted-foreground">({pos})</span> : null}
+          </span>
+        );
+      },
+    },
+    { key: "phonetic", label: "Phiên âm", get: (c) => c.phonetic ?? "" },
+    { key: "meaning", label: "Nghĩa tiếng Việt", get: (c) => c.meaning, className: "min-w-[10rem]" },
+    { key: "rootWord", label: "Từ gốc", get: (c) => c.rootWord ?? "" },
+    {
+      key: "wordForm",
+      label: "Word Form",
+      get: (c) => renderWordForms(c.wordForms),
+      className: "min-w-[10rem]",
+      wrap: true,
+    },
+  ];
 
-function formatWordForms(json: string | null): string {
+// Viết tắt từ loại: noun→n, verb→v, adjective→adj, adverb→adv.
+// Hỗ trợ dạng ghép, vd "adjective / noun" → "adj/n".
+const POS_ABBR: Record<string, string> = {
+  noun: "n",
+  verb: "v",
+  adjective: "adj",
+  adverb: "adv",
+  pronoun: "pron",
+  preposition: "prep",
+  conjunction: "conj",
+  interjection: "interj",
+  determiner: "det",
+};
+function abbrPartOfSpeech(pos: string | null): string {
+  if (!pos) return "";
+  return pos
+    .split(/\s*[/,]\s*/)
+    .map((p) => POS_ABBR[p.trim().toLowerCase()] ?? p.trim())
+    .join("/");
+}
+
+// Mỗi dạng từ trên một dòng riêng cho dễ đọc, vd:
+//   n: generalization
+//   v: generalize
+//   adv: generally
+function renderWordForms(json: string | null): ReactNode {
   const forms = parseWordForms(json);
-  return WORD_FORM_ORDER.filter((p) => forms[p])
-    .map((p) => `${WORD_FORM_ABBR[p]}: ${forms[p]}`)
-    .join(" · ");
+  const items = WORD_FORM_ORDER.filter((p) => forms[p]);
+  if (items.length === 0) return "";
+  return (
+    <div className="flex flex-col gap-0.5">
+      {items.map((p) => (
+        <div key={p}>
+          - {forms[p]} ({WORD_FORM_ABBR[p]})
+        </div>
+      ))}
+    </div>
+  );
 }
 
 export function CardsTable({ cards, deck }: CardsTableProps) {
@@ -169,7 +228,10 @@ export function CardsTable({ cards, deck }: CardsTableProps) {
                 #
               </th>
               {visibleBuiltin.map((b) => (
-                <th key={b.key} className="border-b border-r px-3 py-2 text-left font-semibold">
+                <th
+                  key={b.key}
+                  className={cn("border-b border-r px-3 py-2 text-left font-semibold", b.className)}
+                >
                   {b.label}
                 </th>
               ))}
@@ -219,6 +281,8 @@ export function CardsTable({ cards, deck }: CardsTableProps) {
                     className={cn(
                       "border-b border-r px-3 py-1.5 align-top",
                       b.key === "word" && "font-medium",
+                      b.wrap ? "whitespace-normal break-words" : "whitespace-nowrap",
+                      b.className,
                     )}
                   >
                     {b.get(card)}
