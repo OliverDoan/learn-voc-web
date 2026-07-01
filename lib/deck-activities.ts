@@ -1,5 +1,4 @@
 import { gapFillEligibleCards } from "@/lib/gap-fill";
-import { wordFormEligibleCards } from "@/lib/word-forms";
 import type { Card } from "@/lib/types";
 
 /** Ngưỡng độ chính xác tối thiểu để coi một dạng bài tập (có chấm điểm) là "đã làm". */
@@ -60,7 +59,8 @@ export function eligibleActivities(cards: readonly Card[]): DeckActivityKey[] {
   if (n >= 4) result.push("multiple-choice", "test");
   if (n >= 6) result.push("matching");
   if (gapFillEligibleCards(cards).length >= 1) result.push("gap-fill");
-  if (wordFormEligibleCards(cards).length >= 1) result.push("word-formation");
+  // "Biến đổi từ" (word-formation) KHÔNG tính vào tiến độ / điều kiện mở khóa
+  // (vẫn chơi được ở trang quiz nếu thẻ có dữ liệu word forms).
 
   // Giữ theo thứ tự trong DECK_ACTIVITIES cho ổn định khi hiển thị.
   return DECK_ACTIVITY_KEYS.filter((k) => result.includes(k));

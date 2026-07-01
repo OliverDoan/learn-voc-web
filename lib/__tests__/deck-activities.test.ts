@@ -75,9 +75,9 @@ describe("eligibleActivities", () => {
     expect(eligibleActivities([card])).toContain("gap-fill");
   });
 
-  it("thẻ có word forms khác từ gốc → mở biến đổi từ", () => {
+  it("KHÔNG tính biến đổi từ vào tiến độ, kể cả khi thẻ có word forms", () => {
     const card = makeCard({ word: "happy", wordForms: JSON.stringify({ noun: "happiness" }) });
-    expect(eligibleActivities([card])).toContain("word-formation");
+    expect(eligibleActivities([card])).not.toContain("word-formation");
   });
 });
 
