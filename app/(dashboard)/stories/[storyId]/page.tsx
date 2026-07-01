@@ -1,6 +1,6 @@
 "use client";
 
-import { use, useEffect, useRef, useState } from "react";
+import { use, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, BookOpen, Eye, EyeOff, Pencil, Square, Target, Trash2, Volume2 } from "lucide-react";
@@ -12,6 +12,7 @@ import { PageLoader } from "@/components/ui/page-loader";
 import { StoryRenderer } from "@/components/story/story-renderer";
 import { ReadingSpeedControl } from "@/components/story/reading-speed-control";
 import { useDeleteStory, useStory } from "@/hooks/use-stories";
+import { useFavorites } from "@/hooks/use-cards";
 import { useReadingRate } from "@/hooks/use-reading-rate";
 import { countWordTokens, parseStory } from "@/lib/story-parser";
 import { isSpeakable, speakAsync, stopSpeaking } from "@/lib/tts";
@@ -33,6 +34,12 @@ export default function StoryViewPage({ params }: PageProps) {
   rateRef.current = rate;
 
   const { data: story, isLoading } = useStory(storyId);
+  const { data: favorites } = useFavorites();
+  // Tập từ được đánh dấu sao (viết thường) để tô màu khác trong truyện.
+  const favoriteWords = useMemo(
+    () => new Set((favorites ?? []).map((c) => c.word.trim().toLowerCase())),
+    [favorites],
+  );
   const deleteStory = useDeleteStory();
   const { confirm, confirmDialog } = useConfirm();
 
@@ -175,11 +182,17 @@ export default function StoryViewPage({ params }: PageProps) {
           content={story.content}
           showMeanings={showMeanings}
           hideWords={hideWords}
+          favoriteWords={favoriteWords}
         />
         <div className="font-mono mt-8 flex flex-wrap items-center justify-center gap-2 text-[12.5px] text-muted-foreground">
           <span className="inline-flex items-center gap-1.5">
             <span className="inline-block h-3 w-3 rounded bg-primary/15 [border-bottom:2px_solid_var(--primary)]" />
             từ vựng chêm
+          </span>
+          <span>·</span>
+          <span className="inline-flex items-center gap-1.5">
+            <span className="inline-block h-3 w-3 rounded bg-amber-400/20 [border-bottom:2px_solid_rgb(245,158,11)]" />
+            từ yêu thích
           </span>
           <span>·</span>
           <span>chạm vào từ để xem nghĩa &amp; nghe phát âm</span>

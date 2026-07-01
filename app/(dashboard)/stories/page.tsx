@@ -23,6 +23,7 @@ import { AutoScrollControls } from "@/components/ui/auto-scroll-controls";
 import { PageLoader } from "@/components/ui/page-loader";
 import { Tooltip } from "@/components/ui/tooltip";
 import { useStories } from "@/hooks/use-stories";
+import { useFavorites } from "@/hooks/use-cards";
 import { useReadingRate } from "@/hooks/use-reading-rate";
 import { countWordTokens, parseStory } from "@/lib/story-parser";
 import { isSpeakable, speakAsync, stopSpeaking } from "@/lib/tts";
@@ -37,6 +38,12 @@ function unitOrder(name: string): number {
 
 export default function AllStoriesPage() {
   const { data: stories, isLoading } = useStories();
+  const { data: favorites } = useFavorites();
+  // Tập từ được đánh dấu sao (viết thường) để StoryRenderer tô màu khác.
+  const favoriteWords = useMemo(
+    () => new Set((favorites ?? []).map((c) => c.word.trim().toLowerCase())),
+    [favorites],
+  );
   const [showMeanings, setShowMeanings] = useState(false);
   const [hideWords, setHideWords] = useState(false);
   // Chế độ chỉ xem ảnh: ẩn tiêu đề + từ chêm + văn bản, chỉ hiện ảnh truyện
@@ -419,6 +426,7 @@ export default function AllStoriesPage() {
                   content={story.content}
                   showMeanings={showMeanings}
                   hideWords={hideWords}
+                  favoriteWords={favoriteWords}
                 />
               </article>
             );

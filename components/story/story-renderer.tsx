@@ -10,6 +10,8 @@ interface StoryRendererProps {
   content: string;
   showMeanings?: boolean;
   hideWords?: boolean;
+  /** Tập từ được đánh dấu sao (viết thường) — tô màu khác để nổi bật. */
+  favoriteWords?: ReadonlySet<string>;
   className?: string;
 }
 
@@ -17,6 +19,7 @@ export function StoryRenderer({
   content,
   showMeanings = false,
   hideWords = false,
+  favoriteWords,
   className,
 }: StoryRendererProps) {
   const tokens = parseStory(content);
@@ -34,6 +37,8 @@ export function StoryRenderer({
           return <span key={i}>{tok.text}</span>;
         }
         const open = opened === i;
+        // Từ được đánh dấu sao → tô màu amber thay vì xanh để nổi bật.
+        const fav = !!favoriteWords && favoriteWords.has(tok.word.trim().toLowerCase());
         return (
           <span key={i} className="relative inline-block align-baseline">
             <button
@@ -42,15 +47,25 @@ export function StoryRenderer({
               className={cn(
                 "font-sans font-semibold transition-colors",
                 hideWords
-                  ? "mx-0.5 rounded-md bg-primary/15 px-2 text-transparent underline decoration-primary decoration-wavy"
+                  ? cn(
+                      "mx-0.5 rounded-md px-2 text-transparent underline decoration-wavy",
+                      fav
+                        ? "bg-amber-400/25 decoration-amber-500"
+                        : "bg-primary/15 decoration-primary",
+                    )
                   : cn(
-                      "rounded-md px-1.5 text-[0.9em] text-primary",
-                      open
-                        ? "bg-primary/15 [border-bottom:2px_solid_var(--primary)]"
-                        : "bg-primary/10 [border-bottom:2px_solid_rgba(23,61,201,.4)]",
+                      "rounded-md px-1.5 text-[0.9em]",
+                      fav ? "text-amber-600 dark:text-amber-400" : "text-primary",
+                      fav
+                        ? open
+                          ? "bg-amber-400/25 [border-bottom:2px_solid_rgb(245,158,11)]"
+                          : "bg-amber-400/15 [border-bottom:2px_solid_rgba(245,158,11,.5)]"
+                        : open
+                          ? "bg-primary/15 [border-bottom:2px_solid_var(--primary)]"
+                          : "bg-primary/10 [border-bottom:2px_solid_rgba(23,61,201,.4)]",
                     ),
               )}
-              aria-label={`${tok.word} — ${tok.meaning}`}
+              aria-label={`${tok.word} — ${tok.meaning}${fav ? " (yêu thích)" : ""}`}
             >
               {hideWords ? "___" : tok.word}
             </button>
