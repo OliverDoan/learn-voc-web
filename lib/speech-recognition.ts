@@ -136,10 +136,21 @@ export function similarity(a: string, b: string): number {
 export const DEFAULT_MATCH_THRESHOLD = 0.6;
 
 /**
- * Chấm phát âm theo kiểu khoan dung: đạt nếu BẤT KỲ phương án nhận dạng nào
- * - trùng khớp tuyệt đối, hoặc
- * - chứa từ đích như một token riêng (người dùng nói dư chữ), hoặc
- * - có độ tương đồng >= threshold so với từ đích.
+ * Từ ngưỡng này trở lên coi là chế độ "nghiêm ngặt": chỉ xét phương án nhận
+ * dạng tốt nhất và so cả cụm, KHÔNG chấp nhận kiểu "nói dư chữ" (khớp token con).
+ */
+export const STRICT_MATCH_THRESHOLD = 0.9;
+
+/**
+ * Chấm phát âm. Độ khoan dung phụ thuộc `threshold`:
+ *
+ * - Thường (threshold < 0.9): đạt nếu BẤT KỲ phương án nhận dạng nào trùng khớp
+ *   tuyệt đối, chứa từ đích như một token riêng (nói dư chữ), hoặc có độ tương
+ *   đồng >= threshold (so cả câu lẫn từng token).
+ * - Nghiêm ngặt (threshold >= 0.9): CHỈ xét phương án tốt nhất và so nguyên cụm —
+ *   phải trùng tuyệt đối hoặc tương đồng >= threshold. Không chấp nhận từ đích chỉ
+ *   là một token trong câu dài, cũng không "vớt" từ các phương án xếp sau. Nhờ vậy
+ *   đọc sai sẽ không bị báo đúng chỉ vì máy đề xuất đúng ở đâu đó.
  *
  * Trả về độ tương đồng tốt nhất tìm được để hiển thị/ghi log nếu cần.
  */
@@ -151,23 +162,29 @@ export function matchPronunciation(
   const normalizedTarget = normalizeForCompare(target);
   if (!normalizedTarget) return { matched: false, score: 0 };
 
+  const strict = threshold >= STRICT_MATCH_THRESHOLD;
+  // Nghiêm ngặt: chỉ tin phương án xếp hạng cao nhất mà máy nghe được.
+  const candidates = strict ? alternatives.slice(0, 1) : alternatives;
+
   let best = 0;
-  for (const alt of alternatives) {
+  for (const alt of candidates) {
     const normalizedAlt = normalizeForCompare(alt);
     if (!normalizedAlt) continue;
 
-    // Khớp tuyệt đối.
+    // Khớp tuyệt đối cả cụm — luôn được chấp nhận.
     if (normalizedAlt === normalizedTarget) return { matched: true, score: 1 };
 
-    // Từ đích xuất hiện như một token trong câu nghe được.
-    const tokens = normalizedAlt.split(" ");
-    if (tokens.includes(normalizedTarget)) return { matched: true, score: 1 };
-
-    // So khớp với cả câu và với từng token, lấy điểm cao nhất.
-    best = Math.max(best, similarity(normalizedTarget, normalizedAlt));
-    for (const token of tokens) {
-      best = Math.max(best, similarity(normalizedTarget, token));
+    if (!strict) {
+      // Từ đích xuất hiện như một token trong câu nghe được (người dùng nói dư chữ).
+      const tokens = normalizedAlt.split(" ");
+      if (tokens.includes(normalizedTarget)) return { matched: true, score: 1 };
+      for (const token of tokens) {
+        best = Math.max(best, similarity(normalizedTarget, token));
+      }
     }
+
+    // So khớp với cả cụm.
+    best = Math.max(best, similarity(normalizedTarget, normalizedAlt));
   }
 
   return { matched: best >= threshold, score: best };
