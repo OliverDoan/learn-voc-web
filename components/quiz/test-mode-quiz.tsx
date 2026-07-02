@@ -11,6 +11,7 @@ import { PrevWrongBadge } from "@/components/quiz/prev-wrong-badge";
 import { useRecordDeckActivity } from "@/hooks/use-decks";
 import { useSubmitReview } from "@/hooks/use-study";
 import { haptic } from "@/lib/haptic";
+import { playSound } from "@/lib/sound";
 import { speak } from "@/lib/tts";
 import { cn } from "@/lib/utils";
 import type { Card } from "@/lib/types";
@@ -75,6 +76,7 @@ export function TestModeQuiz({
     if (!current || answers.has(current.id)) return;
     const correct = pickedId === current.id;
     haptic(correct ? "success" : "fail");
+    playSound(correct ? "correct" : "wrong");
 
     const nextAnswers = new Map(answers);
     nextAnswers.set(current.id, { pickedId, correct });

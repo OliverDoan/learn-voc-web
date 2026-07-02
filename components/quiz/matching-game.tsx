@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Check, RotateCcw, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useRecordDeckActivity } from "@/hooks/use-decks";
+import { playSound } from "@/lib/sound";
 import { cn } from "@/lib/utils";
 import type { Card } from "@/lib/types";
 
@@ -101,10 +102,12 @@ export function MatchingGame({ deckId, cards, onComplete }: MatchingGameProps) {
     if (selectedMeaning) {
       const meaningSlot = round.meanings.find((s) => s.key === selectedMeaning);
       if (meaningSlot && meaningSlot.cardId === cardId) {
+        playSound("correct");
         setMatched((prev) => new Set(prev).add(cardId));
         setSelectedWord(null);
         setSelectedMeaning(null);
       } else if (meaningSlot) {
+        playSound("wrong");
         setWrongPair({ word: slotKey, meaning: selectedMeaning });
         setTimeout(() => {
           setWrongPair(null);
@@ -121,10 +124,12 @@ export function MatchingGame({ deckId, cards, onComplete }: MatchingGameProps) {
     if (selectedWord) {
       const wordSlot = round.words.find((s) => s.key === selectedWord);
       if (wordSlot && wordSlot.cardId === cardId) {
+        playSound("correct");
         setMatched((prev) => new Set(prev).add(cardId));
         setSelectedWord(null);
         setSelectedMeaning(null);
       } else if (wordSlot) {
+        playSound("wrong");
         setWrongPair({ word: selectedWord, meaning: slotKey });
         setTimeout(() => {
           setWrongPair(null);

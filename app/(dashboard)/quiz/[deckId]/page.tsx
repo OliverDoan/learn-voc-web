@@ -17,6 +17,8 @@ import {
   Puzzle,
   Repeat,
   Sparkles,
+  Volume2,
+  VolumeX,
   type LucideIcon,
 } from "lucide-react";
 import { toast } from "sonner";
@@ -34,6 +36,7 @@ import { useCards } from "@/hooks/use-cards";
 import { useDeck, useRecordDeckActivity } from "@/hooks/use-decks";
 import { useSubmitReview } from "@/hooks/use-study";
 import { haptic } from "@/lib/haptic";
+import { playSound, isSoundMuted, toggleSoundMuted } from "@/lib/sound";
 import { gapFillEligibleCards } from "@/lib/gap-fill";
 import { wordFormEligibleCards } from "@/lib/word-forms";
 import type { Card } from "@/lib/types";
@@ -69,6 +72,7 @@ export default function QuizPage({ params }: PageProps) {
   const searchParams = useSearchParams();
   const [mode, setMode] = useState<QuizMode | null>(null);
   const [reverse, setReverse] = useState(false);
+  const [muted, setMuted] = useState(false);
 
   const subsetIds = useMemo(() => {
     const raw = searchParams.get("ids");
@@ -83,7 +87,15 @@ export default function QuizPage({ params }: PageProps) {
   useEffect(() => {
     const stored = localStorage.getItem("voca-quiz-reverse");
     if (stored === "1") setReverse(true);
+    setMuted(isSoundMuted());
   }, []);
+
+  const toggleMuted = () => {
+    const next = toggleSoundMuted();
+    setMuted(next);
+    // Phát thử một tiếng khi vừa bật lại để người dùng biết.
+    if (!next) playSound("correct");
+  };
 
   const toggleReverse = () => {
     setReverse((prev) => {
@@ -179,17 +191,30 @@ export default function QuizPage({ params }: PageProps) {
         ) : null}
         <div className="mb-2 flex items-center justify-between gap-3">
           <h1 className="text-2xl font-bold">Chọn chế độ quiz</h1>
-          <Button
-            type="button"
-            variant={reverse ? "default" : "outline"}
-            size="sm"
-            className="rounded-full"
-            onClick={toggleReverse}
-            title="Đảo chiều: thấy nghĩa, đoán/chọn từ tiếng Anh"
-          >
-            <ArrowLeftRight className="h-4 w-4" />
-            {reverse ? "Đảo: Việt → Anh" : "Chiều: Anh → Việt"}
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button
+              type="button"
+              variant="outline"
+              size="icon"
+              className="rounded-full"
+              onClick={toggleMuted}
+              title={muted ? "Bật âm thanh phản hồi" : "Tắt âm thanh phản hồi"}
+              aria-label={muted ? "Bật âm thanh" : "Tắt âm thanh"}
+            >
+              {muted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
+            </Button>
+            <Button
+              type="button"
+              variant={reverse ? "default" : "outline"}
+              size="sm"
+              className="rounded-full"
+              onClick={toggleReverse}
+              title="Đảo chiều: thấy nghĩa, đoán/chọn từ tiếng Anh"
+            >
+              <ArrowLeftRight className="h-4 w-4" />
+              {reverse ? "Đảo: Việt → Anh" : "Chiều: Anh → Việt"}
+            </Button>
+          </div>
         </div>
         <p className="mb-6 text-sm text-muted-foreground">
           Toàn bộ từ trong deck theo thứ tự ngẫu nhiên (ghép cặp tính theo lượt 6 cặp). Đảo chiều áp dụng cho Trắc nghiệm và Gõ từ.
@@ -332,6 +357,7 @@ function QuizRunner({
   const handleAnswer = async (isCorrect: boolean) => {
     if (!current) return;
     haptic(isCorrect ? "success" : "fail");
+    playSound(isCorrect ? "correct" : "wrong");
     const rating = isCorrect ? 3 : 1;
     try {
       await submit.mutateAsync({ cardId: current.id, rating, timeTakenMs: 0 });

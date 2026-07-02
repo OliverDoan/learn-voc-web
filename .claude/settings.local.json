@@ -128,7 +128,14 @@
       "Bash(printf '\\\\n# local SQLite \\(legacy, app dùng Postgres/Neon\\)\\\\nprisma/dev.db\\\\nprisma/*.db\\\\nprisma/*.db-journal\\\\n')",
       "Bash(awk '{print $5, $NF}')",
       "Bash(APPLY=1 npx tsx --env-file=.env scripts/add-wordfamily-notes.ts)",
-      "Read(//Users/doanvietthuan/.claude/**)"
+      "Read(//Users/doanvietthuan/.claude/**)",
+      "Bash(pnpm notes:wordfamily)",
+      "Bash(APPLY=1 pnpm notes:wordfamily)",
+      "Bash(pnpm prisma:migrate --name add_activity_wrong_card_ids)",
+      "Bash(git stash *)",
+      "Bash(awk ' *)",
+      "Bash(awk '/^\\\\/Users.*\\\\.\\(tsx|ts\\)$/ { f=$0 } /error|warning/ { print f\"  >>  \"$0 }')",
+      "Bash(echo \"EXIT $?\")"
     ]
   }
 }
