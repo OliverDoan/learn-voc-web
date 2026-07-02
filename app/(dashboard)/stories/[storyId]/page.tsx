@@ -3,7 +3,7 @@
 import { use, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ArrowLeft, BookOpen, Eye, EyeOff, Pencil, Square, Target, Trash2, Volume2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookOpen, Eye, EyeOff, Languages, Pencil, Square, Target, Trash2, Volume2 } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { useConfirm } from "@/components/ui/confirm-dialog";
@@ -11,10 +11,10 @@ import { ImageLightbox } from "@/components/ui/image-lightbox";
 import { PageLoader } from "@/components/ui/page-loader";
 import { StoryRenderer } from "@/components/story/story-renderer";
 import { ReadingSpeedControl } from "@/components/story/reading-speed-control";
-import { useDeleteStory, useStory } from "@/hooks/use-stories";
+import { useDeleteStory, useStories, useStory } from "@/hooks/use-stories";
 import { useFavorites } from "@/hooks/use-cards";
 import { useReadingRate } from "@/hooks/use-reading-rate";
-import { countWordTokens, parseStory } from "@/lib/story-parser";
+import { countWordTokens, firstMeaning, parseStory } from "@/lib/story-parser";
 import { isSpeakable, speakAsync, stopSpeaking } from "@/lib/tts";
 
 interface PageProps {
@@ -26,15 +26,37 @@ export default function StoryViewPage({ params }: PageProps) {
   const router = useRouter();
   const [showMeanings, setShowMeanings] = useState(false);
   const [hideWords, setHideWords] = useState(false);
-  const [reading, setReading] = useState(false);
-  const readCancelRef = useRef(false);
+  // Chế độ đọc: "mixed" (văn Việt + từ chêm tiếng Anh) | "vi" (đọc toàn bộ tiếng Việt) | null
+  const [readMode, setReadMode] = useState<"mixed" | "vi" | null>(null);
+  // Mỗi lần bắt đầu/huỷ đọc tăng generation để vòng đọc cũ tự dừng, tránh đọc chồng.
+  const readGenRef = useRef(0);
   const { rate, setRate } = useReadingRate();
   // Ref để vòng đọc đang chạy luôn thấy tốc độ mới nhất khi người dùng đổi giữa chừng
   const rateRef = useRef(rate);
-  rateRef.current = rate;
+  useEffect(() => {
+    rateRef.current = rate;
+  }, [rate]);
 
   const { data: story, isLoading } = useStory(storyId);
+  // Danh sách truyện trong cùng deck (đã sắp xếp createdAt desc) để điều hướng sang truyện kế tiếp.
+  const { data: deckStories } = useStories(story?.deckId);
   const { data: favorites } = useFavorites();
+
+  // Truyện tiếp theo trong cùng deck; quay vòng về đầu khi đang ở truyện cuối.
+  const nextStory = useMemo(() => {
+    if (!deckStories || deckStories.length < 2) return null;
+    const idx = deckStories.findIndex((s) => s.id === storyId);
+    if (idx === -1) return null;
+    return deckStories[(idx + 1) % deckStories.length];
+  }, [deckStories, storyId]);
+
+  const handleGoNext = () => {
+    if (!nextStory) return;
+    // Dừng đọc trước khi chuyển truyện để không đọc chồng nội dung.
+    readGenRef.current++;
+    stopSpeaking();
+    router.push(`/stories/${nextStory.id}`);
+  };
   // Tập từ được đánh dấu sao (viết thường) để tô màu khác trong truyện.
   const favoriteWords = useMemo(
     () => new Set((favorites ?? []).map((c) => c.word.trim().toLowerCase())),
@@ -45,34 +67,41 @@ export default function StoryViewPage({ params }: PageProps) {
 
   useEffect(
     () => () => {
-      readCancelRef.current = true;
+      readGenRef.current++;
       stopSpeaking();
     },
     [],
   );
 
-  // Đọc truyện đúng ngôn ngữ: phần văn tiếng Việt (vi-VN), từ chêm tiếng Anh (en-US).
-  const handleReadAloud = async () => {
+  // Đọc truyện theo chế độ:
+  // - "mixed": văn tiếng Việt (vi-VN) + từ chêm đọc tiếng Anh (en-US)
+  // - "vi": đọc toàn bộ bằng tiếng Việt, từ chêm đọc nghĩa tiếng Việt (nghĩa đầu tiên)
+  const startReading = async (mode: "mixed" | "vi") => {
     if (!story) return;
-    if (reading) {
-      readCancelRef.current = true;
+    // Bấm lại đúng nút đang đọc → dừng.
+    if (readMode === mode) {
+      readGenRef.current++;
       stopSpeaking();
-      setReading(false);
+      setReadMode(null);
       return;
     }
-    readCancelRef.current = false;
-    setReading(true);
+    // Bắt đầu (hoặc chuyển) chế độ đọc — huỷ vòng đọc cũ bằng generation mới.
+    const gen = ++readGenRef.current;
+    stopSpeaking();
+    setReadMode(mode);
     const tokens = parseStory(story.content);
     for (const tok of tokens) {
-      if (readCancelRef.current) break;
+      if (readGenRef.current !== gen) return; // đã bị huỷ hoặc đổi chế độ
       if (tok.type === "text") {
         const text = tok.text.trim();
         if (isSpeakable(text)) await speakAsync(text, "vi-VN", rateRef.current);
+      } else if (mode === "vi") {
+        await speakAsync(firstMeaning(tok.meaning), "vi-VN", rateRef.current);
       } else {
         await speakAsync(tok.word, "en-US", rateRef.current);
       }
     }
-    if (!readCancelRef.current) setReading(false);
+    if (readGenRef.current === gen) setReadMode(null);
   };
 
 
@@ -143,13 +172,30 @@ export default function StoryViewPage({ params }: PageProps) {
 
       <div className="mb-6 flex flex-wrap justify-center gap-2">
         <Button
-          variant={reading ? "default" : "outline"}
+          variant={readMode === "mixed" ? "default" : "outline"}
           size="sm"
           className="rounded-full"
-          onClick={handleReadAloud}
+          onClick={() => startReading("mixed")}
         >
-          {reading ? <Square className="h-4 w-4 fill-current" /> : <Volume2 className="h-4 w-4" />}
-          {reading ? "Dừng" : "Đọc to"}
+          {readMode === "mixed" ? (
+            <Square className="h-4 w-4 fill-current" />
+          ) : (
+            <Volume2 className="h-4 w-4" />
+          )}
+          {readMode === "mixed" ? "Dừng" : "Đọc to"}
+        </Button>
+        <Button
+          variant={readMode === "vi" ? "default" : "outline"}
+          size="sm"
+          className="rounded-full"
+          onClick={() => startReading("vi")}
+        >
+          {readMode === "vi" ? (
+            <Square className="h-4 w-4 fill-current" />
+          ) : (
+            <Languages className="h-4 w-4" />
+          )}
+          {readMode === "vi" ? "Dừng" : "Đọc tiếng Việt"}
         </Button>
         <Button
           variant="outline"
@@ -175,6 +221,17 @@ export default function StoryViewPage({ params }: PageProps) {
           </Button>
         </Link>
         <ReadingSpeedControl rate={rate} onChange={setRate} />
+        {nextStory ? (
+          <Button
+            variant="outline"
+            size="sm"
+            className="rounded-full"
+            onClick={handleGoNext}
+          >
+            Truyện tiếp theo
+            <ArrowRight className="h-4 w-4" />
+          </Button>
+        ) : null}
       </div>
 
       <article className="rounded-2xl border bg-card p-8 shadow-[0_24px_64px_rgba(0,13,139,.08)] md:px-12">
@@ -198,6 +255,19 @@ export default function StoryViewPage({ params }: PageProps) {
           <span>chạm vào từ để xem nghĩa &amp; nghe phát âm</span>
         </div>
       </article>
+
+      {nextStory ? (
+        <div className="mt-6 flex justify-center">
+          <Button
+            variant="outline"
+            className="rounded-full"
+            onClick={handleGoNext}
+          >
+            Truyện tiếp theo: {nextStory.title}
+            <ArrowRight className="h-4 w-4" />
+          </Button>
+        </div>
+      ) : null}
 
       {confirmDialog}
     </div>

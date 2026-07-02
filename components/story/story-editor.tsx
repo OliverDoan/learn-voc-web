@@ -2,7 +2,7 @@
 
 import { useMemo, useRef, useState } from "react";
 import { toast } from "sonner";
-import { ChevronLeft, ImagePlus, Loader2, Plus, Trash2 } from "lucide-react";
+import { ChevronLeft, Crop, ImagePlus, Loader2, Plus, Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -11,8 +11,9 @@ import { Badge } from "@/components/ui/badge";
 import { StoryRenderer } from "./story-renderer";
 import { useCards } from "@/hooks/use-cards";
 import { useCreateStory, useUpdateStory } from "@/hooks/use-stories";
+import { StoryImageCropper } from "./story-image-cropper";
 import { countWordTokens, extractWords } from "@/lib/story-parser";
-import { fileToStoryImageDataUrl } from "@/lib/image";
+import { readImageFileForCrop } from "@/lib/image";
 import type { StoryWithCards } from "@/lib/types";
 
 interface StoryEditorProps {
@@ -27,7 +28,7 @@ export function StoryEditor({ deckId, story, onDone, onCancel }: StoryEditorProp
   const [title, setTitle] = useState(story?.title ?? "");
   const [content, setContent] = useState(story?.content ?? "");
   const [imageUrl, setImageUrl] = useState(story?.imageUrl ?? "");
-  const [imageProcessing, setImageProcessing] = useState(false);
+  const [cropSrc, setCropSrc] = useState<string | null>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const imageInputRef = useRef<HTMLInputElement>(null);
 
@@ -54,20 +55,23 @@ export function StoryEditor({ deckId, story, onDone, onCancel }: StoryEditorProp
     }, 0);
   };
 
-  // Chọn ảnh từ máy → resize và lưu thành data URL base64 (giống avatar).
+  // Chọn ảnh từ máy → mở công cụ crop trước khi lưu.
   const handlePickImage = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     e.target.value = ""; // reset để chọn lại cùng file vẫn kích hoạt onChange
     if (!file) return;
-    setImageProcessing(true);
     try {
-      const dataUrl = await fileToStoryImageDataUrl(file);
-      setImageUrl(dataUrl);
+      const dataUrl = await readImageFileForCrop(file);
+      setCropSrc(dataUrl);
     } catch (error) {
       toast.error(error instanceof Error ? error.message : "Lỗi xử lý ảnh");
-    } finally {
-      setImageProcessing(false);
     }
+  };
+
+  // Người dùng xác nhận vùng crop → lưu ảnh đã cắt.
+  const handleCropped = (dataUrl: string) => {
+    setImageUrl(dataUrl);
+    setCropSrc(null);
   };
 
   const isPending = createMut.isPending || updateMut.isPending;
@@ -134,24 +138,28 @@ export function StoryEditor({ deckId, story, onDone, onCancel }: StoryEditorProp
                 type="button"
                 variant="outline"
                 onClick={() => imageInputRef.current?.click()}
-                disabled={imageProcessing}
               >
-                {imageProcessing ? (
-                  <Loader2 className="h-4 w-4 animate-spin" />
-                ) : (
-                  <ImagePlus className="h-4 w-4" />
-                )}
+                <ImagePlus className="h-4 w-4" />
                 {imageUrl ? "Đổi ảnh" : "Tải ảnh lên"}
               </Button>
               {imageUrl ? (
-                <Button
-                  type="button"
-                  variant="ghost"
-                  onClick={() => setImageUrl("")}
-                  className="text-muted-foreground hover:text-destructive"
-                >
-                  <Trash2 className="h-4 w-4" /> Xoá ảnh
-                </Button>
+                <>
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    onClick={() => setCropSrc(imageUrl)}
+                  >
+                    <Crop className="h-4 w-4" /> Cắt lại
+                  </Button>
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    onClick={() => setImageUrl("")}
+                    className="text-muted-foreground hover:text-destructive"
+                  >
+                    <Trash2 className="h-4 w-4" /> Xoá ảnh
+                  </Button>
+                </>
               ) : null}
               <input
                 ref={imageInputRef}
@@ -171,7 +179,7 @@ export function StoryEditor({ deckId, story, onDone, onCancel }: StoryEditorProp
               />
             ) : null}
             <p className="text-xs text-muted-foreground">
-              Ảnh tải lên sẽ được nén &amp; lưu cùng truyện (tối đa 5MB).
+              Ảnh tải lên sẽ được cắt theo tỉ lệ 16:9, nén &amp; lưu cùng truyện (tối đa 5MB).
             </p>
           </div>
 
@@ -247,6 +255,15 @@ export function StoryEditor({ deckId, story, onDone, onCancel }: StoryEditorProp
           </div>
         </div>
       </div>
+
+      {cropSrc ? (
+        <StoryImageCropper
+          open={!!cropSrc}
+          src={cropSrc}
+          onCancel={() => setCropSrc(null)}
+          onCropped={handleCropped}
+        />
+      ) : null}
     </div>
   );
 }

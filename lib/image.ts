@@ -38,45 +38,70 @@ export async function fileToAvatarDataUrl(file: File): Promise<string> {
   return canvas.toDataURL("image/jpeg", 0.85);
 }
 
-// Kích thước tối đa cho ảnh minh hoạ truyện (giữ tỉ lệ, resize theo chiều rộng).
+// Chiều rộng tối đa của ảnh minh hoạ truyện sau khi crop (giữ nét, gọn DB).
 export const STORY_IMAGE_MAX_WIDTH = 1024;
-export const STORY_IMAGE_MAX_HEIGHT = 1024;
+
+// Tỉ lệ khung mặc định cho ảnh minh hoạ truyện (banner ngang).
+export const STORY_IMAGE_ASPECT = 16 / 9;
+
+const ACCEPTED_TYPES_LABEL = "JPG, PNG, WEBP hoặc GIF";
 
 /**
- * Đọc file ảnh, resize giữ tỉ lệ sao cho không vượt quá kích thước tối đa
- * (không crop) và trả về data URL JPEG để lưu trực tiếp vào DB.
- * Dùng cho ảnh minh hoạ của truyện chêm.
+ * Vùng crop tính theo pixel trên ảnh gốc.
  */
-export async function fileToStoryImageDataUrl(file: File): Promise<string> {
+export interface CropRect {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+}
+
+/**
+ * Đọc & kiểm tra file ảnh, trả về data URL gốc để đưa vào công cụ crop.
+ * Không resize ở bước này — giữ độ phân giải gốc để crop cho nét.
+ */
+export async function readImageFileForCrop(file: File): Promise<string> {
   if (!ACCEPTED_TYPES.includes(file.type)) {
-    throw new Error("Chỉ chấp nhận ảnh JPG, PNG, WEBP hoặc GIF");
+    throw new Error(`Chỉ chấp nhận ảnh ${ACCEPTED_TYPES_LABEL}`);
   }
   if (file.size > MAX_UPLOAD_BYTES) {
     throw new Error("Ảnh quá lớn (tối đa 5MB)");
   }
+  return readFileAsDataUrl(file);
+}
 
-  const dataUrl = await readFileAsDataUrl(file);
-  const img = await loadImage(dataUrl);
+/**
+ * Crop ảnh theo vùng `crop` (pixel trên ảnh gốc), sau đó resize sao cho
+ * chiều rộng không vượt quá `maxWidth`. Trả về data URL JPEG để lưu DB.
+ * Dùng cho ảnh minh hoạ truyện chêm sau khi người dùng chọn khung crop.
+ */
+export async function cropImageToDataUrl(
+  src: string,
+  crop: CropRect,
+  maxWidth: number = STORY_IMAGE_MAX_WIDTH,
+): Promise<string> {
+  const img = await loadImage(src);
 
-  // Tính tỉ lệ thu nhỏ để vừa khung tối đa (không phóng to ảnh nhỏ).
-  const scale = Math.min(
-    1,
-    STORY_IMAGE_MAX_WIDTH / img.width,
-    STORY_IMAGE_MAX_HEIGHT / img.height,
-  );
-  const width = Math.round(img.width * scale);
-  const height = Math.round(img.height * scale);
+  // Giới hạn vùng crop nằm trọn trong ảnh (tránh lỗi làm tròn ra ngoài biên).
+  const sx = Math.max(0, Math.min(crop.x, img.width));
+  const sy = Math.max(0, Math.min(crop.y, img.height));
+  const sw = Math.max(1, Math.min(crop.width, img.width - sx));
+  const sh = Math.max(1, Math.min(crop.height, img.height - sy));
+
+  const scale = Math.min(1, maxWidth / sw);
+  const outW = Math.max(1, Math.round(sw * scale));
+  const outH = Math.max(1, Math.round(sh * scale));
 
   const canvas = document.createElement("canvas");
-  canvas.width = width;
-  canvas.height = height;
+  canvas.width = outW;
+  canvas.height = outH;
   const ctx = canvas.getContext("2d");
   if (!ctx) {
     throw new Error("Trình duyệt không hỗ trợ xử lý ảnh");
   }
 
-  ctx.drawImage(img, 0, 0, width, height);
-  return canvas.toDataURL("image/jpeg", 0.82);
+  ctx.drawImage(img, sx, sy, sw, sh, 0, 0, outW, outH);
+  return canvas.toDataURL("image/jpeg", 0.85);
 }
 
 function readFileAsDataUrl(file: File): Promise<string> {

@@ -41,3 +41,13 @@ export function maskWords(content: string, placeholder = "_____"): string {
 export function plainText(content: string): string {
   return content.replace(TOKEN_RE, (_m, word) => word);
 }
+
+/**
+ * Lấy nghĩa đầu tiên khi một từ có nhiều nghĩa tiếng Việt.
+ * Tách theo dấu phẩy / chấm phẩy / gạch chéo / xuống dòng / dấu phẩy tiếng Nhật.
+ * Ví dụ: "đi làm, đi lại" → "đi làm".
+ */
+export function firstMeaning(meaning: string): string {
+  const first = meaning.split(/[,;/\n、]/)[0]?.trim();
+  return first || meaning.trim();
+}

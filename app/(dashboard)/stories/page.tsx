@@ -7,6 +7,7 @@ import {
   Eye,
   EyeOff,
   Image as ImageIcon,
+  Languages,
   Library,
   Play,
   Repeat,
@@ -25,7 +26,7 @@ import { Tooltip } from "@/components/ui/tooltip";
 import { useStories } from "@/hooks/use-stories";
 import { useFavorites } from "@/hooks/use-cards";
 import { useReadingRate } from "@/hooks/use-reading-rate";
-import { countWordTokens, parseStory } from "@/lib/story-parser";
+import { countWordTokens, firstMeaning, parseStory } from "@/lib/story-parser";
 import { isSpeakable, speakAsync, stopSpeaking } from "@/lib/tts";
 import { cn } from "@/lib/utils";
 import type { StoryListItem } from "@/lib/types";
@@ -50,6 +51,8 @@ export default function AllStoriesPage() {
   const [imageOnly, setImageOnly] = useState(false);
   // index của truyện đang được đọc to (null = không đọc)
   const [readingIndex, setReadingIndex] = useState<number | null>(null);
+  // Chế độ đọc: "mixed" (văn Việt + từ chêm tiếng Anh) | "vi" (đọc toàn bộ tiếng Việt) | null
+  const [readMode, setReadMode] = useState<"mixed" | "vi" | null>(null);
   // ID các deck BỊ BỎ CHỌN (rỗng = đọc tất cả). Mô hình loại trừ để mặc định là chọn hết.
   const [excludedDeckIds, setExcludedDeckIds] = useState<Set<string>>(new Set());
   // Lặp lại: đọc xong danh sách thì quay lại đầu, lặp đến khi dừng.
@@ -59,7 +62,9 @@ export default function AllStoriesPage() {
   const { rate, setRate } = useReadingRate();
   // Ref để vòng đọc đang chạy luôn thấy tốc độ / cờ lặp mới nhất khi người dùng đổi giữa chừng
   const rateRef = useRef(rate);
-  rateRef.current = rate;
+  useEffect(() => {
+    rateRef.current = rate;
+  }, [rate]);
   // Đồng bộ cờ lặp vào ref để vòng đọc đang chạy thấy giá trị mới nhất.
   const loopRef = useRef(loop);
   useEffect(() => {
@@ -127,14 +132,18 @@ export default function AllStoriesPage() {
     genRef.current += 1; // vô hiệu hoá vòng đọc hiện tại
     stopSpeaking();
     setReadingIndex(null);
+    setReadMode(null);
   };
 
-  // Đọc liền mạch từ truyện thứ `start` (index trong `visible`) đến hết:
-  // văn tiếng Việt (vi-VN) + từ chêm (en-US). Nếu bật "lặp lại" thì quay vòng từ đầu.
-  const readFrom = async (start: number) => {
+  // Đọc liền mạch từ truyện thứ `start` (index trong `visible`) đến hết. Theo `mode`:
+  // - "mixed": văn tiếng Việt (vi-VN) + từ chêm đọc tiếng Anh (en-US)
+  // - "vi": đọc toàn bộ tiếng Việt, từ chêm đọc nghĩa tiếng Việt (nghĩa đầu tiên)
+  // Nếu bật "lặp lại" thì quay vòng từ đầu.
+  const readFrom = async (start: number, mode: "mixed" | "vi") => {
     stopSpeaking(); // ngắt mọi giọng đang phát trước khi bắt đầu phiên mới
     const gen = (genRef.current += 1);
     const alive = () => genRef.current === gen;
+    setReadMode(mode);
     // Đóng băng danh sách của phiên đọc này để index ổn định suốt vòng lặp.
     const list = visible;
     if (list.length === 0) return;
@@ -157,6 +166,8 @@ export default function AllStoriesPage() {
           if (tok.type === "text") {
             const text = tok.text.trim();
             if (isSpeakable(text)) await speakAsync(text, "vi-VN", rateRef.current);
+          } else if (mode === "vi") {
+            await speakAsync(firstMeaning(tok.meaning), "vi-VN", rateRef.current);
           } else {
             await speakAsync(tok.word, "en-US", rateRef.current);
           }
@@ -165,15 +176,19 @@ export default function AllStoriesPage() {
       first = false;
     } while (loopRef.current && alive());
 
-    if (alive()) setReadingIndex(null);
+    if (alive()) {
+      setReadingIndex(null);
+      setReadMode(null);
+    }
   };
 
-  const handleToggleReadAll = () => {
-    if (readingIndex !== null) {
+  const toggleReadAll = (mode: "mixed" | "vi") => {
+    // Đang đọc đúng chế độ này → dừng; ngược lại bắt đầu (hoặc chuyển) chế độ.
+    if (readingIndex !== null && readMode === mode) {
       stopReading();
       return;
     }
-    void readFrom(0);
+    void readFrom(0, mode);
   };
 
   // Đổi lựa chọn deck giữa chừng làm xáo trộn index → dừng đọc trước khi đổi.
@@ -254,19 +269,35 @@ export default function AllStoriesPage() {
       <div className="sticky top-2 z-20 mb-6 flex flex-wrap justify-center gap-2 rounded-full border bg-card/95 p-2 shadow-sm backdrop-blur">
         {!imageOnly ? (
           <>
-            <Tooltip label={readingIndex !== null ? "Dừng" : "Đọc to toàn bộ"}>
+            <Tooltip label={readMode === "mixed" ? "Dừng" : "Đọc to toàn bộ (Anh + Việt)"}>
               <Button
-                variant={readingIndex !== null ? "default" : "outline"}
+                variant={readMode === "mixed" ? "default" : "outline"}
                 size="icon"
                 className="rounded-full"
-                aria-label={readingIndex !== null ? "Dừng" : "Đọc to toàn bộ"}
-                onClick={handleToggleReadAll}
+                aria-label={readMode === "mixed" ? "Dừng" : "Đọc to toàn bộ"}
+                onClick={() => toggleReadAll("mixed")}
                 disabled={isLoading || visible.length === 0}
               >
-                {readingIndex !== null ? (
+                {readMode === "mixed" ? (
                   <Square className="h-4 w-4 fill-current" />
                 ) : (
                   <Volume2 className="h-4 w-4" />
+                )}
+              </Button>
+            </Tooltip>
+            <Tooltip label={readMode === "vi" ? "Dừng" : "Đọc tiếng Việt toàn bộ"}>
+              <Button
+                variant={readMode === "vi" ? "default" : "outline"}
+                size="icon"
+                className="rounded-full"
+                aria-label={readMode === "vi" ? "Dừng" : "Đọc tiếng Việt toàn bộ"}
+                onClick={() => toggleReadAll("vi")}
+                disabled={isLoading || visible.length === 0}
+              >
+                {readMode === "vi" ? (
+                  <Square className="h-4 w-4 fill-current" />
+                ) : (
+                  <Languages className="h-4 w-4" />
                 )}
               </Button>
             </Tooltip>
@@ -391,7 +422,7 @@ export default function AllStoriesPage() {
                     size="icon"
                     className="h-8 w-8 shrink-0 rounded-full"
                     aria-label={reading ? "Dừng đọc" : "Đọc từ truyện này"}
-                    onClick={() => (reading ? stopReading() : void readFrom(i))}
+                    onClick={() => (reading ? stopReading() : void readFrom(i, "mixed"))}
                   >
                     {reading ? (
                       <Square className="h-4 w-4 fill-current text-primary" />
