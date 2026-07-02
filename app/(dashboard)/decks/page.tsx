@@ -67,7 +67,7 @@ export default function DecksPage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Tìm deck theo tên hoặc mô tả..."
-            className="pl-9"
+            className="bg-card pl-9"
           />
         </div>
       ) : null}

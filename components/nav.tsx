@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -47,25 +47,44 @@ const items: NavItem[] = [
 
 const mobileItems = items.filter((i) => i.mobile);
 
+// Store nhỏ cho trạng thái thu gọn sidebar, lưu ở localStorage.
+// Dùng useSyncExternalStore để SSR luôn trả về false (khớp server) rồi
+// tự đồng bộ giá trị client sau hydrate — tránh lỗi hydration mismatch.
+const COLLAPSED_KEY = "voc-sidebar-collapsed";
+const collapsedListeners = new Set<() => void>();
+
+function getCollapsedSnapshot(): boolean {
+  return localStorage.getItem(COLLAPSED_KEY) === "1";
+}
+
+function subscribeCollapsed(cb: () => void): () => void {
+  collapsedListeners.add(cb);
+  window.addEventListener("storage", cb);
+  return () => {
+    collapsedListeners.delete(cb);
+    window.removeEventListener("storage", cb);
+  };
+}
+
+function setCollapsedStore(next: boolean) {
+  try {
+    localStorage.setItem(COLLAPSED_KEY, next ? "1" : "0");
+  } catch {
+    /* bỏ qua */
+  }
+  collapsedListeners.forEach((cb) => cb());
+}
+
 export function Nav() {
   const pathname = usePathname();
   const { data: progress } = useProgress();
-  // Thu gọn sidebar — khởi tạo từ localStorage (chỉ icon khi thu gọn).
-  const [collapsed, setCollapsed] = useState<boolean>(() => {
-    if (typeof window === "undefined") return false;
-    return localStorage.getItem("voc-sidebar-collapsed") === "1";
-  });
-  const toggle = () => {
-    setCollapsed((prev) => {
-      const next = !prev;
-      try {
-        localStorage.setItem("voc-sidebar-collapsed", next ? "1" : "0");
-      } catch {
-        /* bỏ qua */
-      }
-      return next;
-    });
-  };
+  // Thu gọn sidebar (chỉ hiện icon khi thu gọn).
+  const collapsed = useSyncExternalStore(
+    subscribeCollapsed,
+    getCollapsedSnapshot,
+    () => false,
+  );
+  const toggle = () => setCollapsedStore(!collapsed);
 
   return (
     <aside

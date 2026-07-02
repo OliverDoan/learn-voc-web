@@ -72,39 +72,35 @@ export function CardsFilterBar({
             Nhóm theo chủ đề
           </button>
         ) : null}
+        {availablePos.length > 0 ? (
+          <>
+            {POS_FILTERS.filter((p) => availablePos.includes(p.key)).map(({ key, label }) => {
+              const active = selectedPos.includes(key);
+              return (
+                <button
+                  key={key}
+                  type="button"
+                  onClick={() => onTogglePos(key)}
+                  className={cn(
+                    "rounded-full border px-2 py-0.5 text-xs font-medium transition-colors",
+                    active
+                      ? posBadgeClass(key)
+                      : "border-border bg-card text-muted-foreground shadow-sm hover:border-primary/40 hover:text-foreground",
+                  )}
+                  aria-pressed={active}
+                >
+                  {label}
+                </button>
+              );
+            })}
+          </>
+        ) : null}
         {isFiltering ? (
           <span className="ml-auto text-xs text-muted-foreground">
             {matchCount} / {totalCount} từ
           </span>
         ) : null}
       </div>
-
-      {availablePos.length > 0 ? (
-        <div className="flex flex-wrap items-center gap-1">
-          <span className="mr-1 text-[10px] uppercase tracking-wider text-muted-foreground">
-            Từ loại
-          </span>
-          {POS_FILTERS.filter((p) => availablePos.includes(p.key)).map(({ key, label }) => {
-            const active = selectedPos.includes(key);
-            return (
-              <button
-                key={key}
-                type="button"
-                onClick={() => onTogglePos(key)}
-                className={cn(
-                  "rounded-full border px-2 py-0.5 text-xs font-medium transition-colors",
-                  active
-                    ? posBadgeClass(key)
-                    : "border-border bg-card text-muted-foreground shadow-sm hover:border-primary/40 hover:text-foreground",
-                )}
-                aria-pressed={active}
-              >
-                {label}
-              </button>
-            );
-          })}
-        </div>
-      ) : null}
 
       {availableTags.length > 0 ? (
         <div className="flex flex-wrap items-center gap-1">
