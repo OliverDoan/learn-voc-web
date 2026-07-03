@@ -154,6 +154,25 @@ export function StoryImageCropper({
     }
   };
 
+  // Giữ nguyên toàn bộ ảnh gốc (không cắt) — chỉ resize về bề rộng tối đa cho nhẹ DB.
+  const handleKeepFull = async () => {
+    if (!natural) return;
+    setProcessing(true);
+    try {
+      const dataUrl = await cropImageToDataUrl(src, {
+        x: 0,
+        y: 0,
+        width: natural.w,
+        height: natural.h,
+      });
+      onCropped(dataUrl);
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : "Lỗi xử lý ảnh");
+    } finally {
+      setProcessing(false);
+    }
+  };
+
   return (
     <Dialog open={open} onOpenChange={(o) => (!o ? onCancel() : undefined)}>
       <DialogContent onClose={onCancel}>
@@ -207,16 +226,27 @@ export function StoryImageCropper({
           <ZoomIn className="h-4 w-4 shrink-0 text-muted-foreground" />
         </div>
         <p className="mt-2 text-xs text-muted-foreground">
-          Kéo để di chuyển ảnh, dùng thanh trượt hoặc lăn chuột để phóng to.
+          Kéo để di chuyển ảnh, dùng thanh trượt hoặc lăn chuột để phóng to. Ảnh dọc/nhiều
+          khung nên chọn &ldquo;Giữ nguyên ảnh&rdquo; để không mất phần trên/dưới.
         </p>
 
         <DialogFooter>
           <Button type="button" variant="ghost" onClick={onCancel} disabled={processing}>
             Huỷ
           </Button>
+          <Button
+            type="button"
+            variant="outline"
+            onClick={handleKeepFull}
+            disabled={processing || !natural}
+            title="Không cắt — giữ nguyên toàn bộ chiều cao ảnh gốc"
+          >
+            {processing ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
+            Giữ nguyên ảnh
+          </Button>
           <Button type="button" onClick={handleConfirm} disabled={processing || !natural}>
             {processing ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
-            Áp dụng
+            Áp dụng khung cắt
           </Button>
         </DialogFooter>
       </DialogContent>

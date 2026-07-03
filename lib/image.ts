@@ -104,6 +104,16 @@ export async function cropImageToDataUrl(
   return canvas.toDataURL("image/jpeg", 0.85);
 }
 
+/**
+ * Đọc file ảnh và trả về data URL GIỮ NGUYÊN toàn bộ ảnh (không cắt),
+ * chỉ resize về bề rộng tối đa cho nhẹ DB. Dùng cho cập nhật ảnh truyện hàng loạt.
+ */
+export async function fileToStoryImageDataUrl(file: File): Promise<string> {
+  const src = await readImageFileForCrop(file);
+  const img = await loadImage(src);
+  return cropImageToDataUrl(src, { x: 0, y: 0, width: img.width, height: img.height });
+}
+
 function readFileAsDataUrl(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();

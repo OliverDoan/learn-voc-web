@@ -7,8 +7,10 @@ import {
   Eye,
   EyeOff,
   Image as ImageIcon,
+  ImagePlus,
   Languages,
   Library,
+  Maximize2,
   Play,
   Repeat,
   Square,
@@ -18,6 +20,9 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { StoryRenderer } from "@/components/story/story-renderer";
+import { StoryImageFlashcard } from "@/components/story/story-image-flashcard";
+import { StoryImageLightbox } from "@/components/story/story-image-lightbox";
+import { StoryImageManager } from "@/components/story/story-image-manager";
 import { StoryDeckPicker, type DeckOption } from "@/components/story/story-deck-picker";
 import { ReadingSpeedControl } from "@/components/story/reading-speed-control";
 import { AutoScrollControls } from "@/components/ui/auto-scroll-controls";
@@ -49,6 +54,10 @@ export default function AllStoriesPage() {
   const [hideWords, setHideWords] = useState(false);
   // Chế độ chỉ xem ảnh: ẩn tiêu đề + từ chêm + văn bản, chỉ hiện ảnh truyện
   const [imageOnly, setImageOnly] = useState(false);
+  // Index ảnh đang mở trong lightbox toàn màn hình (null = đóng), tính trên danh sách truyện có ảnh.
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  // Mở dialog cập nhật ảnh hàng loạt cho các truyện đang hiển thị.
+  const [imageManagerOpen, setImageManagerOpen] = useState(false);
   // index của truyện đang được đọc to (null = không đọc)
   const [readingIndex, setReadingIndex] = useState<number | null>(null);
   // Chế độ đọc: "mixed" (văn Việt + từ chêm tiếng Anh) | "vi" (đọc toàn bộ tiếng Việt) | null
@@ -126,7 +135,9 @@ export default function AllStoriesPage() {
     [visible],
   );
 
-  const hasImages = useMemo(() => visible.some((s) => Boolean(s.imageUrl)), [visible]);
+  // Danh sách truyện có ảnh — nguồn duy nhất cho chế độ chỉ xem ảnh + lightbox (index khớp nhau).
+  const imageStories = useMemo(() => visible.filter((s) => Boolean(s.imageUrl)), [visible]);
+  const hasImages = imageStories.length > 0;
 
   const stopReading = () => {
     genRef.current += 1; // vô hiệu hoá vòng đọc hiện tại
@@ -352,6 +363,31 @@ export default function AllStoriesPage() {
             <ImageIcon className="h-4 w-4" />
           </Button>
         </Tooltip>
+        {imageOnly && hasImages ? (
+          <Tooltip label="Xem toàn màn hình tất cả ảnh">
+            <Button
+              variant="outline"
+              size="icon"
+              className="rounded-full"
+              aria-label="Xem toàn màn hình tất cả ảnh"
+              onClick={() => setLightboxIndex(0)}
+            >
+              <Maximize2 className="h-4 w-4" />
+            </Button>
+          </Tooltip>
+        ) : null}
+        <Tooltip label="Cập nhật ảnh nhiều truyện cùng lúc">
+          <Button
+            variant="outline"
+            size="icon"
+            className="rounded-full"
+            aria-label="Cập nhật ảnh nhiều truyện cùng lúc"
+            onClick={() => setImageManagerOpen(true)}
+            disabled={isLoading || visible.length === 0}
+          >
+            <ImagePlus className="h-4 w-4" />
+          </Button>
+        </Tooltip>
       </div>
 
       {isLoading ? (
@@ -374,32 +410,21 @@ export default function AllStoriesPage() {
             Chưa có truyện nào kèm ảnh để xem.
           </p>
         </div>
+      ) : imageOnly ? (
+        // Chế độ chỉ xem ảnh: mỗi ảnh là một flashcard — nhấn để lật sang nội dung truyện.
+        <div className="space-y-10">
+          {imageStories.map((story, i) => (
+            <StoryImageFlashcard
+              key={story.id}
+              story={story}
+              favoriteWords={favoriteWords}
+              onOpenFullscreen={() => setLightboxIndex(i)}
+            />
+          ))}
+        </div>
       ) : (
         <div className="space-y-10">
           {visible.map((story, i) => {
-            // Chế độ chỉ xem ảnh: bỏ qua truyện không có ảnh, chỉ hiện ảnh có link mở truyện
-            if (imageOnly) {
-              if (!story.imageUrl) return null;
-              return (
-                <Link
-                  key={story.id}
-                  href={`/stories/${story.id}`}
-                  className="group relative block overflow-hidden rounded-2xl shadow-[0_24px_64px_rgba(0,13,139,.08)] transition-transform hover:scale-[1.01]"
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={story.imageUrl}
-                    alt={story.title}
-                    className="h-auto w-full object-contain"
-                  />
-                  {/* Tên deck dạng overlay góc trên trái */}
-                  <span className="absolute left-3 top-3 inline-flex max-w-[calc(100%-1.5rem)] items-center gap-1 truncate rounded-full bg-black/60 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
-                    <BookOpen className="h-3 w-3 shrink-0" />
-                    {story.deck.name}
-                  </span>
-                </Link>
-              );
-            }
             const reading = readingIndex === i;
             return (
               <article
@@ -466,6 +491,22 @@ export default function AllStoriesPage() {
       )}
 
       {!isLoading && visible.length > 0 ? <AutoScrollControls /> : null}
+
+      {/* Dialog cập nhật ảnh hàng loạt cho các truyện đang hiển thị */}
+      {imageManagerOpen ? (
+        <StoryImageManager stories={visible} onClose={() => setImageManagerOpen(false)} />
+      ) : null}
+
+      {/* Lightbox toàn màn hình: mũi tên chuyển ảnh, nhấn ảnh để lật sang nội dung */}
+      {lightboxIndex !== null ? (
+        <StoryImageLightbox
+          stories={imageStories}
+          index={lightboxIndex}
+          onNavigate={setLightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+          favoriteWords={favoriteWords}
+        />
+      ) : null}
     </div>
   );
 }
