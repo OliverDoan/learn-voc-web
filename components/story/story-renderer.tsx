@@ -48,10 +48,9 @@ export function StoryRenderer({
                 "font-sans font-semibold transition-colors",
                 hideWords
                   ? cn(
-                      "mx-0.5 rounded-md px-2 text-transparent underline decoration-wavy",
-                      fav
-                        ? "bg-amber-400/25 decoration-amber-500"
-                        : "bg-primary/15 decoration-primary",
+                      // leading-none + py nhỏ để ô ôm gọn chữ, không dính ô của dòng trên/dưới
+                      "mx-1 inline-block rounded-md px-2.5 py-1 align-baseline leading-none text-transparent",
+                      fav ? "bg-amber-400/25" : "bg-primary/15",
                     )
                   : cn(
                       "rounded-md px-1.5 text-[0.9em]",
