@@ -10,6 +10,7 @@ export type DeckActivityKey =
   | "typing"
   | "listening"
   | "gap-fill"
+  | "story-fill"
   | "word-formation"
   | "matching"
   | "test"
@@ -31,6 +32,7 @@ export const DECK_ACTIVITIES: readonly ActivityDef[] = [
   { key: "typing", label: "Gõ từ", scored: true },
   { key: "listening", label: "Nghe", scored: true },
   { key: "gap-fill", label: "Điền từ vào câu", scored: true },
+  { key: "story-fill", label: "Điền truyện chêm", scored: true },
   { key: "word-formation", label: "Biến đổi từ", scored: true },
   { key: "matching", label: "Ghép cặp", scored: false },
   { key: "test", label: "Làm bài", scored: false },
@@ -48,6 +50,9 @@ export function activityHref(key: DeckActivityKey | string, deckId: string): str
       return `/flashcards/${deckId}`;
     case "pronounce":
       return `/pronounce/${deckId}`;
+    case "story-fill":
+      // Trang trung gian: 1 truyện → vào thẳng, nhiều truyện → chọn truyện.
+      return `/story-fill/${deckId}`;
     default:
       // Các dạng quiz: trang quiz đọc ?mode= để vào thẳng dạng bài.
       return `/quiz/${deckId}?mode=${key}`;
@@ -60,11 +65,20 @@ export function getActivityDef(key: string): ActivityDef | undefined {
 
 export const DECK_ACTIVITY_KEYS = DECK_ACTIVITIES.map((a) => a.key);
 
+/** Dữ kiện thêm (ngoài thẻ) để xác định dạng bài khả dụng. */
+export interface ActivityContext {
+  /** Deck có ít nhất 1 truyện chêm chứa từ chêm → mở "Điền truyện chêm". */
+  hasStoryWithWords?: boolean;
+}
+
 /**
  * Xác định những dạng bài tập KHẢ DỤNG cho một deck dựa trên thẻ hiện có.
  * Chỉ những dạng khả dụng mới được tính vào "đã làm hết bài tập".
  */
-export function eligibleActivities(cards: readonly Card[]): DeckActivityKey[] {
+export function eligibleActivities(
+  cards: readonly Card[],
+  ctx: ActivityContext = {},
+): DeckActivityKey[] {
   const n = cards.length;
   const result: DeckActivityKey[] = [];
 
@@ -74,6 +88,8 @@ export function eligibleActivities(cards: readonly Card[]): DeckActivityKey[] {
   if (n >= 4) result.push("multiple-choice", "test");
   if (n >= 6) result.push("matching");
   if (gapFillEligibleCards(cards).length >= 1) result.push("gap-fill");
+  // Điền truyện chêm: cần truyện có từ chêm, không phụ thuộc số thẻ.
+  if (ctx.hasStoryWithWords) result.push("story-fill");
   // "Biến đổi từ" (word-formation) KHÔNG tính vào tiến độ / điều kiện mở khóa
   // (vẫn chơi được ở trang quiz nếu thẻ có dữ liệu word forms).
 
@@ -120,8 +136,9 @@ export function isActivityDone(
 export function allExercisesDone(
   cards: readonly Card[],
   records: readonly ActivityRecord[],
+  ctx: ActivityContext = {},
 ): boolean {
-  const eligible = eligibleActivities(cards);
+  const eligible = eligibleActivities(cards, ctx);
   return eligible.length > 0 && eligible.every((k) => isActivityDone(k, records));
 }
 
@@ -140,9 +157,10 @@ export interface ExerciseStatus {
 export function buildExerciseStatus(
   cards: readonly Card[],
   records: readonly ActivityRecord[],
+  ctx: ActivityContext = {},
 ): { exercises: ExerciseStatus[]; allDone: boolean } {
   const byKey = new Map(records.map((r) => [r.activity, r]));
-  const exercises = eligibleActivities(cards).map((key) => {
+  const exercises = eligibleActivities(cards, ctx).map((key) => {
     const def = ACTIVITY_BY_KEY.get(key)!;
     return {
       key,

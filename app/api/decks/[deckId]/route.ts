@@ -3,6 +3,7 @@ import { prisma } from "@/lib/db";
 import { fail, handleError, ok } from "@/lib/api-helpers";
 import { computeDeckLockStatus } from "@/lib/deck-progress";
 import { buildExerciseStatus } from "@/lib/deck-activities";
+import { countWordTokens } from "@/lib/story-parser";
 import { deckUpdateSchema } from "@/lib/schemas";
 import type { Card } from "@/lib/types";
 
@@ -28,14 +29,18 @@ export async function GET(_req: NextRequest, { params }: RouteParams) {
       locked: false,
     };
     // Trạng thái các dạng bài tập khả dụng (để vẽ thanh progress + gating).
-    const [cards, activityRows] = await Promise.all([
+    const [cards, activityRows, stories] = await Promise.all([
       prisma.card.findMany({ where: { deckId, deletedAt: null } }),
       prisma.deckActivity.findMany({
         where: { deckId },
         select: { activity: true, bestAccuracy: true, wrongCardIds: true },
       }),
+      prisma.story.findMany({ where: { deckId }, select: { content: true } }),
     ]);
-    const { exercises, allDone } = buildExerciseStatus(cards as unknown as Card[], activityRows);
+    const hasStoryWithWords = stories.some((s) => countWordTokens(s.content) > 0);
+    const { exercises, allDone } = buildExerciseStatus(cards as unknown as Card[], activityRows, {
+      hasStoryWithWords,
+    });
     return ok({
       ...deck,
       learned: status.learned,

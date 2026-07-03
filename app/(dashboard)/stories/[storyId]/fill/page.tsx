@@ -5,7 +5,9 @@ import Link from "next/link";
 import { ArrowLeft, Check, CheckCircle2, Loader2, X } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
+import { useRecordDeckActivity } from "@/hooks/use-decks";
 import { useStory } from "@/hooks/use-stories";
+import { EXERCISE_PASS_ACCURACY } from "@/lib/deck-activities";
 import { parseStory, type StoryToken } from "@/lib/story-parser";
 import { levenshtein, cn } from "@/lib/utils";
 
@@ -22,6 +24,7 @@ interface Slot {
 export default function FillBlankPage({ params }: PageProps) {
   const { storyId } = use(params);
   const { data: story, isLoading } = useStory(storyId);
+  const recordActivity = useRecordDeckActivity(story?.deckId ?? "");
 
   const tokens: StoryToken[] = useMemo(
     () => (story ? parseStory(story.content) : []),
@@ -49,10 +52,11 @@ export default function FillBlankPage({ params }: PageProps) {
   if (!story) return <div className="p-6">Không tìm thấy truyện</div>;
 
   const allFilled = slots.every((s) => (answers[s.index] ?? "").trim().length > 0);
-  const correctCount = slots.filter((s) => {
+  const isSlotCorrect = (s: Slot) => {
     const ans = (answers[s.index] ?? "").trim().toLowerCase();
     return levenshtein(ans, s.word.toLowerCase()) <= 1;
-  }).length;
+  };
+  const correctCount = slots.filter(isSlotCorrect).length;
 
   const handleSubmit = () => {
     if (!allFilled) {
@@ -60,6 +64,21 @@ export default function FillBlankPage({ params }: PageProps) {
       return;
     }
     setSubmitted(true);
+
+    // Ghi điểm vào tiến độ bài tập của deck (best accuracy + lịch sử lượt làm).
+    // Từ sai → map sang ID thẻ tương ứng (nếu truyện có link thẻ) để ôn lại.
+    const cardIdByWord = new Map(
+      story.storyCards.map((sc) => [sc.card.word.trim().toLowerCase(), sc.cardId] as const),
+    );
+    const wrongCardIds = slots
+      .filter((s) => !isSlotCorrect(s))
+      .map((s) => cardIdByWord.get(s.word.trim().toLowerCase()))
+      .filter((id): id is string => Boolean(id));
+    const accuracy = slots.length === 0 ? 0 : Math.round((correctCount / slots.length) * 100);
+    recordActivity.mutate(
+      { activity: "story-fill", accuracy, wrongCardIds, total: slots.length },
+      { onError: () => toast.error("Không ghi được điểm, thử lại sau") },
+    );
   };
 
   const handleReset = () => {
@@ -139,7 +158,7 @@ function ResultPanel({
   storyId: string;
 }) {
   const pct = total === 0 ? 0 : Math.round((correct / total) * 100);
-  const passed = pct >= 70;
+  const passed = pct >= EXERCISE_PASS_ACCURACY;
   return (
     <div className="rounded-xl border bg-card p-6 text-center">
       {passed ? (
@@ -151,7 +170,9 @@ function ResultPanel({
         {correct} / {total} đúng ({pct}%)
       </p>
       <p className="mb-4 text-sm text-muted-foreground">
-        {passed ? "Xuất sắc! Tiếp tục giữ phong độ 🔥" : "Cố lên, thử lại nhé 💪"}
+        {passed
+          ? "Xuất sắc! Điểm đã được tính vào tiến độ bài tập 🔥"
+          : `Cần đạt ≥ ${EXERCISE_PASS_ACCURACY}% để tính hoàn thành dạng này, thử lại nhé 💪`}
       </p>
       <div className="flex justify-center gap-3">
         <Button variant="outline" onClick={onReset}>

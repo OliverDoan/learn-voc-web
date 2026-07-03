@@ -79,6 +79,19 @@ describe("eligibleActivities", () => {
     const card = makeCard({ word: "happy", wordForms: JSON.stringify({ noun: "happiness" }) });
     expect(eligibleActivities([card])).not.toContain("word-formation");
   });
+
+  it("deck có truyện chứa từ chêm → mở điền truyện chêm", () => {
+    expect(eligibleActivities([makeCard()], { hasStoryWithWords: true })).toContain("story-fill");
+    // Không cần thẻ — chỉ cần truyện có từ chêm.
+    expect(eligibleActivities([], { hasStoryWithWords: true })).toContain("story-fill");
+  });
+
+  it("deck không có truyện (hoặc truyện không từ chêm) → không có điền truyện chêm", () => {
+    expect(eligibleActivities([makeCard()])).not.toContain("story-fill");
+    expect(eligibleActivities([makeCard()], { hasStoryWithWords: false })).not.toContain(
+      "story-fill",
+    );
+  });
 });
 
 describe("isActivityDone", () => {
@@ -126,5 +139,21 @@ describe("allExercisesDone & buildExerciseStatus", () => {
       { activity: "pronounce", bestAccuracy: 80 },
     ];
     expect(allExercisesDone(cards, records)).toBe(false);
+  });
+
+  it("deck có truyện: điền truyện chêm cũng phải đạt ngưỡng mới xong", () => {
+    const cards = [makeCard()];
+    const records: ActivityRecord[] = [
+      { activity: "study", bestAccuracy: 90 },
+      { activity: "flashcards", bestAccuracy: null },
+      { activity: "typing", bestAccuracy: 85 },
+      { activity: "listening", bestAccuracy: 100 },
+      { activity: "pronounce", bestAccuracy: 80 },
+    ];
+    // Thiếu story-fill → chưa xong
+    expect(allExercisesDone(cards, records, { hasStoryWithWords: true })).toBe(false);
+    // Đạt 80 → xong
+    const withStory = [...records, { activity: "story-fill", bestAccuracy: 80 }];
+    expect(allExercisesDone(cards, withStory, { hasStoryWithWords: true })).toBe(true);
   });
 });
