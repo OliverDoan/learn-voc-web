@@ -106,6 +106,7 @@ export function TestModeQuiz({
         activity: "test",
         accuracy: Math.round((correctCount / total) * 100),
         wrongCardIds,
+        total,
       });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

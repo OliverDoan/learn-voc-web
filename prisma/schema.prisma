@@ -28,6 +28,7 @@ model Deck {
   cards       Card[]
   stories     Story[]
   activities  DeckActivity[]
+  attempts    ExerciseAttempt[]
 
   @@index([deletedAt])
 }
@@ -48,6 +49,27 @@ model DeckActivity {
 
   @@unique([deckId, activity])
   @@index([deckId])
+}
+
+// Nhật ký TỪNG LẦN làm bài tập (append-only) — dùng cho trang "Lịch sử làm bài"
+// và tổng hợp "Câu sai cần ôn" (cộng dồn qua các lần, không ghi đè).
+model ExerciseAttempt {
+  id           String   @id @default(cuid())
+  deckId       String
+  deck         Deck     @relation(fields: [deckId], references: [id], onDelete: Cascade)
+  // Loại hoạt động (giống DeckActivity.activity)
+  activity     String
+  // Độ chính xác lượt này (0-100). null = dạng không chấm điểm.
+  accuracy     Int?
+  // Tổng số câu trong lượt & số câu sai.
+  totalCount   Int      @default(0)
+  wrongCount   Int      @default(0)
+  // JSON array ID các thẻ làm sai trong lượt này.
+  wrongCardIds String   @default("[]")
+  createdAt    DateTime @default(now())
+
+  @@index([deckId])
+  @@index([createdAt])
 }
 
 model Card {

@@ -19,6 +19,42 @@ export interface DeckActivityRecord {
   bestAccuracy: number | null;
 }
 
+// Thông tin deck rút gọn dùng chung khi hiển thị nguồn.
+export interface DeckRef {
+  id: string;
+  name: string;
+  color: string;
+  icon: string | null;
+}
+
+// Một lượt làm bài trong "Lịch sử làm bài" (timeline).
+export interface AttemptHistoryItem {
+  id: string;
+  deck: DeckRef;
+  activity: string;
+  accuracy: number | null;
+  totalCount: number;
+  wrongCount: number;
+  createdAt: string;
+}
+
+// Một thẻ trong danh sách "Câu sai cần ôn" (đã cộng dồn qua các lượt).
+export interface WrongCardItem {
+  id: string;
+  word: string;
+  meaning: string;
+  partOfSpeech: string | null;
+  phonetic: string | null;
+  deck: DeckRef;
+  wrongCount: number;
+  lastWrongAt: string;
+}
+
+export interface HistoryData {
+  attempts: AttemptHistoryItem[];
+  wrongCards: WrongCardItem[];
+}
+
 // Trạng thái một dạng bài tập khả dụng của deck (server tính, dùng cho thanh progress).
 export interface DeckExerciseStatus {
   key: string;

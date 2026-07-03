@@ -78,7 +78,12 @@ export function useSetDeckLearned(deckId: string) {
 export function useRecordDeckActivity(deckId: string) {
   const qc = useQueryClient();
   return useMutation({
-    mutationFn: (input: { activity: string; accuracy?: number | null; wrongCardIds?: string[] }) =>
+    mutationFn: (input: {
+      activity: string;
+      accuracy?: number | null;
+      wrongCardIds?: string[];
+      total?: number;
+    }) =>
       apiPost<{ activity: string; bestAccuracy: number | null }>(
         `/api/decks/${deckId}/activity`,
         input,
@@ -86,6 +91,7 @@ export function useRecordDeckActivity(deckId: string) {
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ["decks", deckId] });
       qc.invalidateQueries({ queryKey: DECKS_KEY });
+      qc.invalidateQueries({ queryKey: ["history"] });
     },
   });
 }

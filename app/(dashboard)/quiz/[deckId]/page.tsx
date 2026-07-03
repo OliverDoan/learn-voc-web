@@ -67,10 +67,18 @@ const MODES: { id: QuizMode; label: string; icon: LucideIcon; desc: string; minC
 
 const REVERSE_MODES: QuizMode[] = ["multiple-choice", "typing", "test"];
 
+/** Parse ?mode= từ URL thành QuizMode hợp lệ (deep-link từ thanh tiến độ bài tập). */
+function parseModeParam(raw: string | null): QuizMode | null {
+  const found = MODES.find((m) => m.id === raw);
+  return found ? found.id : null;
+}
+
 export default function QuizPage({ params }: PageProps) {
   const { deckId } = use(params);
   const searchParams = useSearchParams();
-  const [mode, setMode] = useState<QuizMode | null>(null);
+  const [mode, setMode] = useState<QuizMode | null>(() =>
+    parseModeParam(searchParams.get("mode")),
+  );
   const [reverse, setReverse] = useState(false);
   const [muted, setMuted] = useState(false);
 
@@ -172,7 +180,11 @@ export default function QuizPage({ params }: PageProps) {
     );
   }
 
-  if (!mode) {
+  // Mode từ deep-link nhưng deck không đủ thẻ/dữ liệu cho dạng đó → về màn chọn chế độ.
+  const modeDef = mode ? MODES.find((m) => m.id === mode) : undefined;
+  const modeUnavailable = !!modeDef && poolForMode(modeDef.id).length < modeDef.minCards;
+
+  if (!mode || modeUnavailable) {
     return (
       <div className="container mx-auto max-w-3xl p-6">
         <Link
@@ -388,6 +400,7 @@ function QuizRunner({
         activity: mode,
         accuracy: Math.round((correct / total) * 100),
         wrongCardIds: Array.from(wrongIdsRef.current),
+        total,
       });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

@@ -204,6 +204,8 @@ export const deckActivitySchema = z.object({
   accuracy: z.number().int().min(0).max(100).optional().nullable(),
   // ID các thẻ làm sai ở lần này — ghi đè danh sách "câu sai lần trước". Bỏ trống = không cập nhật.
   wrongCardIds: z.array(z.string().min(1)).max(2000).optional(),
+  // Tổng số câu trong lượt — có giá trị thì ghi thêm 1 dòng lịch sử (ExerciseAttempt).
+  total: z.number().int().min(0).max(2000).optional(),
 });
 
 export type DeckActivityInput = z.infer<typeof deckActivitySchema>;

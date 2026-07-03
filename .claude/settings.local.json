@@ -135,7 +135,10 @@
       "Bash(git stash *)",
       "Bash(awk ' *)",
       "Bash(awk '/^\\\\/Users.*\\\\.\\(tsx|ts\\)$/ { f=$0 } /error|warning/ { print f\"  >>  \"$0 }')",
-      "Bash(echo \"EXIT $?\")"
+      "Bash(echo \"EXIT $?\")",
+      "Bash(git -C /Users/doanvietthuan/Documents/home/learn-voc-web stash list)",
+      "Bash(git -C /Users/doanvietthuan/Documents/home/learn-voc-web diff --stat)",
+      "Bash(pnpm prisma:migrate --name add_exercise_attempt)"
     ]
   }
 }
