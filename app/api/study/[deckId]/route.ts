@@ -45,10 +45,14 @@ export async function GET(req: NextRequest, { params }: RouteParams) {
       return ok([]);
     }
 
+    // ?all=1 → ôn trước hạn: toàn bộ thẻ của deck, bỏ qua lịch SRS.
+    const ignoreSchedule = url.searchParams.get("all") === "1";
+
     const limitParam = url.searchParams.get("limit");
     const limit = limitParam ? parseInt(limitParam, 10) : undefined;
     const queue = await getReviewQueue(deckId, {
       newCardLimit: Number.isFinite(limit) ? limit : undefined,
+      ignoreSchedule,
     });
     return ok(queue);
   } catch (error) {

@@ -24,6 +24,8 @@ export interface QueueCard {
 export interface QueueOptions {
   newCardLimit?: number;
   cardIds?: readonly string[];
+  /** true = ôn trước hạn: lấy TOÀN BỘ thẻ của deck, bỏ qua lịch SRS. */
+  ignoreSchedule?: boolean;
 }
 
 type CardRow = QueueCard;
@@ -66,6 +68,15 @@ export async function getReviewQueue(
       const c = byId.get(id);
       return c ? [toQueueCard(c)] : [];
     });
+  }
+
+  // Ôn trước hạn: trả toàn bộ thẻ của deck, không lọc theo nextReviewDate.
+  if (opts.ignoreSchedule) {
+    const cards = await prisma.card.findMany({
+      where: { deckId, deletedAt: null },
+      orderBy: { createdAt: "asc" },
+    });
+    return cards.map(toQueueCard);
   }
 
   const now = new Date();

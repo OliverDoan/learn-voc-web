@@ -29,10 +29,12 @@ export default function StudyPage({ params }: PageProps) {
     return raw.split(",").map((s) => s.trim()).filter(Boolean);
   }, [searchParams]);
   const isSubset = !!subsetIds && subsetIds.length > 0;
+  // ?all=1 → ôn trước hạn: toàn bộ thẻ của deck, bỏ qua lịch SRS (chỉ deck thật).
+  const studyAll = !isSubset && deckId !== "all" && searchParams.get("all") === "1";
   // deckId ảo "all" (ôn liên deck) → thoát về dashboard
   const backHref = deckId === "all" ? "/" : `/decks/${deckId}`;
 
-  const { data: queue, isLoading, refetch } = useStudyQueue(deckId, subsetIds);
+  const { data: queue, isLoading, refetch } = useStudyQueue(deckId, subsetIds, studyAll);
   // Bỏ qua kiểm tra khóa với ôn liên deck ("all") hoặc ôn tập tập con tự chọn.
   const { data: deck } = useDeck(deckId === "all" || isSubset ? undefined : deckId);
   const submit = useSubmitReview();
@@ -156,7 +158,13 @@ export default function StudyPage({ params }: PageProps) {
   }
 
   if (!queue || queue.length === 0) {
-    return <EmptyQueue backHref={backHref} />;
+    return (
+      <EmptyQueue
+        backHref={backHref}
+        // Chưa ở chế độ ôn trước hạn + là deck thật → gợi ý ôn toàn bộ deck.
+        studyAllHref={!studyAll && deckId !== "all" ? `/study/${deckId}?all=1` : undefined}
+      />
+    );
   }
 
   if (done) {
@@ -187,6 +195,13 @@ export default function StudyPage({ params }: PageProps) {
           <Sparkles className="h-4 w-4 shrink-0" />
           <span>
             Đang ôn <strong>{total}</strong> từ tự chọn (bỏ qua lịch SRS). Kết quả vẫn cập nhật vào SRS.
+          </span>
+        </div>
+      ) : studyAll ? (
+        <div className="mb-4 flex w-full items-center gap-2 rounded-lg border border-primary/40 bg-primary/5 px-3 py-2 text-xs text-primary">
+          <Sparkles className="h-4 w-4 shrink-0" />
+          <span>
+            Ôn trước hạn: <strong>{total}</strong> từ — toàn bộ deck, bỏ qua lịch SRS. Kết quả vẫn cập nhật vào SRS.
           </span>
         </div>
       ) : null}
@@ -271,7 +286,13 @@ function LockedScreen({ backHref }: { backHref: string }) {
   );
 }
 
-function EmptyQueue({ backHref }: { backHref: string }) {
+function EmptyQueue({
+  backHref,
+  studyAllHref,
+}: {
+  backHref: string;
+  studyAllHref?: string;
+}) {
   return (
     <div className="container mx-auto max-w-xl p-6 text-center">
       <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
@@ -279,11 +300,23 @@ function EmptyQueue({ backHref }: { backHref: string }) {
       </div>
       <h2 className="mb-2 text-2xl font-bold">Không có từ nào cần ôn!</h2>
       <p className="mb-6 text-muted-foreground">
-        Bạn đã ôn hết các từ đến hạn. Hãy thêm từ mới hoặc quay lại sau.
+        Bạn đã ôn hết các từ đến hạn.
+        {studyAllHref
+          ? " Vẫn muốn học? Ôn trước hạn toàn bộ deck — kết quả vẫn tính vào tiến độ bài tập."
+          : " Hãy thêm từ mới hoặc quay lại sau."}
       </p>
-      <Link href={backHref}>
-        <Button variant="outline" className="rounded-full">Quay lại</Button>
-      </Link>
+      <div className="flex justify-center gap-3">
+        <Link href={backHref}>
+          <Button variant="outline" className="rounded-full">Quay lại</Button>
+        </Link>
+        {studyAllHref ? (
+          <Link href={studyAllHref}>
+            <Button className="rounded-full">
+              <Sparkles className="h-4 w-4" /> Ôn trước hạn cả deck
+            </Button>
+          </Link>
+        ) : null}
+      </div>
     </div>
   );
 }

@@ -12,14 +12,21 @@ interface ReviewResponse {
   progress: unknown;
 }
 
-export function useStudyQueue(deckId: string | undefined, cardIds?: readonly string[]) {
+export function useStudyQueue(
+  deckId: string | undefined,
+  cardIds?: readonly string[],
+  /** true = ôn trước hạn: lấy toàn bộ thẻ của deck, bỏ qua lịch SRS. */
+  allCards?: boolean,
+) {
   const idsParam = cardIds && cardIds.length > 0 ? cardIds.join(",") : "";
+  const query = idsParam
+    ? `?ids=${encodeURIComponent(idsParam)}`
+    : allCards
+      ? "?all=1"
+      : "";
   return useQuery({
-    queryKey: ["study", deckId, idsParam],
-    queryFn: () =>
-      apiFetch<QueueCard[]>(
-        `/api/study/${deckId}${idsParam ? `?ids=${encodeURIComponent(idsParam)}` : ""}`,
-      ),
+    queryKey: ["study", deckId, idsParam, allCards ?? false],
+    queryFn: () => apiFetch<QueueCard[]>(`/api/study/${deckId}${query}`),
     enabled: !!deckId,
     staleTime: 0,
   });
