@@ -39,6 +39,21 @@ export const DECK_ACTIVITIES: readonly ActivityDef[] = [
 
 const ACTIVITY_BY_KEY = new Map(DECK_ACTIVITIES.map((a) => [a.key, a]));
 
+/** URL để làm ngay một dạng bài tập của deck (dùng cho deep-link từ thanh tiến độ). */
+export function activityHref(key: DeckActivityKey | string, deckId: string): string {
+  switch (key) {
+    case "study":
+      return `/study/${deckId}`;
+    case "flashcards":
+      return `/flashcards/${deckId}`;
+    case "pronounce":
+      return `/pronounce/${deckId}`;
+    default:
+      // Các dạng quiz: trang quiz đọc ?mode= để vào thẳng dạng bài.
+      return `/quiz/${deckId}?mode=${key}`;
+  }
+}
+
 export function getActivityDef(key: string): ActivityDef | undefined {
   return ACTIVITY_BY_KEY.get(key as DeckActivityKey);
 }

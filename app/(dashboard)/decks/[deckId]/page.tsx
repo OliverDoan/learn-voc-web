@@ -648,7 +648,7 @@ export default function DeckDetailPage({ params }: PageProps) {
       </div>
 
       {!deck.locked ? (
-        <DeckExerciseProgress exercises={deck.exercises ?? []} />
+        <DeckExerciseProgress deckId={deckId} exercises={deck.exercises ?? []} />
       ) : null}
 
       <StoryList deckId={deckId} />
