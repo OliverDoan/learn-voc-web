@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
   ArrowLeft,
+  ArrowRight,
   BookOpen,
   Check,
   ClipboardCheck,
@@ -53,7 +54,13 @@ import {
   useRestoreCard,
   useToggleFavorite,
 } from "@/hooks/use-cards";
-import { useDeck, useDeleteDeck, useRestoreDeck, useSetDeckLearned } from "@/hooks/use-decks";
+import {
+  useDeck,
+  useDecks,
+  useDeleteDeck,
+  useRestoreDeck,
+  useSetDeckLearned,
+} from "@/hooks/use-decks";
 import {
   cardPosCategories,
   cn,
@@ -63,6 +70,7 @@ import {
   POS_FILTERS,
   type PosKey,
 } from "@/lib/utils";
+import { groupDecksByTopic } from "@/lib/deck-topics";
 import { speak } from "@/lib/tts";
 import type { Card as CardType } from "@/lib/types";
 
@@ -98,6 +106,8 @@ export default function DeckDetailPage({ params }: PageProps) {
   const dragArmed = useRef(false);
 
   const { data: deck, isLoading: deckLoading } = useDeck(deckId);
+  // Danh sách tất cả deck (đã sắp xếp createdAt desc như trang /decks) để chuyển sang deck kế tiếp.
+  const { data: allDecks } = useDecks();
   const { data: cards, isLoading: cardsLoading } = useCards({
     deckId,
     q: search,
@@ -110,6 +120,20 @@ export default function DeckDetailPage({ params }: PageProps) {
   const restoreDeckMut = useRestoreDeck();
   const setLearnedMut = useSetDeckLearned(deckId);
   const { confirm, confirmDialog } = useConfirm();
+
+  // Deck kế tiếp theo đúng thứ tự hiển thị ở trang /decks (Unit tăng dần theo topic),
+  // không theo thứ tự createdAt của API. Quay vòng về đầu khi đang ở deck cuối.
+  const nextDeck = useMemo(() => {
+    if (!allDecks || allDecks.length < 2) return null;
+    const ordered = groupDecksByTopic(allDecks).flatMap((g) => g.decks);
+    const idx = ordered.findIndex((d) => d.id === deckId);
+    if (idx === -1) return null;
+    return ordered[(idx + 1) % ordered.length];
+  }, [allDecks, deckId]);
+
+  const goNextDeck = () => {
+    if (nextDeck) router.push(`/decks/${nextDeck.id}`);
+  };
 
   const availableTags = useMemo(() => {
     if (!cards) return [] as string[];
@@ -619,6 +643,21 @@ export default function DeckDetailPage({ params }: PageProps) {
                   >
                     <Mic className="h-4 w-4" /> Phát âm
                   </Link>
+                  {nextDeck ? (
+                    <>
+                      <div className="my-1 h-px bg-border" />
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setActionsOpen(false);
+                          goNextDeck();
+                        }}
+                        className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
+                      >
+                        <ArrowRight className="h-4 w-4" /> Deck tiếp theo
+                      </button>
+                    </>
+                  ) : null}
                   <div className="my-1 h-px bg-border" />
                   <button
                     type="button"
@@ -851,6 +890,15 @@ export default function DeckDetailPage({ params }: PageProps) {
       ) : (
         <ul className="space-y-2 pb-24">{displayCards.map(renderCard)}</ul>
       )}
+
+      {nextDeck ? (
+        <div className="mt-2 flex justify-center pb-24">
+          <Button variant="outline" className="rounded-full" onClick={goNextDeck}>
+            Deck tiếp theo: {nextDeck.name}
+            <ArrowRight className="h-4 w-4" />
+          </Button>
+        </div>
+      ) : null}
 
       <CardDetailDialog
         open={!!detailCard}

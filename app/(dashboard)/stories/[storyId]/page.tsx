@@ -21,6 +21,12 @@ interface PageProps {
   params: Promise<{ storyId: string }>;
 }
 
+// Lấy số thứ tự Unit từ tên deck ("Unit 10: ..." → 10) để sắp xếp truyện theo mạch.
+function unitOrder(name: string): number {
+  const match = name.match(/unit\s*(\d+)/i);
+  return match ? Number(match[1]) : Number.MAX_SAFE_INTEGER;
+}
+
 export default function StoryViewPage({ params }: PageProps) {
   const { storyId } = use(params);
   const router = useRouter();
@@ -38,17 +44,23 @@ export default function StoryViewPage({ params }: PageProps) {
   }, [rate]);
 
   const { data: story, isLoading } = useStory(storyId);
-  // Danh sách truyện trong cùng deck (đã sắp xếp createdAt desc) để điều hướng sang truyện kế tiếp.
-  const { data: deckStories } = useStories(story?.deckId);
+  // Toàn bộ truyện (mọi deck) để điều hướng sang truyện kế tiếp, kể cả khi deck chỉ có 1 truyện.
+  const { data: allStories } = useStories();
   const { data: favorites } = useFavorites();
 
-  // Truyện tiếp theo trong cùng deck; quay vòng về đầu khi đang ở truyện cuối.
+  // Truyện tiếp theo theo đúng thứ tự trang "Tất cả truyện" (Unit tăng dần, rồi createdAt);
+  // quay vòng về đầu khi đang ở truyện cuối.
   const nextStory = useMemo(() => {
-    if (!deckStories || deckStories.length < 2) return null;
-    const idx = deckStories.findIndex((s) => s.id === storyId);
+    if (!allStories || allStories.length < 2) return null;
+    const ordered = [...allStories].sort((a, b) => {
+      const diff = unitOrder(a.deck.name) - unitOrder(b.deck.name);
+      if (diff !== 0) return diff;
+      return a.createdAt.localeCompare(b.createdAt);
+    });
+    const idx = ordered.findIndex((s) => s.id === storyId);
     if (idx === -1) return null;
-    return deckStories[(idx + 1) % deckStories.length];
-  }, [deckStories, storyId]);
+    return ordered[(idx + 1) % ordered.length];
+  }, [allStories, storyId]);
 
   const handleGoNext = () => {
     if (!nextStory) return;
