@@ -29,6 +29,9 @@ export async function fileToAvatarDataUrl(file: File): Promise<string> {
     throw new Error("Trình duyệt không hỗ trợ xử lý ảnh");
   }
 
+  ctx.imageSmoothingEnabled = true;
+  ctx.imageSmoothingQuality = "high";
+
   // Crop hình vuông ở giữa
   const side = Math.min(img.width, img.height);
   const sx = (img.width - side) / 2;
@@ -38,8 +41,10 @@ export async function fileToAvatarDataUrl(file: File): Promise<string> {
   return canvas.toDataURL("image/jpeg", 0.85);
 }
 
-// Chiều rộng tối đa của ảnh minh hoạ truyện sau khi crop (giữ nét, gọn DB).
-export const STORY_IMAGE_MAX_WIDTH = 1024;
+// Chiều rộng tối đa của ảnh minh hoạ truyện sau khi crop.
+// 1920px đủ nét khi xem full-screen trên màn Retina (mật độ điểm ảnh 2x);
+// ảnh nhỏ hơn giữ nguyên (không phóng to). Không hạ xuống 1024 kẻo bị mờ.
+export const STORY_IMAGE_MAX_WIDTH = 1920;
 
 // Tỉ lệ khung mặc định cho ảnh minh hoạ truyện (banner ngang).
 export const STORY_IMAGE_ASPECT = 16 / 9;
@@ -100,8 +105,13 @@ export async function cropImageToDataUrl(
     throw new Error("Trình duyệt không hỗ trợ xử lý ảnh");
   }
 
+  // Khử răng cưa chất lượng cao để ảnh sau resize sắc nét, không bị nhoè.
+  ctx.imageSmoothingEnabled = true;
+  ctx.imageSmoothingQuality = "high";
+
   ctx.drawImage(img, sx, sy, sw, sh, 0, 0, outW, outH);
-  return canvas.toDataURL("image/jpeg", 0.85);
+  // Chất lượng JPEG 0.92: nét hơn 0.85 mà dung lượng vẫn hợp lý.
+  return canvas.toDataURL("image/jpeg", 0.92);
 }
 
 /**
