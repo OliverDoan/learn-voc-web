@@ -121,15 +121,23 @@ export default function DeckDetailPage({ params }: PageProps) {
   const setLearnedMut = useSetDeckLearned(deckId);
   const { confirm, confirmDialog } = useConfirm();
 
-  // Deck kế tiếp theo đúng thứ tự hiển thị ở trang /decks (Unit tăng dần theo topic),
-  // không theo thứ tự createdAt của API. Quay vòng về đầu khi đang ở deck cuối.
-  const nextDeck = useMemo(() => {
-    if (!allDecks || allDecks.length < 2) return null;
+  // Deck liền trước/kế tiếp theo đúng thứ tự hiển thị ở trang /decks (Unit tăng dần
+  // theo topic), không theo thứ tự createdAt của API. Quay vòng khi ở đầu/cuối danh sách.
+  const { prevDeck, nextDeck } = useMemo(() => {
+    if (!allDecks || allDecks.length < 2) return { prevDeck: null, nextDeck: null };
     const ordered = groupDecksByTopic(allDecks).flatMap((g) => g.decks);
     const idx = ordered.findIndex((d) => d.id === deckId);
-    if (idx === -1) return null;
-    return ordered[(idx + 1) % ordered.length];
+    if (idx === -1) return { prevDeck: null, nextDeck: null };
+    const len = ordered.length;
+    return {
+      prevDeck: ordered[(idx - 1 + len) % len],
+      nextDeck: ordered[(idx + 1) % len],
+    };
   }, [allDecks, deckId]);
+
+  const goPrevDeck = () => {
+    if (prevDeck) router.push(`/decks/${prevDeck.id}`);
+  };
 
   const goNextDeck = () => {
     if (nextDeck) router.push(`/decks/${nextDeck.id}`);
@@ -522,12 +530,38 @@ export default function DeckDetailPage({ params }: PageProps) {
 
   return (
     <div className="container mx-auto max-w-5xl p-6">
-      <Link
-        href="/decks"
-        className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
-      >
-        <ArrowLeft className="h-4 w-4" /> Tất cả decks
-      </Link>
+      <div className="mb-4 flex items-center justify-between gap-2">
+        <Link
+          href="/decks"
+          className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+        >
+          <ArrowLeft className="h-4 w-4" /> Tất cả decks
+        </Link>
+
+        {/* Lướt nhanh sang deck liền trước / kế tiếp theo thứ tự trang /decks */}
+        {prevDeck || nextDeck ? (
+          <div className="flex items-center gap-1.5">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={goPrevDeck}
+              disabled={!prevDeck}
+              title={prevDeck ? `Deck trước: ${prevDeck.name}` : undefined}
+            >
+              <ArrowLeft className="h-4 w-4" /> Trước
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={goNextDeck}
+              disabled={!nextDeck}
+              title={nextDeck ? `Deck tiếp theo: ${nextDeck.name}` : undefined}
+            >
+              Sau <ArrowRight className="h-4 w-4" />
+            </Button>
+          </div>
+        ) : null}
+      </div>
 
       <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
         <div className="flex min-w-0 items-center gap-4">
@@ -890,15 +924,6 @@ export default function DeckDetailPage({ params }: PageProps) {
       ) : (
         <ul className="space-y-2 pb-24">{displayCards.map(renderCard)}</ul>
       )}
-
-      {nextDeck ? (
-        <div className="mt-2 flex justify-center pb-24">
-          <Button variant="outline" className="rounded-full" onClick={goNextDeck}>
-            Deck tiếp theo: {nextDeck.name}
-            <ArrowRight className="h-4 w-4" />
-          </Button>
-        </div>
-      ) : null}
 
       <CardDetailDialog
         open={!!detailCard}
