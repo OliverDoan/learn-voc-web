@@ -10,11 +10,13 @@ import { useConfirm } from "@/components/ui/confirm-dialog";
 import { ImageLightbox } from "@/components/ui/image-lightbox";
 import { PageLoader } from "@/components/ui/page-loader";
 import { StoryRenderer } from "@/components/story/story-renderer";
+import { StoryProse } from "@/components/story/story-prose";
+import { StoryModeToggle, type StoryViewMode } from "@/components/story/story-mode-toggle";
 import { ReadingSpeedControl } from "@/components/story/reading-speed-control";
 import { useDeleteStory, useStories, useStory } from "@/hooks/use-stories";
 import { useFavorites } from "@/hooks/use-cards";
 import { useReadingRate } from "@/hooks/use-reading-rate";
-import { countWordTokens, firstMeaning, parseStory } from "@/lib/story-parser";
+import { countWordTokens, firstMeaning, parseStory, toVietnamese } from "@/lib/story-parser";
 import { isSpeakable, speakAsync, stopSpeaking } from "@/lib/tts";
 
 interface PageProps {
@@ -32,6 +34,8 @@ export default function StoryViewPage({ params }: PageProps) {
   const router = useRouter();
   const [showMeanings, setShowMeanings] = useState(false);
   const [hideWords, setHideWords] = useState(false);
+  // Chế độ hiển thị: chêm (mặc định) / full tiếng Việt / full tiếng Anh
+  const [viewMode, setViewMode] = useState<StoryViewMode>("cham");
   // Chế độ đọc: "mixed" (văn Việt + từ chêm tiếng Anh) | "vi" (đọc toàn bộ tiếng Việt) | null
   const [readMode, setReadMode] = useState<"mixed" | "vi" | null>(null);
   // Mỗi lần bắt đầu/huỷ đọc tăng generation để vòng đọc cũ tự dừng, tránh đọc chồng.
@@ -209,30 +213,39 @@ export default function StoryViewPage({ params }: PageProps) {
           )}
           {readMode === "vi" ? "Dừng" : "Đọc tiếng Việt"}
         </Button>
-        <Button
-          variant="outline"
-          size="sm"
-          className="rounded-full"
-          onClick={() => setShowMeanings(!showMeanings)}
-        >
-          {showMeanings ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-          {showMeanings ? "Ẩn nghĩa" : "Hiện nghĩa"}
-        </Button>
-        <Button
-          variant={hideWords ? "default" : "outline"}
-          size="sm"
-          className="rounded-full"
-          onClick={() => setHideWords(!hideWords)}
-        >
-          <Target className="h-4 w-4" />
-          {hideWords ? "Hiện từ" : "Ẩn từ chêm"}
-        </Button>
+        {viewMode === "cham" ? (
+          <>
+            <Button
+              variant="outline"
+              size="sm"
+              className="rounded-full"
+              onClick={() => setShowMeanings(!showMeanings)}
+            >
+              {showMeanings ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+              {showMeanings ? "Ẩn nghĩa" : "Hiện nghĩa"}
+            </Button>
+            <Button
+              variant={hideWords ? "default" : "outline"}
+              size="sm"
+              className="rounded-full"
+              onClick={() => setHideWords(!hideWords)}
+            >
+              <Target className="h-4 w-4" />
+              {hideWords ? "Hiện từ" : "Ẩn từ chêm"}
+            </Button>
+          </>
+        ) : null}
         <Link href={`/stories/${storyId}/fill`}>
           <Button variant="secondary" size="sm" className="rounded-full">
             Quiz điền từ
           </Button>
         </Link>
         <ReadingSpeedControl rate={rate} onChange={setRate} />
+        <StoryModeToggle
+          value={viewMode}
+          onChange={setViewMode}
+          enAvailable={!!story.contentEn}
+        />
         {nextStory ? (
           <Button
             variant="outline"
@@ -247,25 +260,37 @@ export default function StoryViewPage({ params }: PageProps) {
       </div>
 
       <article className="rounded-2xl border bg-card p-8 shadow-[0_24px_64px_rgba(0,13,139,.08)] md:px-12">
-        <StoryRenderer
-          content={story.content}
-          showMeanings={showMeanings}
-          hideWords={hideWords}
-          favoriteWords={favoriteWords}
-        />
-        <div className="font-mono mt-8 flex flex-wrap items-center justify-center gap-2 text-[12.5px] text-muted-foreground">
-          <span className="inline-flex items-center gap-1.5">
-            <span className="inline-block h-3 w-3 rounded bg-primary/15 [border-bottom:2px_solid_var(--primary)]" />
-            từ vựng chêm
-          </span>
-          <span>·</span>
-          <span className="inline-flex items-center gap-1.5">
-            <span className="inline-block h-3 w-3 rounded bg-amber-400/20 [border-bottom:2px_solid_rgb(245,158,11)]" />
-            từ yêu thích
-          </span>
-          <span>·</span>
-          <span>chạm vào từ để xem nghĩa &amp; nghe phát âm</span>
-        </div>
+        {viewMode === "cham" ? (
+          <StoryRenderer
+            content={story.content}
+            showMeanings={showMeanings}
+            hideWords={hideWords}
+            favoriteWords={favoriteWords}
+          />
+        ) : viewMode === "vi" ? (
+          <StoryProse text={toVietnamese(story.content)} />
+        ) : story.contentEn ? (
+          <StoryProse text={story.contentEn} />
+        ) : (
+          <p className="text-center text-sm text-muted-foreground">
+            Truyện này chưa có bản tiếng Anh.
+          </p>
+        )}
+        {viewMode === "cham" ? (
+          <div className="font-mono mt-8 flex flex-wrap items-center justify-center gap-2 text-[12.5px] text-muted-foreground">
+            <span className="inline-flex items-center gap-1.5">
+              <span className="inline-block h-3 w-3 rounded bg-primary/15 [border-bottom:2px_solid_var(--primary)]" />
+              từ vựng chêm
+            </span>
+            <span>·</span>
+            <span className="inline-flex items-center gap-1.5">
+              <span className="inline-block h-3 w-3 rounded bg-amber-400/20 [border-bottom:2px_solid_rgb(245,158,11)]" />
+              từ yêu thích
+            </span>
+            <span>·</span>
+            <span>chạm vào từ để xem nghĩa &amp; nghe phát âm</span>
+          </div>
+        ) : null}
       </article>
 
       {nextStory ? (

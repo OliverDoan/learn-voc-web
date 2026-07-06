@@ -175,6 +175,7 @@ model Story {
 
   title      String
   content    String
+  contentEn  String?
   imageUrl   String?
   audioUrl   String?
 

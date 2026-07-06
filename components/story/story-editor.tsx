@@ -27,6 +27,7 @@ export function StoryEditor({ deckId, story, onDone, onCancel }: StoryEditorProp
   const isEdit = !!story;
   const [title, setTitle] = useState(story?.title ?? "");
   const [content, setContent] = useState(story?.content ?? "");
+  const [contentEn, setContentEn] = useState(story?.contentEn ?? "");
   const [imageUrl, setImageUrl] = useState(story?.imageUrl ?? "");
   const [cropSrc, setCropSrc] = useState<string | null>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -84,7 +85,7 @@ export function StoryEditor({ deckId, story, onDone, onCancel }: StoryEditorProp
 
     try {
       if (isEdit && story) {
-        await updateMut.mutateAsync({ title: title.trim(), content, imageUrl });
+        await updateMut.mutateAsync({ title: title.trim(), content, contentEn, imageUrl });
         toast.success("Đã lưu truyện");
         onDone?.(story.id);
       } else {
@@ -92,6 +93,7 @@ export function StoryEditor({ deckId, story, onDone, onCancel }: StoryEditorProp
           deckId,
           title: title.trim(),
           content,
+          contentEn,
           imageUrl,
         });
         toast.success("Đã tạo truyện");
@@ -201,6 +203,21 @@ export function StoryEditor({ deckId, story, onDone, onCancel }: StoryEditorProp
             />
             <p className="text-xs text-muted-foreground">
               {countWordTokens(content)} từ chêm · {content.length} ký tự
+            </p>
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="contentEn">Bản full tiếng Anh (tùy chọn)</Label>
+            <Textarea
+              id="contentEn"
+              value={contentEn}
+              onChange={(e) => setContentEn(e.target.value)}
+              rows={8}
+              className="bg-card text-sm shadow-sm"
+              placeholder="Bản dịch toàn bộ sang tiếng Anh — để trống nếu chưa có. Dùng cho chế độ đọc 'English'."
+            />
+            <p className="text-xs text-muted-foreground">
+              Để trống thì nút &ldquo;English&rdquo; khi đọc sẽ bị khóa. Bản tiếng Việt được tạo tự động từ nội dung chêm.
             </p>
           </div>
 

@@ -119,6 +119,8 @@ export interface Story {
   deckId: string;
   title: string;
   content: string;
+  /** Bản dịch toàn bộ tiếng Anh (tùy chọn) — dùng cho chế độ đọc full tiếng Anh. */
+  contentEn: string | null;
   imageUrl: string | null;
   audioUrl: string | null;
   readCount: number;

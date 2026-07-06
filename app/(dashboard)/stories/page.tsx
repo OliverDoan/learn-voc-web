@@ -20,6 +20,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { StoryRenderer } from "@/components/story/story-renderer";
+import { StoryProse } from "@/components/story/story-prose";
+import { StoryModeToggle, type StoryViewMode } from "@/components/story/story-mode-toggle";
 import { StoryImageFlashcard } from "@/components/story/story-image-flashcard";
 import { StoryImageLightbox } from "@/components/story/story-image-lightbox";
 import { StoryImageManager } from "@/components/story/story-image-manager";
@@ -31,7 +33,7 @@ import { Tooltip } from "@/components/ui/tooltip";
 import { useStories } from "@/hooks/use-stories";
 import { useFavorites } from "@/hooks/use-cards";
 import { useReadingRate } from "@/hooks/use-reading-rate";
-import { countWordTokens, firstMeaning, parseStory } from "@/lib/story-parser";
+import { countWordTokens, firstMeaning, parseStory, toVietnamese } from "@/lib/story-parser";
 import { isSpeakable, speakAsync, stopSpeaking } from "@/lib/tts";
 import { cn } from "@/lib/utils";
 import type { StoryListItem } from "@/lib/types";
@@ -52,6 +54,8 @@ export default function AllStoriesPage() {
   );
   const [showMeanings, setShowMeanings] = useState(false);
   const [hideWords, setHideWords] = useState(false);
+  // Chế độ hiển thị áp dụng cho toàn bộ truyện: chêm / full tiếng Việt / full tiếng Anh
+  const [viewMode, setViewMode] = useState<StoryViewMode>("cham");
   // Chế độ chỉ xem ảnh: ẩn tiêu đề + từ chêm + văn bản, chỉ hiện ảnh truyện
   const [imageOnly, setImageOnly] = useState(false);
   // Index ảnh đang mở trong lightbox toàn màn hình (null = đóng), tính trên danh sách truyện có ảnh.
@@ -323,29 +327,34 @@ export default function AllStoriesPage() {
                 <Repeat className="h-4 w-4" />
               </Button>
             </Tooltip>
-            <Tooltip label={showMeanings ? "Ẩn nghĩa" : "Hiện nghĩa"}>
-              <Button
-                variant="outline"
-                size="icon"
-                className="rounded-full"
-                aria-label={showMeanings ? "Ẩn nghĩa" : "Hiện nghĩa"}
-                onClick={() => setShowMeanings((v) => !v)}
-              >
-                {showMeanings ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-              </Button>
-            </Tooltip>
-            <Tooltip label={hideWords ? "Hiện từ" : "Ẩn từ chêm"}>
-              <Button
-                variant={hideWords ? "default" : "outline"}
-                size="icon"
-                className="rounded-full"
-                aria-label={hideWords ? "Hiện từ" : "Ẩn từ chêm"}
-                onClick={() => setHideWords((v) => !v)}
-              >
-                <Target className="h-4 w-4" />
-              </Button>
-            </Tooltip>
+            {viewMode === "cham" ? (
+              <>
+                <Tooltip label={showMeanings ? "Ẩn nghĩa" : "Hiện nghĩa"}>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="rounded-full"
+                    aria-label={showMeanings ? "Ẩn nghĩa" : "Hiện nghĩa"}
+                    onClick={() => setShowMeanings((v) => !v)}
+                  >
+                    {showMeanings ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                  </Button>
+                </Tooltip>
+                <Tooltip label={hideWords ? "Hiện từ" : "Ẩn từ chêm"}>
+                  <Button
+                    variant={hideWords ? "default" : "outline"}
+                    size="icon"
+                    className="rounded-full"
+                    aria-label={hideWords ? "Hiện từ" : "Ẩn từ chêm"}
+                    onClick={() => setHideWords((v) => !v)}
+                  >
+                    <Target className="h-4 w-4" />
+                  </Button>
+                </Tooltip>
+              </>
+            ) : null}
             <ReadingSpeedControl rate={rate} onChange={setRate} />
+            <StoryModeToggle value={viewMode} onChange={setViewMode} />
           </>
         ) : null}
         <Tooltip label={imageOnly ? "Xem đầy đủ" : "Chỉ xem ảnh"}>
@@ -478,12 +487,22 @@ export default function AllStoriesPage() {
                   </Badge>
                 </div>
 
-                <StoryRenderer
-                  content={story.content}
-                  showMeanings={showMeanings}
-                  hideWords={hideWords}
-                  favoriteWords={favoriteWords}
-                />
+                {viewMode === "cham" ? (
+                  <StoryRenderer
+                    content={story.content}
+                    showMeanings={showMeanings}
+                    hideWords={hideWords}
+                    favoriteWords={favoriteWords}
+                  />
+                ) : viewMode === "vi" ? (
+                  <StoryProse text={toVietnamese(story.content)} />
+                ) : story.contentEn ? (
+                  <StoryProse text={story.contentEn} />
+                ) : (
+                  <p className="text-center text-sm text-muted-foreground">
+                    Truyện này chưa có bản tiếng Anh.
+                  </p>
+                )}
               </article>
             );
           })}

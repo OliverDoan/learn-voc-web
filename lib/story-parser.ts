@@ -51,3 +51,11 @@ export function firstMeaning(meaning: string): string {
   const first = meaning.split(/[,;/\n、]/)[0]?.trim();
   return first || meaning.trim();
 }
+
+/**
+ * Dựng bản đọc toàn bộ tiếng Việt từ nội dung chêm: thay mỗi [[word|nghĩa]]
+ * bằng nghĩa tiếng Việt (nghĩa đầu tiên cho gọn). Văn nền vốn đã là tiếng Việt.
+ */
+export function toVietnamese(content: string): string {
+  return content.replace(TOKEN_RE, (_m, _word, meaning) => firstMeaning(meaning));
+}

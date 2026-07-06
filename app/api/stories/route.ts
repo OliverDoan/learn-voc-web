@@ -24,7 +24,8 @@ export async function GET(req: NextRequest) {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { deckId, title, content, imageUrl, audioUrl } = storyCreateSchema.parse(body);
+    const { deckId, title, content, contentEn, imageUrl, audioUrl } =
+      storyCreateSchema.parse(body);
 
     const deck = await prisma.deck.findUnique({ where: { id: deckId } });
     if (!deck) return fail("Deck không tồn tại", 404);
@@ -43,6 +44,7 @@ export async function POST(req: NextRequest) {
         deckId,
         title,
         content,
+        contentEn: contentEn || null,
         imageUrl: imageUrl || null,
         audioUrl: audioUrl || null,
         storyCards: {

@@ -39,6 +39,7 @@ export async function PATCH(req: NextRequest, { params }: RouteParams) {
       data: {
         ...(data.title !== undefined ? { title: data.title } : {}),
         ...(data.content !== undefined ? { content: data.content } : {}),
+        ...(data.contentEn !== undefined ? { contentEn: data.contentEn || null } : {}),
         ...(data.imageUrl !== undefined ? { imageUrl: data.imageUrl || null } : {}),
         ...(data.audioUrl !== undefined ? { audioUrl: data.audioUrl || null } : {}),
       },

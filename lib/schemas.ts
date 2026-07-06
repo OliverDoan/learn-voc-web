@@ -139,6 +139,7 @@ export const storyCreateSchema = z.object({
   deckId: z.string().min(1),
   title: z.string().trim().min(1).max(120),
   content: z.string().trim().min(1).max(5000),
+  contentEn: z.string().trim().max(5000).optional().nullable().or(z.literal("")),
   imageUrl: storyImageSchema,
   audioUrl: z.string().url().optional().nullable().or(z.literal("")),
 });
