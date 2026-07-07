@@ -4,6 +4,21 @@ import type { Card } from "@/lib/types";
 /** Ngưỡng độ chính xác tối thiểu để coi một dạng bài tập (có chấm điểm) là "đã làm". */
 export const EXERCISE_PASS_ACCURACY = 80;
 
+/**
+ * Số dạng được phép BỎ QUA mà vẫn mở khóa được deck.
+ * Nới điều kiện: chỉ cần làm 9/10 dạng (thiếu tối đa 1) là mở khóa được.
+ */
+export const EXERCISE_UNLOCK_ALLOWANCE = 1;
+
+/**
+ * Số dạng tối thiểu phải hoàn thành để mở khóa deck, dựa trên tổng số dạng khả dụng.
+ * Cho phép thiếu {@link EXERCISE_UNLOCK_ALLOWANCE} dạng, nhưng luôn cần ít nhất 1 dạng.
+ */
+export function requiredExerciseCount(total: number): number {
+  if (total <= 0) return 0;
+  return Math.max(1, total - EXERCISE_UNLOCK_ALLOWANCE);
+}
+
 export type DeckActivityKey =
   | "study"
   | "multiple-choice"
@@ -132,14 +147,20 @@ export function isActivityDone(
   return true;
 }
 
-/** Đã làm hết TẤT CẢ dạng khả dụng của deck chưa? */
+/**
+ * Đã đủ điều kiện mở khóa deck chưa?
+ * Nới điều kiện: chỉ cần làm được ≥ {@link requiredExerciseCount} dạng khả dụng
+ * (thiếu tối đa {@link EXERCISE_UNLOCK_ALLOWANCE} dạng, tức 9/10) là đủ.
+ */
 export function allExercisesDone(
   cards: readonly Card[],
   records: readonly ActivityRecord[],
   ctx: ActivityContext = {},
 ): boolean {
   const eligible = eligibleActivities(cards, ctx);
-  return eligible.length > 0 && eligible.every((k) => isActivityDone(k, records));
+  if (eligible.length === 0) return false;
+  const doneCount = eligible.filter((k) => isActivityDone(k, records)).length;
+  return doneCount >= requiredExerciseCount(eligible.length);
 }
 
 /** Trạng thái 1 dạng bài tập khả dụng (để hiển thị thanh progress). */
@@ -171,5 +192,9 @@ export function buildExerciseStatus(
       wrongCardIds: parseWrongCardIds(byKey.get(key)?.wrongCardIds),
     };
   });
-  return { exercises, allDone: exercises.length > 0 && exercises.every((e) => e.done) };
+  const doneCount = exercises.filter((e) => e.done).length;
+  return {
+    exercises,
+    allDone: exercises.length > 0 && doneCount >= requiredExerciseCount(exercises.length),
+  };
 }

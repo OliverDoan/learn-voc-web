@@ -3,7 +3,11 @@
 import Link from "next/link";
 import { Check, ChevronRight, Circle } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
-import { activityHref, EXERCISE_PASS_ACCURACY } from "@/lib/deck-activities";
+import {
+  activityHref,
+  EXERCISE_PASS_ACCURACY,
+  requiredExerciseCount,
+} from "@/lib/deck-activities";
 import { cn } from "@/lib/utils";
 import type { DeckExerciseStatus } from "@/lib/types";
 
@@ -21,15 +25,18 @@ export function DeckExerciseProgress({ deckId, exercises }: DeckExerciseProgress
   if (exercises.length === 0) return null;
 
   const doneCount = exercises.filter((e) => e.done).length;
-  const allDone = doneCount === exercises.length;
+  const required = requiredExerciseCount(exercises.length);
+  // Đủ điều kiện mở khóa: chỉ cần làm ≥ số dạng tối thiểu (cho phép thiếu 1 dạng).
+  const canUnlock = doneCount >= required;
+  const remaining = Math.max(0, required - doneCount);
 
   return (
     <div className="mb-6 rounded-2xl border bg-card p-4">
       <div className="mb-3 flex items-center justify-between">
         <h2 className="text-sm font-semibold">
           Tiến độ bài tập
-          {allDone ? (
-            <span className="ml-2 text-emerald-600 dark:text-emerald-400">✓ Hoàn thành</span>
+          {canUnlock ? (
+            <span className="ml-2 text-emerald-600 dark:text-emerald-400">✓ Đã đủ để mở khóa</span>
           ) : null}
         </h2>
         <span className="font-mono text-xs text-muted-foreground">
@@ -81,10 +88,11 @@ export function DeckExerciseProgress({ deckId, exercises }: DeckExerciseProgress
         })}
       </ul>
 
-      {!allDone ? (
+      {!canUnlock ? (
         <p className="mt-3 text-xs text-muted-foreground">
-          Nhấn vào từng ô để làm ngay dạng đó. Làm hết các dạng (dạng có chấm điểm cần đạt ≥{" "}
-          {EXERCISE_PASS_ACCURACY}%) để mở khóa nút &ldquo;Đánh dấu học xong&rdquo;.
+          Nhấn vào từng ô để làm ngay dạng đó. Chỉ cần làm {required}/{exercises.length} dạng (dạng
+          có chấm điểm cần đạt ≥ {EXERCISE_PASS_ACCURACY}%) để mở khóa nút &ldquo;Đánh dấu học
+          xong&rdquo; — còn thiếu {remaining} dạng.
         </p>
       ) : null}
     </div>

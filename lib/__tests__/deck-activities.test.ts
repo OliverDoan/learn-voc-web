@@ -4,6 +4,7 @@ import {
   buildExerciseStatus,
   eligibleActivities,
   isActivityDone,
+  requiredExerciseCount,
   type ActivityRecord,
 } from "../deck-activities";
 import type { Card } from "../types";
@@ -94,6 +95,16 @@ describe("eligibleActivities", () => {
   });
 });
 
+describe("requiredExerciseCount", () => {
+  it("cho phép thiếu 1 dạng, nhưng luôn cần ít nhất 1", () => {
+    expect(requiredExerciseCount(0)).toBe(0);
+    expect(requiredExerciseCount(1)).toBe(1); // 1 dạng thì phải làm dạng đó
+    expect(requiredExerciseCount(2)).toBe(1);
+    expect(requiredExerciseCount(5)).toBe(4); // 4/5
+    expect(requiredExerciseCount(10)).toBe(9); // 9/10
+  });
+});
+
 describe("isActivityDone", () => {
   it("dạng chấm điểm: cần accuracy ≥ 80", () => {
     const recs: ActivityRecord[] = [{ activity: "typing", bestAccuracy: 79 }];
@@ -129,31 +140,47 @@ describe("allExercisesDone & buildExerciseStatus", () => {
     expect(buildExerciseStatus(cards, records).allDone).toBe(true);
   });
 
-  it("một dạng chấm điểm dưới ngưỡng → chưa xong", () => {
-    const cards = [makeCard()];
+  it("thiếu đúng 1 dạng (dưới ngưỡng) → vẫn đủ mở khóa (9/10)", () => {
+    const cards = [makeCard()]; // 5 dạng khả dụng → cần 4/5
+    const records: ActivityRecord[] = [
+      { activity: "study", bestAccuracy: 90 },
+      { activity: "flashcards", bestAccuracy: null },
+      { activity: "typing", bestAccuracy: 70 }, // < 80 → coi như chưa làm
+      { activity: "listening", bestAccuracy: 100 },
+      { activity: "pronounce", bestAccuracy: 80 },
+    ];
+    expect(allExercisesDone(cards, records)).toBe(true);
+    expect(buildExerciseStatus(cards, records).allDone).toBe(true);
+  });
+
+  it("thiếu 2 dạng → chưa đủ mở khóa", () => {
+    const cards = [makeCard()]; // 5 dạng khả dụng → cần 4/5
     const records: ActivityRecord[] = [
       { activity: "study", bestAccuracy: 90 },
       { activity: "flashcards", bestAccuracy: null },
       { activity: "typing", bestAccuracy: 70 }, // < 80
       { activity: "listening", bestAccuracy: 100 },
-      { activity: "pronounce", bestAccuracy: 80 },
+      { activity: "pronounce", bestAccuracy: 50 }, // < 80
     ];
     expect(allExercisesDone(cards, records)).toBe(false);
+    expect(buildExerciseStatus(cards, records).allDone).toBe(false);
   });
 
-  it("deck có truyện: điền truyện chêm cũng phải đạt ngưỡng mới xong", () => {
-    const cards = [makeCard()];
-    const records: ActivityRecord[] = [
+  it("deck có truyện (6 dạng): thiếu 1 vẫn mở khóa, thiếu 2 thì không", () => {
+    const cards = [makeCard()]; // + story-fill → 6 dạng, cần 5/6
+    const base: ActivityRecord[] = [
       { activity: "study", bestAccuracy: 90 },
       { activity: "flashcards", bestAccuracy: null },
       { activity: "typing", bestAccuracy: 85 },
       { activity: "listening", bestAccuracy: 100 },
       { activity: "pronounce", bestAccuracy: 80 },
     ];
-    // Thiếu story-fill → chưa xong
-    expect(allExercisesDone(cards, records, { hasStoryWithWords: true })).toBe(false);
-    // Đạt 80 → xong
-    const withStory = [...records, { activity: "story-fill", bestAccuracy: 80 }];
-    expect(allExercisesDone(cards, withStory, { hasStoryWithWords: true })).toBe(true);
+    // Thiếu story-fill (1 dạng) → vẫn đủ mở khóa
+    expect(allExercisesDone(cards, base, { hasStoryWithWords: true })).toBe(true);
+    // Thiếu thêm 1 dạng nữa (pronounce dưới ngưỡng) → không đủ
+    const missTwo = base.map((r) =>
+      r.activity === "pronounce" ? { ...r, bestAccuracy: 50 } : r,
+    );
+    expect(allExercisesDone(cards, missTwo, { hasStoryWithWords: true })).toBe(false);
   });
 });
