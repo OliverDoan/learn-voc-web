@@ -138,7 +138,9 @@
       "Bash(echo \"EXIT $?\")",
       "Bash(git -C /Users/doanvietthuan/Documents/home/learn-voc-web stash list)",
       "Bash(git -C /Users/doanvietthuan/Documents/home/learn-voc-web diff --stat)",
-      "Bash(pnpm prisma:migrate --name add_exercise_attempt)"
+      "Bash(pnpm prisma:migrate --name add_exercise_attempt)",
+      "Bash(grep -E \"\\\\.\\(tsx|ts\\)$\")",
+      "Bash(nc -zv -w 5 ep-autumn-shadow-aiay052q.c-4.us-east-1.aws.neon.tech 5432)"
     ]
   }
 }
