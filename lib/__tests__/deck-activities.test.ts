@@ -48,9 +48,9 @@ describe("eligibleActivities", () => {
     expect(eligibleActivities([])).toEqual([]);
   });
 
-  it("1 thẻ cơ bản → có study/flashcards/typing/listening/pronounce", () => {
+  it("1 thẻ cơ bản → có flashcards/typing/listening/pronounce (KHÔNG tính Học SRS)", () => {
     const e = eligibleActivities([makeCard()]);
-    expect(e).toContain("study");
+    expect(e).not.toContain("study"); // Học (SRS) không tính vào tiến độ
     expect(e).toContain("flashcards");
     expect(e).toContain("typing");
     expect(e).toContain("listening");
@@ -128,9 +128,8 @@ describe("allExercisesDone & buildExerciseStatus", () => {
   });
 
   it("làm hết các dạng khả dụng (đạt ngưỡng) → xong", () => {
-    const cards = [makeCard()]; // study, flashcards, typing, listening, pronounce
+    const cards = [makeCard()]; // flashcards, typing, listening, pronounce
     const records: ActivityRecord[] = [
-      { activity: "study", bestAccuracy: 90 },
       { activity: "flashcards", bestAccuracy: null },
       { activity: "typing", bestAccuracy: 85 },
       { activity: "listening", bestAccuracy: 100 },
@@ -140,10 +139,9 @@ describe("allExercisesDone & buildExerciseStatus", () => {
     expect(buildExerciseStatus(cards, records).allDone).toBe(true);
   });
 
-  it("thiếu đúng 1 dạng (dưới ngưỡng) → vẫn đủ mở khóa (9/10)", () => {
-    const cards = [makeCard()]; // 5 dạng khả dụng → cần 4/5
+  it("thiếu đúng 1 dạng (dưới ngưỡng) → vẫn đủ mở khóa", () => {
+    const cards = [makeCard()]; // 4 dạng khả dụng → cần 3/4
     const records: ActivityRecord[] = [
-      { activity: "study", bestAccuracy: 90 },
       { activity: "flashcards", bestAccuracy: null },
       { activity: "typing", bestAccuracy: 70 }, // < 80 → coi như chưa làm
       { activity: "listening", bestAccuracy: 100 },
@@ -154,9 +152,8 @@ describe("allExercisesDone & buildExerciseStatus", () => {
   });
 
   it("thiếu 2 dạng → chưa đủ mở khóa", () => {
-    const cards = [makeCard()]; // 5 dạng khả dụng → cần 4/5
+    const cards = [makeCard()]; // 4 dạng khả dụng → cần 3/4
     const records: ActivityRecord[] = [
-      { activity: "study", bestAccuracy: 90 },
       { activity: "flashcards", bestAccuracy: null },
       { activity: "typing", bestAccuracy: 70 }, // < 80
       { activity: "listening", bestAccuracy: 100 },
@@ -166,10 +163,9 @@ describe("allExercisesDone & buildExerciseStatus", () => {
     expect(buildExerciseStatus(cards, records).allDone).toBe(false);
   });
 
-  it("deck có truyện (6 dạng): thiếu 1 vẫn mở khóa, thiếu 2 thì không", () => {
-    const cards = [makeCard()]; // + story-fill → 6 dạng, cần 5/6
+  it("deck có truyện (5 dạng): thiếu 1 vẫn mở khóa, thiếu 2 thì không", () => {
+    const cards = [makeCard()]; // + story-fill → 5 dạng, cần 4/5
     const base: ActivityRecord[] = [
-      { activity: "study", bestAccuracy: 90 },
       { activity: "flashcards", bestAccuracy: null },
       { activity: "typing", bestAccuracy: 85 },
       { activity: "listening", bestAccuracy: 100 },

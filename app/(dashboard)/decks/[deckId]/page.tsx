@@ -19,6 +19,7 @@ import {
   Pencil,
   Play,
   Plus,
+  SlidersHorizontal,
   Sprout,
   Square,
   SquareCheck,
@@ -67,6 +68,7 @@ import {
   displayRootWord,
   parseTags,
   posBadgeClass,
+  posToVietnamese,
   POS_FILTERS,
   type PosKey,
 } from "@/lib/utils";
@@ -84,8 +86,8 @@ export default function DeckDetailPage({ params }: PageProps) {
   const [openAddCard, setOpenAddCard] = useState(false);
   const [openImport, setOpenImport] = useState(false);
   const [openExport, setOpenExport] = useState(false);
-  // Menu gộp các thao tác của bảng từ (Chọn/Sắp xếp, Thêm từ, Xuất, Import)
-  const [toolbarOpen, setToolbarOpen] = useState(false);
+  // Bật/tắt panel bộ lọc (nút "Lọc")
+  const [showFilters, setShowFilters] = useState(false);
   const [openEditDeck, setOpenEditDeck] = useState(false);
   const [editingCard, setEditingCard] = useState<CardType | undefined>();
   const [detailCard, setDetailCard] = useState<CardType | undefined>();
@@ -177,6 +179,10 @@ export default function DeckDetailPage({ params }: PageProps) {
       return true;
     });
   }, [cards, selectedTags, favoriteOnly, selectedPos]);
+
+  // Có đang áp bộ lọc nào không (để tô đậm nút "Lọc")
+  const isFiltering =
+    favoriteOnly || groupByTag || selectedTags.length > 0 || selectedPos.length > 0;
 
   // Đồng bộ danh sách thứ tự cục bộ từ server (dùng cho kéo-thả lạc quan)
   useEffect(() => {
@@ -312,6 +318,15 @@ export default function DeckDetailPage({ params }: PageProps) {
     router.push(`/pronounce/${deckId}?ids=${encodeURIComponent(ids)}`);
   };
 
+  const handleToggleLearned = async () => {
+    try {
+      await setLearnedMut.mutateAsync(!deck!.learned);
+      toast.success(deck!.learned ? "Đã bỏ đánh dấu học xong" : "Đã đánh dấu học xong 🎉");
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : "Lỗi cập nhật");
+    }
+  };
+
   const handleToggleFavorite = async (card: CardType) => {
     try {
       await toggleFavoriteMut.mutateAsync({ cardId: card.id, favorite: !card.favorite });
@@ -406,7 +421,7 @@ export default function DeckDetailPage({ params }: PageProps) {
           setOverId(null);
           dragArmed.current = false;
         }}
-        className={`group flex items-center gap-2 rounded-lg border bg-card px-3 py-2.5 transition-all hover:border-primary/40 hover:shadow-md ${
+        className={`group flex items-center gap-3 rounded-lg border bg-card px-3 py-2.5 transition-all hover:border-primary/40 hover:shadow-md ${
           isSelected ? "border-primary/60 bg-primary/5" : ""
         } ${isDragging ? "opacity-40" : ""} ${
           isOver ? "border-primary ring-2 ring-primary/40" : ""
@@ -443,39 +458,28 @@ export default function DeckDetailPage({ params }: PageProps) {
             {isSelected ? <Check className="h-3.5 w-3.5" /> : null}
           </button>
         ) : null}
-        <Button
-          variant="ghost"
-          size="icon"
-          className="h-8 w-8 shrink-0"
+        {/* TỪ: nút phát âm + từ / phiên âm / từ gốc / ví dụ */}
+        <button
+          type="button"
           onClick={() => speak(card.word)}
+          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-muted/60 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
           aria-label="Phát âm"
         >
           <Volume2 className="h-4 w-4" />
-        </Button>
+        </button>
         <button
           type="button"
           onClick={() => setDetailCard(card)}
-          className="flex min-w-0 flex-1 flex-col gap-0.5 text-left"
+          className="flex min-w-0 flex-[1.4] flex-col gap-0.5 text-left"
           title="Xem chi tiết"
         >
-          <span className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+          <span className="flex flex-wrap items-baseline gap-x-2">
             <span className="font-semibold group-hover:text-primary group-hover:underline">
               {card.word}
             </span>
             {card.phonetic ? (
               <span className="font-phonetic text-xs text-muted-foreground">{card.phonetic}</span>
             ) : null}
-            {card.partOfSpeech ? (
-              <span
-                className={cn(
-                  "rounded-full border px-2 py-0.5 text-xs font-medium",
-                  posBadgeClass(card.partOfSpeech),
-                )}
-              >
-                {card.partOfSpeech}
-              </span>
-            ) : null}
-            <span className="text-sm text-muted-foreground">{card.meaning}</span>
           </span>
           {displayRootWord(card.word, card.rootWord) ? (
             <span className="inline-flex flex-wrap items-center gap-1 text-xs text-primary">
@@ -493,23 +497,42 @@ export default function DeckDetailPage({ params }: PageProps) {
             </span>
           ) : null}
         </button>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="h-8 w-8 shrink-0"
+        {/* LOẠI: badge từ loại (tiếng Việt) */}
+        <div className="hidden w-24 shrink-0 sm:block">
+          {card.partOfSpeech ? (
+            <span
+              className={cn(
+                "inline-flex rounded-full border px-2.5 py-1 text-xs font-medium",
+                posBadgeClass(card.partOfSpeech),
+              )}
+            >
+              {posToVietnamese(card.partOfSpeech) || card.partOfSpeech}
+            </span>
+          ) : null}
+        </div>
+        {/* NGHĨA */}
+        <button
+          type="button"
+          onClick={() => setDetailCard(card)}
+          className="min-w-0 flex-[1.4] text-left text-sm text-muted-foreground"
+          title="Xem chi tiết"
+        >
+          {card.meaning}
+        </button>
+        <button
+          type="button"
           onClick={() => handleToggleFavorite(card)}
+          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg transition-colors hover:bg-accent"
           aria-label={card.favorite ? "Bỏ yêu thích" : "Thêm yêu thích"}
           aria-pressed={card.favorite}
           title={card.favorite ? "Bỏ yêu thích" : "Thêm yêu thích"}
         >
           <Star
             className={`h-4 w-4 ${
-              card.favorite
-                ? "fill-amber-400 text-amber-400"
-                : "text-muted-foreground"
+              card.favorite ? "fill-amber-400 text-amber-400" : "text-muted-foreground"
             }`}
           />
-        </Button>
+        </button>
       </li>
     );
   };
@@ -564,80 +587,35 @@ export default function DeckDetailPage({ params }: PageProps) {
       </div>
 
       <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
-        <div className="flex min-w-0 items-center gap-4">
-          <div
-            className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl text-2xl"
-            style={{ backgroundColor: `${deck.color}20`, color: deck.color }}
-          >
-            {deck.icon ?? "📘"}
-          </div>
-          <div className="min-w-0">
+        <div className="min-w-0">
+          <div className="flex flex-wrap items-center gap-2">
             <h1 className="text-2xl font-bold">{deck.name}</h1>
-            {deck.description ? (
-              <p className="text-sm text-muted-foreground">{deck.description}</p>
+            {deck.locked ? (
+              <span
+                className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary"
+                title="Hoàn thành các Unit trước để mở khóa"
+              >
+                <Lock className="h-3 w-3" /> Khóa
+              </span>
             ) : null}
-            <p className="mt-1 text-xs text-muted-foreground">
-              {deck._count.cards} từ · {deck._count.stories} truyện
-            </p>
           </div>
+          {deck.description ? (
+            <p className="mt-0.5 text-sm text-muted-foreground">{deck.description}</p>
+          ) : null}
+          <p className="mt-1 text-xs text-muted-foreground">
+            {deck._count.cards} từ · {deck._count.stories} truyện
+          </p>
         </div>
 
-        <div className="flex flex-wrap items-center gap-2">
-          {deck.locked ? (
-            <Button disabled title="Hoàn thành deck trước để mở khóa">
-              <Lock className="h-4 w-4" />
-              Đang khóa
-            </Button>
-          ) : (
-            <Link href={`/study/${deckId}`}>
-              <Button>
-                <Play className="h-4 w-4" />
-                Bắt đầu ôn
-              </Button>
-            </Link>
-          )}
-          <Button
-            variant={deck.learned ? "default" : "outline"}
-            disabled={
-              deck.locked ||
-              setLearnedMut.isPending ||
-              (!deck.learned && !deck.exercisesDone)
-            }
-            title={
-              deck.locked
-                ? "Hoàn thành các Unit trước để mở khóa"
-                : !deck.learned && !deck.exercisesDone
-                  ? "Cần làm hết các dạng bài tập trước"
-                  : undefined
-            }
-            onClick={async () => {
-              try {
-                await setLearnedMut.mutateAsync(!deck.learned);
-                toast.success(
-                  deck.learned ? "Đã bỏ đánh dấu học xong" : "Đã đánh dấu học xong 🎉",
-                );
-              } catch (error) {
-                toast.error(error instanceof Error ? error.message : "Lỗi cập nhật");
-              }
-            }}
-          >
-            {deck.learned ? (
-              <>
-                <SquareCheck className="h-4 w-4" /> Đã học xong
-              </>
-            ) : (
-              <>
-                <Check className="h-4 w-4" /> Đánh dấu học xong
-              </>
-            )}
-          </Button>
+        <div className="flex items-center gap-2">
           <ReadAllButton cards={cards ?? []} />
 
-          {/* Gom các hành động phụ vào menu ⋯ */}
+          {/* Menu ⋮ gom mọi hành động: học, bài tập, quản lý từ, sửa/xoá deck */}
           <div className="relative">
             <Button
               variant="outline"
               size="icon"
+              className="rounded-full"
               onClick={() => setActionsOpen((o) => !o)}
               aria-label="Thêm hành động"
             >
@@ -646,7 +624,55 @@ export default function DeckDetailPage({ params }: PageProps) {
             {actionsOpen ? (
               <>
                 <div className="fixed inset-0 z-20" onClick={() => setActionsOpen(false)} />
-                <div className="absolute right-0 top-full z-30 mt-1 w-48 rounded-lg border bg-card p-1.5 shadow-lg">
+                <div className="absolute right-0 top-full z-30 mt-1 w-52 rounded-lg border bg-card p-1.5 shadow-lg">
+                  {deck.locked ? (
+                    <div
+                      className="flex cursor-not-allowed items-center gap-2 rounded-md px-2 py-2 text-sm text-muted-foreground/60"
+                      title="Hoàn thành deck trước để mở khóa"
+                    >
+                      <Lock className="h-4 w-4" /> Bắt đầu ôn (đang khóa)
+                    </div>
+                  ) : (
+                    <Link
+                      href={`/study/${deckId}`}
+                      onClick={() => setActionsOpen(false)}
+                      className="flex items-center gap-2 rounded-md px-2 py-2 text-sm font-medium hover:bg-accent"
+                    >
+                      <Play className="h-4 w-4" /> Bắt đầu ôn
+                    </Link>
+                  )}
+                  <button
+                    type="button"
+                    disabled={
+                      deck.locked ||
+                      setLearnedMut.isPending ||
+                      (!deck.learned && !deck.exercisesDone)
+                    }
+                    title={
+                      deck.locked
+                        ? "Hoàn thành các Unit trước để mở khóa"
+                        : !deck.learned && !deck.exercisesDone
+                          ? "Cần làm hết các dạng bài tập trước"
+                          : undefined
+                    }
+                    onClick={() => {
+                      setActionsOpen(false);
+                      handleToggleLearned();
+                    }}
+                    className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-transparent"
+                  >
+                    {deck.learned ? (
+                      <>
+                        <SquareCheck className="h-4 w-4" /> Đã học xong
+                      </>
+                    ) : (
+                      <>
+                        <Check className="h-4 w-4" /> Đánh dấu học xong
+                      </>
+                    )}
+                  </button>
+
+                  <div className="my-1 h-px bg-border" />
                   <Link
                     href={`/flashcards/${deckId}`}
                     onClick={() => setActionsOpen(false)}
@@ -677,6 +703,57 @@ export default function DeckDetailPage({ params }: PageProps) {
                   >
                     <Mic className="h-4 w-4" /> Phát âm
                   </Link>
+
+                  <div className="my-1 h-px bg-border" />
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setActionsOpen(false);
+                      setOpenAddCard(true);
+                    }}
+                    className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
+                  >
+                    <Plus className="h-4 w-4" /> Thêm từ
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setActionsOpen(false);
+                      toggleSelectMode();
+                    }}
+                    className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
+                  >
+                    {selectMode ? (
+                      <>
+                        <X className="h-4 w-4" /> Xong chọn / sắp xếp
+                      </>
+                    ) : (
+                      <>
+                        <SquareCheck className="h-4 w-4" /> Chọn / Sắp xếp
+                      </>
+                    )}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setActionsOpen(false);
+                      setOpenExport(true);
+                    }}
+                    className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
+                  >
+                    <Download className="h-4 w-4" /> Xuất
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setActionsOpen(false);
+                      setOpenImport(true);
+                    }}
+                    className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
+                  >
+                    <Upload className="h-4 w-4" /> Import
+                  </button>
+
                   {nextDeck ? (
                     <>
                       <div className="my-1 h-px bg-border" />
@@ -726,95 +803,88 @@ export default function DeckDetailPage({ params }: PageProps) {
 
       <StoryList deckId={deckId} />
 
+      {/* Tabs chế độ xem + ô tìm + nút Lọc trên cùng một hàng */}
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-        <Input
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="Tìm từ hoặc nghĩa..."
-          className="max-w-xs bg-card shadow-sm"
-        />
-        <div className="relative">
+        {cards && cards.length > 0 ? (
+          <div className="inline-flex rounded-lg border bg-card p-0.5">
+            <button
+              type="button"
+              onClick={() => setViewMode("list")}
+              className={cn(
+                "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
+                viewMode === "list"
+                  ? "bg-primary text-primary-foreground"
+                  : "text-muted-foreground hover:text-foreground",
+              )}
+            >
+              <List className="h-4 w-4" /> Danh sách
+            </button>
+            <button
+              type="button"
+              onClick={() => setViewMode("table")}
+              className={cn(
+                "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
+                viewMode === "table"
+                  ? "bg-primary text-primary-foreground"
+                  : "text-muted-foreground hover:text-foreground",
+              )}
+            >
+              <Table2 className="h-4 w-4" /> Bảng
+            </button>
+            <button
+              type="button"
+              onClick={() => setViewMode("test")}
+              className={cn(
+                "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
+                viewMode === "test"
+                  ? "bg-primary text-primary-foreground"
+                  : "text-muted-foreground hover:text-foreground",
+              )}
+            >
+              <ClipboardCheck className="h-4 w-4" /> Kiểm tra
+            </button>
+          </div>
+        ) : (
+          <div />
+        )}
+
+        <div className="flex items-center gap-2">
+          <Input
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Tìm từ hoặc nghĩa..."
+            className="w-48 bg-card shadow-sm sm:w-64"
+          />
           <Button
-            variant={selectMode ? "default" : "outline"}
-            onClick={() => setToolbarOpen((o) => !o)}
+            variant={showFilters || isFiltering ? "default" : "outline"}
+            onClick={() => setShowFilters((v) => !v)}
+            className="rounded-full"
           >
-            <MoreVertical className="h-4 w-4" />
-            {selectMode ? "Đang chọn / sắp xếp" : "Thao tác"}
+            <SlidersHorizontal className="h-4 w-4" /> Lọc
+            {isFiltering ? (
+              <span className="ml-0.5 inline-block h-1.5 w-1.5 rounded-full bg-current" />
+            ) : null}
           </Button>
-          {toolbarOpen ? (
-            <>
-              <div className="fixed inset-0 z-20" onClick={() => setToolbarOpen(false)} />
-              <div className="absolute right-0 top-full z-30 mt-1 w-52 rounded-lg border bg-card p-1.5 shadow-lg">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setToolbarOpen(false);
-                    setOpenAddCard(true);
-                  }}
-                  className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
-                >
-                  <Plus className="h-4 w-4" /> Thêm từ
-                </button>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setToolbarOpen(false);
-                    toggleSelectMode();
-                  }}
-                  className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
-                >
-                  {selectMode ? (
-                    <>
-                      <X className="h-4 w-4" /> Xong chọn / sắp xếp
-                    </>
-                  ) : (
-                    <>
-                      <SquareCheck className="h-4 w-4" /> Chọn / Sắp xếp
-                    </>
-                  )}
-                </button>
-                <div className="my-1 h-px bg-border" />
-                <button
-                  type="button"
-                  onClick={() => {
-                    setToolbarOpen(false);
-                    setOpenExport(true);
-                  }}
-                  className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
-                >
-                  <Download className="h-4 w-4" /> Xuất
-                </button>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setToolbarOpen(false);
-                    setOpenImport(true);
-                  }}
-                  className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
-                >
-                  <Upload className="h-4 w-4" /> Import
-                </button>
-              </div>
-            </>
-          ) : null}
         </div>
       </div>
 
-      <CardsFilterBar
-        availableTags={availableTags}
-        selectedTags={selectedTags}
-        onToggleTag={toggleTag}
-        onClearTags={() => setSelectedTags([])}
-        availablePos={availablePos}
-        selectedPos={selectedPos}
-        onTogglePos={togglePos}
-        favoriteOnly={favoriteOnly}
-        onToggleFavoriteOnly={() => setFavoriteOnly((v) => !v)}
-        groupByTag={groupByTag}
-        onToggleGroupByTag={() => setGroupByTag((v) => !v)}
-        matchCount={filteredCards.length}
-        totalCount={cards?.length ?? 0}
-      />
+      {showFilters ? (
+        <CardsFilterBar
+          availableTags={availableTags}
+          selectedTags={selectedTags}
+          onToggleTag={toggleTag}
+          onClearTags={() => setSelectedTags([])}
+          availablePos={availablePos}
+          selectedPos={selectedPos}
+          onTogglePos={togglePos}
+          favoriteOnly={favoriteOnly}
+          onToggleFavoriteOnly={() => setFavoriteOnly((v) => !v)}
+          groupByTag={groupByTag}
+          onToggleGroupByTag={() => setGroupByTag((v) => !v)}
+          matchCount={filteredCards.length}
+          totalCount={cards?.length ?? 0}
+        />
+      ) : null}
 
       {selectMode && filteredCards.length > 0 ? (
         <div className="mb-2 flex items-center justify-between text-xs">
@@ -841,47 +911,6 @@ export default function DeckDetailPage({ params }: PageProps) {
               <GripVertical className="h-3.5 w-3.5" /> Kéo để sắp xếp lại thứ tự
             </span>
           ) : null}
-        </div>
-      ) : null}
-
-      {cards && cards.length > 0 ? (
-        <div className="mb-3 inline-flex rounded-lg border bg-card p-0.5">
-          <button
-            type="button"
-            onClick={() => setViewMode("list")}
-            className={cn(
-              "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
-              viewMode === "list"
-                ? "bg-primary text-primary-foreground"
-                : "text-muted-foreground hover:text-foreground",
-            )}
-          >
-            <List className="h-4 w-4" /> Danh sách
-          </button>
-          <button
-            type="button"
-            onClick={() => setViewMode("table")}
-            className={cn(
-              "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
-              viewMode === "table"
-                ? "bg-primary text-primary-foreground"
-                : "text-muted-foreground hover:text-foreground",
-            )}
-          >
-            <Table2 className="h-4 w-4" /> Bảng
-          </button>
-          <button
-            type="button"
-            onClick={() => setViewMode("test")}
-            className={cn(
-              "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
-              viewMode === "test"
-                ? "bg-primary text-primary-foreground"
-                : "text-muted-foreground hover:text-foreground",
-            )}
-          >
-            <ClipboardCheck className="h-4 w-4" /> Kiểm tra
-          </button>
         </div>
       ) : null}
 

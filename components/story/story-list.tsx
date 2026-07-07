@@ -1,10 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { BookOpen, Loader2, Plus } from "lucide-react";
+import { BookOpenText, ChevronRight, Loader2, Plus } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { useStories } from "@/hooks/use-stories";
 
 interface StoryListProps {
@@ -14,66 +13,70 @@ interface StoryListProps {
 export function StoryList({ deckId }: StoryListProps) {
   const { data: stories, isLoading } = useStories(deckId);
 
-  return (
-    <div className="mb-8">
-      <div className="mb-3 flex items-center justify-between">
-        <h2 className="text-lg font-semibold">⭐ Truyện chêm</h2>
+  if (isLoading) {
+    return (
+      <div className="mb-6 flex justify-center py-6">
+        <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
+      </div>
+    );
+  }
+
+  // Chưa có truyện: ô mời tạo truyện (viền đứt cho nhẹ)
+  if (!stories || stories.length === 0) {
+    return (
+      <div className="mb-6 flex flex-col items-center gap-3 rounded-2xl border border-dashed p-6 text-center sm:flex-row sm:justify-between sm:text-left">
+        <div className="flex items-center gap-3">
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+            <BookOpenText className="h-5 w-5" />
+          </span>
+          <div>
+            <p className="font-semibold">Truyện chêm</p>
+            <p className="text-sm text-muted-foreground">Học từ qua ngữ cảnh với truyện chêm.</p>
+          </div>
+        </div>
         <Link href={`/decks/${deckId}/stories/new`}>
-          <Button size="sm" variant="outline">
+          <Button size="sm">
             <Plus className="h-4 w-4" /> Tạo truyện
           </Button>
         </Link>
       </div>
+    );
+  }
 
-      {isLoading ? (
-        <div className="flex justify-center py-6">
-          <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
-        </div>
-      ) : !stories || stories.length === 0 ? (
-        <div className="rounded-xl border border-dashed p-8 text-center">
-          <p className="mb-3 text-sm text-muted-foreground">
-            Học từ qua ngữ cảnh với truyện chêm.
-          </p>
-          <Link href={`/decks/${deckId}/stories/new`}>
-            <Button size="sm">Tạo truyện đầu tiên</Button>
+  return (
+    <div className="mb-6 space-y-2">
+      {stories.map((story) => (
+        <motion.div key={story.id} whileHover={{ y: -1 }} transition={{ duration: 0.15 }}>
+          <Link
+            href={`/stories/${story.id}`}
+            className="group flex items-center gap-3 rounded-2xl border border-dashed bg-card/60 px-4 py-3 transition-colors hover:border-primary/50 hover:bg-accent/40"
+          >
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+              <BookOpenText className="h-5 w-5" />
+            </span>
+            <div className="min-w-0 flex-1">
+              <p className="flex flex-wrap items-baseline gap-x-2">
+                <span className="font-semibold">Truyện chêm</span>
+                <span className="truncate text-sm text-muted-foreground">
+                  {story.title} · {story._count.storyCards} từ
+                </span>
+              </p>
+            </div>
+            <span className="inline-flex shrink-0 items-center gap-1 text-sm font-medium text-primary">
+              Mở truyện
+              <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </span>
           </Link>
-        </div>
-      ) : (
-        <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-          {stories.map((story) => (
-            <motion.li
-              key={story.id}
-              whileHover={{ y: -2 }}
-              transition={{ duration: 0.15 }}
-            >
-              <Link
-                href={`/stories/${story.id}`}
-                className="block rounded-lg border bg-card p-4 transition-shadow hover:shadow-md"
-              >
-                {story.imageUrl ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={story.imageUrl}
-                    alt={story.title}
-                    className="mb-3 h-32 w-full rounded-md object-cover"
-                  />
-                ) : (
-                  <div className="mb-3 flex h-32 w-full items-center justify-center rounded-md bg-primary/10 text-4xl">
-                    📖
-                  </div>
-                )}
-                <h3 className="font-semibold">{story.title}</h3>
-                <div className="mt-2 flex items-center gap-3 text-xs text-muted-foreground">
-                  <Badge variant="secondary" className="text-[10px]">
-                    <BookOpen className="mr-1 h-3 w-3" />
-                    {story._count.storyCards} từ
-                  </Badge>
-                </div>
-              </Link>
-            </motion.li>
-          ))}
-        </ul>
-      )}
+        </motion.div>
+      ))}
+
+      <div className="flex justify-end">
+        <Link href={`/decks/${deckId}/stories/new`}>
+          <Button size="sm" variant="ghost" className="text-muted-foreground">
+            <Plus className="h-4 w-4" /> Tạo truyện
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 }

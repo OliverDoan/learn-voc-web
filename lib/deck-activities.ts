@@ -98,15 +98,15 @@ export function eligibleActivities(
   const result: DeckActivityKey[] = [];
 
   if (n >= 1) {
-    result.push("study", "flashcards", "typing", "listening", "pronounce");
+    result.push("flashcards", "typing", "listening", "pronounce");
   }
   if (n >= 4) result.push("multiple-choice", "test");
   if (n >= 6) result.push("matching");
   if (gapFillEligibleCards(cards).length >= 1) result.push("gap-fill");
   // Điền truyện chêm: cần truyện có từ chêm, không phụ thuộc số thẻ.
   if (ctx.hasStoryWithWords) result.push("story-fill");
-  // "Biến đổi từ" (word-formation) KHÔNG tính vào tiến độ / điều kiện mở khóa
-  // (vẫn chơi được ở trang quiz nếu thẻ có dữ liệu word forms).
+  // "Học (SRS)" (study) và "Biến đổi từ" (word-formation) KHÔNG tính vào tiến độ /
+  // điều kiện mở khóa (vẫn học/chơi được bình thường ở trang tương ứng).
 
   // Giữ theo thứ tự trong DECK_ACTIVITIES cho ổn định khi hiển thị.
   return DECK_ACTIVITY_KEYS.filter((k) => result.includes(k));

@@ -1,7 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
-import { Check, ChevronRight, Circle } from "lucide-react";
+import { Check, ChevronDown, ChevronRight, Circle } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import {
   activityHref,
@@ -22,6 +23,9 @@ interface DeckExerciseProgressProps {
  * Mỗi ô là link nhảy thẳng vào dạng bài tương ứng.
  */
 export function DeckExerciseProgress({ deckId, exercises }: DeckExerciseProgressProps) {
+  // Mặc định đóng — người dùng bấm để mở xem chi tiết các dạng bài.
+  const [open, setOpen] = useState(false);
+
   if (exercises.length === 0) return null;
 
   const doneCount = exercises.filter((e) => e.done).length;
@@ -31,22 +35,41 @@ export function DeckExerciseProgress({ deckId, exercises }: DeckExerciseProgress
   const remaining = Math.max(0, required - doneCount);
 
   return (
-    <div className="mb-6 rounded-2xl border bg-card p-4">
-      <div className="mb-3 flex items-center justify-between">
-        <h2 className="text-sm font-semibold">
+    <div className="mb-6 rounded-2xl border bg-card">
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        aria-expanded={open}
+        className="flex w-full items-center justify-between gap-3 rounded-2xl px-4 py-3 text-left transition-colors hover:bg-accent/40"
+      >
+        <h2 className="flex items-center gap-2 text-sm font-semibold">
+          <ChevronDown
+            className={cn("h-4 w-4 shrink-0 transition-transform", open ? "" : "-rotate-90")}
+          />
           Tiến độ bài tập
           {canUnlock ? (
-            <span className="ml-2 text-emerald-600 dark:text-emerald-400">✓ Đã đủ để mở khóa</span>
+            <span className="text-emerald-600 dark:text-emerald-400">✓ Đã đủ để mở khóa</span>
           ) : null}
         </h2>
-        <span className="font-mono text-xs text-muted-foreground">
-          {doneCount}/{exercises.length} dạng
+        <span className="flex items-center gap-2">
+          {/* Thanh progress thu nhỏ luôn hiển thị (kể cả khi đóng) */}
+          <span className="hidden h-1.5 w-24 overflow-hidden rounded-full bg-muted sm:block">
+            <span
+              className="block h-full rounded-full bg-primary transition-all"
+              style={{ width: `${(doneCount / exercises.length) * 100}%` }}
+            />
+          </span>
+          <span className="font-mono text-xs text-muted-foreground">
+            {doneCount}/{exercises.length} dạng
+          </span>
         </span>
-      </div>
+      </button>
 
-      <Progress value={doneCount} max={exercises.length} className="mb-4" />
+      {open ? (
+        <div className="px-4 pb-4">
+          <Progress value={doneCount} max={exercises.length} className="mb-4" />
 
-      <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+          <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3">
         {exercises.map((ex) => {
           const showAccuracy = ex.scored && ex.bestAccuracy != null;
           return (
@@ -86,14 +109,16 @@ export function DeckExerciseProgress({ deckId, exercises }: DeckExerciseProgress
             </li>
           );
         })}
-      </ul>
+          </ul>
 
-      {!canUnlock ? (
-        <p className="mt-3 text-xs text-muted-foreground">
-          Nhấn vào từng ô để làm ngay dạng đó. Chỉ cần làm {required}/{exercises.length} dạng (dạng
-          có chấm điểm cần đạt ≥ {EXERCISE_PASS_ACCURACY}%) để mở khóa nút &ldquo;Đánh dấu học
-          xong&rdquo; — còn thiếu {remaining} dạng.
-        </p>
+          {!canUnlock ? (
+            <p className="mt-3 text-xs text-muted-foreground">
+              Nhấn vào từng ô để làm ngay dạng đó. Chỉ cần làm {required}/{exercises.length} dạng
+              (dạng có chấm điểm cần đạt ≥ {EXERCISE_PASS_ACCURACY}%) để mở khóa nút &ldquo;Đánh dấu
+              học xong&rdquo; — còn thiếu {remaining} dạng.
+            </p>
+          ) : null}
+        </div>
       ) : null}
     </div>
   );

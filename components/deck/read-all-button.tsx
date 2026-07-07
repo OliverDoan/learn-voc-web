@@ -246,8 +246,8 @@ export function ReadAllButton({ cards }: ReadAllButtonProps) {
         </Button>
       ) : (
         <Button
-          variant="outline"
-          className="rounded-full"
+          variant="default"
+          className="rounded-full shadow-[0_8px_20px_rgba(23,61,201,.28)]"
           onClick={start}
           title="Đọc toàn bộ từ trong deck"
         >
