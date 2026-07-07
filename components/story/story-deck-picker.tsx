@@ -18,6 +18,8 @@ interface StoryDeckPickerProps {
   onToggle: (id: string) => void;
   onSelectAll: () => void;
   onClear: () => void;
+  /** true = nút nằm gọn trong hàng (dropdown bung xuống dạng absolute), không tự căn giữa. */
+  inline?: boolean;
 }
 
 /**
@@ -30,13 +32,14 @@ export function StoryDeckPicker({
   onToggle,
   onSelectAll,
   onClear,
+  inline = false,
 }: StoryDeckPickerProps) {
   const [open, setOpen] = useState(false);
   const selectedCount = decks.filter((d) => !excluded.has(d.id)).length;
 
   return (
-    <div className="mb-6">
-      <div className="flex justify-center">
+    <div className={cn(inline ? "relative" : "mb-6")}>
+      <div className={cn(!inline && "flex justify-center")}>
         <Button
           variant="outline"
           size="sm"
@@ -52,7 +55,12 @@ export function StoryDeckPicker({
       </div>
 
       {open ? (
-        <div className="mt-3 rounded-2xl border bg-card p-4 shadow-sm">
+        <div
+          className={cn(
+            "rounded-2xl border bg-card p-4 shadow-sm",
+            inline ? "absolute left-1/2 top-full z-30 mt-2 w-80 max-w-[85vw] -translate-x-1/2" : "mt-3",
+          )}
+        >
           <div className="mb-3 flex items-center justify-between gap-2">
             <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
               Deck muốn đọc
