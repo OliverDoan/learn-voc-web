@@ -61,6 +61,19 @@ export function cardPosCategories(pos: string | null | undefined): PosKey[] {
   return [...set];
 }
 
+/**
+ * Chuyển chuỗi partOfSpeech (tiếng Anh) sang nhãn tiếng Việt để đọc/hiển thị.
+ * Vd: "noun" → "danh từ", "adjective / noun" → "tính từ, danh từ".
+ * Trả về chuỗi rỗng nếu không nhận diện được từ loại nào.
+ */
+export function posToVietnamese(pos: string | null | undefined): string {
+  const categories = cardPosCategories(pos);
+  const labels = categories
+    .map((key) => POS_FILTERS.find((f) => f.key === key)?.label.toLowerCase())
+    .filter((l): l is string => Boolean(l));
+  return labels.join(", ");
+}
+
 export function parseTags(tagsJson: string | null | undefined): string[] {
   if (!tagsJson) return [];
   try {
