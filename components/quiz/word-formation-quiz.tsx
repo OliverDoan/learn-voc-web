@@ -29,7 +29,8 @@ export function WordFormationQuiz({ question, onAnswer }: WordFormationQuizProps
 
   const answer = target.answer;
   const maxHints = Math.max(1, answer.length - 1);
-  const tolerance = 1;
+  // Biến đổi từ: phải gõ đúng chính tả dạng từ (không tha sai ký tự).
+  const tolerance = 0;
 
   const showHint = hintLevel > 0;
   const hintText = showHint

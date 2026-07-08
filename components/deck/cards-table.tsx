@@ -98,14 +98,21 @@ function renderWordForms(json: string | null): ReactNode {
 export function CardsTable({ cards, deck }: CardsTableProps) {
   const updateDeck = useUpdateDeck(deck.id);
 
+  // Mặc định (chưa lưu tuỳ chỉnh): chỉ hiện cột "Từ vựng", ẩn các cột còn lại + cột tuỳ chỉnh.
+  const defaultHidden = () =>
+    new Set<string>([
+      ...BUILTIN.filter((b) => b.key !== "word").map((b) => b.key),
+      ...parseCustomColumns(deck.customColumns).map((c) => c.id),
+    ]);
+
   // Ẩn/hiện cột — lưu localStorage theo deck (khởi tạo ngay, không cần effect).
   const [hidden, setHidden] = useState<Set<string>>(() => {
-    if (typeof window === "undefined") return new Set();
+    if (typeof window === "undefined") return defaultHidden();
     try {
       const raw = localStorage.getItem(`voc-table-cols:${deck.id}`);
-      return raw ? new Set(JSON.parse(raw) as string[]) : new Set();
+      return raw ? new Set(JSON.parse(raw) as string[]) : defaultHidden();
     } catch {
-      return new Set();
+      return defaultHidden();
     }
   });
   const toggleHidden = (key: string) => {

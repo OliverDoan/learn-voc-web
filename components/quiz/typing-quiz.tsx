@@ -35,7 +35,9 @@ export function TypingQuiz({
     : "Gõ từ rồi nhấn Enter...";
 
   const maxHints = Math.max(1, target.length - 1);
-  const tolerance = isReverse ? Math.max(2, Math.floor(target.length * 0.25)) : 2;
+  // Gõ từ tiếng Anh: phải đúng chính tả hoàn toàn (tolerance 0).
+  // Gõ nghĩa tiếng Việt: nới lỏng vì cách diễn đạt có thể khác đôi chút.
+  const tolerance = isReverse ? Math.max(2, Math.floor(target.length * 0.25)) : 0;
 
   const showHint = hintLevel > 0;
   const hintText = showHint

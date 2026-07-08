@@ -27,8 +27,8 @@ export function GapFillQuiz({ question, onAnswer }: GapFillQuizProps) {
 
   const target = gap.answer;
   const maxHints = Math.max(1, target.length - 1);
-  // Từ tiếng Anh thường ngắn → chỉ cho phép sai 1 ký tự (gõ nhầm)
-  const tolerance = 1;
+  // Kiểm tra chính tả: phải gõ ĐÚNG HOÀN TOÀN (không tha sai ký tự nào).
+  const tolerance = 0;
 
   const showHint = hintLevel > 0;
   const hintText = showHint

@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Volume2, X } from "lucide-react";
 import { parseStory } from "@/lib/story-parser";
 import { speak } from "@/lib/tts";
 import { cn } from "@/lib/utils";
+import { useAllWords } from "@/hooks/use-cards";
 
 interface StoryRendererProps {
   content: string;
@@ -24,6 +25,17 @@ export function StoryRenderer({
 }: StoryRendererProps) {
   const tokens = parseStory(content);
   const [opened, setOpened] = useState<number | null>(null);
+
+  // Map từ (viết thường) → từ loại, lấy từ toàn bộ thẻ (query đã cache dùng chung).
+  const { data: allWords } = useAllWords();
+  const posMap = useMemo(() => {
+    const map = new Map<string, string>();
+    for (const c of allWords ?? []) {
+      const pos = c.partOfSpeech?.trim();
+      if (pos) map.set(c.word.trim().toLowerCase(), pos);
+    }
+    return map;
+  }, [allWords]);
 
   return (
     <div
@@ -86,6 +98,11 @@ export function StoryRenderer({
                 </button>
                 <span className="flex items-center gap-2 pr-5">
                   <span className="text-base font-bold">{tok.word}</span>
+                  {posMap.get(tok.word.trim().toLowerCase()) ? (
+                    <span className="text-xs font-medium italic text-[#9cc2ff]">
+                      {posMap.get(tok.word.trim().toLowerCase())}
+                    </span>
+                  ) : null}
                   <button
                     type="button"
                     onClick={(e) => {
