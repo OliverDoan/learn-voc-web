@@ -140,7 +140,11 @@
       "Bash(git -C /Users/doanvietthuan/Documents/home/learn-voc-web diff --stat)",
       "Bash(pnpm prisma:migrate --name add_exercise_attempt)",
       "Bash(grep -E \"\\\\.\\(tsx|ts\\)$\")",
-      "Bash(nc -zv -w 5 ep-autumn-shadow-aiay052q.c-4.us-east-1.aws.neon.tech 5432)"
+      "Bash(nc -zv -w 5 ep-autumn-shadow-aiay052q.c-4.us-east-1.aws.neon.tech 5432)",
+      "Bash(sed -n '/^model Card /,/^}/p' prisma/schema.prisma)",
+      "Bash(sed -n '/^model Story /,/^}/p' prisma/schema.prisma)",
+      "Bash(pnpm sync:card-order)",
+      "Bash(python3 *)"
     ]
   }
 }
