@@ -20,6 +20,7 @@ import { Input } from "@/components/ui/input";
 import { MultiSelectMenu } from "@/components/ui/multi-select-menu";
 import type { SelectOption } from "@/components/ui/select-menu";
 import { CardDetailDialog } from "@/components/deck/card-detail-dialog";
+import { DialectBadge } from "@/components/deck/dialect-badge";
 import { useAllWords, useToggleFavorite } from "@/hooks/use-cards";
 import { speak } from "@/lib/tts";
 import { cardPosCategories, cn, POS_FILTERS, type PosKey } from "@/lib/utils";
@@ -326,6 +327,7 @@ export default function AllWordsPage() {
                           {card.partOfSpeech}
                         </Badge>
                       ) : null}
+                      <DialectBadge dialect={card.dialect} variantWord={card.variantWord} />
                     </div>
                     <p className="mt-1 text-sm">{card.meaning}</p>
                     {card.example ? (

@@ -8,6 +8,7 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SelectMenu, type SelectOption } from "@/components/ui/select-menu";
+import { DialectBadge } from "@/components/deck/dialect-badge";
 import { useFavorites, useToggleFavorite } from "@/hooks/use-cards";
 import { speak } from "@/lib/tts";
 import type { FavoriteCard } from "@/hooks/use-cards";
@@ -193,6 +194,7 @@ export default function FavoritesPage() {
                         {card.partOfSpeech}
                       </Badge>
                     ) : null}
+                    <DialectBadge dialect={card.dialect} variantWord={card.variantWord} />
                     <Link href={`/decks/${card.deck.id}`}>
                       <Badge
                         variant="secondary"
