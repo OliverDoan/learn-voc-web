@@ -51,7 +51,25 @@ export function DialectBadge({
   );
 
   if (variant === "chip") {
-    return <span className={className}>{badge}</span>;
+    return (
+      <span className={cn("inline-flex flex-wrap items-center gap-1", className)}>
+        {badge}
+        {/* Chip từ tương đương ở biến thể còn lại (vd flat → 🇺🇸 apartment) */}
+        {variantWord ? (
+          <span
+            className={cn(
+              "inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-medium",
+              isBritish
+                ? "border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-300"
+                : "border-blue-500/30 bg-blue-500/10 text-blue-600 dark:text-blue-300",
+            )}
+            title={`Từ tương đương ${DIALECT_LABEL[other]}`}
+          >
+            {DIALECT_SHORT[other].split(" ")[0]} {variantWord}
+          </span>
+        ) : null}
+      </span>
+    );
   }
 
   return (
