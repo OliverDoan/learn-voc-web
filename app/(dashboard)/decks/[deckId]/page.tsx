@@ -19,7 +19,6 @@ import {
   Pencil,
   Play,
   Plus,
-  SlidersHorizontal,
   Sprout,
   Square,
   SquareCheck,
@@ -87,8 +86,6 @@ export default function DeckDetailPage({ params }: PageProps) {
   const [openAddCard, setOpenAddCard] = useState(false);
   const [openImport, setOpenImport] = useState(false);
   const [openExport, setOpenExport] = useState(false);
-  // Bật/tắt panel bộ lọc (nút "Lọc")
-  const [showFilters, setShowFilters] = useState(false);
   const [openEditDeck, setOpenEditDeck] = useState(false);
   const [editingCard, setEditingCard] = useState<CardType | undefined>();
   const [detailCard, setDetailCard] = useState<CardType | undefined>();
@@ -181,9 +178,6 @@ export default function DeckDetailPage({ params }: PageProps) {
     });
   }, [cards, selectedTags, favoriteOnly, selectedPos]);
 
-  // Có đang áp bộ lọc nào không (để tô đậm nút "Lọc")
-  const isFiltering =
-    favoriteOnly || groupByTag || selectedTags.length > 0 || selectedPos.length > 0;
 
   // Đồng bộ danh sách thứ tự cục bộ từ server (dùng cho kéo-thả lạc quan)
   useEffect(() => {
@@ -861,27 +855,15 @@ export default function DeckDetailPage({ params }: PageProps) {
           <div />
         )}
 
-        <div className="flex items-center gap-2">
-          <Input
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder="Tìm từ hoặc nghĩa..."
-            className="w-48 bg-card shadow-sm sm:w-64"
-          />
-          <Button
-            variant={showFilters || isFiltering ? "default" : "outline"}
-            onClick={() => setShowFilters((v) => !v)}
-            className="rounded-full"
-          >
-            <SlidersHorizontal className="h-4 w-4" /> Lọc
-            {isFiltering ? (
-              <span className="ml-0.5 inline-block h-1.5 w-1.5 rounded-full bg-current" />
-            ) : null}
-          </Button>
-        </div>
+        <Input
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          placeholder="Tìm từ hoặc nghĩa..."
+          className="w-48 bg-card shadow-sm sm:w-64"
+        />
       </div>
 
-      {showFilters ? (
+      {cards && cards.length > 0 ? (
         <CardsFilterBar
           availableTags={availableTags}
           selectedTags={selectedTags}

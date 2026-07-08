@@ -146,7 +146,8 @@
       "Bash(pnpm sync:card-order)",
       "Bash(python3 *)",
       "Bash(pnpm prisma:migrate --name add_card_dialect)",
-      "Read(//tmp/**)"
+      "Read(//tmp/**)",
+      "Bash(echo \"tsc exit=$?\")"
     ]
   }
 }
