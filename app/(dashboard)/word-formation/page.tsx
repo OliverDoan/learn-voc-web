@@ -1,4 +1,4 @@
-import { AffixReference } from "@/components/word-formation/affix-reference";
+import { WordFormationView } from "@/components/word-formation/word-formation-view";
 
 export default function WordFormationPage() {
   return (
@@ -6,12 +6,12 @@ export default function WordFormationPage() {
       <header>
         <h1 className="text-2xl font-bold">Cấu tạo từ (Word Formation)</h1>
         <p className="text-sm text-muted-foreground">
-          Tra cứu tiền tố &amp; hậu tố để đoán nghĩa và loại từ. Khi tra hoặc học một
-          từ, app sẽ tự gợi ý cấu tạo của từ đó.
+          Tra cứu tiền tố &amp; hậu tố để đoán nghĩa và loại từ, hoặc gom từ vựng của bạn
+          theo cấu tạo (vd nhóm đuôi -tion / -sion).
         </p>
       </header>
 
-      <AffixReference />
+      <WordFormationView />
     </div>
   );
 }
