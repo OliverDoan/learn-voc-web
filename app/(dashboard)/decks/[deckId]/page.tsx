@@ -481,6 +481,17 @@ export default function DeckDetailPage({ params }: PageProps) {
             {card.phonetic ? (
               <span className="font-phonetic text-xs text-muted-foreground">{card.phonetic}</span>
             ) : null}
+            {/* Badge từ loại inline — chỉ hiện khi khung hẹp (cột w-24 bên phải bị ẩn) */}
+            {card.partOfSpeech ? (
+              <span
+                className={cn(
+                  "inline-flex rounded-full border px-2 py-0.5 text-[10px] font-medium sm:hidden",
+                  posBadgeClass(card.partOfSpeech),
+                )}
+              >
+                {posToVietnamese(card.partOfSpeech) || card.partOfSpeech}
+              </span>
+            ) : null}
             <DialectBadge dialect={card.dialect} variantWord={card.variantWord} />
           </span>
           {displayRootWord(card.word, card.rootWord) ? (

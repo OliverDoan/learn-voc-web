@@ -145,7 +145,8 @@
       "Bash(sed -n '/^model Story /,/^}/p' prisma/schema.prisma)",
       "Bash(pnpm sync:card-order)",
       "Bash(python3 *)",
-      "Bash(pnpm prisma:migrate --name add_card_dialect)"
+      "Bash(pnpm prisma:migrate --name add_card_dialect)",
+      "Read(//tmp/**)"
     ]
   }
 }

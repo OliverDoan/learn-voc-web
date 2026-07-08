@@ -19,6 +19,7 @@ import {
   PanelLeftOpen,
   Search,
   Settings,
+  Sprout,
   Star,
   Trash2,
 } from "lucide-react";
@@ -45,6 +46,7 @@ const items: NavItem[] = [
   { href: "/ielts", label: "IELTS", icon: GraduationCap, mobile: true },
   { href: "/grammar", label: "Ngữ pháp", icon: BookText, mobile: true },
   { href: "/word-formation", label: "Cấu tạo từ", icon: Blocks, mobile: false },
+  { href: "/word-roots", label: "Từ gốc", icon: Sprout, mobile: false },
   { href: "/trash", label: "Thùng rác", icon: Trash2, mobile: false },
   { href: "/settings", label: "Cài đặt", icon: Settings, mobile: true },
 ];
