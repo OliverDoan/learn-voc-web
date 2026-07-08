@@ -147,7 +147,8 @@
       "Bash(python3 *)",
       "Bash(pnpm prisma:migrate --name add_card_dialect)",
       "Read(//tmp/**)",
-      "Bash(echo \"tsc exit=$?\")"
+      "Bash(echo \"tsc exit=$?\")",
+      "Bash(git fetch *)"
     ]
   }
 }
