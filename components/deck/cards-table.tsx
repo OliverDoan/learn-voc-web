@@ -14,6 +14,7 @@ import {
 } from "@/lib/custom-columns";
 import type { Card, Deck } from "@/lib/types";
 import { cn } from "@/lib/utils";
+import { DialectBadge } from "@/components/deck/dialect-badge";
 
 interface CardsTableProps {
   cards: Card[];
@@ -36,15 +37,32 @@ const BUILTIN: Array<{
       get: (c) => {
         const pos = abbrPartOfSpeech(c.partOfSpeech);
         return (
-          <span>
-            {c.word}
-            {pos ? <span className="ml-1.5 font-normal text-muted-foreground">({pos})</span> : null}
+          <span className="inline-flex flex-wrap items-center gap-1.5">
+            <span>
+              {c.word}
+              {pos ? (
+                <span className="ml-1.5 font-normal text-muted-foreground">({pos})</span>
+              ) : null}
+            </span>
+            <DialectBadge dialect={c.dialect} variantWord={c.variantWord} />
           </span>
         );
       },
     },
     { key: "phonetic", label: "Phiên âm", get: (c) => c.phonetic ?? "" },
     { key: "meaning", label: "Nghĩa tiếng Việt", get: (c) => c.meaning, className: "min-w-[10rem]" },
+    {
+      key: "dialect",
+      label: "Biến thể (Anh–Anh/Mỹ)",
+      get: (c) =>
+        c.dialect ? (
+          <DialectBadge dialect={c.dialect} variantWord={c.variantWord} variant="full" />
+        ) : (
+          ""
+        ),
+      className: "min-w-[12rem]",
+      wrap: true,
+    },
     { key: "rootWord", label: "Từ gốc", get: (c) => c.rootWord ?? "" },
     {
       key: "wordForm",
