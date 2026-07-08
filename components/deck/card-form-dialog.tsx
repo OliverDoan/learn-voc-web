@@ -50,6 +50,10 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
   const [example, setExample] = useState(card?.example ?? "");
   const [exampleTranslation, setExampleTranslation] = useState(card?.exampleTranslation ?? "");
   const [note, setNote] = useState(card?.note ?? "");
+  const [dialect, setDialect] = useState<"" | "british" | "american">(
+    (card?.dialect as "british" | "american" | undefined) ?? "",
+  );
+  const [variantWord, setVariantWord] = useState(card?.variantWord ?? "");
   const [tagsInput, setTagsInput] = useState(parseTags(card?.tags).join(", "));
   const [synonymsInput, setSynonymsInput] = useState(parseTags(card?.synonyms).join(", "));
   const [antonymsInput, setAntonymsInput] = useState(parseTags(card?.antonyms).join(", "));
@@ -74,6 +78,8 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
       setExample(card?.example ?? "");
       setExampleTranslation(card?.exampleTranslation ?? "");
       setNote(card?.note ?? "");
+      setDialect((card?.dialect as "british" | "american" | undefined) ?? "");
+      setVariantWord(card?.variantWord ?? "");
       setTagsInput(parseTags(card?.tags).join(", "));
       setSynonymsInput(parseTags(card?.synonyms).join(", "));
       setAntonymsInput(parseTags(card?.antonyms).join(", "));
@@ -126,6 +132,8 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
       example: example || null,
       exampleTranslation: exampleTranslation || null,
       note: note || null,
+      dialect: dialect || null,
+      variantWord: variantWord.trim() || null,
       tags,
       synonyms,
       antonyms,
@@ -341,6 +349,31 @@ export function CardFormDialog({ open, onOpenChange, deckId, card }: CardFormDia
               value={tagsInput}
               onChange={(e) => setTagsInput(e.target.value)}
               placeholder="business, B2"
+            />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="dialect">Biến thể tiếng Anh</Label>
+            <select
+              id="dialect"
+              value={dialect}
+              onChange={(e) => setDialect(e.target.value as "" | "british" | "american")}
+              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            >
+              <option value="">Dùng chung (không đánh dấu)</option>
+              <option value="british">🇬🇧 Anh–Anh (BrE)</option>
+              <option value="american">🇺🇸 Anh–Mỹ (AmE)</option>
+            </select>
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="variant-word">Từ tương đương (biến thể còn lại)</Label>
+            <Input
+              id="variant-word"
+              value={variantWord ?? ""}
+              onChange={(e) => setVariantWord(e.target.value)}
+              placeholder="center"
+              disabled={!dialect}
             />
           </div>
 

@@ -103,6 +103,10 @@ export interface Card {
   synonyms: string | null;
   antonyms: string | null;
   favorite: boolean;
+  // Biến thể tiếng Anh: "british" | "american" | null (dùng chung)
+  dialect: string | null;
+  // Từ tương đương ở biến thể còn lại, vd centre ↔ center
+  variantWord: string | null;
   easeFactor: number;
   interval: number;
   repetitions: number;

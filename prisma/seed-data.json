@@ -231,7 +231,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:43:11.120Z",
-      "updatedAt": "2026-06-25T04:53:44.421Z"
+      "updatedAt": "2026-06-25T04:53:44.421Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqdistrict0split7x1",
@@ -262,7 +264,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-22T10:38:48.231Z",
-      "updatedAt": "2026-06-25T04:55:45.552Z"
+      "updatedAt": "2026-06-25T04:55:45.552Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8t9c0004o9551o14db35",
@@ -293,7 +297,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:21.889Z",
-      "updatedAt": "2026-06-26T04:35:28.469Z"
+      "updatedAt": "2026-06-26T04:35:28.469Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8x2z0018o955h0xuuq70",
@@ -324,7 +330,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:26.843Z",
-      "updatedAt": "2026-06-26T04:35:28.469Z"
+      "updatedAt": "2026-06-26T04:35:28.469Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqpq000io9chzxc5kwzd",
@@ -355,7 +363,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:18:01.215Z",
-      "updatedAt": "2026-06-25T04:55:45.552Z"
+      "updatedAt": "2026-06-25T04:55:45.552Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpzi0077o9zkwwi1wbn2",
@@ -386,7 +396,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.599Z",
-      "updatedAt": "2026-06-26T04:35:19.038Z"
+      "updatedAt": "2026-06-26T04:35:19.038Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzda3rk001co9cympovj9rc",
@@ -417,7 +429,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:43:11.120Z",
-      "updatedAt": "2026-06-25T04:53:44.421Z"
+      "updatedAt": "2026-06-25T04:53:44.421Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpvw001to9zkrallm1n2",
@@ -448,7 +462,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.468Z",
-      "updatedAt": "2026-06-26T04:34:41.020Z"
+      "updatedAt": "2026-06-26T04:34:41.020Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqpz0016o9chfi4e5h7p",
@@ -479,7 +495,9 @@
       "lapses": 0,
       "deletedAt": "2026-06-22T10:00:07.469Z",
       "createdAt": "2026-06-04T10:18:01.223Z",
-      "updatedAt": "2026-06-22T10:00:07.701Z"
+      "updatedAt": "2026-06-22T10:00:07.701Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo28xpy000co9qb92u7zl58",
@@ -510,7 +528,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:48:52.918Z",
-      "updatedAt": "2026-06-25T04:53:05.445Z"
+      "updatedAt": "2026-06-25T04:53:05.445Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpuw0008o9zk8642k8o5",
@@ -541,7 +561,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.433Z",
-      "updatedAt": "2026-06-26T04:34:30.529Z"
+      "updatedAt": "2026-06-26T04:34:30.529Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpvi001ao9zk1bl0mn5n",
@@ -572,7 +594,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.454Z",
-      "updatedAt": "2026-06-26T04:34:30.529Z"
+      "updatedAt": "2026-06-26T04:34:30.529Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpv2000mo9zkgrent068",
@@ -603,7 +627,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.439Z",
-      "updatedAt": "2026-06-26T04:34:30.529Z"
+      "updatedAt": "2026-06-26T04:34:30.529Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpze006xo9zkz8z9yafm",
@@ -634,7 +660,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.595Z",
-      "updatedAt": "2026-06-26T04:35:19.038Z"
+      "updatedAt": "2026-06-26T04:35:19.038Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8u0v000co955d7h8o9rd",
@@ -665,7 +693,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:22.879Z",
-      "updatedAt": "2026-06-26T04:35:28.469Z"
+      "updatedAt": "2026-06-26T04:35:28.469Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8tu1000ao955jcz8g4ca",
@@ -696,7 +726,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:22.633Z",
-      "updatedAt": "2026-06-26T04:35:28.469Z"
+      "updatedAt": "2026-06-26T04:35:28.469Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo28xpy0007o9qbe8zejz2y",
@@ -727,7 +759,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:48:52.918Z",
-      "updatedAt": "2026-06-25T04:53:05.445Z"
+      "updatedAt": "2026-06-25T04:53:05.445Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo28xpy0009o9qbbs0ymbsq",
@@ -758,7 +792,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:48:52.918Z",
-      "updatedAt": "2026-06-25T04:53:05.445Z"
+      "updatedAt": "2026-06-25T04:53:05.445Z",
+      "dialect": "british",
+      "variantWord": "center"
     },
     {
       "id": "cmqhiwpv1000ko9zkxmcqlgys",
@@ -789,7 +825,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.438Z",
-      "updatedAt": "2026-06-26T04:34:30.529Z"
+      "updatedAt": "2026-06-26T04:34:30.529Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpv4000qo9zkbubrdphf",
@@ -820,7 +858,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.441Z",
-      "updatedAt": "2026-06-26T04:34:30.529Z"
+      "updatedAt": "2026-06-26T04:34:30.529Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpv6000uo9zk9urqsde0",
@@ -851,7 +891,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.443Z",
-      "updatedAt": "2026-06-26T04:34:30.529Z"
+      "updatedAt": "2026-06-26T04:34:30.529Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpv9000yo9zk9ypl9w3i",
@@ -882,7 +924,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.445Z",
-      "updatedAt": "2026-06-26T04:34:30.529Z"
+      "updatedAt": "2026-06-26T04:34:30.529Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpv5000so9zkwyuisjz4",
@@ -913,7 +957,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.442Z",
-      "updatedAt": "2026-06-26T04:34:30.529Z"
+      "updatedAt": "2026-06-26T04:34:30.529Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpv7000wo9zkul0lt526",
@@ -944,7 +990,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.444Z",
-      "updatedAt": "2026-06-26T04:34:30.529Z"
+      "updatedAt": "2026-06-26T04:34:30.529Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8ssw0002o9554sffgbq5",
@@ -975,7 +1023,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:21.296Z",
-      "updatedAt": "2026-06-26T04:35:28.469Z"
+      "updatedAt": "2026-06-26T04:35:28.469Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8yep001jo955higck4x8",
@@ -1006,7 +1056,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:28.561Z",
-      "updatedAt": "2026-06-26T04:35:37.907Z"
+      "updatedAt": "2026-06-26T04:35:37.907Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8zgh001to955eaiu4o6e",
@@ -1037,7 +1089,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:29.922Z",
-      "updatedAt": "2026-06-26T04:35:37.907Z"
+      "updatedAt": "2026-06-26T04:35:37.907Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo2bk8u0005o914lekim9rr",
@@ -1068,7 +1122,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:50:55.422Z",
-      "updatedAt": "2026-06-25T04:53:18.409Z"
+      "updatedAt": "2026-06-25T04:53:18.409Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo2bk8u000fo91463dkjjnk",
@@ -1099,7 +1155,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:50:55.422Z",
-      "updatedAt": "2026-06-25T04:53:18.409Z"
+      "updatedAt": "2026-06-25T04:53:18.409Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo2bk8u000do9145kdw9mn1",
@@ -1130,7 +1188,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:50:55.422Z",
-      "updatedAt": "2026-06-25T04:53:18.409Z"
+      "updatedAt": "2026-06-25T04:53:18.409Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo2bk8u000co914j2930r6w",
@@ -1161,7 +1221,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:50:55.422Z",
-      "updatedAt": "2026-06-25T04:53:18.409Z"
+      "updatedAt": "2026-06-25T04:53:18.409Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo2bk8u000ho914mq3wo1yc",
@@ -1192,7 +1254,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:50:55.422Z",
-      "updatedAt": "2026-06-25T04:53:18.409Z"
+      "updatedAt": "2026-06-25T04:53:18.409Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzaox5l000yo9bevnj60o4z",
@@ -1223,7 +1287,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:30:43.545Z",
-      "updatedAt": "2026-06-25T04:53:31.555Z"
+      "updatedAt": "2026-06-25T04:53:31.555Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzda3r8000eo9cyut2xbscc",
@@ -1254,7 +1320,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:43:11.108Z",
-      "updatedAt": "2026-06-25T04:53:44.421Z"
+      "updatedAt": "2026-06-25T04:53:44.421Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzda3rg000yo9cyvvdg7597",
@@ -1285,7 +1353,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:43:11.116Z",
-      "updatedAt": "2026-06-25T04:53:44.421Z"
+      "updatedAt": "2026-06-25T04:53:44.421Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzda3rg0010o9cy001qakyz",
@@ -1316,7 +1386,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:43:11.117Z",
-      "updatedAt": "2026-06-25T04:53:44.421Z"
+      "updatedAt": "2026-06-25T04:53:44.421Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzda3rj0018o9cycr2kyukw",
@@ -1347,7 +1419,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:43:11.119Z",
-      "updatedAt": "2026-06-25T04:53:44.421Z"
+      "updatedAt": "2026-06-25T04:53:44.421Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8uli000io95519gh7n8y",
@@ -1378,7 +1452,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:23.622Z",
-      "updatedAt": "2026-06-26T04:35:28.469Z"
+      "updatedAt": "2026-06-26T04:35:28.469Z",
+      "dialect": "british",
+      "variantWord": "savory"
     },
     {
       "id": "cmqhiwpv3000oo9zkofqnmne3",
@@ -1409,7 +1485,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.440Z",
-      "updatedAt": "2026-06-26T04:34:30.529Z"
+      "updatedAt": "2026-06-26T04:34:30.529Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8tg70006o955fkg7q1m7",
@@ -1440,7 +1518,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:22.135Z",
-      "updatedAt": "2026-06-26T04:35:28.469Z"
+      "updatedAt": "2026-06-26T04:35:28.469Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8vk0000so955tter5rop",
@@ -1471,7 +1551,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:24.865Z",
-      "updatedAt": "2026-06-26T04:35:28.469Z"
+      "updatedAt": "2026-06-26T04:35:28.469Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8w4r000yo955ssfmlmd9",
@@ -1502,7 +1584,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:25.611Z",
-      "updatedAt": "2026-06-26T04:35:28.469Z"
+      "updatedAt": "2026-06-26T04:35:28.469Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8xgn001co955pcsahodo",
@@ -1533,7 +1617,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:27.336Z",
-      "updatedAt": "2026-06-26T04:35:28.469Z"
+      "updatedAt": "2026-06-26T04:35:28.469Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8vxz000wo955uiy9c296",
@@ -1564,7 +1650,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:25.368Z",
-      "updatedAt": "2026-06-26T04:35:28.469Z"
+      "updatedAt": "2026-06-26T04:35:28.469Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8ueq000go955u66klcdi",
@@ -1595,7 +1683,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:23.379Z",
-      "updatedAt": "2026-06-26T04:35:28.469Z"
+      "updatedAt": "2026-06-26T04:35:28.469Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8u7q000eo955x4phfc0d",
@@ -1626,7 +1716,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:23.127Z",
-      "updatedAt": "2026-06-26T04:35:28.469Z"
+      "updatedAt": "2026-06-26T04:35:28.469Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8wbl0010o955e6rexg67",
@@ -1657,7 +1749,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:25.857Z",
-      "updatedAt": "2026-06-26T04:35:28.469Z"
+      "updatedAt": "2026-06-26T04:35:28.469Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8wid0012o9556gls5xwu",
@@ -1688,7 +1782,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:26.101Z",
-      "updatedAt": "2026-06-26T04:35:28.469Z"
+      "updatedAt": "2026-06-26T04:35:28.469Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy975v003wo955b5r6qsfu",
@@ -1719,7 +1815,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:39.907Z",
-      "updatedAt": "2026-06-26T04:35:47.356Z"
+      "updatedAt": "2026-06-26T04:35:47.356Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy94n30036o955yn0ykxzc",
@@ -1750,7 +1848,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:36.639Z",
-      "updatedAt": "2026-06-26T04:35:47.356Z"
+      "updatedAt": "2026-06-26T04:35:47.356Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpvu001po9zk7t0aorwu",
@@ -1781,7 +1881,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.466Z",
-      "updatedAt": "2026-06-26T04:34:41.020Z"
+      "updatedAt": "2026-06-26T04:34:41.020Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpxm003wo9zkjaq4nmjo",
@@ -1812,7 +1914,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.530Z",
-      "updatedAt": "2026-06-26T04:34:50.449Z"
+      "updatedAt": "2026-06-26T04:34:50.449Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo2bk8u000ko914cws40dg2",
@@ -1843,7 +1947,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:50:55.422Z",
-      "updatedAt": "2026-06-25T04:53:18.409Z"
+      "updatedAt": "2026-06-25T04:53:18.409Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqpt000qo9ch1dup62qt",
@@ -1874,7 +1980,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:18:01.218Z",
-      "updatedAt": "2026-06-25T04:55:45.552Z"
+      "updatedAt": "2026-06-25T04:55:45.552Z",
+      "dialect": "british",
+      "variantWord": "neighborhood"
     },
     {
       "id": "cmpzaox5o0014o9be0hd9viwh",
@@ -1905,7 +2013,9 @@
       "lapses": 1,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:30:43.548Z",
-      "updatedAt": "2026-06-25T04:53:31.555Z"
+      "updatedAt": "2026-06-25T04:53:31.555Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzda3re000uo9cyvrnr6fmf",
@@ -1936,7 +2046,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:43:11.115Z",
-      "updatedAt": "2026-06-25T04:53:44.421Z"
+      "updatedAt": "2026-06-25T04:53:44.421Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzda3rf000wo9cy7abizl51",
@@ -1967,7 +2079,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:43:11.115Z",
-      "updatedAt": "2026-06-25T04:53:44.421Z"
+      "updatedAt": "2026-06-25T04:53:44.421Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpzd006vo9zkbm2dvhd6",
@@ -1998,7 +2112,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.593Z",
-      "updatedAt": "2026-06-26T04:35:19.038Z"
+      "updatedAt": "2026-06-26T04:35:19.038Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqpv000wo9chwpq83oky",
@@ -2029,7 +2145,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:18:01.219Z",
-      "updatedAt": "2026-06-25T04:55:45.552Z"
+      "updatedAt": "2026-06-25T04:55:45.552Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpxu0049o9zkxp3jmj3s",
@@ -2060,7 +2178,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.539Z",
-      "updatedAt": "2026-06-26T04:34:59.885Z"
+      "updatedAt": "2026-06-26T04:34:59.885Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpyz0064o9zks6q8bf60",
@@ -2091,7 +2211,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.579Z",
-      "updatedAt": "2026-06-26T04:35:09.603Z"
+      "updatedAt": "2026-06-26T04:35:09.603Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpzl007do9zkh2cdzc44",
@@ -2122,7 +2244,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.602Z",
-      "updatedAt": "2026-06-26T04:35:19.038Z"
+      "updatedAt": "2026-06-26T04:35:19.038Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8vr7000uo95519a83cy9",
@@ -2153,7 +2277,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:25.124Z",
-      "updatedAt": "2026-06-26T04:35:28.469Z"
+      "updatedAt": "2026-06-26T04:35:28.469Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8wp90014o955al4z1rku",
@@ -2184,7 +2310,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:26.349Z",
-      "updatedAt": "2026-06-26T04:35:28.469Z"
+      "updatedAt": "2026-06-26T04:35:28.469Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzd45hr0010o9pf4bkv8kvg",
@@ -2215,7 +2343,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:38:33.423Z",
-      "updatedAt": "2026-06-25T04:52:11.186Z"
+      "updatedAt": "2026-06-25T04:52:11.186Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo2bk8u000ao9140zm1pol9",
@@ -2246,7 +2376,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:50:55.422Z",
-      "updatedAt": "2026-06-25T04:53:18.409Z"
+      "updatedAt": "2026-06-25T04:53:18.409Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy95tw003io9552tfj52kc",
@@ -2277,7 +2409,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:38.181Z",
-      "updatedAt": "2026-06-26T04:35:47.356Z"
+      "updatedAt": "2026-06-26T04:35:47.356Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy97cu003yo955kt7om8zr",
@@ -2308,7 +2442,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:40.159Z",
-      "updatedAt": "2026-06-26T04:35:47.356Z"
+      "updatedAt": "2026-06-26T04:35:47.356Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzda3rh0012o9cy8sobujle",
@@ -2339,7 +2475,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:43:11.118Z",
-      "updatedAt": "2026-06-25T04:53:44.421Z"
+      "updatedAt": "2026-06-25T04:53:44.421Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo28xpy000ao9qblvz87ljo",
@@ -2370,7 +2508,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:48:52.918Z",
-      "updatedAt": "2026-06-25T04:53:05.445Z"
+      "updatedAt": "2026-06-25T04:53:05.445Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzda3ri0014o9cy411wy15i",
@@ -2401,7 +2541,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:43:11.118Z",
-      "updatedAt": "2026-06-25T04:53:44.421Z"
+      "updatedAt": "2026-06-25T04:53:44.421Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzda3ri0016o9cy2xp92jxk",
@@ -2432,7 +2574,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:43:11.119Z",
-      "updatedAt": "2026-06-25T04:53:44.421Z"
+      "updatedAt": "2026-06-25T04:53:44.421Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpzn007fo9zkod7hg9n2",
@@ -2463,7 +2607,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.603Z",
-      "updatedAt": "2026-06-26T04:35:19.038Z"
+      "updatedAt": "2026-06-26T04:35:19.038Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8tn60008o955wlrt8d8y",
@@ -2494,7 +2640,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:22.386Z",
-      "updatedAt": "2026-06-26T04:35:28.469Z"
+      "updatedAt": "2026-06-26T04:35:28.469Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqpv000yo9chc0ol2fn8",
@@ -2525,7 +2673,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:18:01.220Z",
-      "updatedAt": "2026-06-25T04:55:45.552Z"
+      "updatedAt": "2026-06-25T04:55:45.552Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpux000ao9zkvwya66wb",
@@ -2556,7 +2706,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.433Z",
-      "updatedAt": "2026-06-26T04:34:30.529Z"
+      "updatedAt": "2026-06-26T04:34:30.529Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8yz4001po955wfyyj9rd",
@@ -2587,7 +2739,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:29.296Z",
-      "updatedAt": "2026-06-26T04:35:37.907Z"
+      "updatedAt": "2026-06-26T04:35:37.907Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy91qd002ho95541t2q4ml",
@@ -2618,7 +2772,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:32.869Z",
-      "updatedAt": "2026-06-26T04:35:37.907Z"
+      "updatedAt": "2026-06-26T04:35:37.907Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpnyahmz0003o9ohn0i0gevo",
@@ -2649,7 +2805,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.923Z",
-      "updatedAt": "2026-06-25T04:55:18.513Z"
+      "updatedAt": "2026-06-25T04:55:18.513Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpnyahmz0004o9ohd2ktgi0u",
@@ -2680,7 +2838,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.923Z",
-      "updatedAt": "2026-06-25T04:55:18.513Z"
+      "updatedAt": "2026-06-25T04:55:18.513Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpnyahmz0005o9ohxb2sbsrt",
@@ -2711,7 +2871,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.923Z",
-      "updatedAt": "2026-06-25T04:55:18.513Z"
+      "updatedAt": "2026-06-25T04:55:18.513Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpnyahmz0006o9ohou74j816",
@@ -2742,7 +2904,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.923Z",
-      "updatedAt": "2026-06-25T04:55:18.513Z"
+      "updatedAt": "2026-06-25T04:55:18.513Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpny0ixw000oo9twv56efvtm",
@@ -2773,7 +2937,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:50:22.052Z",
-      "updatedAt": "2026-06-25T04:52:52.243Z"
+      "updatedAt": "2026-06-25T04:52:52.243Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8znc001vo95589473aow",
@@ -2804,7 +2970,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:30.168Z",
-      "updatedAt": "2026-06-26T04:35:37.907Z"
+      "updatedAt": "2026-06-26T04:35:37.907Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy90sc0027o955onu8qc3m",
@@ -2835,7 +3003,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:31.644Z",
-      "updatedAt": "2026-06-26T04:35:37.907Z"
+      "updatedAt": "2026-06-26T04:35:37.907Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy91jk002fo9557o8rzc4o",
@@ -2866,7 +3036,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:32.625Z",
-      "updatedAt": "2026-06-26T04:35:37.907Z"
+      "updatedAt": "2026-06-26T04:35:37.907Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqps000mo9chmrte5b0h",
@@ -2897,7 +3069,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:18:01.216Z",
-      "updatedAt": "2026-06-25T04:55:45.552Z"
+      "updatedAt": "2026-06-25T04:55:45.552Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy96z3003uo955tlcbdqmz",
@@ -2928,7 +3102,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:39.663Z",
-      "updatedAt": "2026-06-26T04:35:47.356Z"
+      "updatedAt": "2026-06-26T04:35:47.356Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpwd002no9zkg9umfxr8",
@@ -2959,7 +3135,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.486Z",
-      "updatedAt": "2026-06-26T04:34:41.020Z"
+      "updatedAt": "2026-06-26T04:34:41.020Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpw8002do9zkx6x80o6i",
@@ -2990,7 +3168,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.480Z",
-      "updatedAt": "2026-06-26T04:34:41.020Z"
+      "updatedAt": "2026-06-26T04:34:41.020Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy92au002no955sadaxmvs",
@@ -3021,7 +3201,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:33.607Z",
-      "updatedAt": "2026-06-26T04:35:37.907Z"
+      "updatedAt": "2026-06-26T04:35:37.907Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8y12001fo955qcudv32j",
@@ -3052,7 +3234,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:28.071Z",
-      "updatedAt": "2026-06-26T04:35:37.907Z"
+      "updatedAt": "2026-06-26T04:35:37.907Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy915w002bo955ydw4xpuf",
@@ -3083,7 +3267,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:32.132Z",
-      "updatedAt": "2026-06-26T04:35:37.907Z"
+      "updatedAt": "2026-06-26T04:35:37.907Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy93op002wo955v0g2hx51",
@@ -3114,7 +3300,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:35.401Z",
-      "updatedAt": "2026-06-26T04:35:47.356Z"
+      "updatedAt": "2026-06-26T04:35:47.356Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpnyahmz0007o9ohkj9vohid",
@@ -3145,7 +3333,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.923Z",
-      "updatedAt": "2026-06-25T04:55:18.513Z"
+      "updatedAt": "2026-06-25T04:55:18.513Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpnyahmz000go9ohqpqyyb20",
@@ -3176,7 +3366,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.923Z",
-      "updatedAt": "2026-06-25T04:55:18.513Z"
+      "updatedAt": "2026-06-25T04:55:18.513Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpnyahmz000io9ohspn6qtml",
@@ -3207,7 +3399,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.923Z",
-      "updatedAt": "2026-06-25T04:55:18.513Z"
+      "updatedAt": "2026-06-25T04:55:18.513Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpnyahmz000eo9oh3mt7lqd0",
@@ -3238,7 +3432,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.923Z",
-      "updatedAt": "2026-06-25T04:55:18.513Z"
+      "updatedAt": "2026-06-25T04:55:18.513Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpodf0i5000ko97tc8avmydq",
@@ -3269,7 +3465,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T18:01:32.237Z",
-      "updatedAt": "2026-06-25T04:55:31.984Z"
+      "updatedAt": "2026-06-25T04:55:31.984Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpza0b260001o9doutp60p1z",
@@ -3300,7 +3498,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:11:35.167Z",
-      "updatedAt": "2026-06-25T04:55:31.984Z"
+      "updatedAt": "2026-06-25T04:55:31.984Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpodf0i5000lo97tj9tg9xia",
@@ -3331,7 +3531,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T18:01:32.237Z",
-      "updatedAt": "2026-06-25T04:55:31.984Z"
+      "updatedAt": "2026-06-25T04:55:31.984Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy959l003co955dhg5uzzt",
@@ -3362,7 +3564,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:37.449Z",
-      "updatedAt": "2026-06-26T04:35:47.356Z"
+      "updatedAt": "2026-06-26T04:35:47.356Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy95gc003eo955a3tgwcvw",
@@ -3393,7 +3597,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:37.692Z",
-      "updatedAt": "2026-06-26T04:35:47.356Z"
+      "updatedAt": "2026-06-26T04:35:47.356Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy96la003qo955f51g2s5k",
@@ -3424,7 +3630,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:39.166Z",
-      "updatedAt": "2026-06-26T04:35:47.356Z"
+      "updatedAt": "2026-06-26T04:35:47.356Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpvc0012o9zkipqgz3ad",
@@ -3455,7 +3663,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.448Z",
-      "updatedAt": "2026-06-26T04:34:30.529Z"
+      "updatedAt": "2026-06-26T04:34:30.529Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpw0001zo9zknmrpw7nw",
@@ -3486,7 +3696,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.472Z",
-      "updatedAt": "2026-06-26T04:34:41.020Z"
+      "updatedAt": "2026-06-26T04:34:41.020Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqpp000eo9chvjiypvf6",
@@ -3517,7 +3729,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:18:01.213Z",
-      "updatedAt": "2026-06-25T04:55:45.552Z"
+      "updatedAt": "2026-06-25T04:55:45.552Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqpw0010o9chbrzk3xon",
@@ -3548,7 +3762,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:18:01.220Z",
-      "updatedAt": "2026-06-25T04:55:45.552Z"
+      "updatedAt": "2026-06-25T04:55:45.552Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqpx0012o9ch2q5ec3hm",
@@ -3579,7 +3795,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:18:01.222Z",
-      "updatedAt": "2026-06-25T04:55:45.552Z"
+      "updatedAt": "2026-06-25T04:55:45.552Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpxe003qo9zk07ly9av3",
@@ -3610,7 +3828,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.522Z",
-      "updatedAt": "2026-06-26T04:34:50.449Z"
+      "updatedAt": "2026-06-26T04:34:50.449Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpxu0047o9zkpn39nj2q",
@@ -3641,7 +3861,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.538Z",
-      "updatedAt": "2026-06-26T04:34:59.885Z"
+      "updatedAt": "2026-06-26T04:34:59.885Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpy3004ro9zkpwtvv53n",
@@ -3672,7 +3894,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.548Z",
-      "updatedAt": "2026-06-26T04:34:59.885Z"
+      "updatedAt": "2026-06-26T04:34:59.885Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy96eh003oo955g4ar7ml9",
@@ -3703,7 +3927,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:38.921Z",
-      "updatedAt": "2026-06-26T04:35:47.356Z"
+      "updatedAt": "2026-06-26T04:35:47.356Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy96s2003so9555efpb5ap",
@@ -3734,7 +3960,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:39.410Z",
-      "updatedAt": "2026-06-26T04:35:47.356Z"
+      "updatedAt": "2026-06-26T04:35:47.356Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy97k30040o955twk2brad",
@@ -3765,7 +3993,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:40.419Z",
-      "updatedAt": "2026-06-26T04:35:47.356Z"
+      "updatedAt": "2026-06-26T04:35:47.356Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy97qw0042o9557hllbmo7",
@@ -3796,7 +4026,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:40.664Z",
-      "updatedAt": "2026-06-26T04:35:47.356Z"
+      "updatedAt": "2026-06-26T04:35:47.356Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpx9003ko9zk3g03hd5k",
@@ -3827,7 +4059,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.518Z",
-      "updatedAt": "2026-06-26T04:34:50.449Z"
+      "updatedAt": "2026-06-26T04:34:50.449Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpxf003so9zkl8lc2uv3",
@@ -3858,7 +4092,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.524Z",
-      "updatedAt": "2026-06-26T04:34:50.449Z"
+      "updatedAt": "2026-06-26T04:34:50.449Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpxd003oo9zkz3s5603r",
@@ -3889,7 +4125,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.521Z",
-      "updatedAt": "2026-06-26T04:34:50.449Z"
+      "updatedAt": "2026-06-26T04:34:50.449Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy95n4003go9557975iw3l",
@@ -3920,7 +4158,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:37.937Z",
-      "updatedAt": "2026-06-26T04:35:47.356Z"
+      "updatedAt": "2026-06-26T04:35:47.356Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpxk003uo9zkry3x3w7x",
@@ -3951,7 +4191,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.528Z",
-      "updatedAt": "2026-06-26T04:34:50.449Z"
+      "updatedAt": "2026-06-26T04:34:50.449Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy952t003ao955mudwehp3",
@@ -3982,7 +4224,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:37.206Z",
-      "updatedAt": "2026-06-26T04:35:47.356Z"
+      "updatedAt": "2026-06-26T04:35:47.356Z",
+      "dialect": "british",
+      "variantWord": "takeout"
     },
     {
       "id": "cmqsy9ca00059o955fn46xk18",
@@ -4013,7 +4257,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:46.536Z",
-      "updatedAt": "2026-06-26T04:35:56.779Z"
+      "updatedAt": "2026-06-26T04:35:56.779Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9g7t0068o9554c4gv0d5",
@@ -4044,7 +4290,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:51.642Z",
-      "updatedAt": "2026-06-26T04:36:06.190Z"
+      "updatedAt": "2026-06-26T04:36:06.190Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpyh005bo9zk58m6a7mf",
@@ -4075,7 +4323,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.562Z",
-      "updatedAt": "2026-06-26T04:34:59.885Z"
+      "updatedAt": "2026-06-26T04:34:59.885Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpys005qo9zk6g0yzqd7",
@@ -4106,7 +4356,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.572Z",
-      "updatedAt": "2026-06-26T04:35:09.603Z"
+      "updatedAt": "2026-06-26T04:35:09.603Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpz8006oo9zkc9hmxl51",
@@ -4137,7 +4389,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.589Z",
-      "updatedAt": "2026-06-26T04:35:09.603Z"
+      "updatedAt": "2026-06-26T04:35:09.603Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqpy0014o9chyndr9yqq",
@@ -4168,7 +4422,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:18:01.222Z",
-      "updatedAt": "2026-06-25T04:55:45.552Z"
+      "updatedAt": "2026-06-25T04:55:45.552Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo28xpy000do9qb5quvj6j5",
@@ -4199,7 +4455,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:48:52.918Z",
-      "updatedAt": "2026-06-25T04:53:05.445Z"
+      "updatedAt": "2026-06-25T04:53:05.445Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqq0001co9chxp044yyg",
@@ -4230,7 +4488,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:18:01.225Z",
-      "updatedAt": "2026-06-25T04:55:45.552Z"
+      "updatedAt": "2026-06-25T04:55:45.552Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpuu0004o9zkq60ukq9c",
@@ -4261,7 +4521,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.431Z",
-      "updatedAt": "2026-06-26T04:34:30.529Z"
+      "updatedAt": "2026-06-26T04:34:30.529Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpv0000io9zkp9fz8m1w",
@@ -4292,7 +4554,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.437Z",
-      "updatedAt": "2026-06-26T04:34:30.529Z"
+      "updatedAt": "2026-06-26T04:34:30.529Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpvb0010o9zk26n3esk2",
@@ -4323,7 +4587,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.447Z",
-      "updatedAt": "2026-06-26T04:34:30.529Z"
+      "updatedAt": "2026-06-26T04:34:30.529Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpvf0016o9zkqmhzgdtz",
@@ -4354,7 +4620,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.452Z",
-      "updatedAt": "2026-06-26T04:34:30.529Z"
+      "updatedAt": "2026-06-26T04:34:30.529Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpw30023o9zkxy72ew77",
@@ -4385,7 +4653,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.475Z",
-      "updatedAt": "2026-06-26T04:34:41.020Z"
+      "updatedAt": "2026-06-26T04:34:41.020Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpw60029o9zkhrp2z4d6",
@@ -4416,7 +4686,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.478Z",
-      "updatedAt": "2026-06-26T04:34:41.020Z"
+      "updatedAt": "2026-06-26T04:34:41.020Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpx5003go9zkqtzg1xbo",
@@ -4447,7 +4719,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.513Z",
-      "updatedAt": "2026-06-26T04:34:50.449Z"
+      "updatedAt": "2026-06-26T04:34:50.449Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpxn003yo9zkn5vsb0qm",
@@ -4478,7 +4752,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.531Z",
-      "updatedAt": "2026-06-26T04:34:50.449Z"
+      "updatedAt": "2026-06-26T04:34:50.449Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpxp0042o9zkoybyy8f3",
@@ -4509,7 +4785,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.534Z",
-      "updatedAt": "2026-06-26T04:34:50.449Z"
+      "updatedAt": "2026-06-26T04:34:50.449Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpnyahmz000ho9ohwqidst9u",
@@ -4540,7 +4818,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.923Z",
-      "updatedAt": "2026-06-25T04:55:18.513Z"
+      "updatedAt": "2026-06-25T04:55:18.513Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy98bd0045o955tfcqg2aq",
@@ -4571,7 +4851,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:41.401Z",
-      "updatedAt": "2026-06-26T04:35:56.779Z"
+      "updatedAt": "2026-06-26T04:35:56.779Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzd45ho000uo9pfexddybf6",
@@ -4602,7 +4884,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:38:33.421Z",
-      "updatedAt": "2026-06-26T03:23:16.677Z"
+      "updatedAt": "2026-06-26T03:23:16.677Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpve0014o9zkr9vht91g",
@@ -4633,7 +4917,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.450Z",
-      "updatedAt": "2026-06-26T04:34:30.529Z"
+      "updatedAt": "2026-06-26T04:34:30.529Z",
+      "dialect": "british",
+      "variantWord": "cozy"
     },
     {
       "id": "cmqhiwpvg0018o9zk3ihbl9m4",
@@ -4664,7 +4950,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.453Z",
-      "updatedAt": "2026-06-26T04:34:30.529Z"
+      "updatedAt": "2026-06-26T04:34:30.529Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpvj001co9zksoyxwgp6",
@@ -4695,7 +4983,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.455Z",
-      "updatedAt": "2026-06-26T04:34:30.529Z"
+      "updatedAt": "2026-06-26T04:34:30.529Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9bfn0051o955o10h67q5",
@@ -4726,7 +5016,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:45.443Z",
-      "updatedAt": "2026-06-26T04:35:56.779Z"
+      "updatedAt": "2026-06-26T04:35:56.779Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9bmh0053o955lt3eeonh",
@@ -4757,7 +5049,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:45.689Z",
-      "updatedAt": "2026-06-26T04:35:56.779Z"
+      "updatedAt": "2026-06-26T04:35:56.779Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9b8u004zo955nqigcqaj",
@@ -4788,7 +5082,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:45.199Z",
-      "updatedAt": "2026-06-26T04:35:56.779Z"
+      "updatedAt": "2026-06-26T04:35:56.779Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpyk005fo9zkhzlfzuu2",
@@ -4819,7 +5115,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.565Z",
-      "updatedAt": "2026-06-26T04:34:59.885Z"
+      "updatedAt": "2026-06-26T04:34:59.885Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9gv3006eo955towa4fm3",
@@ -4850,7 +5148,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:52.479Z",
-      "updatedAt": "2026-06-26T04:36:06.190Z"
+      "updatedAt": "2026-06-26T04:36:06.190Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9h8z006io955v2gkgkrp",
@@ -4881,7 +5181,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:52.980Z",
-      "updatedAt": "2026-06-26T04:36:06.190Z"
+      "updatedAt": "2026-06-26T04:36:06.190Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpnyahmz0008o9ohyry5nto1",
@@ -4912,7 +5214,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.923Z",
-      "updatedAt": "2026-06-25T04:55:18.513Z"
+      "updatedAt": "2026-06-25T04:55:18.513Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpzh0075o9zkht18fwgp",
@@ -4943,7 +5247,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.598Z",
-      "updatedAt": "2026-06-26T04:35:19.038Z"
+      "updatedAt": "2026-06-26T04:35:19.038Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpzh0073o9zkswwxup3x",
@@ -4974,7 +5280,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.597Z",
-      "updatedAt": "2026-06-26T04:35:19.038Z"
+      "updatedAt": "2026-06-26T04:35:19.038Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy967n003mo955p13tapj0",
@@ -5005,7 +5313,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:38.676Z",
-      "updatedAt": "2026-06-26T04:35:47.356Z"
+      "updatedAt": "2026-06-26T04:35:47.356Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9goc006co955l31nbcby",
@@ -5036,7 +5346,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:52.236Z",
-      "updatedAt": "2026-06-26T04:36:06.190Z"
+      "updatedAt": "2026-06-26T04:36:06.190Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9dmf005ko955cdreagko",
@@ -5067,7 +5379,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:48.279Z",
-      "updatedAt": "2026-06-26T04:36:06.190Z"
+      "updatedAt": "2026-06-26T04:36:06.190Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzd45hq000yo9pf7wck3yfs",
@@ -5098,7 +5412,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:38:33.422Z",
-      "updatedAt": "2026-06-25T04:52:11.186Z"
+      "updatedAt": "2026-06-25T04:52:11.186Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzd45hs0012o9pfmmr5djpq",
@@ -5129,7 +5445,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:38:33.424Z",
-      "updatedAt": "2026-06-25T04:52:11.186Z"
+      "updatedAt": "2026-06-25T04:52:11.186Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzd45hw001ao9pf0en0t953",
@@ -5160,7 +5478,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:38:33.428Z",
-      "updatedAt": "2026-06-25T04:52:11.186Z"
+      "updatedAt": "2026-06-25T04:52:11.186Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9c360057o955e9th24y4",
@@ -5191,7 +5511,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:46.290Z",
-      "updatedAt": "2026-06-26T04:35:56.779Z"
+      "updatedAt": "2026-06-26T04:35:56.779Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpodf0i5000eo97tirftbrjq",
@@ -5222,7 +5544,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T18:01:32.237Z",
-      "updatedAt": "2026-06-25T04:55:31.984Z"
+      "updatedAt": "2026-06-25T04:55:31.984Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqpz0018o9chm9mmfj0x",
@@ -5253,7 +5577,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:18:01.224Z",
-      "updatedAt": "2026-06-25T04:55:45.552Z"
+      "updatedAt": "2026-06-25T04:55:45.552Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqpr000ko9chrv3o8kyw",
@@ -5284,7 +5610,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:18:01.215Z",
-      "updatedAt": "2026-06-25T04:55:45.552Z"
+      "updatedAt": "2026-06-25T04:55:45.552Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqq0001ao9ch6cyjn4in",
@@ -5315,7 +5643,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:18:01.224Z",
-      "updatedAt": "2026-06-25T04:55:45.552Z"
+      "updatedAt": "2026-06-25T04:55:45.552Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpuz000go9zk9ik1x7h3",
@@ -5346,7 +5676,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.436Z",
-      "updatedAt": "2026-06-26T04:34:30.529Z"
+      "updatedAt": "2026-06-26T04:34:30.529Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpwb002jo9zkdoprwfu1",
@@ -5377,7 +5709,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.484Z",
-      "updatedAt": "2026-06-26T04:34:41.020Z"
+      "updatedAt": "2026-06-26T04:34:41.020Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpyw0060o9zk99lbggkb",
@@ -5408,7 +5742,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.577Z",
-      "updatedAt": "2026-06-26T04:35:09.603Z"
+      "updatedAt": "2026-06-26T04:35:09.603Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpz00066o9zk7g1vuww9",
@@ -5439,7 +5775,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.580Z",
-      "updatedAt": "2026-06-26T04:35:09.603Z"
+      "updatedAt": "2026-06-26T04:35:09.603Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpz4006go9zkc054tzs8",
@@ -5470,7 +5808,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.585Z",
-      "updatedAt": "2026-06-26T04:35:09.603Z"
+      "updatedAt": "2026-06-26T04:35:09.603Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpz6006io9zkemb0t3hc",
@@ -5501,7 +5841,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.586Z",
-      "updatedAt": "2026-06-26T04:35:09.603Z"
+      "updatedAt": "2026-06-26T04:35:09.603Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpnyahmz000mo9ohaehvsogl",
@@ -5532,7 +5874,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.923Z",
-      "updatedAt": "2026-06-25T04:55:18.513Z"
+      "updatedAt": "2026-06-25T04:55:18.513Z",
+      "dialect": "british",
+      "variantWord": "memorize"
     },
     {
       "id": "cmpodf0i5000go97tmslzqjwc",
@@ -5563,7 +5907,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T18:01:32.237Z",
-      "updatedAt": "2026-06-25T04:55:31.984Z"
+      "updatedAt": "2026-06-25T04:55:31.984Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpy4004to9zkquv7pk1w",
@@ -5594,7 +5940,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.548Z",
-      "updatedAt": "2026-06-26T04:34:59.885Z"
+      "updatedAt": "2026-06-26T04:34:59.885Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpz2006co9zk9gj1c8f1",
@@ -5625,7 +5973,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.583Z",
-      "updatedAt": "2026-06-26T04:35:09.603Z"
+      "updatedAt": "2026-06-26T04:35:09.603Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqpu000uo9ch7905v6np",
@@ -5656,7 +6006,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:18:01.219Z",
-      "updatedAt": "2026-06-25T04:55:45.552Z"
+      "updatedAt": "2026-06-25T04:55:45.552Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpz3006eo9zklxfhlenm",
@@ -5687,7 +6039,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.584Z",
-      "updatedAt": "2026-06-26T04:35:09.603Z"
+      "updatedAt": "2026-06-26T04:35:09.603Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9e09005oo955ku94f808",
@@ -5718,7 +6072,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:48.777Z",
-      "updatedAt": "2026-06-26T04:36:06.190Z"
+      "updatedAt": "2026-06-26T04:36:06.190Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9e72005qo955dax5ho2q",
@@ -5749,7 +6105,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:49.023Z",
-      "updatedAt": "2026-06-26T04:36:06.190Z"
+      "updatedAt": "2026-06-26T04:36:06.190Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqpu000so9chw7ubrxi2",
@@ -5780,7 +6138,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:18:01.218Z",
-      "updatedAt": "2026-06-25T04:55:45.552Z"
+      "updatedAt": "2026-06-25T04:55:45.552Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpw9002fo9zkx4pma5yz",
@@ -5811,7 +6171,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.482Z",
-      "updatedAt": "2026-06-26T04:34:41.020Z"
+      "updatedAt": "2026-06-26T04:34:41.020Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpvo001ho9zkmu4sebw2",
@@ -5842,7 +6204,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.460Z",
-      "updatedAt": "2026-06-26T04:34:41.020Z"
+      "updatedAt": "2026-06-26T04:34:41.020Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpwe002po9zky09qrk2e",
@@ -5873,7 +6237,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.487Z",
-      "updatedAt": "2026-06-26T04:34:41.020Z"
+      "updatedAt": "2026-06-26T04:34:41.020Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqps000oo9chym732v92",
@@ -5904,7 +6270,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:18:01.217Z",
-      "updatedAt": "2026-06-25T04:55:45.552Z"
+      "updatedAt": "2026-06-25T04:55:45.552Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpwc002lo9zklhtr16za",
@@ -5935,7 +6303,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.485Z",
-      "updatedAt": "2026-06-26T04:34:41.020Z"
+      "updatedAt": "2026-06-26T04:34:41.020Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpny0ixw000ho9tw6cmxb3qk",
@@ -5966,7 +6336,9 @@
       "lapses": 1,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:50:22.052Z",
-      "updatedAt": "2026-06-25T04:52:52.243Z"
+      "updatedAt": "2026-06-25T04:52:52.243Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpny0ixw000io9twm5bq60md",
@@ -5997,7 +6369,9 @@
       "lapses": 1,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:50:22.052Z",
-      "updatedAt": "2026-06-25T04:52:52.243Z"
+      "updatedAt": "2026-06-25T04:52:52.243Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo28xpy000ho9qb584r6frl",
@@ -6028,7 +6402,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:48:52.918Z",
-      "updatedAt": "2026-06-25T04:53:05.445Z"
+      "updatedAt": "2026-06-25T04:53:05.445Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo28xpy000bo9qbqabbutgw",
@@ -6059,7 +6435,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:48:52.918Z",
-      "updatedAt": "2026-06-25T04:53:05.445Z"
+      "updatedAt": "2026-06-25T04:53:05.445Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo28xpy000eo9qbn7zs4g1i",
@@ -6090,7 +6468,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:48:52.918Z",
-      "updatedAt": "2026-06-25T04:53:05.445Z"
+      "updatedAt": "2026-06-25T04:53:05.445Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqpo000co9chna2e07zv",
@@ -6121,7 +6501,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:18:01.213Z",
-      "updatedAt": "2026-06-25T04:55:45.552Z"
+      "updatedAt": "2026-06-25T04:55:45.552Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8zu9001xo9552r92oprr",
@@ -6152,7 +6534,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:30.417Z",
-      "updatedAt": "2026-06-26T04:35:37.907Z"
+      "updatedAt": "2026-06-26T04:35:37.907Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8z6d001ro955dbrlp6gu",
@@ -6183,7 +6567,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:29.558Z",
-      "updatedAt": "2026-06-26T04:35:37.907Z"
+      "updatedAt": "2026-06-26T04:35:37.907Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8uz4000mo9559pi5r220",
@@ -6214,7 +6600,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:24.112Z",
-      "updatedAt": "2026-06-26T04:35:28.469Z"
+      "updatedAt": "2026-06-26T04:35:28.469Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9011001zo955mh8srehk",
@@ -6245,7 +6633,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:30.662Z",
-      "updatedAt": "2026-06-26T04:35:37.907Z"
+      "updatedAt": "2026-06-26T04:35:37.907Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo28xpy000ko9qb90ki5gso",
@@ -6276,7 +6666,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:48:52.918Z",
-      "updatedAt": "2026-06-25T04:53:05.445Z"
+      "updatedAt": "2026-06-25T04:53:05.445Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo28xpy000lo9qbhitgr71i",
@@ -6307,7 +6699,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:48:52.918Z",
-      "updatedAt": "2026-06-25T04:53:05.445Z"
+      "updatedAt": "2026-06-25T04:53:05.445Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpw50027o9zkyttvt4lc",
@@ -6338,7 +6732,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.477Z",
-      "updatedAt": "2026-06-26T04:34:41.020Z"
+      "updatedAt": "2026-06-26T04:34:41.020Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpwn002yo9zkp3q5bbv8",
@@ -6369,7 +6765,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.495Z",
-      "updatedAt": "2026-06-26T04:34:50.449Z"
+      "updatedAt": "2026-06-26T04:34:50.449Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpy90051o9zk56px5p8a",
@@ -6400,7 +6798,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.554Z",
-      "updatedAt": "2026-06-26T04:34:59.885Z"
+      "updatedAt": "2026-06-26T04:34:59.885Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpxs0045o9zkr5neqaqh",
@@ -6431,7 +6831,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.537Z",
-      "updatedAt": "2026-06-26T04:34:59.885Z"
+      "updatedAt": "2026-06-26T04:34:59.885Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpy8004zo9zkgk8074ap",
@@ -6462,7 +6864,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.552Z",
-      "updatedAt": "2026-06-26T04:34:59.885Z"
+      "updatedAt": "2026-06-26T04:34:59.885Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpyd0057o9zkm8f0cer3",
@@ -6493,7 +6897,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.557Z",
-      "updatedAt": "2026-06-26T04:34:59.885Z"
+      "updatedAt": "2026-06-26T04:34:59.885Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpyo005io9zk2k5xsl1e",
@@ -6524,7 +6930,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.568Z",
-      "updatedAt": "2026-06-26T04:35:09.603Z"
+      "updatedAt": "2026-06-26T04:35:09.603Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpz2006ao9zkzfbzal0s",
@@ -6555,7 +6963,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.582Z",
-      "updatedAt": "2026-06-26T04:35:09.603Z"
+      "updatedAt": "2026-06-26T04:35:09.603Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8ww50016o9552ooyysun",
@@ -6586,7 +6996,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:26.597Z",
-      "updatedAt": "2026-06-26T04:35:28.469Z"
+      "updatedAt": "2026-06-26T04:35:28.469Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8v5y000oo955ivm9fbla",
@@ -6617,7 +7029,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:24.358Z",
-      "updatedAt": "2026-06-26T04:35:28.469Z"
+      "updatedAt": "2026-06-26T04:35:28.469Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy93hv002uo95598yq1miu",
@@ -6648,7 +7062,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:34.911Z",
-      "updatedAt": "2026-06-26T04:35:47.356Z"
+      "updatedAt": "2026-06-26T04:35:47.356Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9hn1006mo955t4iy8do8",
@@ -6679,7 +7095,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:53.486Z",
-      "updatedAt": "2026-06-26T04:36:06.190Z"
+      "updatedAt": "2026-06-26T04:36:06.190Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9i82006so955e8b9ncfj",
@@ -6710,7 +7128,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:54.242Z",
-      "updatedAt": "2026-06-26T04:36:06.190Z"
+      "updatedAt": "2026-06-26T04:36:06.190Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9cgv005bo955rxyud0nv",
@@ -6741,7 +7161,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:46.783Z",
-      "updatedAt": "2026-06-26T04:35:56.779Z"
+      "updatedAt": "2026-06-26T04:35:56.779Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpzg0071o9zkh0u6imah",
@@ -6772,7 +7194,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.596Z",
-      "updatedAt": "2026-06-26T04:35:19.038Z"
+      "updatedAt": "2026-06-26T04:35:19.038Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9cur005fo955c2m9ckq4",
@@ -6803,7 +7227,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:47.283Z",
-      "updatedAt": "2026-06-26T04:35:56.779Z"
+      "updatedAt": "2026-06-26T04:35:56.779Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9cny005do955fop28u3n",
@@ -6834,7 +7260,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:47.038Z",
-      "updatedAt": "2026-06-26T04:35:56.779Z"
+      "updatedAt": "2026-06-26T04:35:56.779Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9dtc005mo955skmksz53",
@@ -6865,7 +7293,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:48.528Z",
-      "updatedAt": "2026-06-26T04:36:06.190Z"
+      "updatedAt": "2026-06-26T04:36:06.190Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy94960032o955k5aq30n0",
@@ -6896,7 +7326,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:36.138Z",
-      "updatedAt": "2026-06-26T04:35:47.356Z"
+      "updatedAt": "2026-06-26T04:35:47.356Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy93vj002yo955t5v0yhaq",
@@ -6927,7 +7359,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:35.647Z",
-      "updatedAt": "2026-06-26T04:35:47.356Z"
+      "updatedAt": "2026-06-26T04:35:47.356Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9dfl005io955spn9jobl",
@@ -6958,7 +7392,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:48.034Z",
-      "updatedAt": "2026-06-26T04:36:06.190Z"
+      "updatedAt": "2026-06-26T04:36:06.190Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8vd7000qo955dxznhlb8",
@@ -6989,7 +7425,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:24.619Z",
-      "updatedAt": "2026-06-26T04:35:28.469Z"
+      "updatedAt": "2026-06-26T04:35:28.469Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy91xa002jo955zzyvisia",
@@ -7020,7 +7458,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:33.118Z",
-      "updatedAt": "2026-06-26T04:35:37.907Z"
+      "updatedAt": "2026-06-26T04:35:37.907Z",
+      "dialect": "british",
+      "variantWord": "liter"
     },
     {
       "id": "cmqsy9346002so955pxb8dnor",
@@ -7051,7 +7491,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:34.663Z",
-      "updatedAt": "2026-06-26T04:35:47.356Z"
+      "updatedAt": "2026-06-26T04:35:47.356Z",
+      "dialect": "british",
+      "variantWord": "flavor"
     },
     {
       "id": "cmqhiwpz10068o9zkikv9olz0",
@@ -7082,7 +7524,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.581Z",
-      "updatedAt": "2026-06-26T04:35:09.603Z"
+      "updatedAt": "2026-06-26T04:35:09.603Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpyv005yo9zko3kibbls",
@@ -7113,7 +7557,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.576Z",
-      "updatedAt": "2026-06-26T04:35:09.603Z"
+      "updatedAt": "2026-06-26T04:35:09.603Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpyr005oo9zkyf79mtgh",
@@ -7144,7 +7590,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.572Z",
-      "updatedAt": "2026-06-26T04:35:09.603Z"
+      "updatedAt": "2026-06-26T04:35:09.603Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpza006so9zku0dvmxv5",
@@ -7175,7 +7623,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.591Z",
-      "updatedAt": "2026-06-26T04:35:09.603Z"
+      "updatedAt": "2026-06-26T04:35:09.603Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpz7006ko9zkq8z0s6kd",
@@ -7206,7 +7656,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.587Z",
-      "updatedAt": "2026-06-26T04:35:09.603Z"
+      "updatedAt": "2026-06-26T04:35:09.603Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8usb000ko9550egtqxhs",
@@ -7237,7 +7689,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:23.868Z",
-      "updatedAt": "2026-06-26T04:35:28.469Z"
+      "updatedAt": "2026-06-26T04:35:28.469Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy90z30029o955sqtdqr0l",
@@ -7268,7 +7722,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:31.887Z",
-      "updatedAt": "2026-06-26T04:35:37.907Z"
+      "updatedAt": "2026-06-26T04:35:37.907Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9i19006qo95549je9xab",
@@ -7299,7 +7755,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:53.998Z",
-      "updatedAt": "2026-06-26T04:36:06.190Z"
+      "updatedAt": "2026-06-26T04:36:06.190Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpny0ixw0005o9twp4xqgtuv",
@@ -7330,7 +7788,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:50:22.052Z",
-      "updatedAt": "2026-06-25T04:52:52.243Z"
+      "updatedAt": "2026-06-25T04:52:52.243Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpny0ixw000ao9twt7r95d8v",
@@ -7361,7 +7821,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:50:22.052Z",
-      "updatedAt": "2026-06-25T04:52:52.243Z"
+      "updatedAt": "2026-06-25T04:52:52.243Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo28xpy000mo9qbp5ewd9ej",
@@ -7392,7 +7854,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:48:52.918Z",
-      "updatedAt": "2026-06-25T04:53:05.445Z"
+      "updatedAt": "2026-06-25T04:53:05.445Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo28xpy000no9qb6ltcwst0",
@@ -7423,7 +7887,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:48:52.918Z",
-      "updatedAt": "2026-06-25T04:53:05.445Z"
+      "updatedAt": "2026-06-25T04:53:05.445Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo28xpy000oo9qbc570matk",
@@ -7454,7 +7920,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:48:52.918Z",
-      "updatedAt": "2026-06-25T04:53:05.445Z"
+      "updatedAt": "2026-06-25T04:53:05.445Z",
+      "dialect": "british",
+      "variantWord": "favorite"
     },
     {
       "id": "cmpzaox5m0010o9bepikvnmp5",
@@ -7485,7 +7953,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:30:43.546Z",
-      "updatedAt": "2026-06-25T04:53:31.555Z"
+      "updatedAt": "2026-06-25T04:53:31.555Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzaox5n0012o9be09og6b4q",
@@ -7516,7 +7986,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:30:43.547Z",
-      "updatedAt": "2026-06-25T04:53:31.555Z"
+      "updatedAt": "2026-06-25T04:53:31.555Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzaox5o0016o9bee41rto18",
@@ -7547,7 +8019,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:30:43.549Z",
-      "updatedAt": "2026-06-25T04:53:31.555Z"
+      "updatedAt": "2026-06-25T04:53:31.555Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzaox5p0018o9bepynybgez",
@@ -7578,7 +8052,9 @@
       "lapses": 1,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:30:43.550Z",
-      "updatedAt": "2026-06-25T04:53:31.555Z"
+      "updatedAt": "2026-06-25T04:53:31.555Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzaox5q001ao9beu6fl5j6x",
@@ -7609,7 +8085,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:30:43.550Z",
-      "updatedAt": "2026-06-25T04:53:31.555Z"
+      "updatedAt": "2026-06-25T04:53:31.555Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpz8006mo9zktn4t92ff",
@@ -7640,7 +8118,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.588Z",
-      "updatedAt": "2026-06-26T04:35:09.603Z"
+      "updatedAt": "2026-06-26T04:35:09.603Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpzj0079o9zkm0o2g5pl",
@@ -7671,7 +8151,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.599Z",
-      "updatedAt": "2026-06-26T04:35:19.038Z"
+      "updatedAt": "2026-06-26T04:35:19.038Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpzo007ho9zkdahah49g",
@@ -7702,7 +8184,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.605Z",
-      "updatedAt": "2026-06-26T04:35:19.038Z"
+      "updatedAt": "2026-06-26T04:35:19.038Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpnyahmz000no9ohokd3opha",
@@ -7733,7 +8217,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.923Z",
-      "updatedAt": "2026-06-25T04:55:18.513Z"
+      "updatedAt": "2026-06-25T04:55:18.513Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpnyahmz000oo9ohssztpxgl",
@@ -7764,7 +8250,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.923Z",
-      "updatedAt": "2026-06-25T04:55:18.513Z"
+      "updatedAt": "2026-06-25T04:55:18.513Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpzz007zo9zkfce83usa",
@@ -7795,7 +8283,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.615Z",
-      "updatedAt": "2026-06-26T04:35:19.038Z"
+      "updatedAt": "2026-06-26T04:35:19.038Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8x9v001ao955bpw8igr0",
@@ -7826,7 +8316,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:27.091Z",
-      "updatedAt": "2026-06-26T04:35:28.469Z"
+      "updatedAt": "2026-06-26T04:35:28.469Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8ysb001no9555jg1wnh0",
@@ -7857,7 +8349,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:29.051Z",
-      "updatedAt": "2026-06-26T04:35:37.907Z"
+      "updatedAt": "2026-06-26T04:35:37.907Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy94u80038o955ug1fa3nn",
@@ -7888,7 +8382,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:36.896Z",
-      "updatedAt": "2026-06-26T04:35:47.356Z"
+      "updatedAt": "2026-06-26T04:35:47.356Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzaox5e000go9bedaiq0108",
@@ -7919,7 +8415,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:30:43.538Z",
-      "updatedAt": "2026-06-25T04:53:31.555Z"
+      "updatedAt": "2026-06-25T04:53:31.555Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzd45hg000co9pfj3q217hv",
@@ -7950,7 +8448,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:38:33.413Z",
-      "updatedAt": "2026-06-25T04:52:11.186Z"
+      "updatedAt": "2026-06-25T04:52:11.186Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo2bk8u000no914v7l1ij95",
@@ -7981,7 +8481,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:50:55.422Z",
-      "updatedAt": "2026-06-25T04:53:18.409Z"
+      "updatedAt": "2026-06-25T04:53:18.409Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo2bk8u000oo914df65fxix",
@@ -8012,7 +8514,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:50:55.422Z",
-      "updatedAt": "2026-06-25T04:53:18.409Z"
+      "updatedAt": "2026-06-25T04:53:18.409Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo2bk8u0008o914lx7mz7kz",
@@ -8043,7 +8547,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:50:55.422Z",
-      "updatedAt": "2026-06-25T04:53:18.409Z"
+      "updatedAt": "2026-06-25T04:53:18.409Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo2bk8u0009o914ty6lla07",
@@ -8074,7 +8580,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:50:55.422Z",
-      "updatedAt": "2026-06-25T04:53:18.409Z"
+      "updatedAt": "2026-06-25T04:53:18.409Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzaox5d000co9bejp5k3lqu",
@@ -8105,7 +8613,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:30:43.537Z",
-      "updatedAt": "2026-06-25T04:53:31.555Z"
+      "updatedAt": "2026-06-25T04:53:31.555Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzaox5f000io9befm92i3bb",
@@ -8136,7 +8646,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:30:43.539Z",
-      "updatedAt": "2026-06-25T04:53:31.555Z"
+      "updatedAt": "2026-06-25T04:53:31.555Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzaox5f000ko9be959tqtwp",
@@ -8167,7 +8679,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:30:43.540Z",
-      "updatedAt": "2026-06-25T04:53:31.555Z"
+      "updatedAt": "2026-06-25T04:53:31.555Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzaox5h000oo9be5hf9mr5c",
@@ -8198,7 +8712,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:30:43.541Z",
-      "updatedAt": "2026-06-25T04:53:31.555Z"
+      "updatedAt": "2026-06-25T04:53:31.555Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzaox5j000so9beaejwp3sp",
@@ -8229,7 +8745,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:30:43.543Z",
-      "updatedAt": "2026-06-25T04:53:31.555Z"
+      "updatedAt": "2026-06-25T04:53:31.555Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy90el0023o9558de1pikx",
@@ -8260,7 +8778,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:31.149Z",
-      "updatedAt": "2026-06-26T04:35:37.907Z"
+      "updatedAt": "2026-06-26T04:35:37.907Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8ylj001lo955ed2i9nck",
@@ -8291,7 +8811,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:28.807Z",
-      "updatedAt": "2026-06-26T04:35:37.907Z"
+      "updatedAt": "2026-06-26T04:35:37.907Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy90li0025o955paco548c",
@@ -8322,7 +8844,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:31.398Z",
-      "updatedAt": "2026-06-26T04:35:37.907Z"
+      "updatedAt": "2026-06-26T04:35:37.907Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy8y7w001ho955k6gp2xjz",
@@ -8353,7 +8877,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:28.317Z",
-      "updatedAt": "2026-06-26T04:35:37.907Z"
+      "updatedAt": "2026-06-26T04:35:37.907Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy91cp002do955e2rl2t7e",
@@ -8384,7 +8910,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:32.378Z",
-      "updatedAt": "2026-06-26T04:35:37.907Z"
+      "updatedAt": "2026-06-26T04:35:37.907Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy907u0021o955nntq4fob",
@@ -8415,7 +8943,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:30.906Z",
-      "updatedAt": "2026-06-26T04:35:37.907Z"
+      "updatedAt": "2026-06-26T04:35:37.907Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9241002lo955yuv2k8gf",
@@ -8446,7 +8976,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:33.362Z",
-      "updatedAt": "2026-06-26T04:35:37.907Z"
+      "updatedAt": "2026-06-26T04:35:37.907Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzaox5k000wo9beiwfdfzqq",
@@ -8477,7 +9009,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:30:43.544Z",
-      "updatedAt": "2026-06-25T04:53:31.555Z"
+      "updatedAt": "2026-06-25T04:53:31.555Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpodf0i5000ho97tj5plky2f",
@@ -8508,7 +9042,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T18:01:32.237Z",
-      "updatedAt": "2026-06-25T04:55:31.984Z"
+      "updatedAt": "2026-06-25T04:55:31.984Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy92js002po955z1cvkm12",
@@ -8539,7 +9075,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:33.928Z",
-      "updatedAt": "2026-06-26T04:35:37.907Z"
+      "updatedAt": "2026-06-26T04:35:37.907Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy942b0030o955srjtamss",
@@ -8570,7 +9108,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:35.891Z",
-      "updatedAt": "2026-06-26T04:35:47.356Z"
+      "updatedAt": "2026-06-26T04:35:47.356Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy94ga0034o95528pides9",
@@ -8601,7 +9141,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:36.394Z",
-      "updatedAt": "2026-06-26T04:35:47.356Z"
+      "updatedAt": "2026-06-26T04:35:47.356Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy98p90049o955ic7cvauc",
@@ -8632,7 +9174,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:41.901Z",
-      "updatedAt": "2026-06-26T04:35:56.779Z"
+      "updatedAt": "2026-06-26T04:35:56.779Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy98i80047o955ue2ofzgz",
@@ -8663,7 +9207,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:41.648Z",
-      "updatedAt": "2026-06-26T04:35:56.779Z"
+      "updatedAt": "2026-06-26T04:35:56.779Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy98w6004bo9556b80z6z1",
@@ -8694,7 +9240,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:42.150Z",
-      "updatedAt": "2026-06-26T04:35:56.779Z"
+      "updatedAt": "2026-06-26T04:35:56.779Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzd45hi000go9pflwgozj5u",
@@ -8725,7 +9273,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:38:33.414Z",
-      "updatedAt": "2026-06-25T04:52:11.186Z"
+      "updatedAt": "2026-06-25T04:52:11.186Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzd45hj000io9pfkn3v8k1j",
@@ -8756,7 +9306,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:38:33.416Z",
-      "updatedAt": "2026-06-25T04:52:11.186Z"
+      "updatedAt": "2026-06-25T04:52:11.186Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzd45hk000ko9pf75bmxuw9",
@@ -8787,7 +9339,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:38:33.417Z",
-      "updatedAt": "2026-06-25T04:52:11.186Z"
+      "updatedAt": "2026-06-25T04:52:11.186Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzd45hn000qo9pfkrkn86ni",
@@ -8818,7 +9372,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:38:33.419Z",
-      "updatedAt": "2026-06-25T04:52:11.186Z"
+      "updatedAt": "2026-06-25T04:52:11.186Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpodf0i5000co97t64edw30e",
@@ -8849,7 +9405,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T18:01:32.237Z",
-      "updatedAt": "2026-06-25T04:55:31.984Z"
+      "updatedAt": "2026-06-25T04:55:31.984Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpodf0i5000io97t0m13ylbe",
@@ -8880,7 +9438,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T18:01:32.237Z",
-      "updatedAt": "2026-06-25T04:55:31.984Z"
+      "updatedAt": "2026-06-25T04:55:31.984Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpodf0i5000jo97tx2kk7m8s",
@@ -8911,7 +9471,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T18:01:32.237Z",
-      "updatedAt": "2026-06-25T04:55:31.984Z"
+      "updatedAt": "2026-06-25T04:55:31.984Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzd45hh000eo9pfurp5u81m",
@@ -8942,7 +9504,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:38:33.413Z",
-      "updatedAt": "2026-06-26T03:22:55.395Z"
+      "updatedAt": "2026-06-26T03:22:55.395Z",
+      "dialect": "british",
+      "variantWord": "garbage / trash"
     },
     {
       "id": "cmqsy960v003ko9553yjk9ufv",
@@ -8973,7 +9537,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:38.432Z",
-      "updatedAt": "2026-06-26T04:35:47.356Z"
+      "updatedAt": "2026-06-26T04:35:47.356Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy99ns004jo955m30suvlr",
@@ -9004,7 +9570,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:43.145Z",
-      "updatedAt": "2026-06-26T04:35:56.779Z"
+      "updatedAt": "2026-06-26T04:35:56.779Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy992y004do955dv05drxq",
@@ -9035,7 +9603,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:42.394Z",
-      "updatedAt": "2026-06-26T04:35:56.779Z"
+      "updatedAt": "2026-06-26T04:35:56.779Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9aai004po95597yexfpw",
@@ -9066,7 +9636,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:43.962Z",
-      "updatedAt": "2026-06-26T04:35:56.779Z"
+      "updatedAt": "2026-06-26T04:35:56.779Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy999t004fo9557kg4i3qw",
@@ -9097,7 +9669,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:42.642Z",
-      "updatedAt": "2026-06-26T04:35:56.779Z"
+      "updatedAt": "2026-06-26T04:35:56.779Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy99gm004ho955afnumudl",
@@ -9128,7 +9702,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:42.887Z",
-      "updatedAt": "2026-06-26T04:35:56.779Z"
+      "updatedAt": "2026-06-26T04:35:56.779Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9fkj0062o955a7qoq3nc",
@@ -9159,7 +9735,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:50.804Z",
-      "updatedAt": "2026-06-26T04:36:06.190Z"
+      "updatedAt": "2026-06-26T04:36:06.190Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9frc0064o9554zapt4by",
@@ -9190,7 +9768,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:51.049Z",
-      "updatedAt": "2026-06-26T04:36:06.190Z"
+      "updatedAt": "2026-06-26T04:36:06.190Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpnyahmz000ko9oh7i2k7zez",
@@ -9221,7 +9801,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.923Z",
-      "updatedAt": "2026-06-25T04:55:18.513Z"
+      "updatedAt": "2026-06-25T04:55:18.513Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9aha004ro955q0q3ttaw",
@@ -9252,7 +9834,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:44.206Z",
-      "updatedAt": "2026-06-26T04:35:56.779Z"
+      "updatedAt": "2026-06-26T04:35:56.779Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9a25004no955bbhe3yu6",
@@ -9283,7 +9867,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:43.661Z",
-      "updatedAt": "2026-06-26T04:35:56.779Z"
+      "updatedAt": "2026-06-26T04:35:56.779Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzd45hs0014o9pfux3ie3p9",
@@ -9314,7 +9900,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:38:33.425Z",
-      "updatedAt": "2026-06-25T04:52:11.186Z"
+      "updatedAt": "2026-06-25T04:52:11.186Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9elk005uo955x0cw2sj8",
@@ -9345,7 +9933,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:49.545Z",
-      "updatedAt": "2026-06-26T04:36:06.190Z"
+      "updatedAt": "2026-06-26T04:36:06.190Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9ezr005yo955vh7et63j",
@@ -9376,7 +9966,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:50.055Z",
-      "updatedAt": "2026-06-26T04:36:06.190Z"
+      "updatedAt": "2026-06-26T04:36:06.190Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo28xpy0002o9qbipq5elc5",
@@ -9407,7 +9999,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:48:52.918Z",
-      "updatedAt": "2026-06-25T04:53:05.445Z"
+      "updatedAt": "2026-06-25T04:53:05.445Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpnyahmz000lo9ohqtezenje",
@@ -9438,7 +10032,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.923Z",
-      "updatedAt": "2026-06-25T04:55:18.513Z"
+      "updatedAt": "2026-06-25T04:55:18.513Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy99uk004lo955px6l2qxk",
@@ -9469,7 +10065,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:43.389Z",
-      "updatedAt": "2026-06-26T04:35:56.779Z"
+      "updatedAt": "2026-06-26T04:35:56.779Z",
+      "dialect": "british",
+      "variantWord": "aging"
     },
     {
       "id": "cmqsy9b1v004xo955m2wydoae",
@@ -9500,7 +10098,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:44.948Z",
-      "updatedAt": "2026-06-26T04:35:56.779Z"
+      "updatedAt": "2026-06-26T04:35:56.779Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9ao5004to9553o20o8zj",
@@ -9531,7 +10131,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:44.453Z",
-      "updatedAt": "2026-06-26T04:35:56.779Z"
+      "updatedAt": "2026-06-26T04:35:56.779Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9av2004vo955gelmbm0g",
@@ -9562,7 +10164,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:44.703Z",
-      "updatedAt": "2026-06-26T04:35:56.779Z"
+      "updatedAt": "2026-06-26T04:35:56.779Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9bvj0055o9555pckvw98",
@@ -9593,7 +10197,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:46.015Z",
-      "updatedAt": "2026-06-26T04:35:56.779Z"
+      "updatedAt": "2026-06-26T04:35:56.779Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9ghj006ao955qa9xgww2",
@@ -9624,7 +10230,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:51.991Z",
-      "updatedAt": "2026-06-26T04:36:06.190Z"
+      "updatedAt": "2026-06-26T04:36:06.190Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9h1v006go955c4ld89f5",
@@ -9655,7 +10263,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:52.723Z",
-      "updatedAt": "2026-06-26T04:36:06.190Z"
+      "updatedAt": "2026-06-26T04:36:06.190Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9fdq0060o955c0chws3n",
@@ -9686,7 +10296,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:50.299Z",
-      "updatedAt": "2026-06-26T04:36:06.190Z"
+      "updatedAt": "2026-06-26T04:36:06.190Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpxb003mo9zkodtemprg",
@@ -9717,7 +10329,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.519Z",
-      "updatedAt": "2026-06-26T04:34:50.449Z"
+      "updatedAt": "2026-06-26T04:34:50.449Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpny0ixw0006o9tw87joel3w",
@@ -9748,7 +10362,9 @@
       "lapses": 1,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:50:22.052Z",
-      "updatedAt": "2026-06-25T04:52:52.243Z"
+      "updatedAt": "2026-06-25T04:52:52.243Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpny0ixw0007o9twt3yyyua5",
@@ -9779,7 +10395,9 @@
       "lapses": 1,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:50:22.052Z",
-      "updatedAt": "2026-06-25T04:52:52.243Z"
+      "updatedAt": "2026-06-25T04:52:52.243Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpny0ixw0009o9twztgttt6r",
@@ -9810,7 +10428,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:50:22.052Z",
-      "updatedAt": "2026-06-25T04:52:52.243Z"
+      "updatedAt": "2026-06-25T04:52:52.243Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9fy40066o955r108nolp",
@@ -9841,7 +10461,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:51.292Z",
-      "updatedAt": "2026-06-26T04:36:06.190Z"
+      "updatedAt": "2026-06-26T04:36:06.190Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9hg0006ko955doj4r9x6",
@@ -9872,7 +10494,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:53.233Z",
-      "updatedAt": "2026-06-26T04:36:06.190Z"
+      "updatedAt": "2026-06-26T04:36:06.190Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9eeq005so9552zeuc8y9",
@@ -9903,7 +10527,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:49.299Z",
-      "updatedAt": "2026-06-26T04:36:06.190Z"
+      "updatedAt": "2026-06-26T04:36:06.190Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9htu006oo9552xwu46my",
@@ -9934,7 +10560,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:53.731Z",
-      "updatedAt": "2026-06-26T04:36:06.190Z"
+      "updatedAt": "2026-06-26T04:36:06.190Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqsy9esy005wo955thzsot2m",
@@ -9965,7 +10593,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-25T03:35:49.811Z",
-      "updatedAt": "2026-06-26T04:36:06.190Z"
+      "updatedAt": "2026-06-26T04:36:06.190Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpny0ixw000bo9twdf868rqb",
@@ -9996,7 +10626,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:50:22.052Z",
-      "updatedAt": "2026-06-25T04:52:52.243Z"
+      "updatedAt": "2026-06-25T04:52:52.243Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo28xpy000go9qb3rzp4b0c",
@@ -10027,7 +10659,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:48:52.918Z",
-      "updatedAt": "2026-06-25T04:53:05.445Z"
+      "updatedAt": "2026-06-25T04:53:05.445Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo2bk8u0007o914ixm684b4",
@@ -10058,7 +10692,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:50:55.422Z",
-      "updatedAt": "2026-06-25T04:53:18.409Z"
+      "updatedAt": "2026-06-25T04:53:18.409Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo2bk8u000eo9149unvb7zr",
@@ -10089,7 +10725,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:50:55.422Z",
-      "updatedAt": "2026-06-25T04:53:18.409Z"
+      "updatedAt": "2026-06-25T04:53:18.409Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo2bk8u0002o914uc6cr36o",
@@ -10120,7 +10758,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:50:55.422Z",
-      "updatedAt": "2026-06-25T04:53:18.409Z"
+      "updatedAt": "2026-06-25T04:53:18.409Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo2bk8u0003o914gdcxj9z9",
@@ -10151,7 +10791,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:50:55.422Z",
-      "updatedAt": "2026-06-25T04:53:18.409Z"
+      "updatedAt": "2026-06-25T04:53:18.409Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo2bk8u0006o914qtmm4neb",
@@ -10182,7 +10824,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:50:55.422Z",
-      "updatedAt": "2026-06-25T04:53:18.409Z"
+      "updatedAt": "2026-06-25T04:53:18.409Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpwa002ho9zkt61vw1j5",
@@ -10213,7 +10857,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.483Z",
-      "updatedAt": "2026-06-26T04:34:41.020Z"
+      "updatedAt": "2026-06-26T04:34:41.020Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpwk002wo9zk8in1so08",
@@ -10244,7 +10890,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.492Z",
-      "updatedAt": "2026-06-26T04:34:50.449Z"
+      "updatedAt": "2026-06-26T04:34:50.449Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpny0ixw0001o9twmac9si3o",
@@ -10275,7 +10923,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:50:22.052Z",
-      "updatedAt": "2026-06-25T04:52:52.243Z"
+      "updatedAt": "2026-06-25T04:52:52.243Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpnyahmz0001o9oh19r8aycf",
@@ -10306,7 +10956,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.923Z",
-      "updatedAt": "2026-06-25T04:55:18.513Z"
+      "updatedAt": "2026-06-25T04:55:18.513Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpnyahmz0002o9ohtgeozqy5",
@@ -10337,7 +10989,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.923Z",
-      "updatedAt": "2026-06-25T04:55:18.513Z"
+      "updatedAt": "2026-06-25T04:55:18.513Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpny0ixw000co9tw7t4yl1b6",
@@ -10368,7 +11022,9 @@
       "lapses": 1,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:50:22.052Z",
-      "updatedAt": "2026-06-25T04:52:52.243Z"
+      "updatedAt": "2026-06-25T04:52:52.243Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpny0ixw000do9tw53dgwsfb",
@@ -10399,7 +11055,9 @@
       "lapses": 1,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:50:22.052Z",
-      "updatedAt": "2026-06-25T04:52:52.243Z"
+      "updatedAt": "2026-06-25T04:52:52.243Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpny0ixw000eo9tw5dj71g5v",
@@ -10430,7 +11088,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:50:22.052Z",
-      "updatedAt": "2026-06-25T04:52:52.243Z"
+      "updatedAt": "2026-06-25T04:52:52.243Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpny0ixw000fo9twvj6sovh7",
@@ -10461,7 +11121,9 @@
       "lapses": 1,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:50:22.052Z",
-      "updatedAt": "2026-06-25T04:52:52.243Z"
+      "updatedAt": "2026-06-25T04:52:52.243Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpny0ixw000go9twxd6hh5cv",
@@ -10492,7 +11154,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:50:22.052Z",
-      "updatedAt": "2026-06-25T04:52:52.243Z"
+      "updatedAt": "2026-06-25T04:52:52.243Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpnyahmz000ao9oh181i1mwg",
@@ -10523,7 +11187,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.923Z",
-      "updatedAt": "2026-06-25T04:55:18.513Z"
+      "updatedAt": "2026-06-25T04:55:18.513Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpny0ixw000jo9tw5gjhlzd8",
@@ -10554,7 +11220,9 @@
       "lapses": 1,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:50:22.052Z",
-      "updatedAt": "2026-06-25T04:52:52.243Z"
+      "updatedAt": "2026-06-25T04:52:52.243Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpny0ixw000no9twr7sem6s3",
@@ -10585,7 +11253,9 @@
       "lapses": 1,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:50:22.052Z",
-      "updatedAt": "2026-06-25T04:52:52.243Z"
+      "updatedAt": "2026-06-25T04:52:52.243Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpny0ixw000po9twd9fzzr59",
@@ -10616,7 +11286,9 @@
       "lapses": 1,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:50:22.052Z",
-      "updatedAt": "2026-06-25T04:52:52.243Z"
+      "updatedAt": "2026-06-25T04:52:52.243Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo28xpy0003o9qb9r5xttwb",
@@ -10647,7 +11319,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:48:52.918Z",
-      "updatedAt": "2026-06-25T04:53:05.445Z"
+      "updatedAt": "2026-06-25T04:53:05.445Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo28xpy0004o9qbdep7o0az",
@@ -10678,7 +11352,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:48:52.918Z",
-      "updatedAt": "2026-06-25T04:53:05.445Z"
+      "updatedAt": "2026-06-25T04:53:05.445Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo28xpy0005o9qbdxrxi0zl",
@@ -10709,7 +11385,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:48:52.918Z",
-      "updatedAt": "2026-06-25T04:53:05.445Z"
+      "updatedAt": "2026-06-25T04:53:05.445Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpnyahmz000fo9ohhap25jp4",
@@ -10740,7 +11418,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.923Z",
-      "updatedAt": "2026-06-25T04:55:18.513Z"
+      "updatedAt": "2026-06-25T04:55:18.513Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpx1003co9zkh5aviwb1",
@@ -10771,7 +11451,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.509Z",
-      "updatedAt": "2026-06-26T04:34:50.449Z"
+      "updatedAt": "2026-06-26T04:34:50.449Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpnyahmz000do9oh45y06w6l",
@@ -10802,7 +11484,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.923Z",
-      "updatedAt": "2026-06-25T04:55:18.513Z"
+      "updatedAt": "2026-06-25T04:55:18.513Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo28xpy0008o9qbuhjvdghu",
@@ -10833,7 +11517,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:48:52.918Z",
-      "updatedAt": "2026-06-25T04:53:05.445Z"
+      "updatedAt": "2026-06-25T04:53:05.445Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo2bk8u000go9141hann6o6",
@@ -10864,7 +11550,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:50:55.422Z",
-      "updatedAt": "2026-06-25T04:53:18.409Z"
+      "updatedAt": "2026-06-25T04:53:18.409Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpnyahmz000bo9ohq124f3rd",
@@ -10895,7 +11583,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.923Z",
-      "updatedAt": "2026-06-25T04:55:18.513Z"
+      "updatedAt": "2026-06-25T04:55:18.513Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpnyahmz0009o9oh8otwjsu3",
@@ -10926,7 +11616,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.923Z",
-      "updatedAt": "2026-06-25T04:55:18.513Z"
+      "updatedAt": "2026-06-25T04:55:18.513Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpnyahmz000co9ohz11r3lc7",
@@ -10957,7 +11649,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.923Z",
-      "updatedAt": "2026-06-25T04:55:18.513Z"
+      "updatedAt": "2026-06-25T04:55:18.513Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo28xpy000jo9qbpui4gwbd",
@@ -10988,7 +11682,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:48:52.918Z",
-      "updatedAt": "2026-06-25T04:53:05.445Z"
+      "updatedAt": "2026-06-25T04:53:05.445Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo2bk8u0004o914qudztere",
@@ -11019,7 +11715,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:50:55.422Z",
-      "updatedAt": "2026-06-25T04:53:18.409Z"
+      "updatedAt": "2026-06-25T04:53:18.409Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo2bk8u000jo914ftjjthpc",
@@ -11050,7 +11748,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:50:55.422Z",
-      "updatedAt": "2026-06-25T04:53:18.409Z"
+      "updatedAt": "2026-06-25T04:53:18.409Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo2bk8u000bo914zdoav07v",
@@ -11081,7 +11781,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:50:55.422Z",
-      "updatedAt": "2026-06-25T04:53:18.409Z"
+      "updatedAt": "2026-06-25T04:53:18.409Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo2bk8u000mo914824nlhpt",
@@ -11112,7 +11814,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:50:55.422Z",
-      "updatedAt": "2026-06-25T04:53:18.409Z"
+      "updatedAt": "2026-06-25T04:53:18.409Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpodf0i50002o97tluwa8cfd",
@@ -11143,7 +11847,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T18:01:32.237Z",
-      "updatedAt": "2026-06-25T04:55:31.984Z"
+      "updatedAt": "2026-06-25T04:55:31.984Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpodf0i50004o97t4wq7quoa",
@@ -11174,7 +11880,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T18:01:32.237Z",
-      "updatedAt": "2026-06-25T04:55:31.984Z"
+      "updatedAt": "2026-06-25T04:55:31.984Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpodf0i50005o97t8jb3aove",
@@ -11205,7 +11913,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T18:01:32.237Z",
-      "updatedAt": "2026-06-25T04:55:31.984Z"
+      "updatedAt": "2026-06-25T04:55:31.984Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpodf0i50008o97thkfpn02f",
@@ -11236,7 +11946,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T18:01:32.237Z",
-      "updatedAt": "2026-06-25T04:55:31.984Z"
+      "updatedAt": "2026-06-25T04:55:31.984Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpodf0i50009o97tc209pzy6",
@@ -11267,7 +11979,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T18:01:32.237Z",
-      "updatedAt": "2026-06-25T04:55:31.984Z"
+      "updatedAt": "2026-06-25T04:55:31.984Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpodf0i5000ao97tblo1oiff",
@@ -11298,7 +12012,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T18:01:32.237Z",
-      "updatedAt": "2026-06-25T04:55:31.984Z"
+      "updatedAt": "2026-06-25T04:55:31.984Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo28xpy000io9qbh9ps3fzu",
@@ -11329,7 +12045,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:48:52.918Z",
-      "updatedAt": "2026-06-25T04:53:05.445Z"
+      "updatedAt": "2026-06-25T04:53:05.445Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpodf0i50003o97txyz54vpa",
@@ -11360,7 +12078,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T18:01:32.237Z",
-      "updatedAt": "2026-06-25T04:55:31.984Z"
+      "updatedAt": "2026-06-25T04:55:31.984Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpodf0i50006o97tzm3u4bfd",
@@ -11391,7 +12111,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T18:01:32.237Z",
-      "updatedAt": "2026-06-25T04:55:31.984Z"
+      "updatedAt": "2026-06-25T04:55:31.984Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpodf0i5000bo97tn8vq5kgk",
@@ -11422,7 +12144,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T18:01:32.237Z",
-      "updatedAt": "2026-06-25T04:55:31.984Z"
+      "updatedAt": "2026-06-25T04:55:31.984Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpodf0i5000do97t9ovjbqbo",
@@ -11453,7 +12177,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T18:01:32.237Z",
-      "updatedAt": "2026-06-25T04:55:31.984Z"
+      "updatedAt": "2026-06-25T04:55:31.984Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo2bk8u000lo914r5wda10q",
@@ -11484,7 +12210,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:50:55.422Z",
-      "updatedAt": "2026-06-25T04:53:18.409Z"
+      "updatedAt": "2026-06-25T04:53:18.409Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo2bk8u000io914vomc1w0n",
@@ -11515,7 +12243,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:50:55.422Z",
-      "updatedAt": "2026-06-25T04:53:18.409Z"
+      "updatedAt": "2026-06-25T04:53:18.409Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzaox5b0008o9bekpb8pors",
@@ -11546,7 +12276,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:30:43.536Z",
-      "updatedAt": "2026-06-25T04:53:31.555Z"
+      "updatedAt": "2026-06-25T04:53:31.555Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzaox5c000ao9be7qoxhwaq",
@@ -11577,7 +12309,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:30:43.537Z",
-      "updatedAt": "2026-06-25T04:53:31.555Z"
+      "updatedAt": "2026-06-25T04:53:31.555Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzaox5d000eo9beg95nm39w",
@@ -11608,7 +12342,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:30:43.538Z",
-      "updatedAt": "2026-06-25T04:53:31.555Z"
+      "updatedAt": "2026-06-25T04:53:31.555Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzaox5g000mo9bemz07lmz5",
@@ -11639,7 +12375,9 @@
       "lapses": 1,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:30:43.540Z",
-      "updatedAt": "2026-06-25T04:53:31.555Z"
+      "updatedAt": "2026-06-25T04:53:31.555Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpza0b280003o9dogrhvrgla",
@@ -11670,7 +12408,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:11:35.168Z",
-      "updatedAt": "2026-06-25T04:55:31.984Z"
+      "updatedAt": "2026-06-25T04:55:31.984Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpza0b290005o9doo9hrchgf",
@@ -11701,7 +12441,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:11:35.169Z",
-      "updatedAt": "2026-06-25T04:55:31.984Z"
+      "updatedAt": "2026-06-25T04:55:31.984Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqpn0008o9ch947guplq",
@@ -11732,7 +12474,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:18:01.211Z",
-      "updatedAt": "2026-06-25T04:55:45.552Z"
+      "updatedAt": "2026-06-25T04:55:45.552Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpxz004jo9zkjcyqeann",
@@ -11763,7 +12507,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.543Z",
-      "updatedAt": "2026-06-26T04:34:59.885Z"
+      "updatedAt": "2026-06-26T04:34:59.885Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzaox5a0004o9besugkeep5",
@@ -11794,7 +12540,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:30:43.535Z",
-      "updatedAt": "2026-06-25T04:53:31.555Z"
+      "updatedAt": "2026-06-25T04:53:31.555Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzaox5b0006o9beo0mdbkib",
@@ -11825,7 +12573,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:30:43.535Z",
-      "updatedAt": "2026-06-25T04:53:31.555Z"
+      "updatedAt": "2026-06-25T04:53:31.555Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqpk0002o9chzincbc4r",
@@ -11856,7 +12606,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:18:01.208Z",
-      "updatedAt": "2026-06-25T04:55:45.552Z"
+      "updatedAt": "2026-06-25T04:55:45.552Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqpl0006o9chmvwxx2tw",
@@ -11887,7 +12639,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:18:01.210Z",
-      "updatedAt": "2026-06-25T04:55:45.552Z"
+      "updatedAt": "2026-06-25T04:55:45.552Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqpo000ao9chml2akt1s",
@@ -11918,7 +12672,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:18:01.212Z",
-      "updatedAt": "2026-06-25T04:55:45.552Z"
+      "updatedAt": "2026-06-25T04:55:45.552Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqpl0004o9ch8gosuupd",
@@ -11949,7 +12705,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:18:01.209Z",
-      "updatedAt": "2026-06-25T04:55:45.552Z"
+      "updatedAt": "2026-06-25T04:55:45.552Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzcdqpq000go9chnxu3ph2c",
@@ -11980,7 +12738,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:18:01.214Z",
-      "updatedAt": "2026-06-25T04:55:45.552Z"
+      "updatedAt": "2026-06-25T04:55:45.552Z",
+      "dialect": "british",
+      "variantWord": "sidewalk"
     },
     {
       "id": "cmpzd45ha0002o9pf4hyjx6jn",
@@ -12011,7 +12771,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:38:33.406Z",
-      "updatedAt": "2026-06-25T04:52:11.186Z"
+      "updatedAt": "2026-06-25T04:52:11.186Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzd45hb0004o9pf2o2z2fs8",
@@ -12042,7 +12804,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:38:33.408Z",
-      "updatedAt": "2026-06-25T04:52:11.186Z"
+      "updatedAt": "2026-06-25T04:52:11.186Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzd45hl000mo9pfi3155hw8",
@@ -12073,7 +12837,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:38:33.418Z",
-      "updatedAt": "2026-06-25T04:52:11.186Z"
+      "updatedAt": "2026-06-25T04:52:11.186Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzd45hm000oo9pfr2ftvmw2",
@@ -12104,7 +12870,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:38:33.418Z",
-      "updatedAt": "2026-06-25T04:52:11.186Z"
+      "updatedAt": "2026-06-25T04:52:11.186Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzd45hd0006o9pfx9p6ip1g",
@@ -12135,7 +12903,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:38:33.409Z",
-      "updatedAt": "2026-06-25T04:52:11.186Z"
+      "updatedAt": "2026-06-25T04:52:11.186Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzd45he0008o9pfu1cn2ipj",
@@ -12166,7 +12936,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:38:33.410Z",
-      "updatedAt": "2026-06-25T04:52:11.186Z"
+      "updatedAt": "2026-06-25T04:52:11.186Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzda3r9000go9cy8ll8e371",
@@ -12197,7 +12969,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:43:11.109Z",
-      "updatedAt": "2026-06-25T04:53:44.421Z"
+      "updatedAt": "2026-06-25T04:53:44.421Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzda3r9000io9cyvonmivic",
@@ -12228,7 +13002,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:43:11.110Z",
-      "updatedAt": "2026-06-25T04:53:44.421Z"
+      "updatedAt": "2026-06-25T04:53:44.421Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzda3rb000ko9cy4728uvel",
@@ -12259,7 +13035,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:43:11.111Z",
-      "updatedAt": "2026-06-25T04:53:44.421Z"
+      "updatedAt": "2026-06-25T04:53:44.421Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzda3rb000mo9cy2ck28gna",
@@ -12290,7 +13068,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:43:11.112Z",
-      "updatedAt": "2026-06-25T04:53:44.421Z"
+      "updatedAt": "2026-06-25T04:53:44.421Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzda3rc000oo9cyja8gdwbg",
@@ -12321,7 +13101,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:43:11.113Z",
-      "updatedAt": "2026-06-25T04:53:44.421Z"
+      "updatedAt": "2026-06-25T04:53:44.421Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpyc0055o9zkxyla4964",
@@ -12352,7 +13134,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.556Z",
-      "updatedAt": "2026-06-26T04:34:59.885Z"
+      "updatedAt": "2026-06-26T04:34:59.885Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzda3rd000qo9cyt89z9mgn",
@@ -12383,7 +13167,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:43:11.113Z",
-      "updatedAt": "2026-06-25T04:53:44.421Z"
+      "updatedAt": "2026-06-25T04:53:44.421Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzda3rd000so9cy9iux0qgg",
@@ -12414,7 +13200,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:43:11.114Z",
-      "updatedAt": "2026-06-25T04:53:44.421Z"
+      "updatedAt": "2026-06-25T04:53:44.421Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpuy000co9zk8gjangk9",
@@ -12445,7 +13233,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.434Z",
-      "updatedAt": "2026-06-26T04:34:30.529Z"
+      "updatedAt": "2026-06-26T04:34:30.529Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzda3r30002o9cy0e94kurt",
@@ -12476,7 +13266,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:43:11.103Z",
-      "updatedAt": "2026-06-25T04:53:44.421Z"
+      "updatedAt": "2026-06-25T04:53:44.421Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzda3r30004o9cy61b04iua",
@@ -12507,7 +13299,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:43:11.104Z",
-      "updatedAt": "2026-06-25T04:53:44.421Z"
+      "updatedAt": "2026-06-25T04:53:44.421Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpuv0006o9zkbhxqc4gv",
@@ -12538,7 +13332,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.432Z",
-      "updatedAt": "2026-06-26T04:34:30.529Z"
+      "updatedAt": "2026-06-26T04:34:30.529Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzd45ht0016o9pfh4qhc1y7",
@@ -12569,7 +13365,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:38:33.426Z",
-      "updatedAt": "2026-06-25T04:52:11.186Z"
+      "updatedAt": "2026-06-25T04:52:11.186Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzd45hx001co9pf24bp646g",
@@ -12600,7 +13398,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:38:33.430Z",
-      "updatedAt": "2026-06-25T04:52:11.186Z"
+      "updatedAt": "2026-06-25T04:52:11.186Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzda3r50008o9cyed8xx9ug",
@@ -12631,7 +13431,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:43:11.106Z",
-      "updatedAt": "2026-06-25T04:53:44.421Z"
+      "updatedAt": "2026-06-25T04:53:44.421Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzda3r7000co9cyp8h0alg1",
@@ -12662,7 +13464,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:43:11.108Z",
-      "updatedAt": "2026-06-25T04:53:44.421Z"
+      "updatedAt": "2026-06-25T04:53:44.421Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpuz000eo9zkynhisb6x",
@@ -12693,7 +13497,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.435Z",
-      "updatedAt": "2026-06-26T04:34:30.529Z"
+      "updatedAt": "2026-06-26T04:34:30.529Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpvz001xo9zkurzkg67g",
@@ -12724,7 +13530,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.471Z",
-      "updatedAt": "2026-06-26T04:34:41.020Z"
+      "updatedAt": "2026-06-26T04:34:41.020Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpvp001jo9zkwijoixyf",
@@ -12755,7 +13563,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.461Z",
-      "updatedAt": "2026-06-26T04:34:41.020Z"
+      "updatedAt": "2026-06-26T04:34:41.020Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpvm001fo9zka84dybcs",
@@ -12786,7 +13596,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.459Z",
-      "updatedAt": "2026-06-26T04:34:41.020Z"
+      "updatedAt": "2026-06-26T04:34:41.020Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpw40025o9zkvefg8vr1",
@@ -12817,7 +13629,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.476Z",
-      "updatedAt": "2026-06-26T04:34:41.020Z"
+      "updatedAt": "2026-06-26T04:34:41.020Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpvr001lo9zklosgmw6k",
@@ -12848,7 +13662,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.464Z",
-      "updatedAt": "2026-06-26T04:34:41.020Z"
+      "updatedAt": "2026-06-26T04:34:41.020Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpvu001ro9zk812s68r1",
@@ -12879,7 +13695,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.467Z",
-      "updatedAt": "2026-06-26T04:34:41.020Z"
+      "updatedAt": "2026-06-26T04:34:41.020Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpvt001no9zk70duq8nm",
@@ -12910,7 +13728,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.465Z",
-      "updatedAt": "2026-06-26T04:34:41.020Z"
+      "updatedAt": "2026-06-26T04:34:41.020Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpvx001vo9zky9hnprc0",
@@ -12941,7 +13761,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.469Z",
-      "updatedAt": "2026-06-26T04:34:41.020Z"
+      "updatedAt": "2026-06-26T04:34:41.020Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpw6002bo9zkk276gu3u",
@@ -12972,7 +13794,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.479Z",
-      "updatedAt": "2026-06-26T04:34:41.020Z"
+      "updatedAt": "2026-06-26T04:34:41.020Z",
+      "dialect": "british",
+      "variantWord": "traveling"
     },
     {
       "id": "cmqhiwpw10021o9zky2wgi4li",
@@ -13003,7 +13827,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.474Z",
-      "updatedAt": "2026-06-26T04:34:41.020Z"
+      "updatedAt": "2026-06-26T04:34:41.020Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpwz003ao9zk8eq5cszp",
@@ -13034,7 +13860,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.507Z",
-      "updatedAt": "2026-06-26T04:34:50.449Z"
+      "updatedAt": "2026-06-26T04:34:50.449Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpx3003eo9zksyzwm7ev",
@@ -13065,7 +13893,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.511Z",
-      "updatedAt": "2026-06-26T04:34:50.449Z"
+      "updatedAt": "2026-06-26T04:34:50.449Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpwp0030o9zkm4zo59y4",
@@ -13096,7 +13926,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.497Z",
-      "updatedAt": "2026-06-26T04:34:50.449Z"
+      "updatedAt": "2026-06-26T04:34:50.449Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpwh002so9zk73ex3pst",
@@ -13127,7 +13959,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.489Z",
-      "updatedAt": "2026-06-26T04:34:50.449Z"
+      "updatedAt": "2026-06-26T04:34:50.449Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpwi002uo9zkhkf485fu",
@@ -13158,7 +13992,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.490Z",
-      "updatedAt": "2026-06-26T04:34:50.449Z"
+      "updatedAt": "2026-06-26T04:34:50.449Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpws0032o9zka3tpby4j",
@@ -13189,7 +14025,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.500Z",
-      "updatedAt": "2026-06-26T04:34:50.449Z"
+      "updatedAt": "2026-06-26T04:34:50.449Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpwt0034o9zkdpxwej8d",
@@ -13220,7 +14058,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.502Z",
-      "updatedAt": "2026-06-26T04:34:50.449Z"
+      "updatedAt": "2026-06-26T04:34:50.449Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpww0036o9zk2dpe5rdb",
@@ -13251,7 +14091,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.504Z",
-      "updatedAt": "2026-06-26T04:34:50.449Z"
+      "updatedAt": "2026-06-26T04:34:50.449Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpwx0038o9zk7hn7nt9q",
@@ -13282,7 +14124,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.506Z",
-      "updatedAt": "2026-06-26T04:34:50.449Z"
+      "updatedAt": "2026-06-26T04:34:50.449Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpxo0040o9zkjjbb5xhg",
@@ -13313,7 +14157,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.532Z",
-      "updatedAt": "2026-06-26T04:34:50.449Z"
+      "updatedAt": "2026-06-26T04:34:50.449Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpx7003io9zkiy990fed",
@@ -13344,7 +14190,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.516Z",
-      "updatedAt": "2026-06-26T04:34:50.449Z"
+      "updatedAt": "2026-06-26T04:34:50.449Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpy0004lo9zkkydbr78u",
@@ -13375,7 +14223,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.545Z",
-      "updatedAt": "2026-06-26T04:34:59.885Z"
+      "updatedAt": "2026-06-26T04:34:59.885Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpxx004fo9zk88chibdn",
@@ -13406,7 +14256,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.541Z",
-      "updatedAt": "2026-06-26T04:34:59.885Z"
+      "updatedAt": "2026-06-26T04:34:59.885Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpxy004ho9zk2b8yab4k",
@@ -13437,7 +14289,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.542Z",
-      "updatedAt": "2026-06-26T04:34:59.885Z"
+      "updatedAt": "2026-06-26T04:34:59.885Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpy5004vo9zk2y2q63qs",
@@ -13468,7 +14322,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.549Z",
-      "updatedAt": "2026-06-26T04:34:59.885Z"
+      "updatedAt": "2026-06-26T04:34:59.885Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpxw004do9zkl5ogn8zu",
@@ -13499,7 +14355,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.540Z",
-      "updatedAt": "2026-06-26T04:34:59.885Z"
+      "updatedAt": "2026-06-26T04:34:59.885Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpy7004xo9zkjgjbb72r",
@@ -13530,7 +14388,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.551Z",
-      "updatedAt": "2026-06-26T04:34:59.885Z"
+      "updatedAt": "2026-06-26T04:34:59.885Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpy1004no9zkcveqc9xm",
@@ -13561,7 +14421,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.545Z",
-      "updatedAt": "2026-06-26T04:34:59.885Z"
+      "updatedAt": "2026-06-26T04:34:59.885Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpy2004po9zk9zy1lg2r",
@@ -13592,7 +14454,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.547Z",
-      "updatedAt": "2026-06-26T04:34:59.885Z"
+      "updatedAt": "2026-06-26T04:34:59.885Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpxv004bo9zkgoayr7mp",
@@ -13623,7 +14487,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.539Z",
-      "updatedAt": "2026-06-26T04:34:59.885Z"
+      "updatedAt": "2026-06-26T04:34:59.885Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpyb0053o9zkfm698e4d",
@@ -13654,7 +14520,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.555Z",
-      "updatedAt": "2026-06-26T04:34:59.885Z"
+      "updatedAt": "2026-06-26T04:34:59.885Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpyj005do9zkq22hchbx",
@@ -13685,7 +14553,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.563Z",
-      "updatedAt": "2026-06-26T04:34:59.885Z"
+      "updatedAt": "2026-06-26T04:34:59.885Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpyf0059o9zk3sq5xk5q",
@@ -13716,7 +14586,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.560Z",
-      "updatedAt": "2026-06-26T04:34:59.885Z"
+      "updatedAt": "2026-06-26T04:34:59.885Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpyv005wo9zkpcg1pqph",
@@ -13747,7 +14619,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.575Z",
-      "updatedAt": "2026-06-26T04:35:09.603Z"
+      "updatedAt": "2026-06-26T04:35:09.603Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpyu005uo9zkhczp1e92",
@@ -13778,7 +14652,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.574Z",
-      "updatedAt": "2026-06-26T04:35:09.603Z"
+      "updatedAt": "2026-06-26T04:35:09.603Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpyp005ko9zk34z5g9mx",
@@ -13809,7 +14685,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.569Z",
-      "updatedAt": "2026-06-26T04:35:09.603Z"
+      "updatedAt": "2026-06-26T04:35:09.603Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpyq005mo9zk2hq3r8dm",
@@ -13840,7 +14718,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.570Z",
-      "updatedAt": "2026-06-26T04:35:09.603Z"
+      "updatedAt": "2026-06-26T04:35:09.603Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpyx0062o9zkybj1hv97",
@@ -13871,7 +14751,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.578Z",
-      "updatedAt": "2026-06-26T04:35:09.603Z"
+      "updatedAt": "2026-06-26T04:35:09.603Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwput0002o9zkkuebg0bg",
@@ -13902,7 +14784,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.430Z",
-      "updatedAt": "2026-06-26T04:34:30.529Z"
+      "updatedAt": "2026-06-26T04:34:30.529Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpz9006qo9zk2rz41601",
@@ -13933,7 +14817,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.590Z",
-      "updatedAt": "2026-06-26T04:35:09.603Z"
+      "updatedAt": "2026-06-26T04:35:09.603Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpzx007xo9zkvvqccy4b",
@@ -13964,7 +14850,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.614Z",
-      "updatedAt": "2026-06-26T04:35:19.038Z"
+      "updatedAt": "2026-06-26T04:35:19.038Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpzf006zo9zkalymuj26",
@@ -13995,7 +14883,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.596Z",
-      "updatedAt": "2026-06-26T04:35:19.038Z"
+      "updatedAt": "2026-06-26T04:35:19.038Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpzk007bo9zk20ht21qa",
@@ -14026,7 +14916,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.600Z",
-      "updatedAt": "2026-06-26T04:35:19.038Z"
+      "updatedAt": "2026-06-26T04:35:19.038Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpzs007po9zkdjom626z",
@@ -14057,7 +14949,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.609Z",
-      "updatedAt": "2026-06-26T04:35:19.038Z"
+      "updatedAt": "2026-06-26T04:35:19.038Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpzq007lo9zk55xf0fbx",
@@ -14088,7 +14982,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.607Z",
-      "updatedAt": "2026-06-26T04:35:19.038Z"
+      "updatedAt": "2026-06-26T04:35:19.038Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpodf0i50001o97thc0da3og",
@@ -14119,7 +15015,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T18:01:32.237Z",
-      "updatedAt": "2026-06-25T04:55:31.984Z"
+      "updatedAt": "2026-06-25T04:55:31.984Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpyt005so9zkre0sps99",
@@ -14150,7 +15048,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.573Z",
-      "updatedAt": "2026-06-26T04:35:09.603Z"
+      "updatedAt": "2026-06-26T04:35:09.603Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwq010083o9zkt2o8jysg",
@@ -14181,7 +15081,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.617Z",
-      "updatedAt": "2026-06-26T04:35:19.038Z"
+      "updatedAt": "2026-06-26T04:35:19.038Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpzt007ro9zky22sy5p7",
@@ -14212,7 +15114,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.610Z",
-      "updatedAt": "2026-06-26T04:35:19.038Z"
+      "updatedAt": "2026-06-26T04:35:19.038Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpzw007vo9zkxhjer0qa",
@@ -14243,7 +15147,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.613Z",
-      "updatedAt": "2026-06-26T04:35:19.038Z"
+      "updatedAt": "2026-06-26T04:35:19.038Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpny0ixw0002o9tw3hcvxt23",
@@ -14274,7 +15180,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:50:22.052Z",
-      "updatedAt": "2026-06-25T04:52:52.243Z"
+      "updatedAt": "2026-06-25T04:52:52.243Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwq000081o9zkfe8588gd",
@@ -14305,7 +15213,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.616Z",
-      "updatedAt": "2026-06-26T04:35:19.038Z"
+      "updatedAt": "2026-06-26T04:35:19.038Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpny0ixw0008o9twpl0nuyuq",
@@ -14336,7 +15246,9 @@
       "lapses": 1,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:50:22.052Z",
-      "updatedAt": "2026-06-25T04:52:52.243Z"
+      "updatedAt": "2026-06-25T04:52:52.243Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpny0ixw000lo9twdd9g2ps8",
@@ -14367,7 +15279,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:50:22.052Z",
-      "updatedAt": "2026-06-25T04:52:52.243Z"
+      "updatedAt": "2026-06-25T04:52:52.243Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpny0ixw000mo9tw97cv6lsk",
@@ -14398,7 +15312,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:50:22.052Z",
-      "updatedAt": "2026-06-25T04:52:52.243Z"
+      "updatedAt": "2026-06-25T04:52:52.243Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwq020085o9zk5eie0243",
@@ -14429,7 +15345,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.618Z",
-      "updatedAt": "2026-06-26T04:35:19.038Z"
+      "updatedAt": "2026-06-26T04:35:19.038Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpzv007to9zk84x1c6j8",
@@ -14460,7 +15378,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.611Z",
-      "updatedAt": "2026-06-26T04:35:19.038Z"
+      "updatedAt": "2026-06-26T04:35:19.038Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpzr007no9zkn2xscavb",
@@ -14491,7 +15411,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.608Z",
-      "updatedAt": "2026-06-26T04:35:19.038Z"
+      "updatedAt": "2026-06-26T04:35:19.038Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmqhiwpzp007jo9zkv6ruw03m",
@@ -14522,7 +15444,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-17T03:40:35.606Z",
-      "updatedAt": "2026-06-26T04:35:19.038Z"
+      "updatedAt": "2026-06-26T04:35:19.038Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpny0ixw0003o9twuaf7pz4u",
@@ -14553,7 +15477,9 @@
       "lapses": 2,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:50:22.052Z",
-      "updatedAt": "2026-06-25T04:52:52.243Z"
+      "updatedAt": "2026-06-25T04:52:52.243Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpny0ixw0004o9twslntetla",
@@ -14584,7 +15510,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:50:22.052Z",
-      "updatedAt": "2026-06-25T04:52:52.243Z"
+      "updatedAt": "2026-06-25T04:52:52.243Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo28xpy000fo9qb4olqs0tm",
@@ -14615,7 +15543,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:48:52.918Z",
-      "updatedAt": "2026-06-25T04:53:05.445Z"
+      "updatedAt": "2026-06-25T04:53:05.445Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo2bk8u0001o914pel0lc2v",
@@ -14646,7 +15576,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:50:55.422Z",
-      "updatedAt": "2026-06-25T04:53:18.409Z"
+      "updatedAt": "2026-06-25T04:53:18.409Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpnyahmz000jo9ohnopty40q",
@@ -14677,7 +15609,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T10:58:06.923Z",
-      "updatedAt": "2026-06-25T04:55:18.513Z"
+      "updatedAt": "2026-06-25T04:55:18.513Z",
+      "dialect": "american",
+      "variantWord": "enrol"
     },
     {
       "id": "cmpodf0i50007o97tagncpk1f",
@@ -14708,7 +15642,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T18:01:32.237Z",
-      "updatedAt": "2026-06-25T04:55:31.984Z"
+      "updatedAt": "2026-06-25T04:55:31.984Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpodf0i5000fo97tmjksjl4p",
@@ -14739,7 +15675,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T18:01:32.237Z",
-      "updatedAt": "2026-06-25T04:55:31.984Z"
+      "updatedAt": "2026-06-25T04:55:31.984Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzaox5a0002o9be45f7p6xm",
@@ -14770,7 +15708,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:30:43.534Z",
-      "updatedAt": "2026-06-25T04:53:31.555Z"
+      "updatedAt": "2026-06-25T04:53:31.555Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzaox5i000qo9be47fxvssl",
@@ -14801,7 +15741,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:30:43.542Z",
-      "updatedAt": "2026-06-25T04:53:31.555Z"
+      "updatedAt": "2026-06-25T04:53:31.555Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzaox5j000uo9bejyxq5apt",
@@ -14832,7 +15774,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:30:43.544Z",
-      "updatedAt": "2026-06-25T04:53:31.555Z"
+      "updatedAt": "2026-06-25T04:53:31.555Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo28xpy0001o9qb66dfn6fv",
@@ -14863,7 +15807,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:48:52.918Z",
-      "updatedAt": "2026-06-25T04:53:05.445Z"
+      "updatedAt": "2026-06-25T04:53:05.445Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzaox5r001co9beuzxqu4ez",
@@ -14894,7 +15840,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T09:30:43.551Z",
-      "updatedAt": "2026-06-25T04:53:31.555Z"
+      "updatedAt": "2026-06-25T04:53:31.555Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpo28xpy0006o9qbj0yd0fa4",
@@ -14925,7 +15873,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-05-27T12:48:52.918Z",
-      "updatedAt": "2026-06-25T04:53:05.445Z"
+      "updatedAt": "2026-06-25T04:53:05.445Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzd45hf000ao9pfaabd2ar8",
@@ -14956,7 +15906,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:38:33.411Z",
-      "updatedAt": "2026-06-25T04:52:11.186Z"
+      "updatedAt": "2026-06-25T04:52:11.186Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzda3r40006o9cy8ch0l1u6",
@@ -14987,7 +15939,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:43:11.105Z",
-      "updatedAt": "2026-06-25T04:53:44.421Z"
+      "updatedAt": "2026-06-25T04:53:44.421Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzda3r6000ao9cypx4vz7zr",
@@ -15018,7 +15972,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:43:11.107Z",
-      "updatedAt": "2026-06-25T04:53:44.421Z"
+      "updatedAt": "2026-06-25T04:53:44.421Z",
+      "dialect": "british",
+      "variantWord": "apartment"
     },
     {
       "id": "cmpzd45hn000so9pfiizvh10m",
@@ -15049,7 +16005,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:38:33.420Z",
-      "updatedAt": "2026-06-25T04:52:11.186Z"
+      "updatedAt": "2026-06-25T04:52:11.186Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzd45hp000wo9pfu7pcdmct",
@@ -15080,7 +16038,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:38:33.422Z",
-      "updatedAt": "2026-06-25T04:52:11.186Z"
+      "updatedAt": "2026-06-25T04:52:11.186Z",
+      "dialect": null,
+      "variantWord": null
     },
     {
       "id": "cmpzd45hu0018o9pf099ujy5t",
@@ -15111,7 +16071,9 @@
       "lapses": 0,
       "deletedAt": null,
       "createdAt": "2026-06-04T10:38:33.427Z",
-      "updatedAt": "2026-06-25T04:52:11.186Z"
+      "updatedAt": "2026-06-25T04:52:11.186Z",
+      "dialect": null,
+      "variantWord": null
     }
   ],
   "stories": [

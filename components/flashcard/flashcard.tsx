@@ -5,6 +5,12 @@ import { Blocks, Sprout, Volume2 } from "lucide-react";
 import { speak } from "@/lib/tts";
 import { displayRootWord } from "@/lib/utils";
 import { analyzeWord } from "@/lib/word-formation";
+import {
+  DIALECT_LABEL,
+  DIALECT_SHORT,
+  OTHER_DIALECT,
+  type Dialect,
+} from "@/lib/dialect-data";
 import type { QueueCard } from "@/lib/daily-queue";
 
 // Chỉ những field cần để hiển thị thẻ — cả QueueCard (SRS) lẫn Card đều thoả.
@@ -18,6 +24,8 @@ export type FlashcardData = Pick<
   | "phonetic"
   | "example"
   | "exampleTranslation"
+  | "dialect"
+  | "variantWord"
 >;
 
 interface FlashcardProps {
@@ -141,6 +149,29 @@ function MeaningFace({ card }: { card: FlashcardData }) {
   );
 }
 
+/** Gợi ý biến thể Anh–Anh / Anh–Mỹ, hợp tông tối của thẻ. */
+function DialectHint({
+  dialect,
+  variantWord,
+}: {
+  dialect: string | null;
+  variantWord: string | null;
+}) {
+  if (dialect !== "british" && dialect !== "american") return null;
+  const d = dialect as Dialect;
+  const other = OTHER_DIALECT[d];
+  return (
+    <div className="mt-3 flex max-w-sm flex-wrap items-center justify-center gap-1.5 text-[12.5px] text-white/60">
+      <span className="font-semibold text-[#9cc2ff]">{DIALECT_SHORT[d]}</span>
+      {variantWord ? (
+        <span>
+          · {DIALECT_LABEL[other]}: <span className="text-white/85">{variantWord}</span>
+        </span>
+      ) : null}
+    </div>
+  );
+}
+
 /** Gợi ý cấu tạo từ, hợp tông tối của thẻ. */
 function AffixHint({ word }: { word: string }) {
   const a = analyzeWord(word);
@@ -201,6 +232,8 @@ function BackFace({ card, reverse }: { card: FlashcardData; reverse: boolean }) 
           ) : null}
         </div>
       ) : null}
+
+      <DialectHint dialect={card.dialect} variantWord={card.variantWord} />
 
       <AffixHint word={card.word} />
 

@@ -102,6 +102,11 @@ model Card {
   // Đánh dấu từ yêu thích — bật/tắt bằng icon ngôi sao
   favorite           Boolean  @default(false)
 
+  // Biến thể tiếng Anh của từ trong thẻ: "british" | "american" | null (dùng chung)
+  dialect            String?
+  // Từ tương đương ở biến thể còn lại, vd centre(UK) ↔ center(US)
+  variantWord        String?
+
   easeFactor         Float    @default(2.5)
   interval           Int      @default(0)
   repetitions        Int      @default(0)

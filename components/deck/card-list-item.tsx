@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { speak } from "@/lib/tts";
 import { displayRootWord, parseTags } from "@/lib/utils";
+import { DialectBadge } from "@/components/deck/dialect-badge";
 import type { Card } from "@/lib/types";
 
 const stateColors: Record<string, "default" | "secondary" | "success" | "warning" | "outline"> = {
@@ -80,6 +81,7 @@ export function CardListItem({
           <Badge variant={stateColors[card.state] ?? "secondary"} className="text-xs">
             {stateLabels[card.state] ?? card.state}
           </Badge>
+          <DialectBadge dialect={card.dialect} variantWord={card.variantWord} />
         </div>
         <p className="mt-1 text-sm">{card.meaning}</p>
         {displayRootWord(card.word, card.rootWord) ? (

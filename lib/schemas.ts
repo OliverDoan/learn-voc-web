@@ -58,6 +58,8 @@ export const cardCreateSchema = z.object({
   wordFormMeanings: wordFormMeaningsSchema.optional().nullable(),
   synonyms: z.array(z.string().trim().min(1).max(60)).max(20).default([]),
   antonyms: z.array(z.string().trim().min(1).max(60)).max(20).default([]),
+  dialect: z.enum(["british", "american"]).optional().nullable(),
+  variantWord: z.string().trim().max(120).optional().nullable(),
 });
 
 export const cardUpdateSchema = cardCreateSchema
@@ -85,6 +87,8 @@ export const cardImportItemSchema = z.object({
   tags: z.array(z.string().trim().min(1).max(30)).max(10).default([]),
   wordForms: wordFormsSchema.optional().nullable(),
   wordFormMeanings: wordFormMeaningsSchema.optional().nullable(),
+  dialect: z.enum(["british", "american"]).optional().nullable(),
+  variantWord: z.string().trim().max(120).optional().nullable(),
 });
 
 export const cardImportSchema = z.object({

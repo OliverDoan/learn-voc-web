@@ -11,6 +11,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { cn, displayRootWord, parseTags, posBadgeClass } from "@/lib/utils";
+import { DialectBadge } from "@/components/deck/dialect-badge";
 import {
   parseWordForms,
   parseWordFormMeanings,
@@ -80,6 +81,8 @@ export function CardDetailDialog({
 
         <div className="space-y-4">
           <p className="text-lg font-medium">{card.meaning}</p>
+
+          <DialectBadge dialect={card.dialect} variantWord={card.variantWord} variant="full" />
 
           {root ? (
             <div className="inline-flex flex-wrap items-center gap-1.5 rounded-md bg-primary/10 px-2 py-1 text-sm font-medium text-primary">

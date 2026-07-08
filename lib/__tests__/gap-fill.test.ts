@@ -23,6 +23,8 @@ function makeCard(overrides: Partial<Card>): Card {
     synonyms: null,
     antonyms: null,
     favorite: false,
+    dialect: null,
+    variantWord: null,
     deletedAt: null,
     easeFactor: 2.5,
     interval: 0,

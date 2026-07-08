@@ -14,6 +14,8 @@ export interface QueueCard {
   exampleTranslation: string | null;
   imageUrl: string | null;
   audioUrl: string | null;
+  dialect: string | null;
+  variantWord: string | null;
   easeFactor: number;
   interval: number;
   repetitions: number;
@@ -44,6 +46,8 @@ function toQueueCard(c: CardRow): QueueCard {
     exampleTranslation: c.exampleTranslation,
     imageUrl: c.imageUrl,
     audioUrl: c.audioUrl,
+    dialect: c.dialect,
+    variantWord: c.variantWord,
     easeFactor: c.easeFactor,
     interval: c.interval,
     repetitions: c.repetitions,
