@@ -40,6 +40,7 @@ import { PageLoader } from "@/components/ui/page-loader";
 import { CardFormDialog } from "@/components/deck/card-form-dialog";
 import { DeckExerciseProgress } from "@/components/deck/deck-exercise-progress";
 import { CardDetailDialog } from "@/components/deck/card-detail-dialog";
+import { DialectBadge } from "@/components/deck/dialect-badge";
 import { DeckFormDialog } from "@/components/deck/deck-form-dialog";
 import { ImportCardsDialog } from "@/components/deck/import-cards-dialog";
 import { ExportCardsDialog } from "@/components/deck/export-cards-dialog";
@@ -480,6 +481,7 @@ export default function DeckDetailPage({ params }: PageProps) {
             {card.phonetic ? (
               <span className="font-phonetic text-xs text-muted-foreground">{card.phonetic}</span>
             ) : null}
+            <DialectBadge dialect={card.dialect} variantWord={card.variantWord} />
           </span>
           {displayRootWord(card.word, card.rootWord) ? (
             <span className="inline-flex flex-wrap items-center gap-1 text-xs text-primary">
