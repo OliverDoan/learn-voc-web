@@ -1,14 +1,23 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Check, RotateCcw, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { WORD_FORM_ORDER } from "@/lib/word-forms";
+import {
+  addTestAttempt,
+  clearTestHistory,
+  loadTestHistory,
+  type TestAttempt,
+  type TestWrongItem,
+} from "@/lib/test-history";
+import { TestHistory } from "@/components/deck/test-history";
 import type { Card } from "@/lib/types";
 
 interface CardsTestProps {
   cards: Card[];
+  deckId: string;
 }
 
 const norm = (s: string) => s.trim().toLowerCase().replace(/\s+/g, " ");
@@ -29,17 +38,25 @@ function parsePos(s: string | null): Set<string> {
  * Chế độ kiểm tra: hiện nghĩa tiếng Việt, người dùng gõ từ tiếng Anh,
  * bấm "Chấm điểm" để xem đúng bao nhiêu câu, sai câu nào (hiện đáp án đúng).
  */
-export function CardsTest({ cards }: CardsTestProps) {
+export function CardsTest({ cards, deckId }: CardsTestProps) {
   const [answers, setAnswers] = useState<Record<string, string>>({});
   // Từ loại chọn cho mỗi từ; mặc định "noun".
   const [pos, setPos] = useState<Record<string, string>>({});
   const [graded, setGraded] = useState(false);
+  const [history, setHistory] = useState<TestAttempt[]>([]);
 
+  // Nạp lịch sử từ localStorage sau khi mount (tránh lệch hydration SSR).
+  useEffect(() => {
+    setHistory(loadTestHistory(deckId));
+  }, [deckId]);
+
+  // Từ loại của một thẻ — mặc định "noun" nếu người dùng chưa đổi.
+  const posOf = (c: Card) => pos[c.id] ?? "noun";
   const wordOk = (c: Card) => norm(answers[c.id] ?? "") === norm(c.word);
   const posOk = (c: Card) => {
     const set = parsePos(c.partOfSpeech);
-    // Chưa có dữ liệu từ loại → không tính sai; ngược lại phải chọn đúng (chưa chọn = sai).
-    return set.size === 0 ? true : set.has(pos[c.id] ?? "");
+    // Chưa có dữ liệu từ loại → không tính sai; ngược lại phải chọn đúng.
+    return set.size === 0 ? true : set.has(posOf(c));
   };
   const rowOk = (c: Card) => wordOk(c) && posOk(c);
   // Từ loại đúng để hiện khi sai (giữ nguyên tiếng Anh: noun/verb/…).
@@ -56,6 +73,39 @@ export function CardsTest({ cards }: CardsTestProps) {
     setAnswers({});
     setPos({});
     setGraded(false);
+  };
+
+  // Chấm điểm: đánh dấu đã chấm và lưu các từ SAI vào lịch sử (nếu có).
+  const handleGrade = () => {
+    setGraded(true);
+    const wrong: TestWrongItem[] = cards
+      .filter((c) => !rowOk(c))
+      .map((c) => ({
+        cardId: c.id,
+        meaning: c.meaning,
+        word: c.word,
+        yourAnswer: (answers[c.id] ?? "").trim(),
+        wordWrong: !wordOk(c),
+        posWrong: !posOk(c),
+        correctPos: correctPosLabel(c),
+        yourPos: posOf(c),
+      }));
+    // Chỉ lưu khi có từ sai — đúng hết thì không ghi gì.
+    if (wrong.length > 0) {
+      setHistory(
+        addTestAttempt(deckId, {
+          at: Date.now(),
+          total: result.total,
+          correct: result.correct,
+          wrong,
+        }),
+      );
+    }
+  };
+
+  const handleClearHistory = () => {
+    clearTestHistory(deckId);
+    setHistory([]);
   };
 
   const percent = result.total ? Math.round((result.correct / result.total) * 100) : 0;
@@ -81,7 +131,7 @@ export function CardsTest({ cards }: CardsTestProps) {
             <Button
               size="sm"
               className="rounded-full"
-              onClick={() => setGraded(true)}
+              onClick={handleGrade}
               disabled={result.answered === 0}
             >
               <Check className="h-4 w-4" /> Chấm điểm
@@ -144,12 +194,11 @@ export function CardsTest({ cards }: CardsTestProps) {
                   </td>
                   <td className="border-b border-r p-0 align-top">
                     <select
-                      value={pos[card.id] ?? ""}
+                      value={posOf(card)}
                       onChange={(e) => setPos((prev) => ({ ...prev, [card.id]: e.target.value }))}
                       disabled={graded}
                       className="w-full bg-transparent px-3 py-1.5 outline-none focus:bg-background focus:ring-1 focus:ring-inset focus:ring-primary disabled:opacity-100"
                     >
-                      <option value="">— chọn —</option>
                       {WORD_FORM_ORDER.map((p) => (
                         <option key={p} value={p}>
                           {p}
@@ -183,6 +232,8 @@ export function CardsTest({ cards }: CardsTestProps) {
           </tbody>
         </table>
       </div>
+
+      <TestHistory history={history} onClear={handleClearHistory} />
     </div>
   );
 }

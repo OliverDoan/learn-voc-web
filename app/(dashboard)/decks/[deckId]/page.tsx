@@ -11,6 +11,7 @@ import {
   ClipboardCheck,
   Download,
   GripVertical,
+  History,
   Layers,
   List,
   Lock,
@@ -47,6 +48,7 @@ import { ReadAllButton } from "@/components/deck/read-all-button";
 import { CardsFilterBar } from "@/components/deck/cards-filter-bar";
 import { CardsTable } from "@/components/deck/cards-table";
 import { CardsTest } from "@/components/deck/cards-test";
+import { TestHistoryDialog } from "@/components/deck/test-history-dialog";
 import { StoryList } from "@/components/story/story-list";
 import {
   useCards,
@@ -96,6 +98,7 @@ export default function DeckDetailPage({ params }: PageProps) {
   const [groupByTag, setGroupByTag] = useState(false);
   const [viewMode, setViewMode] = useState<"list" | "table" | "test">("list");
   const [actionsOpen, setActionsOpen] = useState(false);
+  const [openHistory, setOpenHistory] = useState(false);
   const [selectMode, setSelectMode] = useState(false);
   const [selectedIds, setSelectedIds] = useState<Set<string>>(() => new Set());
 
@@ -813,6 +816,7 @@ export default function DeckDetailPage({ params }: PageProps) {
       {/* Tabs chế độ xem + ô tìm + nút Lọc trên cùng một hàng */}
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
         {cards && cards.length > 0 ? (
+          <div className="flex flex-wrap items-center gap-2">
           <div className="inline-flex rounded-lg border bg-card p-0.5">
             <button
               type="button"
@@ -850,6 +854,15 @@ export default function DeckDetailPage({ params }: PageProps) {
             >
               <ClipboardCheck className="h-4 w-4" /> Kiểm tra
             </button>
+          </div>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => setOpenHistory(true)}
+            title="Xem lịch sử các từ sai"
+          >
+            <History className="h-4 w-4" /> Lịch sử sai
+          </Button>
           </div>
         ) : (
           <div />
@@ -928,7 +941,7 @@ export default function DeckDetailPage({ params }: PageProps) {
           Không có từ nào khớp bộ lọc.
         </div>
       ) : viewMode === "test" ? (
-        <CardsTest cards={displayCards} />
+        <CardsTest cards={displayCards} deckId={deckId} />
       ) : viewMode === "table" && deck ? (
         <CardsTable cards={displayCards} deck={deck} />
       ) : groupByTag ? (
@@ -989,6 +1002,11 @@ export default function DeckDetailPage({ params }: PageProps) {
         deckId={deckId}
         deckName={deck.name}
         cardCount={deck._count.cards}
+      />
+      <TestHistoryDialog
+        deckId={deckId}
+        open={openHistory}
+        onOpenChange={setOpenHistory}
       />
 
       {selectedIds.size > 0 ? (
