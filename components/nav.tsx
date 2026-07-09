@@ -4,6 +4,7 @@ import { useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
+  ArrowLeftRight,
   Blocks,
   BookMarked,
   BookOpen,
@@ -47,6 +48,7 @@ const items: NavItem[] = [
   { href: "/grammar", label: "Ngữ pháp", icon: BookText, mobile: true },
   { href: "/word-formation", label: "Cấu tạo từ", icon: Blocks, mobile: false },
   { href: "/word-roots", label: "Từ gốc", icon: Sprout, mobile: false },
+  { href: "/confusing-words", label: "Từ dễ lẫn", icon: ArrowLeftRight, mobile: false },
   { href: "/trash", label: "Thùng rác", icon: Trash2, mobile: false },
   { href: "/settings", label: "Cài đặt", icon: Settings, mobile: true },
 ];
