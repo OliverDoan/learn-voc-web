@@ -25,6 +25,19 @@ export function StoryRenderer({
 }: StoryRendererProps) {
   const tokens = parseStory(content);
   const [opened, setOpened] = useState<number | null>(null);
+  // Hướng mở tooltip: mặc định lên trên, tự lật xuống dưới khi phía trên thiếu chỗ.
+  const [below, setBelow] = useState(false);
+
+  const toggleTooltip = (i: number, e: React.MouseEvent<HTMLButtonElement>) => {
+    if (opened === i) {
+      setOpened(null);
+      return;
+    }
+    const rect = e.currentTarget.getBoundingClientRect();
+    // Cần ~140px phía trên cho tooltip; không đủ (gần đỉnh màn hình/khung) → mở xuống.
+    setBelow(rect.top < 140);
+    setOpened(i);
+  };
 
   // Map từ (viết thường) → từ loại, lấy từ toàn bộ thẻ (query đã cache dùng chung).
   const { data: allWords } = useAllWords();
@@ -55,7 +68,7 @@ export function StoryRenderer({
           <span key={i} className="relative inline-block align-baseline">
             <button
               type="button"
-              onClick={() => setOpened(open ? null : i)}
+              onClick={(e) => toggleTooltip(i, e)}
               className={cn(
                 "font-sans font-semibold transition-colors",
                 hideWords
@@ -85,7 +98,10 @@ export function StoryRenderer({
             ) : null}
             {open ? (
               <span
-                className="font-sans absolute bottom-[calc(100%+12px)] left-1/2 z-10 -translate-x-1/2 whitespace-normal rounded-2xl px-4 py-3 text-left text-white shadow-[0_18px_40px_rgba(0,13,139,.4)]"
+                className={cn(
+                  "font-sans absolute left-1/2 z-20 -translate-x-1/2 whitespace-normal rounded-2xl px-4 py-3 text-left text-white shadow-[0_18px_40px_rgba(0,13,139,.4)]",
+                  below ? "top-[calc(100%+12px)]" : "bottom-[calc(100%+12px)]",
+                )}
                 style={{ minWidth: 220, background: "#00004F" }}
               >
                 <button
@@ -118,14 +134,25 @@ export function StoryRenderer({
                 <span className="mt-1.5 block text-[15px] font-semibold text-[#dde6ff]">
                   {tok.meaning}
                 </span>
-                {/* arrow */}
+                {/* mũi tên — chỉ xuống khi tooltip ở trên, chỉ lên khi ở dưới */}
                 <span
-                  className="absolute left-1/2 top-full h-0 w-0 -translate-x-1/2"
-                  style={{
-                    borderLeft: "8px solid transparent",
-                    borderRight: "8px solid transparent",
-                    borderTop: "9px solid #00004F",
-                  }}
+                  className={cn(
+                    "absolute left-1/2 h-0 w-0 -translate-x-1/2",
+                    below ? "bottom-full" : "top-full",
+                  )}
+                  style={
+                    below
+                      ? {
+                          borderLeft: "8px solid transparent",
+                          borderRight: "8px solid transparent",
+                          borderBottom: "9px solid #00004F",
+                        }
+                      : {
+                          borderLeft: "8px solid transparent",
+                          borderRight: "8px solid transparent",
+                          borderTop: "9px solid #00004F",
+                        }
+                  }
                 />
               </span>
             ) : null}
