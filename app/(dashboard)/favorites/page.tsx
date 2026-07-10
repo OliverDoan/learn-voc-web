@@ -28,6 +28,8 @@ export default function FavoritesPage() {
 
   // null = hiển thị tất cả deck.
   const [selectedDeckId, setSelectedDeckId] = useState<string | null>(null);
+  // Cách sắp xếp: theo chữ cái (A→Z) hoặc gom nhóm theo deck.
+  const [sortBy, setSortBy] = useState<"alpha" | "deck">("alpha");
 
   // Danh sách deck có trong từ yêu thích, kèm số lượng từ mỗi deck.
   const deckOptions = useMemo<DeckFilterOption[]>(() => {
@@ -54,6 +56,41 @@ export default function FavoritesPage() {
     if (!selectedDeckId) return cards;
     return cards.filter((card) => card.deck.id === selectedDeckId);
   }, [cards, selectedDeckId]);
+
+  // Sắp xếp: "deck" → theo tên deck rồi theo từ; "alpha" → theo từ (A→Z).
+  const sortedCards = useMemo<FavoriteCard[]>(() => {
+    const arr = [...filteredCards];
+    arr.sort((a, b) =>
+      sortBy === "deck"
+        ? a.deck.name.localeCompare(b.deck.name) || a.word.localeCompare(b.word)
+        : a.word.localeCompare(b.word),
+    );
+    return arr;
+  }, [filteredCards, sortBy]);
+
+  // Gom nhóm theo deck (dùng khi sắp xếp "theo deck"). sortedCards đã theo đúng thứ tự nhóm.
+  const groupedByDeck = useMemo(() => {
+    const order: string[] = [];
+    const map = new Map<
+      string,
+      { id: string; name: string; icon: string | null; cards: FavoriteCard[] }
+    >();
+    for (const card of sortedCards) {
+      let group = map.get(card.deck.id);
+      if (!group) {
+        group = { id: card.deck.id, name: card.deck.name, icon: card.deck.icon, cards: [] };
+        map.set(card.deck.id, group);
+        order.push(card.deck.id);
+      }
+      group.cards.push(card);
+    }
+    return order.map((id) => map.get(id)!);
+  }, [sortedCards]);
+
+  const sortOptions: SelectOption[] = [
+    { value: "alpha", label: "Theo chữ cái (A→Z)" },
+    { value: "deck", label: "Theo deck" },
+  ];
 
   // Tuỳ chọn cho dropdown lọc: "Tất cả" + từng deck.
   const selectOptions = useMemo<SelectOption[]>(() => {
@@ -89,6 +126,61 @@ export default function FavoritesPage() {
     }
   };
 
+  const renderCard = (card: FavoriteCard) => (
+    <li
+      key={card.id}
+      className="flex items-start gap-3 rounded-lg border bg-card p-4 transition-all hover:border-primary/40 hover:shadow-md"
+    >
+      <Button
+        variant="ghost"
+        size="icon"
+        className="mt-0.5 shrink-0"
+        onClick={() => speak(card.word)}
+        aria-label="Phát âm"
+      >
+        <Volume2 className="h-4 w-4" />
+      </Button>
+      <div className="min-w-0 flex-1">
+        <div className="flex flex-wrap items-baseline gap-2">
+          <span className="font-semibold">{card.word}</span>
+          {card.phonetic ? (
+            <span className="font-phonetic text-xs text-muted-foreground">{card.phonetic}</span>
+          ) : null}
+          {card.partOfSpeech ? (
+            <Badge variant="outline" className="text-xs">
+              {card.partOfSpeech}
+            </Badge>
+          ) : null}
+          <DialectBadge dialect={card.dialect} variantWord={card.variantWord} />
+          <Link href={`/decks/${card.deck.id}`}>
+            <Badge
+              variant="secondary"
+              className="text-xs transition-colors hover:bg-secondary/70"
+            >
+              {card.deck.icon ?? "📘"} {card.deck.name}
+            </Badge>
+          </Link>
+        </div>
+        <p className="mt-1 text-sm">{card.meaning}</p>
+        {card.example ? (
+          <p className="mt-1 text-xs italic text-muted-foreground">
+            &ldquo;{card.example}&rdquo;
+          </p>
+        ) : null}
+      </div>
+      <Button
+        variant="ghost"
+        size="icon"
+        className="mt-0.5 shrink-0"
+        onClick={() => handleUnfavorite(card)}
+        aria-label="Bỏ yêu thích"
+        title="Bỏ yêu thích"
+      >
+        <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
+      </Button>
+    </li>
+  );
+
   return (
     <div className="container mx-auto max-w-4xl p-6">
       <div className="mb-6">
@@ -116,24 +208,38 @@ export default function FavoritesPage() {
         </div>
       ) : (
         <>
-          {/* Lọc theo deck — chỉ hiện khi có từ ở ≥ 2 deck */}
-          {deckOptions.length > 1 ? (
-            <div className="mb-4 flex items-center gap-2">
-              <label
-                htmlFor="deck-filter"
-                className="shrink-0 text-sm text-muted-foreground"
-              >
-                Lọc theo deck
+          {/* Lọc theo deck + sắp xếp */}
+          <div className="mb-4 flex flex-wrap items-center gap-x-4 gap-y-2">
+            {deckOptions.length > 1 ? (
+              <div className="flex items-center gap-2">
+                <label
+                  htmlFor="deck-filter"
+                  className="shrink-0 text-sm text-muted-foreground"
+                >
+                  Lọc theo deck
+                </label>
+                <SelectMenu
+                  id="deck-filter"
+                  value={selectedDeckId ?? ""}
+                  onChange={(v) => setSelectedDeckId(v || null)}
+                  options={selectOptions}
+                  className="w-48"
+                />
+              </div>
+            ) : null}
+            <div className="flex items-center gap-2">
+              <label htmlFor="sort-by" className="shrink-0 text-sm text-muted-foreground">
+                Sắp xếp
               </label>
               <SelectMenu
-                id="deck-filter"
-                value={selectedDeckId ?? ""}
-                onChange={(v) => setSelectedDeckId(v || null)}
-                options={selectOptions}
-                className="max-w-xs flex-1"
+                id="sort-by"
+                value={sortBy}
+                onChange={(v) => setSortBy(v as "alpha" | "deck")}
+                options={sortOptions}
+                className="w-48"
               />
             </div>
-          ) : null}
+          </div>
 
           {/* Các dạng bài tập với chính các từ yêu thích — giống deck */}
           <div className="mb-4 flex flex-wrap gap-2">
@@ -166,64 +272,25 @@ export default function FavoritesPage() {
           <p className="mb-3 text-sm text-muted-foreground">
             {filteredCards.length} từ
           </p>
-          <ul className="space-y-2 pb-24">
-            {filteredCards.map((card) => (
-              <li
-                key={card.id}
-                className="flex items-start gap-3 rounded-lg border bg-card p-4 transition-all hover:border-primary/40 hover:shadow-md"
-              >
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="mt-0.5 shrink-0"
-                  onClick={() => speak(card.word)}
-                  aria-label="Phát âm"
-                >
-                  <Volume2 className="h-4 w-4" />
-                </Button>
-                <div className="min-w-0 flex-1">
-                  <div className="flex flex-wrap items-baseline gap-2">
-                    <span className="font-semibold">{card.word}</span>
-                    {card.phonetic ? (
-                      <span className="font-phonetic text-xs text-muted-foreground">
-                        {card.phonetic}
-                      </span>
-                    ) : null}
-                    {card.partOfSpeech ? (
-                      <Badge variant="outline" className="text-xs">
-                        {card.partOfSpeech}
-                      </Badge>
-                    ) : null}
-                    <DialectBadge dialect={card.dialect} variantWord={card.variantWord} />
-                    <Link href={`/decks/${card.deck.id}`}>
-                      <Badge
-                        variant="secondary"
-                        className="text-xs transition-colors hover:bg-secondary/70"
-                      >
-                        {card.deck.icon ?? "📘"} {card.deck.name}
-                      </Badge>
-                    </Link>
+          {sortBy === "deck" && !selectedDeckId ? (
+            <div className="space-y-6 pb-24">
+              {groupedByDeck.map((group) => (
+                <section key={group.id}>
+                  <div className="mb-2 flex items-center gap-2">
+                    <h2 className="text-sm font-semibold">
+                      {group.icon ?? "📘"} {group.name}
+                    </h2>
+                    <Badge variant="secondary" className="text-[10px]">
+                      {group.cards.length}
+                    </Badge>
                   </div>
-                  <p className="mt-1 text-sm">{card.meaning}</p>
-                  {card.example ? (
-                    <p className="mt-1 text-xs italic text-muted-foreground">
-                      &ldquo;{card.example}&rdquo;
-                    </p>
-                  ) : null}
-                </div>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="mt-0.5 shrink-0"
-                  onClick={() => handleUnfavorite(card)}
-                  aria-label="Bỏ yêu thích"
-                  title="Bỏ yêu thích"
-                >
-                  <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
-                </Button>
-              </li>
-            ))}
-          </ul>
+                  <ul className="space-y-2">{group.cards.map(renderCard)}</ul>
+                </section>
+              ))}
+            </div>
+          ) : (
+            <ul className="space-y-2 pb-24">{sortedCards.map(renderCard)}</ul>
+          )}
         </>
       )}
     </div>
