@@ -1,3 +1,7 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
 # Vocabulary Learning Web App
 
 > Web app cá nhân ôn từ vựng với Spaced Repetition (SRS), nhiều dạng quiz, truyện chêm, gamification.
@@ -7,7 +11,7 @@
 
 - **Framework**: Next.js 14+ (App Router) + TypeScript
 - **Styling**: Tailwind CSS + shadcn/ui
-- **State**: Zustand (client), TanStack Query (server cache)
+- **State**: TanStack Query (server cache, qua `hooks/`) + React local state. `stores/` hiện trống — KHÔNG còn dùng Zustand dù một số deps cũ còn trong package.json.
 - **DB**: PostgreSQL (Neon) + Prisma — connection qua `DATABASE_URL` (file `prisma/dev.db` SQLite cũ đã bỏ, không dùng nữa)
 - **Animation**: Framer Motion
 - **Charts**: Recharts
@@ -21,63 +25,87 @@
 ## Commands
 
 ```bash
-pnpm dev              # Dev server
-pnpm build            # Production build
-pnpm start            # Production server
-pnpm lint             # ESLint
-pnpm prisma:migrate   # prisma migrate dev
-pnpm prisma:studio    # prisma studio
-pnpm test             # Vitest tests
+pnpm dev                       # Dev server
+pnpm build                     # prisma generate + migrate deploy + next build (build CHẠY migrate!)
+pnpm lint                      # ESLint
+pnpm prisma:migrate            # prisma migrate dev (tạo migration khi đổi schema)
+pnpm prisma:studio             # prisma studio
+pnpm test                      # Vitest (chạy 1 lần)
+pnpm test:watch                # Vitest watch
+pnpm test lib/__tests__/srs.test.ts   # Chạy 1 file test
+pnpm vitest run -t "tên test"         # Chạy 1 test theo tên
 ```
+
+### Data / seed scripts (đều dùng `tsx --env-file=.env scripts/*.ts`)
+
+```bash
+pnpm db:seed          # Seed deck + truyện mẫu
+pnpm add:deck         # Thêm deck từ script
+pnpm import:vocab     # Import bộ từ vựng
+pnpm gen:examples     # Sinh câu ví dụ (AI)
+pnpm gen:synonyms     # Sinh đồng nghĩa (AI)
+pnpm gen:root-meanings# Sinh nghĩa từ gốc (AI)
+pnpm data:export      # Xuất toàn bộ data ra file
+pnpm data:load        # Nạp lại data từ file
+pnpm sync:card-order  # Đồng bộ thứ tự thẻ
+```
+
+> Các script AI (`gen:*`) gọi Claude API — cần key trong `.env`. Đọc script tương ứng trong `scripts/` trước khi chạy.
 
 ## Single-user mode
 
 App này dùng cá nhân nên SKIP auth. Hardcode `userId = "me"` ở tầng API nếu cần. `UserProgress` là singleton (`id = "singleton"`).
 
+## Architecture (big picture)
+
+Luồng dữ liệu **DB-backed** (deck/card/story/review/progress):
+
+```
+Component ─▶ hook (hooks/use-*.ts, TanStack Query) ─▶ lib/api-client.ts (apiFetch/apiPost/apiPatch/apiDelete)
+          ─▶ app/api/**/route.ts (validate Zod từ lib/schemas.ts) ─▶ lib/db.ts (Prisma singleton) ─▶ Postgres
+```
+
+- **Component KHÔNG gọi `fetch` trực tiếp** — luôn qua hook trong `hooks/`. Hook nào cũng bọc TanStack Query quanh `api-client`.
+- Mỗi mutation `invalidateQueries` các query key liên quan (key khai báo ngay trong file hook, vd `ALL_WORDS_KEY`, `TRASH_KEY`).
+- API route handler: validate input bằng Zod (`lib/schemas.ts`) → thao tác Prisma → trả JSON. Lỗi trả `{ error: string }`.
+
+Luồng **nội dung tĩnh** (KHÔNG dùng DB) — pattern quan trọng, nhiều tính năng "tham khảo" chỉ là dữ liệu TS thuần trong `lib/`, render bởi 1 page client:
+
+- `lib/grammar/*` → `/grammar` (19 chương ngữ pháp)
+- `lib/ielts-content.ts` → `/ielts` + 4 sub-page
+- `lib/word-formation.ts`, `lib/word-forms.ts` → `/word-formation`
+- `lib/confusing-words.ts` → `/confusing-words` (Từ dễ lẫn)
+- `lib/mistakes-data.ts` → `/mistakes` (Xem lỗi sai — mảng chỉnh tay)
+- `lib/dialect-data.ts`, `lib/focus-themes.ts`
+
+> Thêm một trang "tham khảo" mới = thêm 1 file dữ liệu trong `lib/` + 1 page client + 1 mục trong `components/nav.tsx`. Không đụng DB/API. Lịch sử "từ sai khi kiểm tra" (`lib/test-history.ts`) lưu ở **localStorage** theo deck, cũng không dùng DB.
+
 ## Folder Structure
 
 ```
-app/
-  (dashboard)/
-    page.tsx                  # Dashboard
-    decks/page.tsx            # Danh sách decks
-    decks/[deckId]/page.tsx   # Chi tiết deck + cards
-    study/[deckId]/page.tsx   # Flashcard study
-    quiz/[deckId]/page.tsx    # Quiz nhiều dạng
-    stats/page.tsx            # Thống kê
-    stories/[storyId]/page.tsx # Đọc truyện chêm
-  api/
-    decks/route.ts            # CRUD deck
-    cards/route.ts            # CRUD card
-    review/route.ts           # POST kết quả ôn
-    stats/route.ts            # Thống kê
-    dictionary/route.ts       # Proxy Dictionary API
-    stories/route.ts          # CRUD truyện
-components/
-  flashcard/                  # Flashcard, RatingButtons
-  quiz/                       # MultipleChoice, TypingQuiz, ...
-  dashboard/                  # StreakBadge, DailyProgress, Heatmap
-  deck/                       # DeckCard, AddCardDialog
-  story/                      # StoryEditor, StoryView, TokenTooltip
-  ui/                         # shadcn components
-lib/
-  srs.ts                      # SM-2 algorithm
-  tts.ts                      # Web Speech API wrapper
-  dictionary.ts               # Fetch định nghĩa
-  db.ts                       # Prisma client singleton
-  achievements.ts             # Logic mở khóa
-  story-parser.ts             # Parse [[word|nghĩa]] markup
-stores/
-  studySession.ts             # Zustand: session hiện tại
-prisma/
-  schema.prisma
+app/(dashboard)/    # Mọi trang (dashboard, decks, study, quiz, flashcards, pronounce,
+                    # story-fill, stories, stats, grammar, ielts, word-formation, word-roots,
+                    # confusing-words, mistakes, favorites, history, search, trash, settings)
+app/focus/          # Chế độ Pomodoro toàn màn hình (ngoài layout dashboard)
+app/api/**/route.ts # Route handlers REST (cards, decks, stories, review, study, stats,
+                    # progress, search, weak-words, history, dictionary proxy)
+hooks/              # TANG DATA: use-cards, use-decks, use-stories, use-progress, use-study,
+                    # use-history, use-weak-words, use-pomodoro, use-speech-recognition...
+components/         # Theo domain: deck/ quiz/ flashcard/ story/ dashboard/ grammar/ ielts/
+                    # mistakes/ focus/ search/ settings/ + ui/ (shadcn) + nav.tsx, command-palette.tsx
+lib/                # srs.ts, db.ts (Prisma singleton), api-client.ts, schemas.ts (Zod),
+                    # tts.ts, dictionary.ts, story-parser.ts, achievements.ts + dữ liệu tĩnh (trên)
+prisma/schema.prisma
+scripts/            # Script tsx cho seed / import / gen bằng AI / export-load
 ```
 
 ## Database Schema (key models)
 
 Xem `vocab-app-spec.md` section 2. Tóm tắt models:
 
-- `Deck` — danh mục từ
+- `Deck` — danh mục từ (`learned`, `locked`, `exercisesDone` → khoá/mở deck & cổng bài tập)
+- `DeckActivity` — nhật ký hoạt động trong deck
+- `ExerciseAttempt` — lượt làm từng dạng bài tập của deck (gate cho "đánh dấu học xong")
 - `Card` — từng từ (SRS fields: easeFactor, interval, repetitions, nextReviewDate, state, lapses)
 - `CardState` enum: `NEW | LEARNING | REVIEW | MATURE | SUSPENDED`
 - `ReviewLog` — lịch sử ôn
@@ -86,6 +114,8 @@ Xem `vocab-app-spec.md` section 2. Tóm tắt models:
 - `Achievement` — huy hiệu mở khóa
 - `Story` — truyện chêm (content có markup `[[word|nghĩa]]`)
 - `StoryCard` — link Story ↔ Card
+
+> **Deck locking**: deck bị `locked` cho đến khi hoàn thành các Unit trước; nút "Đánh dấu học xong" chỉ bật khi `exercisesDone`. Xem `lib/deck-progress.ts`, `lib/deck-activities.ts`, `components/deck/deck-exercise-progress.tsx`.
 
 > `tags`/`synonyms`/`antonyms` lưu dạng JSON string (parse khi đọc) cho gọn — giữ từ thời SQLite, vẫn dùng vậy trên Postgres.
 
@@ -148,15 +178,14 @@ pnpm install
 pnpm prisma:migrate    # Init DB nếu chưa có
 pnpm db:seed           # Tạo deck mẫu "Daily Life" + truyện
 pnpm dev               # http://localhost:3000
-pnpm test              # 32 unit tests pass
+pnpm test              # unit tests (11 file trong lib/__tests__)
 ```
 
 ## Còn thiếu (nice-to-have, chưa làm)
 
 - Matching game quiz (3/4 dạng đã có)
-- Import/Export CSV
 - AI generate story (Claude API)
 - DALL-E / image gen
-- PWA setup
-- Search global (Cmd+K)
 - Reverse cards
+
+> Search global (Cmd+K, `command-palette.tsx`), Import/Export (dialog trong `components/deck/`) và PWA (`components/pwa-register.tsx`) ĐÃ làm.
