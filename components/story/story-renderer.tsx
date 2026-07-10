@@ -7,6 +7,26 @@ import { speak } from "@/lib/tts";
 import { cn } from "@/lib/utils";
 import { useAllWords } from "@/hooks/use-cards";
 
+// Viết tắt từ loại để hiện gọn cạnh nghĩa (noun→n, adjective→adj…).
+const POS_SHORT: Record<string, string> = {
+  noun: "n",
+  verb: "v",
+  adjective: "adj",
+  adverb: "adv",
+  pronoun: "pron",
+  preposition: "prep",
+  conjunction: "conj",
+  interjection: "interj",
+  determiner: "det",
+};
+
+function shortPos(pos: string): string {
+  return pos
+    .split(/\s*[/,]\s*/)
+    .map((p) => POS_SHORT[p.trim().toLowerCase()] ?? p.trim())
+    .join("/");
+}
+
 interface StoryRendererProps {
   content: string;
   showMeanings?: boolean;
@@ -64,6 +84,7 @@ export function StoryRenderer({
         const open = opened === i;
         // Từ được đánh dấu sao → tô màu amber thay vì xanh để nổi bật.
         const fav = !!favoriteWords && favoriteWords.has(tok.word.trim().toLowerCase());
+        const pos = posMap.get(tok.word.trim().toLowerCase());
         return (
           <span key={i} className="relative inline-block align-baseline">
             <button
@@ -94,7 +115,9 @@ export function StoryRenderer({
               {hideWords ? "___" : tok.word}
             </button>
             {showMeanings && !hideWords ? (
-              <span className="font-sans ml-1 text-xs text-muted-foreground">({tok.meaning})</span>
+              <span className="font-sans ml-1 text-xs text-muted-foreground">
+                {pos ? <span className="italic">({shortPos(pos)}) </span> : null}({tok.meaning})
+              </span>
             ) : null}
             {open ? (
               <span
