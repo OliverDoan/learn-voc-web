@@ -42,6 +42,23 @@ const LS = {
   readPos: "voca-readall-read-pos",
 };
 
+/** Giá trị mặc định khi chưa có tuỳ chọn lưu trong localStorage. */
+const DEFAULTS = {
+  rate: 0.7, // Chậm
+  loop: true,
+  favorite: false,
+  repeatWord: true,
+  englishOnly: false,
+  vietnameseFirst: true,
+  readPos: true,
+} as const;
+
+/** Đọc cờ boolean từ localStorage; chưa lưu (null) thì dùng mặc định. */
+const readBool = (key: string, fallback: boolean): boolean => {
+  const v = localStorage.getItem(key);
+  return v === null ? fallback : v === "1";
+};
+
 /**
  * Phát lần lượt thẻ trong deck: đọc từ tiếng Anh → nghĩa tiếng Việt
  * (hoặc đảo lại: tiếng Việt → tiếng Anh nếu bật "Đọc tiếng Việt trước").
@@ -53,13 +70,13 @@ export function ReadAllButton({ cards }: ReadAllButtonProps) {
   const [count, setCount] = useState(0);
   const [showOptions, setShowOptions] = useState(false);
 
-  const [rate, setRate] = useState(0.95);
-  const [loop, setLoop] = useState(false);
-  const [onlyFavorite, setOnlyFavorite] = useState(false);
-  const [repeatWord, setRepeatWord] = useState(false);
-  const [englishOnly, setEnglishOnly] = useState(false);
-  const [vietnameseFirst, setVietnameseFirst] = useState(false);
-  const [readPos, setReadPos] = useState(false);
+  const [rate, setRate] = useState<number>(DEFAULTS.rate);
+  const [loop, setLoop] = useState<boolean>(DEFAULTS.loop);
+  const [onlyFavorite, setOnlyFavorite] = useState<boolean>(DEFAULTS.favorite);
+  const [repeatWord, setRepeatWord] = useState<boolean>(DEFAULTS.repeatWord);
+  const [englishOnly, setEnglishOnly] = useState<boolean>(DEFAULTS.englishOnly);
+  const [vietnameseFirst, setVietnameseFirst] = useState<boolean>(DEFAULTS.vietnameseFirst);
+  const [readPos, setReadPos] = useState<boolean>(DEFAULTS.readPos);
 
   // Refs để vòng lặp phát đọc thấy giá trị mới nhất khi đổi tuỳ chọn giữa chừng
   const cancelRef = useRef(false);
@@ -82,12 +99,12 @@ export function ReadAllButton({ cards }: ReadAllButtonProps) {
   useEffect(() => {
     const r = Number(localStorage.getItem(LS.rate));
     if (SPEEDS.some((s) => s.value === r)) setRate(r);
-    setLoop(localStorage.getItem(LS.loop) === "1");
-    setOnlyFavorite(localStorage.getItem(LS.favorite) === "1");
-    setRepeatWord(localStorage.getItem(LS.repeatWord) === "1");
-    setEnglishOnly(localStorage.getItem(LS.englishOnly) === "1");
-    setVietnameseFirst(localStorage.getItem(LS.vietnameseFirst) === "1");
-    setReadPos(localStorage.getItem(LS.readPos) === "1");
+    setLoop(readBool(LS.loop, DEFAULTS.loop));
+    setOnlyFavorite(readBool(LS.favorite, DEFAULTS.favorite));
+    setRepeatWord(readBool(LS.repeatWord, DEFAULTS.repeatWord));
+    setEnglishOnly(readBool(LS.englishOnly, DEFAULTS.englishOnly));
+    setVietnameseFirst(readBool(LS.vietnameseFirst, DEFAULTS.vietnameseFirst));
+    setReadPos(readBool(LS.readPos, DEFAULTS.readPos));
   }, []);
 
   // Cleanup khi rời trang

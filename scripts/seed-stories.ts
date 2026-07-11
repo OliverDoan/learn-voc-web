@@ -97,11 +97,19 @@ Tôi [[proud|tự hào]] nét [[traditional|truyền thống]]: nhà theo [[reli
   {
     deckName: "Unit 15:",
     title: "Bạn gái và thời tiết quê tôi",
-    content: `Việt Nam có [[climate|khí hậu]] hai [[season|mùa]] rõ rệt. [[beginning|sự khởi đầu]] mùa hè, trời [[sunny|nhiều nắng]] và [[humid|ẩm]] — thời tiết [[typical|điển hình]].
+    content: `Tôi kể cho bạn gái nghe về quê mình: nơi đây có [[climate|khí hậu]] với hai [[season|mùa]] [[typical|điển hình]].
 
-[[forecast|dự báo]] báo [[temperature|nhiệt độ]] tới 35 độ [[Celsius|độ C]], nhưng một [[pleasant|dễ chịu]] [[breeze|cơn gió nhẹ]] chiều làm dịu đi.
+Vào [[beginning|sự khởi đầu]] mùa hè, trời [[sunny|nhiều nắng]] và [[humid|ẩm]].
 
-Mùa [[rainy|nhiều mưa]] thì khác: khi thì [[drizzle|mưa phùn]], khi thì [[shower|mưa rào]] lớn. [[cloud|đám mây]] đen [[approach|tiếp cận]], trời [[nasty|gây khó chịu]], [[awful|kinh khủng]]. [[middle|giữa]] mùa, một [[typhoon|bão nhiệt đới]] gây [[flood|lũ lụt]], mưa [[last|kéo dài]] cả một [[period|khoảng thời gian]]. Đến [[end|sự kết thúc]] mùa trời lại quang đãng.`,
+Bản [[forecast|dự báo]] thời tiết nói [[temperature|nhiệt độ]] sẽ lên tới 35 độ [[Celsius|độ C]], nhưng một [[breeze|cơn gió nhẹ]] [[pleasant|dễ chịu]] buổi chiều khiến thời tiết dễ chịu hơn nhiều.
+
+Mùa [[rainy|nhiều mưa]] thì khác. Khi thì có [[drizzle|mưa phùn]] lất phất, khi thì có [[shower|mưa rào]] nặng hạt.
+
+Những đám [[cloud|đám mây]] đen [[approach|tiếp cận]], và thời tiết trở nên [[nasty|gây khó chịu]] và [[awful|kinh khủng]].
+
+Vào [[middle|giữa]] mùa, một cơn [[typhoon|bão nhiệt đới]] gây ra [[flood|lũ lụt]], và mưa [[last|kéo dài]] suốt một [[period|khoảng thời gian]] dài.
+
+Đến [[end|sự kết thúc]] mùa, bầu trời lại trong xanh trở lại.`,
   },
   {
     deckName: "Unit 16",
