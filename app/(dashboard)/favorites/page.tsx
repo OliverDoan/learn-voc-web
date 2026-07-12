@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SelectMenu, type SelectOption } from "@/components/ui/select-menu";
 import { DialectBadge } from "@/components/deck/dialect-badge";
+import { ReadAllButton } from "@/components/deck/read-all-button";
 import { useFavorites, useToggleFavorite } from "@/hooks/use-cards";
 import { speak } from "@/lib/tts";
 import type { FavoriteCard } from "@/hooks/use-cards";
@@ -267,6 +268,9 @@ export default function FavoritesPage() {
             >
               <Mic className="h-4 w-4" /> Phát âm
             </Button>
+            <div className="ml-auto">
+              <ReadAllButton cards={sortedCards} />
+            </div>
           </div>
 
           <p className="mb-3 text-sm text-muted-foreground">
