@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Check, RotateCcw, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { WORD_FORM_ORDER } from "@/lib/word-forms";
+import { WORD_FORM_ABBR, WORD_FORM_ORDER, type WordFormPOS } from "@/lib/word-forms";
 import {
   addTestAttempt,
   clearTestHistory,
@@ -23,15 +23,55 @@ interface CardsTestProps {
 const norm = (s: string) => s.trim().toLowerCase().replace(/\s+/g, " ");
 
 // Tập từ loại đúng của thẻ (card.partOfSpeech có thể là "adjective / noun"…).
-function parsePos(s: string | null): Set<string> {
+function parsePos(s: string | null): Set<WordFormPOS> {
   if (!s) return new Set();
   return new Set(
     s
       .toLowerCase()
       .split(/[/,]/)
       .map((x) => x.trim())
-      .filter((x) => (WORD_FORM_ORDER as readonly string[]).includes(x)),
+      .filter((x): x is WordFormPOS =>
+        (WORD_FORM_ORDER as readonly string[]).includes(x),
+      ),
   );
+}
+
+// Viết tắt (và tên đầy đủ) người dùng có thể gõ cho từng từ loại.
+const POS_ALIASES: Record<string, WordFormPOS> = {
+  n: "noun",
+  noun: "noun",
+  v: "verb",
+  verb: "verb",
+  a: "adjective",
+  adj: "adjective",
+  adjective: "adjective",
+  adv: "adverb",
+  adverb: "adverb",
+};
+
+/**
+ * Tách phần đáp án "từ-từ_loại" mà người dùng gõ, vd:
+ * - "middle-n"      → { word: "middle", pos: "noun", posToken: "n" }
+ * - "well-known-adj"→ { word: "well-known", pos: "adjective", posToken: "adj" }
+ * - "self-esteem"   → { word: "self-esteem", pos: null } (đuôi không phải từ loại)
+ * Chỉ tách ở dấu gạch CUỐI và chỉ khi đuôi là một từ loại hợp lệ, nên từ có
+ * gạch nối (self-esteem, well-being…) vẫn giữ nguyên.
+ */
+function parseAnswer(input: string): {
+  word: string;
+  pos: WordFormPOS | null;
+  posToken: string;
+} {
+  const trimmed = input.trim();
+  const dash = trimmed.lastIndexOf("-");
+  if (dash > 0) {
+    const token = trimmed.slice(dash + 1).trim().toLowerCase();
+    const pos = POS_ALIASES[token];
+    if (pos) {
+      return { word: trimmed.slice(0, dash).trim(), pos, posToken: token };
+    }
+  }
+  return { word: trimmed, pos: null, posToken: "" };
 }
 
 /**
@@ -39,9 +79,8 @@ function parsePos(s: string | null): Set<string> {
  * bấm "Chấm điểm" để xem đúng bao nhiêu câu, sai câu nào (hiện đáp án đúng).
  */
 export function CardsTest({ cards, deckId }: CardsTestProps) {
+  // Mỗi ô là chuỗi "từ-từ_loại" (vd "middle-n"); từ loại nhập gộp vào cùng ô.
   const [answers, setAnswers] = useState<Record<string, string>>({});
-  // Từ loại chọn cho mỗi từ; mặc định "noun".
-  const [pos, setPos] = useState<Record<string, string>>({});
   const [graded, setGraded] = useState(false);
   const [history, setHistory] = useState<TestAttempt[]>([]);
 
@@ -50,28 +89,30 @@ export function CardsTest({ cards, deckId }: CardsTestProps) {
     setHistory(loadTestHistory(deckId));
   }, [deckId]);
 
-  // Từ loại của một thẻ — mặc định "noun" nếu người dùng chưa đổi.
-  const posOf = (c: Card) => pos[c.id] ?? "noun";
-  const wordOk = (c: Card) => norm(answers[c.id] ?? "") === norm(c.word);
+  // Tách từ + từ loại từ ô nhập của một thẻ.
+  const parsedOf = (c: Card) => parseAnswer(answers[c.id] ?? "");
+  const wordOk = (c: Card) => norm(parsedOf(c).word) === norm(c.word);
   const posOk = (c: Card) => {
     const set = parsePos(c.partOfSpeech);
-    // Chưa có dữ liệu từ loại → không tính sai; ngược lại phải chọn đúng.
-    return set.size === 0 ? true : set.has(posOf(c));
+    // Chưa có dữ liệu từ loại → không tính sai; ngược lại phải gõ đúng từ loại.
+    if (set.size === 0) return true;
+    const { pos } = parsedOf(c);
+    return pos !== null && set.has(pos);
   };
   const rowOk = (c: Card) => wordOk(c) && posOk(c);
-  // Từ loại đúng để hiện khi sai (giữ nguyên tiếng Anh: noun/verb/…).
-  const correctPosLabel = (c: Card) => [...parsePos(c.partOfSpeech)].join(" / ");
+  // Từ loại đúng để hiện khi sai — dùng viết tắt (n / v / a / adv) cho gọn.
+  const correctPosLabel = (c: Card) =>
+    [...parsePos(c.partOfSpeech)].map((p) => WORD_FORM_ABBR[p]).join(" / ");
 
   const result = useMemo(() => {
-    const correct = cards.filter((c) => norm(answers[c.id] ?? "") === norm(c.word) && posOk(c)).length;
+    const correct = cards.filter((c) => rowOk(c)).length;
     const answered = cards.filter((c) => (answers[c.id] ?? "").trim() !== "").length;
     return { correct, answered, total: cards.length };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [cards, answers, pos]);
+  }, [cards, answers]);
 
   const reset = () => {
     setAnswers({});
-    setPos({});
     setGraded(false);
   };
 
@@ -80,16 +121,20 @@ export function CardsTest({ cards, deckId }: CardsTestProps) {
     setGraded(true);
     const wrong: TestWrongItem[] = cards
       .filter((c) => !rowOk(c))
-      .map((c) => ({
-        cardId: c.id,
-        meaning: c.meaning,
-        word: c.word,
-        yourAnswer: (answers[c.id] ?? "").trim(),
-        wordWrong: !wordOk(c),
-        posWrong: !posOk(c),
-        correctPos: correctPosLabel(c),
-        yourPos: posOf(c),
-      }));
+      .map((c) => {
+        const parsed = parsedOf(c);
+        return {
+          cardId: c.id,
+          meaning: c.meaning,
+          word: c.word,
+          // Hiện lại chính xác từ người dùng gõ (không có phần từ loại).
+          yourAnswer: parsed.word,
+          wordWrong: !wordOk(c),
+          posWrong: !posOk(c),
+          correctPos: correctPosLabel(c),
+          yourPos: parsed.posToken,
+        };
+      });
     // Chỉ lưu khi có từ sai — đúng hết thì không ghi gì.
     if (wrong.length > 0) {
       setHistory(
@@ -137,7 +182,7 @@ export function CardsTest({ cards, deckId }: CardsTestProps) {
               <Check className="h-4 w-4" /> Chấm điểm
             </Button>
             <span className="text-xs text-muted-foreground">
-              Đã nhập {result.answered}/{result.total} · gõ từ tiếng Anh theo nghĩa
+              Đã nhập {result.answered}/{result.total} · gõ từ + từ loại (n/v/a/adj/adv)
             </span>
           </>
         )}
@@ -154,9 +199,8 @@ export function CardsTest({ cards, deckId }: CardsTestProps) {
                 Nghĩa tiếng Việt
               </th>
               <th className="border-b border-r px-3 py-2 text-left font-semibold">
-                Từ tiếng Anh (đáp án của bạn)
+                Từ tiếng Anh + từ loại
               </th>
-              <th className="border-b border-r px-3 py-2 text-left font-semibold">Từ loại</th>
               {graded ? (
                 <th className="border-b px-3 py-2 text-left font-semibold">Kết quả</th>
               ) : null}
@@ -185,26 +229,12 @@ export function CardsTest({ cards, deckId }: CardsTestProps) {
                         setAnswers((prev) => ({ ...prev, [card.id]: e.target.value }))
                       }
                       disabled={graded}
-                      className="w-full min-w-[10rem] bg-transparent px-3 py-1.5 outline-none focus:bg-background focus:ring-1 focus:ring-inset focus:ring-primary disabled:opacity-100"
+                      className="w-full min-w-[12rem] bg-transparent px-3 py-1.5 outline-none focus:bg-background focus:ring-1 focus:ring-inset focus:ring-primary disabled:opacity-100"
                       placeholder="…"
                       autoComplete="off"
                       autoCapitalize="off"
                       spellCheck={false}
                     />
-                  </td>
-                  <td className="border-b border-r p-0 align-top">
-                    <select
-                      value={posOf(card)}
-                      onChange={(e) => setPos((prev) => ({ ...prev, [card.id]: e.target.value }))}
-                      disabled={graded}
-                      className="w-full bg-transparent px-3 py-1.5 outline-none focus:bg-background focus:ring-1 focus:ring-inset focus:ring-primary disabled:opacity-100"
-                    >
-                      {WORD_FORM_ORDER.map((p) => (
-                        <option key={p} value={p}>
-                          {p}
-                        </option>
-                      ))}
-                    </select>
                   </td>
                   {graded ? (
                     <td className="border-b px-3 py-1.5 align-top">
