@@ -95,7 +95,9 @@ export default function AllWordsPage() {
         });
       }
     }
-    return Array.from(map.values()).sort((a, b) => a.name.localeCompare(b.name));
+    return Array.from(map.values()).sort((a, b) =>
+      a.name.localeCompare(b.name, undefined, { numeric: true }),
+    );
   }, [cards]);
 
   // Tuỳ chọn cho dropdown lọc deck (đa chọn).
