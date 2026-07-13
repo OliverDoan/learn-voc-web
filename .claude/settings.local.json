@@ -152,7 +152,8 @@
       "Bash(echo \"EXIT=$?\")",
       "Bash(pnpm add:deck *)",
       "Bash(pnpm data:export)",
-      "Bash(git -C /Users/doanvietthuan/Documents/home/learn-voc-web status --short)"
+      "Bash(git -C /Users/doanvietthuan/Documents/home/learn-voc-web status --short)",
+      "Bash(git -C /Users/doanvietthuan/Documents/home/learn-voc-web status)"
     ]
   }
 }
