@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { BookOpen, Layers, Loader2, Mic, Play, Star, Volume2 } from "lucide-react";
+import { BookOpen, Layers, Loader2, Mic, Play, SpellCheck, Star, Volume2 } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -11,7 +11,7 @@ import { SelectMenu, type SelectOption } from "@/components/ui/select-menu";
 import { DialectBadge } from "@/components/deck/dialect-badge";
 import { ReadAllButton } from "@/components/deck/read-all-button";
 import { useFavorites, useToggleFavorite } from "@/hooks/use-cards";
-import { speak } from "@/lib/tts";
+import { speak, spell } from "@/lib/tts";
 import type { FavoriteCard } from "@/hooks/use-cards";
 
 /** Thông tin deck rút gọn để hiển thị nút lọc. */
@@ -132,15 +132,26 @@ export default function FavoritesPage() {
       key={card.id}
       className="flex items-start gap-3 rounded-lg border bg-card p-4 transition-all hover:border-primary/40 hover:shadow-md"
     >
-      <Button
-        variant="ghost"
-        size="icon"
-        className="mt-0.5 shrink-0"
-        onClick={() => speak(card.word)}
-        aria-label="Phát âm"
-      >
-        <Volume2 className="h-4 w-4" />
-      </Button>
+      <div className="mt-0.5 flex shrink-0 flex-col gap-0.5">
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={() => speak(card.word)}
+          aria-label="Phát âm"
+          title="Phát âm"
+        >
+          <Volume2 className="h-4 w-4" />
+        </Button>
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={() => spell(card.word)}
+          aria-label="Đánh vần từng chữ"
+          title="Đánh vần từng chữ"
+        >
+          <SpellCheck className="h-4 w-4" />
+        </Button>
+      </div>
       <div className="min-w-0 flex-1">
         <div className="flex flex-wrap items-baseline gap-2">
           <span className="font-semibold">{card.word}</span>

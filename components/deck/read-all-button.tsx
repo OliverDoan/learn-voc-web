@@ -9,6 +9,7 @@ import {
   Repeat,
   Repeat2,
   Settings2,
+  SpellCheck,
   Square,
   Star,
   Tag,
@@ -17,7 +18,7 @@ import {
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { cn, posToVietnamese } from "@/lib/utils";
-import { speakAsync, stopSpeaking } from "@/lib/tts";
+import { speakAsync, spellAsync, stopSpeaking } from "@/lib/tts";
 import type { Card } from "@/lib/types";
 
 interface ReadAllButtonProps {
@@ -40,6 +41,7 @@ const LS = {
   englishOnly: "voca-readall-english-only",
   vietnameseFirst: "voca-readall-vietnamese-first",
   readPos: "voca-readall-read-pos",
+  spell: "voca-readall-spell",
 };
 
 /** Giá trị mặc định khi chưa có tuỳ chọn lưu trong localStorage. */
@@ -51,6 +53,7 @@ const DEFAULTS = {
   englishOnly: false,
   vietnameseFirst: true,
   readPos: true,
+  spell: false,
 } as const;
 
 /** Đọc cờ boolean từ localStorage; chưa lưu (null) thì dùng mặc định. */
@@ -77,6 +80,7 @@ export function ReadAllButton({ cards }: ReadAllButtonProps) {
   const [englishOnly, setEnglishOnly] = useState<boolean>(DEFAULTS.englishOnly);
   const [vietnameseFirst, setVietnameseFirst] = useState<boolean>(DEFAULTS.vietnameseFirst);
   const [readPos, setReadPos] = useState<boolean>(DEFAULTS.readPos);
+  const [spellLetters, setSpellLetters] = useState<boolean>(DEFAULTS.spell);
 
   // Refs để vòng lặp phát đọc thấy giá trị mới nhất khi đổi tuỳ chọn giữa chừng
   const cancelRef = useRef(false);
@@ -86,6 +90,7 @@ export function ReadAllButton({ cards }: ReadAllButtonProps) {
   const englishOnlyRef = useRef(englishOnly);
   const vietnameseFirstRef = useRef(vietnameseFirst);
   const readPosRef = useRef(readPos);
+  const spellLettersRef = useRef(spellLetters);
   const panelRef = useRef<HTMLDivElement>(null);
 
   rateRef.current = rate;
@@ -94,6 +99,7 @@ export function ReadAllButton({ cards }: ReadAllButtonProps) {
   englishOnlyRef.current = englishOnly;
   vietnameseFirstRef.current = vietnameseFirst;
   readPosRef.current = readPos;
+  spellLettersRef.current = spellLetters;
 
   // Khôi phục tuỳ chọn đã lưu
   useEffect(() => {
@@ -105,6 +111,7 @@ export function ReadAllButton({ cards }: ReadAllButtonProps) {
     setEnglishOnly(readBool(LS.englishOnly, DEFAULTS.englishOnly));
     setVietnameseFirst(readBool(LS.vietnameseFirst, DEFAULTS.vietnameseFirst));
     setReadPos(readBool(LS.readPos, DEFAULTS.readPos));
+    setSpellLetters(readBool(LS.spell, DEFAULTS.spell));
   }, []);
 
   // Cleanup khi rời trang
@@ -167,6 +174,12 @@ export function ReadAllButton({ cards }: ReadAllButtonProps) {
       return !p;
     });
   };
+  const toggleSpell = () => {
+    setSpellLetters((p) => {
+      localStorage.setItem(LS.spell, !p ? "1" : "0");
+      return !p;
+    });
+  };
 
   const stop = () => {
     cancelRef.current = true;
@@ -208,6 +221,14 @@ export function ReadAllButton({ cards }: ReadAllButtonProps) {
           }
         };
 
+        // Đánh vần từng chữ cái của từ (vd "a, p, p, l, e") nếu bật
+        const spellWord = async () => {
+          if (!spellLettersRef.current) return;
+          await delay(200);
+          if (cancelRef.current) return;
+          await spellAsync(card.word, "en-US", rateRef.current, () => cancelRef.current);
+        };
+
         // Đọc nghĩa tiếng Việt (kèm từ loại nếu bật, vd "danh từ, quả táo")
         const speakVietnamese = async () => {
           const posVi = readPosRef.current ? posToVietnamese(card.partOfSpeech) : "";
@@ -216,21 +237,27 @@ export function ReadAllButton({ cards }: ReadAllButtonProps) {
         };
 
         if (englishOnlyRef.current) {
-          // Chỉ đọc tiếng Anh
+          // Chỉ đọc tiếng Anh (kèm đánh vần nếu bật)
           await speakEnglish();
+          if (cancelRef.current) break;
+          await spellWord();
           if (cancelRef.current) break;
           await delay(250);
         } else if (vietnameseFirstRef.current) {
-          // Đọc tiếng Việt trước → tiếng Anh
+          // Đọc tiếng Việt trước → tiếng Anh → đánh vần
           await speakVietnamese();
           if (cancelRef.current) break;
           await delay(250);
           await speakEnglish();
           if (cancelRef.current) break;
+          await spellWord();
+          if (cancelRef.current) break;
           await delay(450);
         } else {
-          // Mặc định: tiếng Anh trước → tiếng Việt
+          // Mặc định: tiếng Anh → đánh vần → tiếng Việt
           await speakEnglish();
+          if (cancelRef.current) break;
+          await spellWord();
           if (cancelRef.current) break;
           await delay(250);
           await speakVietnamese();
@@ -360,6 +387,25 @@ export function ReadAllButton({ cards }: ReadAllButtonProps) {
             </span>
             <Repeat2 className="h-4 w-4 text-muted-foreground" />
             <span>Đọc mỗi từ 2 lần</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={toggleSpell}
+            className="mt-1 flex w-full items-center gap-2.5 rounded-lg px-1 py-1.5 text-sm hover:bg-accent"
+          >
+            <span
+              className={cn(
+                "flex h-5 w-5 items-center justify-center rounded-md border",
+                spellLetters
+                  ? "border-primary bg-primary text-primary-foreground"
+                  : "border-input",
+              )}
+            >
+              {spellLetters ? <Check className="h-3.5 w-3.5" /> : null}
+            </span>
+            <SpellCheck className="h-4 w-4 text-muted-foreground" />
+            <span>Đánh vần từng chữ</span>
           </button>
 
           <button
