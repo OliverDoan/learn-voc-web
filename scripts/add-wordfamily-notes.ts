@@ -14,6 +14,7 @@ const prisma = new PrismaClient();
 const DRY = process.env.APPLY !== "1";
 const MARK_FAM = "📚 Cùng họ từ";
 const MARK_REL = "🔗 Từ liên quan";
+const MARK_BAM = "🇬🇧🇺🇸 Anh–Mỹ";
 
 // Word family (A: derivation đổi từ loại, B: từ ghép cùng gốc, C: borderline).
 const FAMILIES: string[][] = [
@@ -48,6 +49,10 @@ const FAMILIES: string[][] = [
   ["room", "roommate"],
   ["stir-fry", "stir"],
   ["secretary", "secret"],
+  ["health", "unhealthy"],
+  ["pain", "painful", "painkiller"],
+  ["forest", "rainforest"],
+  ["bicycle", "tricycle", "cyclist"],
 ];
 
 // Từ liên quan (đồng nghĩa / cùng trường nghĩa). Mỗi nhóm cần >= 2 deck mới ghi.
@@ -59,7 +64,7 @@ const RELATED: string[][] = [
   ["yummy", "tasty", "delicious"], // ngon
   ["awful", "nasty", "terrible", "crappy"], // tệ / kinh khủng
   ["visitor", "tourist", "guest"], // khách / du khách
-  ["scared", "nervous"], // sợ / lo lắng
+  ["scared", "nervous", "anxious", "fear"], // sợ / lo lắng
   ["bustling", "lively", "vibrant"], // nhộn nhịp / sôi động
   ["crowded", "cramped"], // đông đúc / chật chội
   ["district", "neighbourhood", "area", "block"], // khu vực / khu phố
@@ -88,7 +93,51 @@ const RELATED: string[][] = [
   ["sweet", "savoury", "spicy", "oily", "sour"], // vị (hương vị)
   ["hangry", "thirsty", "hunger"], // đói / khát
   ["crop", "plant", "harvest"], // trồng trọt
+  ["coach", "trainer"], // huấn luyện viên
+  ["mountain", "hill", "valley"], // địa hình: núi / đồi / thung lũng
+  ["fast", "quickly", "speedy"], // nhanh
+  ["fix", "repair"], // sửa chữa
+  ["prevent", "protect"], // ngăn ngừa / bảo vệ
+  ["beautiful", "gorgeous"], // đẹp
+  ["mindful", "meditate"], // chú tâm / thiền
+  ["damage", "injure", "hurt"], // gây hại / làm bị thương
+  ["exercise", "practice", "train"], // tập luyện / rèn luyện
+  ["vehicle", "motorbike", "truck"], // phương tiện
+  ["exhausted", "tiring"], // mệt / kiệt sức
 ];
+
+// Biến thể Anh–Anh (BrE) ↔ Anh–Mỹ (AmE): từ khác hẳn (flat↔apartment) hoặc khác chính tả.
+// Key = word (lowercase), value = phần ghi sau marker. Ghi cho MỌI card có word đó.
+const BRIT_AMER: Record<string, string> = {
+  // Khác từ vựng
+  flat: "AmE: apartment",
+  pavement: "AmE: sidewalk",
+  rubbish: "AmE: garbage / trash",
+  takeaway: "AmE: takeout",
+  chemist: "AmE: drugstore (dược sĩ: pharmacist)",
+  footballer: "AmE: soccer player (football = soccer)",
+  motorbike: "AmE: motorcycle",
+  truck: "BrE: lorry",
+  timetable: "AmE: schedule",
+  primary: "AmE: elementary (school)",
+  mathematics: "AmE: math (BrE tắt: maths)",
+  "film maker": "AmE hay dùng: movie (thay cho film)",
+  // Khác chính tả
+  neighbour: "AmE (chính tả): neighbor",
+  neighbourhood: "AmE (chính tả): neighborhood",
+  centre: "AmE (chính tả): center",
+  favourite: "AmE (chính tả): favorite",
+  litre: "AmE (chính tả): liter",
+  savoury: "AmE (chính tả): savory",
+  cosy: "AmE (chính tả): cozy",
+  ageing: "AmE (chính tả): aging",
+  memorise: "AmE (chính tả): memorize",
+  enroll: "BrE (chính tả): enrol",
+  travelling: "AmE (chính tả): traveling",
+  practice: "BrE động từ (chính tả): practise",
+  racquet: "AmE (chính tả): racket",
+  packet: "AmE thường: pack",
+};
 
 function unitNum(deckName: string): number {
   const m = deckName.match(/Unit (\d+)/);
@@ -111,7 +160,12 @@ function stripMarkers(note: string | null): string {
   if (!note) return "";
   return note
     .split("\n")
-    .filter((line) => !line.startsWith(MARK_FAM) && !line.startsWith(MARK_REL))
+    .filter(
+      (line) =>
+        !line.startsWith(MARK_FAM) &&
+        !line.startsWith(MARK_REL) &&
+        !line.startsWith(MARK_BAM),
+    )
     .join("\n")
     .trim();
 }
@@ -166,9 +220,13 @@ async function main() {
     const rel = relRel.get(c.id);
     if (fam) lines.push(formatLine(MARK_FAM, fam));
     if (rel) lines.push(formatLine(MARK_REL, rel));
+    const bam = BRIT_AMER[c.word.trim().toLowerCase()];
+    if (bam) lines.push(`${MARK_BAM}: ${bam}`);
 
     const newNote = [base, ...lines].filter(Boolean).join("\n") || null;
-    const hadMarker = !!c.note && (c.note.includes(MARK_FAM) || c.note.includes(MARK_REL));
+    const hadMarker =
+      !!c.note &&
+      (c.note.includes(MARK_FAM) || c.note.includes(MARK_REL) || c.note.includes(MARK_BAM));
     if (newNote !== (c.note ?? null) && (lines.length || hadMarker)) {
       changed++;
       console.log(`U${unitNum(c.deck.name)} ${c.word.padEnd(16)} => ${newNote?.replace(/\n/g, " ⏎ ")}`);

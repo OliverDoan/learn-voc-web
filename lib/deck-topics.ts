@@ -10,6 +10,8 @@ const TOPIC_NAMES: Record<number, string> = {
   1: "Chi tiêu, Thủ đô & Nơi ở",
   2: "Du lịch, Văn hoá & Thời tiết",
   3: "Ẩm thực & Ăn uống lành mạnh",
+  4: "Sức khỏe",
+  5: "Thể thao & Giao thông",
 };
 
 export interface DeckTopicGroup {
