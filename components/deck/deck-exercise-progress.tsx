@@ -29,10 +29,14 @@ export function DeckExerciseProgress({ deckId, exercises }: DeckExerciseProgress
   if (exercises.length === 0) return null;
 
   const doneCount = exercises.filter((e) => e.done).length;
-  const required = requiredExerciseCount(exercises.length);
-  // Đủ điều kiện mở khóa: chỉ cần làm ≥ số dạng tối thiểu (cho phép thiếu 1 dạng).
-  const canUnlock = doneCount >= required;
-  const remaining = Math.max(0, required - doneCount);
+  // Chỉ dạng BẮT BUỘC mới tính vào điều kiện mở khóa (bỏ dạng tuỳ chọn như Phát âm).
+  const mandatory = exercises.filter((e) => !e.optional);
+  const mandatoryBase = mandatory.length > 0 ? mandatory : exercises;
+  const mandatoryDone = mandatoryBase.filter((e) => e.done).length;
+  const required = requiredExerciseCount(mandatoryBase.length);
+  // Đủ điều kiện mở khóa: chỉ cần làm ≥ số dạng bắt buộc tối thiểu (cho phép thiếu 1 dạng).
+  const canUnlock = mandatoryDone >= required;
+  const remaining = Math.max(0, required - mandatoryDone);
 
   return (
     <div className="mb-6 rounded-2xl border bg-card">
@@ -92,6 +96,11 @@ export function DeckExerciseProgress({ deckId, exercises }: DeckExerciseProgress
                 <span className="min-w-0 flex-1 truncate font-medium text-foreground">
                   {ex.label}
                 </span>
+                {ex.optional ? (
+                  <span className="shrink-0 rounded-full bg-muted px-1.5 py-0.5 text-[10px] font-medium text-muted-foreground">
+                    tuỳ chọn
+                  </span>
+                ) : null}
                 {showAccuracy ? (
                   <span
                     className={cn(
@@ -113,9 +122,10 @@ export function DeckExerciseProgress({ deckId, exercises }: DeckExerciseProgress
 
           {!canUnlock ? (
             <p className="mt-3 text-xs text-muted-foreground">
-              Nhấn vào từng ô để làm ngay dạng đó. Chỉ cần làm {required}/{exercises.length} dạng
-              (dạng có chấm điểm cần đạt ≥ {EXERCISE_PASS_ACCURACY}%) để mở khóa nút &ldquo;Đánh dấu
-              học xong&rdquo; — còn thiếu {remaining} dạng.
+              Nhấn vào từng ô để làm ngay dạng đó. Chỉ cần làm {required}/{mandatoryBase.length} dạng
+              bắt buộc (dạng có chấm điểm cần đạt ≥ {EXERCISE_PASS_ACCURACY}%) để mở khóa nút
+              &ldquo;Đánh dấu học xong&rdquo; — còn thiếu {remaining} dạng. Dạng
+              &ldquo;tuỳ chọn&rdquo; như Phát âm không bắt buộc.
             </p>
           ) : null}
         </div>

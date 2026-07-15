@@ -37,6 +37,8 @@ export interface ActivityDef {
   label: string;
   /** true = cần đạt accuracy ≥ ngưỡng; false = chỉ cần hoàn thành 1 lần. */
   scored: boolean;
+  /** true = dạng TUỲ CHỌN, không bắt buộc để mở khóa deck (vẫn làm được bình thường). */
+  optional?: boolean;
 }
 
 /** Danh sách tất cả dạng hoạt động của một deck (thứ tự hiển thị). */
@@ -51,7 +53,8 @@ export const DECK_ACTIVITIES: readonly ActivityDef[] = [
   { key: "word-formation", label: "Biến đổi từ", scored: true },
   { key: "matching", label: "Ghép cặp", scored: false },
   { key: "test", label: "Làm bài", scored: false },
-  { key: "pronounce", label: "Phát âm", scored: true },
+  // Phát âm: TUỲ CHỌN — không bắt buộc để mở khóa deck.
+  { key: "pronounce", label: "Phát âm", scored: true, optional: true },
 ];
 
 const ACTIVITY_BY_KEY = new Map(DECK_ACTIVITIES.map((a) => [a.key, a]));
@@ -76,6 +79,22 @@ export function activityHref(key: DeckActivityKey | string, deckId: string): str
 
 export function getActivityDef(key: string): ActivityDef | undefined {
   return ACTIVITY_BY_KEY.get(key as DeckActivityKey);
+}
+
+/** Dạng bài này có tuỳ chọn (không bắt buộc để mở khóa) không? */
+export function isOptionalActivity(key: DeckActivityKey): boolean {
+  return ACTIVITY_BY_KEY.get(key)?.optional === true;
+}
+
+/**
+ * Tập dạng BẮT BUỘC (bỏ dạng tuỳ chọn như Phát âm) dùng để tính điều kiện mở khóa.
+ * Nếu deck chỉ toàn dạng tuỳ chọn thì fallback về toàn bộ danh sách truyền vào.
+ */
+export function mandatoryActivities(
+  keys: readonly DeckActivityKey[],
+): DeckActivityKey[] {
+  const mandatory = keys.filter((k) => !isOptionalActivity(k));
+  return mandatory.length > 0 ? mandatory : [...keys];
 }
 
 export const DECK_ACTIVITY_KEYS = DECK_ACTIVITIES.map((a) => a.key);
@@ -149,8 +168,8 @@ export function isActivityDone(
 
 /**
  * Đã đủ điều kiện mở khóa deck chưa?
- * Nới điều kiện: chỉ cần làm được ≥ {@link requiredExerciseCount} dạng khả dụng
- * (thiếu tối đa {@link EXERCISE_UNLOCK_ALLOWANCE} dạng, tức 9/10) là đủ.
+ * - Chỉ tính các dạng BẮT BUỘC (bỏ dạng tuỳ chọn như Phát âm).
+ * - Nới điều kiện: cho phép thiếu tối đa {@link EXERCISE_UNLOCK_ALLOWANCE} dạng bắt buộc.
  */
 export function allExercisesDone(
   cards: readonly Card[],
@@ -159,8 +178,9 @@ export function allExercisesDone(
 ): boolean {
   const eligible = eligibleActivities(cards, ctx);
   if (eligible.length === 0) return false;
-  const doneCount = eligible.filter((k) => isActivityDone(k, records)).length;
-  return doneCount >= requiredExerciseCount(eligible.length);
+  const mandatory = mandatoryActivities(eligible);
+  const doneCount = mandatory.filter((k) => isActivityDone(k, records)).length;
+  return doneCount >= requiredExerciseCount(mandatory.length);
 }
 
 /** Trạng thái 1 dạng bài tập khả dụng (để hiển thị thanh progress). */
@@ -168,6 +188,8 @@ export interface ExerciseStatus {
   key: DeckActivityKey;
   label: string;
   scored: boolean;
+  /** Dạng tuỳ chọn — không bắt buộc để mở khóa deck. */
+  optional: boolean;
   done: boolean;
   bestAccuracy: number | null;
   // ID các thẻ làm sai ở lần gần nhất (để đánh dấu khi làm lại)
@@ -181,20 +203,24 @@ export function buildExerciseStatus(
   ctx: ActivityContext = {},
 ): { exercises: ExerciseStatus[]; allDone: boolean } {
   const byKey = new Map(records.map((r) => [r.activity, r]));
-  const exercises = eligibleActivities(cards, ctx).map((key) => {
+  const eligible = eligibleActivities(cards, ctx);
+  const exercises = eligible.map((key) => {
     const def = ACTIVITY_BY_KEY.get(key)!;
     return {
       key,
       label: def.label,
       scored: def.scored,
+      optional: def.optional === true,
       done: isActivityDone(key, records),
       bestAccuracy: byKey.get(key)?.bestAccuracy ?? null,
       wrongCardIds: parseWrongCardIds(byKey.get(key)?.wrongCardIds),
     };
   });
-  const doneCount = exercises.filter((e) => e.done).length;
+  // Điều kiện mở khóa chỉ tính dạng bắt buộc (bỏ dạng tuỳ chọn).
+  const mandatory = mandatoryActivities(eligible);
+  const mandatoryDone = mandatory.filter((k) => isActivityDone(k, records)).length;
   return {
     exercises,
-    allDone: exercises.length > 0 && doneCount >= requiredExerciseCount(exercises.length),
+    allDone: eligible.length > 0 && mandatoryDone >= requiredExerciseCount(mandatory.length),
   };
 }

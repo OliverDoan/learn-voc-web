@@ -60,6 +60,8 @@ export interface DeckExerciseStatus {
   key: string;
   label: string;
   scored: boolean;
+  // Dạng tuỳ chọn — không bắt buộc để mở khóa deck (vd: Phát âm)
+  optional: boolean;
   done: boolean;
   bestAccuracy: number | null;
   // ID các thẻ làm sai ở lần gần nhất (để đánh dấu "lần trước bạn sai từ này")

@@ -153,32 +153,53 @@ describe("allExercisesDone & buildExerciseStatus", () => {
     expect(buildExerciseStatus(cards, records).allDone).toBe(true);
   });
 
-  it("thiếu 2 dạng → chưa đủ mở khóa", () => {
-    const cards = [makeCard()]; // 4 dạng khả dụng → cần 3/4
+  it("thiếu 2 dạng bắt buộc → chưa đủ mở khóa", () => {
+    const cards = [makeCard()]; // 3 dạng bắt buộc (bỏ Phát âm) → cần 2/3
     const records: ActivityRecord[] = [
       { activity: "flashcards", bestAccuracy: null },
-      { activity: "typing", bestAccuracy: 70 }, // < 80
-      { activity: "listening", bestAccuracy: 100 },
-      { activity: "pronounce", bestAccuracy: 50 }, // < 80
+      { activity: "typing", bestAccuracy: 70 }, // < 80 (thiếu)
+      { activity: "listening", bestAccuracy: 50 }, // < 80 (thiếu)
+      { activity: "pronounce", bestAccuracy: 80 }, // tuỳ chọn, không tính
     ];
     expect(allExercisesDone(cards, records)).toBe(false);
     expect(buildExerciseStatus(cards, records).allDone).toBe(false);
   });
 
-  it("deck có truyện (5 dạng): thiếu 1 vẫn mở khóa, thiếu 2 thì không", () => {
-    const cards = [makeCard()]; // + story-fill → 5 dạng, cần 4/5
+  it("deck có truyện: bắt buộc = flashcards/typing/listening/story-fill (bỏ Phát âm)", () => {
+    const cards = [makeCard()]; // + story-fill → 4 dạng bắt buộc, cần 3/4
     const base: ActivityRecord[] = [
       { activity: "flashcards", bestAccuracy: null },
       { activity: "typing", bestAccuracy: 85 },
       { activity: "listening", bestAccuracy: 100 },
-      { activity: "pronounce", bestAccuracy: 80 },
+      { activity: "pronounce", bestAccuracy: 80 }, // tuỳ chọn
     ];
-    // Thiếu story-fill (1 dạng) → vẫn đủ mở khóa
+    // Thiếu story-fill (1 dạng bắt buộc) → vẫn đủ mở khóa
     expect(allExercisesDone(cards, base, { hasStoryWithWords: true })).toBe(true);
-    // Thiếu thêm 1 dạng nữa (pronounce dưới ngưỡng) → không đủ
+    // Thiếu thêm 1 dạng bắt buộc nữa (listening dưới ngưỡng) → không đủ
     const missTwo = base.map((r) =>
-      r.activity === "pronounce" ? { ...r, bestAccuracy: 50 } : r,
+      r.activity === "listening" ? { ...r, bestAccuracy: 50 } : r,
     );
     expect(allExercisesDone(cards, missTwo, { hasStoryWithWords: true })).toBe(false);
+  });
+});
+
+describe("Phát âm là dạng tuỳ chọn (không bắt buộc mở khóa)", () => {
+  it("buildExerciseStatus đánh dấu pronounce optional, dạng khác thì không", () => {
+    const { exercises } = buildExerciseStatus([makeCard()], []);
+    expect(exercises.find((e) => e.key === "pronounce")?.optional).toBe(true);
+    expect(exercises.find((e) => e.key === "typing")?.optional).toBe(false);
+    expect(exercises.find((e) => e.key === "flashcards")?.optional).toBe(false);
+  });
+
+  it("bỏ qua Phát âm + thiếu 1 dạng bắt buộc → vẫn mở khóa (Phát âm không tính)", () => {
+    const cards = [makeCard()]; // bắt buộc: flashcards, typing, listening → cần 2/3
+    const records: ActivityRecord[] = [
+      { activity: "flashcards", bestAccuracy: null }, // done
+      { activity: "typing", bestAccuracy: 90 }, // done
+      { activity: "listening", bestAccuracy: 70 }, // < 80 (thiếu 1 bắt buộc)
+      // KHÔNG làm pronounce
+    ];
+    expect(allExercisesDone(cards, records)).toBe(true);
+    expect(buildExerciseStatus(cards, records).allDone).toBe(true);
   });
 });
