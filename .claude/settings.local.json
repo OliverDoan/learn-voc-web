@@ -153,7 +153,10 @@
       "Bash(pnpm add:deck *)",
       "Bash(pnpm data:export)",
       "Bash(git -C /Users/doanvietthuan/Documents/home/learn-voc-web status --short)",
-      "Bash(git -C /Users/doanvietthuan/Documents/home/learn-voc-web status)"
+      "Bash(git -C /Users/doanvietthuan/Documents/home/learn-voc-web status)",
+      "Bash(echo \"apply exit=$?\")",
+      "Bash(echo \"export exit=$?\")",
+      "Bash(APPLY=1 npx tsx --env-file=.env scripts/clear-tags-new-units.ts)"
     ]
   }
 }
