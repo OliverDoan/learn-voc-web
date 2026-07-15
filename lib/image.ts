@@ -46,9 +46,6 @@ export async function fileToAvatarDataUrl(file: File): Promise<string> {
 // ảnh nhỏ hơn giữ nguyên (không phóng to). Không hạ xuống 1024 kẻo bị mờ.
 export const STORY_IMAGE_MAX_WIDTH = 1920;
 
-// Tỉ lệ khung mặc định cho ảnh minh hoạ truyện (banner ngang).
-export const STORY_IMAGE_ASPECT = 16 / 9;
-
 const ACCEPTED_TYPES_LABEL = "JPG, PNG, WEBP hoặc GIF";
 
 /**
