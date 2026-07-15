@@ -156,6 +156,14 @@ export default function WordRootsPage() {
     [groups],
   );
 
+  // Danh sách phẳng theo đúng thứ tự hiển thị (từ gốc rồi các từ phái sinh)
+  // để nút mũi tên / phím ← → chuyển qua lại giữa các từ.
+  const flatCards = useMemo<CardWithDeck[]>(
+    () =>
+      groups.flatMap((g) => (g.rootCard ? [g.rootCard, ...g.words] : g.words)),
+    [groups],
+  );
+
   if (isLoading) {
     return (
       <div className="flex min-h-[50vh] items-center justify-center">
@@ -252,6 +260,8 @@ export default function WordRootsPage() {
         open={!!detailCard}
         onOpenChange={(o) => !o && setDetailCard(null)}
         card={detailCard ?? undefined}
+        cards={flatCards}
+        onNavigate={setDetailCard}
       />
     </div>
   );

@@ -365,6 +365,8 @@ export default function AllWordsPage() {
         open={!!detailCard}
         onOpenChange={(o) => !o && setDetailCard(undefined)}
         card={detailCard}
+        cards={filteredCards}
+        onNavigate={setDetailCard}
       />
     </div>
   );

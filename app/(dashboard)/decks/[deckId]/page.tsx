@@ -966,6 +966,8 @@ export default function DeckDetailPage({ params }: PageProps) {
         open={!!detailCard}
         onOpenChange={(o) => !o && setDetailCard(undefined)}
         card={detailCard}
+        cards={displayCards}
+        onNavigate={setDetailCard}
         onEdit={(c) => {
           setDetailCard(undefined);
           setEditingCard(c);

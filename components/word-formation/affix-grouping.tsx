@@ -81,6 +81,13 @@ export function AffixGrouping() {
 
   const totalInMode = [...affixMap.values()].reduce((s, l) => s + l.length, 0);
 
+  // Danh sách phẳng theo đúng thứ tự hiển thị để điều hướng bằng nút mũi tên / phím ← →.
+  const flatCards = groups.flatMap((group) =>
+    affixes
+      .filter((a) => a.group === group && (affixMap.get(a.id)?.length ?? 0) > 0)
+      .flatMap((a) => affixMap.get(a.id) ?? []),
+  );
+
   return (
     <div className="space-y-6">
       <div className="flex flex-wrap items-center gap-2">
@@ -143,6 +150,8 @@ export function AffixGrouping() {
         open={!!detailCard}
         onOpenChange={(o) => !o && setDetailCard(null)}
         card={detailCard ?? undefined}
+        cards={flatCards}
+        onNavigate={setDetailCard}
       />
     </div>
   );

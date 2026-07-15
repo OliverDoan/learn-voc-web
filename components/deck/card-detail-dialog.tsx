@@ -1,6 +1,15 @@
 "use client";
 
-import { Blocks, Pencil, Sprout, Trash2, Volume2 } from "lucide-react";
+import { useEffect } from "react";
+import {
+  Blocks,
+  ChevronLeft,
+  ChevronRight,
+  Pencil,
+  Sprout,
+  Trash2,
+  Volume2,
+} from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -21,21 +30,46 @@ import {
 import { speak } from "@/lib/tts";
 import type { Card } from "@/lib/types";
 
-interface CardDetailDialogProps {
+interface CardDetailDialogProps<T extends Card = Card> {
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  card?: Card;
-  onEdit?: (card: Card) => void;
-  onDelete?: (card: Card) => void;
+  card?: T;
+  /** Danh sách thẻ để điều hướng qua nút mũi tên / phím ← →. */
+  cards?: T[];
+  /** Gọi khi bấm sang thẻ trước/tiếp theo. */
+  onNavigate?: (card: T) => void;
+  onEdit?: (card: T) => void;
+  onDelete?: (card: T) => void;
 }
 
-export function CardDetailDialog({
+export function CardDetailDialog<T extends Card = Card>({
   open,
   onOpenChange,
   card,
+  cards,
+  onNavigate,
   onEdit,
   onDelete,
-}: CardDetailDialogProps) {
+}: CardDetailDialogProps<T>) {
+  // Xác định vị trí thẻ hiện tại trong danh sách để tính prev/next.
+  const index =
+    card && cards ? cards.findIndex((c) => c.id === card.id) : -1;
+  const canNavigate = !!onNavigate && index >= 0 && (cards?.length ?? 0) > 1;
+  const prevCard = canNavigate && index > 0 ? cards![index - 1] : undefined;
+  const nextCard =
+    canNavigate && index < cards!.length - 1 ? cards![index + 1] : undefined;
+
+  // Điều hướng bằng phím mũi tên trái/phải khi dialog đang mở.
+  useEffect(() => {
+    if (!open || !canNavigate) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft" && prevCard) onNavigate!(prevCard);
+      else if (e.key === "ArrowRight" && nextCard) onNavigate!(nextCard);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open, canNavigate, prevCard, nextCard, onNavigate]);
+
   if (!card) return null;
 
   const tags = parseTags(card.tags);
@@ -48,6 +82,30 @@ export function CardDetailDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
+      {canNavigate ? (
+        <>
+          <button
+            type="button"
+            onClick={() => prevCard && onNavigate!(prevCard)}
+            disabled={!prevCard}
+            aria-label="Từ trước"
+            title="Từ trước (←)"
+            className="absolute left-1 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border bg-card/90 text-foreground shadow-md backdrop-blur transition hover:bg-accent disabled:pointer-events-none disabled:opacity-30 sm:left-auto sm:right-full sm:mr-3"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+          <button
+            type="button"
+            onClick={() => nextCard && onNavigate!(nextCard)}
+            disabled={!nextCard}
+            aria-label="Từ tiếp theo"
+            title="Từ tiếp theo (→)"
+            className="absolute right-1 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border bg-card/90 text-foreground shadow-md backdrop-blur transition hover:bg-accent disabled:pointer-events-none disabled:opacity-30 sm:right-auto sm:left-full sm:ml-3"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </button>
+        </>
+      ) : null}
       <DialogContent onClose={() => onOpenChange(false)} className="max-w-lg">
         <DialogHeader>
           <DialogTitle className="flex flex-wrap items-center gap-2">
