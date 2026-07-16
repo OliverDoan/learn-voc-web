@@ -446,6 +446,7 @@ export default function AllStoriesPage() {
                   <img
                     src={story.imageUrl}
                     alt={story.title}
+                    loading="lazy"
                     className="mb-5 h-auto w-full rounded-xl object-contain shadow-md"
                   />
                 ) : null}

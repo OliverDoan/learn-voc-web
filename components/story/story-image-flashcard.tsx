@@ -49,7 +49,7 @@ export function StoryImageFlashcard({
         {/* Mặt trước: ảnh (quyết định chiều cao của thẻ) */}
         <div className="backface-hidden relative overflow-hidden rounded-2xl shadow-[0_24px_64px_rgba(0,13,139,.08)]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={story.imageUrl} alt={story.title} className="h-auto w-full object-contain" />
+          <img src={story.imageUrl} alt={story.title} loading="lazy" className="h-auto w-full object-contain" />
           <span className="absolute left-3 top-3 inline-flex max-w-[calc(100%-4rem)] items-center gap-1 truncate rounded-full bg-black/60 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
             <BookOpen className="h-3 w-3 shrink-0" />
             {story.deck.name}

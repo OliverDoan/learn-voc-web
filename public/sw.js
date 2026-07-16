@@ -4,7 +4,7 @@ const SHELL_CACHE = `vocalearn-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `vocalearn-runtime-${CACHE_VERSION}`;
 const DICT_CACHE = `vocalearn-dict-${CACHE_VERSION}`;
 
-const SHELL_URLS = ["/", "/decks", "/stats", "/achievements", "/icons/icon.svg", "/manifest.webmanifest"];
+const SHELL_URLS = ["/", "/decks", "/icons/icon.svg", "/manifest.webmanifest"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(

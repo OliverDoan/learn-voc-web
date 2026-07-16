@@ -7,15 +7,44 @@ import { extractWords } from "@/lib/story-parser";
 export async function GET(req: NextRequest) {
   try {
     const deckId = new URL(req.url).searchParams.get("deckId");
+    const where = deckId ? { deckId } : {};
+
+    // KHÔNG select `imageUrl` (ảnh base64 ~700KB/truyện): nếu nhồi cả ảnh vào danh
+    // sách, payload phình lên hàng chục MB khiến API rất chậm. Ảnh phục vụ riêng qua
+    // GET /api/stories/[id]/image (lazy + cache được).
     const stories = await prisma.story.findMany({
-      where: deckId ? { deckId } : {},
+      where,
       orderBy: { createdAt: "desc" },
-      include: {
+      select: {
+        id: true,
+        deckId: true,
+        title: true,
+        content: true,
+        contentEn: true,
+        audioUrl: true,
+        createdAt: true,
+        updatedAt: true,
         _count: { select: { storyCards: true } },
         deck: { select: { id: true, name: true } },
       },
     });
-    return ok(stories);
+
+    // Truyện nào có ảnh (query nhẹ, chỉ lấy id — không tải base64 về server).
+    const imaged = await prisma.story.findMany({
+      where: { ...where, NOT: { imageUrl: null } },
+      select: { id: true },
+    });
+    const hasImage = new Set(imaged.map((s) => s.id));
+
+    // `imageUrl` trả về là ĐƯỜNG DẪN endpoint (kèm ?v=updatedAt để cache-bust khi đổi ảnh).
+    const result = stories.map((s) => ({
+      ...s,
+      imageUrl: hasImage.has(s.id)
+        ? `/api/stories/${s.id}/image?v=${s.updatedAt.getTime()}`
+        : null,
+    }));
+
+    return ok(result);
   } catch (error) {
     return handleError(error);
   }
