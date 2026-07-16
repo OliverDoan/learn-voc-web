@@ -1,5 +1,5 @@
 // VocaLearn service worker — minimal offline shell + Dictionary API cache.
-const CACHE_VERSION = "v1";
+const CACHE_VERSION = "v2";
 const SHELL_CACHE = `vocalearn-shell-${CACHE_VERSION}`;
 const RUNTIME_CACHE = `vocalearn-runtime-${CACHE_VERSION}`;
 const DICT_CACHE = `vocalearn-dict-${CACHE_VERSION}`;
@@ -50,6 +50,11 @@ self.addEventListener("fetch", (event) => {
 
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
+
+  // Bỏ qua RSC payload / prefetch điều hướng của Next.js: để trình duyệt tự xử lý.
+  // Các request này có query ?_rsc=<hash> khác nhau nên không bao giờ hit cache —
+  // đi qua SW chỉ nhân đôi request và làm nghẽn hàng đợi kết nối.
+  if (url.searchParams.has("_rsc") || req.headers.get("RSC") === "1") return;
 
   if (isDictionaryProxy(url)) {
     event.respondWith(

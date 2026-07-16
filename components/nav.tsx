@@ -33,13 +33,16 @@ interface NavItem {
   label: string;
   icon: typeof Home;
   mobile?: boolean;
+  /** Chỉ prefetch tự động vài route hay dùng; còn lại chỉ prefetch khi hover
+   *  (tránh bắn ~15 request RSC cùng lúc gây nghẽn hàng đợi kết nối). */
+  prefetch?: boolean;
 }
 
 const items: NavItem[] = [
-  { href: "/", label: "Trang chủ", icon: Home, mobile: true },
+  { href: "/", label: "Trang chủ", icon: Home, mobile: true, prefetch: true },
   { href: "/search", label: "Tra từ", icon: Search, mobile: false },
-  { href: "/decks", label: "Decks", icon: Layers, mobile: true },
-  { href: "/stories", label: "Truyện chêm", icon: BookMarked, mobile: false },
+  { href: "/decks", label: "Decks", icon: Layers, mobile: true, prefetch: true },
+  { href: "/stories", label: "Truyện chêm", icon: BookMarked, mobile: false, prefetch: true },
   { href: "/words", label: "Tất cả từ", icon: Library, mobile: false },
   { href: "/favorites", label: "Yêu thích", icon: Star, mobile: false },
   { href: "/history", label: "Lịch sử", icon: History, mobile: false },
@@ -138,6 +141,7 @@ export function Nav() {
             <Link
               key={item.href}
               href={item.href}
+              prefetch={item.prefetch ?? false}
               title={collapsed ? item.label : undefined}
               className={cn(
                 "flex items-center rounded-[10px] text-sm font-medium transition-colors",
@@ -156,6 +160,7 @@ export function Nav() {
 
       <Link
         href="/settings"
+        prefetch={false}
         title={collapsed ? progress?.displayName?.trim() || "Hồ sơ của bạn" : undefined}
         className={cn(
           "mt-auto flex items-center rounded-[10px] border transition-colors",
@@ -213,6 +218,7 @@ export function MobileNav() {
                   <Link
                     key={item.href}
                     href={item.href}
+                    prefetch={item.prefetch ?? false}
                     onClick={() => setMoreOpen(false)}
                     className={cn(
                       "flex flex-col items-center gap-1.5 rounded-xl p-3 text-center text-xs font-medium transition-colors",
@@ -239,6 +245,7 @@ export function MobileNav() {
               <li key={item.href}>
                 <Link
                   href={item.href}
+                  prefetch={item.prefetch ?? false}
                   className={cn(
                     "flex flex-col items-center gap-1 py-2 text-xs",
                     active ? "text-primary" : "text-muted-foreground",
