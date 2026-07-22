@@ -2,6 +2,7 @@ import { NextRequest } from "next/server";
 import { prisma } from "@/lib/db";
 import { fail, handleError, ok } from "@/lib/api-helpers";
 import { cardCreateSchema } from "@/lib/schemas";
+import { getTopicDeckIds } from "@/lib/daily-queue";
 import { stringifyTags } from "@/lib/utils";
 import { stringifyWordForms, stringifyWordFormMeanings } from "@/lib/word-forms";
 
@@ -12,9 +13,21 @@ export async function GET(req: NextRequest) {
     const stateFilter = searchParams.get("state");
     const search = searchParams.get("q")?.trim();
 
+    // ?topic=N → lọc thẻ của toàn bộ deck (unit) thuộc topic đó.
+    const topicParam = searchParams.get("topic");
+    const topicDeckIds =
+      topicParam !== null && /^\d+$/.test(topicParam)
+        ? await getTopicDeckIds(Number(topicParam))
+        : null;
+    // Topic hợp lệ nhưng không có deck nào → trả rỗng, tránh query toàn bộ.
+    if (topicDeckIds !== null && topicDeckIds.length === 0) {
+      return ok([]);
+    }
+
     const cards = await prisma.card.findMany({
       where: {
         deletedAt: null,
+        ...(topicDeckIds ? { deckId: { in: topicDeckIds } } : {}),
         ...(deckId ? { deckId } : {}),
         ...(stateFilter ? { state: stateFilter } : {}),
         ...(search

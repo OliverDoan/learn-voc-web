@@ -20,6 +20,7 @@ import { Flashcard } from "@/components/flashcard/flashcard";
 import { useCards } from "@/hooks/use-cards";
 import { useDeck, useRecordDeckActivity } from "@/hooks/use-decks";
 import { speak } from "@/lib/tts";
+import { parseTopicDeckId } from "@/lib/deck-topics";
 import type { Card } from "@/lib/types";
 
 interface PageProps {
@@ -50,9 +51,14 @@ export default function FlashcardsPage({ params }: PageProps) {
     );
   }, [searchParams]);
 
-  const { data: deck } = useDeck(deckId === "all" ? "" : deckId);
+  // deckId ảo "topic-N" → lật thẻ gộp cả topic (5 unit).
+  const topicIndex = parseTopicDeckId(deckId);
+  const isTopic = topicIndex !== null;
+  const isVirtual = deckId === "all" || isTopic;
+
+  const { data: deck } = useDeck(isVirtual ? "" : deckId);
   const { data: allCards, isLoading } = useCards(
-    deckId === "all" ? {} : { deckId },
+    isTopic ? { topic: topicIndex } : deckId === "all" ? {} : { deckId },
   );
 
   // Lọc theo subset (nếu vào từ nút "chọn từ") + bỏ thẻ đã xoá.
@@ -97,7 +103,7 @@ export default function FlashcardsPage({ params }: PageProps) {
   useEffect(() => {
     if (total === 0) return;
     viewedRef.current.add(pos);
-    if (viewedRef.current.size >= total && !fcRecordedRef.current && deckId !== "all") {
+    if (viewedRef.current.size >= total && !fcRecordedRef.current && !isVirtual) {
       fcRecordedRef.current = true;
       recordActivity.mutate({ activity: "flashcards", accuracy: null });
     }
@@ -165,7 +171,7 @@ export default function FlashcardsPage({ params }: PageProps) {
     return () => window.removeEventListener("keydown", onKey);
   }, [goNext, goPrev]);
 
-  const backHref = deckId === "all" ? "/" : `/decks/${deckId}`;
+  const backHref = deckId === "all" ? "/" : isTopic ? `/topic/${topicIndex}` : `/decks/${deckId}`;
 
   if (isLoading) {
     return (

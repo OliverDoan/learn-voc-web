@@ -14,6 +14,7 @@ import { useDeck, useRecordDeckActivity } from "@/hooks/use-decks";
 import { useStudyQueue, useSubmitReview } from "@/hooks/use-study";
 import { previewIntervals } from "@/lib/srs";
 import { speak } from "@/lib/tts";
+import { parseTopicDeckId } from "@/lib/deck-topics";
 import type { Rating } from "@/lib/constants";
 
 interface PageProps {
@@ -29,14 +30,19 @@ export default function StudyPage({ params }: PageProps) {
     return raw.split(",").map((s) => s.trim()).filter(Boolean);
   }, [searchParams]);
   const isSubset = !!subsetIds && subsetIds.length > 0;
+  // deckId ảo "topic-N" → học gộp cả topic (5 unit); API trả toàn bộ thẻ, bỏ khóa & lịch SRS.
+  const topicIndex = parseTopicDeckId(deckId);
+  const isTopic = topicIndex !== null;
+  // Deck "ảo" (không phải deck thật): không kiểm tra khóa, không ghi nhận tiến độ bài tập.
+  const isVirtual = deckId === "all" || isTopic;
   // ?all=1 → ôn trước hạn: toàn bộ thẻ của deck, bỏ qua lịch SRS (chỉ deck thật).
-  const studyAll = !isSubset && deckId !== "all" && searchParams.get("all") === "1";
-  // deckId ảo "all" (ôn liên deck) → thoát về dashboard
-  const backHref = deckId === "all" ? "/" : `/decks/${deckId}`;
+  const studyAll = !isSubset && !isVirtual && searchParams.get("all") === "1";
+  // Điều hướng "Thoát": "all" → dashboard, topic → trang topic, còn lại → trang deck.
+  const backHref = deckId === "all" ? "/" : isTopic ? `/topic/${topicIndex}` : `/decks/${deckId}`;
 
   const { data: queue, isLoading, refetch } = useStudyQueue(deckId, subsetIds, studyAll);
-  // Bỏ qua kiểm tra khóa với ôn liên deck ("all") hoặc ôn tập tập con tự chọn.
-  const { data: deck } = useDeck(deckId === "all" || isSubset ? undefined : deckId);
+  // Bỏ qua kiểm tra khóa với deck ảo ("all"/topic) hoặc ôn tập tập con tự chọn.
+  const { data: deck } = useDeck(isVirtual || isSubset ? undefined : deckId);
   const submit = useSubmitReview();
   const recordActivity = useRecordDeckActivity(deckId);
   const recordedRef = useRef(false);
@@ -134,7 +140,7 @@ export default function StudyPage({ params }: PageProps) {
 
   // Ghi nhận hoàn thành dạng "Học (SRS)" (kèm độ chính xác) khi xong phiên — chỉ cho deck thật.
   useEffect(() => {
-    if (done && !recordedRef.current && deckId !== "all" && total > 0) {
+    if (done && !recordedRef.current && !isVirtual && total > 0) {
       recordedRef.current = true;
       recordActivity.mutate({
         activity: "study",
@@ -162,7 +168,7 @@ export default function StudyPage({ params }: PageProps) {
       <EmptyQueue
         backHref={backHref}
         // Chưa ở chế độ ôn trước hạn + là deck thật → gợi ý ôn toàn bộ deck.
-        studyAllHref={!studyAll && deckId !== "all" ? `/study/${deckId}?all=1` : undefined}
+        studyAllHref={!studyAll && !isVirtual ? `/study/${deckId}?all=1` : undefined}
       />
     );
   }
@@ -202,6 +208,13 @@ export default function StudyPage({ params }: PageProps) {
           <Sparkles className="h-4 w-4 shrink-0" />
           <span>
             Ôn trước hạn: <strong>{total}</strong> từ — toàn bộ deck, bỏ qua lịch SRS. Kết quả vẫn cập nhật vào SRS.
+          </span>
+        </div>
+      ) : isTopic ? (
+        <div className="mb-4 flex w-full items-center gap-2 rounded-lg border border-primary/40 bg-primary/5 px-3 py-2 text-xs text-primary">
+          <Sparkles className="h-4 w-4 shrink-0" />
+          <span>
+            Học cả topic: <strong>{total}</strong> từ — gộp toàn bộ 5 unit, bỏ qua lịch SRS. Kết quả vẫn cập nhật vào SRS.
           </span>
         </div>
       ) : null}

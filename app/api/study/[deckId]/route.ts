@@ -4,8 +4,10 @@ import {
   getCardsByIds,
   getGlobalReviewQueue,
   getReviewQueue,
+  getTopicReviewQueue,
 } from "@/lib/daily-queue";
 import { isDeckUnlocked } from "@/lib/deck-progress";
+import { parseTopicDeckId } from "@/lib/deck-topics";
 
 interface RouteParams {
   params: Promise<{ deckId: string }>;
@@ -32,6 +34,15 @@ export async function GET(req: NextRequest, { params }: RouteParams) {
       const queue = cardIds
         ? await getCardsByIds(cardIds)
         : await getGlobalReviewQueue();
+      return ok(queue);
+    }
+
+    // deckId ảo "topic-N" → gộp toàn bộ thẻ của cả topic (5 unit), bỏ khóa & lịch SRS.
+    const topicIndex = parseTopicDeckId(deckId);
+    if (topicIndex !== null) {
+      const queue = cardIds
+        ? await getCardsByIds(cardIds)
+        : await getTopicReviewQueue(topicIndex);
       return ok(queue);
     }
 

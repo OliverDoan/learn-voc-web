@@ -27,11 +27,14 @@ export interface FavoriteCard extends Card {
 /** Thẻ kèm thông tin deck nguồn (dùng cho trang tổng hợp tất cả từ). */
 export type CardWithDeck = FavoriteCard;
 
-export function useCards(params: { deckId?: string; state?: string; q?: string } = {}) {
+export function useCards(
+  params: { deckId?: string; state?: string; q?: string; topic?: number } = {},
+) {
   const qs = new URLSearchParams();
   if (params.deckId) qs.set("deckId", params.deckId);
   if (params.state) qs.set("state", params.state);
   if (params.q) qs.set("q", params.q);
+  if (params.topic !== undefined) qs.set("topic", String(params.topic));
   const search = qs.toString();
   return useQuery({
     queryKey: ["cards", params],

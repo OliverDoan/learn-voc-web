@@ -1,5 +1,7 @@
 import { prisma } from "./db";
 import { DEFAULT_DAILY_GOAL, SINGLETON_PROGRESS_ID } from "./constants";
+import { getDeckUnitNumber } from "./deck-progress";
+import { topicUnitRange } from "./deck-topics";
 
 export interface QueueCard {
   id: string;
@@ -144,6 +146,39 @@ export async function getGlobalReviewQueue(): Promise<QueueCard[]> {
     : [];
 
   return [...reviewCards, ...newCards].map(toQueueCard);
+}
+
+/**
+ * Lấy id các deck (chưa xoá) thuộc một topic (nhóm 5 unit liên tiếp).
+ * Topic suy diễn từ số Unit trong tên deck — không có cột riêng trong DB.
+ */
+export async function getTopicDeckIds(topicIndex: number): Promise<string[]> {
+  const { from, to } = topicUnitRange(topicIndex);
+  const decks = await prisma.deck.findMany({
+    where: { deletedAt: null },
+    select: { id: true, name: true },
+  });
+  return decks
+    .filter((d) => {
+      const unit = getDeckUnitNumber(d.name);
+      return unit !== null && unit >= from && unit <= to;
+    })
+    .map((d) => d.id);
+}
+
+/**
+ * Hàng đợi ôn tập GỘP CẢ TOPIC (5 unit): lấy TOÀN BỘ thẻ của mọi unit trong
+ * topic, bỏ qua lịch SRS và bỏ qua khóa tuần tự — đúng nghĩa "học 1 lúc tất cả từ".
+ * Kết quả review vẫn cập nhật SRS bình thường.
+ */
+export async function getTopicReviewQueue(topicIndex: number): Promise<QueueCard[]> {
+  const deckIds = await getTopicDeckIds(topicIndex);
+  if (deckIds.length === 0) return [];
+  const cards = await prisma.card.findMany({
+    where: { deckId: { in: deckIds }, deletedAt: null },
+    orderBy: [{ deckId: "asc" }, { order: "asc" }, { createdAt: "asc" }],
+  });
+  return cards.map(toQueueCard);
 }
 
 /** Lấy đúng các thẻ theo danh sách id (cross-deck), giữ thứ tự truyền vào. */

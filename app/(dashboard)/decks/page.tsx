@@ -1,7 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Layers, Plus, Loader2, Search, Upload } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, Layers, Plus, Loader2, Search, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { DeckCard } from "@/components/deck/deck-card";
@@ -94,6 +95,15 @@ export default function DecksPage() {
                   {group.decks.length} deck
                 </span>
                 <div className="h-px flex-1 bg-border" />
+                {group.index !== null ? (
+                  <Link
+                    href={`/topic/${group.index}`}
+                    className="inline-flex shrink-0 items-center gap-1 rounded-full border border-primary/30 px-3 py-1 text-xs font-medium text-primary transition-colors hover:bg-primary/10"
+                  >
+                    Học cả topic
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
+                ) : null}
               </div>
               <div className="flex flex-col gap-2">
                 {group.decks.map((deck) => (
