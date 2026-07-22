@@ -4,7 +4,8 @@ import { use, useMemo } from "react";
 import Link from "next/link";
 import { ArrowLeft, BookOpen, Layers, Loader2, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { DeckCard } from "@/components/deck/deck-card";
+import { TopicWordList } from "@/components/deck/topic-word-list";
+import { useCards } from "@/hooks/use-cards";
 import { useDecks } from "@/hooks/use-decks";
 import {
   groupDecksByTopic,
@@ -21,6 +22,10 @@ export default function TopicPage({ params }: PageProps) {
   const { topicId } = use(params);
   const topicIndex = /^\d+$/.test(topicId) ? Number(topicId) : null;
   const { data: decks, isLoading } = useDecks();
+  // Toàn bộ thẻ của cả topic (gộp 5 unit) để hiển thị danh sách từ.
+  const { data: topicCards } = useCards(
+    topicIndex !== null ? { topic: topicIndex } : {},
+  );
 
   // Các unit (deck) thuộc topic này, đã sắp theo số Unit.
   const group = useMemo(() => {
@@ -123,18 +128,23 @@ export default function TopicPage({ params }: PageProps) {
         </div>
       )}
 
-      {/* Danh sách unit trong topic */}
+      {/* Danh sách từ của cả topic, nhóm theo unit (bấm tên unit để mở deck) */}
       <div className="mb-3 flex items-center gap-3">
         <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
-          Các unit
+          Danh sách từ · {group.decks.length} unit
         </h2>
         <div className="h-px flex-1 bg-border" />
       </div>
-      <div className="flex flex-col gap-2">
-        {group.decks.map((deck) => (
-          <DeckCard key={deck.id} deck={deck} />
-        ))}
-      </div>
+      {topicCards ? (
+        <TopicWordList
+          cards={topicCards}
+          units={group.decks.map((d) => ({ id: d.id, name: d.name }))}
+        />
+      ) : (
+        <div className="flex justify-center py-8">
+          <Loader2 className="h-5 w-5 animate-spin text-muted-foreground" />
+        </div>
+      )}
     </div>
   );
 }
