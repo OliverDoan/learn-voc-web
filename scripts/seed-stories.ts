@@ -29,12 +29,16 @@ Sau vài tháng, tôi trở nên [[confident|tự tin]] hơn và thấy rõ [[pr
   },
   {
     deckName: "Unit 2:",
-    title: "Hành trình đi học của Naruto",
-    content: `Hành trình của Naruto bắt đầu từ những ngày còn ngồi trên ghế nhà trường. Sau khi học [[kindergarten|mẫu giáo]] rồi [[primary|tiểu học]], anh lên bậc [[secondary|trung học]]. Mẹ anh dạy [[mathematics|toán học]], còn bố làm trong ngành [[engineering|kỹ thuật]]; riêng anh lại mê nhất hai [[subject|môn học]] là [[science|khoa học]] và [[art|nghệ thuật]].
+    title: "Ngày đầu đưa em đến trường",
+    content: `Ngày đầu tiên đưa em trai đến [[kindergarten|mẫu giáo]], tôi nhớ lại quãng thời gian học [[primary|tiểu học]] rồi lên [[secondary|trung học]]. Khi lớn hơn, tôi đặc biệt yêu thích [[mathematics|toán học]] và mơ ước theo ngành [[engineering|kỹ thuật]].
 
-Ngày đầu tiên, Naruto khá [[nervous|hồi hộp]] khi thầy cô [[announce|thông báo]] danh sách xếp [[grade|lớp]]. Anh luôn [[attend|đi học]] đầy đủ và hiếm khi [[absent|vắng mặt]]; chỉ ngay trong [[term|học kỳ]] đầu, anh đã trở nên [[popular|được yêu thích]] vì hay giúp đỡ bạn bè.
+Ở trường, mỗi [[subject|môn học]] đều thú vị theo một cách riêng. Tôi thích [[science|khoa học]] vì được làm thí nghiệm, còn [[art|nghệ thuật]] giúp tôi thư giãn sau giờ học.
 
-Mỗi tối, anh đều [[revise|ôn tập]], [[memorise|ghi nhớ]] từ mới và làm cho xong hết [[assignment|bài tập]]. Anh còn [[enroll|đăng ký]] thêm vài lớp để [[continue|tiếp tục]] nâng cao và [[succeed|thành công]]. Dù [[curriculum|chương trình học]] rất nặng và ngày nào cũng phải mặc [[uniform|đồng phục]], anh chưa một lần nghĩ đến chuyện [[drop out|bỏ học]].`,
+Trước ngày giáo viên [[announce|thông báo]] kết quả, tôi rất [[nervous|lo lắng]] vì không biết [[grade|điểm số]] của mình sẽ thế nào. Tôi luôn [[attend|tham dự]] đầy đủ các tiết học và hiếm khi [[absent|vắng mặt]].
+
+Cuối mỗi [[term|học kỳ]], những môn [[popular|phổ biến]] thường có nhiều bài kiểm tra. Tôi dành thời gian [[revise|ôn tập]] bài cũ, [[memorise|ghi nhớ]] từ vựng và hoàn thành mọi [[assignment|bài tập]] đúng hạn.
+
+Năm sau, tôi quyết định [[enroll|đăng ký]] vào một chương trình mới để [[continue|tiếp tục]] việc học. Tôi tin rằng nếu cố gắng, mình sẽ [[succeed|thành công]]. Dù [[curriculum|chương trình học]] khá nặng và phải mặc [[uniform|đồng phục]] mỗi ngày, tôi chưa bao giờ nghĩ đến việc [[drop out|bỏ học]].`,
   },
   {
     deckName: "Unit 3:",

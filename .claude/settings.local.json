@@ -158,7 +158,8 @@
       "Bash(echo \"export exit=$?\")",
       "Bash(APPLY=1 npx tsx --env-file=.env scripts/clear-tags-new-units.ts)",
       "Bash(APPLY=1 npx tsx *)",
-      "Bash(UNIT=\"Unit 1:\" npx tsx --env-file=.env scripts/seed-stories.ts)"
+      "Bash(UNIT=\"Unit 1:\" npx tsx --env-file=.env scripts/seed-stories.ts)",
+      "Bash(UNIT=\"Unit 2:\" pnpm exec *)"
     ]
   }
 }

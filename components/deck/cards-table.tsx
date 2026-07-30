@@ -197,8 +197,8 @@ export function CardsTable({ cards, deck }: CardsTableProps) {
           </Button>
           {menuOpen ? (
             <>
-              <div className="fixed inset-0 z-20" onClick={() => setMenuOpen(false)} />
-              <div className="absolute left-0 top-full z-30 mt-1 w-52 rounded-lg border bg-card p-1.5 shadow-lg">
+              <div className="fixed inset-0 z-40" onClick={() => setMenuOpen(false)} />
+              <div className="absolute left-0 top-full z-50 mt-1 w-52 rounded-lg border bg-popover text-popover-foreground p-1.5 shadow-lg">
                 <p className="px-2 py-1 text-xs font-semibold text-muted-foreground">Hiện cột</p>
                 {BUILTIN.map((b) => (
                   <label
