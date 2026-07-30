@@ -19,11 +19,13 @@ const STORIES: Array<{ deckName: string; title: string; content: string }> = [
   {
     deckName: "Unit 1:",
     title: "Giấc mơ du học",
-    content: `Naruto ấp ủ một [[idea|ý tưởng]]: đi du học [[abroad|ở nước ngoài]] để khám phá một nền [[culture|văn hoá]] mới. Thế nhưng [[language|ngôn ngữ]] lại là rào cản lớn nhất — anh mới chỉ là một [[beginner|người mới bắt đầu]], nên mỗi lần gặp [[foreigner|người nước ngoài]] là anh đâm ra [[shy|nhút nhát]] và [[scared|sợ hãi]].
+    content: `Một ngày, tôi có một [[idea|ý tưởng]] là sẽ đi [[abroad|ở nước ngoài]] để trải nghiệm [[culture|văn hoá]] mới và học một [[language|ngôn ngữ]] khác. Vì chỉ là một [[beginner|người mới bắt đầu]], tôi khá lo khi gặp nhiều [[foreigner|người nước ngoài]].
 
-Để vượt qua [[difficulty|khó khăn]], Naruto đăng ký một [[course|khoá học]] tiếng Anh. Trên lớp, một [[speaker|diễn giả]] bản xứ thường mở những [[conversation|cuộc trò chuyện]] xoay quanh nhiều [[topic|chủ đề]] khác nhau; ban đầu anh rất khó [[follow|theo dõi]] và [[understand|hiểu]] hết.
+Lúc đầu tôi rất [[shy|nhút nhát]] và [[scared|sợ hãi]] vì gặp nhiều [[difficulty|khó khăn]] trong [[course|khoá học]]. Mỗi [[speaker|người nói]] nói quá nhanh nên tôi khó theo kịp [[conversation|cuộc trò chuyện]] và thường mất [[topic|chủ đề]] đang nói.
 
-Quyết tâm [[improve|cải thiện]], anh chăm chỉ học [[vocabulary|từ vựng]] và luyện từng [[skill|kỹ năng]], nhờ vậy ngày càng [[confident|tự tin]] hơn. Sự [[progress|tiến bộ]] thấy rõ: anh đã có thể [[communicate|giao tiếp]] thật tự nhiên với một [[visitor|du khách]] — điều mà phiên bản [[original|ban đầu]] của anh chẳng bao giờ dám làm — và cuối khoá còn nhận được một tấm [[certificate|chứng chỉ]].`,
+Nhưng tôi quyết định [[follow|làm theo]] lời khuyên của giáo viên và cố gắng [[understand|hiểu]] từng bài học. Mỗi ngày tôi đều [[improve|cải thiện]] [[vocabulary|từ vựng]] và luyện [[skill|kỹ năng]] giao tiếp.
+
+Sau vài tháng, tôi trở nên [[confident|tự tin]] hơn và thấy rõ [[progress|sự tiến bộ]] của mình. Tôi có thể [[communicate|giao tiếp]] với nhiều [[visitor|du khách]] bằng cách sử dụng cách diễn đạt gần với người bản xứ [[original|nguyên bản]]. Cuối khóa học, tôi còn nhận được một [[certificate|chứng chỉ]] như phần thưởng cho sự cố gắng của mình.`,
   },
   {
     deckName: "Unit 2:",
@@ -239,7 +241,16 @@ Vào [[middle|giữa]] mùa, một cơn [[typhoon|bão nhiệt đới]] có th�
 ];
 
 async function main() {
-  for (const { deckName, title, content } of STORIES) {
+  // Lọc theo 1 unit khi cần, ví dụ: UNIT="Unit 1:" tsx --env-file=.env scripts/seed-stories.ts
+  // Bỏ trống UNIT → seed toàn bộ.
+  const only = process.env.UNIT?.trim();
+  const stories = only ? STORIES.filter((s) => s.deckName === only) : STORIES;
+  if (only && stories.length === 0) {
+    console.warn(`⚠️  UNIT="${only}" không khớp deckName nào trong STORIES.`);
+    return;
+  }
+
+  for (const { deckName, title, content } of stories) {
     // Khớp deck theo tiền tố tên đầy đủ, ví dụ "Unit 10:" → "Unit 10: Khu phố mới"
     const deck = await prisma.deck.findFirst({
       where: { name: { startsWith: deckName } },
