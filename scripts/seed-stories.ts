@@ -42,12 +42,18 @@ Năm sau, tôi quyết định [[enroll|đăng ký]] vào một chương trình 
   },
   {
     deckName: "Unit 3:",
-    title: "Naruto và biệt danh Sunny",
-    content: `Naruto có một [[nickname|biệt danh]] [[special|đặc biệt]] là "Sunny" — bà ngoại hay [[call|gọi]] anh như thế từ bé. Hồi nhỏ anh ấy không [[know|biết]] [[meaning|ý nghĩa]], mãi sau mẹ mới [[tell|kể]] rằng nó tượng trưng cho niềm vui, và cái tên ấy theo anh suốt cả những lần chuyển nhà.
+    title: "Ngày đầu ở thị trấn mới",
+    content: `Ngày đầu chuyển đến một [[town|thị trấn]] mới, tôi tự giới thiệu rằng [[nickname|biệt danh]] của mình là Oliver. Mọi người đều thấy cái tên ấy thật [[special|đặc biệt]], nên ai cũng [[call|gọi]] tôi bằng biệt danh đó thay vì tên thật.
 
-Lần này, Naruto [[live|sống]] ở một [[town|thị trấn]] [[beautiful|đẹp]] và [[peaceful|yên bình]] gần [[centre|trung tâm]]. Phố khá [[crowded|đông đúc]] — điều [[common|phổ biến]] ở đây — nhưng anh nhanh chóng thấy quen. Chỉ có điều [[hometown|quê hương]] anh ở tận phía [[north|bắc]], còn giờ anh sống ở phía [[south|nam]], nên [[distance|khoảng cách]] về thăm nhà khá xa.
+Một người bạn hỏi liệu tôi có [[know|biết]] [[meaning|ý nghĩa]] của biệt danh này không. Tôi mỉm cười và [[tell|kể]] rằng nó luôn nhắc tôi sống tích cực mỗi ngày.
 
-Sống ổn định rồi, việc đầu tiên là tới trường mới. Ngày đầu đến lớp, anh ấy [[spell|đánh vần]] tên và [[surname|họ]] cho cô giáo, để lại [[contact|thông tin liên lạc]] cùng [[address|địa chỉ]], [[sign|ký tên]] vào sổ, rồi vui vẻ [[describe|mô tả]] sở thích [[favourite|yêu thích]] của mình: nghe nhạc và đọc sách — đúng chất một cậu bé "Sunny".`,
+Hiện tôi [[live|sống]] trong một [[beautiful|đẹp]] và [[peaceful|yên bình]] thị trấn nhỏ. Khu [[centre|trung tâm]] thường khá [[crowded|đông đúc]], nhưng điều đó đã trở thành chuyện [[common|phổ biến]] đối với người dân nơi đây.
+
+Khi được hỏi về [[hometown|quê hương]], tôi nói quê mình nằm ở phía [[north|bắc]], còn thành phố hiện tại ở phía [[south|nam]]. [[distance|Khoảng cách]] giữa hai nơi khá xa nên tôi chỉ về thăm nhà vài lần mỗi năm.
+
+Cuối buổi gặp mặt, mọi người được yêu cầu [[spell|đánh vần]] đầy đủ [[surname|họ]], ghi [[contact|thông tin liên lạc]] và [[address|địa chỉ]] vào phiếu đăng ký rồi [[sign|ký tên]] để xác nhận.
+
+Sau đó, mỗi người lần lượt [[describe|mô tả]] người bạn [[favourite|yêu thích]] của mình. Không khí trở nên rất vui vẻ vì ai cũng có những câu chuyện thú vị để chia sẻ.`,
   },
   {
     deckName: "Unit 4:",
