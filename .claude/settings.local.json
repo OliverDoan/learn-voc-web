@@ -160,7 +160,9 @@
       "Bash(APPLY=1 npx tsx *)",
       "Bash(UNIT=\"Unit 1:\" npx tsx --env-file=.env scripts/seed-stories.ts)",
       "Bash(UNIT=\"Unit 2:\" pnpm exec *)",
-      "Bash(UNIT=\"Unit 3:\" pnpm exec *)"
+      "Bash(UNIT=\"Unit 3:\" pnpm exec *)",
+      "Bash(UNIT=\"Unit 26:\" pnpm tsx *)",
+      "Bash(APPLY=1 pnpm tsx *)"
     ]
   }
 }
