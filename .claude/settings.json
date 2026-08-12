@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm test)",
+      "Bash(pnpm test *)",
+      "Bash(pnpm lint)",
+      "Bash(pnpm lint *)",
+      "Bash(pnpm exec tsc --noEmit)",
+      "Bash(pnpm exec tsc --noEmit *)",
+      "Bash(pnpm exec vitest run *)",
+      "Bash(pnpm vitest run *)",
+      "Bash(npx tsc --noEmit *)",
+      "Bash(curl -s http://localhost:3000/*)",
+      "Bash(curl -sI http://localhost:3000/*)",
+      "Bash(curl -s -o /dev/null -w * http://localhost:3000/*)"
+    ]
+  }
+}
