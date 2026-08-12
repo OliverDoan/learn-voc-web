@@ -12,7 +12,6 @@ import {
   LayoutGrid,
   ListChecks,
   Loader2,
-  Lock,
   PenLine,
   Puzzle,
   Repeat,
@@ -32,6 +31,7 @@ import { WordFormationQuiz } from "@/components/quiz/word-formation-quiz";
 import { MatchingGameLauncher } from "@/components/quiz/matching-game";
 import { TestModeQuiz } from "@/components/quiz/test-mode-quiz";
 import { PrevWrongBadge } from "@/components/quiz/prev-wrong-badge";
+import { DeckLockedScreen } from "@/components/deck/deck-locked-screen";
 import { useCards } from "@/hooks/use-cards";
 import { useDeck, useRecordDeckActivity } from "@/hooks/use-decks";
 import { useSubmitReview } from "@/hooks/use-study";
@@ -150,18 +150,11 @@ export default function QuizPage({ params }: PageProps) {
 
   if (deck?.locked) {
     return (
-      <div className="container mx-auto max-w-xl p-6 text-center">
-        <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-muted text-muted-foreground">
-          <Lock className="h-8 w-8" />
-        </div>
-        <h2 className="mb-2 text-2xl font-bold">Deck đang khóa</h2>
-        <p className="mb-6 text-muted-foreground">
-          Hãy hoàn thành (đánh dấu &ldquo;đã học xong&rdquo;) các Unit trước để mở khóa quiz của deck này.
-        </p>
-        <Link href={backHref}>
-          <Button variant="outline">{backLabel}</Button>
-        </Link>
-      </div>
+      <DeckLockedScreen
+        backHref={backHref}
+        backLabel={backLabel}
+        description="Hãy hoàn thành (đánh dấu “đã học xong”) các Unit trước để mở khóa quiz của deck này."
+      />
     );
   }
 

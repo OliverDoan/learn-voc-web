@@ -38,6 +38,7 @@ import { CardFormDialog } from "@/components/deck/card-form-dialog";
 import { CardDetailDialog } from "@/components/deck/card-detail-dialog";
 import { DialectBadge } from "@/components/deck/dialect-badge";
 import { DeckFormDialog } from "@/components/deck/deck-form-dialog";
+import { DeckLockedScreen } from "@/components/deck/deck-locked-screen";
 import { ImportCardsDialog } from "@/components/deck/import-cards-dialog";
 import { ExportCardsDialog } from "@/components/deck/export-cards-dialog";
 import { ReadAllButton } from "@/components/deck/read-all-button";
@@ -554,6 +555,16 @@ export default function DeckDetailPage({ params }: PageProps) {
           Quay lại
         </Link>
       </div>
+    );
+  }
+  // Deck khóa: chặn xem toàn bộ nội dung (danh sách từ, truyện, bài tập).
+  if (deck.locked) {
+    return (
+      <DeckLockedScreen
+        backHref="/decks"
+        backLabel="Tất cả decks"
+        description="Hãy hoàn thành (đánh dấu “đã học xong”) các Unit trước để mở khóa và xem nội dung deck này."
+      />
     );
   }
 

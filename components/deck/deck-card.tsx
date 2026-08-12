@@ -36,12 +36,25 @@ export function DeckCard({ deck }: DeckCardProps) {
         deck.locked && "opacity-60",
       )}
     >
-      {/* Link phủ toàn thẻ — bấm bất kỳ đâu (trừ nút) để vào deck. */}
-      <Link
-        href={`/decks/${deck.id}`}
-        className="absolute inset-0 rounded-xl"
-        aria-label={deck.name}
-      />
+      {/* Lớp phủ toàn thẻ: deck mở → link vào deck; deck khóa → chặn, chỉ báo lý do. */}
+      {deck.locked ? (
+        <button
+          type="button"
+          onClick={() =>
+            toast.info("Unit này đang khóa", {
+              description: "Hoàn thành các Unit trước để mở khóa.",
+            })
+          }
+          className="absolute inset-0 cursor-not-allowed rounded-xl"
+          aria-label={`${deck.name} — đang khóa`}
+        />
+      ) : (
+        <Link
+          href={`/decks/${deck.id}`}
+          className="absolute inset-0 rounded-xl"
+          aria-label={deck.name}
+        />
+      )}
 
       <div
         className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg text-lg"

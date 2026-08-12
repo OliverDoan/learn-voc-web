@@ -6,7 +6,8 @@ import { ArrowLeft, Check, CheckCircle2, Loader2, X } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { useRecordDeckActivity } from "@/hooks/use-decks";
-import { useStory } from "@/hooks/use-stories";
+import { useStory, isStoryLockedError } from "@/hooks/use-stories";
+import { DeckLockedScreen } from "@/components/deck/deck-locked-screen";
 import { EXERCISE_PASS_ACCURACY } from "@/lib/deck-activities";
 import { parseStory, type StoryToken } from "@/lib/story-parser";
 import { levenshtein, cn } from "@/lib/utils";
@@ -23,7 +24,7 @@ interface Slot {
 
 export default function FillBlankPage({ params }: PageProps) {
   const { storyId } = use(params);
-  const { data: story, isLoading } = useStory(storyId);
+  const { data: story, isLoading, error } = useStory(storyId);
   const recordActivity = useRecordDeckActivity(story?.deckId ?? "");
 
   const tokens: StoryToken[] = useMemo(
@@ -47,6 +48,15 @@ export default function FillBlankPage({ params }: PageProps) {
       <div className="flex h-[60vh] items-center justify-center">
         <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
       </div>
+    );
+  }
+  if (isStoryLockedError(error)) {
+    return (
+      <DeckLockedScreen
+        backHref="/stories"
+        backLabel="Về danh sách truyện"
+        description="Truyện này thuộc Unit đang khóa. Hãy hoàn thành các Unit trước để mở khóa."
+      />
     );
   }
   if (!story) return <div className="p-6">Không tìm thấy truyện</div>;

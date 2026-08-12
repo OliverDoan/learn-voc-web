@@ -1,6 +1,6 @@
 import { prisma } from "./db";
 import { DEFAULT_DAILY_GOAL, SINGLETON_PROGRESS_ID } from "./constants";
-import { getDeckUnitNumber } from "./deck-progress";
+import { computeDeckLockStatus, getDeckUnitNumber } from "./deck-progress";
 import { topicUnitRange } from "./deck-topics";
 
 export interface QueueCard {
@@ -151,17 +151,22 @@ export async function getGlobalReviewQueue(): Promise<QueueCard[]> {
 /**
  * Lấy id các deck (chưa xoá) thuộc một topic (nhóm 5 unit liên tiếp).
  * Topic suy diễn từ số Unit trong tên deck — không có cột riêng trong DB.
+ *
+ * CHỈ trả về các Unit ĐÃ MỞ KHÓA: học/xem "cả topic" không được là đường vòng
+ * để đọc nội dung của Unit chưa mở khóa.
  */
 export async function getTopicDeckIds(topicIndex: number): Promise<string[]> {
   const { from, to } = topicUnitRange(topicIndex);
   const decks = await prisma.deck.findMany({
     where: { deletedAt: null },
-    select: { id: true, name: true },
+    select: { id: true, name: true, learnedAt: true },
   });
+  const lockStatus = computeDeckLockStatus(decks);
   return decks
     .filter((d) => {
       const unit = getDeckUnitNumber(d.name);
-      return unit !== null && unit >= from && unit <= to;
+      if (unit === null || unit < from || unit > to) return false;
+      return lockStatus.get(d.id)?.locked !== true;
     })
     .map((d) => d.id);
 }

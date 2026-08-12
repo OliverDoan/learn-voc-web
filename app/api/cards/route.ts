@@ -3,6 +3,7 @@ import { prisma } from "@/lib/db";
 import { fail, handleError, ok } from "@/lib/api-helpers";
 import { cardCreateSchema } from "@/lib/schemas";
 import { getTopicDeckIds } from "@/lib/daily-queue";
+import { getLockedDeckIds } from "@/lib/deck-progress";
 import { stringifyTags } from "@/lib/utils";
 import { stringifyWordForms, stringifyWordFormMeanings } from "@/lib/word-forms";
 
@@ -24,9 +25,14 @@ export async function GET(req: NextRequest) {
       return ok([]);
     }
 
+    // Không trả thẻ của Unit ĐANG KHÓA (kể cả khi gọi thẳng ?deckId=).
+    const lockedDeckIds = await getLockedDeckIds();
+    if (deckId && lockedDeckIds.includes(deckId)) return ok([]);
+
     const cards = await prisma.card.findMany({
       where: {
         deletedAt: null,
+        ...(deckId ? {} : { deckId: { notIn: lockedDeckIds } }),
         ...(topicDeckIds ? { deckId: { in: topicDeckIds } } : {}),
         ...(deckId ? { deckId } : {}),
         ...(stateFilter ? { state: stateFilter } : {}),

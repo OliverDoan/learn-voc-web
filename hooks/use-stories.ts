@@ -1,7 +1,7 @@
 "use client";
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { apiDelete, apiFetch, apiPatch, apiPost } from "@/lib/api-client";
+import { ApiError, apiDelete, apiFetch, apiPatch, apiPost } from "@/lib/api-client";
 import type { Story, StoryListItem, StoryWithCards } from "@/lib/types";
 import type { StoryCreateInput, StoryUpdateInput } from "@/lib/schemas";
 
@@ -20,7 +20,16 @@ export function useStory(storyId: string | undefined) {
     queryKey: ["stories", storyId],
     queryFn: () => apiFetch<StoryWithCards>(`/api/stories/${storyId}`),
     enabled: !!storyId,
+    // 403 (truyện thuộc Unit đang khóa) / 404 là kết quả cuối — đừng thử lại.
+    retry: (failureCount, error) =>
+      !(error instanceof ApiError && (error.status === 403 || error.status === 404)) &&
+      failureCount < 2,
   });
+}
+
+/** Truyện bị chặn vì Unit đang khóa? */
+export function isStoryLockedError(error: unknown): boolean {
+  return error instanceof ApiError && error.status === 403;
 }
 
 export function useCreateStory() {

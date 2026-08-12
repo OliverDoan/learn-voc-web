@@ -53,16 +53,23 @@ export default function TopicPage({ params }: PageProps) {
     return groupDecksByTopic(decks).find((g) => g.index === topicIndex) ?? null;
   }, [decks, topicIndex]);
 
+  // Chỉ các Unit ĐÃ MỞ KHÓA mới được xem/học ở chế độ topic.
+  const openDecks = useMemo(
+    () => (group?.decks ?? []).filter((d) => !d.locked),
+    [group],
+  );
+  const lockedCount = (group?.decks.length ?? 0) - openDecks.length;
+
   // Map deckId → tên unit để gắn nhãn nguồn cho mỗi từ.
   const unitNameById = useMemo(() => {
     const map = new Map<string, string>();
-    for (const d of group?.decks ?? []) map.set(d.id, d.name);
+    for (const d of openDecks) map.set(d.id, d.name);
     return map;
-  }, [group]);
+  }, [openDecks]);
 
   const totalWords = useMemo(
-    () => group?.decks.reduce((sum, d) => sum + d._count.cards, 0) ?? 0,
-    [group],
+    () => openDecks.reduce((sum, d) => sum + d._count.cards, 0),
+    [openDecks],
   );
 
   const cards = useMemo(() => topicCards ?? [], [topicCards]);
@@ -188,7 +195,8 @@ export default function TopicPage({ params }: PageProps) {
         </p>
         <h1 className="mt-1 text-2xl font-bold">{name ?? `Topic ${topicIndex + 1}`}</h1>
         <p className="mt-1 text-sm text-muted-foreground">
-          {group.decks.length} unit · {totalWords} từ
+          {openDecks.length}/{group.decks.length} unit đã mở · {totalWords} từ
+          {lockedCount > 0 ? ` · ${lockedCount} unit đang khóa` : ""}
         </p>
       </div>
 
@@ -227,7 +235,9 @@ export default function TopicPage({ params }: PageProps) {
         </div>
       ) : (
         <div className="mb-8 rounded-2xl border border-dashed py-6 text-center text-sm text-muted-foreground">
-          Topic này chưa có từ nào. Hãy thêm từ vào các unit.
+          {lockedCount > 0
+            ? "Mọi Unit của topic này đang khóa. Hãy hoàn thành các Unit trước để mở khóa."
+            : "Topic này chưa có từ nào. Hãy thêm từ vào các unit."}
         </div>
       )}
 

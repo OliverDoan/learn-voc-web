@@ -3,11 +3,15 @@ import { prisma } from "@/lib/db";
 import { fail, handleError, ok } from "@/lib/api-helpers";
 import { storyCreateSchema } from "@/lib/schemas";
 import { extractWords } from "@/lib/story-parser";
+import { getLockedDeckIds } from "@/lib/deck-progress";
 
 export async function GET(req: NextRequest) {
   try {
     const deckId = new URL(req.url).searchParams.get("deckId");
-    const where = deckId ? { deckId } : {};
+    // Truyện của Unit ĐANG KHÓA không được liệt kê (đọc truyện = lộ nội dung Unit).
+    const lockedDeckIds = await getLockedDeckIds();
+    if (deckId && lockedDeckIds.includes(deckId)) return ok([]);
+    const where = deckId ? { deckId } : { deckId: { notIn: lockedDeckIds } };
 
     // KHÔNG select `imageUrl` (ảnh base64 ~700KB/truyện): nếu nhồi cả ảnh vào danh
     // sách, payload phình lên hàng chục MB khiến API rất chậm. Ảnh phục vụ riêng qua

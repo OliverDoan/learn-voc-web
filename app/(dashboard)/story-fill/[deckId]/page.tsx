@@ -7,6 +7,8 @@ import { ArrowLeft, BookOpen, PenLine } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PageLoader } from "@/components/ui/page-loader";
 import { useStories } from "@/hooks/use-stories";
+import { useDeck } from "@/hooks/use-decks";
+import { DeckLockedScreen } from "@/components/deck/deck-locked-screen";
 import { countWordTokens } from "@/lib/story-parser";
 
 interface PageProps {
@@ -21,7 +23,9 @@ interface PageProps {
 export default function StoryFillPickerPage({ params }: PageProps) {
   const { deckId } = use(params);
   const router = useRouter();
+  const { data: deck } = useDeck(deckId);
   const { data: stories, isLoading } = useStories(deckId);
+  const locked = deck?.locked === true;
 
   // Chỉ những truyện có từ chêm mới điền được.
   const fillable = useMemo(
@@ -34,10 +38,19 @@ export default function StoryFillPickerPage({ params }: PageProps) {
 
   // Đúng 1 truyện → vào thẳng bài điền từ, khỏi phải chọn.
   useEffect(() => {
-    if (!isLoading && fillable.length === 1) {
+    if (!locked && !isLoading && fillable.length === 1) {
       router.replace(`/stories/${fillable[0].id}/fill`);
     }
-  }, [isLoading, fillable, router]);
+  }, [locked, isLoading, fillable, router]);
+
+  // Deck khóa → không cho vào bài điền truyện chêm.
+  if (locked) {
+    return (
+      <DeckLockedScreen
+        description="Hãy hoàn thành (đánh dấu “đã học xong”) các Unit trước để mở khóa truyện chêm của deck này."
+      />
+    );
+  }
 
   if (isLoading || fillable.length === 1) {
     return <PageLoader className="min-h-[40vh]" />;

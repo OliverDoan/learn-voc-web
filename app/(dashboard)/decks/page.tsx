@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Layers, Plus, Loader2, Search } from "lucide-react";
+import { ArrowRight, Layers, Lock, Plus, Loader2, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { DeckCard } from "@/components/deck/deck-card";
@@ -85,7 +85,8 @@ export default function DecksPage() {
                   {group.decks.length} deck
                 </span>
                 <div className="h-px flex-1 bg-border" />
-                {group.index !== null ? (
+                {/* Topic mà mọi Unit đều khóa → không cho vào xem/học gộp. */}
+                {group.index !== null && group.decks.some((d) => !d.locked) ? (
                   <Link
                     href={`/topic/${group.index}`}
                     className="inline-flex shrink-0 items-center gap-1 rounded-full border border-primary/30 px-3 py-1 text-xs font-medium text-primary transition-colors hover:bg-primary/10"
@@ -93,6 +94,13 @@ export default function DecksPage() {
                     Học cả topic
                     <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
+                ) : group.index !== null ? (
+                  <span
+                    className="inline-flex shrink-0 items-center gap-1 rounded-full border px-3 py-1 text-xs font-medium text-muted-foreground/70"
+                    title="Hoàn thành các Unit trước để mở khóa"
+                  >
+                    <Lock className="h-3.5 w-3.5" /> Đang khóa
+                  </span>
                 ) : null}
               </div>
               <div className="flex flex-col gap-2">

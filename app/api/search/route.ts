@@ -1,6 +1,7 @@
 import { NextRequest } from "next/server";
 import { prisma } from "@/lib/db";
 import { handleError, ok } from "@/lib/api-helpers";
+import { getLockedDeckIds } from "@/lib/deck-progress";
 
 const LIMIT_PER_GROUP = 6;
 
@@ -26,10 +27,14 @@ export async function GET(req: NextRequest) {
       return ok(empty);
     }
 
+    // Không trả kết quả thuộc Unit ĐANG KHÓA (chưa mở khóa thì không xem trước).
+    const lockedDeckIds = await getLockedDeckIds();
+
     const [decks, cards, stories] = await Promise.all([
       prisma.deck.findMany({
         where: {
           deletedAt: null,
+          id: { notIn: lockedDeckIds },
           OR: [
             { name: { contains: q } },
             { description: { contains: q } },
@@ -42,6 +47,7 @@ export async function GET(req: NextRequest) {
       prisma.card.findMany({
         where: {
           deletedAt: null,
+          deckId: { notIn: lockedDeckIds },
           deck: { deletedAt: null },
           OR: [
             { word: { contains: q } },
@@ -60,6 +66,7 @@ export async function GET(req: NextRequest) {
       }),
       prisma.story.findMany({
         where: {
+          deckId: { notIn: lockedDeckIds },
           deck: { deletedAt: null },
           OR: [
             { title: { contains: q } },

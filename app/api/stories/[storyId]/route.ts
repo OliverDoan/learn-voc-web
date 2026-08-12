@@ -3,6 +3,7 @@ import { prisma } from "@/lib/db";
 import { fail, handleError, ok } from "@/lib/api-helpers";
 import { storyUpdateSchema } from "@/lib/schemas";
 import { extractWords } from "@/lib/story-parser";
+import { isDeckUnlocked } from "@/lib/deck-progress";
 
 interface RouteParams {
   params: Promise<{ storyId: string }>;
@@ -19,6 +20,10 @@ export async function GET(_req: NextRequest, { params }: RouteParams) {
       },
     });
     if (!story) return fail("Không tìm thấy truyện", 404);
+    // Truyện thuộc Unit đang khóa → chặn đọc trực tiếp qua URL.
+    if (!(await isDeckUnlocked(story.deckId))) {
+      return fail("Cần học xong các Unit trước để mở khóa truyện này", 403);
+    }
     return ok(story);
   } catch (error) {
     return handleError(error);

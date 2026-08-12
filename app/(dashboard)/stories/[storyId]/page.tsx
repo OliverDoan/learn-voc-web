@@ -13,7 +13,8 @@ import { StoryRenderer } from "@/components/story/story-renderer";
 import { StoryProse } from "@/components/story/story-prose";
 import { StoryModeToggle, type StoryViewMode } from "@/components/story/story-mode-toggle";
 import { ReadingSpeedControl } from "@/components/story/reading-speed-control";
-import { useDeleteStory, useStories, useStory } from "@/hooks/use-stories";
+import { useDeleteStory, useStories, useStory, isStoryLockedError } from "@/hooks/use-stories";
+import { DeckLockedScreen } from "@/components/deck/deck-locked-screen";
 import { useFavorites } from "@/hooks/use-cards";
 import { useReadingRate } from "@/hooks/use-reading-rate";
 import { countWordTokens, firstMeaning, parseStory, toVietnamese } from "@/lib/story-parser";
@@ -47,7 +48,7 @@ export default function StoryViewPage({ params }: PageProps) {
     rateRef.current = rate;
   }, [rate]);
 
-  const { data: story, isLoading } = useStory(storyId);
+  const { data: story, isLoading, error } = useStory(storyId);
   // Toàn bộ truyện (mọi deck) để điều hướng sang truyện kế tiếp, kể cả khi deck chỉ có 1 truyện.
   const { data: allStories } = useStories();
   const { data: favorites } = useFavorites();
@@ -139,6 +140,15 @@ export default function StoryViewPage({ params }: PageProps) {
 
   if (isLoading) {
     return <PageLoader />;
+  }
+  if (isStoryLockedError(error)) {
+    return (
+      <DeckLockedScreen
+        backHref="/stories"
+        backLabel="Về danh sách truyện"
+        description="Truyện này thuộc Unit đang khóa. Hãy hoàn thành các Unit trước để mở khóa."
+      />
+    );
   }
   if (!story) {
     return <div className="p-6">Không tìm thấy truyện</div>;

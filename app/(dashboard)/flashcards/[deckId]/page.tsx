@@ -17,6 +17,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Flashcard } from "@/components/flashcard/flashcard";
+import { DeckLockedScreen } from "@/components/deck/deck-locked-screen";
 import { useCards } from "@/hooks/use-cards";
 import { useDeck, useRecordDeckActivity } from "@/hooks/use-decks";
 import { speak } from "@/lib/tts";
@@ -178,6 +179,15 @@ export default function FlashcardsPage({ params }: PageProps) {
       <div className="flex h-[60vh] items-center justify-center">
         <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
       </div>
+    );
+  }
+
+  // Deck khóa → không cho lật thẻ (không lộ nội dung deck chưa mở khóa).
+  if (deck?.locked) {
+    return (
+      <DeckLockedScreen
+        description="Hãy hoàn thành (đánh dấu “đã học xong”) các Unit trước để mở khóa và lật thẻ của deck này."
+      />
     );
   }
 

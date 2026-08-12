@@ -57,6 +57,19 @@ export function computeDeckLockStatus(decks: readonly DeckLockInput[]): Map<stri
 }
 
 /**
+ * (Server) ID các deck ĐANG KHÓA — dùng để loại nội dung của Unit chưa mở khóa
+ * khỏi các trang tra cứu toàn cục (Tất cả từ, Yêu thích, Tìm kiếm, Truyện chêm).
+ */
+export async function getLockedDeckIds(): Promise<string[]> {
+  const decks = await prisma.deck.findMany({
+    where: { deletedAt: null },
+    select: { id: true, name: true, learnedAt: true },
+  });
+  const status = computeDeckLockStatus(decks);
+  return decks.filter((d) => status.get(d.id)?.locked === true).map((d) => d.id);
+}
+
+/**
  * (Server) Kiểm tra một deck có đang mở khóa để Học/Quiz không.
  * Tải tất cả deck chưa xoá để xác định chuỗi Unit.
  */

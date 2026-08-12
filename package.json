@@ -16,6 +16,7 @@
     "prisma:studio": "prisma studio",
     "db:seed": "tsx prisma/seed.ts",
     "sync:card-order": "tsx --env-file=.env scripts/sync-card-order.ts",
+    "units:relock": "tsx --env-file=.env scripts/relock-units.ts",
     "add:deck": "tsx --env-file=.env scripts/add-deck.ts",
     "import:vocab": "tsx --env-file=.env scripts/import-vocab-full.ts",
     "gen:examples": "tsx --env-file=.env scripts/generate-examples.ts",

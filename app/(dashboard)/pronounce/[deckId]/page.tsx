@@ -18,6 +18,7 @@ import { Progress } from "@/components/ui/progress";
 import { useCards } from "@/hooks/use-cards";
 import { useDeck, useRecordDeckActivity } from "@/hooks/use-decks";
 import { PrevWrongBadge } from "@/components/quiz/prev-wrong-badge";
+import { DeckLockedScreen } from "@/components/deck/deck-locked-screen";
 import { useSpeechRecognition, type SpeechResult } from "@/hooks/use-speech-recognition";
 import { matchPronunciation } from "@/lib/speech-recognition";
 import {
@@ -180,6 +181,15 @@ export default function PronouncePage({ params }: PageProps) {
       <div className="flex h-[60vh] items-center justify-center">
         <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
       </div>
+    );
+  }
+
+  // Deck khóa → không cho luyện phát âm (không lộ nội dung deck chưa mở khóa).
+  if (deck?.locked) {
+    return (
+      <DeckLockedScreen
+        description="Hãy hoàn thành (đánh dấu “đã học xong”) các Unit trước để mở khóa và luyện phát âm deck này."
+      />
     );
   }
 
