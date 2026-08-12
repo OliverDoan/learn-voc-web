@@ -196,3 +196,54 @@ body {
   border-radius: 2px;
   display: inline-block;
 }
+
+/* Toast (sonner) — dùng token design system để toast khớp màu chủ đề đang chọn,
+   thay cho bảng xanh/đỏ cố định của `richColors`. Nền lấy màu popover của theme,
+   chỉ viền + icon mang màu ngữ nghĩa (info/success/warning/error).
+   Tiền tố `html` để thắng specificity của CSS sonner tự chèn vào <head>. */
+html [data-sonner-toaster][data-sonner-theme="light"],
+html [data-sonner-toaster][data-sonner-theme="dark"] {
+  --normal-bg: var(--popover);
+  --normal-text: var(--popover-foreground);
+  --normal-border: var(--border);
+  --normal-bg-hover: color-mix(in srgb, var(--foreground) 8%, var(--popover));
+  --normal-border-hover: color-mix(in srgb, var(--foreground) 24%, transparent);
+
+  --info-bg: var(--popover);
+  --info-text: var(--popover-foreground);
+  --info-border: color-mix(in srgb, var(--primary) 45%, transparent);
+
+  --success-bg: var(--popover);
+  --success-text: var(--popover-foreground);
+  --success-border: color-mix(in srgb, var(--success) 45%, transparent);
+
+  --warning-bg: var(--popover);
+  --warning-text: var(--popover-foreground);
+  --warning-border: color-mix(in srgb, var(--warning) 50%, transparent);
+
+  --error-bg: var(--popover);
+  --error-text: var(--popover-foreground);
+  --error-border: color-mix(in srgb, var(--destructive) 45%, transparent);
+}
+
+/* Icon giữ màu ngữ nghĩa để vẫn phân biệt được loại toast */
+html [data-sonner-toaster] [data-sonner-toast][data-type="info"] [data-icon] {
+  color: var(--primary);
+}
+html [data-sonner-toaster] [data-sonner-toast][data-type="success"] [data-icon] {
+  color: var(--success);
+}
+html [data-sonner-toaster] [data-sonner-toast][data-type="warning"] [data-icon] {
+  color: var(--warning);
+}
+html [data-sonner-toaster] [data-sonner-toast][data-type="error"] [data-icon] {
+  color: var(--destructive);
+}
+
+html [data-sonner-toaster] [data-sonner-toast] [data-description] {
+  color: color-mix(in srgb, var(--popover-foreground) 72%, transparent);
+}
+
+html [data-sonner-toaster] [data-sonner-toast] {
+  border-radius: var(--radius-md);
+}

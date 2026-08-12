@@ -174,7 +174,9 @@
       "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --remote-debugging-port=9333 --user-data-dir=/tmp/chrome-prof-voc --window-size=1280,900 --no-first-run about:blank)",
       "Bash(lsof -ti:9333 -sTCP:LISTEN)",
       "Bash(xargs kill)",
-      "Bash(git ls-remote *)"
+      "Bash(git ls-remote *)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless=new --remote-debugging-port=9334 --user-data-dir=/tmp/chrome-prof-t --window-size=1280,900 --no-first-run about:blank)",
+      "Skill(fewer-permission-prompts)"
     ]
   }
 }
