@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import { Avatar } from "@/components/ui/avatar";
 import { useProgress } from "@/hooks/use-progress";
 import { useHiddenNavItems } from "@/hooks/use-sidebar-prefs";
-import { NAV_ITEMS, mobileNavItems } from "@/lib/nav-items";
+import { NAV_ITEMS } from "@/lib/nav-items";
 
 // Store nhỏ cho trạng thái thu gọn sidebar, lưu ở localStorage.
 // Dùng useSyncExternalStore để SSR luôn trả về false (khớp server) rồi
@@ -152,8 +152,8 @@ export function MobileNav() {
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
-  // 4 mục chính + nút "Thêm" mở bảng chứa toàn bộ mục.
-  const primary = mobileNavItems.slice(0, 4);
+  // 4 mục chính (chỉ lấy mục đang hiện) + nút "Thêm" mở bảng chứa toàn bộ mục.
+  const primary = visibleItems.filter((i) => i.mobile).slice(0, 4);
   const onPrimary = primary.some((i) => isActive(i.href));
 
   return (
@@ -193,7 +193,11 @@ export function MobileNav() {
       ) : null}
 
       <nav className="md:hidden fixed bottom-0 inset-x-0 z-40 border-t bg-card/95 backdrop-blur">
-        <ul className="grid grid-cols-5">
+        <ul
+          className="grid"
+          // Số cột theo số mục đang hiện + nút "Thêm" để không bị hở khoảng trống.
+          style={{ gridTemplateColumns: `repeat(${primary.length + 1}, minmax(0, 1fr))` }}
+        >
           {primary.map((item) => {
             const active = isActive(item.href);
             return (

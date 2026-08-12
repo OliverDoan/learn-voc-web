@@ -26,13 +26,22 @@ export interface NavItem {
   prefetch?: boolean;
   /** Luôn hiển thị, không cho ẩn (để trang Cài đặt luôn truy cập được). */
   pinned?: boolean;
+  /** Thuộc bộ mặc định: hiện sẵn khi chưa cấu hình gì / sau khi reset. */
+  defaultVisible?: boolean;
 }
 
 /** Danh sách mục điều hướng dùng chung cho sidebar + trang cấu hình. */
 export const NAV_ITEMS: NavItem[] = [
-  { href: "/decks", label: "Decks", icon: Layers, mobile: true, prefetch: true },
+  { href: "/decks", label: "Decks", icon: Layers, mobile: true, prefetch: true, defaultVisible: true },
   { href: "/search", label: "Tra từ", icon: Search, mobile: false },
-  { href: "/stories", label: "Truyện chêm", icon: BookMarked, mobile: false, prefetch: true },
+  {
+    href: "/stories",
+    label: "Truyện chêm",
+    icon: BookMarked,
+    mobile: true,
+    prefetch: true,
+    defaultVisible: true,
+  },
   { href: "/words", label: "Tất cả từ", icon: Library, mobile: false },
   { href: "/favorites", label: "Yêu thích", icon: Star, mobile: false },
   { href: "/history", label: "Lịch sử", icon: History, mobile: false },
@@ -43,7 +52,17 @@ export const NAV_ITEMS: NavItem[] = [
   { href: "/word-roots", label: "Từ gốc", icon: Sprout, mobile: false },
   { href: "/confusing-words", label: "Từ dễ lẫn", icon: ArrowLeftRight, mobile: false },
   { href: "/trash", label: "Thùng rác", icon: Trash2, mobile: false },
-  { href: "/settings", label: "Cài đặt", icon: Settings, mobile: true, pinned: true },
+  {
+    href: "/settings",
+    label: "Cài đặt",
+    icon: Settings,
+    mobile: true,
+    pinned: true,
+    defaultVisible: true,
+  },
 ];
 
-export const mobileNavItems = NAV_ITEMS.filter((i) => i.mobile);
+/** Bộ mặc định = chỉ Decks / Truyện chêm / Cài đặt → các mục còn lại bị ẩn. */
+export const DEFAULT_HIDDEN_HREFS: readonly string[] = NAV_ITEMS.filter(
+  (i) => !i.pinned && !i.defaultVisible,
+).map((i) => i.href);

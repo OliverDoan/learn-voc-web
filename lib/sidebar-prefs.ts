@@ -1,36 +1,48 @@
 /**
  * Lưu danh sách mục sidebar bị ẩn (theo href) vào localStorage.
  * Dùng mô hình store nhỏ để useSyncExternalStore cập nhật live khi đổi trong Cài đặt
- * — giống store trạng thái thu gọn sidebar. SSR trả về tập rỗng để khớp server.
+ * — giống store trạng thái thu gọn sidebar.
+ *
+ * Khi CHƯA có gì trong localStorage → dùng bộ mặc định (chỉ Decks / Truyện chêm /
+ * Cài đặt hiện). Ghi mảng rỗng `[]` nghĩa là "hiện tất cả" — khác với chưa cấu hình.
  */
+import { DEFAULT_HIDDEN_HREFS } from "@/lib/nav-items";
+
 const KEY = "voc-sidebar-hidden";
 const listeners = new Set<() => void>();
 
-const EMPTY: ReadonlySet<string> = new Set();
+const DEFAULT_HIDDEN: ReadonlySet<string> = new Set(DEFAULT_HIDDEN_HREFS);
+
 // Cache theo chuỗi thô để snapshot ổn định (useSyncExternalStore yêu cầu
 // tham chiếu không đổi khi dữ liệu không đổi — tránh vòng render vô hạn).
-let cacheRaw: string | null = null;
-let cacheVal: ReadonlySet<string> = EMPTY;
+// Sentinel `undefined` = cache chưa khởi tạo (phân biệt với raw === null).
+let cacheRaw: string | null | undefined;
+let cacheVal: ReadonlySet<string> = DEFAULT_HIDDEN;
+
+function parseHidden(raw: string | null): ReadonlySet<string> {
+  if (raw === null) return DEFAULT_HIDDEN;
+  try {
+    const arr = JSON.parse(raw);
+    return new Set(
+      Array.isArray(arr) ? arr.filter((x): x is string => typeof x === "string") : [],
+    );
+  } catch {
+    return DEFAULT_HIDDEN;
+  }
+}
 
 export function getHiddenSnapshot(): ReadonlySet<string> {
-  if (typeof window === "undefined") return EMPTY;
+  if (typeof window === "undefined") return DEFAULT_HIDDEN;
   const raw = localStorage.getItem(KEY);
   if (raw !== cacheRaw) {
     cacheRaw = raw;
-    try {
-      const arr = raw ? JSON.parse(raw) : [];
-      cacheVal = new Set(
-        Array.isArray(arr) ? arr.filter((x): x is string => typeof x === "string") : [],
-      );
-    } catch {
-      cacheVal = new Set();
-    }
+    cacheVal = parseHidden(raw);
   }
   return cacheVal;
 }
 
 export function getHiddenServerSnapshot(): ReadonlySet<string> {
-  return EMPTY;
+  return DEFAULT_HIDDEN;
 }
 
 export function subscribeHidden(cb: () => void): () => void {
@@ -49,7 +61,7 @@ function persist(next: ReadonlySet<string>) {
     /* bỏ qua lỗi quota/private mode */
   }
   // Cập nhật cache ngay để snapshot phản ánh liền sau khi ghi.
-  cacheRaw = localStorage.getItem(KEY);
+  cacheRaw = JSON.stringify([...next]);
   cacheVal = next;
   listeners.forEach((cb) => cb());
 }
@@ -63,6 +75,19 @@ export function setNavItemHidden(href: string, hidden: boolean) {
 }
 
 /** Hiện lại tất cả mục (xoá danh sách ẩn). */
-export function resetHiddenNavItems() {
+export function showAllNavItems() {
   persist(new Set());
+}
+
+/** Đưa sidebar về bộ mặc định (chỉ Decks / Truyện chêm / Cài đặt). */
+export function resetNavItemsToDefault() {
+  persist(new Set(DEFAULT_HIDDEN));
+}
+
+/** Đang ở đúng bộ mặc định? (dùng để mờ nút reset) */
+export function isDefaultHidden(hidden: ReadonlySet<string>): boolean {
+  return (
+    hidden.size === DEFAULT_HIDDEN.size &&
+    [...DEFAULT_HIDDEN].every((href) => hidden.has(href))
+  );
 }

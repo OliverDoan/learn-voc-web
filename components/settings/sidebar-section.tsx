@@ -1,9 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, Lock, PanelLeft, RotateCcw } from "lucide-react";
+import { toast } from "sonner";
+import { ChevronDown, Eye, Lock, PanelLeft, RotateCcw } from "lucide-react";
 import { NAV_ITEMS } from "@/lib/nav-items";
-import { resetHiddenNavItems, setNavItemHidden } from "@/lib/sidebar-prefs";
+import {
+  isDefaultHidden,
+  resetNavItemsToDefault,
+  setNavItemHidden,
+  showAllNavItems,
+} from "@/lib/sidebar-prefs";
 import { useHiddenNavItems } from "@/hooks/use-sidebar-prefs";
 import { cn } from "@/lib/utils";
 
@@ -17,15 +23,36 @@ export function SidebarSection() {
 
   const shownCount = NAV_ITEMS.filter((i) => i.pinned || !hidden.has(i.href)).length;
   const hiddenCount = NAV_ITEMS.filter((i) => !i.pinned && hidden.has(i.href)).length;
+  const isDefault = isDefaultHidden(hidden);
+
+  const handleReset = () => {
+    resetNavItemsToDefault();
+    toast.success("Đã đặt lại thanh bên về mặc định");
+  };
 
   return (
     <section className="rounded-2xl border bg-card p-5">
       <div className="mb-1 flex items-center gap-2">
         <PanelLeft className="h-5 w-5 text-primary" />
         <h2 className="text-lg font-semibold">Thanh bên</h2>
+        <button
+          type="button"
+          onClick={handleReset}
+          disabled={isDefault}
+          title="Chỉ hiện Decks, Truyện chêm và Cài đặt"
+          className={cn(
+            "ml-auto flex items-center gap-1.5 rounded-lg border px-2.5 py-1.5 text-xs font-medium transition-colors",
+            isDefault
+              ? "cursor-not-allowed text-muted-foreground opacity-60"
+              : "hover:bg-accent hover:text-foreground",
+          )}
+        >
+          <RotateCcw className="h-3.5 w-3.5" /> Đặt lại mặc định
+        </button>
       </div>
       <p className="mb-4 text-sm text-muted-foreground">
         Chọn mục hiển thị trên thanh điều hướng bên trái. Mục &quot;Cài đặt&quot; luôn hiển thị.
+        Mặc định chỉ hiện Decks, Truyện chêm và Cài đặt.
       </p>
 
       <div className="relative">
@@ -92,18 +119,27 @@ export function SidebarSection() {
                 );
               })}
 
+              <div className="my-1 h-px bg-border" />
               {hiddenCount > 0 ? (
-                <>
-                  <div className="my-1 h-px bg-border" />
-                  <button
-                    type="button"
-                    onClick={resetHiddenNavItems}
-                    className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
-                  >
-                    <RotateCcw className="h-4 w-4" /> Hiện tất cả
-                  </button>
-                </>
+                <button
+                  type="button"
+                  onClick={showAllNavItems}
+                  className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+                >
+                  <Eye className="h-4 w-4" /> Hiện tất cả
+                </button>
               ) : null}
+              <button
+                type="button"
+                onClick={handleReset}
+                disabled={isDefault}
+                className={cn(
+                  "flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm text-muted-foreground transition-colors",
+                  isDefault ? "cursor-not-allowed opacity-60" : "hover:bg-accent hover:text-foreground",
+                )}
+              >
+                <RotateCcw className="h-4 w-4" /> Đặt lại mặc định
+              </button>
             </div>
           </>
         ) : null}
