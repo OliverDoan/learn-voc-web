@@ -6,12 +6,11 @@ import { useRouter } from "next/navigation";
 import {
   ArrowLeft,
   ArrowRight,
+  BookMarked,
   BookOpen,
   Check,
-  ClipboardCheck,
   Download,
   GripVertical,
-  History,
   Layers,
   List,
   Lock,
@@ -33,12 +32,9 @@ import {
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Input } from "@/components/ui/input";
 import { useConfirm } from "@/components/ui/confirm-dialog";
-import { AutoScrollControls } from "@/components/ui/auto-scroll-controls";
 import { PageLoader } from "@/components/ui/page-loader";
 import { CardFormDialog } from "@/components/deck/card-form-dialog";
-import { DeckExerciseProgress } from "@/components/deck/deck-exercise-progress";
 import { CardDetailDialog } from "@/components/deck/card-detail-dialog";
 import { DialectBadge } from "@/components/deck/dialect-badge";
 import { DeckFormDialog } from "@/components/deck/deck-form-dialog";
@@ -47,9 +43,8 @@ import { ExportCardsDialog } from "@/components/deck/export-cards-dialog";
 import { ReadAllButton } from "@/components/deck/read-all-button";
 import { CardsFilterBar } from "@/components/deck/cards-filter-bar";
 import { CardsTable } from "@/components/deck/cards-table";
-import { CardsTest } from "@/components/deck/cards-test";
 import { TestHistoryDialog } from "@/components/deck/test-history-dialog";
-import { StoryList } from "@/components/story/story-list";
+import { DeckStoryPanel } from "@/components/story/deck-story-panel";
 import {
   useCards,
   useDeleteCard,
@@ -70,7 +65,7 @@ import {
   displayRootWord,
   parseTags,
   posBadgeClass,
-  posToVietnamese,
+  posToAbbr,
   POS_FILTERS,
   type PosKey,
 } from "@/lib/utils";
@@ -91,12 +86,13 @@ export default function DeckDetailPage({ params }: PageProps) {
   const [openEditDeck, setOpenEditDeck] = useState(false);
   const [editingCard, setEditingCard] = useState<CardType | undefined>();
   const [detailCard, setDetailCard] = useState<CardType | undefined>();
-  const [search, setSearch] = useState("");
+  // Không còn ô tìm trong trang deck — giữ q rỗng để API trả toàn bộ từ.
+  const search = "";
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [favoriteOnly, setFavoriteOnly] = useState(false);
   const [selectedPos, setSelectedPos] = useState<PosKey[]>([]);
   const [groupByTag, setGroupByTag] = useState(false);
-  const [viewMode, setViewMode] = useState<"list" | "table" | "test">("list");
+  const [viewMode, setViewMode] = useState<"list" | "table">("list");
   const [actionsOpen, setActionsOpen] = useState(false);
   const [openHistory, setOpenHistory] = useState(false);
   const [selectMode, setSelectMode] = useState(false);
@@ -468,7 +464,7 @@ export default function DeckDetailPage({ params }: PageProps) {
         <button
           type="button"
           onClick={() => setDetailCard(card)}
-          className="flex min-w-0 flex-[1.4] flex-col gap-0.5 text-left"
+          className="flex min-w-0 flex-[2] flex-col gap-0.5 text-left"
           title="Xem chi tiết"
         >
           <span className="flex flex-wrap items-baseline gap-x-2">
@@ -486,7 +482,7 @@ export default function DeckDetailPage({ params }: PageProps) {
                   posBadgeClass(card.partOfSpeech),
                 )}
               >
-                {posToVietnamese(card.partOfSpeech) || card.partOfSpeech}
+                {posToAbbr(card.partOfSpeech) || card.partOfSpeech}
               </span>
             ) : null}
             <DialectBadge dialect={card.dialect} variantWord={card.variantWord} />
@@ -502,7 +498,7 @@ export default function DeckDetailPage({ params }: PageProps) {
             </span>
           ) : null}
           {card.example ? (
-            <span className="truncate text-xs italic text-muted-foreground">
+            <span className="line-clamp-2 text-xs italic text-muted-foreground">
               &ldquo;{card.example}&rdquo;
             </span>
           ) : null}
@@ -516,7 +512,7 @@ export default function DeckDetailPage({ params }: PageProps) {
                 posBadgeClass(card.partOfSpeech),
               )}
             >
-              {posToVietnamese(card.partOfSpeech) || card.partOfSpeech}
+              {posToAbbr(card.partOfSpeech) || card.partOfSpeech}
             </span>
           ) : null}
         </div>
@@ -524,7 +520,7 @@ export default function DeckDetailPage({ params }: PageProps) {
         <button
           type="button"
           onClick={() => setDetailCard(card)}
-          className="min-w-0 flex-[1.4] text-left text-sm text-muted-foreground"
+          className="min-w-0 flex-1 text-left text-sm text-muted-foreground"
           title="Xem chi tiết"
         >
           {card.meaning}
@@ -562,7 +558,7 @@ export default function DeckDetailPage({ params }: PageProps) {
   }
 
   return (
-    <div className="container mx-auto max-w-5xl p-6">
+    <div className="container mx-auto max-w-[90rem] p-6">
       <div className="mb-4 flex items-center justify-between gap-2">
         <Link
           href="/decks"
@@ -609,12 +605,6 @@ export default function DeckDetailPage({ params }: PageProps) {
               </span>
             ) : null}
           </div>
-          {deck.description ? (
-            <p className="mt-0.5 text-sm text-muted-foreground">{deck.description}</p>
-          ) : null}
-          <p className="mt-1 text-xs text-muted-foreground">
-            {deck._count.cards} từ · {deck._count.stories} truyện
-          </p>
         </div>
 
         <div className="flex items-center gap-2">
@@ -634,7 +624,7 @@ export default function DeckDetailPage({ params }: PageProps) {
             {actionsOpen ? (
               <>
                 <div className="fixed inset-0 z-20" onClick={() => setActionsOpen(false)} />
-                <div className="absolute right-0 top-full z-30 mt-1 w-52 rounded-lg border bg-card p-1.5 shadow-lg">
+                <div className="absolute right-0 top-full z-30 mt-1 w-52 rounded-lg border bg-popover text-popover-foreground p-1.5 shadow-lg">
                   {deck.locked ? (
                     <div
                       className="flex cursor-not-allowed items-center gap-2 rounded-md px-2 py-2 text-sm text-muted-foreground/60"
@@ -807,13 +797,10 @@ export default function DeckDetailPage({ params }: PageProps) {
         </div>
       </div>
 
-      {!deck.locked ? (
-        <DeckExerciseProgress deckId={deckId} exercises={deck.exercises ?? []} />
-      ) : null}
-
-      <StoryList deckId={deckId} />
-
-      {/* Tabs chế độ xem + ô tìm + nút Lọc trên cùng một hàng */}
+      {/* Bố cục 2 cột: trái là danh sách từ vựng, phải là truyện chêm (sticky) */}
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_420px]">
+        <div className="min-w-0">
+      {/* Tabs chế độ xem + nút lịch sử */}
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
         {cards && cards.length > 0 ? (
           <div className="flex flex-wrap items-center gap-2">
@@ -842,41 +829,14 @@ export default function DeckDetailPage({ params }: PageProps) {
             >
               <Table2 className="h-4 w-4" /> Bảng
             </button>
-            <button
-              type="button"
-              onClick={() => setViewMode("test")}
-              className={cn(
-                "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
-                viewMode === "test"
-                  ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground hover:text-foreground",
-              )}
-            >
-              <ClipboardCheck className="h-4 w-4" /> Kiểm tra
-            </button>
           </div>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => setOpenHistory(true)}
-            title="Xem lịch sử các từ sai"
-          >
-            <History className="h-4 w-4" /> Lịch sử sai
-          </Button>
           </div>
         ) : (
           <div />
         )}
-
-        <Input
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="Tìm từ hoặc nghĩa..."
-          className="w-48 bg-card shadow-sm sm:w-64"
-        />
       </div>
 
-      {cards && cards.length > 0 ? (
+      {cards && cards.length > 0 && viewMode !== "table" ? (
         <CardsFilterBar
           availableTags={availableTags}
           selectedTags={selectedTags}
@@ -940,10 +900,12 @@ export default function DeckDetailPage({ params }: PageProps) {
         <div className="rounded-xl border border-dashed py-10 text-center text-sm text-muted-foreground">
           Không có từ nào khớp bộ lọc.
         </div>
-      ) : viewMode === "test" ? (
-        <CardsTest cards={displayCards} deckId={deckId} />
       ) : viewMode === "table" && deck ? (
-        <CardsTable cards={displayCards} deck={deck} />
+        <CardsTable
+          cards={displayCards}
+          deck={deck}
+          onOpenHistory={() => setOpenHistory(true)}
+        />
       ) : groupByTag ? (
         <div className="space-y-6 pb-24">
           {groupedCards.map((group) => (
@@ -961,6 +923,17 @@ export default function DeckDetailPage({ params }: PageProps) {
       ) : (
         <ul className="space-y-2 pb-24">{displayCards.map(renderCard)}</ul>
       )}
+        </div>
+
+        {/* CỘT PHẢI: truyện chêm — dính theo cuộn trên màn hình lớn */}
+        <aside className="lg:sticky lg:top-6 lg:self-start">
+          <div className="mb-2 flex items-center gap-2">
+            <BookMarked className="h-4 w-4 text-primary" />
+            <h2 className="text-sm font-semibold">Truyện chêm</h2>
+          </div>
+          <DeckStoryPanel deckId={deckId} compact />
+        </aside>
+      </div>
 
       <CardDetailDialog
         open={!!detailCard}
@@ -1056,9 +1029,6 @@ export default function DeckDetailPage({ params }: PageProps) {
         </div>
       ) : null}
       {confirmDialog}
-
-      {/* Tự cuộn lên/xuống — tiện khi danh sách từ dài */}
-      {displayCards.length > 4 ? <AutoScrollControls /> : null}
     </div>
   );
 }

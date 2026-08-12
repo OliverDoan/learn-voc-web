@@ -74,6 +74,43 @@ export function posToVietnamese(pos: string | null | undefined): string {
   return labels.join(", ");
 }
 
+// Viết tắt tiếng Anh cho từng từ loại (danh từ → n, động từ → v...).
+const POS_ABBR: Record<string, string> = {
+  noun: "n",
+  verb: "v",
+  adjective: "adj",
+  adverb: "adv",
+  pronoun: "pron",
+  preposition: "prep",
+  conjunction: "conj",
+  interjection: "interj",
+  determiner: "det",
+  article: "art",
+};
+
+/**
+ * Chuyển chuỗi partOfSpeech (tiếng Anh) sang dạng viết tắt tiếng Anh.
+ * Vd: "noun" → "n", "adjective / noun" → "adj, n". Từ loại lạ giữ nguyên.
+ * Trả về chuỗi rỗng nếu không có dữ liệu.
+ */
+export function posToAbbr(pos: string | null | undefined): string {
+  if (!pos) return "";
+  const tokens = pos
+    .split(/\s*[/,]\s*/)
+    .map((t) => t.trim())
+    .filter(Boolean);
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const t of tokens) {
+    const abbr = POS_ABBR[t.toLowerCase()] ?? t;
+    if (!seen.has(abbr)) {
+      seen.add(abbr);
+      out.push(abbr);
+    }
+  }
+  return out.join(", ");
+}
+
 export function parseTags(tagsJson: string | null | undefined): string[] {
   if (!tagsJson) return [];
   try {

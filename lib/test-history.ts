@@ -4,6 +4,29 @@
 export const MAX_ATTEMPTS = 3;
 const keyOf = (deckId: string): string => `voc-test-history-${deckId}`;
 
+/** Bắn ra khi lịch sử kiểm tra của một deck thay đổi (thêm/xoá) — để UI cùng tab
+ *  tự cập nhật (vd ẩn/hiện nút "Lịch sử sai"). */
+export const TEST_HISTORY_EVENT = "voc-test-history-changed";
+
+function emitHistoryChange(): void {
+  if (typeof window !== "undefined") {
+    window.dispatchEvent(new Event(TEST_HISTORY_EVENT));
+  }
+}
+
+/** Có ít nhất một lần kiểm tra đã lưu cho deck này chưa (đọc thuần, không ghi). */
+export function hasTestHistory(deckId: string): boolean {
+  if (typeof window === "undefined") return false;
+  try {
+    const raw = window.localStorage.getItem(keyOf(deckId));
+    if (!raw) return false;
+    const parsed: unknown = JSON.parse(raw);
+    return Array.isArray(parsed) && parsed.length > 0;
+  } catch {
+    return false;
+  }
+}
+
 /** Một từ trả lời sai trong một lần kiểm tra. */
 export interface TestWrongItem {
   cardId: string;
@@ -56,6 +79,7 @@ export function addTestAttempt(deckId: string, attempt: TestAttempt): TestAttemp
   } catch {
     // Bỏ qua khi không ghi được (vd chế độ riêng tư đầy quota).
   }
+  emitHistoryChange();
   return next;
 }
 
@@ -65,4 +89,5 @@ export function clearTestHistory(deckId: string): void {
   } catch {
     // Bỏ qua.
   }
+  emitHistoryChange();
 }

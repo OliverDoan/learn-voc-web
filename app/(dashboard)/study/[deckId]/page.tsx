@@ -38,7 +38,7 @@ export default function StudyPage({ params }: PageProps) {
   // ?all=1 → ôn trước hạn: toàn bộ thẻ của deck, bỏ qua lịch SRS (chỉ deck thật).
   const studyAll = !isSubset && !isVirtual && searchParams.get("all") === "1";
   // Điều hướng "Thoát": "all" → dashboard, topic → trang topic, còn lại → trang deck.
-  const backHref = deckId === "all" ? "/" : isTopic ? `/topic/${topicIndex}` : `/decks/${deckId}`;
+  const backHref = deckId === "all" ? "/decks" : isTopic ? `/topic/${topicIndex}` : `/decks/${deckId}`;
 
   const { data: queue, isLoading, refetch } = useStudyQueue(deckId, subsetIds, studyAll);
   // Bỏ qua kiểm tra khóa với deck ảo ("all"/topic) hoặc ôn tập tập con tự chọn.

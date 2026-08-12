@@ -3,14 +3,15 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { BookOpen, Layers, Loader2, Mic, Play, SpellCheck, Star, Volume2 } from "lucide-react";
+import { BookOpen, Layers, Loader2, Mic, Play, SpellCheck, Star, StarOff, Volume2 } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SelectMenu, type SelectOption } from "@/components/ui/select-menu";
+import { useConfirm } from "@/components/ui/confirm-dialog";
 import { DialectBadge } from "@/components/deck/dialect-badge";
 import { ReadAllButton } from "@/components/deck/read-all-button";
-import { useFavorites, useToggleFavorite } from "@/hooks/use-cards";
+import { useBulkUnfavorite, useFavorites, useToggleFavorite } from "@/hooks/use-cards";
 import { speak, spell } from "@/lib/tts";
 import type { FavoriteCard } from "@/hooks/use-cards";
 
@@ -26,6 +27,8 @@ export default function FavoritesPage() {
   const router = useRouter();
   const { data: cards, isLoading } = useFavorites();
   const toggleFavoriteMut = useToggleFavorite();
+  const bulkUnfavoriteMut = useBulkUnfavorite();
+  const { confirm, confirmDialog } = useConfirm();
 
   // null = hiển thị tất cả deck.
   const [selectedDeckId, setSelectedDeckId] = useState<string | null>(null);
@@ -122,6 +125,28 @@ export default function FavoritesPage() {
     try {
       await toggleFavoriteMut.mutateAsync({ cardId: card.id, favorite: false });
       toast.success("Đã bỏ yêu thích");
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : "Lỗi khi cập nhật");
+    }
+  };
+
+  // Bỏ đánh dấu sao cho TẤT CẢ từ yêu thích (không xoá thẻ khỏi deck).
+  const handleClearAll = async () => {
+    if (!cards || cards.length === 0) return;
+    const ok = await confirm({
+      title: "Bỏ tất cả từ yêu thích?",
+      description: `${cards.length} từ sẽ bị gỡ khỏi danh sách yêu thích. Các từ vẫn còn trong deck, chỉ bỏ đánh dấu sao.`,
+      confirmText: "Bỏ tất cả",
+    });
+    if (!ok) return;
+    try {
+      const ids = cards.map((c) => c.id);
+      // Chia lô 500 theo giới hạn của API bulk.
+      for (let i = 0; i < ids.length; i += 500) {
+        await bulkUnfavoriteMut.mutateAsync(ids.slice(i, i + 500));
+      }
+      toast.success("Đã bỏ tất cả từ yêu thích");
+      setSelectedDeckId(null);
     } catch (error) {
       toast.error(error instanceof Error ? error.message : "Lỗi khi cập nhật");
     }
@@ -279,8 +304,23 @@ export default function FavoritesPage() {
             >
               <Mic className="h-4 w-4" /> Phát âm
             </Button>
-            <div className="ml-auto">
+            <div className="ml-auto flex items-center gap-2">
               <ReadAllButton cards={sortedCards} />
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={handleClearAll}
+                disabled={bulkUnfavoriteMut.isPending || !cards || cards.length === 0}
+                className="text-destructive hover:text-destructive"
+                title="Bỏ đánh dấu sao cho tất cả từ yêu thích"
+              >
+                {bulkUnfavoriteMut.isPending ? (
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                ) : (
+                  <StarOff className="h-4 w-4" />
+                )}
+                Bỏ tất cả
+              </Button>
             </div>
           </div>
 
@@ -308,6 +348,7 @@ export default function FavoritesPage() {
           )}
         </>
       )}
+      {confirmDialog}
     </div>
   );
 }

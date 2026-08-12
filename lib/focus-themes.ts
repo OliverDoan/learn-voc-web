@@ -17,13 +17,14 @@ export interface FocusTheme {
   vars: Record<string, string>;
 }
 
-/** Bộ biến cho nền sáng (chữ tối). */
-function lightVars(accent: string): Record<string, string> {
+/** Bộ biến cho nền sáng (chữ tối). `surface` = màu nền đặc của theme, dùng cho
+ *  popover/menu để khớp màu theme và luôn đục (không lộ nội dung phía sau). */
+function lightVars(accent: string, surface: string): Record<string, string> {
   return {
     "--foreground": "#1b1b2b",
     "--card": "rgba(255,255,255,0.85)",
     "--card-foreground": "#1b1b2b",
-    "--popover": "#ffffff",
+    "--popover": surface,
     "--popover-foreground": "#1b1b2b",
     "--primary": accent,
     "--primary-foreground": "#ffffff",
@@ -39,13 +40,14 @@ function lightVars(accent: string): Record<string, string> {
   };
 }
 
-/** Bộ biến cho nền tối (chữ sáng). */
-function darkVars(accent: string, foreground = "#f4f1ec"): Record<string, string> {
+/** Bộ biến cho nền tối (chữ sáng). `surface` = màu nền đặc của theme, dùng cho
+ *  popover/menu để khớp màu theme và luôn đục (không lộ nội dung phía sau). */
+function darkVars(accent: string, surface: string, foreground = "#f4f1ec"): Record<string, string> {
   return {
     "--foreground": foreground,
     "--card": "rgba(255,255,255,0.07)",
     "--card-foreground": foreground,
-    "--popover": "#161a30",
+    "--popover": surface,
     "--popover-foreground": foreground,
     "--primary": accent,
     "--primary-foreground": "#ffffff",
@@ -78,7 +80,7 @@ export const FOCUS_THEMES: FocusTheme[] = [
     background: "linear-gradient(135deg, #dcf5c8 0%, #8ed07f 100%)",
     surface: "#eef7e6",
     isDark: false,
-    vars: lightVars("#3f9d4f"),
+    vars: lightVars("#3f9d4f", "#eef7e6"),
   },
   {
     id: "lavender",
@@ -86,7 +88,7 @@ export const FOCUS_THEMES: FocusTheme[] = [
     background: "linear-gradient(135deg, #c9bbf7 0%, #e2b4ed 100%)",
     surface: "#f2edfb",
     isDark: false,
-    vars: lightVars("#8b5cf6"),
+    vars: lightVars("#8b5cf6", "#f2edfb"),
   },
   {
     id: "sky",
@@ -94,7 +96,7 @@ export const FOCUS_THEMES: FocusTheme[] = [
     background: "linear-gradient(135deg, #c0e7f8 0%, #88cdee 100%)",
     surface: "#e9f4fb",
     isDark: false,
-    vars: lightVars("#2f9fd6"),
+    vars: lightVars("#2f9fd6", "#e9f4fb"),
   },
   {
     id: "coral",
@@ -102,7 +104,7 @@ export const FOCUS_THEMES: FocusTheme[] = [
     background: "linear-gradient(135deg, #f4937f 0%, #f8cda6 100%)",
     surface: "#fbeee7",
     isDark: false,
-    vars: lightVars("#e2573b"),
+    vars: lightVars("#e2573b", "#fbeee7"),
   },
   {
     id: "amber",
@@ -110,7 +112,7 @@ export const FOCUS_THEMES: FocusTheme[] = [
     background: "linear-gradient(135deg, #ef9a4a 0%, #c5611c 100%)",
     surface: "#241a0c",
     isDark: true,
-    vars: darkVars("#f59e0b"),
+    vars: darkVars("#f59e0b", "#241a0c"),
   },
   {
     id: "blush",
@@ -118,7 +120,7 @@ export const FOCUS_THEMES: FocusTheme[] = [
     background: "linear-gradient(135deg, #f3b2b2 0%, #f8d6c8 100%)",
     surface: "#fbeef1",
     isDark: false,
-    vars: lightVars("#e0728c"),
+    vars: lightVars("#e0728c", "#fbeef1"),
   },
   {
     id: "midnight",
@@ -126,7 +128,7 @@ export const FOCUS_THEMES: FocusTheme[] = [
     background: "linear-gradient(135deg, #161a30 0%, #2c2f4a 100%)",
     surface: "#0e1124",
     isDark: true,
-    vars: darkVars("#4d7cff", "#eaf0ff"),
+    vars: darkVars("#4d7cff", "#0e1124", "#eaf0ff"),
   },
 ];
 

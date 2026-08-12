@@ -162,7 +162,11 @@
       "Bash(UNIT=\"Unit 2:\" pnpm exec *)",
       "Bash(UNIT=\"Unit 3:\" pnpm exec *)",
       "Bash(UNIT=\"Unit 26:\" pnpm tsx *)",
-      "Bash(APPLY=1 pnpm tsx *)"
+      "Bash(APPLY=1 pnpm tsx *)",
+      "Bash(echo \"done exit=$?\")",
+      "Bash(grep -v \"set-state-in-effect\\\\|setState\\\\|Effects are\\\\|Update external\\\\|Subscribe\\\\|Calling setState\\\\|https://\\\\|^\\\\s*$\\\\|^\\\\s*\\\\*\\\\|^\\\\s*[0-9]\")",
+      "Bash(pnpm vitest *)",
+      "Bash(grep -vE \"set-state-in-effect|Calling setState|Effects are|Update external|Subscribe|https://|^\\\\s*$|^\\\\s*\\\\*|^\\\\s*[0-9]|setOrderedCards\")"
     ]
   }
 }

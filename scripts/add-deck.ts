@@ -4,7 +4,7 @@
  * File JSON theo đúng định dạng `deckImportSchema` (xem public/deck-template.json):
  *   { "deck": { name, description?, color?, icon? }, "cards": [ { word, meaning, ... } ] }
  *
- * Dùng chung validation Zod với API `/api/decks/import` để dữ liệu luôn hợp lệ.
+ * Validate bằng `deckImportSchema` (Zod) để dữ liệu luôn hợp lệ.
  * Chạy: pnpm add:deck <đường-dẫn-file.json>
  *   (hoặc: npx tsx --env-file=.env scripts/add-deck.ts <file.json>)
  *

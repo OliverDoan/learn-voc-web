@@ -75,6 +75,22 @@ export function useToggleFavorite() {
   });
 }
 
+/** Bỏ yêu thích hàng loạt cho danh sách thẻ. */
+export function useBulkUnfavorite() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (ids: string[]) =>
+      apiPost<{ count: number; action: string }>("/api/cards/bulk", {
+        action: "unfavorite",
+        ids,
+      }),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ["cards"] });
+      qc.invalidateQueries({ queryKey: FAVORITES_KEY });
+    },
+  });
+}
+
 /** Sắp xếp lại thứ tự thẻ trong deck (kéo-thả). */
 export function useReorderCards() {
   const qc = useQueryClient();

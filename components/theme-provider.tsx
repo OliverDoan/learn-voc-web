@@ -118,6 +118,11 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   const setTheme = useCallback((next: Theme) => {
     localStorage.setItem(THEME_STORAGE_KEY, next);
+    // Màu chủ đề tùy chỉnh ghi đè sáng/tối; khi người dùng chủ động chọn chế độ
+    // sáng/tối/theo máy thì bỏ palette (về Mặc định) để lựa chọn có hiệu lực.
+    if (getFocusTheme(readPalette()).surface !== null) {
+      localStorage.setItem(PALETTE_STORAGE_KEY, DEFAULT_PALETTE_ID);
+    }
     emit();
   }, []);
 

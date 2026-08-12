@@ -96,7 +96,8 @@ export const cardImportSchema = z.object({
   cards: z.array(cardImportItemSchema).min(1, "Không có từ nào để import").max(1000),
 });
 
-// Import nguyên deck mới: deck metadata + cards
+// Nạp nguyên deck mới (deck metadata + cards). Tính năng "Import deck" trên UI
+// đã bỏ; schema này giờ chỉ còn dùng cho script seed CLI `pnpm add:deck`.
 export const deckImportSchema = z.object({
   deck: deckCreateSchema,
   cards: z.array(cardImportItemSchema).min(1, "Không có từ nào để import").max(1000),
@@ -176,7 +177,7 @@ export const progressUpdateSchema = z.object({
 export type ProgressUpdateInput = z.infer<typeof progressUpdateSchema>;
 
 export const bulkCardsSchema = z.object({
-  action: z.enum(["delete", "move", "suspend", "unsuspend", "tag"]),
+  action: z.enum(["delete", "move", "suspend", "unsuspend", "tag", "unfavorite"]),
   ids: z.array(z.string().min(1)).min(1, "Phải chọn ít nhất 1 từ").max(500),
   targetDeckId: z.string().min(1).optional(),
   tags: z.array(z.string().trim().min(1).max(30)).max(10).optional(),

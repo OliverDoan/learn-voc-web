@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: "VocaLearn",
     description: "Ứng dụng học từ vựng cá nhân với Spaced Repetition và truyện chêm.",
     lang: "vi",
-    start_url: "/",
+    start_url: "/decks",
     scope: "/",
     display: "standalone",
     orientation: "portrait",

@@ -151,7 +151,7 @@ export default function PronouncePage({ params }: PageProps) {
     return () => window.removeEventListener("keydown", onKey);
   }, [listening, stop, start, resetAttempt, goNext]);
 
-  const backHref = deckId === "all" ? "/" : `/decks/${deckId}`;
+  const backHref = deckId === "all" ? "/decks" : `/decks/${deckId}`;
   const correctCount = useMemo(
     () => Object.values(scores).filter(Boolean).length,
     [scores],

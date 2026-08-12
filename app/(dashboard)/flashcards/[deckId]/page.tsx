@@ -171,7 +171,7 @@ export default function FlashcardsPage({ params }: PageProps) {
     return () => window.removeEventListener("keydown", onKey);
   }, [goNext, goPrev]);
 
-  const backHref = deckId === "all" ? "/" : isTopic ? `/topic/${topicIndex}` : `/decks/${deckId}`;
+  const backHref = deckId === "all" ? "/decks" : isTopic ? `/topic/${topicIndex}` : `/decks/${deckId}`;
 
   if (isLoading) {
     return (

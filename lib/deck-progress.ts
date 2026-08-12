@@ -39,8 +39,10 @@ export function computeDeckLockStatus(decks: readonly DeckLockInput[]): Map<stri
   let allPriorLearned = true;
   for (const { deck } of unitDecks) {
     const learned = deck.learnedAt != null;
-    // Mở khóa nếu mọi Unit trước đã học xong.
-    result.set(deck.id, { learned, locked: !allPriorLearned });
+    // Mở khóa nếu mọi Unit trước đã học xong. Deck đã học thì luôn mở (đã hoàn
+    // thành → không thể vừa "đã học" vừa "khóa"), nhưng vẫn không kéo mở các
+    // Unit sau cho tới khi mọi Unit trước thực sự học xong.
+    result.set(deck.id, { learned, locked: !allPriorLearned && !learned });
     if (!learned) allPriorLearned = false;
   }
 

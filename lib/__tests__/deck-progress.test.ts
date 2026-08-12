@@ -50,15 +50,18 @@ describe("computeDeckLockStatus", () => {
     expect(status.get("u3")).toEqual({ learned: false, locked: false });
   });
 
-  it("bỏ học giữa chuỗi làm khóa lại các Unit sau (suy diễn)", () => {
+  it("bỏ học giữa chuỗi làm khóa lại các Unit sau CHƯA học (suy diễn)", () => {
     const status = computeDeckLockStatus([
       deck("u1", "Unit 1: A", now),
       deck("u2", "Unit 2: B"), // chưa học
-      deck("u3", "Unit 3: C", now), // từng học nhưng Unit 2 chưa xong
+      deck("u3", "Unit 3: C", now), // đã học
+      deck("u4", "Unit 4: D"), // chưa học, đứng sau Unit 2 còn dở
     ]);
     expect(status.get("u2")).toEqual({ learned: false, locked: false });
-    // Unit 3 vẫn "learned" nhưng bị "locked" vì Unit 2 chưa học xong
-    expect(status.get("u3")).toEqual({ learned: true, locked: true });
+    // Unit 3 đã học xong thì luôn mở — không thể vừa "đã học" vừa "khóa".
+    expect(status.get("u3")).toEqual({ learned: true, locked: false });
+    // Unit 4 chưa học và còn Unit 2 dở phía trước → vẫn khóa.
+    expect(status.get("u4")).toEqual({ learned: false, locked: true });
   });
 
   it("deck không có số Unit luôn mở khóa", () => {

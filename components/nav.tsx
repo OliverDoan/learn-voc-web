@@ -3,60 +3,12 @@
 import { useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  ArrowLeftRight,
-  Blocks,
-  BookMarked,
-  BookOpen,
-  BookText,
-  CircleAlert,
-  GraduationCap,
-  History,
-  Home,
-  Layers,
-  Library,
-  Menu,
-  PanelLeftClose,
-  PanelLeftOpen,
-  Search,
-  Settings,
-  Sprout,
-  Star,
-  Trash2,
-} from "lucide-react";
+import { BookOpen, Menu, PanelLeftClose, PanelLeftOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Avatar } from "@/components/ui/avatar";
 import { useProgress } from "@/hooks/use-progress";
-
-interface NavItem {
-  href: string;
-  label: string;
-  icon: typeof Home;
-  mobile?: boolean;
-  /** Chỉ prefetch tự động vài route hay dùng; còn lại chỉ prefetch khi hover
-   *  (tránh bắn ~15 request RSC cùng lúc gây nghẽn hàng đợi kết nối). */
-  prefetch?: boolean;
-}
-
-const items: NavItem[] = [
-  { href: "/", label: "Trang chủ", icon: Home, mobile: true, prefetch: true },
-  { href: "/search", label: "Tra từ", icon: Search, mobile: false },
-  { href: "/decks", label: "Decks", icon: Layers, mobile: true, prefetch: true },
-  { href: "/stories", label: "Truyện chêm", icon: BookMarked, mobile: false, prefetch: true },
-  { href: "/words", label: "Tất cả từ", icon: Library, mobile: false },
-  { href: "/favorites", label: "Yêu thích", icon: Star, mobile: false },
-  { href: "/history", label: "Lịch sử", icon: History, mobile: false },
-  { href: "/mistakes", label: "Xem lỗi sai", icon: CircleAlert, mobile: false },
-  { href: "/ielts", label: "IELTS", icon: GraduationCap, mobile: true },
-  { href: "/grammar", label: "Ngữ pháp", icon: BookText, mobile: true },
-  { href: "/word-formation", label: "Cấu tạo từ", icon: Blocks, mobile: false },
-  { href: "/word-roots", label: "Từ gốc", icon: Sprout, mobile: false },
-  { href: "/confusing-words", label: "Từ dễ lẫn", icon: ArrowLeftRight, mobile: false },
-  { href: "/trash", label: "Thùng rác", icon: Trash2, mobile: false },
-  { href: "/settings", label: "Cài đặt", icon: Settings, mobile: true },
-];
-
-const mobileItems = items.filter((i) => i.mobile);
+import { useHiddenNavItems } from "@/hooks/use-sidebar-prefs";
+import { NAV_ITEMS, mobileNavItems } from "@/lib/nav-items";
 
 // Store nhỏ cho trạng thái thu gọn sidebar, lưu ở localStorage.
 // Dùng useSyncExternalStore để SSR luôn trả về false (khớp server) rồi
@@ -96,6 +48,9 @@ export function Nav() {
     () => false,
   );
   const toggle = () => setCollapsedStore(!collapsed);
+  // Mục bị ẩn do người dùng cấu hình trong Cài đặt (mục pinned luôn hiện).
+  const hidden = useHiddenNavItems();
+  const visibleItems = NAV_ITEMS.filter((i) => i.pinned || !hidden.has(i.href));
 
   return (
     <aside
@@ -110,7 +65,7 @@ export function Nav() {
           collapsed ? "flex-col gap-2" : "justify-between px-2",
         )}
       >
-        <Link href="/" className="flex items-center gap-2.5">
+        <Link href="/decks" className="flex items-center gap-2.5">
           <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-[9px] bg-primary text-primary-foreground shadow-[0_12px_28px_rgba(23,61,201,.32)]">
             <BookOpen className="h-[18px] w-[18px]" />
           </span>
@@ -134,7 +89,7 @@ export function Nav() {
       </div>
 
       <nav className="flex flex-col gap-1">
-        {items.map((item) => {
+        {visibleItems.map((item) => {
           const active =
             item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
           return (
@@ -181,9 +136,7 @@ export function Nav() {
             <p className="truncate text-sm font-medium">
               {progress?.displayName?.trim() || "Hồ sơ của bạn"}
             </p>
-            <p className="truncate text-xs text-muted-foreground">
-              🔥 {progress?.currentStreak ?? 0} ngày streak
-            </p>
+            <p className="truncate text-xs text-muted-foreground">Xem hồ sơ &amp; cài đặt</p>
           </div>
         ) : null}
       </Link>
@@ -194,11 +147,13 @@ export function Nav() {
 export function MobileNav() {
   const pathname = usePathname();
   const [moreOpen, setMoreOpen] = useState(false);
+  const hidden = useHiddenNavItems();
+  const visibleItems = NAV_ITEMS.filter((i) => i.pinned || !hidden.has(i.href));
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
   // 4 mục chính + nút "Thêm" mở bảng chứa toàn bộ mục.
-  const primary = mobileItems.slice(0, 4);
+  const primary = mobileNavItems.slice(0, 4);
   const onPrimary = primary.some((i) => isActive(i.href));
 
   return (
@@ -212,7 +167,7 @@ export function MobileNav() {
           <div className="fixed inset-x-0 bottom-0 z-50 rounded-t-2xl border-t bg-card p-4 pb-6 shadow-[0_-12px_40px_rgba(0,0,0,.15)]">
             <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-muted" />
             <div className="grid grid-cols-4 gap-2">
-              {items.map((item) => {
+              {visibleItems.map((item) => {
                 const active = isActive(item.href);
                 return (
                   <Link

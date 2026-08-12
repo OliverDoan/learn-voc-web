@@ -45,6 +45,15 @@ export async function POST(req: NextRequest) {
       return ok({ count: res.count, action });
     }
 
+    if (action === "unfavorite") {
+      // Bỏ đánh dấu yêu thích hàng loạt.
+      const res = await prisma.card.updateMany({
+        where: { id: { in: ids }, favorite: true },
+        data: { favorite: false },
+      });
+      return ok({ count: res.count, action });
+    }
+
     if (action === "tag") {
       if (!tags || tags.length === 0) return fail("Thiếu tags", 400);
       const cards = await prisma.card.findMany({

@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef, useState, type ReactNode } from "react";
-import { Columns3, Plus, Trash2 } from "lucide-react";
+import { useRef, useState, useSyncExternalStore, type ReactNode } from "react";
+import { ClipboardCheck, Columns3, History, Plus, Table2, Trash2 } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { useUpdateDeck } from "@/hooks/use-decks";
@@ -14,11 +14,15 @@ import {
 } from "@/lib/custom-columns";
 import type { Card, Deck } from "@/lib/types";
 import { cn } from "@/lib/utils";
+import { hasTestHistory, TEST_HISTORY_EVENT } from "@/lib/test-history";
 import { DialectBadge } from "@/components/deck/dialect-badge";
+import { CardsTest } from "@/components/deck/cards-test";
 
 interface CardsTableProps {
   cards: Card[];
   deck: Deck;
+  /** Mở hộp thoại lịch sử các từ làm sai (đặt trong toolbar của bảng). */
+  onOpenHistory?: () => void;
 }
 
 // Cột built-in (chỉ xem) — STT luôn hiện, các cột còn lại có thể ẩn.
@@ -113,7 +117,23 @@ function renderWordForms(json: string | null): ReactNode {
   );
 }
 
-export function CardsTable({ cards, deck }: CardsTableProps) {
+/** Có lịch sử kiểm tra cho deck chưa — cập nhật live khi thêm/xoá (qua event). */
+function useHasTestHistory(deckId: string): boolean {
+  return useSyncExternalStore(
+    (cb) => {
+      window.addEventListener(TEST_HISTORY_EVENT, cb);
+      window.addEventListener("storage", cb);
+      return () => {
+        window.removeEventListener(TEST_HISTORY_EVENT, cb);
+        window.removeEventListener("storage", cb);
+      };
+    },
+    () => hasTestHistory(deckId),
+    () => false,
+  );
+}
+
+export function CardsTable({ cards, deck, onOpenHistory }: CardsTableProps) {
   const updateDeck = useUpdateDeck(deck.id);
 
   // Mặc định (chưa lưu tuỳ chỉnh): chỉ hiện cột "Từ vựng", ẩn các cột còn lại + cột tuỳ chỉnh.
@@ -184,13 +204,45 @@ export function CardsTable({ cards, deck }: CardsTableProps) {
   };
 
   const [menuOpen, setMenuOpen] = useState(false);
+  // Chế độ trong tab Bảng: xem/sửa bảng hoặc kiểm tra (gộp chức năng Kiểm tra).
+  const [testMode, setTestMode] = useState(false);
+  const historyExists = useHasTestHistory(deck.id);
   const visibleBuiltin = BUILTIN.filter((b) => !hidden.has(b.key));
   const visibleColumns = columns.filter((c) => !hidden.has(c.id));
 
   return (
     <div className="pb-24">
-      {/* Thanh công cụ: ẩn/hiện cột + thêm cột */}
-      <div className="mb-3 flex items-center gap-2">
+      {/* Thanh công cụ: chuyển Bảng/Kiểm tra + ẩn/hiện cột + thêm cột */}
+      <div className="mb-3 flex flex-wrap items-center gap-2">
+        {/* Chuyển giữa xem bảng và kiểm tra */}
+        <div className="inline-flex rounded-lg border bg-card p-0.5">
+          <button
+            type="button"
+            onClick={() => setTestMode(false)}
+            className={cn(
+              "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
+              !testMode
+                ? "bg-primary text-primary-foreground"
+                : "text-muted-foreground hover:text-foreground",
+            )}
+          >
+            <Table2 className="h-4 w-4" /> Bảng
+          </button>
+          <button
+            type="button"
+            onClick={() => setTestMode(true)}
+            className={cn(
+              "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
+              testMode
+                ? "bg-primary text-primary-foreground"
+                : "text-muted-foreground hover:text-foreground",
+            )}
+          >
+            <ClipboardCheck className="h-4 w-4" /> Kiểm tra
+          </button>
+        </div>
+        {!testMode ? (
+          <>
         <div className="relative">
           <Button variant="outline" size="sm" onClick={() => setMenuOpen((o) => !o)}>
             <Columns3 className="h-4 w-4" /> Cột
@@ -240,11 +292,23 @@ export function CardsTable({ cards, deck }: CardsTableProps) {
         <Button variant="outline" size="sm" onClick={addColumn}>
           <Plus className="h-4 w-4" /> Thêm cột
         </Button>
-        <span className="text-xs text-muted-foreground">
-          {cards.length} từ · cột tùy chỉnh nhập trực tiếp vào ô
-        </span>
+          </>
+        ) : null}
+        {onOpenHistory && historyExists ? (
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={onOpenHistory}
+            title="Xem lịch sử các từ sai"
+          >
+            <History className="h-4 w-4" /> Lịch sử sai
+          </Button>
+        ) : null}
       </div>
 
+      {testMode ? (
+        <CardsTest cards={cards} deckId={deck.id} />
+      ) : (
       <div className="overflow-x-auto rounded-xl border bg-card">
         <table className="w-full border-collapse text-sm">
           <thead className="sticky top-0 z-10 bg-muted/60 backdrop-blur">
@@ -281,17 +345,6 @@ export function CardsTable({ cards, deck }: CardsTableProps) {
                   </div>
                 </th>
               ))}
-              <th className="border-b px-2 py-2">
-                <button
-                  type="button"
-                  onClick={addColumn}
-                  className="flex h-6 w-6 items-center justify-center rounded text-muted-foreground hover:bg-accent hover:text-foreground"
-                  aria-label="Thêm cột"
-                  title="Thêm cột"
-                >
-                  <Plus className="h-4 w-4" />
-                </button>
-              </th>
             </tr>
           </thead>
           <tbody>
@@ -324,12 +377,12 @@ export function CardsTable({ cards, deck }: CardsTableProps) {
                     />
                   </td>
                 ))}
-                <td className="border-b" />
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+      )}
     </div>
   );
 }

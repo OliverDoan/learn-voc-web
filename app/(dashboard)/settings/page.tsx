@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { ThemePicker } from "@/components/focus/theme-picker";
 import { ProfileSection } from "@/components/settings/profile-section";
+import { SidebarSection } from "@/components/settings/sidebar-section";
 import { PronounceSection } from "@/components/settings/pronounce-section";
 import { DailyGoalSection } from "@/components/settings/daily-goal-section";
-import { StreakSection } from "@/components/settings/streak-section";
 import { useProgress } from "@/hooks/use-progress";
 
 export default function SettingsPage() {
@@ -52,6 +52,8 @@ export default function SettingsPage() {
         </div>
       </section>
 
+      <SidebarSection />
+
       <PronounceSection />
 
       <section className="rounded-2xl border bg-card p-5">
@@ -71,8 +73,6 @@ export default function SettingsPage() {
       </section>
 
       <DailyGoalSection progress={progress} />
-
-      <StreakSection progress={progress} />
     </div>
   );
 }

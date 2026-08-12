@@ -5,19 +5,12 @@ import { apiDelete, apiFetch, apiPatch, apiPost } from "@/lib/api-client";
 import type { Deck, DeckWithCounts } from "@/lib/types";
 import type {
   DeckCreateInput,
-  DeckImportInput,
   DeckUpdateInput,
   TrashActionInput,
 } from "@/lib/schemas";
 
 export const DECKS_KEY = ["decks"] as const;
 export const DECK_TRASH_KEY = ["decks", "trash"] as const;
-
-export interface DeckImportResponse {
-  deckId: string;
-  deckName: string;
-  count: number;
-}
 
 export interface TrashDeck extends Deck {
   _count: { cards: number; stories: number };
@@ -93,15 +86,6 @@ export function useRecordDeckActivity(deckId: string) {
       qc.invalidateQueries({ queryKey: DECKS_KEY });
       qc.invalidateQueries({ queryKey: ["history"] });
     },
-  });
-}
-
-export function useImportDeck() {
-  const qc = useQueryClient();
-  return useMutation({
-    mutationFn: (input: DeckImportInput) =>
-      apiPost<DeckImportResponse>("/api/decks/import", input),
-    onSuccess: () => qc.invalidateQueries({ queryKey: DECKS_KEY }),
   });
 }
 

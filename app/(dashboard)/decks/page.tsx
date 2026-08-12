@@ -2,18 +2,16 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Layers, Plus, Loader2, Search, Upload } from "lucide-react";
+import { ArrowRight, Layers, Plus, Loader2, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { DeckCard } from "@/components/deck/deck-card";
 import { DeckFormDialog } from "@/components/deck/deck-form-dialog";
-import { ImportDeckDialog } from "@/components/deck/import-deck-dialog";
 import { useDecks } from "@/hooks/use-decks";
 import { groupDecksByTopic } from "@/lib/deck-topics";
 
 export default function DecksPage() {
   const [openCreate, setOpenCreate] = useState(false);
-  const [openImport, setOpenImport] = useState(false);
   const [search, setSearch] = useState("");
   const { data: decks, isLoading } = useDecks();
 
@@ -43,14 +41,6 @@ export default function DecksPage() {
           <p className="text-sm text-muted-foreground">Nhóm từ vựng theo chủ đề</p>
         </div>
         <div className="flex flex-wrap gap-2">
-          <Button
-            variant="outline"
-            className="flex-1 rounded-full sm:flex-none"
-            onClick={() => setOpenImport(true)}
-          >
-            <Upload className="h-4 w-4" />
-            Import deck
-          </Button>
           <Button
             className="flex-1 rounded-full shadow-[0_8px_20px_rgba(23,61,201,.28)] sm:flex-none"
             onClick={() => setOpenCreate(true)}
@@ -116,7 +106,6 @@ export default function DecksPage() {
       )}
 
       <DeckFormDialog open={openCreate} onOpenChange={setOpenCreate} />
-      <ImportDeckDialog open={openImport} onOpenChange={setOpenImport} />
     </div>
   );
 }
