@@ -1,14 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { Check, ChevronDown, Lock, PanelLeft, RotateCcw } from "lucide-react";
+import { ChevronDown, Lock, PanelLeft, RotateCcw } from "lucide-react";
 import { NAV_ITEMS } from "@/lib/nav-items";
 import { resetHiddenNavItems, setNavItemHidden } from "@/lib/sidebar-prefs";
 import { useHiddenNavItems } from "@/hooks/use-sidebar-prefs";
 import { cn } from "@/lib/utils";
 
 /**
- * Cấu hình mục hiển thị trên thanh bên (sidebar) qua một dropdown checkbox.
+ * Cấu hình mục hiển thị trên thanh bên (sidebar) qua dropdown có toggle bật/tắt.
  * Lưu trực tiếp vào localStorage qua store dùng chung nên sidebar cập nhật ngay.
  */
 export function SidebarSection() {
@@ -49,7 +49,8 @@ export function SidebarSection() {
           <>
             <div className="fixed inset-0 z-20" onClick={() => setOpen(false)} />
             <div
-              role="listbox"
+              role="group"
+              aria-label="Bật/tắt mục thanh bên"
               className="absolute left-0 right-0 top-full z-30 mt-1 max-h-80 overflow-y-auto rounded-lg border bg-popover text-popover-foreground p-1.5 shadow-lg"
             >
               {NAV_ITEMS.map((item) => {
@@ -58,8 +59,9 @@ export function SidebarSection() {
                   <button
                     key={item.href}
                     type="button"
-                    role="option"
-                    aria-selected={shown}
+                    role="switch"
+                    aria-checked={shown}
+                    aria-label={`${shown ? "Ẩn" : "Hiện"} ${item.label}`}
                     disabled={item.pinned}
                     onClick={() => setNavItemHidden(item.href, shown)}
                     className={cn(
@@ -67,21 +69,25 @@ export function SidebarSection() {
                       item.pinned ? "cursor-not-allowed opacity-60" : "hover:bg-accent",
                     )}
                   >
-                    <span
-                      className={cn(
-                        "flex h-5 w-5 shrink-0 items-center justify-center rounded border transition-colors",
-                        shown
-                          ? "border-primary bg-primary text-primary-foreground"
-                          : "border-input",
-                      )}
-                    >
-                      {shown ? <Check className="h-3.5 w-3.5" /> : null}
-                    </span>
                     <item.icon className="h-4 w-4 shrink-0 text-muted-foreground" />
                     <span className="flex-1 font-medium">{item.label}</span>
                     {item.pinned ? (
                       <Lock className="h-3.5 w-3.5 shrink-0 text-muted-foreground" />
-                    ) : null}
+                    ) : (
+                      <span
+                        className={cn(
+                          "relative inline-flex h-5 w-9 shrink-0 items-center rounded-full transition-colors",
+                          shown ? "bg-primary" : "bg-muted",
+                        )}
+                      >
+                        <span
+                          className={cn(
+                            "inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform",
+                            shown ? "translate-x-[18px]" : "translate-x-0.5",
+                          )}
+                        />
+                      </span>
+                    )}
                   </button>
                 );
               })}
