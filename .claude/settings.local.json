@@ -166,7 +166,9 @@
       "Bash(echo \"done exit=$?\")",
       "Bash(grep -v \"set-state-in-effect\\\\|setState\\\\|Effects are\\\\|Update external\\\\|Subscribe\\\\|Calling setState\\\\|https://\\\\|^\\\\s*$\\\\|^\\\\s*\\\\*\\\\|^\\\\s*[0-9]\")",
       "Bash(pnpm vitest *)",
-      "Bash(grep -vE \"set-state-in-effect|Calling setState|Effects are|Update external|Subscribe|https://|^\\\\s*$|^\\\\s*\\\\*|^\\\\s*[0-9]|setOrderedCards\")"
+      "Bash(grep -vE \"set-state-in-effect|Calling setState|Effects are|Update external|Subscribe|https://|^\\\\s*$|^\\\\s*\\\\*|^\\\\s*[0-9]|setOrderedCards\")",
+      "Bash(grep -rn \"decks/\\\\${\\\\|decks/\\\\\" *+\\\\|href={\\\\`/decks/\" app components --include=\"*.tsx\")",
+      "Bash(npx --yes playwright@latest --version)"
     ]
   }
 }
