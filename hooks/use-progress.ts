@@ -60,6 +60,31 @@ export function useUpdateProgress() {
   });
 }
 
+export interface ResetResult {
+  scope: "learned" | "all";
+  decksUnlearned: number;
+  reviewLogs?: number;
+  dailyStats?: number;
+  deckActivities?: number;
+  exerciseAttempts?: number;
+  achievements?: number;
+  cardsReset?: number;
+  favoritesCleared?: number;
+}
+
+/**
+ * Đặt lại dữ liệu học. Sau khi xong phải làm mới toàn bộ cache vì gần như mọi
+ * query (deck, thẻ, thống kê, huy hiệu) đều thay đổi.
+ */
+export function useResetProgress() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: (scope: "learned" | "all") =>
+      apiPost<ResetResult>("/api/progress/reset", { scope }),
+    onSuccess: () => queryClient.invalidateQueries(),
+  });
+}
+
 export function useResetStreak() {
   const queryClient = useQueryClient();
   return useMutation({

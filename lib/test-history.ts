@@ -83,6 +83,23 @@ export function addTestAttempt(deckId: string, attempt: TestAttempt): TestAttemp
   return next;
 }
 
+/** Xoá lịch sử kiểm tra của TẤT CẢ deck (dùng khi đặt lại dữ liệu học). */
+export function clearAllTestHistory(): void {
+  if (typeof window === "undefined") return;
+  try {
+    const prefix = keyOf("");
+    const keys: string[] = [];
+    for (let i = 0; i < window.localStorage.length; i += 1) {
+      const key = window.localStorage.key(i);
+      if (key?.startsWith(prefix)) keys.push(key);
+    }
+    for (const key of keys) window.localStorage.removeItem(key);
+  } catch {
+    // Bỏ qua.
+  }
+  emitHistoryChange();
+}
+
 export function clearTestHistory(deckId: string): void {
   try {
     window.localStorage.removeItem(keyOf(deckId));

@@ -9,6 +9,10 @@ import { ProfileSection } from "@/components/settings/profile-section";
 import { SidebarSection } from "@/components/settings/sidebar-section";
 import { PronounceSection } from "@/components/settings/pronounce-section";
 import { DailyGoalSection } from "@/components/settings/daily-goal-section";
+import { ReminderSection } from "@/components/settings/reminder-section";
+import { AchievementsSection } from "@/components/settings/achievements-section";
+import { StreakSection } from "@/components/settings/streak-section";
+import { ResetSection } from "@/components/settings/reset-section";
 import { useProgress } from "@/hooks/use-progress";
 
 export default function SettingsPage() {
@@ -73,6 +77,14 @@ export default function SettingsPage() {
       </section>
 
       <DailyGoalSection progress={progress} />
+
+      <StreakSection progress={progress} />
+
+      <ReminderSection />
+
+      <AchievementsSection />
+
+      <ResetSection />
     </div>
   );
 }

@@ -216,3 +216,10 @@ export const deckActivitySchema = z.object({
 });
 
 export type DeckActivityInput = z.infer<typeof deckActivitySchema>;
+
+/** Đặt lại dữ liệu học — "learned" chỉ bỏ đánh dấu học xong, "all" xoá sạch tiến độ. */
+export const progressResetSchema = z.object({
+  scope: z.enum(["learned", "all"]),
+});
+
+export type ProgressResetInput = z.infer<typeof progressResetSchema>;
