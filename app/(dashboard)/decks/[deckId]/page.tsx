@@ -33,6 +33,7 @@ import { CardDetailDialog } from "@/components/deck/card-detail-dialog";
 import { DialectBadge } from "@/components/deck/dialect-badge";
 import { DeckFormDialog } from "@/components/deck/deck-form-dialog";
 import { DeckLockedScreen } from "@/components/deck/deck-locked-screen";
+import { DeckExerciseProgress } from "@/components/deck/deck-exercise-progress";
 import { ImportCardsDialog } from "@/components/deck/import-cards-dialog";
 import { ExportCardsDialog } from "@/components/deck/export-cards-dialog";
 import { ReadAllButton } from "@/components/deck/read-all-button";
@@ -574,6 +575,9 @@ export default function DeckDetailPage({ params }: PageProps) {
           />
         </div>
       </div>
+
+      {/* Tiến độ bài tập: cổng mở khóa deck sau — bấm từng ô để làm ngay dạng đó. */}
+      <DeckExerciseProgress deckId={deckId} exercises={deck.exercises ?? []} />
 
       {/* Bố cục 2 cột: trái là danh sách từ vựng, phải là truyện chêm (sticky) */}
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_420px]">

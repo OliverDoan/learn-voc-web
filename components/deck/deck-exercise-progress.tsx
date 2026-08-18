@@ -23,11 +23,6 @@ interface DeckExerciseProgressProps {
  * Mỗi ô là link nhảy thẳng vào dạng bài tương ứng.
  */
 export function DeckExerciseProgress({ deckId, exercises }: DeckExerciseProgressProps) {
-  // Mặc định đóng — người dùng bấm để mở xem chi tiết các dạng bài.
-  const [open, setOpen] = useState(false);
-
-  if (exercises.length === 0) return null;
-
   const doneCount = exercises.filter((e) => e.done).length;
   // Chỉ dạng BẮT BUỘC mới tính vào điều kiện mở khóa (bỏ dạng tuỳ chọn như Phát âm).
   const mandatory = exercises.filter((e) => !e.optional);
@@ -37,6 +32,11 @@ export function DeckExerciseProgress({ deckId, exercises }: DeckExerciseProgress
   // Đủ điều kiện mở khóa: chỉ cần làm ≥ số dạng bắt buộc tối thiểu (cho phép thiếu 1 dạng).
   const canUnlock = mandatoryDone >= required;
   const remaining = Math.max(0, required - mandatoryDone);
+
+  // Chưa đủ điều kiện mở khóa → mở sẵn để thấy ngay các dạng bài cần làm.
+  const [open, setOpen] = useState(!canUnlock);
+
+  if (exercises.length === 0) return null;
 
   return (
     <div className="mb-6 rounded-2xl border bg-card">
