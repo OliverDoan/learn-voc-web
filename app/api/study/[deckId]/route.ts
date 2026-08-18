@@ -8,6 +8,7 @@ import {
 } from "@/lib/daily-queue";
 import { isDeckUnlocked } from "@/lib/deck-progress";
 import { parseTopicDeckId } from "@/lib/deck-topics";
+import { parseQuickLimit } from "@/lib/quick-study";
 
 interface RouteParams {
   params: Promise<{ deckId: string }>;
@@ -20,6 +21,8 @@ export async function GET(req: NextRequest, { params }: RouteParams) {
     const { deckId } = await params;
     const url = new URL(req.url);
     const idsParam = url.searchParams.get("ids")?.trim();
+    // ?quick=N → phiên ngắn: giới hạn tổng số thẻ trong hàng đợi.
+    const quickLimit = parseQuickLimit(url.searchParams.get("quick"));
 
     const cardIds = idsParam
       ? idsParam
@@ -33,8 +36,8 @@ export async function GET(req: NextRequest, { params }: RouteParams) {
     if (deckId === "all") {
       const queue = cardIds
         ? await getCardsByIds(cardIds)
-        : await getGlobalReviewQueue();
-      return ok(queue);
+        : await getGlobalReviewQueue(quickLimit);
+      return ok(quickLimit ? queue.slice(0, quickLimit) : queue);
     }
 
     // deckId ảo "topic-N" → gộp toàn bộ thẻ của cả topic (5 unit), bỏ khóa & lịch SRS.
@@ -43,11 +46,11 @@ export async function GET(req: NextRequest, { params }: RouteParams) {
       const queue = cardIds
         ? await getCardsByIds(cardIds)
         : await getTopicReviewQueue(topicIndex);
-      return ok(queue);
+      return ok(quickLimit ? queue.slice(0, quickLimit) : queue);
     }
 
     if (cardIds) {
-      const queue = await getReviewQueue(deckId, { cardIds });
+      const queue = await getReviewQueue(deckId, { cardIds, limit: quickLimit });
       return ok(queue);
     }
 
@@ -64,6 +67,7 @@ export async function GET(req: NextRequest, { params }: RouteParams) {
     const queue = await getReviewQueue(deckId, {
       newCardLimit: Number.isFinite(limit) ? limit : undefined,
       ignoreSchedule,
+      limit: quickLimit,
     });
     return ok(queue);
   } catch (error) {

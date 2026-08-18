@@ -17,15 +17,17 @@ export function useStudyQueue(
   cardIds?: readonly string[],
   /** true = ôn trước hạn: lấy toàn bộ thẻ của deck, bỏ qua lịch SRS. */
   allCards?: boolean,
+  /** Phiên "học nhanh": giới hạn tổng số thẻ (vd 5). */
+  quickLimit?: number,
 ) {
   const idsParam = cardIds && cardIds.length > 0 ? cardIds.join(",") : "";
-  const query = idsParam
-    ? `?ids=${encodeURIComponent(idsParam)}`
-    : allCards
-      ? "?all=1"
-      : "";
+  const params = new URLSearchParams();
+  if (idsParam) params.set("ids", idsParam);
+  else if (allCards) params.set("all", "1");
+  if (quickLimit) params.set("quick", String(quickLimit));
+  const query = params.size > 0 ? `?${params.toString()}` : "";
   return useQuery({
-    queryKey: ["study", deckId, idsParam, allCards ?? false],
+    queryKey: ["study", deckId, idsParam, allCards ?? false, quickLimit ?? 0],
     queryFn: () => apiFetch<QueueCard[]>(`/api/study/${deckId}${query}`),
     enabled: !!deckId,
     staleTime: 0,

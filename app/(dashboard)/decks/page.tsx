@@ -2,11 +2,14 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Layers, Lock, Plus, Loader2, Search } from "lucide-react";
+import { ArrowRight, Layers, Lock, Plus, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { DeckCard } from "@/components/deck/deck-card";
 import { DeckFormDialog } from "@/components/deck/deck-form-dialog";
+import { DeckGroupsSkeleton } from "@/components/ui/list-skeleton";
+import { StreakBanner } from "@/components/dashboard/streak-banner";
+import { WeakWordsBar } from "@/components/dashboard/weak-words-bar";
 import { useDecks } from "@/hooks/use-decks";
 import { groupDecksByTopic } from "@/lib/deck-topics";
 
@@ -35,6 +38,9 @@ export default function DecksPage() {
 
   return (
     <div className="container mx-auto max-w-6xl p-6">
+      <StreakBanner />
+      <WeakWordsBar />
+
       <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-2xl font-bold">Decks</h1>
@@ -64,9 +70,7 @@ export default function DecksPage() {
       ) : null}
 
       {isLoading ? (
-        <div className="flex justify-center py-12">
-          <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
-        </div>
+        <DeckGroupsSkeleton />
       ) : !decks || decks.length === 0 ? (
         <EmptyState onCreate={() => setOpenCreate(true)} />
       ) : filteredDecks.length === 0 ? (

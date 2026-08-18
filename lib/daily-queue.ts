@@ -30,6 +30,8 @@ export interface QueueOptions {
   cardIds?: readonly string[];
   /** true = ôn trước hạn: lấy TOÀN BỘ thẻ của deck, bỏ qua lịch SRS. */
   ignoreSchedule?: boolean;
+  /** Giới hạn TỔNG số thẻ trả về — dùng cho phiên "học nhanh". */
+  limit?: number;
 }
 
 type CardRow = QueueCard;
@@ -64,16 +66,20 @@ export async function getReviewQueue(
 ): Promise<QueueCard[]> {
   const opts: QueueOptions =
     typeof options === "number" ? { newCardLimit: options } : options;
+  const cap = (cards: QueueCard[]) =>
+    opts.limit && opts.limit > 0 ? cards.slice(0, opts.limit) : cards;
 
   if (opts.cardIds && opts.cardIds.length > 0) {
     const cards = await prisma.card.findMany({
       where: { deckId, id: { in: [...opts.cardIds] }, deletedAt: null },
     });
     const byId = new Map(cards.map((c) => [c.id, c] as const));
-    return opts.cardIds.flatMap((id) => {
-      const c = byId.get(id);
-      return c ? [toQueueCard(c)] : [];
-    });
+    return cap(
+      opts.cardIds.flatMap((id) => {
+        const c = byId.get(id);
+        return c ? [toQueueCard(c)] : [];
+      }),
+    );
   }
 
   // Ôn trước hạn: trả toàn bộ thẻ của deck, không lọc theo nextReviewDate.
@@ -82,14 +88,15 @@ export async function getReviewQueue(
       where: { deckId, deletedAt: null },
       orderBy: { createdAt: "asc" },
     });
-    return cards.map(toQueueCard);
+    return cap(cards.map(toQueueCard));
   }
 
   const now = new Date();
   const progress = await prisma.userProgress.findUnique({
     where: { id: SINGLETON_PROGRESS_ID },
   });
-  const dailyGoal = opts.newCardLimit ?? progress?.dailyGoal ?? DEFAULT_DAILY_GOAL;
+  const dailyGoal =
+    opts.limit ?? opts.newCardLimit ?? progress?.dailyGoal ?? DEFAULT_DAILY_GOAL;
 
   const reviewCards = await prisma.card.findMany({
     where: {
@@ -110,18 +117,18 @@ export async function getReviewQueue(
       })
     : [];
 
-  return [...reviewCards, ...newCards].map(toQueueCard);
+  return cap([...reviewCards, ...newCards].map(toQueueCard));
 }
 
 /**
  * Hàng đợi ôn tập GỘP TẤT CẢ DECK: thẻ đến hạn (mọi deck) + bù thẻ NEW tới dailyGoal.
  */
-export async function getGlobalReviewQueue(): Promise<QueueCard[]> {
+export async function getGlobalReviewQueue(limit?: number): Promise<QueueCard[]> {
   const now = new Date();
   const progress = await prisma.userProgress.findUnique({
     where: { id: SINGLETON_PROGRESS_ID },
   });
-  const dailyGoal = progress?.dailyGoal ?? DEFAULT_DAILY_GOAL;
+  const dailyGoal = limit ?? progress?.dailyGoal ?? DEFAULT_DAILY_GOAL;
 
   // Ôn gộp chỉ lấy thẻ từ deck ĐÃ HỌC XONG (learnedAt != null).
   const learnedDeckFilter = { deletedAt: null, learnedAt: { not: null } } as const;
@@ -145,7 +152,8 @@ export async function getGlobalReviewQueue(): Promise<QueueCard[]> {
       })
     : [];
 
-  return [...reviewCards, ...newCards].map(toQueueCard);
+  const queue = [...reviewCards, ...newCards].map(toQueueCard);
+  return limit && limit > 0 ? queue.slice(0, limit) : queue;
 }
 
 /**

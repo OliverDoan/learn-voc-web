@@ -1,4 +1,5 @@
 import { MobileNav, Nav } from "@/components/nav";
+import { StudyReminder } from "@/components/study-reminder";
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -10,6 +11,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
       <Nav />
       <main className="flex-1 pb-20 md:pb-0">{children}</main>
       <MobileNav />
+      <StudyReminder />
     </div>
   );
 }

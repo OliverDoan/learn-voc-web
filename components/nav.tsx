@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { Avatar } from "@/components/ui/avatar";
 import { useProgress } from "@/hooks/use-progress";
 import { useHiddenNavItems } from "@/hooks/use-sidebar-prefs";
+import { StreakChip } from "@/components/dashboard/streak-chip";
 import { NAV_ITEMS } from "@/lib/nav-items";
 
 // Store nhỏ cho trạng thái thu gọn sidebar, lưu ở localStorage.
@@ -102,7 +103,7 @@ export function Nav() {
                 "flex items-center rounded-[10px] text-sm font-medium transition-colors",
                 collapsed ? "justify-center px-0 py-2.5" : "gap-3 px-3 py-2.5",
                 active
-                  ? "bg-primary/10 text-primary shadow-[inset_3px_0_0_var(--primary)]"
+                  ? "bg-primary/10 text-primary"
                   : "text-muted-foreground hover:bg-accent hover:text-foreground",
               )}
             >
@@ -112,6 +113,8 @@ export function Nav() {
           );
         })}
       </nav>
+
+      <StreakChip collapsed={collapsed} />
 
       <Link
         href="/settings"
