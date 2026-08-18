@@ -7,13 +7,13 @@ import {
   BookOpen,
   Layers,
   Library,
-  Loader2,
   Mic,
   Play,
   Star,
   Volume2,
 } from "lucide-react";
 import { toast } from "sonner";
+import { ListSkeleton } from "@/components/ui/list-skeleton";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
@@ -166,9 +166,7 @@ export default function AllWordsPage() {
       </div>
 
       {isLoading ? (
-        <div className="flex justify-center py-12">
-          <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
-        </div>
+        <ListSkeleton rows={8} />
       ) : !cards || cards.length === 0 ? (
         <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed bg-card py-16 text-center">
           <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-muted text-muted-foreground">

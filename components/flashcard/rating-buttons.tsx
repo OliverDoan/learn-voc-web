@@ -50,7 +50,8 @@ export function RatingButtons({ intervals, onRate, disabled }: RatingButtonsProp
               onRate(it.rating);
             }}
             className={cn(
-              "flex-1 px-2 py-4 text-center transition-colors disabled:opacity-50",
+              // py cao hơn trên mobile để đạt vùng chạm tối thiểu ~56px.
+              "min-h-[60px] flex-1 px-2 py-4 text-center transition-colors disabled:opacity-50 sm:min-h-0",
               !isEasy && "hover:bg-white/5",
             )}
             style={{

@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Loader2, RotateCcw, Trash2, Trash } from "lucide-react";
+import { RotateCcw, Trash2, Trash } from "lucide-react";
 import { toast } from "sonner";
+import { ListSkeleton } from "@/components/ui/list-skeleton";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useConfirm } from "@/components/ui/confirm-dialog";
@@ -90,9 +91,7 @@ export default function TrashPage() {
       </div>
 
       {isLoading ? (
-        <div className="flex justify-center py-12">
-          <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
-        </div>
+        <ListSkeleton rows={4} />
       ) : isEmpty ? (
         <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed bg-card py-16 text-center">
           <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-muted text-muted-foreground">

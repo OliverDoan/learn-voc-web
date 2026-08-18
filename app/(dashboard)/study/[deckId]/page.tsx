@@ -3,10 +3,18 @@
 import { use, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { ArrowLeft, ArrowLeftRight, CheckCircle2, Loader2, PartyPopper, Sparkles } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowLeftRight,
+  CheckCircle2,
+  Loader2,
+  PartyPopper,
+  Sparkles,
+  Zap,
+} from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
+import { SegmentedProgress } from "@/components/ui/segmented-progress";
 import { Flashcard } from "@/components/flashcard/flashcard";
 import { RatingButtons } from "@/components/flashcard/rating-buttons";
 import { PrevWrongBadge } from "@/components/quiz/prev-wrong-badge";
@@ -16,6 +24,7 @@ import { useStudyQueue, useSubmitReview } from "@/hooks/use-study";
 import { previewIntervals } from "@/lib/srs";
 import { speak } from "@/lib/tts";
 import { parseTopicDeckId } from "@/lib/deck-topics";
+import { parseQuickLimit } from "@/lib/quick-study";
 import type { Rating } from "@/lib/constants";
 
 interface PageProps {
@@ -38,10 +47,17 @@ export default function StudyPage({ params }: PageProps) {
   const isVirtual = deckId === "all" || isTopic;
   // ?all=1 → ôn trước hạn: toàn bộ thẻ của deck, bỏ qua lịch SRS (chỉ deck thật).
   const studyAll = !isSubset && !isVirtual && searchParams.get("all") === "1";
+  // ?quick=N → phiên ngắn N từ, có điểm dừng rõ ràng cho ngày bận.
+  const quickLimit = parseQuickLimit(searchParams.get("quick"));
   // Điều hướng "Thoát": "all" → dashboard, topic → trang topic, còn lại → trang deck.
   const backHref = deckId === "all" ? "/decks" : isTopic ? `/topic/${topicIndex}` : `/decks/${deckId}`;
 
-  const { data: queue, isLoading, refetch } = useStudyQueue(deckId, subsetIds, studyAll);
+  const { data: queue, isLoading, refetch } = useStudyQueue(
+    deckId,
+    subsetIds,
+    studyAll,
+    quickLimit,
+  );
   // Bỏ qua kiểm tra khóa với deck ảo ("all"/topic) hoặc ôn tập tập con tự chọn.
   const { data: deck } = useDeck(isVirtual || isSubset ? undefined : deckId);
   const submit = useSubmitReview();
@@ -197,7 +213,14 @@ export default function StudyPage({ params }: PageProps) {
 
   return (
     <div className="container mx-auto flex max-w-3xl flex-col items-center p-6">
-      {isSubset ? (
+      {quickLimit ? (
+        <div className="mb-4 flex w-full items-center gap-2 rounded-lg border border-emerald-500/40 bg-emerald-500/5 px-3 py-2 text-xs text-emerald-600 dark:text-emerald-400">
+          <Zap className="h-4 w-4 shrink-0" />
+          <span>
+            Phiên nhanh: <strong>{total}</strong> từ — vừa đủ vài phút. Kết quả vẫn cập nhật vào SRS.
+          </span>
+        </div>
+      ) : isSubset ? (
         <div className="mb-4 flex w-full items-center gap-2 rounded-lg border border-primary/40 bg-primary/5 px-3 py-2 text-xs text-primary">
           <Sparkles className="h-4 w-4 shrink-0" />
           <span>
@@ -243,7 +266,7 @@ export default function StudyPage({ params }: PageProps) {
             </span>
           </div>
         </div>
-        <Progress value={index + 1} max={total} />
+        <SegmentedProgress value={index} total={total} />
       </div>
 
       {prevWrongSet.has(current.id) ? (
@@ -262,7 +285,8 @@ export default function StudyPage({ params }: PageProps) {
         />
       </div>
 
-      <div className="mt-2 flex w-full justify-center">
+      {/* Trên mobile: bám đáy màn (trên thanh nav) để bấm bằng ngón cái. */}
+      <div className="sticky bottom-[4.75rem] z-10 mt-2 flex w-full justify-center rounded-2xl bg-background/80 py-2 backdrop-blur md:static md:bg-transparent md:py-0 md:backdrop-blur-none">
         {flipped ? (
           <RatingButtons
             intervals={intervals}

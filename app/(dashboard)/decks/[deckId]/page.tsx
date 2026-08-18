@@ -1,22 +1,16 @@
 "use client";
 
-import { use, useEffect, useMemo, useRef, useState } from "react";
+import { use, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
   ArrowLeft,
   ArrowRight,
   BookMarked,
-  BookOpen,
   Check,
-  Download,
   GripVertical,
-  Layers,
   List,
   Lock,
-  Mic,
-  MoreVertical,
-  Pencil,
   Play,
   Plus,
   Sprout,
@@ -24,12 +18,12 @@ import {
   SquareCheck,
   Star,
   Table2,
-  Trash2,
   Upload,
   Volume2,
-  X,
+  Zap,
 } from "lucide-react";
 import { toast } from "sonner";
+import { QUICK_PRESET } from "@/lib/quick-study";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useConfirm } from "@/components/ui/confirm-dialog";
@@ -44,15 +38,18 @@ import { ExportCardsDialog } from "@/components/deck/export-cards-dialog";
 import { ReadAllButton } from "@/components/deck/read-all-button";
 import { CardsFilterBar } from "@/components/deck/cards-filter-bar";
 import { CardsTable } from "@/components/deck/cards-table";
+import { DeckActionsMenu } from "@/components/deck/deck-actions-menu";
+import { SelectionActionBar } from "@/components/deck/selection-action-bar";
 import { TestHistoryDialog } from "@/components/deck/test-history-dialog";
 import { DeckStoryPanel } from "@/components/story/deck-story-panel";
 import {
   useCards,
   useDeleteCard,
-  useReorderCards,
   useRestoreCard,
   useToggleFavorite,
 } from "@/hooks/use-cards";
+import { useCardSelection } from "@/hooks/use-card-selection";
+import { useCardReorder } from "@/hooks/use-card-reorder";
 import {
   useDeck,
   useDecks,
@@ -94,16 +91,9 @@ export default function DeckDetailPage({ params }: PageProps) {
   const [selectedPos, setSelectedPos] = useState<PosKey[]>([]);
   const [groupByTag, setGroupByTag] = useState(false);
   const [viewMode, setViewMode] = useState<"list" | "table">("list");
-  const [actionsOpen, setActionsOpen] = useState(false);
   const [openHistory, setOpenHistory] = useState(false);
-  const [selectMode, setSelectMode] = useState(false);
-  const [selectedIds, setSelectedIds] = useState<Set<string>>(() => new Set());
 
   // Kéo-thả sắp xếp thứ tự (chỉ khi không lọc/tìm kiếm)
-  const [orderedCards, setOrderedCards] = useState<CardType[]>([]);
-  const [dragId, setDragId] = useState<string | null>(null);
-  const [overId, setOverId] = useState<string | null>(null);
-  const dragArmed = useRef(false);
 
   const { data: deck, isLoading: deckLoading } = useDeck(deckId);
   // Danh sách tất cả deck (đã sắp xếp createdAt desc như trang /decks) để chuyển sang deck kế tiếp.
@@ -115,7 +105,6 @@ export default function DeckDetailPage({ params }: PageProps) {
   const deleteCardMut = useDeleteCard();
   const restoreCardMut = useRestoreCard();
   const toggleFavoriteMut = useToggleFavorite();
-  const reorderMut = useReorderCards();
   const deleteDeckMut = useDeleteDeck();
   const restoreDeckMut = useRestoreDeck();
   const setLearnedMut = useSetDeckLearned(deckId);
@@ -179,10 +168,28 @@ export default function DeckDetailPage({ params }: PageProps) {
   }, [cards, selectedTags, favoriteOnly, selectedPos]);
 
 
-  // Đồng bộ danh sách thứ tự cục bộ từ server (dùng cho kéo-thả lạc quan)
-  useEffect(() => {
-    if (cards) setOrderedCards(cards);
-  }, [cards]);
+  const selection = useCardSelection(deckId, filteredCards);
+  const {
+    selectMode,
+    selectedIds,
+    allVisibleSelected: filteredAllSelected,
+    toggleSelectMode,
+    toggleCard: toggleSelectCard,
+    toggleAllVisible: toggleSelectAllFiltered,
+    clear: clearSelection,
+    openWithSelection,
+  } = selection;
+
+  const {
+    orderedCards,
+    dragId,
+    overId,
+    dragArmed,
+    setDragId,
+    setOverId,
+    handleDrop,
+    resetDrag,
+  } = useCardReorder(deckId, cards ?? []);
 
   // Chỉ cho kéo-thả khi đang xem TẤT CẢ thẻ theo thứ tự gốc (không lọc/tìm/nhóm)
   const canReorder =
@@ -192,14 +199,6 @@ export default function DeckDetailPage({ params }: PageProps) {
     selectedPos.length === 0 &&
     !favoriteOnly &&
     !groupByTag;
-
-  // Thoát chế độ chọn: tắt cờ và xoá lựa chọn hiện có
-  const toggleSelectMode = () => {
-    setSelectMode((prev) => {
-      if (prev) setSelectedIds(new Set());
-      return !prev;
-    });
-  };
 
   const displayCards =
     canReorder && orderedCards.length > 0 ? orderedCards : filteredCards;
@@ -236,81 +235,6 @@ export default function DeckDetailPage({ params }: PageProps) {
     setSelectedPos((prev) =>
       prev.includes(pos) ? prev.filter((p) => p !== pos) : [...prev, pos],
     );
-  };
-
-  const handleDrop = async (targetId: string) => {
-    const sourceId = dragId;
-    setDragId(null);
-    setOverId(null);
-    dragArmed.current = false;
-    if (!sourceId || sourceId === targetId) return;
-
-    const from = orderedCards.findIndex((c) => c.id === sourceId);
-    const to = orderedCards.findIndex((c) => c.id === targetId);
-    if (from === -1 || to === -1) return;
-
-    const previous = orderedCards;
-    const next = [...orderedCards];
-    const [moved] = next.splice(from, 1);
-    next.splice(to, 0, moved);
-    setOrderedCards(next); // cập nhật lạc quan
-
-    try {
-      await reorderMut.mutateAsync({ deckId, orderedIds: next.map((c) => c.id) });
-    } catch (error) {
-      setOrderedCards(previous); // revert nếu lỗi
-      toast.error(error instanceof Error ? error.message : "Lỗi khi sắp xếp");
-    }
-  };
-
-  const toggleSelectCard = (cardId: string) => {
-    setSelectedIds((prev) => {
-      const next = new Set(prev);
-      if (next.has(cardId)) next.delete(cardId);
-      else next.add(cardId);
-      return next;
-    });
-  };
-
-  const filteredAllSelected =
-    filteredCards.length > 0 && filteredCards.every((c) => selectedIds.has(c.id));
-
-  const toggleSelectAllFiltered = () => {
-    setSelectedIds((prev) => {
-      const next = new Set(prev);
-      if (filteredAllSelected) {
-        for (const c of filteredCards) next.delete(c.id);
-      } else {
-        for (const c of filteredCards) next.add(c.id);
-      }
-      return next;
-    });
-  };
-
-  const clearSelection = () => setSelectedIds(new Set());
-
-  const goStudySelected = () => {
-    if (selectedIds.size === 0) return;
-    const ids = Array.from(selectedIds).join(",");
-    router.push(`/study/${deckId}?ids=${encodeURIComponent(ids)}`);
-  };
-
-  const goQuizSelected = () => {
-    if (selectedIds.size === 0) return;
-    const ids = Array.from(selectedIds).join(",");
-    router.push(`/quiz/${deckId}?ids=${encodeURIComponent(ids)}`);
-  };
-
-  const goFlashcardsSelected = () => {
-    if (selectedIds.size === 0) return;
-    const ids = Array.from(selectedIds).join(",");
-    router.push(`/flashcards/${deckId}?ids=${encodeURIComponent(ids)}`);
-  };
-
-  const goPronounceSelected = () => {
-    if (selectedIds.size === 0) return;
-    const ids = Array.from(selectedIds).join(",");
-    router.push(`/pronounce/${deckId}?ids=${encodeURIComponent(ids)}`);
   };
 
   const handleToggleLearned = async () => {
@@ -411,11 +335,7 @@ export default function DeckDetailPage({ params }: PageProps) {
           e.preventDefault();
           handleDrop(card.id);
         }}
-        onDragEnd={() => {
-          setDragId(null);
-          setOverId(null);
-          dragArmed.current = false;
-        }}
+        onDragEnd={resetDrag}
         className={`group flex items-center gap-3 rounded-lg border bg-card px-3 py-2.5 transition-all hover:border-primary/40 hover:shadow-md ${
           isSelected ? "border-primary/60 bg-primary/5" : ""
         } ${isDragging ? "opacity-40" : ""} ${
@@ -619,192 +539,39 @@ export default function DeckDetailPage({ params }: PageProps) {
         </div>
 
         <div className="flex items-center gap-2">
+          {/* Hành động chính: học ngay. Phiên nhanh đứng cạnh cho ngày bận. */}
+          {!deck.locked ? (
+            <>
+              <Link href={`/study/${deckId}`}>
+                <Button className="rounded-full shadow-[0_8px_20px_rgba(23,61,201,.28)]">
+                  <Play className="h-4 w-4" /> Bắt đầu ôn
+                </Button>
+              </Link>
+              <Link href={`/study/${deckId}?quick=${QUICK_PRESET}`}>
+                <Button variant="outline" className="rounded-full" title={`Phiên ngắn ${QUICK_PRESET} từ`}>
+                  <Zap className="h-4 w-4" /> {QUICK_PRESET} từ
+                </Button>
+              </Link>
+            </>
+          ) : null}
+
           <ReadAllButton cards={cards ?? []} />
 
-          {/* Menu ⋮ gom mọi hành động: học, bài tập, quản lý từ, sửa/xoá deck */}
-          <div className="relative">
-            <Button
-              variant="outline"
-              size="icon"
-              className="rounded-full"
-              onClick={() => setActionsOpen((o) => !o)}
-              aria-label="Thêm hành động"
-            >
-              <MoreVertical className="h-4 w-4" />
-            </Button>
-            {actionsOpen ? (
-              <>
-                <div className="fixed inset-0 z-20" onClick={() => setActionsOpen(false)} />
-                <div className="absolute right-0 top-full z-30 mt-1 w-52 rounded-lg border bg-popover text-popover-foreground p-1.5 shadow-lg">
-                  {deck.locked ? (
-                    <div
-                      className="flex cursor-not-allowed items-center gap-2 rounded-md px-2 py-2 text-sm text-muted-foreground/60"
-                      title="Hoàn thành deck trước để mở khóa"
-                    >
-                      <Lock className="h-4 w-4" /> Bắt đầu ôn (đang khóa)
-                    </div>
-                  ) : (
-                    <Link
-                      href={`/study/${deckId}`}
-                      onClick={() => setActionsOpen(false)}
-                      className="flex items-center gap-2 rounded-md px-2 py-2 text-sm font-medium hover:bg-accent"
-                    >
-                      <Play className="h-4 w-4" /> Bắt đầu ôn
-                    </Link>
-                  )}
-                  <button
-                    type="button"
-                    disabled={
-                      deck.locked ||
-                      setLearnedMut.isPending ||
-                      (!deck.learned && !deck.exercisesDone)
-                    }
-                    title={
-                      deck.locked
-                        ? "Hoàn thành các Unit trước để mở khóa"
-                        : !deck.learned && !deck.exercisesDone
-                          ? "Cần làm hết các dạng bài tập trước"
-                          : undefined
-                    }
-                    onClick={() => {
-                      setActionsOpen(false);
-                      handleToggleLearned();
-                    }}
-                    className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-transparent"
-                  >
-                    {deck.learned ? (
-                      <>
-                        <SquareCheck className="h-4 w-4" /> Đã học xong
-                      </>
-                    ) : (
-                      <>
-                        <Check className="h-4 w-4" /> Đánh dấu học xong
-                      </>
-                    )}
-                  </button>
-
-                  <div className="my-1 h-px bg-border" />
-                  <Link
-                    href={`/flashcards/${deckId}`}
-                    onClick={() => setActionsOpen(false)}
-                    className="flex items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
-                  >
-                    <Layers className="h-4 w-4" /> Flashcard
-                  </Link>
-                  {deck.locked ? (
-                    <div
-                      className="flex cursor-not-allowed items-center gap-2 rounded-md px-2 py-2 text-sm text-muted-foreground/60"
-                      title="Hoàn thành deck trước để mở khóa"
-                    >
-                      <Lock className="h-4 w-4" /> Quiz (đang khóa)
-                    </div>
-                  ) : (
-                    <Link
-                      href={`/quiz/${deckId}`}
-                      onClick={() => setActionsOpen(false)}
-                      className="flex items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
-                    >
-                      <BookOpen className="h-4 w-4" /> Quiz
-                    </Link>
-                  )}
-                  <Link
-                    href={`/pronounce/${deckId}`}
-                    onClick={() => setActionsOpen(false)}
-                    className="flex items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
-                  >
-                    <Mic className="h-4 w-4" /> Phát âm
-                  </Link>
-
-                  <div className="my-1 h-px bg-border" />
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setActionsOpen(false);
-                      setOpenAddCard(true);
-                    }}
-                    className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
-                  >
-                    <Plus className="h-4 w-4" /> Thêm từ
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setActionsOpen(false);
-                      toggleSelectMode();
-                    }}
-                    className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
-                  >
-                    {selectMode ? (
-                      <>
-                        <X className="h-4 w-4" /> Xong chọn / sắp xếp
-                      </>
-                    ) : (
-                      <>
-                        <SquareCheck className="h-4 w-4" /> Chọn / Sắp xếp
-                      </>
-                    )}
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setActionsOpen(false);
-                      setOpenExport(true);
-                    }}
-                    className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
-                  >
-                    <Download className="h-4 w-4" /> Xuất
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setActionsOpen(false);
-                      setOpenImport(true);
-                    }}
-                    className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
-                  >
-                    <Upload className="h-4 w-4" /> Import
-                  </button>
-
-                  {nextDeck ? (
-                    <>
-                      <div className="my-1 h-px bg-border" />
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setActionsOpen(false);
-                          goNextDeck();
-                        }}
-                        className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
-                      >
-                        <ArrowRight className="h-4 w-4" /> Deck tiếp theo
-                      </button>
-                    </>
-                  ) : null}
-                  <div className="my-1 h-px bg-border" />
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setActionsOpen(false);
-                      setOpenEditDeck(true);
-                    }}
-                    className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm hover:bg-accent"
-                  >
-                    <Pencil className="h-4 w-4" /> Sửa deck
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setActionsOpen(false);
-                      handleDeleteDeck();
-                    }}
-                    className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm text-destructive hover:bg-destructive/10"
-                  >
-                    <Trash2 className="h-4 w-4" /> Xoá deck
-                  </button>
-                </div>
-              </>
-            ) : null}
-          </div>
+          <DeckActionsMenu
+            deckId={deckId}
+            deck={deck}
+            learnedPending={setLearnedMut.isPending}
+            selectMode={selectMode}
+            hasNextDeck={!!nextDeck}
+            onToggleLearned={handleToggleLearned}
+            onToggleSelectMode={toggleSelectMode}
+            onAddCard={() => setOpenAddCard(true)}
+            onExport={() => setOpenExport(true)}
+            onImport={() => setOpenImport(true)}
+            onEditDeck={() => setOpenEditDeck(true)}
+            onDeleteDeck={handleDeleteDeck}
+            onNextDeck={goNextDeck}
+          />
         </div>
       </div>
 
@@ -995,50 +762,13 @@ export default function DeckDetailPage({ params }: PageProps) {
         onOpenChange={setOpenHistory}
       />
 
-      {selectedIds.size > 0 ? (
-        <div className="fixed inset-x-0 bottom-16 z-40 px-4 md:bottom-4">
-          <div className="container mx-auto max-w-3xl">
-            <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border bg-card/95 px-4 py-3 shadow-lg backdrop-blur">
-              <div className="flex items-center gap-2 text-sm">
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary/15 text-primary">
-                  <Check className="h-4 w-4" />
-                </span>
-                <span>
-                  Đã chọn <strong className="text-primary">{selectedIds.size}</strong> từ
-                </span>
-              </div>
-              <div className="flex flex-wrap items-center gap-2">
-                <Button
-                  size="sm"
-                  onClick={goStudySelected}
-                  disabled={deck.locked}
-                  title={deck.locked ? "Hoàn thành deck trước để mở khóa" : undefined}
-                >
-                  <Play className="h-4 w-4" /> Ôn
-                </Button>
-                <Button size="sm" variant="outline" onClick={goFlashcardsSelected}>
-                  <Layers className="h-4 w-4" /> Lật thẻ
-                </Button>
-                <Button
-                  size="sm"
-                  variant="outline"
-                  onClick={goQuizSelected}
-                  disabled={deck.locked}
-                  title={deck.locked ? "Hoàn thành deck trước để mở khóa" : undefined}
-                >
-                  <BookOpen className="h-4 w-4" /> Quiz
-                </Button>
-                <Button size="sm" variant="outline" onClick={goPronounceSelected}>
-                  <Mic className="h-4 w-4" /> Phát âm
-                </Button>
-                <Button size="sm" variant="ghost" onClick={clearSelection}>
-                  <X className="h-4 w-4" /> Bỏ chọn
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      ) : null}
+      <SelectionActionBar
+        count={selectedIds.size}
+        locked={deck.locked}
+        onOpen={openWithSelection}
+        onClear={clearSelection}
+      />
+
       {confirmDialog}
     </div>
   );
