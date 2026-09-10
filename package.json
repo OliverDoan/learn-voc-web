@@ -20,6 +20,8 @@
     "add:deck": "tsx --env-file=.env scripts/add-deck.ts",
     "import:vocab": "tsx --env-file=.env scripts/import-vocab-full.ts",
     "gen:examples": "tsx --env-file=.env scripts/generate-examples.ts",
+    "gen:stories": "tsx --env-file=.env scripts/generate-stories.ts",
+    "stories:load": "tsx --env-file=.env scripts/load-story-data.ts",
     "data:synonyms": "tsx --env-file=.env scripts/fill-synonyms.ts",
     "gen:synonyms": "tsx --env-file=.env scripts/generate-synonyms.ts",
     "gen:root-meanings": "tsx --env-file=.env scripts/generate-root-meanings.ts",

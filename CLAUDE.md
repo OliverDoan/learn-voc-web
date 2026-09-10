@@ -45,12 +45,16 @@ pnpm import:vocab     # Import bộ từ vựng
 pnpm gen:examples     # Sinh câu ví dụ (AI)
 pnpm gen:synonyms     # Sinh đồng nghĩa (AI)
 pnpm gen:root-meanings# Sinh nghĩa từ gốc (AI)
+pnpm gen:stories      # Sinh thêm truyện chêm đủ từ cho mỗi deck (AI, có validate + retry)
+pnpm stories:load     # Kiểm tra (--check) & nạp truyện chêm từ prisma/story-data/*.json
 pnpm data:export      # Xuất toàn bộ data ra file
 pnpm data:load        # Nạp lại data từ file
 pnpm sync:card-order  # Đồng bộ thứ tự thẻ
 ```
 
 > Các script AI (`gen:*`) gọi Claude API — cần key trong `.env`. Đọc script tương ứng trong `scripts/` trước khi chạy.
+>
+> **Truyện chêm**: `scripts/seed-stories.ts` giữ 1 truyện gốc/deck; các truyện bổ sung (5 truyện/deck, mỗi truyện chứa ĐỦ từ của deck) nằm ở `prisma/story-data/unit-NN.json` và nạp bằng `pnpm stories:load`. Độ phủ từ kiểm tra bằng `lib/story-coverage.ts` (`checkStoryCoverage`).
 
 ## Single-user mode
 
@@ -96,6 +100,7 @@ components/         # Theo domain: deck/ quiz/ flashcard/ story/ dashboard/ gram
 lib/                # srs.ts, db.ts (Prisma singleton), api-client.ts, schemas.ts (Zod),
                     # tts.ts, dictionary.ts, story-parser.ts, achievements.ts + dữ liệu tĩnh (trên)
 prisma/schema.prisma
+prisma/story-data/  # Truyện chêm bổ sung theo deck (JSON) — nạp bằng pnpm stories:load
 scripts/            # Script tsx cho seed / import / gen bằng AI / export-load
 ```
 

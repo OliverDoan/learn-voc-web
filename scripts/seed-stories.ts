@@ -288,7 +288,9 @@ async function main() {
     // Cảnh báo nếu markup có từ không khớp thẻ nào
     const unmatched = tokens.filter((t) => !wordToCard.has(t.word.toLowerCase()));
 
-    const existing = await prisma.story.findFirst({ where: { deckId: deck.id } });
+    // Khớp theo TIÊU ĐỀ truyện gốc: deck giờ có nhiều truyện (prisma/story-data) nên
+    // không được lấy "truyện đầu tiên" rồi ghi đè — sẽ phá truyện bổ sung.
+    const existing = await prisma.story.findFirst({ where: { deckId: deck.id, title } });
     if (existing) {
       // Cập nhật truyện đã có: thay nội dung/tiêu đề và dựng lại liên kết thẻ
       await prisma.$transaction([
