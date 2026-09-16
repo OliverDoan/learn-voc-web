@@ -38,9 +38,9 @@ model DeckActivity {
   id           String   @id @default(cuid())
   deckId       String
   deck         Deck     @relation(fields: [deckId], references: [id], onDelete: Cascade)
-  // Loại hoạt động: study | multiple-choice | typing | listening | gap-fill | word-formation | matching | test | flashcards | pronounce
+  // Loại hoạt động: study | multiple-choice | typing | listening | gap-fill | word-formation | sentence-writing | test | flashcards | pronounce
   activity     String
-  // Độ chính xác tốt nhất (0-100). null = dạng không chấm điểm (matching, flashcards)
+  // Độ chính xác tốt nhất (0-100). null = dạng không chấm điểm (test, flashcards)
   bestAccuracy Int?
   // JSON array ID các thẻ làm SAI ở LẦN GẦN NHẤT (ghi đè mỗi lần làm) — để đánh dấu "lần trước bạn sai từ này"
   wrongCardIds String   @default("[]")

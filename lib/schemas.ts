@@ -203,7 +203,7 @@ export const deckActivitySchema = z.object({
     "gap-fill",
     "story-fill",
     "word-formation",
-    "matching",
+    "sentence-writing",
     "test",
     "flashcards",
     "pronounce",

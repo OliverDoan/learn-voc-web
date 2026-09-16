@@ -60,17 +60,26 @@ describe("eligibleActivities", () => {
     // chưa đủ 4 thẻ
     expect(e).not.toContain("multiple-choice");
     expect(e).not.toContain("test");
-    expect(e).not.toContain("matching");
+    // Thẻ không có câu ví dụ + bản dịch → chưa mở viết lại câu
+    expect(e).not.toContain("sentence-writing");
   });
 
-  it("≥4 thẻ mở trắc nghiệm + làm bài; ≥6 thẻ mở ghép cặp", () => {
+  it("≥4 thẻ mở trắc nghiệm + làm bài", () => {
     const four = Array.from({ length: 4 }, () => makeCard());
     expect(eligibleActivities(four)).toContain("multiple-choice");
     expect(eligibleActivities(four)).toContain("test");
-    expect(eligibleActivities(four)).not.toContain("matching");
+  });
 
-    const six = Array.from({ length: 6 }, () => makeCard());
-    expect(eligibleActivities(six)).toContain("matching");
+  it("thẻ có câu ví dụ kèm bản dịch tiếng Việt → mở viết lại câu", () => {
+    const card = makeCard({
+      word: "idea",
+      example: "I have a good idea for the project.",
+      exampleTranslation: "Tôi có một ý tưởng hay cho dự án.",
+    });
+    expect(eligibleActivities([card])).toContain("sentence-writing");
+    // Thiếu bản dịch → không mở
+    const noTranslation = makeCard({ example: "She is very happy today." });
+    expect(eligibleActivities([noTranslation])).not.toContain("sentence-writing");
   });
 
   it("thẻ có câu ví dụ chứa từ → mở điền từ", () => {
@@ -116,7 +125,7 @@ describe("isActivityDone", () => {
 
   it("dạng không chấm điểm: chỉ cần có bản ghi", () => {
     expect(isActivityDone("flashcards", [{ activity: "flashcards", bestAccuracy: null }])).toBe(true);
-    expect(isActivityDone("matching", [])).toBe(false);
+    expect(isActivityDone("sentence-writing", [])).toBe(false);
   });
 });
 

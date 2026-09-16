@@ -1,4 +1,5 @@
 import { gapFillEligibleCards } from "@/lib/gap-fill";
+import { sentenceWritingEligibleCards } from "@/lib/sentence-writing";
 import type { Card } from "@/lib/types";
 
 /** Ngưỡng độ chính xác tối thiểu để coi một dạng bài tập (có chấm điểm) là "đã làm". */
@@ -27,7 +28,7 @@ export type DeckActivityKey =
   | "gap-fill"
   | "story-fill"
   | "word-formation"
-  | "matching"
+  | "sentence-writing"
   | "test"
   | "flashcards"
   | "pronounce";
@@ -51,7 +52,7 @@ export const DECK_ACTIVITIES: readonly ActivityDef[] = [
   { key: "gap-fill", label: "Điền từ vào câu", scored: true },
   { key: "story-fill", label: "Điền truyện chêm", scored: true },
   { key: "word-formation", label: "Biến đổi từ", scored: true },
-  { key: "matching", label: "Ghép cặp", scored: false },
+  { key: "sentence-writing", label: "Viết lại câu", scored: true },
   { key: "test", label: "Làm bài", scored: false },
   // Phát âm: TUỲ CHỌN — không bắt buộc để mở khóa deck.
   { key: "pronounce", label: "Phát âm", scored: true, optional: true },
@@ -120,8 +121,8 @@ export function eligibleActivities(
     result.push("flashcards", "typing", "listening", "pronounce");
   }
   if (n >= 4) result.push("multiple-choice", "test");
-  if (n >= 6) result.push("matching");
   if (gapFillEligibleCards(cards).length >= 1) result.push("gap-fill");
+  if (sentenceWritingEligibleCards(cards).length >= 1) result.push("sentence-writing");
   // Điền truyện chêm: cần truyện có từ chêm, không phụ thuộc số thẻ.
   if (ctx.hasStoryWithWords) result.push("story-fill");
   // "Học (SRS)" (study) và "Biến đổi từ" (word-formation) KHÔNG tính vào tiến độ /
