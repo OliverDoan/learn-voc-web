@@ -1,0 +1,117 @@
+{
+  "unit": 2,
+  "deck": "Unit 2: Hành trình đi học của Naruto",
+  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 2 và ít nhất 1 từ đã học ở Unit 1.",
+  "items": [
+    {
+      "word": "kindergarten",
+      "example": "At kindergarten, children learn their first language through songs and games.",
+      "exampleTranslation": "Ở trường mẫu giáo, trẻ em học ngôn ngữ đầu tiên qua bài hát và trò chơi."
+    },
+    {
+      "word": "primary",
+      "example": "I was a shy child when I started primary school six years ago.",
+      "exampleTranslation": "Tôi là một đứa trẻ nhút nhát khi bắt đầu vào trường tiểu học sáu năm trước."
+    },
+    {
+      "word": "secondary",
+      "example": "In secondary school we learn about the culture of many countries.",
+      "exampleTranslation": "Ở trường trung học, chúng tôi học về văn hoá của nhiều quốc gia."
+    },
+    {
+      "word": "mathematics",
+      "example": "Many students have difficulty with mathematics, but daily practice really helps.",
+      "exampleTranslation": "Nhiều học sinh gặp khó khăn với môn toán học, nhưng luyện tập hàng ngày thực sự có ích."
+    },
+    {
+      "word": "engineering",
+      "example": "He studies engineering abroad and wants to work in Japan later.",
+      "exampleTranslation": "Anh ấy học ngành kỹ thuật ở nước ngoài và muốn làm việc ở Nhật sau này."
+    },
+    {
+      "word": "subject",
+      "example": "My favourite subject is English because I enjoy learning new vocabulary.",
+      "exampleTranslation": "Môn học tôi thích nhất là tiếng Anh vì tôi thích học từ vựng mới."
+    },
+    {
+      "word": "science",
+      "example": "Our science teacher is a foreigner, so every lesson is in English.",
+      "exampleTranslation": "Giáo viên khoa học của chúng tôi là người nước ngoài, nên mọi tiết học đều bằng tiếng Anh."
+    },
+    {
+      "word": "art",
+      "example": "In art class I had an original idea for a painting about my hometown.",
+      "exampleTranslation": "Trong giờ mỹ thuật, tôi đã có một ý tưởng nguyên bản để vẽ bức tranh về quê tôi."
+    },
+    {
+      "word": "announce",
+      "example": "The school will announce the new English course next Monday.",
+      "exampleTranslation": "Nhà trường sẽ thông báo khoá học tiếng Anh mới vào thứ Hai tới."
+    },
+    {
+      "word": "nervous",
+      "example": "I feel nervous and scared before every important speaking test.",
+      "exampleTranslation": "Tôi cảm thấy lo lắng và sợ hãi trước mỗi bài kiểm tra nói quan trọng."
+    },
+    {
+      "word": "grade",
+      "example": "She got a high grade because she felt confident during the whole test.",
+      "exampleTranslation": "Cô ấy đạt điểm cao vì cảm thấy tự tin trong suốt bài kiểm tra."
+    },
+    {
+      "word": "attend",
+      "example": "I attend an evening class to improve my speaking skill.",
+      "exampleTranslation": "Tôi tham dự một lớp học buổi tối để cải thiện kỹ năng nói của mình."
+    },
+    {
+      "word": "absent",
+      "example": "He was absent, so he missed the conversation with a native speaker.",
+      "exampleTranslation": "Anh ấy vắng mặt nên đã bỏ lỡ buổi trò chuyện với một người bản ngữ."
+    },
+    {
+      "word": "term",
+      "example": "At the end of this term, every student will receive a certificate.",
+      "exampleTranslation": "Vào cuối học kỳ này, mỗi học sinh sẽ nhận được một chứng chỉ."
+    },
+    {
+      "word": "popular",
+      "example": "This topic is very popular among students who want to study abroad.",
+      "exampleTranslation": "Chủ đề này rất phổ biến với những học sinh muốn đi du học."
+    },
+    {
+      "word": "revise",
+      "example": "I revise my new vocabulary every evening before I go to bed.",
+      "exampleTranslation": "Tôi ôn lại từ vựng mới mỗi tối trước khi đi ngủ."
+    },
+    {
+      "word": "memorise",
+      "example": "A beginner should not try to memorise the whole dictionary.",
+      "exampleTranslation": "Người mới bắt đầu không nên cố học thuộc cả cuốn từ điển."
+    },
+    {
+      "word": "assignment",
+      "example": "Our assignment is to interview a visitor about her country.",
+      "exampleTranslation": "Bài tập của chúng tôi là phỏng vấn một vị khách về đất nước của cô ấy."
+    },
+    {
+      "word": "succeed",
+      "example": "If you follow your teacher's advice, you will succeed in the exam.",
+      "exampleTranslation": "Nếu bạn làm theo lời khuyên của giáo viên, bạn sẽ thành công trong kỳ thi."
+    },
+    {
+      "word": "curriculum",
+      "example": "The new curriculum helps students communicate better in real situations.",
+      "exampleTranslation": "Chương trình học mới giúp học sinh giao tiếp tốt hơn trong các tình huống thực tế."
+    },
+    {
+      "word": "uniform",
+      "example": "I did not understand why we must wear a uniform to school.",
+      "exampleTranslation": "Tôi đã không hiểu vì sao chúng tôi phải mặc đồng phục đến trường."
+    },
+    {
+      "word": "drop out",
+      "example": "Some students drop out because they cannot make progress in class.",
+      "exampleTranslation": "Một số học sinh bỏ học vì không thể tiến bộ trong lớp."
+    }
+  ]
+}

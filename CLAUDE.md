@@ -43,6 +43,7 @@ pnpm db:seed          # Seed deck + truyện mẫu
 pnpm add:deck         # Thêm deck từ script
 pnpm import:vocab     # Import bộ từ vựng
 pnpm gen:examples     # Sinh câu ví dụ (AI)
+pnpm gen:review-examples # Viết lại câu ví dụ các Unit sau sao cho chêm từ Unit trước (AI, validate + retry)
 pnpm gen:synonyms     # Sinh đồng nghĩa (AI)
 pnpm gen:root-meanings# Sinh nghĩa từ gốc (AI)
 pnpm gen:stories      # Sinh thêm truyện chêm đủ từ cho mỗi deck (AI, có validate + retry)
@@ -166,7 +167,7 @@ Render: word token = `<button class="font-bold text-primary underline-dotted">ap
 - ✅ **Phase 0**: Setup Next.js + deps + Prisma schema + migration
 - ✅ **Phase 1**: CRUD Deck/Card + Dictionary API + UI list/detail
 - ✅ **Phase 2**: SRS algorithm (15 tests) + Flashcard study + daily queue
-- ✅ **Phase 3**: Quiz multiple choice + typing + listening
+- ✅ **Phase 3**: Quiz multiple choice + typing + listening + gap-fill + word-formation + viết lại câu
 - ✅ **Phase 4**: Story (truyện chêm) — editor + view + fill-in-blank quiz
 - ✅ **Phase 5**: Dashboard + stats charts + heatmap 365 ngày + achievements
 - 🔄 **Phase 6 — IELTS module** (band 5.0 – 6.5)
@@ -188,7 +189,6 @@ pnpm test              # unit tests (11 file trong lib/__tests__)
 
 ## Còn thiếu (nice-to-have, chưa làm)
 
-- Matching game quiz (3/4 dạng đã có)
 - AI generate story (Claude API)
 - DALL-E / image gen
 - Reverse cards
