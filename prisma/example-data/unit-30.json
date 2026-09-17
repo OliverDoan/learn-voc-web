@@ -1,0 +1,37 @@
+{
+  "unit": 30,
+  "deck": "Unit 30: Xe cộ và sửa chữa",
+  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 30 và ít nhất 1 từ đã học ở Unit trước.",
+  "items": [
+    {
+      "word": "lost",
+      "example": "We got completely lost because the map on my phone stopped working.",
+      "exampleTranslation": "Chúng tôi bị lạc đường hoàn toàn vì bản đồ trên điện thoại của tôi ngừng hoạt động."
+    },
+    {
+      "word": "smoke",
+      "example": "Thick smoke came out of the engine, so we had to push the car away.",
+      "exampleTranslation": "Khói dày bốc ra từ động cơ, nên chúng tôi phải đẩy chiếc xe ra xa."
+    },
+    {
+      "word": "hit",
+      "example": "A fast motorbike almost hit a pedestrian near the petrol station.",
+      "exampleTranslation": "Một chiếc xe máy chạy nhanh suýt đâm vào một người đi bộ gần trạm xăng."
+    },
+    {
+      "word": "tricycle",
+      "example": "An old woman sells sweet snacks from her tricycle beside the market.",
+      "exampleTranslation": "Một bà cụ bán đồ ăn vặt ngọt từ chiếc xe ba bánh của bà bên cạnh chợ."
+    },
+    {
+      "word": "boat",
+      "example": "We watched a small boat cross the quiet lake at sunset.",
+      "exampleTranslation": "Chúng tôi ngắm một chiếc thuyền nhỏ băng qua hồ nước yên tĩnh lúc hoàng hôn."
+    },
+    {
+      "word": "wheel",
+      "example": "The front wheel was badly damaged, so the repair will be expensive.",
+      "exampleTranslation": "Bánh xe trước bị hỏng nặng, nên việc sửa chữa sẽ tốn kém."
+    }
+  ]
+}

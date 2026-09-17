@@ -1,0 +1,82 @@
+{
+  "unit": 29,
+  "deck": "Unit 29: Giao thông và đường phố",
+  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 29 và ít nhất 1 từ đã học ở Unit trước.",
+  "items": [
+    {
+      "word": "traffic",
+      "example": "The terrible traffic made me quite late for my morning class.",
+      "exampleTranslation": "Giao thông tệ hại khiến tôi khá muộn giờ học buổi sáng."
+    },
+    {
+      "word": "heavy",
+      "example": "Traffic is very heavy at noon, so I always leave home early.",
+      "exampleTranslation": "Giao thông rất đông đúc vào buổi trưa, nên tôi luôn rời nhà sớm."
+    },
+    {
+      "word": "honk",
+      "example": "Angry drivers behind us began to honk, and my head started to ache.",
+      "exampleTranslation": "Những người lái xe giận dữ phía sau chúng tôi bắt đầu bấm còi, và đầu tôi bắt đầu đau."
+    },
+    {
+      "word": "annoyed",
+      "example": "I felt annoyed when a taxi stopped in the middle of the street.",
+      "exampleTranslation": "Tôi thấy bực mình khi một chiếc taxi dừng lại giữa đường."
+    },
+    {
+      "word": "pedestrian",
+      "example": "An old pedestrian walked slowly across the busy square near my house.",
+      "exampleTranslation": "Một người đi bộ lớn tuổi đi chậm rãi qua quảng trường đông đúc gần nhà tôi."
+    },
+    {
+      "word": "passenger",
+      "example": "The passenger beside me explained the route to our young driver.",
+      "exampleTranslation": "Hành khách bên cạnh tôi giải thích tuyến đường cho tài xế trẻ của chúng tôi."
+    },
+    {
+      "word": "hole",
+      "example": "A deep hole in the pavement can injure people who walk at night.",
+      "exampleTranslation": "Một cái ổ gà sâu trên vỉa hè có thể làm bị thương những người đi bộ vào ban đêm."
+    },
+    {
+      "word": "fast",
+      "example": "That young man drives too fast, and his friends always feel scared.",
+      "exampleTranslation": "Chàng trai trẻ đó lái xe quá nhanh, và bạn bè anh ấy luôn cảm thấy sợ hãi."
+    },
+    {
+      "word": "crazy",
+      "example": "Riding without a helmet in this city is completely crazy and dangerous.",
+      "exampleTranslation": "Đi xe không đội mũ bảo hiểm ở thành phố này là hoàn toàn điên rồ và nguy hiểm."
+    },
+    {
+      "word": "push",
+      "example": "We had to push the motorbike to a small repair shop nearby.",
+      "exampleTranslation": "Chúng tôi phải đẩy chiếc xe máy đến một tiệm sửa xe nhỏ gần đó."
+    },
+    {
+      "word": "quickly",
+      "example": "The ambulance arrived quickly, so the injured man got help in time.",
+      "exampleTranslation": "Xe cứu thương đến nhanh chóng, nên người đàn ông bị thương được giúp đỡ kịp thời."
+    },
+    {
+      "word": "officer",
+      "example": "A police officer checked my papers and explained the new rule politely.",
+      "exampleTranslation": "Một cảnh sát kiểm tra giấy tờ của tôi và giải thích quy định mới một cách lịch sự."
+    },
+    {
+      "word": "station",
+      "example": "There is a petrol station near the market at the end of this street.",
+      "exampleTranslation": "Có một trạm xăng gần chợ ở cuối con phố này."
+    },
+    {
+      "word": "fuel",
+      "example": "We stopped to buy fuel because the journey to the coast was long.",
+      "exampleTranslation": "Chúng tôi dừng lại mua nhiên liệu vì hành trình ra bờ biển rất dài."
+    },
+    {
+      "word": "worse",
+      "example": "Traffic gets worse every morning, and the air quality is truly awful.",
+      "exampleTranslation": "Giao thông tệ hơn mỗi buổi sáng, và chất lượng không khí thực sự tồi tệ."
+    }
+  ]
+}

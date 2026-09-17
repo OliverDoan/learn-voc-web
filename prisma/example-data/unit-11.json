@@ -1,0 +1,97 @@
+{
+  "unit": 11,
+  "deck": "Unit 11: Chuyến du lịch đầu tiên của hai người",
+  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 11 và ít nhất 1 từ đã học ở Unit trước.",
+  "items": [
+    {
+      "word": "nowadays",
+      "example": "Nowadays most people book their trips online because it is cheap and convenient.",
+      "exampleTranslation": "Ngày nay hầu hết mọi người đặt chuyến đi trực tuyến vì nó rẻ và tiện lợi."
+    },
+    {
+      "word": "excited",
+      "example": "The children were excited when they saw the pool at the hotel.",
+      "exampleTranslation": "Bọn trẻ rất hào hứng khi chúng nhìn thấy bể bơi ở khách sạn."
+    },
+    {
+      "word": "visa",
+      "example": "You need a valid visa, so please prepare your documents at least one month early.",
+      "exampleTranslation": "Bạn cần một thị thực hợp lệ, nên hãy chuẩn bị giấy tờ trước ít nhất một tháng."
+    },
+    {
+      "word": "flight",
+      "example": "Our flight to Tokyo leaves early, so we must drive to the airport at dawn.",
+      "exampleTranslation": "Chuyến bay đến Tokyo của chúng tôi khởi hành sớm, nên chúng tôi phải lái xe ra sân bay lúc rạng sáng."
+    },
+    {
+      "word": "reservation",
+      "example": "I made a reservation at a comfortable hotel near the central square.",
+      "exampleTranslation": "Tôi đã đặt chỗ ở một khách sạn thoải mái gần quảng trường trung tâm."
+    },
+    {
+      "word": "delay",
+      "example": "The flight had a long delay, so we had to wait in the noisy airport.",
+      "exampleTranslation": "Chuyến bay có một sự trì hoãn dài, nên chúng tôi phải đợi trong sân bay ồn ào."
+    },
+    {
+      "word": "disappointed",
+      "example": "We were disappointed because the hotel room was cramped and quite dirty.",
+      "exampleTranslation": "Chúng tôi thất vọng vì căn phòng khách sạn chật chội và khá bẩn."
+    },
+    {
+      "word": "journey",
+      "example": "The journey to the mountain took six hours, but the view was amazing.",
+      "exampleTranslation": "Cuộc hành trình đến ngọn núi mất sáu tiếng, nhưng khung cảnh thật tuyệt vời."
+    },
+    {
+      "word": "chance",
+      "example": "This trip is a good chance to leave the noisy city for a week.",
+      "exampleTranslation": "Chuyến đi này là một cơ hội tốt để rời xa thành phố ồn ào trong một tuần."
+    },
+    {
+      "word": "escape",
+      "example": "Many people travel to the mountains to escape the pollution of the capital.",
+      "exampleTranslation": "Nhiều người đi du lịch lên núi để thoát khỏi ô nhiễm của thủ đô."
+    },
+    {
+      "word": "reception",
+      "example": "Please leave your key at the reception and inform the staff before leaving.",
+      "exampleTranslation": "Hãy để chìa khoá ở quầy tiếp tân và thông báo cho nhân viên trước khi rời đi."
+    },
+    {
+      "word": "stay",
+      "example": "During our stay, the friendly owner gave us free breakfast every morning.",
+      "exampleTranslation": "Trong thời gian chúng tôi ở đó, người chủ thân thiện đã cho chúng tôi bữa sáng miễn phí mỗi sáng."
+    },
+    {
+      "word": "experience",
+      "example": "I want to experience the vibrant nightlife of this city at least once.",
+      "exampleTranslation": "Tôi muốn trải nghiệm cuộc sống về đêm sôi động của thành phố này ít nhất một lần."
+    },
+    {
+      "word": "adventure",
+      "example": "Our walk through the old alley became a small adventure that afternoon.",
+      "exampleTranslation": "Chuyến đi bộ của chúng tôi qua con hẻm cũ đã trở thành một cuộc phiêu lưu nhỏ vào chiều hôm đó."
+    },
+    {
+      "word": "tour",
+      "example": "We joined a city tour and visited every famous area in one day.",
+      "exampleTranslation": "Chúng tôi tham gia một chuyến tham quan thành phố và ghé thăm mọi khu vực nổi tiếng trong một ngày."
+    },
+    {
+      "word": "tourist",
+      "example": "Every tourist wants a photo in front of the tall tower.",
+      "exampleTranslation": "Mọi khách du lịch đều muốn có một bức ảnh trước toà tháp cao."
+    },
+    {
+      "word": "memory",
+      "example": "That quiet beach gave me a beautiful memory of our first holiday together.",
+      "exampleTranslation": "Bãi biển yên tĩnh đó đã cho tôi một kỉ niệm đẹp về kỳ nghỉ đầu tiên của chúng tôi cùng nhau."
+    },
+    {
+      "word": "postcard",
+      "example": "She sent me a postcard from Paris and wrote about the friendly people.",
+      "exampleTranslation": "Cô ấy gửi cho tôi một tấm bưu thiếp từ Paris và viết về những người dân thân thiện."
+    }
+  ]
+}

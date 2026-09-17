@@ -1,0 +1,57 @@
+{
+  "unit": 25,
+  "deck": "Unit 25: Thuốc men và hồi phục",
+  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 25 và ít nhất 1 từ đã học ở Unit trước.",
+  "items": [
+    {
+      "word": "exhausted",
+      "example": "I felt completely exhausted after coughing all night long.",
+      "exampleTranslation": "Tôi thấy hoàn toàn kiệt sức sau khi ho suốt cả đêm."
+    },
+    {
+      "word": "dehydrated",
+      "example": "After a long day in the sun, the children were dehydrated and thirsty.",
+      "exampleTranslation": "Sau một ngày dài dưới nắng, bọn trẻ bị mất nước và khát."
+    },
+    {
+      "word": "pharmacy",
+      "example": "There is a small pharmacy right next to the clinic on our street.",
+      "exampleTranslation": "Có một hiệu thuốc nhỏ ngay cạnh phòng khám trên con phố nhà tôi."
+    },
+    {
+      "word": "explain",
+      "example": "The nurse took time to explain everything written on my prescription.",
+      "exampleTranslation": "Cô y tá dành thời gian giải thích mọi thứ được viết trong đơn thuốc của tôi."
+    },
+    {
+      "word": "pill",
+      "example": "Take one pill after every meal to ease the pain in your stomach.",
+      "exampleTranslation": "Uống một viên thuốc sau mỗi bữa ăn để làm dịu cơn đau trong dạ dày của bạn."
+    },
+    {
+      "word": "medicine",
+      "example": "Remember to take your medicine on time, or your cough will get worse.",
+      "exampleTranslation": "Nhớ uống thuốc đúng giờ, nếu không cơn ho của bạn sẽ nặng hơn."
+    },
+    {
+      "word": "slowly",
+      "example": "She drank the warm water slowly because her throat still hurt.",
+      "exampleTranslation": "Cô ấy uống nước ấm chậm rãi vì cổ họng cô ấy vẫn còn đau."
+    },
+    {
+      "word": "admit",
+      "example": "The doctors decided to admit him to hospital because he was seriously ill.",
+      "exampleTranslation": "Các bác sĩ quyết định cho anh ấy nhập viện vì anh ấy ốm nghiêm trọng."
+    },
+    {
+      "word": "speedy",
+      "example": "My friends at the gym wished me a speedy recovery after the surgery.",
+      "exampleTranslation": "Bạn bè tôi ở phòng gym chúc tôi hồi phục nhanh chóng sau ca phẫu thuật."
+    },
+    {
+      "word": "fit",
+      "example": "After a week of rest, I finally felt fit and satisfied again.",
+      "exampleTranslation": "Sau một tuần nghỉ ngơi, cuối cùng tôi cũng thấy khỏe mạnh và hài lòng trở lại."
+    }
+  ]
+}

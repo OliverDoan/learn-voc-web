@@ -48,12 +48,15 @@ pnpm gen:synonyms     # Sinh đồng nghĩa (AI)
 pnpm gen:root-meanings# Sinh nghĩa từ gốc (AI)
 pnpm gen:stories      # Sinh thêm truyện chêm đủ từ cho mỗi deck (AI, có validate + retry)
 pnpm stories:load     # Kiểm tra (--check) & nạp truyện chêm từ prisma/story-data/*.json
+pnpm examples:load    # Kiểm tra (--check) & nạp câu ví dụ viết tay từ prisma/example-data/*.json
 pnpm data:export      # Xuất toàn bộ data ra file
 pnpm data:load        # Nạp lại data từ file
 pnpm sync:card-order  # Đồng bộ thứ tự thẻ
 ```
 
 > Các script AI (`gen:*`) gọi Claude API — cần key trong `.env`. Đọc script tương ứng trong `scripts/` trước khi chạy.
+>
+> **Câu ví dụ chêm từ cũ**: mọi câu ví dụ (720/720 thẻ) đều chứa từ của chính thẻ VÀ ít nhất 1 từ đã học ở Unit trước — dùng cho bài "Viết lại câu" và "Điền từ vào câu". Nguồn viết tay ở `prisma/example-data/unit-NN.json`, nạp bằng `pnpm examples:load` (validate bằng `lib/sentence-review.ts`, không đạt thì KHÔNG ghi DB). Bản sao lưu câu cũ ở `prisma/example-data/backup/`.
 >
 > **Truyện chêm**: `scripts/seed-stories.ts` giữ 1 truyện gốc/deck; các truyện bổ sung (5 truyện/deck, mỗi truyện chứa ĐỦ từ của deck) nằm ở `prisma/story-data/unit-NN.json` và nạp bằng `pnpm stories:load`. Độ phủ từ kiểm tra bằng `lib/story-coverage.ts` (`checkStoryCoverage`).
 

@@ -1,0 +1,117 @@
+{
+  "unit": 10,
+  "deck": "Unit 10: Khu phố mới của Hinata",
+  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 10 và ít nhất 1 từ đã học ở Unit trước.",
+  "items": [
+    {
+      "word": "area",
+      "example": "This area is quiet, and every flat here has a small balcony.",
+      "exampleTranslation": "Khu vực này yên tĩnh, và mỗi căn hộ ở đây đều có một ban công nhỏ."
+    },
+    {
+      "word": "block",
+      "example": "Our block of flats stands near the river, so the view is beautiful.",
+      "exampleTranslation": "Dãy căn hộ của chúng tôi nằm gần sông, nên tầm nhìn rất đẹp."
+    },
+    {
+      "word": "develop",
+      "example": "The city plans to develop this district and build a new bridge.",
+      "exampleTranslation": "Thành phố dự định phát triển khu vực này và xây một cây cầu mới."
+    },
+    {
+      "word": "friendly",
+      "example": "The people in this neighbourhood are friendly, so I never feel lonely.",
+      "exampleTranslation": "Mọi người trong khu phố này rất thân thiện, nên tôi không bao giờ thấy cô đơn."
+    },
+    {
+      "word": "inform",
+      "example": "Please inform the security guard before you move your furniture upstairs.",
+      "exampleTranslation": "Hãy thông báo cho bảo vệ trước khi bạn chuyển đồ nội thất lên tầng trên."
+    },
+    {
+      "word": "invite",
+      "example": "We will invite our neighbours to see the flat after we decorate it.",
+      "exampleTranslation": "Chúng tôi sẽ mời hàng xóm đến xem căn hộ sau khi chúng tôi trang trí nó."
+    },
+    {
+      "word": "safe",
+      "example": "The alley is safe at night because there are many bright lights.",
+      "exampleTranslation": "Con hẻm an toàn vào ban đêm vì có nhiều đèn sáng."
+    },
+    {
+      "word": "vibrant",
+      "example": "The central district becomes vibrant when the nightlife starts on Friday evening.",
+      "exampleTranslation": "Khu trung tâm trở nên sôi động khi cuộc sống về đêm bắt đầu vào tối thứ Sáu."
+    },
+    {
+      "word": "complicated",
+      "example": "The bus system here is complicated, so I usually drive to work.",
+      "exampleTranslation": "Hệ thống xe buýt ở đây phức tạp, nên tôi thường lái xe đi làm."
+    },
+    {
+      "word": "one-way",
+      "example": "Many streets near the square are one-way, which makes driving quite difficult.",
+      "exampleTranslation": "Nhiều con phố gần quảng trường là đường một chiều, điều đó khiến việc lái xe khá khó."
+    },
+    {
+      "word": "mostly",
+      "example": "The people living in this building are mostly young workers and students.",
+      "exampleTranslation": "Những người sống trong toà nhà này hầu hết là công nhân trẻ và sinh viên."
+    },
+    {
+      "word": "ground",
+      "example": "Children often drop their toys on the ground in front of our building.",
+      "exampleTranslation": "Trẻ con thường làm rơi đồ chơi xuống đất trước toà nhà của chúng tôi."
+    },
+    {
+      "word": "gym",
+      "example": "There is a modern gym on the ground floor of our building.",
+      "exampleTranslation": "Có một phòng tập thể hình hiện đại ở tầng trệt toà nhà của chúng tôi."
+    },
+    {
+      "word": "everywhere",
+      "example": "After the festival, rubbish was everywhere on the pavement outside our building.",
+      "exampleTranslation": "Sau lễ hội, rác ở khắp mọi nơi trên vỉa hè bên ngoài toà nhà của chúng tôi."
+    },
+    {
+      "word": "noisy",
+      "example": "The street is noisy in the evening, but our flat is still comfortable.",
+      "exampleTranslation": "Con phố ồn ào vào buổi tối, nhưng căn hộ của chúng tôi vẫn thoải mái."
+    },
+    {
+      "word": "always",
+      "example": "My roommate always opens the curtains as soon as she wakes up.",
+      "exampleTranslation": "Bạn cùng phòng của tôi luôn mở rèm cửa ngay khi cô ấy thức dậy."
+    },
+    {
+      "word": "chilled",
+      "example": "The small cafe here is a chilled place to spend a rainy afternoon.",
+      "exampleTranslation": "Quán cà phê nhỏ ở đây là một nơi thư giãn để trải qua một buổi chiều mưa."
+    },
+    {
+      "word": "vibe",
+      "example": "This old neighbourhood has a lively vibe, especially when the nightlife begins.",
+      "exampleTranslation": "Khu phố cũ này có bầu không khí sôi nổi, đặc biệt là khi cuộc sống về đêm bắt đầu."
+    },
+    {
+      "word": "comfy",
+      "example": "The old armchair near the balcony is comfy and was not expensive.",
+      "exampleTranslation": "Chiếc ghế bành cũ cạnh ban công rất dễ chịu và không hề đắt."
+    },
+    {
+      "word": "property",
+      "example": "Prices of property in the capital rise every year, so young people cannot buy houses.",
+      "exampleTranslation": "Giá tài sản ở thủ đô tăng mỗi năm, nên người trẻ không thể mua nhà."
+    },
+    {
+      "word": "playground",
+      "example": "The children play safely on the playground behind our building every afternoon.",
+      "exampleTranslation": "Bọn trẻ chơi an toàn ở sân chơi phía sau toà nhà của chúng tôi mỗi buổi chiều."
+    },
+    {
+      "word": "pool",
+      "example": "Our building has a small pool, but using it costs an extra fee.",
+      "exampleTranslation": "Toà nhà của chúng tôi có một bể bơi nhỏ, nhưng dùng nó phải trả thêm một khoản phí."
+    }
+  ]
+}

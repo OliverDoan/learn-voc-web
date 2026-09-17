@@ -1,0 +1,102 @@
+{
+  "unit": 8,
+  "deck": "Unit 8: Sự thật về thủ đô",
+  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 8 và ít nhất 1 từ đã học ở Unit trước.",
+  "items": [
+    {
+      "word": "room",
+      "example": "The bus was so crowded that there was no room for my bag.",
+      "exampleTranslation": "Xe buýt đông đến nỗi không còn chỗ nào cho chiếc túi của tôi."
+    },
+    {
+      "word": "daily",
+      "example": "Millions of people travel into the capital daily for work.",
+      "exampleTranslation": "Hàng triệu người đi vào thủ đô hàng ngày để làm việc."
+    },
+    {
+      "word": "pollution",
+      "example": "Pollution in the central district is much worse than in my hometown.",
+      "exampleTranslation": "Ô nhiễm ở quận trung tâm tệ hơn nhiều so với ở quê tôi."
+    },
+    {
+      "word": "vehicle",
+      "example": "Every vehicle must stop before the traffic lights on this highway.",
+      "exampleTranslation": "Mọi phương tiện phải dừng lại trước đèn giao thông trên đường cao tốc này."
+    },
+    {
+      "word": "rubbish",
+      "example": "People leave rubbish on the pavement after the night market closes.",
+      "exampleTranslation": "Người ta để lại rác trên vỉa hè sau khi chợ đêm đóng cửa."
+    },
+    {
+      "word": "throw",
+      "example": "Please do not throw plastic bottles into the alley behind our house.",
+      "exampleTranslation": "Xin đừng vứt chai nhựa vào con hẻm phía sau nhà chúng tôi."
+    },
+    {
+      "word": "unhealthy",
+      "example": "The air in this bustling area is unhealthy for small children.",
+      "exampleTranslation": "Không khí ở khu vực nhộn nhịp này có hại cho sức khỏe của trẻ nhỏ."
+    },
+    {
+      "word": "population",
+      "example": "The population of this district has doubled in only ten years.",
+      "exampleTranslation": "Dân số của quận này đã tăng gấp đôi chỉ trong mười năm."
+    },
+    {
+      "word": "lack",
+      "example": "Many old neighbourhoods lack clean water and modern hospitals.",
+      "exampleTranslation": "Nhiều khu phố cũ thiếu nước sạch và bệnh viện hiện đại."
+    },
+    {
+      "word": "build",
+      "example": "The city plans to build a new tower near the river.",
+      "exampleTranslation": "Thành phố dự định xây một tòa tháp mới gần con sông."
+    },
+    {
+      "word": "bridge",
+      "example": "The old bridge is convenient for students who live on the other side.",
+      "exampleTranslation": "Cây cầu cũ rất tiện lợi cho những học sinh sống ở bờ bên kia."
+    },
+    {
+      "word": "beggar",
+      "example": "A beggar sat quietly near the entrance of the nightclub.",
+      "exampleTranslation": "Một người ăn xin ngồi lặng lẽ gần lối vào của hộp đêm."
+    },
+    {
+      "word": "poor",
+      "example": "Many poor families cannot pay the high rent in this city.",
+      "exampleTranslation": "Nhiều gia đình nghèo không thể trả tiền thuê nhà cao ở thành phố này."
+    },
+    {
+      "word": "selfish",
+      "example": "Some rich people are selfish and never help anyone around them.",
+      "exampleTranslation": "Một số người giàu có thì ích kỷ và không bao giờ giúp đỡ ai xung quanh họ."
+    },
+    {
+      "word": "pickpocket",
+      "example": "A pickpocket stole her phone on the lively shopping street.",
+      "exampleTranslation": "Một kẻ móc túi đã lấy trộm điện thoại của cô ấy trên con phố mua sắm sống động."
+    },
+    {
+      "word": "crime",
+      "example": "Crime is rising in this area, so people feel nervous at night.",
+      "exampleTranslation": "Tội phạm đang gia tăng ở khu vực này, nên người dân cảm thấy lo lắng vào ban đêm."
+    },
+    {
+      "word": "security",
+      "example": "Security in this neighbourhood improved after the new cameras appeared.",
+      "exampleTranslation": "An ninh ở khu phố này đã được cải thiện sau khi những chiếc camera mới xuất hiện."
+    },
+    {
+      "word": "scam",
+      "example": "That cheap tour was a scam, and the visitors lost all their money.",
+      "exampleTranslation": "Chuyến du lịch giá rẻ đó là một trò lừa đảo, và các du khách đã mất hết tiền."
+    },
+    {
+      "word": "affordable",
+      "example": "Young workers need affordable housing near the city centre.",
+      "exampleTranslation": "Những người lao động trẻ cần nhà ở giá phải chăng gần trung tâm thành phố."
+    }
+  ]
+}

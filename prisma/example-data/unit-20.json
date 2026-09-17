@@ -1,0 +1,92 @@
+{
+  "unit": 20,
+  "deck": "Unit 20: Vườn rau trái",
+  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 20 và ít nhất 1 từ đã học ở Unit trước.",
+  "items": [
+    {
+      "word": "plant",
+      "example": "We plant fresh herbs in small pots on our balcony.",
+      "exampleTranslation": "Chúng tôi trồng rau thơm tươi trong những chậu nhỏ trên ban công."
+    },
+    {
+      "word": "harvest",
+      "example": "Farmers harvest their crops when the rainy season ends.",
+      "exampleTranslation": "Nông dân thu hoạch cây trồng của họ khi mùa mưa kết thúc."
+    },
+    {
+      "word": "sprout",
+      "example": "A tiny green sprout grew beside the old bucket in our garden.",
+      "exampleTranslation": "Một mầm cây xanh nhỏ mọc lên cạnh cái xô cũ trong vườn nhà tôi."
+    },
+    {
+      "word": "cabbage",
+      "example": "My mother buys cabbage at the market when the weather gets dry.",
+      "exampleTranslation": "Mẹ tôi mua bắp cải ở chợ khi thời tiết trở nên khô hanh."
+    },
+    {
+      "word": "lettuce",
+      "example": "Wash the lettuce carefully before you mix it with the sauce.",
+      "exampleTranslation": "Rửa rau xà lách thật kỹ trước khi bạn trộn nó với nước sốt."
+    },
+    {
+      "word": "onion",
+      "example": "I cry every time I cut an onion for the hotpot.",
+      "exampleTranslation": "Tôi khóc mỗi lần tôi thái hành tây cho món lẩu."
+    },
+    {
+      "word": "mushroom",
+      "example": "The chef put one large mushroom on top of the pizza.",
+      "exampleTranslation": "Đầu bếp đặt một cây nấm lớn lên trên chiếc bánh pizza."
+    },
+    {
+      "word": "slice",
+      "example": "She cut a thin slice of lemon for my cup of tea.",
+      "exampleTranslation": "Cô ấy cắt một lát chanh vàng mỏng cho tách trà của tôi."
+    },
+    {
+      "word": "bowl",
+      "example": "He finished a big bowl of soup and felt warm again.",
+      "exampleTranslation": "Anh ấy ăn hết một tô súp lớn và thấy ấm người trở lại."
+    },
+    {
+      "word": "pickle",
+      "example": "My grandmother likes to pickle vegetables when she has fresh groceries.",
+      "exampleTranslation": "Bà tôi thích muối chua rau củ khi bà có thực phẩm tươi."
+    },
+    {
+      "word": "juicy",
+      "example": "These oranges are juicy and sweet, so the children love them.",
+      "exampleTranslation": "Những quả cam này mọng nước và ngọt, nên bọn trẻ rất thích chúng."
+    },
+    {
+      "word": "grapefruit",
+      "example": "I eat half a grapefruit before my morning coffee every day.",
+      "exampleTranslation": "Tôi ăn nửa quả bưởi trước tách cà phê buổi sáng mỗi ngày."
+    },
+    {
+      "word": "kumquat",
+      "example": "During the festival my mother buys a small kumquat tree.",
+      "exampleTranslation": "Vào dịp lễ hội, mẹ tôi mua một cây quất nhỏ."
+    },
+    {
+      "word": "durian",
+      "example": "Many foreigners dislike the strong smell of durian fruit.",
+      "exampleTranslation": "Nhiều người nước ngoài không thích mùi nồng của quả sầu riêng."
+    },
+    {
+      "word": "seedless",
+      "example": "Seedless grapes are useful when I make a fruit smoothie.",
+      "exampleTranslation": "Nho không hạt rất hữu ích khi tôi làm sinh tố trái cây."
+    },
+    {
+      "word": "olive",
+      "example": "The chef added one black olive to each plate of salad.",
+      "exampleTranslation": "Đầu bếp thêm một quả ô liu đen vào mỗi đĩa salad."
+    },
+    {
+      "word": "spoil",
+      "example": "Hot and humid weather can spoil fresh milk very quickly.",
+      "exampleTranslation": "Thời tiết nóng và ẩm có thể làm hỏng sữa tươi rất nhanh."
+    }
+  ]
+}

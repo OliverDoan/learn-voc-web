@@ -1,0 +1,97 @@
+{
+  "unit": 12,
+  "deck": "Unit 12: Một ngày tham quan cùng nhau",
+  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 12 và ít nhất 1 từ đã học ở Unit trước.",
+  "items": [
+    {
+      "word": "leisure",
+      "example": "In her leisure time she reads books about travelling in Asia and Europe.",
+      "exampleTranslation": "Trong thời gian rảnh, cô ấy đọc sách về du lịch ở châu Á và châu Âu."
+    },
+    {
+      "word": "sightseeing",
+      "example": "Sightseeing is the main reason why tourists visit this quiet old town.",
+      "exampleTranslation": "Ngắm cảnh là lý do chính khiến khách du lịch đến thăm thị trấn cổ yên tĩnh này."
+    },
+    {
+      "word": "guide",
+      "example": "Our guide shared many stories with us during the tour around the ancient city.",
+      "exampleTranslation": "Hướng dẫn viên của chúng tôi chia sẻ nhiều câu chuyện với chúng tôi trong chuyến tham quan quanh thành phố cổ."
+    },
+    {
+      "word": "local",
+      "example": "The local food here is cheap, and every tourist wants to try it.",
+      "exampleTranslation": "Đồ ăn địa phương ở đây rẻ, và mọi khách du lịch đều muốn thử nó."
+    },
+    {
+      "word": "route",
+      "example": "The bus takes a beautiful route along the coast to our next destination.",
+      "exampleTranslation": "Xe buýt đi theo một tuyến đường đẹp dọc bờ biển đến điểm đến tiếp theo của chúng tôi."
+    },
+    {
+      "word": "pagoda",
+      "example": "The old pagoda on the hill is a peaceful place for visitors.",
+      "exampleTranslation": "Ngôi chùa cổ trên đồi là một nơi yên bình cho du khách."
+    },
+    {
+      "word": "war",
+      "example": "The museum shows photographs of the long war, and every visitor feels sad.",
+      "exampleTranslation": "Bảo tàng trưng bày những bức ảnh về cuộc chiến tranh dài, và mọi du khách đều thấy buồn."
+    },
+    {
+      "word": "hidden",
+      "example": "We discovered a hidden beach behind the rocks during our morning walk.",
+      "exampleTranslation": "Chúng tôi phát hiện một bãi biển ẩn giấu phía sau những tảng đá trong chuyến đi bộ buổi sáng."
+    },
+    {
+      "word": "lovely",
+      "example": "It was a lovely afternoon, and the view from the boat was amazing.",
+      "exampleTranslation": "Đó là một buổi chiều dễ chịu, và khung cảnh từ trên thuyền thật tuyệt vời."
+    },
+    {
+      "word": "lover",
+      "example": "The young lover sent a postcard to his girlfriend every week during his trip.",
+      "exampleTranslation": "Chàng người yêu trẻ tuổi gửi một tấm bưu thiếp cho bạn gái mỗi tuần trong chuyến đi của anh ấy."
+    },
+    {
+      "word": "recommend",
+      "example": "Our guide recommends this small hotel because the reception staff are friendly.",
+      "exampleTranslation": "Hướng dẫn viên của chúng tôi gợi ý khách sạn nhỏ này vì nhân viên tiếp tân rất thân thiện."
+    },
+    {
+      "word": "market",
+      "example": "The night market near the river is lively and full of excited tourists.",
+      "exampleTranslation": "Khu chợ đêm gần sông rất sôi nổi và đầy những khách du lịch hào hứng."
+    },
+    {
+      "word": "try",
+      "example": "You should try the local noodles before your flight home tomorrow morning.",
+      "exampleTranslation": "Bạn nên thử món mì địa phương trước chuyến bay về nhà vào sáng mai."
+    },
+    {
+      "word": "taste",
+      "example": "We wanted to taste every dish at the festival, but we had no chance.",
+      "exampleTranslation": "Chúng tôi muốn nếm thử mọi món ăn ở lễ hội, nhưng chúng tôi không có cơ hội."
+    },
+    {
+      "word": "option",
+      "example": "Taking the night train is a cheaper option than booking an expensive flight.",
+      "exampleTranslation": "Đi tàu đêm là một lựa chọn rẻ hơn so với việc đặt một chuyến bay đắt tiền."
+    },
+    {
+      "word": "resort",
+      "example": "The beach resort was pricey, but our stay there was really comfortable.",
+      "exampleTranslation": "Khu nghỉ dưỡng bên bãi biển khá đắt, nhưng thời gian ở đó của chúng tôi thực sự thoải mái."
+    },
+    {
+      "word": "campsite",
+      "example": "We put up our tent at a quiet campsite near the huge lake.",
+      "exampleTranslation": "Chúng tôi dựng lều ở một khu cắm trại yên tĩnh gần cái hồ khổng lồ."
+    },
+    {
+      "word": "hike",
+      "example": "Every weekend we hike in the mountains to escape the busy city.",
+      "exampleTranslation": "Mỗi cuối tuần chúng tôi đi bộ đường dài trên núi để thoát khỏi thành phố bận rộn."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "unit": 24,
+  "deck": "Unit 24: Bệnh tật và triệu chứng",
+  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 24 và ít nhất 1 từ đã học ở Unit trước.",
+  "items": [
+    {
+      "word": "cold",
+      "example": "My sister caught a cold after walking home in the heavy shower.",
+      "exampleTranslation": "Chị tôi bị cảm lạnh sau khi đi bộ về nhà dưới cơn mưa rào nặng hạt."
+    },
+    {
+      "word": "ill",
+      "example": "I felt too ill to attend the important meeting yesterday.",
+      "exampleTranslation": "Tôi thấy quá ốm để tham dự cuộc họp quan trọng hôm qua."
+    },
+    {
+      "word": "cough",
+      "example": "I began to cough all night and could hardly breathe.",
+      "exampleTranslation": "Tôi bắt đầu ho suốt đêm và gần như không thở nổi."
+    },
+    {
+      "word": "flu",
+      "example": "Every winter my whole family gets the flu, which is really tiring.",
+      "exampleTranslation": "Mùa đông nào cả nhà tôi cũng bị cúm, điều đó thật sự mệt mỏi."
+    },
+    {
+      "word": "seriously",
+      "example": "My uncle was seriously sick last year, but his condition is better now.",
+      "exampleTranslation": "Chú tôi ốm nghiêm trọng hồi năm ngoái, nhưng tình trạng của chú giờ đã khá hơn."
+    },
+    {
+      "word": "curable",
+      "example": "The nurse told me my problem was curable, so I stopped feeling anxious.",
+      "exampleTranslation": "Cô y tá nói với tôi rằng bệnh của tôi chữa được, nên tôi thôi cảm thấy lo lắng."
+    },
+    {
+      "word": "suffer",
+      "example": "Many old people suffer from poor sight and hardly read at night.",
+      "exampleTranslation": "Nhiều người già phải chịu đựng thị lực kém và hiếm khi đọc sách vào ban đêm."
+    },
+    {
+      "word": "bleed",
+      "example": "My nose started to bleed after a long exercise under the hot sun.",
+      "exampleTranslation": "Mũi tôi bắt đầu chảy máu sau một buổi tập dài dưới trời nắng nóng."
+    },
+    {
+      "word": "prescription",
+      "example": "The doctor gave me a prescription and told me to avoid oily food.",
+      "exampleTranslation": "Bác sĩ đưa tôi một đơn thuốc và bảo tôi tránh đồ ăn nhiều dầu mỡ."
+    },
+    {
+      "word": "ease",
+      "example": "A hot bath will ease your back after such a tiring day.",
+      "exampleTranslation": "Một bồn tắm nước nóng sẽ làm dịu lưng của bạn sau một ngày mệt mỏi như thế."
+    },
+    {
+      "word": "drop",
+      "example": "The nurse told me to put two drops in each eye every morning.",
+      "exampleTranslation": "Cô y tá bảo tôi nhỏ hai giọt vào mỗi bên mắt mỗi sáng."
+    }
+  ]
+}

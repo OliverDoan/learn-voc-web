@@ -1,0 +1,112 @@
+{
+  "unit": 7,
+  "deck": "Unit 7: Hinata khám phá thủ đô",
+  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 7 và ít nhất 1 từ đã học ở Unit trước.",
+  "items": [
+    {
+      "word": "capital",
+      "example": "The capital is much more expensive than my peaceful hometown.",
+      "exampleTranslation": "Thủ đô đắt đỏ hơn nhiều so với quê hương yên bình của tôi."
+    },
+    {
+      "word": "highway",
+      "example": "The new highway shortens the distance between the two cities.",
+      "exampleTranslation": "Đường cao tốc mới rút ngắn khoảng cách giữa hai thành phố."
+    },
+    {
+      "word": "skyscraper",
+      "example": "My sister works as a receptionist in that tall glass skyscraper.",
+      "exampleTranslation": "Chị tôi làm lễ tân trong tòa nhà chọc trời bằng kính cao đó."
+    },
+    {
+      "word": "tower",
+      "example": "From the top of the tower, you can see the whole town.",
+      "exampleTranslation": "Từ đỉnh tháp, bạn có thể nhìn thấy toàn bộ thị trấn."
+    },
+    {
+      "word": "exciting",
+      "example": "Living in a big city is exciting, but the rent is very high.",
+      "exampleTranslation": "Sống ở một thành phố lớn thì thú vị, nhưng tiền thuê nhà rất cao."
+    },
+    {
+      "word": "central",
+      "example": "Her office is in a central area, so the address is easy to find.",
+      "exampleTranslation": "Văn phòng của cô ấy ở một khu vực trung tâm, nên địa chỉ rất dễ tìm."
+    },
+    {
+      "word": "district",
+      "example": "This district is famous for cheap food and friendly people.",
+      "exampleTranslation": "Quận này nổi tiếng với đồ ăn rẻ và người dân thân thiện."
+    },
+    {
+      "word": "atmosphere",
+      "example": "The atmosphere in the old quarter is peaceful early in the morning.",
+      "exampleTranslation": "Bầu không khí ở khu phố cổ rất yên bình vào lúc sáng sớm."
+    },
+    {
+      "word": "lively",
+      "example": "The night market is lively and always crowded with young visitors.",
+      "exampleTranslation": "Chợ đêm rất sống động và luôn đông nghịt khách tham quan trẻ tuổi."
+    },
+    {
+      "word": "bustling",
+      "example": "The bustling market near my house opens at five every morning.",
+      "exampleTranslation": "Khu chợ nhộn nhịp gần nhà tôi mở cửa lúc năm giờ mỗi sáng."
+    },
+    {
+      "word": "neighbourhood",
+      "example": "My neighbourhood is quiet and safe, so I know all my neighbours.",
+      "exampleTranslation": "Khu phố của tôi yên tĩnh và an toàn, nên tôi biết tất cả hàng xóm của mình."
+    },
+    {
+      "word": "various",
+      "example": "The supermarket sells various brands at reasonable prices.",
+      "exampleTranslation": "Siêu thị bán nhiều nhãn hiệu khác nhau với giá cả hợp lý."
+    },
+    {
+      "word": "quality",
+      "example": "The quality of these cheap shoes is surprisingly good.",
+      "exampleTranslation": "Chất lượng của đôi giày rẻ tiền này tốt một cách bất ngờ."
+    },
+    {
+      "word": "service",
+      "example": "The hotel service is excellent, and every customer feels welcome.",
+      "exampleTranslation": "Dịch vụ của khách sạn rất tuyệt vời, và mọi khách hàng đều cảm thấy được chào đón."
+    },
+    {
+      "word": "system",
+      "example": "The bus system here is cheap, so I rarely spend money on taxis.",
+      "exampleTranslation": "Hệ thống xe buýt ở đây rẻ, nên tôi hiếm khi tiêu tiền cho taxi."
+    },
+    {
+      "word": "modern",
+      "example": "This modern building was designed by a famous young architect.",
+      "exampleTranslation": "Tòa nhà hiện đại này được thiết kế bởi một kiến trúc sư trẻ nổi tiếng."
+    },
+    {
+      "word": "convenient",
+      "example": "The new metro line is convenient and saves me thirty minutes every day.",
+      "exampleTranslation": "Tuyến tàu điện ngầm mới rất tiện lợi và giúp tôi tiết kiệm ba mươi phút mỗi ngày."
+    },
+    {
+      "word": "pavement",
+      "example": "Many small shops open right on the pavement in this area.",
+      "exampleTranslation": "Nhiều cửa hàng nhỏ mở ngay trên vỉa hè ở khu vực này."
+    },
+    {
+      "word": "alley",
+      "example": "A famous cook sells noodles in the small alley behind my school.",
+      "exampleTranslation": "Một đầu bếp nổi tiếng bán mì trong con hẻm nhỏ phía sau trường tôi."
+    },
+    {
+      "word": "nightlife",
+      "example": "The nightlife in this city is amazing, but it can be expensive.",
+      "exampleTranslation": "Cuộc sống về đêm ở thành phố này thật tuyệt vời, nhưng nó có thể đắt đỏ."
+    },
+    {
+      "word": "nightclub",
+      "example": "My friends went to a nightclub, but I was broke that weekend.",
+      "exampleTranslation": "Bạn bè tôi đã đi hộp đêm, nhưng cuối tuần đó tôi cháy túi."
+    }
+  ]
+}

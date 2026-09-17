@@ -1,0 +1,62 @@
+{
+  "unit": 19,
+  "deck": "Unit 19: Ăn uống lành mạnh",
+  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 19 và ít nhất 1 từ đã học ở Unit trước.",
+  "items": [
+    {
+      "word": "diet",
+      "example": "My brother started a healthy diet and gave up takeaway food.",
+      "exampleTranslation": "Anh trai tôi bắt đầu một chế độ ăn lành mạnh và bỏ đồ ăn mang đi."
+    },
+    {
+      "word": "crappy",
+      "example": "I felt crappy all morning after eating those oily leftovers.",
+      "exampleTranslation": "Tôi thấy người tồi tệ suốt buổi sáng sau khi ăn chỗ đồ thừa nhiều dầu mỡ đó."
+    },
+    {
+      "word": "ingredient",
+      "example": "Fish sauce is the main ingredient in many Vietnamese dishes.",
+      "exampleTranslation": "Nước mắm là nguyên liệu chính trong nhiều món ăn Việt Nam."
+    },
+    {
+      "word": "useful",
+      "example": "This recipe book is very useful when I cook for guests.",
+      "exampleTranslation": "Cuốn sách công thức này rất hữu ích khi tôi nấu ăn cho khách."
+    },
+    {
+      "word": "benefit",
+      "example": "Walking after dinner has a real benefit for your stomach.",
+      "exampleTranslation": "Đi bộ sau bữa tối có một lợi ích thật sự cho dạ dày của bạn."
+    },
+    {
+      "word": "ageing",
+      "example": "Fresh vegetables and green tea can slow down ageing.",
+      "exampleTranslation": "Rau tươi và trà xanh có thể làm chậm quá trình lão hóa."
+    },
+    {
+      "word": "snack",
+      "example": "I often snack on nuts instead of drinking sweet coffee.",
+      "exampleTranslation": "Tôi hay ăn vặt bằng các loại hạt thay vì uống cà phê ngọt."
+    },
+    {
+      "word": "mix",
+      "example": "Mix the lemon juice with honey and stir it well.",
+      "exampleTranslation": "Trộn nước cốt chanh vàng với mật ong rồi khuấy đều."
+    },
+    {
+      "word": "crop",
+      "example": "Rice is the most important crop in my hometown every season.",
+      "exampleTranslation": "Lúa là cây trồng quan trọng nhất ở quê tôi mỗi mùa vụ."
+    },
+    {
+      "word": "pea",
+      "example": "She dropped one green pea into the soup by accident.",
+      "exampleTranslation": "Cô ấy vô tình làm rơi một hạt đậu Hà Lan vào nồi súp."
+    },
+    {
+      "word": "leaf",
+      "example": "Wrap the meat in a banana leaf before you grill it.",
+      "exampleTranslation": "Gói miếng thịt trong một chiếc lá chuối trước khi bạn nướng nó."
+    }
+  ]
+}

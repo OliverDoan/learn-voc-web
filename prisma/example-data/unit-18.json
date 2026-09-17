@@ -1,0 +1,87 @@
+{
+  "unit": 18,
+  "deck": "Unit 18: Công thức & kỹ thuật nấu",
+  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 18 và ít nhất 1 từ đã học ở Unit trước.",
+  "items": [
+    {
+      "word": "secret",
+      "example": "The secret of this soup is one spoon of fish sauce.",
+      "exampleTranslation": "Bí mật của món súp này là một thìa nước mắm."
+    },
+    {
+      "word": "plain",
+      "example": "After the hangover he only wanted plain rice and hot tea.",
+      "exampleTranslation": "Sau cơn dư âm say, anh ấy chỉ muốn ăn cơm trắng và uống trà nóng."
+    },
+    {
+      "word": "add",
+      "example": "Add some chilli if you want the hotpot to taste spicy.",
+      "exampleTranslation": "Thêm một ít ớt nếu bạn muốn món lẩu có vị cay."
+    },
+    {
+      "word": "seafood",
+      "example": "We ate grilled seafood by the sea and drank cold beer.",
+      "exampleTranslation": "Chúng tôi ăn hải sản nướng bên bờ biển và uống bia lạnh."
+    },
+    {
+      "word": "raw",
+      "example": "My grandmother never eats raw fish because of her weak stomach.",
+      "exampleTranslation": "Bà tôi không bao giờ ăn cá sống vì bụng bà yếu."
+    },
+    {
+      "word": "undercooked",
+      "example": "The pork was still undercooked, so I put it back on the stove.",
+      "exampleTranslation": "Miếng thịt lợn vẫn còn chưa chín, nên tôi đặt nó lại lên bếp."
+    },
+    {
+      "word": "fresh",
+      "example": "I buy fresh groceries at the market every Sunday morning.",
+      "exampleTranslation": "Tôi mua thực phẩm tươi ở chợ vào mỗi sáng chủ nhật."
+    },
+    {
+      "word": "frozen",
+      "example": "Frozen beef is not expensive, but my mother prefers fresh meat.",
+      "exampleTranslation": "Thịt bò đông lạnh không đắt, nhưng mẹ tôi thích thịt tươi hơn."
+    },
+    {
+      "word": "roast",
+      "example": "We roast a whole chicken when the weather turns dry and cool.",
+      "exampleTranslation": "Chúng tôi nướng nguyên một con gà khi thời tiết trở nên khô và mát."
+    },
+    {
+      "word": "lemon",
+      "example": "Put a slice of lemon in your sparkling water before serving.",
+      "exampleTranslation": "Cho một lát chanh vàng vào ly nước có ga của bạn trước khi dọn ra."
+    },
+    {
+      "word": "tasty",
+      "example": "My aunt made a tasty hotpot and served it with sweet sauce.",
+      "exampleTranslation": "Dì tôi nấu một món lẩu ngon và dọn ra cùng nước sốt ngọt."
+    },
+    {
+      "word": "hunger",
+      "example": "My hunger disappeared after one hot bowl of chicken soup.",
+      "exampleTranslation": "Cơn đói của tôi biến mất sau một bát súp gà nóng."
+    },
+    {
+      "word": "chopstick",
+      "example": "He dropped one chopstick into the soup and laughed loudly.",
+      "exampleTranslation": "Anh ấy làm rơi một chiếc đũa vào bát súp và cười to."
+    },
+    {
+      "word": "leftovers",
+      "example": "The leftovers from the party were served again the next evening.",
+      "exampleTranslation": "Đồ ăn thừa từ bữa tiệc được dọn ra lại vào tối hôm sau."
+    },
+    {
+      "word": "takeaway",
+      "example": "When the weather is awful, we order a takeaway for dinner.",
+      "exampleTranslation": "Khi thời tiết tệ hại, chúng tôi gọi đồ ăn mang đi cho bữa tối."
+    },
+    {
+      "word": "cuisine",
+      "example": "Vietnamese cuisine is famous for its light soups and fresh herbs.",
+      "exampleTranslation": "Ẩm thực Việt Nam nổi tiếng với những món súp thanh nhẹ và rau thơm tươi."
+    }
+  ]
+}
