@@ -64,6 +64,9 @@ const FAMILIES: string[][] = [
   ["attention", "attend"],
   ["reliable", "rely"],
   ["unfriend", "friendly"],
+  ["information", "inform"],
+  ["support", "supporter"],
+  ["change", "exchange"],
 ];
 
 // Từ liên quan (đồng nghĩa / cùng trường nghĩa). Mỗi nhóm cần >= 2 deck mới ghi.
@@ -133,6 +136,9 @@ const RELATED: string[][] = [
   ["theatre", "drama"], // nhà hát / tác phẩm kịch
   ["concert", "musician"], // buổi hoà nhạc / nhạc sĩ
   ["remember", "memorise"], // nhớ / ghi nhớ
+  ["delete", "remove"], // xoá / loại bỏ
+  ["outdated", "modern"], // lỗi thời <-> hiện đại
+  ["power", "energy"], // nguồn điện, sức mạnh / năng lượng
 ];
 
 // Biến thể Anh–Anh (BrE) ↔ Anh–Mỹ (AmE): từ khác hẳn (flat↔apartment) hoặc khác chính tả.

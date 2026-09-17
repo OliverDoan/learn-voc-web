@@ -1,0 +1,607 @@
+{
+  "unit": 35,
+  "deck": "Unit 35: Công nghệ và thiết bị",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "lightning",
+      "sentences": [
+        {
+          "english": "She could run as fast as lightning.",
+          "vietnamese": "Cô ấy có thể chạy nhanh như chớp."
+        },
+        {
+          "english": "The lightning was so bright that the whole street turned white.",
+          "vietnamese": "Tia chớp sáng đến mức cả con phố chuyển sang màu trắng."
+        },
+        {
+          "english": "We stayed inside because the storm brought heavy rain and lightning.",
+          "vietnamese": "Chúng tôi ở trong nhà vì cơn bão mang theo mưa lớn và sét."
+        },
+        {
+          "english": "Have you ever uploaded a photo of lightning to your website?",
+          "vietnamese": "Bạn đã bao giờ tải một bức ảnh tia chớp lên trang web của mình chưa?"
+        },
+        {
+          "english": "Lightning can damage a computer, so unplug it during a storm.",
+          "vietnamese": "Sét có thể làm hỏng máy tính, nên hãy rút phích cắm khi có bão."
+        }
+      ]
+    },
+    {
+      "word": "advanced",
+      "sentences": [
+        {
+          "english": "This laptop has an advanced camera system for video calls.",
+          "vietnamese": "Chiếc laptop này có hệ thống camera tiên tiến để gọi video."
+        },
+        {
+          "english": "Our company bought advanced machines to improve the quality of its products.",
+          "vietnamese": "Công ty chúng tôi đã mua những chiếc máy tiên tiến để cải thiện chất lượng sản phẩm."
+        },
+        {
+          "english": "Are these tools advanced enough for a professional designer?",
+          "vietnamese": "Những công cụ này có đủ hiện đại cho một nhà thiết kế chuyên nghiệp không?"
+        },
+        {
+          "english": "Ten years ago, this machine was the most advanced one on the market.",
+          "vietnamese": "Mười năm trước, chiếc máy này là loại tiên tiến nhất trên thị trường."
+        },
+        {
+          "english": "She is taking an advanced course in engineering this term.",
+          "vietnamese": "Cô ấy đang học một khoá kỹ thuật nâng cao trong học kỳ này."
+        }
+      ]
+    },
+    {
+      "word": "western",
+      "sentences": [
+        {
+          "english": "Western companies produce most of the software we use.",
+          "vietnamese": "Các công ty phương Tây sản xuất phần lớn phần mềm chúng ta dùng."
+        },
+        {
+          "english": "Many western users prefer to download apps from official stores.",
+          "vietnamese": "Nhiều người dùng phương Tây thích tải ứng dụng từ các cửa hàng chính thức."
+        },
+        {
+          "english": "He learned at a western university before he became an engineer.",
+          "vietnamese": "Anh ấy học ở một trường đại học phương Tây trước khi trở thành kỹ sư."
+        },
+        {
+          "english": "Western food is not always cheap in our neighbourhood.",
+          "vietnamese": "Đồ ăn phương Tây không phải lúc nào cũng rẻ ở khu phố của chúng tôi."
+        },
+        {
+          "english": "Do you follow any western technology channels?",
+          "vietnamese": "Bạn có theo dõi kênh công nghệ phương Tây nào không?"
+        }
+      ]
+    },
+    {
+      "word": "screen",
+      "sentences": [
+        {
+          "english": "The screen of my phone broke when I dropped it.",
+          "vietnamese": "Màn hình điện thoại của tôi vỡ khi tôi làm rơi nó."
+        },
+        {
+          "english": "Please clean the screen before you record the video.",
+          "vietnamese": "Hãy lau màn hình trước khi bạn quay video."
+        },
+        {
+          "english": "I have been staring at a screen all day and now my eyes hurt.",
+          "vietnamese": "Tôi đã nhìn vào màn hình cả ngày và giờ mắt tôi đau."
+        },
+        {
+          "english": "A bigger screen makes reading documents much more comfortable.",
+          "vietnamese": "Màn hình lớn hơn khiến việc đọc tài liệu thoải mái hơn nhiều."
+        },
+        {
+          "english": "Why does your screen turn off every two minutes?",
+          "vietnamese": "Tại sao màn hình của bạn cứ tắt sau mỗi hai phút vậy?"
+        }
+      ]
+    },
+    {
+      "word": "information",
+      "sentences": [
+        {
+          "english": "You can find all the information on the website.",
+          "vietnamese": "Bạn có thể tìm thấy mọi thông tin trên trang web đó."
+        },
+        {
+          "english": "Never share personal information with strangers online.",
+          "vietnamese": "Đừng bao giờ chia sẻ thông tin cá nhân với người lạ trên mạng."
+        },
+        {
+          "english": "The reporter checked the information before she posted the article.",
+          "vietnamese": "Phóng viên đã kiểm tra thông tin trước khi cô ấy đăng bài báo."
+        },
+        {
+          "english": "We need more information about the price of this machine.",
+          "vietnamese": "Chúng tôi cần thêm thông tin về giá của chiếc máy này."
+        },
+        {
+          "english": "This app collects too much information from its users.",
+          "vietnamese": "Ứng dụng này thu thập quá nhiều thông tin từ người dùng của nó."
+        }
+      ]
+    },
+    {
+      "word": "smart",
+      "sentences": [
+        {
+          "english": "My smart watch reminds me to stand up every hour.",
+          "vietnamese": "Chiếc đồng hồ thông minh của tôi nhắc tôi đứng dậy mỗi giờ."
+        },
+        {
+          "english": "Smart devices can save a lot of energy at home.",
+          "vietnamese": "Các thiết bị thông minh có thể tiết kiệm rất nhiều năng lượng trong nhà."
+        },
+        {
+          "english": "He is smart enough to fix the engine by himself.",
+          "vietnamese": "Anh ấy đủ thông minh để tự sửa động cơ."
+        },
+        {
+          "english": "Buying a smart television was not a reasonable decision for us.",
+          "vietnamese": "Mua một chiếc tivi thông minh không phải là quyết định hợp lý với chúng tôi."
+        },
+        {
+          "english": "Do you think smart homes will become common in our town?",
+          "vietnamese": "Bạn có nghĩ nhà thông minh sẽ trở nên phổ biến ở thị trấn của chúng ta không?"
+        }
+      ]
+    },
+    {
+      "word": "extremely",
+      "sentences": [
+        {
+          "english": "This new phone is extremely expensive.",
+          "vietnamese": "Chiếc điện thoại mới này cực kỳ đắt."
+        },
+        {
+          "english": "The traffic was extremely heavy on the highway this morning.",
+          "vietnamese": "Giao thông trên đường cao tốc sáng nay cực kỳ đông đúc."
+        },
+        {
+          "english": "She speaks English extremely well after two years abroad.",
+          "vietnamese": "Cô ấy nói tiếng Anh cực kỳ tốt sau hai năm ở nước ngoài."
+        },
+        {
+          "english": "I am extremely tired because I went to bed late last night.",
+          "vietnamese": "Tôi cực kỳ mệt vì tôi đi ngủ muộn tối qua."
+        },
+        {
+          "english": "It is extremely useful to save your work every few minutes.",
+          "vietnamese": "Việc lưu bài làm của bạn sau mỗi vài phút là cực kỳ hữu ích."
+        }
+      ]
+    },
+    {
+      "word": "update",
+      "sentences": [
+        {
+          "english": "You should update your phone to fix that problem.",
+          "vietnamese": "Bạn nên cập nhật điện thoại để sửa lỗi đó."
+        },
+        {
+          "english": "I updated the app last night and now it works perfectly.",
+          "vietnamese": "Tôi đã cập nhật ứng dụng tối qua và giờ nó chạy rất mượt."
+        },
+        {
+          "english": "The website updates its news feed every ten minutes.",
+          "vietnamese": "Trang web cập nhật bảng tin của nó mười phút một lần."
+        },
+        {
+          "english": "Have you updated your status since you moved to the new city?",
+          "vietnamese": "Bạn đã cập nhật trạng thái của mình từ khi chuyển đến thành phố mới chưa?"
+        },
+        {
+          "english": "Do not forget to update the file before you send it.",
+          "vietnamese": "Đừng quên cập nhật tập tin trước khi bạn gửi nó."
+        }
+      ]
+    },
+    {
+      "word": "technology",
+      "sentences": [
+        {
+          "english": "Modern technology has changed the way we communicate.",
+          "vietnamese": "Công nghệ hiện đại đã thay đổi cách chúng ta giao tiếp."
+        },
+        {
+          "english": "My grandfather is not interested in new technology at all.",
+          "vietnamese": "Ông tôi hoàn toàn không hứng thú với công nghệ mới."
+        },
+        {
+          "english": "Technology helps doctors discover diseases much earlier.",
+          "vietnamese": "Công nghệ giúp các bác sĩ phát hiện bệnh sớm hơn nhiều."
+        },
+        {
+          "english": "Which technology company would you like to work for?",
+          "vietnamese": "Bạn muốn làm việc cho công ty công nghệ nào?"
+        },
+        {
+          "english": "We are learning how technology can protect nature.",
+          "vietnamese": "Chúng tôi đang học cách công nghệ có thể bảo vệ thiên nhiên."
+        }
+      ]
+    },
+    {
+      "word": "support",
+      "sentences": [
+        {
+          "english": "This old laptop no longer supports popular video apps.",
+          "vietnamese": "Chiếc laptop cũ này không còn hỗ trợ các ứng dụng video phổ biến nữa."
+        },
+        {
+          "english": "My parents supported me when I wanted to change my career.",
+          "vietnamese": "Bố mẹ đã ủng hộ tôi khi tôi muốn thay đổi sự nghiệp."
+        },
+        {
+          "english": "Many fans came to the stadium to support their team.",
+          "vietnamese": "Nhiều người hâm mộ đã đến sân vận động để cổ vũ đội của họ."
+        },
+        {
+          "english": "Does this app support more than one language?",
+          "vietnamese": "Ứng dụng này có hỗ trợ nhiều hơn một ngôn ngữ không?"
+        },
+        {
+          "english": "The company will support employees who want to learn abroad.",
+          "vietnamese": "Công ty sẽ hỗ trợ những nhân viên muốn đi học ở nước ngoài."
+        }
+      ]
+    },
+    {
+      "word": "change",
+      "sentences": [
+        {
+          "english": "Social media has changed the way we share our opinions.",
+          "vietnamese": "Mạng xã hội đã thay đổi cách chúng ta chia sẻ quan điểm."
+        },
+        {
+          "english": "I want to change my password because it is not safe.",
+          "vietnamese": "Tôi muốn đổi mật khẩu vì nó không an toàn."
+        },
+        {
+          "english": "The weather changes quickly at the beginning of the rainy season.",
+          "vietnamese": "Thời tiết thay đổi nhanh chóng vào đầu mùa mưa."
+        },
+        {
+          "english": "Please change the settings if the volume is too loud.",
+          "vietnamese": "Hãy thay đổi cài đặt nếu âm lượng quá to."
+        },
+        {
+          "english": "Will you change jobs after you finish this course?",
+          "vietnamese": "Bạn sẽ đổi việc sau khi học xong khoá này chứ?"
+        }
+      ]
+    },
+    {
+      "word": "nerd",
+      "sentences": [
+        {
+          "english": "My brother is a computer nerd who fixes everyone's laptop.",
+          "vietnamese": "Anh trai tôi là một dân mê máy tính, ai hỏng laptop cũng đến nhờ."
+        },
+        {
+          "english": "People used to call him a nerd, but now he is very rich.",
+          "vietnamese": "Người ta từng gọi anh ấy là mọt sách, nhưng giờ anh ấy rất giàu."
+        },
+        {
+          "english": "Being a nerd is quite popular among young people nowadays.",
+          "vietnamese": "Làm một người mê công nghệ khá phổ biến trong giới trẻ ngày nay."
+        },
+        {
+          "english": "The nerds in my class always score the highest grades.",
+          "vietnamese": "Những mọt sách trong lớp tôi luôn đạt điểm số cao nhất."
+        },
+        {
+          "english": "Do not laugh at that nerd; he created the website for our company.",
+          "vietnamese": "Đừng cười nhạo cậu mọt sách đó; cậu ấy đã tạo ra trang web cho công ty chúng ta."
+        }
+      ]
+    },
+    {
+      "word": "totally",
+      "sentences": [
+        {
+          "english": "My old phone is totally useless now.",
+          "vietnamese": "Chiếc điện thoại cũ của tôi giờ hoàn toàn vô dụng."
+        },
+        {
+          "english": "I totally agree with your opinion about this new app.",
+          "vietnamese": "Tôi hoàn toàn đồng ý với quan điểm của bạn về ứng dụng mới này."
+        },
+        {
+          "english": "She was totally exhausted after the long journey.",
+          "vietnamese": "Cô ấy hoàn toàn kiệt sức sau chuyến đi dài."
+        },
+        {
+          "english": "The two brothers have totally different styles of drawing.",
+          "vietnamese": "Hai anh em có phong cách vẽ hoàn toàn khác nhau."
+        },
+        {
+          "english": "Are you totally sure that you sent the file?",
+          "vietnamese": "Bạn có hoàn toàn chắc chắn rằng bạn đã gửi tập tin đó không?"
+        }
+      ]
+    },
+    {
+      "word": "future",
+      "sentences": [
+        {
+          "english": "In the future, machines may do most of the dangerous work.",
+          "vietnamese": "Trong tương lai, máy móc có thể làm hầu hết những công việc nguy hiểm."
+        },
+        {
+          "english": "She is saving money for her future because she wants to learn abroad.",
+          "vietnamese": "Cô ấy đang tiết kiệm tiền cho tương lai vì cô ấy muốn đi học ở nước ngoài."
+        },
+        {
+          "english": "What career do you want to follow in the future?",
+          "vietnamese": "Bạn muốn theo đuổi sự nghiệp nào trong tương lai?"
+        },
+        {
+          "english": "Nobody can forecast the future of this industry.",
+          "vietnamese": "Không ai có thể dự đoán tương lai của ngành này."
+        },
+        {
+          "english": "Future customers will expect better and quicker services.",
+          "vietnamese": "Khách hàng tương lai sẽ mong đợi dịch vụ tốt hơn và nhanh hơn."
+        }
+      ]
+    },
+    {
+      "word": "outdated",
+      "sentences": [
+        {
+          "english": "This software is outdated and no longer safe.",
+          "vietnamese": "Phần mềm này đã lỗi thời và không còn an toàn nữa."
+        },
+        {
+          "english": "Our office computers are outdated, so the staff often complain.",
+          "vietnamese": "Máy tính ở văn phòng chúng tôi đã lỗi thời nên nhân viên thường phàn nàn."
+        },
+        {
+          "english": "He still uses an outdated map to navigate around the city.",
+          "vietnamese": "Anh ấy vẫn dùng một tấm bản đồ lỗi thời để tìm đường quanh thành phố."
+        },
+        {
+          "english": "Do not post outdated information on the company page.",
+          "vietnamese": "Đừng đăng thông tin lỗi thời lên trang của công ty."
+        },
+        {
+          "english": "That idea sounds outdated to most young users.",
+          "vietnamese": "Ý tưởng đó nghe có vẻ lỗi thời với phần lớn người dùng trẻ."
+        }
+      ]
+    },
+    {
+      "word": "select",
+      "sentences": [
+        {
+          "english": "Select the file you want to send.",
+          "vietnamese": "Hãy chọn tập tin bạn muốn gửi."
+        },
+        {
+          "english": "The coach selected five players for the final match.",
+          "vietnamese": "Huấn luyện viên đã chọn năm cầu thủ cho trận chung kết."
+        },
+        {
+          "english": "You can select your favourite song from this list.",
+          "vietnamese": "Bạn có thể chọn bài hát yêu thích của mình từ danh sách này."
+        },
+        {
+          "english": "She is selecting pictures for the exhibition next week.",
+          "vietnamese": "Cô ấy đang chọn tranh cho triển lãm tuần tới."
+        },
+        {
+          "english": "Which option did you select when you booked the flight?",
+          "vietnamese": "Bạn đã chọn lựa chọn nào khi đặt chuyến bay?"
+        }
+      ]
+    },
+    {
+      "word": "replace",
+      "sentences": [
+        {
+          "english": "I need to replace the battery because it does not last long.",
+          "vietnamese": "Tôi cần thay pin vì nó không dùng được lâu."
+        },
+        {
+          "english": "The mechanic replaced the wheel of my motorbike yesterday.",
+          "vietnamese": "Thợ máy đã thay bánh xe máy của tôi hôm qua."
+        },
+        {
+          "english": "Emails have replaced most paper letters in modern offices.",
+          "vietnamese": "Thư điện tử đã thay thế phần lớn thư giấy trong các văn phòng hiện đại."
+        },
+        {
+          "english": "Will cheap robots replace factory workers in ten years?",
+          "vietnamese": "Liệu robot giá rẻ có thay thế công nhân nhà máy trong mười năm nữa không?"
+        },
+        {
+          "english": "Please replace this old cable with a new and reliable one.",
+          "vietnamese": "Hãy thay sợi cáp cũ này bằng một sợi mới và đáng tin cậy."
+        }
+      ]
+    },
+    {
+      "word": "install",
+      "sentences": [
+        {
+          "english": "He installed a new air conditioner in the living room.",
+          "vietnamese": "Anh ấy đã lắp một chiếc máy lạnh mới trong phòng khách."
+        },
+        {
+          "english": "You should install the app from the official website.",
+          "vietnamese": "Bạn nên cài ứng dụng từ trang web chính thức."
+        },
+        {
+          "english": "The engineer is installing the security cameras today.",
+          "vietnamese": "Kỹ sư đang lắp đặt các camera an ninh hôm nay."
+        },
+        {
+          "english": "Do not install strange programs on your office computer.",
+          "vietnamese": "Đừng cài những chương trình lạ lên máy tính văn phòng của bạn."
+        },
+        {
+          "english": "How long did it take to install the new system?",
+          "vietnamese": "Mất bao lâu để cài đặt hệ thống mới vậy?"
+        }
+      ]
+    },
+    {
+      "word": "delete",
+      "sentences": [
+        {
+          "english": "I deleted all the old pictures to save space on my phone.",
+          "vietnamese": "Tôi đã xoá tất cả ảnh cũ để tiết kiệm dung lượng trên điện thoại."
+        },
+        {
+          "english": "She deleted her post after people started to complain.",
+          "vietnamese": "Cô ấy đã xoá bài đăng của mình sau khi mọi người bắt đầu phàn nàn."
+        },
+        {
+          "english": "Do not delete that file; it contains important numbers.",
+          "vietnamese": "Đừng xoá tập tin đó; nó chứa những con số quan trọng."
+        },
+        {
+          "english": "Can you delete my name from the guest list?",
+          "vietnamese": "Bạn có thể xoá tên tôi khỏi danh sách khách mời không?"
+        },
+        {
+          "english": "The website deletes inactive accounts every year.",
+          "vietnamese": "Trang web xoá các tài khoản không hoạt động mỗi năm."
+        }
+      ]
+    },
+    {
+      "word": "button",
+      "sentences": [
+        {
+          "english": "Press this button to turn on the machine.",
+          "vietnamese": "Nhấn nút này để bật máy."
+        },
+        {
+          "english": "I pressed the wrong button and lost all my work.",
+          "vietnamese": "Tôi đã bấm nhầm nút và mất hết bài làm của mình."
+        },
+        {
+          "english": "The button on the left opens the file menu.",
+          "vietnamese": "Nút bên trái mở trình đơn tập tin."
+        },
+        {
+          "english": "Click the green button to download the document.",
+          "vietnamese": "Bấm nút màu xanh lá để tải tài liệu xuống."
+        },
+        {
+          "english": "Which button should I press to increase the volume?",
+          "vietnamese": "Tôi nên bấm nút nào để tăng âm lượng?"
+        }
+      ]
+    },
+    {
+      "word": "power",
+      "sentences": [
+        {
+          "english": "The computer turned off because the power went out.",
+          "vietnamese": "Máy tính tắt vì mất điện."
+        },
+        {
+          "english": "This new washing machine uses less power and saves money.",
+          "vietnamese": "Chiếc máy giặt mới này dùng ít điện hơn và tiết kiệm tiền."
+        },
+        {
+          "english": "The storm cut the power in our whole neighbourhood.",
+          "vietnamese": "Cơn bão đã cắt điện ở cả khu phố chúng tôi."
+        },
+        {
+          "english": "Do you have a power bank for this long journey?",
+          "vietnamese": "Bạn có pin dự phòng cho chuyến đi dài này không?"
+        },
+        {
+          "english": "Solar power is becoming cheap and popular in many villages.",
+          "vietnamese": "Điện mặt trời đang trở nên rẻ và phổ biến ở nhiều ngôi làng."
+        }
+      ]
+    },
+    {
+      "word": "software",
+      "sentences": [
+        {
+          "english": "My father works as a software engineer.",
+          "vietnamese": "Bố tôi làm kỹ sư phần mềm."
+        },
+        {
+          "english": "We bought new software to manage the company accounts.",
+          "vietnamese": "Chúng tôi đã mua phần mềm mới để quản lý sổ sách của công ty."
+        },
+        {
+          "english": "This software is free, but it shows many advertisements.",
+          "vietnamese": "Phần mềm này miễn phí, nhưng nó hiện rất nhiều quảng cáo."
+        },
+        {
+          "english": "Is the software reliable enough for a big hospital?",
+          "vietnamese": "Phần mềm đó có đủ đáng tin cậy cho một bệnh viện lớn không?"
+        },
+        {
+          "english": "Our designer uses expensive software to create posters.",
+          "vietnamese": "Nhà thiết kế của chúng tôi dùng phần mềm đắt tiền để tạo áp phích."
+        }
+      ]
+    },
+    {
+      "word": "hardware",
+      "sentences": [
+        {
+          "english": "That shop repairs hardware and sells cheap laptops.",
+          "vietnamese": "Cửa hàng đó sửa phần cứng và bán laptop giá rẻ."
+        },
+        {
+          "english": "Good hardware helps a machine work quickly for many years.",
+          "vietnamese": "Phần cứng tốt giúp một chiếc máy chạy nhanh trong nhiều năm."
+        },
+        {
+          "english": "He knows a lot about hardware because he is learning engineering.",
+          "vietnamese": "Anh ấy biết rất nhiều về phần cứng vì anh ấy đang học ngành kỹ thuật."
+        },
+        {
+          "english": "The company wasted a lot of money on hardware last year.",
+          "vietnamese": "Công ty đã lãng phí rất nhiều tiền vào phần cứng năm ngoái."
+        },
+        {
+          "english": "Do you prefer to fix hardware or to design programs?",
+          "vietnamese": "Bạn thích sửa phần cứng hay thiết kế chương trình hơn?"
+        }
+      ]
+    },
+    {
+      "word": "printer",
+      "sentences": [
+        {
+          "english": "Our printer is broken, so we cannot print the documents.",
+          "vietnamese": "Máy in của chúng tôi bị hỏng nên chúng tôi không thể in tài liệu."
+        },
+        {
+          "english": "I bought a cheap printer for my small office.",
+          "vietnamese": "Tôi đã mua một chiếc máy in giá rẻ cho văn phòng nhỏ của mình."
+        },
+        {
+          "english": "The printer needs new ink before the exhibition starts.",
+          "vietnamese": "Máy in cần mực mới trước khi triển lãm bắt đầu."
+        },
+        {
+          "english": "Could you explain how to connect the printer to my laptop?",
+          "vietnamese": "Bạn có thể giải thích cách kết nối máy in với laptop của tôi không?"
+        },
+        {
+          "english": "Modern printers can also copy and scan pictures quickly.",
+          "vietnamese": "Máy in hiện đại cũng có thể sao chép và quét ảnh nhanh chóng."
+        }
+      ]
+    }
+  ]
+}

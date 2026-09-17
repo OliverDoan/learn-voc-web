@@ -1,0 +1,247 @@
+{
+  "unit": 32,
+  "deck": "Unit 32: Nghệ thuật và sáng tạo",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "artist",
+      "sentences": [
+        { "english": "My parents worry that if I become an artist, I will not have a stable career.", "vietnamese": "Bố mẹ tôi lo rằng nếu tôi trở thành nghệ sĩ, tôi sẽ không có sự nghiệp ổn định." },
+        { "english": "The young artist performed her new song at a local festival.", "vietnamese": "Nữ nghệ sĩ trẻ đã biểu diễn bài hát mới của cô ấy tại một lễ hội địa phương." },
+        { "english": "Have you met the artist who designed this beautiful building?", "vietnamese": "Bạn đã gặp người nghệ sĩ thiết kế toà nhà đẹp này chưa?" },
+        { "english": "Many artists move to the capital to find better opportunities.", "vietnamese": "Nhiều nghệ sĩ chuyển đến thủ đô để tìm những cơ hội tốt hơn." },
+        { "english": "My cousin will become a great artist if he trains hard every day.", "vietnamese": "Anh họ tôi sẽ trở thành một nghệ sĩ giỏi nếu anh ấy luyện tập chăm chỉ mỗi ngày." }
+      ]
+    },
+    {
+      "word": "well-known",
+      "sentences": [
+        { "english": "This restaurant is well-known for its delicious seafood.", "vietnamese": "Nhà hàng này nổi tiếng với món hải sản ngon." },
+        { "english": "This pagoda is well-known among tourists who love old architecture.", "vietnamese": "Ngôi chùa này nổi tiếng với những du khách yêu kiến trúc cổ." },
+        { "english": "She became well-known after her song appeared on a popular radio show.", "vietnamese": "Cô ấy trở nên nổi tiếng sau khi bài hát của cô xuất hiện trên một chương trình radio phổ biến." },
+        { "english": "Is that singer well-known in your hometown?", "vietnamese": "Ca sĩ đó có nổi tiếng ở quê bạn không?" },
+        { "english": "The area was not well-known until a famous film maker shot a movie there.", "vietnamese": "Khu vực này không nổi tiếng cho đến khi một nhà làm phim danh tiếng quay một bộ phim ở đó." }
+      ]
+    },
+    {
+      "word": "create",
+      "sentences": [
+        { "english": "She wants to create a website for her family's company.", "vietnamese": "Cô ấy muốn tạo ra một trang web cho công ty của gia đình." },
+        { "english": "The children created a colourful poster for their school festival.", "vietnamese": "Bọn trẻ đã tạo ra một tấm áp phích nhiều màu cho lễ hội của trường." },
+        { "english": "Good lighting can create a warm atmosphere in a small room.", "vietnamese": "Ánh sáng tốt có thể tạo ra một bầu không khí ấm áp trong một căn phòng nhỏ." },
+        { "english": "He is creating a new menu with fresh seafood for the restaurant.", "vietnamese": "Anh ấy đang tạo ra một thực đơn mới với hải sản tươi cho nhà hàng." },
+        { "english": "Do not create too much rubbish when you travel to the island.", "vietnamese": "Đừng tạo ra quá nhiều rác khi bạn du lịch đến hòn đảo." }
+      ]
+    },
+    {
+      "word": "photography",
+      "sentences": [
+        { "english": "Photography became my favourite hobby after that trip to the island.", "vietnamese": "Nhiếp ảnh trở thành sở thích yêu thích của tôi sau chuyến đi đến hòn đảo đó." },
+        { "english": "My brother studies photography at a college in the city centre.", "vietnamese": "Anh trai tôi học nhiếp ảnh tại một trường cao đẳng ở trung tâm thành phố." },
+        { "english": "Photography is a useful skill for anyone who loves travelling.", "vietnamese": "Nhiếp ảnh là một kỹ năng hữu ích cho bất kỳ ai yêu thích du lịch." },
+        { "english": "She has saved a lot of money for photography equipment this year.", "vietnamese": "Cô ấy đã tiết kiệm rất nhiều tiền cho thiết bị nhiếp ảnh trong năm nay." },
+        { "english": "Will you join the photography club with me next term?", "vietnamese": "Bạn sẽ tham gia câu lạc bộ nhiếp ảnh với tôi vào học kỳ tới chứ?" }
+      ]
+    },
+    {
+      "word": "drawing",
+      "sentences": [
+        { "english": "His drawing of the old bridge won first prize.", "vietnamese": "Bức vẽ cây cầu cũ của anh ấy đã giành giải nhất." },
+        { "english": "I keep my old drawings in a box under the bookshelf.", "vietnamese": "Tôi giữ những bức vẽ cũ của mình trong một cái hộp dưới kệ sách." },
+        { "english": "The teacher showed us a drawing of a buffalo in the rice field.", "vietnamese": "Giáo viên đã cho chúng tôi xem một bức vẽ con trâu trên cánh đồng lúa." },
+        { "english": "Her drawing of the waterfall is hanging on the wall of our flat.", "vietnamese": "Bức vẽ thác nước của cô ấy đang treo trên tường căn hộ của chúng tôi." },
+        { "english": "Can you send me that drawing before the gallery opens tomorrow?", "vietnamese": "Bạn có thể gửi cho tôi bức vẽ đó trước khi phòng trưng bày mở cửa vào ngày mai không?" }
+      ]
+    },
+    {
+      "word": "frequently",
+      "sentences": [
+        { "english": "I frequently visit the local market to buy fresh vegetables.", "vietnamese": "Tôi thường xuyên ghé chợ địa phương để mua rau tươi." },
+        { "english": "He frequently travels abroad for his job as a reporter.", "vietnamese": "Anh ấy thường xuyên đi nước ngoài cho công việc phóng viên của mình." },
+        { "english": "We frequently listen to classical music while we are cooking dinner.", "vietnamese": "Chúng tôi thường xuyên nghe nhạc cổ điển trong khi nấu bữa tối." },
+        { "english": "The traffic here frequently becomes heavy after six in the evening.", "vietnamese": "Giao thông ở đây thường xuyên trở nên đông đúc sau sáu giờ tối." },
+        { "english": "Did your teacher frequently remind you about the assignment?", "vietnamese": "Giáo viên của bạn có thường xuyên nhắc bạn về bài tập không?" }
+      ]
+    },
+    {
+      "word": "painter",
+      "sentences": [
+        { "english": "The painter used bright colours to describe a peaceful village.", "vietnamese": "Người hoạ sĩ dùng màu sắc tươi sáng để miêu tả một ngôi làng yên bình." },
+        { "english": "A young painter is selling her work near the lake every Sunday.", "vietnamese": "Một nữ hoạ sĩ trẻ đang bán tác phẩm của cô ấy gần hồ vào mỗi Chủ nhật." },
+        { "english": "The painter has lived in this quiet alley for twenty years.", "vietnamese": "Người hoạ sĩ đã sống trong con hẻm yên tĩnh này hai mươi năm." },
+        { "english": "Do you know any painter who can teach my daughter?", "vietnamese": "Bạn có biết hoạ sĩ nào có thể dạy con gái tôi không?" },
+        { "english": "Painters often use natural light to make their colours look fresh.", "vietnamese": "Các hoạ sĩ thường dùng ánh sáng tự nhiên để làm màu sắc của họ trông tươi tắn." }
+      ]
+    },
+    {
+      "word": "artistic",
+      "sentences": [
+        { "english": "Her artistic skill improved quickly after that course.", "vietnamese": "Kỹ năng nghệ thuật của cô ấy tiến bộ nhanh sau khoá học đó." },
+        { "english": "This district is full of artistic cafes and small galleries.", "vietnamese": "Quận này đầy những quán cà phê nghệ thuật và các phòng trưng bày nhỏ." },
+        { "english": "He has an artistic mind, so he notices details that others miss.", "vietnamese": "Anh ấy có một tâm hồn nghệ thuật, nên anh ấy để ý những chi tiết mà người khác bỏ qua." },
+        { "english": "The hotel reception was decorated in a very artistic style.", "vietnamese": "Quầy lễ tân khách sạn được trang trí theo một phong cách rất nghệ thuật." },
+        { "english": "Is your sister artistic enough to design the wedding invitations?", "vietnamese": "Chị gái bạn có đủ khiếu nghệ thuật để thiết kế thiệp cưới không?" }
+      ]
+    },
+    {
+      "word": "painting",
+      "sentences": [
+        { "english": "That painting is expensive because it is very old.", "vietnamese": "Bức tranh đó đắt tiền vì nó rất cũ." },
+        { "english": "She bought a small painting at the market last weekend.", "vietnamese": "Cô ấy đã mua một bức tranh nhỏ ở chợ cuối tuần trước." },
+        { "english": "The paintings in this temple describe an old war.", "vietnamese": "Những bức tranh trong ngôi đền này miêu tả một cuộc chiến xưa." },
+        { "english": "I am learning painting because it keeps my mind calm after a stressful day.", "vietnamese": "Tôi đang học hội hoạ vì nó giữ cho tâm trí tôi bình tĩnh sau một ngày căng thẳng." },
+        { "english": "Which painting do you like best in this room?", "vietnamese": "Bạn thích bức tranh nào nhất trong căn phòng này?" }
+      ]
+    },
+    {
+      "word": "personally",
+      "sentences": [
+        { "english": "Personally, I prefer a quiet holiday in the mountains.", "vietnamese": "Cá nhân tôi thích một kỳ nghỉ yên tĩnh trên núi hơn." },
+        { "english": "Personally, I think this flat is too pricey for a student.", "vietnamese": "Cá nhân tôi thấy căn hộ này quá đắt đỏ đối với một sinh viên." },
+        { "english": "Personally, I do not enjoy loud music at a wedding party.", "vietnamese": "Cá nhân tôi không thích nhạc ồn ào ở một bữa tiệc cưới." },
+        { "english": "The manager personally called every customer to say sorry.", "vietnamese": "Người quản lý đã đích thân gọi cho từng khách hàng để nói lời xin lỗi." },
+        { "english": "Personally, I have never tried durian, but my friends love it.", "vietnamese": "Cá nhân tôi chưa bao giờ thử sầu riêng, nhưng bạn bè tôi rất thích nó." }
+      ]
+    },
+    {
+      "word": "shout",
+      "sentences": [
+        { "english": "Do not shout in the library; other guests need to concentrate.", "vietnamese": "Đừng hét trong thư viện; những vị khách khác cần tập trung." },
+        { "english": "The coach shouted at the players when they lost the final.", "vietnamese": "Huấn luyện viên đã la lớn với các cầu thủ khi họ thua trận chung kết." },
+        { "english": "People started to shout when the singer appeared on the stage.", "vietnamese": "Mọi người bắt đầu hét lên khi ca sĩ xuất hiện trên sân khấu." },
+        { "english": "Please do not shout; the baby is trying to sleep.", "vietnamese": "Làm ơn đừng hét; em bé đang cố ngủ." },
+        { "english": "Drivers often shout and honk when the traffic is bad.", "vietnamese": "Các tài xế thường la lớn và bấm còi khi giao thông tệ." }
+      ]
+    },
+    {
+      "word": "immerse",
+      "sentences": [
+        { "english": "I want to immerse myself in the local culture during this journey.", "vietnamese": "Tôi muốn hoà mình vào văn hoá địa phương trong chuyến đi này." },
+        { "english": "She immersed herself in books during the long rainy season.", "vietnamese": "Cô ấy đã đắm chìm trong sách suốt mùa mưa dài." },
+        { "english": "If you want to improve, immerse yourself in English conversations every day.", "vietnamese": "Nếu bạn muốn tiến bộ, hãy đắm mình vào các cuộc hội thoại tiếng Anh mỗi ngày." },
+        { "english": "The students immerse themselves in the history of the old town.", "vietnamese": "Các sinh viên đắm mình vào lịch sử của thị trấn cổ." },
+        { "english": "He is immersing himself in a new hobby to escape daily stress.", "vietnamese": "Anh ấy đang đắm chìm vào một sở thích mới để thoát khỏi áp lực hằng ngày." }
+      ]
+    },
+    {
+      "word": "technique",
+      "sentences": [
+        { "english": "The chef taught us a simple technique to cook rice.", "vietnamese": "Đầu bếp đã dạy chúng tôi một kỹ thuật đơn giản để nấu cơm." },
+        { "english": "This breathing technique helps me stay calm before an interview.", "vietnamese": "Kỹ thuật thở này giúp tôi giữ bình tĩnh trước một buổi phỏng vấn." },
+        { "english": "The painter explained his technique to a group of curious visitors.", "vietnamese": "Người hoạ sĩ đã giải thích kỹ thuật của mình cho một nhóm khách tham quan tò mò." },
+        { "english": "Which technique did the coach use to train the young athletes?", "vietnamese": "Huấn luyện viên đã dùng kỹ thuật nào để huấn luyện các vận động viên trẻ?" },
+        { "english": "New techniques have made this traditional handicraft much easier.", "vietnamese": "Những kỹ thuật mới đã làm cho nghề thủ công truyền thống này dễ hơn nhiều." }
+      ]
+    },
+    {
+      "word": "inventive",
+      "sentences": [
+        { "english": "An inventive design can turn a cheap material into something lovely.", "vietnamese": "Một thiết kế sáng tạo có thể biến vật liệu rẻ tiền thành thứ gì đó đáng yêu." },
+        { "english": "My nephew is very inventive; he made a toy boat from bamboo.", "vietnamese": "Cháu trai tôi rất sáng tạo; nó đã làm một chiếc thuyền đồ chơi từ tre." },
+        { "english": "The company needs an inventive manager to solve this problem.", "vietnamese": "Công ty cần một người quản lý sáng tạo để giải quyết vấn đề này." },
+        { "english": "Her inventive recipe uses lemon and fresh herbs instead of sugar.", "vietnamese": "Công thức sáng tạo của cô ấy dùng chanh và rau thơm tươi thay cho đường." },
+        { "english": "Were the students inventive enough to win the science contest?", "vietnamese": "Các học sinh có đủ sáng tạo để thắng cuộc thi khoa học không?" }
+      ]
+    },
+    {
+      "word": "value",
+      "sentences": [
+        { "english": "The real value of this antique bowl is hard to guess.", "vietnamese": "Giá trị thật của chiếc bát cổ này rất khó đoán." },
+        { "english": "The value of this property has increased since the bridge opened.", "vietnamese": "Giá trị của bất động sản này đã tăng kể từ khi cây cầu được mở." },
+        { "english": "Many young people do not understand the value of a good night of sleep.", "vietnamese": "Nhiều người trẻ không hiểu giá trị của một giấc ngủ ngon." },
+        { "english": "This old picture has little value, but it holds a lovely memory.", "vietnamese": "Bức ảnh cũ này có ít giá trị, nhưng nó chứa một kỷ niệm đáng yêu." },
+        { "english": "Will the value of the house fall if the neighbourhood becomes noisy?", "vietnamese": "Giá trị của ngôi nhà có giảm không nếu khu phố trở nên ồn ào?" }
+      ]
+    },
+    {
+      "word": "literature",
+      "sentences": [
+        { "english": "She studies English literature at a university abroad.", "vietnamese": "Cô ấy học văn học Anh tại một trường đại học ở nước ngoài." },
+        { "english": "Vietnamese literature often describes the quiet countryside.", "vietnamese": "Văn học Việt Nam thường miêu tả vùng quê yên tĩnh." },
+        { "english": "I have read very little literature since I started my new career.", "vietnamese": "Tôi đã đọc rất ít văn học kể từ khi tôi bắt đầu sự nghiệp mới." },
+        { "english": "Literature and history were my favourite subjects at secondary school.", "vietnamese": "Văn học và lịch sử là những môn yêu thích của tôi ở trường trung học cơ sở." },
+        { "english": "Does your course include modern literature from other cultures?", "vietnamese": "Khoá học của bạn có bao gồm văn học hiện đại từ các nền văn hoá khác không?" }
+      ]
+    },
+    {
+      "word": "fantastic",
+      "sentences": [
+        { "english": "The scenery on the coast was absolutely fantastic.", "vietnamese": "Cảnh vật ở bờ biển thật sự tuyệt vời." },
+        { "english": "We had a fantastic time at the music festival last summer.", "vietnamese": "Chúng tôi đã có một khoảng thời gian tuyệt vời ở lễ hội âm nhạc mùa hè năm ngoái." },
+        { "english": "That hotel offers fantastic service at a reasonable price.", "vietnamese": "Khách sạn đó cung cấp dịch vụ tuyệt vời với một mức giá hợp lý." },
+        { "english": "The guide is telling us a fantastic story about the hidden cave.", "vietnamese": "Người hướng dẫn đang kể cho chúng tôi một câu chuyện tuyệt vời về hang động bí ẩn." },
+        { "english": "Is the view from the balcony really as fantastic as people say?", "vietnamese": "Quang cảnh từ ban công có thật sự tuyệt vời như mọi người nói không?" }
+      ]
+    },
+    {
+      "word": "artwork",
+      "sentences": [
+        { "english": "His artwork is displayed in a museum in the capital.", "vietnamese": "Tác phẩm nghệ thuật của anh ấy được trưng bày trong bảo tàng ở thủ đô." },
+        { "english": "She sells her artwork online to customers around the world.", "vietnamese": "Cô ấy bán tác phẩm nghệ thuật của mình trực tuyến cho khách hàng khắp thế giới." },
+        { "english": "The artworks in this hall were made by local students.", "vietnamese": "Những tác phẩm nghệ thuật trong sảnh này do các học sinh địa phương làm ra." },
+        { "english": "The museum is preparing a quiet room for the new artwork.", "vietnamese": "Bảo tàng đang chuẩn bị một căn phòng yên tĩnh cho tác phẩm nghệ thuật mới." },
+        { "english": "Do not touch the artwork, or the security guard will be angry.", "vietnamese": "Đừng chạm vào tác phẩm nghệ thuật, nếu không nhân viên an ninh sẽ tức giận." }
+      ]
+    },
+    {
+      "word": "theatre",
+      "sentences": [
+        { "english": "The theatre is quite far from my hometown, so we take a train.", "vietnamese": "Nhà hát khá xa quê tôi, nên chúng tôi đi tàu." },
+        { "english": "We booked two seats at the theatre for the final show.", "vietnamese": "Chúng tôi đã đặt hai ghế ở nhà hát cho buổi diễn cuối cùng." },
+        { "english": "The old theatre near the square has been repaired beautifully.", "vietnamese": "Nhà hát cũ gần quảng trường đã được sửa chữa rất đẹp." },
+        { "english": "Her dream is to sing in a big theatre in London one day.", "vietnamese": "Ước mơ của cô ấy là một ngày nào đó được hát trong một nhà hát lớn ở London." },
+        { "english": "Are there any theatres in your district?", "vietnamese": "Có nhà hát nào ở quận của bạn không?" }
+      ]
+    },
+    {
+      "word": "sculpture",
+      "sentences": [
+        { "english": "This stone sculpture was made by a local handicraft group.", "vietnamese": "Bức tượng đá này do một nhóm thủ công mỹ nghệ địa phương làm ra." },
+        { "english": "A huge sculpture stands in the middle of the public park.", "vietnamese": "Một tác phẩm điêu khắc khổng lồ đứng ở giữa công viên công cộng." },
+        { "english": "The sculptures around the lake attract many visitors at the weekend.", "vietnamese": "Những tác phẩm điêu khắc quanh hồ thu hút nhiều khách tham quan vào cuối tuần." },
+        { "english": "He is making a sculpture from old motorbike parts.", "vietnamese": "Anh ấy đang làm một tác phẩm điêu khắc từ các bộ phận xe máy cũ." },
+        { "english": "Have you seen the wooden sculpture inside the temple?", "vietnamese": "Bạn đã thấy bức tượng gỗ bên trong ngôi đền chưa?" }
+      ]
+    },
+    {
+      "word": "remember",
+      "sentences": [
+        { "english": "I cannot remember the address of that small restaurant.", "vietnamese": "Tôi không thể nhớ địa chỉ của nhà hàng nhỏ đó." },
+        { "english": "Remember to bring your passport when you go abroad.", "vietnamese": "Hãy nhớ mang hộ chiếu khi bạn đi nước ngoài." },
+        { "english": "She still remembers the moment she first heard that catchy tune.", "vietnamese": "Cô ấy vẫn nhớ khoảnh khắc lần đầu nghe giai điệu bắt tai đó." },
+        { "english": "I will always remember the guide who showed us the hidden bay.", "vietnamese": "Tôi sẽ luôn nhớ người hướng dẫn đã chỉ cho chúng tôi vịnh ẩn giấu." },
+        { "english": "Do you remember how much the fare was last year?", "vietnamese": "Bạn có nhớ giá vé năm ngoái là bao nhiêu không?" }
+      ]
+    },
+    {
+      "word": "concert",
+      "sentences": [
+        { "english": "The musician invited us to his concert next weekend.", "vietnamese": "Nhạc sĩ đã mời chúng tôi đến buổi hoà nhạc của anh ấy vào cuối tuần tới." },
+        { "english": "We arrived late at the concert because the traffic was terrible.", "vietnamese": "Chúng tôi đến buổi hoà nhạc muộn vì giao thông rất tệ." },
+        { "english": "The band will play a live concert at the stadium next month.", "vietnamese": "Ban nhạc sẽ chơi một buổi hoà nhạc trực tiếp ở sân vận động vào tháng tới." },
+        { "english": "Tickets for this concert are expensive, but the seats are comfortable.", "vietnamese": "Vé cho buổi hoà nhạc này đắt, nhưng chỗ ngồi thì thoải mái." },
+        { "english": "Have you ever been to a classical concert in the capital?", "vietnamese": "Bạn đã bao giờ đến một buổi hoà nhạc cổ điển ở thủ đô chưa?" }
+      ]
+    },
+    {
+      "word": "exhibition",
+      "sentences": [
+        { "english": "The exhibition attracts many tourists every season.", "vietnamese": "Triển lãm thu hút nhiều du khách mỗi mùa." },
+        { "english": "We visited a photography exhibition in the city centre yesterday.", "vietnamese": "Hôm qua chúng tôi đã đến thăm một triển lãm nhiếp ảnh ở trung tâm thành phố." },
+        { "english": "The exhibition will open next Monday at ten in the morning.", "vietnamese": "Triển lãm sẽ mở cửa vào thứ Hai tới lúc mười giờ sáng." },
+        { "english": "She is preparing her first exhibition after five years of hard work.", "vietnamese": "Cô ấy đang chuẩn bị triển lãm đầu tiên của mình sau năm năm làm việc vất vả." },
+        { "english": "Is the entrance to the exhibition free for students?", "vietnamese": "Lối vào triển lãm có miễn phí cho sinh viên không?" }
+      ]
+    },
+    {
+      "word": "beauty",
+      "sentences": [
+        { "english": "The beauty of this valley surprises every visitor.", "vietnamese": "Vẻ đẹp của thung lũng này khiến mọi du khách ngạc nhiên." },
+        { "english": "The beauty of the bay is hard to describe in words.", "vietnamese": "Vẻ đẹp của vịnh rất khó miêu tả bằng lời." },
+        { "english": "Many poems celebrate the beauty of the rainy season in the north.", "vietnamese": "Nhiều bài thơ ca ngợi vẻ đẹp của mùa mưa ở miền bắc." },
+        { "english": "She has discovered the quiet beauty of a small fishing village.", "vietnamese": "Cô ấy đã khám phá ra vẻ đẹp yên tĩnh của một ngôi làng chài nhỏ." },
+        { "english": "Do not let the pollution destroy the natural beauty of this island.", "vietnamese": "Đừng để ô nhiễm phá huỷ vẻ đẹp tự nhiên của hòn đảo này." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,607 @@
+{
+  "unit": 34,
+  "deck": "Unit 34: Mạng xã hội",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "socially",
+      "sentences": [
+        {
+          "english": "The coffee shop is where people can meet socially after work.",
+          "vietnamese": "Quán cà phê là nơi mọi người có thể gặp gỡ, giao lưu sau giờ làm."
+        },
+        {
+          "english": "Social media helps shy people communicate socially without feeling nervous.",
+          "vietnamese": "Mạng xã hội giúp những người nhút nhát giao tiếp về mặt xã hội mà không thấy lo lắng."
+        },
+        {
+          "english": "My brother has become more active socially since he joined a gym.",
+          "vietnamese": "Anh trai tôi đã trở nên năng động hơn về mặt giao tiếp xã hội từ khi anh ấy tham gia một phòng gym."
+        },
+        {
+          "english": "Last year our company arranged trips so employees could mix socially.",
+          "vietnamese": "Năm ngoái công ty chúng tôi đã sắp xếp các chuyến đi để nhân viên có thể hoà nhập với nhau về mặt xã hội."
+        },
+        {
+          "english": "Are you socially confident when you meet a group of foreigners?",
+          "vietnamese": "Bạn có tự tin về mặt giao tiếp xã hội khi gặp một nhóm người nước ngoài không?"
+        }
+      ]
+    },
+    {
+      "word": "user",
+      "sentences": [
+        {
+          "english": "Every user must create a strong password before using the service.",
+          "vietnamese": "Mọi người dùng phải tạo một mật khẩu mạnh trước khi sử dụng dịch vụ."
+        },
+        {
+          "english": "The app lost many users after the price increased last month.",
+          "vietnamese": "Ứng dụng đã mất nhiều người dùng sau khi giá tăng vào tháng trước."
+        },
+        {
+          "english": "Are you a heavy user of that shopping app?",
+          "vietnamese": "Bạn có phải là một người dùng nặng đô của ứng dụng mua sắm đó không?"
+        },
+        {
+          "english": "Users often complain when a company changes its design suddenly.",
+          "vietnamese": "Người dùng thường phàn nàn khi một công ty thay đổi thiết kế của nó một cách đột ngột."
+        },
+        {
+          "english": "Next year this app will reach a million users across the capital.",
+          "vietnamese": "Năm tới ứng dụng này sẽ đạt một triệu người dùng khắp thủ đô."
+        }
+      ]
+    },
+    {
+      "word": "page",
+      "sentences": [
+        {
+          "english": "She runs a cooking page and shares a new recipe every week.",
+          "vietnamese": "Cô ấy quản lý một trang nấu ăn và chia sẻ công thức mới mỗi tuần."
+        },
+        {
+          "english": "I opened the page but the photos loaded very slowly.",
+          "vietnamese": "Tôi đã mở trang đó nhưng ảnh tải rất chậm."
+        },
+        {
+          "english": "Their fan page will announce the winner tomorrow morning.",
+          "vietnamese": "Trang người hâm mộ của họ sẽ công bố người thắng cuộc vào sáng mai."
+        },
+        {
+          "english": "Do not copy pictures from another page without permission.",
+          "vietnamese": "Đừng sao chép hình ảnh từ một trang khác mà không có sự cho phép."
+        },
+        {
+          "english": "The restaurant page has attracted thousands of customers this month.",
+          "vietnamese": "Trang của nhà hàng đã thu hút hàng nghìn khách hàng trong tháng này."
+        }
+      ]
+    },
+    {
+      "word": "attention",
+      "sentences": [
+        {
+          "english": "The singer paid no attention to the noisy crowd behind her.",
+          "vietnamese": "Nữ ca sĩ không hề chú ý đến đám đông ồn ào phía sau cô ấy."
+        },
+        {
+          "english": "Short videos attract attention more quickly than long stories.",
+          "vietnamese": "Video ngắn thu hút sự chú ý nhanh hơn những câu chuyện dài."
+        },
+        {
+          "english": "Please pay attention to the teacher during the final exam.",
+          "vietnamese": "Hãy chú ý đến giáo viên trong kỳ thi cuối cùng."
+        },
+        {
+          "english": "Her painting drew a lot of attention at the exhibition.",
+          "vietnamese": "Bức tranh của cô ấy đã thu về rất nhiều sự chú ý tại triển lãm."
+        },
+        {
+          "english": "Are you giving enough attention to your health these days?",
+          "vietnamese": "Dạo này bạn có đang dành đủ sự chú ý cho sức khoẻ của mình không?"
+        }
+      ]
+    },
+    {
+      "word": "blogger",
+      "sentences": [
+        {
+          "english": "A travel blogger visited my hometown and wrote about the local food.",
+          "vietnamese": "Một blogger du lịch đã ghé quê tôi và viết về món ăn địa phương."
+        },
+        {
+          "english": "A food blogger recommended this restaurant for its spicy hotpot.",
+          "vietnamese": "Một blogger ẩm thực đã giới thiệu nhà hàng này vì món lẩu cay của nó."
+        },
+        {
+          "english": "Many bloggers work as freelancers and choose their own timetable.",
+          "vietnamese": "Nhiều blogger làm việc như những người làm tự do và tự chọn thời gian biểu của mình."
+        },
+        {
+          "english": "She wants to become a beauty blogger after she finishes university.",
+          "vietnamese": "Cô ấy muốn trở thành một blogger làm đẹp sau khi cô ấy học xong đại học."
+        },
+        {
+          "english": "Is that blogger reliable enough to follow for health advice?",
+          "vietnamese": "Blogger đó có đủ đáng tin cậy để theo dõi về lời khuyên sức khoẻ không?"
+        }
+      ]
+    },
+    {
+      "word": "attract",
+      "sentences": [
+        {
+          "english": "Beautiful photos attract more people to your page.",
+          "vietnamese": "Những bức ảnh đẹp thu hút nhiều người đến trang của bạn hơn."
+        },
+        {
+          "english": "The festival attracted thousands of tourists to our town last week.",
+          "vietnamese": "Lễ hội đã thu hút hàng nghìn khách du lịch đến thị trấn của chúng tôi tuần trước."
+        },
+        {
+          "english": "Good lighting will attract more customers to your new shop.",
+          "vietnamese": "Ánh sáng tốt sẽ thu hút nhiều khách hàng hơn đến cửa hàng mới của bạn."
+        },
+        {
+          "english": "Loud music does not attract every listener in the city.",
+          "vietnamese": "Nhạc ồn ào không thu hút mọi người nghe trong thành phố."
+        },
+        {
+          "english": "His paintings have attracted collectors from many countries.",
+          "vietnamese": "Những bức tranh của anh ấy đã thu hút các nhà sưu tầm từ nhiều quốc gia."
+        }
+      ]
+    },
+    {
+      "word": "viral",
+      "sentences": [
+        {
+          "english": "His dance video went viral and reached a million views overnight.",
+          "vietnamese": "Video nhảy của anh ấy lan truyền chóng mặt và đạt một triệu lượt xem chỉ sau một đêm."
+        },
+        {
+          "english": "The charity campaign went viral after a celebrity shared it.",
+          "vietnamese": "Chiến dịch từ thiện đã lan truyền mạnh sau khi một người nổi tiếng chia sẻ nó."
+        },
+        {
+          "english": "Nobody knows why some cartoons become viral so quickly.",
+          "vietnamese": "Không ai biết tại sao một số phim hoạt hình lại gây sốt nhanh đến vậy."
+        },
+        {
+          "english": "If the song is catchy, it may go viral within a week.",
+          "vietnamese": "Nếu bài hát bắt tai, nó có thể gây sốt trong vòng một tuần."
+        },
+        {
+          "english": "Her recipe for crispy pork has become viral among young cooks.",
+          "vietnamese": "Công thức thịt lợn giòn của cô ấy đã gây sốt trong giới đầu bếp trẻ."
+        }
+      ]
+    },
+    {
+      "word": "advertisement",
+      "sentences": [
+        {
+          "english": "This advertisement promises a cheap flight to a warm island.",
+          "vietnamese": "Quảng cáo này hứa hẹn một chuyến bay giá rẻ đến một hòn đảo ấm áp."
+        },
+        {
+          "english": "I skipped the advertisement because the volume was too loud.",
+          "vietnamese": "Tôi đã bỏ qua quảng cáo đó vì âm lượng quá to."
+        },
+        {
+          "english": "Advertisements on that page are not always honest about the price.",
+          "vietnamese": "Các quảng cáo trên trang đó không phải lúc nào cũng trung thực về giá."
+        },
+        {
+          "english": "Will you put an advertisement in the local newspaper next week?",
+          "vietnamese": "Tuần tới bạn có đăng một quảng cáo lên báo địa phương không?"
+        },
+        {
+          "english": "The company spends a lot on advertisements before every festival.",
+          "vietnamese": "Công ty chi rất nhiều cho quảng cáo trước mỗi dịp lễ hội."
+        }
+      ]
+    },
+    {
+      "word": "reliable",
+      "sentences": [
+        {
+          "english": "My old motorbike is still reliable after ten years.",
+          "vietnamese": "Chiếc xe máy cũ của tôi vẫn đáng tin cậy sau mười năm."
+        },
+        {
+          "english": "We need a reliable mechanic to fix the engine today.",
+          "vietnamese": "Chúng tôi cần một thợ máy đáng tin cậy để sửa động cơ hôm nay."
+        },
+        {
+          "english": "Is this website reliable enough for booking a hotel room?",
+          "vietnamese": "Trang web này có đủ đáng tin cậy để đặt một phòng khách sạn không?"
+        },
+        {
+          "english": "The weather forecast was not reliable during the typhoon season.",
+          "vietnamese": "Dự báo thời tiết đã không đáng tin cậy trong mùa bão."
+        },
+        {
+          "english": "She has become a reliable captain of our badminton team.",
+          "vietnamese": "Cô ấy đã trở thành một đội trưởng đáng tin cậy của đội cầu lông chúng tôi."
+        }
+      ]
+    },
+    {
+      "word": "profitable",
+      "sentences": [
+        {
+          "english": "Selling clothes online became profitable after her page got popular.",
+          "vietnamese": "Việc bán quần áo online trở nên sinh lời sau khi trang của cô ấy nổi tiếng."
+        },
+        {
+          "english": "The small coffee shop was not profitable in its first year.",
+          "vietnamese": "Quán cà phê nhỏ đã không sinh lời trong năm đầu tiên của nó."
+        },
+        {
+          "english": "Will a homestay near the lake be profitable next summer?",
+          "vietnamese": "Một homestay gần hồ có sinh lời vào mùa hè tới không?"
+        },
+        {
+          "english": "Growing organic vegetables has become profitable for local farmers.",
+          "vietnamese": "Việc trồng rau hữu cơ đã trở nên sinh lời với nông dân địa phương."
+        },
+        {
+          "english": "Her handicraft business is profitable because tourists love the design.",
+          "vietnamese": "Việc kinh doanh đồ thủ công của cô ấy sinh lời vì khách du lịch thích thiết kế đó."
+        }
+      ]
+    },
+    {
+      "word": "website",
+      "sentences": [
+        {
+          "english": "You can book a room on their website in a few minutes.",
+          "vietnamese": "Bạn có thể đặt phòng trên trang web của họ chỉ trong vài phút."
+        },
+        {
+          "english": "Our school website announces the exam timetable every term.",
+          "vietnamese": "Trang web của trường chúng tôi công bố lịch thi mỗi học kỳ."
+        },
+        {
+          "english": "I downloaded the application form from the company website.",
+          "vietnamese": "Tôi đã tải mẫu đơn xin việc xuống từ trang web của công ty."
+        },
+        {
+          "english": "Do not put your address on a strange website.",
+          "vietnamese": "Đừng đặt địa chỉ của bạn lên một trang web lạ."
+        },
+        {
+          "english": "They are building a new website for their tour company.",
+          "vietnamese": "Họ đang xây dựng một trang web mới cho công ty du lịch của họ."
+        }
+      ]
+    },
+    {
+      "word": "trend",
+      "sentences": [
+        {
+          "english": "Young people follow a new trend on social media every month.",
+          "vietnamese": "Giới trẻ chạy theo một trào lưu mới trên mạng xã hội mỗi tháng."
+        },
+        {
+          "english": "Wearing a traditional dress at weddings became a trend again.",
+          "vietnamese": "Việc mặc trang phục truyền thống trong đám cưới lại trở thành một trào lưu."
+        },
+        {
+          "english": "Eating less sugar is a strong trend among office workers now.",
+          "vietnamese": "Ăn ít đường là một xu hướng mạnh mẽ trong giới nhân viên văn phòng hiện nay."
+        },
+        {
+          "english": "Have you noticed the new trends in street photography?",
+          "vietnamese": "Bạn có để ý những xu hướng mới trong nhiếp ảnh đường phố không?"
+        },
+        {
+          "english": "This trend will disappear before the next festival.",
+          "vietnamese": "Trào lưu này sẽ biến mất trước dịp lễ hội tới."
+        }
+      ]
+    },
+    {
+      "word": "post",
+      "sentences": [
+        {
+          "english": "She posted a photo of the waterfall on her page yesterday.",
+          "vietnamese": "Hôm qua cô ấy đã đăng một bức ảnh thác nước lên trang của mình."
+        },
+        {
+          "english": "His post about the accident received hundreds of comments.",
+          "vietnamese": "Bài đăng của anh ấy về vụ tai nạn đã nhận được hàng trăm bình luận."
+        },
+        {
+          "english": "Do not post personal information such as your phone number.",
+          "vietnamese": "Đừng đăng thông tin cá nhân như số điện thoại của bạn."
+        },
+        {
+          "english": "I will post the recipe after I try it at home.",
+          "vietnamese": "Tôi sẽ đăng công thức sau khi tôi thử nó ở nhà."
+        },
+        {
+          "english": "Every post on that page makes me remember my hometown.",
+          "vietnamese": "Mỗi bài đăng trên trang đó khiến tôi nhớ về quê hương mình."
+        }
+      ]
+    },
+    {
+      "word": "complain",
+      "sentences": [
+        {
+          "english": "Many users complain about the new design of the app.",
+          "vietnamese": "Nhiều người dùng phàn nàn về giao diện mới của ứng dụng."
+        },
+        {
+          "english": "Passengers complained about the long delay at the station.",
+          "vietnamese": "Hành khách đã phàn nàn về sự chậm trễ kéo dài ở nhà ga."
+        },
+        {
+          "english": "Do not complain if the service is slow during the festival.",
+          "vietnamese": "Đừng phàn nàn nếu dịch vụ chậm trong dịp lễ hội."
+        },
+        {
+          "english": "My neighbour is always complaining about the noisy traffic.",
+          "vietnamese": "Hàng xóm của tôi lúc nào cũng phàn nàn về giao thông ồn ào."
+        },
+        {
+          "english": "Has anyone complained about the price of the tickets?",
+          "vietnamese": "Đã có ai phàn nàn về giá vé chưa?"
+        }
+      ]
+    },
+    {
+      "word": "unnecessary",
+      "sentences": [
+        {
+          "english": "I deleted the app because it was an unnecessary waste of time.",
+          "vietnamese": "Tôi đã xoá ứng dụng vì nó là sự lãng phí thời gian không cần thiết."
+        },
+        {
+          "english": "Buying a luxury phone is an unnecessary expense for a student.",
+          "vietnamese": "Việc mua một chiếc điện thoại xa xỉ là một khoản chi không cần thiết với sinh viên."
+        },
+        {
+          "english": "The dentist said the treatment was unnecessary.",
+          "vietnamese": "Nha sĩ nói rằng việc điều trị là không cần thiết."
+        },
+        {
+          "english": "Please remove the unnecessary furniture from the small room.",
+          "vietnamese": "Hãy dọn bỏ những đồ nội thất không cần thiết khỏi căn phòng nhỏ."
+        },
+        {
+          "english": "Will this unnecessary fight continue until the end of the term?",
+          "vietnamese": "Cuộc cãi vã không cần thiết này sẽ tiếp tục đến cuối học kỳ sao?"
+        }
+      ]
+    },
+    {
+      "word": "opinion",
+      "sentences": [
+        {
+          "english": "Everyone shares an opinion online, but few of them listen.",
+          "vietnamese": "Ai cũng chia sẻ ý kiến trên mạng, nhưng ít người chịu lắng nghe."
+        },
+        {
+          "english": "In my opinion, the local food in Hue is more delicious.",
+          "vietnamese": "Theo ý kiến của tôi, món ăn địa phương ở Huế ngon hơn."
+        },
+        {
+          "english": "The manager asked for our opinions before he signed the contract.",
+          "vietnamese": "Người quản lý đã hỏi ý kiến của chúng tôi trước khi ông ấy ký hợp đồng."
+        },
+        {
+          "english": "Do not post an angry opinion when you are tired.",
+          "vietnamese": "Đừng đăng một ý kiến giận dữ khi bạn đang mệt."
+        },
+        {
+          "english": "Her opinion about the film has changed since the second show.",
+          "vietnamese": "Ý kiến của cô ấy về bộ phim đã thay đổi kể từ buổi chiếu thứ hai."
+        }
+      ]
+    },
+    {
+      "word": "status",
+      "sentences": [
+        {
+          "english": "She changed her status right after the wedding.",
+          "vietnamese": "Cô ấy đổi dòng trạng thái ngay sau đám cưới."
+        },
+        {
+          "english": "He updates his status every time he travels abroad.",
+          "vietnamese": "Anh ấy cập nhật dòng trạng thái mỗi lần anh ấy đi nước ngoài."
+        },
+        {
+          "english": "Money and social status do not always bring peace to a family.",
+          "vietnamese": "Tiền bạc và địa vị xã hội không phải lúc nào cũng mang lại sự bình yên cho một gia đình."
+        },
+        {
+          "english": "Her status showed that she was on holiday in the mountains.",
+          "vietnamese": "Dòng trạng thái của cô ấy cho thấy cô ấy đang đi nghỉ ở vùng núi."
+        },
+        {
+          "english": "Have you seen his funny status about the traffic jam?",
+          "vietnamese": "Bạn đã xem dòng trạng thái hài hước của anh ấy về vụ tắc đường chưa?"
+        }
+      ]
+    },
+    {
+      "word": "access",
+      "sentences": [
+        {
+          "english": "Students can access the course materials from any computer.",
+          "vietnamese": "Sinh viên có thể truy cập tài liệu khoá học từ bất kỳ máy tính nào."
+        },
+        {
+          "english": "I could not access my account because I lost the password.",
+          "vietnamese": "Tôi đã không thể truy cập tài khoản của mình vì tôi làm mất mật khẩu."
+        },
+        {
+          "english": "Tourists can easily access the cave by a wooden bridge.",
+          "vietnamese": "Khách du lịch có thể dễ dàng vào hang bằng một cây cầu gỗ."
+        },
+        {
+          "english": "Will patients access their prescriptions through this app?",
+          "vietnamese": "Bệnh nhân sẽ truy cập đơn thuốc của họ qua ứng dụng này chứ?"
+        },
+        {
+          "english": "She is accessing the file to check the customer address.",
+          "vietnamese": "Cô ấy đang truy cập tệp tin để kiểm tra địa chỉ khách hàng."
+        }
+      ]
+    },
+    {
+      "word": "swipe",
+      "sentences": [
+        {
+          "english": "Swipe left to see the beautiful scenery in the next photo.",
+          "vietnamese": "Vuốt sang trái để xem cảnh đẹp trong bức ảnh tiếp theo."
+        },
+        {
+          "english": "She swiped through the photos while she was waiting at the station.",
+          "vietnamese": "Cô ấy đã vuốt qua các bức ảnh trong khi cô ấy đang đợi ở nhà ga."
+        },
+        {
+          "english": "I swipe my card at the gate every morning.",
+          "vietnamese": "Tôi quẹt thẻ ở cổng vào mỗi buổi sáng."
+        },
+        {
+          "english": "Do not swipe the screen while you drive a motorbike.",
+          "vietnamese": "Đừng vuốt màn hình trong khi bạn lái xe máy."
+        },
+        {
+          "english": "He has swiped past hundreds of photos without remembering one.",
+          "vietnamese": "Anh ấy đã vuốt qua hàng trăm bức ảnh mà không nhớ nổi một bức nào."
+        }
+      ]
+    },
+    {
+      "word": "unfriend",
+      "sentences": [
+        {
+          "english": "He decided to unfriend anyone who argued under his post.",
+          "vietnamese": "Anh ấy quyết định huỷ kết bạn với bất kỳ ai tranh cãi dưới bài đăng của mình."
+        },
+        {
+          "english": "She unfriended her noisy neighbour after a silly fight.",
+          "vietnamese": "Cô ấy đã huỷ kết bạn với người hàng xóm ồn ào sau một cuộc cãi vã ngớ ngẩn."
+        },
+        {
+          "english": "Do not unfriend your housemate because of a small joke.",
+          "vietnamese": "Đừng huỷ kết bạn với bạn cùng nhà chỉ vì một câu đùa nhỏ."
+        },
+        {
+          "english": "Why did you unfriend the singer you supported for years?",
+          "vietnamese": "Tại sao bạn lại huỷ kết bạn với ca sĩ mà bạn đã ủng hộ nhiều năm?"
+        },
+        {
+          "english": "I will unfriend anyone who copies my artwork.",
+          "vietnamese": "Tôi sẽ huỷ kết bạn với bất kỳ ai sao chép tác phẩm nghệ thuật của tôi."
+        }
+      ]
+    },
+    {
+      "word": "feed",
+      "sentences": [
+        {
+          "english": "My feed is full of food photos this morning.",
+          "vietnamese": "Bảng tin của tôi sáng nay toàn ảnh đồ ăn."
+        },
+        {
+          "english": "His feed was full of concert videos last night.",
+          "vietnamese": "Bảng tin của anh ấy tối qua đầy video buổi hoà nhạc."
+        },
+        {
+          "english": "Do not believe everything you see on your feed.",
+          "vietnamese": "Đừng tin mọi thứ bạn thấy trên bảng tin của mình."
+        },
+        {
+          "english": "My feed has become quiet since I stopped following those pages.",
+          "vietnamese": "Bảng tin của tôi đã trở nên yên ắng kể từ khi tôi ngừng theo dõi những trang đó."
+        },
+        {
+          "english": "The advertisements on my feed are frequently about cheap flights.",
+          "vietnamese": "Các quảng cáo trên bảng tin của tôi thường xuyên nói về những chuyến bay giá rẻ."
+        }
+      ]
+    },
+    {
+      "word": "chat",
+      "sentences": [
+        {
+          "english": "We chatted about the wedding until midnight.",
+          "vietnamese": "Chúng tôi đã trò chuyện về đám cưới đến tận nửa đêm."
+        },
+        {
+          "english": "She chats with foreigners to improve her vocabulary.",
+          "vietnamese": "Cô ấy trò chuyện với người nước ngoài để cải thiện vốn từ vựng của mình."
+        },
+        {
+          "english": "Do not chat with strangers who ask for your address.",
+          "vietnamese": "Đừng nhắn tin với người lạ hỏi xin địa chỉ của bạn."
+        },
+        {
+          "english": "Will you chat with the manager about your contract tomorrow?",
+          "vietnamese": "Ngày mai bạn sẽ trò chuyện với người quản lý về hợp đồng của bạn chứ?"
+        },
+        {
+          "english": "They are chatting about the final match of the tournament.",
+          "vietnamese": "Họ đang trò chuyện về trận chung kết của giải đấu."
+        }
+      ]
+    },
+    {
+      "word": "upload",
+      "sentences": [
+        {
+          "english": "He uploaded a video of the firework show last night.",
+          "vietnamese": "Tối qua anh ấy đã tải lên một video về màn pháo hoa."
+        },
+        {
+          "english": "Please upload your certificate before the interview.",
+          "vietnamese": "Hãy tải chứng chỉ của bạn lên trước buổi phỏng vấn."
+        },
+        {
+          "english": "I am uploading the photos from our trip to the bay.",
+          "vietnamese": "Tôi đang tải lên những bức ảnh từ chuyến đi của chúng tôi đến vịnh."
+        },
+        {
+          "english": "How many drawings does she upload every month?",
+          "vietnamese": "Mỗi tháng cô ấy tải lên bao nhiêu bức vẽ?"
+        },
+        {
+          "english": "The company will upload the new timetable on Monday.",
+          "vietnamese": "Công ty sẽ tải thời gian biểu mới lên vào thứ Hai."
+        }
+      ]
+    },
+    {
+      "word": "download",
+      "sentences": [
+        {
+          "english": "Download the map before you leave, the signal is weak there.",
+          "vietnamese": "Hãy tải bản đồ xuống trước khi đi, ở đó sóng yếu lắm."
+        },
+        {
+          "english": "I downloaded a film about the war yesterday.",
+          "vietnamese": "Hôm qua tôi đã tải xuống một bộ phim về chiến tranh."
+        },
+        {
+          "english": "Many users download this app to learn classical music.",
+          "vietnamese": "Nhiều người dùng tải ứng dụng này xuống để học nhạc cổ điển."
+        },
+        {
+          "english": "Have you downloaded the guide for the hiking route?",
+          "vietnamese": "Bạn đã tải hướng dẫn cho tuyến đi bộ đường dài xuống chưa?"
+        },
+        {
+          "english": "She is downloading a recipe book from a cooking website.",
+          "vietnamese": "Cô ấy đang tải một cuốn sách công thức xuống từ một trang web nấu ăn."
+        }
+      ]
+    }
+  ]
+}

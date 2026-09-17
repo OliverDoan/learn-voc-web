@@ -1,0 +1,607 @@
+{
+  "unit": 33,
+  "deck": "Unit 33: Người nổi tiếng và danh vọng",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "celebrity",
+      "sentences": [
+        {
+          "english": "Have you ever met a celebrity at a festival in your hometown?",
+          "vietnamese": "Bạn đã bao giờ gặp một người nổi tiếng ở lễ hội tại quê nhà chưa?"
+        },
+        {
+          "english": "Many people think every celebrity lives a luxury life in the capital.",
+          "vietnamese": "Nhiều người nghĩ rằng mọi người nổi tiếng đều sống cuộc sống xa xỉ ở thủ đô."
+        },
+        {
+          "english": "A young celebrity performed two songs at the charity concert last night.",
+          "vietnamese": "Một người nổi tiếng trẻ tuổi đã biểu diễn hai bài hát tại buổi hoà nhạc từ thiện tối qua."
+        },
+        {
+          "english": "Do you think celebrities should spend more on poor children?",
+          "vietnamese": "Bạn có nghĩ những người nổi tiếng nên chi nhiều hơn cho trẻ em nghèo không?"
+        },
+        {
+          "english": "He has become a celebrity since that photographer posted his picture online.",
+          "vietnamese": "Anh ấy đã trở thành một người nổi tiếng kể từ khi nhiếp ảnh gia đó đăng ảnh của anh lên mạng."
+        }
+      ]
+    },
+    {
+      "word": "private",
+      "sentences": [
+        {
+          "english": "Can we have some private moments in this quiet room?",
+          "vietnamese": "Chúng ta có thể có vài phút riêng tư trong căn phòng yên tĩnh này không?"
+        },
+        {
+          "english": "The singer bought a private island near a beautiful bay.",
+          "vietnamese": "Nam ca sĩ đã mua một hòn đảo riêng tư gần một vịnh biển xinh đẹp."
+        },
+        {
+          "english": "Please do not share my private address with anyone.",
+          "vietnamese": "Xin đừng chia sẻ địa chỉ riêng tư của tôi với bất kỳ ai."
+        },
+        {
+          "english": "Their wedding was private, so only close relatives were invited.",
+          "vietnamese": "Đám cưới của họ khá riêng tư, nên chỉ những người họ hàng thân thiết được mời."
+        },
+        {
+          "english": "Many rich families are building private gyms inside their houses.",
+          "vietnamese": "Nhiều gia đình giàu có đang xây phòng tập riêng tư bên trong nhà của họ."
+        }
+      ]
+    },
+    {
+      "word": "paparazzi",
+      "sentences": [
+        {
+          "english": "The paparazzi follow famous people everywhere to take their photos.",
+          "vietnamese": "Các thợ săn ảnh bám theo người nổi tiếng khắp nơi để chụp ảnh họ."
+        },
+        {
+          "english": "The paparazzi waited outside the theatre until midnight.",
+          "vietnamese": "Các thợ săn ảnh đã chờ bên ngoài nhà hát đến tận nửa đêm."
+        },
+        {
+          "english": "She was annoyed because the paparazzi took photos of her children.",
+          "vietnamese": "Cô ấy khó chịu vì các thợ săn ảnh đã chụp ảnh các con của cô."
+        },
+        {
+          "english": "Do paparazzi ever respect the quiet life of a singer?",
+          "vietnamese": "Các thợ săn ảnh có bao giờ tôn trọng cuộc sống yên tĩnh của một ca sĩ không?"
+        },
+        {
+          "english": "If you become famous, the paparazzi will follow you everywhere.",
+          "vietnamese": "Nếu bạn trở nên nổi tiếng, các thợ săn ảnh sẽ bám theo bạn khắp nơi."
+        }
+      ]
+    },
+    {
+      "word": "charity",
+      "sentences": [
+        {
+          "english": "You should not donate to a charity just to look generous.",
+          "vietnamese": "Bạn không nên quyên góp cho một tổ chức từ thiện chỉ để tỏ ra hào phóng."
+        },
+        {
+          "english": "Our company gives money to a local charity every year.",
+          "vietnamese": "Công ty chúng tôi tặng tiền cho một tổ chức từ thiện địa phương mỗi năm."
+        },
+        {
+          "english": "The actor opened a charity for poor children in his hometown.",
+          "vietnamese": "Nam diễn viên đã mở một tổ chức từ thiện cho trẻ em nghèo ở quê anh."
+        },
+        {
+          "english": "Have you ever worked for a charity during your holiday?",
+          "vietnamese": "Bạn đã bao giờ làm việc cho một tổ chức từ thiện trong kỳ nghỉ chưa?"
+        },
+        {
+          "english": "Several charities will hold a concert for the flood victims.",
+          "vietnamese": "Vài tổ chức từ thiện sẽ tổ chức một buổi hoà nhạc cho các nạn nhân lũ lụt."
+        }
+      ]
+    },
+    {
+      "word": "lucky",
+      "sentences": [
+        {
+          "english": "This is my lucky shirt, so I wear it to every interview.",
+          "vietnamese": "Đây là chiếc áo may mắn của tôi, nên tôi mặc nó đi mọi buổi phỏng vấn."
+        },
+        {
+          "english": "You are lucky to live in such a peaceful neighbourhood.",
+          "vietnamese": "Bạn thật may mắn khi được sống trong một khu phố yên bình như vậy."
+        },
+        {
+          "english": "We were lucky because the typhoon did not damage our house.",
+          "vietnamese": "Chúng tôi đã may mắn vì cơn bão không làm hỏng ngôi nhà của chúng tôi."
+        },
+        {
+          "english": "Do you feel lucky when you find a shortcut in heavy traffic?",
+          "vietnamese": "Bạn có thấy may mắn khi tìm được một lối tắt giữa dòng xe cộ đông đúc không?"
+        },
+        {
+          "english": "The winner was not lucky at all; she had trained for years.",
+          "vietnamese": "Người chiến thắng chẳng may mắn chút nào; cô ấy đã luyện tập nhiều năm."
+        }
+      ]
+    },
+    {
+      "word": "golden",
+      "sentences": [
+        {
+          "english": "She was wearing a golden necklace at the wedding party.",
+          "vietnamese": "Cô ấy đeo một sợi dây chuyền bằng vàng tại tiệc cưới."
+        },
+        {
+          "english": "The temple has a huge golden statue inside the main hall.",
+          "vietnamese": "Ngôi chùa có một bức tượng bằng vàng khổng lồ bên trong gian chính."
+        },
+        {
+          "english": "My grandmother kept a golden ring from her marriage.",
+          "vietnamese": "Bà tôi giữ một chiếc nhẫn bằng vàng từ đám cưới của bà."
+        },
+        {
+          "english": "Are those golden lanterns expensive at the local market?",
+          "vietnamese": "Những chiếc đèn lồng bằng vàng kia có đắt ở chợ địa phương không?"
+        },
+        {
+          "english": "The winner will receive a golden cup at the final tournament.",
+          "vietnamese": "Người chiến thắng sẽ nhận một chiếc cúp bằng vàng ở giải đấu chung kết."
+        }
+      ]
+    },
+    {
+      "word": "gate",
+      "sentences": [
+        {
+          "english": "The driver parked his truck in front of the gate and honked.",
+          "vietnamese": "Tài xế đỗ xe tải trước cổng và bấm còi."
+        },
+        {
+          "english": "A crowd of young fans gathered at the gate before the concert.",
+          "vietnamese": "Một đám đông người hâm mộ trẻ tụ tập ở cổng trước buổi hoà nhạc."
+        },
+        {
+          "english": "Please close the gate when you leave the garage.",
+          "vietnamese": "Hãy đóng cổng lại khi bạn rời khỏi ga ra."
+        },
+        {
+          "english": "Our new house has a wide gate and a small playground.",
+          "vietnamese": "Ngôi nhà mới của chúng tôi có một cái cổng rộng và một sân chơi nhỏ."
+        },
+        {
+          "english": "The guard did not open the gate for the reporters last night.",
+          "vietnamese": "Bảo vệ đã không mở cổng cho các phóng viên tối qua."
+        }
+      ]
+    },
+    {
+      "word": "shiny",
+      "sentences": [
+        {
+          "english": "Is that a new motorbike? It looks so shiny and expensive.",
+          "vietnamese": "Đó là chiếc xe máy mới à? Trông nó bóng loáng và đắt tiền ghê."
+        },
+        {
+          "english": "The mechanic polished my old bicycle until it looked shiny.",
+          "vietnamese": "Người thợ máy đã đánh bóng chiếc xe đạp cũ của tôi cho đến khi nó trông bóng loáng."
+        },
+        {
+          "english": "Her shiny shoes attracted every photographer at the party.",
+          "vietnamese": "Đôi giày bóng loáng của cô ấy thu hút mọi nhiếp ảnh gia tại bữa tiệc."
+        },
+        {
+          "english": "Are you looking for a shiny black car at a reasonable price?",
+          "vietnamese": "Bạn đang tìm một chiếc ô tô màu đen bóng loáng với giá hợp lý phải không?"
+        },
+        {
+          "english": "This antique table will look shiny again after we repair it.",
+          "vietnamese": "Chiếc bàn cổ này sẽ lại trông bóng loáng sau khi chúng tôi sửa nó."
+        }
+      ]
+    },
+    {
+      "word": "fancy",
+      "sentences": [
+        {
+          "english": "She drives a fancy car and wears luxury jewellery.",
+          "vietnamese": "Cô ấy lái một chiếc xe sang chảnh và đeo trang sức xa xỉ."
+        },
+        {
+          "english": "We had dinner at a fancy place near the city centre.",
+          "vietnamese": "Chúng tôi đã ăn tối ở một chỗ sang chảnh gần trung tâm thành phố."
+        },
+        {
+          "english": "I cannot pay for a fancy holiday abroad this year.",
+          "vietnamese": "Tôi không thể chi trả cho một kỳ nghỉ sang chảnh ở nước ngoài năm nay."
+        },
+        {
+          "english": "Do famous people really need fancy clothes for every public event?",
+          "vietnamese": "Người nổi tiếng có thực sự cần quần áo sang chảnh cho mọi sự kiện công cộng không?"
+        },
+        {
+          "english": "That fancy hotel charges a very expensive fee for one night.",
+          "vietnamese": "Khách sạn sang chảnh đó tính một khoản phí rất đắt cho một đêm."
+        }
+      ]
+    },
+    {
+      "word": "immigration",
+      "sentences": [
+        {
+          "english": "Immigration takes a long time, so bring your visa and passport.",
+          "vietnamese": "Thủ tục nhập cảnh mất nhiều thời gian, nên hãy mang theo visa và hộ chiếu."
+        },
+        {
+          "english": "The immigration officer asked me about my journey to this country.",
+          "vietnamese": "Nhân viên nhập cảnh đã hỏi tôi về hành trình của tôi tới đất nước này."
+        },
+        {
+          "english": "We waited two hours at immigration after our flight was delayed.",
+          "vietnamese": "Chúng tôi đã chờ hai tiếng ở khu nhập cảnh sau khi chuyến bay bị hoãn."
+        },
+        {
+          "english": "Will immigration accept this document without a stamp?",
+          "vietnamese": "Bộ phận nhập cảnh sẽ chấp nhận giấy tờ này mà không có dấu chứ?"
+        },
+        {
+          "english": "Immigration rules have changed a lot since last year.",
+          "vietnamese": "Các quy định nhập cảnh đã thay đổi rất nhiều kể từ năm ngoái."
+        }
+      ]
+    },
+    {
+      "word": "refuse",
+      "sentences": [
+        {
+          "english": "I am sorry, but I have to refuse your kind offer.",
+          "vietnamese": "Tôi xin lỗi, nhưng tôi phải từ chối lời đề nghị tử tế của bạn."
+        },
+        {
+          "english": "She refused to sign the contract with that company.",
+          "vietnamese": "Cô ấy đã từ chối ký hợp đồng với công ty đó."
+        },
+        {
+          "english": "The young actor refuses to talk to reporters about his family.",
+          "vietnamese": "Nam diễn viên trẻ từ chối nói chuyện với các phóng viên về gia đình anh."
+        },
+        {
+          "english": "Do not refuse a gift from your relatives during the festival.",
+          "vietnamese": "Đừng từ chối một món quà từ họ hàng của bạn trong dịp lễ hội."
+        },
+        {
+          "english": "If the bank refuses our application, we will borrow from a friend.",
+          "vietnamese": "Nếu ngân hàng từ chối đơn của chúng ta, chúng ta sẽ vay từ một người bạn."
+        }
+      ]
+    },
+    {
+      "word": "enter",
+      "sentences": [
+        {
+          "english": "Please enter through this door and wait at the reception.",
+          "vietnamese": "Xin hãy đi vào qua cửa này và chờ ở quầy lễ tân."
+        },
+        {
+          "english": "The athletes entered the stadium while the crowd clapped.",
+          "vietnamese": "Các vận động viên đi vào sân vận động trong khi đám đông vỗ tay."
+        },
+        {
+          "english": "Please knock before you enter my room.",
+          "vietnamese": "Hãy gõ cửa trước khi bạn đi vào phòng của tôi."
+        },
+        {
+          "english": "Tourists must show a ticket to enter the pagoda.",
+          "vietnamese": "Khách du lịch phải trình vé để đi vào ngôi chùa."
+        },
+        {
+          "english": "She has entered many contests since secondary school.",
+          "vietnamese": "Cô ấy đã tham gia nhiều cuộc thi kể từ hồi cấp hai."
+        }
+      ]
+    },
+    {
+      "word": "interested",
+      "sentences": [
+        {
+          "english": "I am very interested in learning a new language this year.",
+          "vietnamese": "Tôi rất có hứng thú với việc học một ngôn ngữ mới trong năm nay."
+        },
+        {
+          "english": "My brother is not interested in classical music at all.",
+          "vietnamese": "Anh trai tôi chẳng có hứng thú gì với nhạc cổ điển."
+        },
+        {
+          "english": "Are you interested in joining our badminton team this term?",
+          "vietnamese": "Bạn có hứng thú tham gia đội cầu lông của chúng tôi kỳ này không?"
+        },
+        {
+          "english": "She became interested in photography after that exhibition.",
+          "vietnamese": "Cô ấy trở nên có hứng thú với nhiếp ảnh sau buổi triển lãm đó."
+        },
+        {
+          "english": "Young people are interested in the private lives of singers.",
+          "vietnamese": "Giới trẻ có hứng thú với đời sống riêng tư của các ca sĩ."
+        }
+      ]
+    },
+    {
+      "word": "fan",
+      "sentences": [
+        {
+          "english": "I have some fans who follow me around at every match.",
+          "vietnamese": "Tôi có vài người hâm mộ đi theo tôi ở mọi trận đấu."
+        },
+        {
+          "english": "Thousands of fans shouted the singer's name during the concert.",
+          "vietnamese": "Hàng nghìn người hâm mộ đã hét tên nam ca sĩ trong buổi hoà nhạc."
+        },
+        {
+          "english": "He is a big fan of that young footballer.",
+          "vietnamese": "Anh ấy là một người hâm mộ lớn của cầu thủ trẻ đó."
+        },
+        {
+          "english": "Will the fans still support their team after this defeat?",
+          "vietnamese": "Những người hâm mộ có còn ủng hộ đội của họ sau thất bại này không?"
+        },
+        {
+          "english": "I have been a fan of classical music since primary school.",
+          "vietnamese": "Tôi đã là một người hâm mộ nhạc cổ điển từ hồi tiểu học."
+        }
+      ]
+    },
+    {
+      "word": "personal",
+      "sentences": [
+        {
+          "english": "Age and weight are very personal topics for many women.",
+          "vietnamese": "Tuổi tác và cân nặng là những chủ đề rất riêng tư với nhiều phụ nữ."
+        },
+        {
+          "english": "Do not ask your new neighbour personal questions about money.",
+          "vietnamese": "Đừng hỏi người hàng xóm mới của bạn những câu hỏi riêng tư về tiền bạc."
+        },
+        {
+          "english": "Her personal trainer encourages her to exercise every morning.",
+          "vietnamese": "Huấn luyện viên riêng của cô ấy khuyến khích cô tập thể dục mỗi sáng."
+        },
+        {
+          "english": "I keep my personal documents in a safe place at home.",
+          "vietnamese": "Tôi giữ các giấy tờ cá nhân của mình ở một nơi an toàn trong nhà."
+        },
+        {
+          "english": "He shared some personal memories at his father's anniversary.",
+          "vietnamese": "Anh ấy đã chia sẻ vài kỷ niệm cá nhân trong ngày giỗ của cha mình."
+        }
+      ]
+    },
+    {
+      "word": "scream",
+      "sentences": [
+        {
+          "english": "You can hear the fans scream for their idol from far away.",
+          "vietnamese": "Bạn có thể nghe thấy người hâm mộ thét lên gọi thần tượng từ xa."
+        },
+        {
+          "english": "The children screamed when the fireworks filled the sky.",
+          "vietnamese": "Bọn trẻ đã thét lên khi pháo hoa phủ kín bầu trời."
+        },
+        {
+          "english": "Do not scream at the referee during the final match.",
+          "vietnamese": "Đừng thét lên với trọng tài trong trận chung kết."
+        },
+        {
+          "english": "She screams every time she sees a spider in the bathroom.",
+          "vietnamese": "Cô ấy thét lên mỗi lần nhìn thấy một con nhện trong nhà tắm."
+        },
+        {
+          "english": "The crowd will scream when their idol walks into the theatre.",
+          "vietnamese": "Đám đông sẽ thét lên khi thần tượng của họ bước vào nhà hát."
+        }
+      ]
+    },
+    {
+      "word": "copy",
+      "sentences": [
+        {
+          "english": "Artists often learn by trying to copy the design of others.",
+          "vietnamese": "Các nghệ sĩ thường học bằng cách cố bắt chước thiết kế của người khác."
+        },
+        {
+          "english": "She copied her sister's recipe and added more chilli.",
+          "vietnamese": "Cô ấy đã bắt chước công thức của chị gái và cho thêm ớt."
+        },
+        {
+          "english": "Do not copy your classmate's assignment before the exam.",
+          "vietnamese": "Đừng bắt chước bài tập của bạn cùng lớp trước kỳ thi."
+        },
+        {
+          "english": "Many young singers copy the style of well-known artists.",
+          "vietnamese": "Nhiều ca sĩ trẻ bắt chước phong cách của những nghệ sĩ nổi tiếng."
+        },
+        {
+          "english": "He is copying the technique of a famous painter.",
+          "vietnamese": "Anh ấy đang bắt chước kỹ thuật của một hoạ sĩ nổi tiếng."
+        }
+      ]
+    },
+    {
+      "word": "star",
+      "sentences": [
+        {
+          "english": "In Vietnam, movie stars tend to live in the capital.",
+          "vietnamese": "Ở Việt Nam, các ngôi sao điện ảnh thường sống ở thủ đô."
+        },
+        {
+          "english": "That young star has become very rich since last year.",
+          "vietnamese": "Ngôi sao trẻ đó đã trở nên rất giàu kể từ năm ngoái."
+        },
+        {
+          "english": "Do you follow any pop star on social media?",
+          "vietnamese": "Bạn có theo dõi ngôi sao nhạc pop nào trên mạng xã hội không?"
+        },
+        {
+          "english": "The stars of the show arrived at the theatre in fancy cars.",
+          "vietnamese": "Các ngôi sao của chương trình đã đến nhà hát bằng những chiếc xe sang chảnh."
+        },
+        {
+          "english": "A famous star will perform live at the national festival.",
+          "vietnamese": "Một ngôi sao nổi tiếng sẽ biểu diễn trực tiếp tại lễ hội quốc gia."
+        }
+      ]
+    },
+    {
+      "word": "model",
+      "sentences": [
+        {
+          "english": "I have only been a model a couple of times for my friend's company.",
+          "vietnamese": "Tôi chỉ làm người mẫu vài lần cho công ty của bạn tôi."
+        },
+        {
+          "english": "That model appeared on the cover of a popular magazine.",
+          "vietnamese": "Người mẫu đó đã xuất hiện trên bìa của một tạp chí nổi tiếng."
+        },
+        {
+          "english": "Models have to stay slim and exercise regularly.",
+          "vietnamese": "Người mẫu phải giữ dáng thon và tập thể dục đều đặn."
+        },
+        {
+          "english": "Will she become a model after she finishes secondary school?",
+          "vietnamese": "Cô ấy sẽ trở thành người mẫu sau khi học xong cấp hai chứ?"
+        },
+        {
+          "english": "The photographer asked the model to stand near the lake.",
+          "vietnamese": "Nhiếp ảnh gia đã bảo người mẫu đứng gần hồ nước."
+        }
+      ]
+    },
+    {
+      "word": "actress",
+      "sentences": [
+        {
+          "english": "It takes skill and even luck to become a successful actress.",
+          "vietnamese": "Cần kỹ năng và cả may mắn để trở thành một nữ diễn viên thành công."
+        },
+        {
+          "english": "The actress refused to answer questions about her wedding.",
+          "vietnamese": "Nữ diễn viên đã từ chối trả lời các câu hỏi về đám cưới của cô."
+        },
+        {
+          "english": "My favourite actress often plays a funny character.",
+          "vietnamese": "Nữ diễn viên yêu thích của tôi thường đóng một nhân vật hài hước."
+        },
+        {
+          "english": "Has that actress ever performed in a theatre?",
+          "vietnamese": "Nữ diễn viên đó đã bao giờ biểu diễn trong một nhà hát chưa?"
+        },
+        {
+          "english": "Several actresses will attend the charity party tonight.",
+          "vietnamese": "Vài nữ diễn viên sẽ dự bữa tiệc từ thiện tối nay."
+        }
+      ]
+    },
+    {
+      "word": "comedy",
+      "sentences": [
+        {
+          "english": "I want to watch a comedy tonight because it will improve my mood.",
+          "vietnamese": "Tôi muốn xem một vở hài kịch tối nay vì nó sẽ cải thiện tâm trạng của tôi."
+        },
+        {
+          "english": "We watched a funny comedy with our housemates last weekend.",
+          "vietnamese": "Chúng tôi đã xem một vở hài kịch vui nhộn với các bạn cùng nhà cuối tuần trước."
+        },
+        {
+          "english": "This comedy is not popular among older viewers.",
+          "vietnamese": "Vở hài kịch này không được ưa chuộng với khán giả lớn tuổi."
+        },
+        {
+          "english": "Do you prefer a comedy or a serious story about war?",
+          "vietnamese": "Bạn thích một vở hài kịch hơn hay một câu chuyện nghiêm túc về chiến tranh?"
+        },
+        {
+          "english": "The theatre will show a new comedy during the holiday.",
+          "vietnamese": "Nhà hát sẽ chiếu một vở hài kịch mới trong kỳ nghỉ lễ."
+        }
+      ]
+    },
+    {
+      "word": "drama",
+      "sentences": [
+        {
+          "english": "That actor appeared in a drama about a famous war.",
+          "vietnamese": "Diễn viên đó đã xuất hiện trong một vở kịch về một cuộc chiến nổi tiếng."
+        },
+        {
+          "english": "She has watched every Korean drama since she was ill last month.",
+          "vietnamese": "Cô ấy đã xem mọi bộ phim truyền hình Hàn Quốc kể từ khi cô ốm tháng trước."
+        },
+        {
+          "english": "This drama describes the difficult life of a poor family.",
+          "vietnamese": "Vở kịch này mô tả cuộc sống khó khăn của một gia đình nghèo."
+        },
+        {
+          "english": "Do you think that drama is quite long and boring?",
+          "vietnamese": "Bạn có nghĩ vở kịch đó khá dài và nhàm chán không?"
+        },
+        {
+          "english": "The students will perform a short drama at the school festival.",
+          "vietnamese": "Các học sinh sẽ diễn một vở kịch ngắn ở lễ hội của trường."
+        }
+      ]
+    },
+    {
+      "word": "cartoon",
+      "sentences": [
+        {
+          "english": "Japan is famous for a special kind of cartoon called anime.",
+          "vietnamese": "Nhật Bản nổi tiếng với một thể loại phim hoạt hình đặc biệt gọi là anime."
+        },
+        {
+          "english": "My little nephew watches a cartoon before he goes to kindergarten.",
+          "vietnamese": "Cháu trai nhỏ của tôi xem một bộ phim hoạt hình trước khi đi mẫu giáo."
+        },
+        {
+          "english": "This cartoon teaches children to respect their neighbours.",
+          "vietnamese": "Bộ phim hoạt hình này dạy trẻ em tôn trọng hàng xóm của mình."
+        },
+        {
+          "english": "Have you ever created a cartoon character on your computer?",
+          "vietnamese": "Bạn đã bao giờ tạo ra một nhân vật hoạt hình trên máy tính chưa?"
+        },
+        {
+          "english": "Cartoons are fun, but reading books improves my vocabulary faster.",
+          "vietnamese": "Phim hoạt hình thì vui, nhưng đọc sách cải thiện vốn từ của tôi nhanh hơn."
+        }
+      ]
+    },
+    {
+      "word": "film",
+      "sentences": [
+        {
+          "english": "I prefer to watch a film at home rather than spend money at the cinema.",
+          "vietnamese": "Tôi thích xem phim ở nhà hơn là tiêu tiền ở rạp."
+        },
+        {
+          "english": "The film about a young painter received many prizes.",
+          "vietnamese": "Bộ phim về một hoạ sĩ trẻ đã nhận được nhiều giải thưởng."
+        },
+        {
+          "english": "Are you going to watch that scary film with your roommate tonight?",
+          "vietnamese": "Bạn sẽ xem bộ phim đáng sợ đó với bạn cùng phòng tối nay chứ?"
+        },
+        {
+          "english": "This film has beautiful scenery of the mountains and the coast.",
+          "vietnamese": "Bộ phim này có cảnh đẹp của những ngọn núi và bờ biển."
+        },
+        {
+          "english": "They are filming a new drama in our neighbourhood this week.",
+          "vietnamese": "Họ đang quay một bộ phim truyền hình mới ở khu phố chúng tôi tuần này."
+        }
+      ]
+    }
+  ]
+}
