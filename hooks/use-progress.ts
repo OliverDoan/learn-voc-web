@@ -10,6 +10,7 @@ export interface ProgressUpdatePayload {
   displayName?: string | null;
   bio?: string | null;
   avatarUrl?: string | null;
+  unlockAllDecks?: boolean;
 }
 
 export interface StatsSeriesPoint {
@@ -82,6 +83,22 @@ export function useResetProgress() {
     mutationFn: (scope: "learned" | "all") =>
       apiPost<ResetResult>("/api/progress/reset", { scope }),
     onSuccess: () => queryClient.invalidateQueries(),
+  });
+}
+
+/**
+ * Bật/tắt "Mở khóa tất cả deck". Khóa deck ảnh hưởng tới gần như mọi query
+ * (danh sách deck, tất cả từ, tìm kiếm, truyện) nên phải làm mới toàn bộ cache.
+ */
+export function useToggleUnlockAllDecks() {
+  const queryClient = useQueryClient();
+  return useMutation({
+    mutationFn: (unlockAllDecks: boolean) =>
+      apiPatch<UserProgress>("/api/progress", { unlockAllDecks }),
+    onSuccess: (data) => {
+      queryClient.setQueryData(["progress"], data);
+      queryClient.invalidateQueries();
+    },
   });
 }
 

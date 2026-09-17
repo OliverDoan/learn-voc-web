@@ -166,6 +166,8 @@ model UserProgress {
   lastStudyDate   DateTime?
   dailyGoal       Int       @default(20)
   freezeTokens    Int       @default(2)
+  // Bật ở Cài đặt: bỏ qua khóa tuần tự, mọi deck đều mở khóa (tắt lại là khóa như cũ)
+  unlockAllDecks  Boolean   @default(false)
 }
 
 model Achievement {

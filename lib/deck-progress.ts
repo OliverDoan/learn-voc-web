@@ -1,4 +1,5 @@
 import { prisma } from "./db";
+import { SINGLETON_PROGRESS_ID } from "./constants";
 
 /** Lấy số thứ tự Unit từ tên deck ("Unit 10: ..." → 10); không có → null. */
 export function getDeckUnitNumber(name: string): number | null {
@@ -26,9 +27,22 @@ export interface DeckLockStatus {
  * - Deck không có số Unit: luôn mở khóa (không nằm trong chuỗi tuần tự).
  *
  * Khóa được SUY DIỄN hoàn toàn từ `learnedAt` nên bỏ đánh dấu một deck sẽ tự khóa lại các deck sau.
+ *
+ * `options.unlockAll` (cài đặt "Mở khóa tất cả deck"): bỏ qua khóa tuần tự,
+ * mọi deck đều mở. Trạng thái `learned` KHÔNG đổi — tắt lại là khóa như cũ.
  */
-export function computeDeckLockStatus(decks: readonly DeckLockInput[]): Map<string, DeckLockStatus> {
+export function computeDeckLockStatus(
+  decks: readonly DeckLockInput[],
+  options: { unlockAll?: boolean } = {},
+): Map<string, DeckLockStatus> {
   const result = new Map<string, DeckLockStatus>();
+
+  if (options.unlockAll) {
+    for (const d of decks) {
+      result.set(d.id, { learned: d.learnedAt != null, locked: false });
+    }
+    return result;
+  }
 
   // Các deck có số Unit, sắp theo Unit tăng dần để duyệt tuần tự.
   const unitDecks = decks
@@ -57,15 +71,31 @@ export function computeDeckLockStatus(decks: readonly DeckLockInput[]): Map<stri
 }
 
 /**
+ * (Server) Cài đặt "Mở khóa tất cả deck" có đang bật không.
+ * Thiếu record singleton (DB mới) → coi như tắt.
+ */
+export async function isUnlockAllDecksEnabled(): Promise<boolean> {
+  const progress = await prisma.userProgress.findUnique({
+    where: { id: SINGLETON_PROGRESS_ID },
+    select: { unlockAllDecks: true },
+  });
+  return progress?.unlockAllDecks ?? false;
+}
+
+/**
  * (Server) ID các deck ĐANG KHÓA — dùng để loại nội dung của Unit chưa mở khóa
  * khỏi các trang tra cứu toàn cục (Tất cả từ, Yêu thích, Tìm kiếm, Truyện chêm).
  */
 export async function getLockedDeckIds(): Promise<string[]> {
-  const decks = await prisma.deck.findMany({
-    where: { deletedAt: null },
-    select: { id: true, name: true, learnedAt: true },
-  });
-  const status = computeDeckLockStatus(decks);
+  const [decks, unlockAll] = await Promise.all([
+    prisma.deck.findMany({
+      where: { deletedAt: null },
+      select: { id: true, name: true, learnedAt: true },
+    }),
+    isUnlockAllDecksEnabled(),
+  ]);
+  if (unlockAll) return [];
+  const status = computeDeckLockStatus(decks, { unlockAll });
   return decks.filter((d) => status.get(d.id)?.locked === true).map((d) => d.id);
 }
 
@@ -74,11 +104,15 @@ export async function getLockedDeckIds(): Promise<string[]> {
  * Tải tất cả deck chưa xoá để xác định chuỗi Unit.
  */
 export async function isDeckUnlocked(deckId: string): Promise<boolean> {
-  const decks = await prisma.deck.findMany({
-    where: { deletedAt: null },
-    select: { id: true, name: true, learnedAt: true },
-  });
-  const status = computeDeckLockStatus(decks).get(deckId);
+  const [decks, unlockAll] = await Promise.all([
+    prisma.deck.findMany({
+      where: { deletedAt: null },
+      select: { id: true, name: true, learnedAt: true },
+    }),
+    isUnlockAllDecksEnabled(),
+  ]);
+  if (unlockAll) return true;
+  const status = computeDeckLockStatus(decks, { unlockAll }).get(deckId);
   // Không tìm thấy (deck mới/khác) → coi như mở khóa để không chặn nhầm.
   return status ? !status.locked : true;
 }

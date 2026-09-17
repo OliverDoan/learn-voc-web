@@ -25,6 +25,7 @@ export async function updateUserProgress(patch: {
   displayName?: string | null;
   bio?: string | null;
   avatarUrl?: string | null;
+  unlockAllDecks?: boolean;
 }) {
   // Đảm bảo record singleton tồn tại trước khi update
   await getUserProgress();
@@ -39,6 +40,7 @@ export async function updateUserProgress(patch: {
       displayName: emptyToNull(patch.displayName),
       bio: emptyToNull(patch.bio),
       avatarUrl: emptyToNull(patch.avatarUrl),
+      unlockAllDecks: patch.unlockAllDecks,
     },
   });
 }

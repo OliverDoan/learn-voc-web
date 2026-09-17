@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
 import { prisma } from "@/lib/db";
 import { fail, handleError, ok } from "@/lib/api-helpers";
-import { computeDeckLockStatus } from "@/lib/deck-progress";
+import { computeDeckLockStatus, isUnlockAllDecksEnabled } from "@/lib/deck-progress";
 import { buildExerciseStatus } from "@/lib/deck-activities";
 import { countWordTokens } from "@/lib/story-parser";
 import { deckUpdateSchema } from "@/lib/schemas";
@@ -20,11 +20,14 @@ export async function GET(_req: NextRequest, { params }: RouteParams) {
     });
     if (!deck) return fail("Không tìm thấy deck", 404);
     // Tính trạng thái khóa/mở dựa trên toàn bộ chuỗi Unit.
-    const allDecks = await prisma.deck.findMany({
-      where: { deletedAt: null },
-      select: { id: true, name: true, learnedAt: true },
-    });
-    const status = computeDeckLockStatus(allDecks).get(deckId) ?? {
+    const [allDecks, unlockAll] = await Promise.all([
+      prisma.deck.findMany({
+        where: { deletedAt: null },
+        select: { id: true, name: true, learnedAt: true },
+      }),
+      isUnlockAllDecksEnabled(),
+    ]);
+    const status = computeDeckLockStatus(allDecks, { unlockAll }).get(deckId) ?? {
       learned: deck.learnedAt != null,
       locked: false,
     };

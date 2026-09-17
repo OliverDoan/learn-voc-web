@@ -172,6 +172,8 @@ export const progressUpdateSchema = z.object({
     )
     .nullable()
     .optional(),
+  // Mở khóa tất cả deck (bỏ qua khóa tuần tự theo Unit)
+  unlockAllDecks: z.boolean().optional(),
 });
 
 export type ProgressUpdateInput = z.infer<typeof progressUpdateSchema>;

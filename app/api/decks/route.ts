@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
 import { prisma } from "@/lib/db";
 import { handleError, ok } from "@/lib/api-helpers";
-import { computeDeckLockStatus } from "@/lib/deck-progress";
+import { computeDeckLockStatus, isUnlockAllDecksEnabled } from "@/lib/deck-progress";
 import { allExercisesDone } from "@/lib/deck-activities";
 import { countWordTokens } from "@/lib/story-parser";
 import { deckCreateSchema } from "@/lib/schemas";
@@ -17,7 +17,8 @@ export async function GET() {
       },
     });
     const now = new Date();
-    const lockStatus = computeDeckLockStatus(decks);
+    const unlockAll = await isUnlockAllDecksEnabled();
+    const lockStatus = computeDeckLockStatus(decks, { unlockAll });
 
     // Nạp gộp 1 lần (tránh N+1) để tính "đã đủ bài tập để mở khóa" cho mọi deck.
     const [allCards, allActivities, allStories] = await Promise.all([

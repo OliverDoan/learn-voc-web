@@ -72,3 +72,25 @@ describe("computeDeckLockStatus", () => {
     expect(status.get("x")).toEqual({ learned: false, locked: false });
   });
 });
+
+describe("computeDeckLockStatus — mở khóa tất cả", () => {
+  const now = new Date("2026-06-29T00:00:00Z");
+
+  it("unlockAll: true → mọi deck đều mở, giữ nguyên trạng thái đã học", () => {
+    const status = computeDeckLockStatus(
+      [deck("u1", "Unit 1: A", now), deck("u2", "Unit 2: B"), deck("u3", "Unit 3: C")],
+      { unlockAll: true },
+    );
+    expect(status.get("u1")).toEqual({ learned: true, locked: false });
+    expect(status.get("u2")).toEqual({ learned: false, locked: false });
+    expect(status.get("u3")).toEqual({ learned: false, locked: false });
+  });
+
+  it("unlockAll: false → khóa tuần tự như bình thường", () => {
+    const status = computeDeckLockStatus(
+      [deck("u1", "Unit 1: A"), deck("u2", "Unit 2: B")],
+      { unlockAll: false },
+    );
+    expect(status.get("u2")).toEqual({ learned: false, locked: true });
+  });
+});

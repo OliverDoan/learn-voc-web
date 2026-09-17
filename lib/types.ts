@@ -170,4 +170,6 @@ export interface UserProgress {
   lastStudyDate: string | null;
   dailyGoal: number;
   freezeTokens: number;
+  /** Bỏ qua khóa tuần tự theo Unit — mọi deck đều mở khóa. */
+  unlockAllDecks: boolean;
 }

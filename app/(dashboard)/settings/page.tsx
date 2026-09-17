@@ -12,6 +12,7 @@ import { DailyGoalSection } from "@/components/settings/daily-goal-section";
 import { ReminderSection } from "@/components/settings/reminder-section";
 import { AchievementsSection } from "@/components/settings/achievements-section";
 import { StreakSection } from "@/components/settings/streak-section";
+import { UnlockDecksSection } from "@/components/settings/unlock-decks-section";
 import { ResetSection } from "@/components/settings/reset-section";
 import { useProgress } from "@/hooks/use-progress";
 
@@ -79,6 +80,8 @@ export default function SettingsPage() {
       <DailyGoalSection progress={progress} />
 
       <StreakSection progress={progress} />
+
+      <UnlockDecksSection progress={progress} />
 
       <ReminderSection />
 

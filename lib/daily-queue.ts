@@ -1,6 +1,6 @@
 import { prisma } from "./db";
 import { DEFAULT_DAILY_GOAL, SINGLETON_PROGRESS_ID } from "./constants";
-import { computeDeckLockStatus, getDeckUnitNumber } from "./deck-progress";
+import { computeDeckLockStatus, getDeckUnitNumber, isUnlockAllDecksEnabled } from "./deck-progress";
 import { topicUnitRange } from "./deck-topics";
 
 export interface QueueCard {
@@ -165,11 +165,14 @@ export async function getGlobalReviewQueue(limit?: number): Promise<QueueCard[]>
  */
 export async function getTopicDeckIds(topicIndex: number): Promise<string[]> {
   const { from, to } = topicUnitRange(topicIndex);
-  const decks = await prisma.deck.findMany({
-    where: { deletedAt: null },
-    select: { id: true, name: true, learnedAt: true },
-  });
-  const lockStatus = computeDeckLockStatus(decks);
+  const [decks, unlockAll] = await Promise.all([
+    prisma.deck.findMany({
+      where: { deletedAt: null },
+      select: { id: true, name: true, learnedAt: true },
+    }),
+    isUnlockAllDecksEnabled(),
+  ]);
+  const lockStatus = computeDeckLockStatus(decks, { unlockAll });
   return decks
     .filter((d) => {
       const unit = getDeckUnitNumber(d.name);
