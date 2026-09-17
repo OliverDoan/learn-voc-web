@@ -25,7 +25,8 @@
     "gen:examples:dict": "tsx --env-file=.env scripts/generate-examples-dict.ts",
     "data:export": "tsx --env-file=.env scripts/export-data.ts",
     "data:load": "tsx --env-file=.env scripts/load-data.ts",
-    "notes:wordfamily": "tsx --env-file=.env scripts/add-wordfamily-notes.ts"
+    "notes:wordfamily": "tsx --env-file=.env scripts/add-wordfamily-notes.ts",
+    "practice:load": "tsx --env-file=.env scripts/load-practice-data.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.19.3",

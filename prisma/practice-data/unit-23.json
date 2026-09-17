@@ -1,0 +1,247 @@
+{
+  "unit": 23,
+  "deck": "Unit 23: Sức khỏe thể chất và tinh thần",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "care",
+      "sentences": [
+        { "english": "Taking good care of your body starts with daily habits.", "vietnamese": "Chăm sóc cơ thể tốt bắt đầu từ những thói quen hằng ngày." },
+        { "english": "Old people in our neighbourhood need more care during the cold season.", "vietnamese": "Người già trong khu phố của chúng tôi cần được chăm sóc nhiều hơn vào mùa lạnh." },
+        { "english": "Does your grandmother receive good care at the local clinic?", "vietnamese": "Bà của bạn có được chăm sóc tốt ở phòng khám địa phương không?" },
+        { "english": "The nurse took care of every patient with a friendly smile.", "vietnamese": "Cô y tá chăm sóc từng bệnh nhân với một nụ cười thân thiện." },
+        { "english": "With proper care, your skin will look fresh even at fifty.", "vietnamese": "Với sự chăm sóc đúng cách, làn da của bạn sẽ trông tươi tắn ngay cả khi năm mươi tuổi." }
+      ]
+    },
+    {
+      "word": "health",
+      "sentences": [
+        { "english": "Fresh vegetables and a daily walk are very good for your health.", "vietnamese": "Rau tươi và việc đi bộ hàng ngày rất tốt cho sức khỏe của bạn." },
+        { "english": "Smoking damages your health more than most people believe.", "vietnamese": "Hút thuốc làm tổn hại sức khỏe của bạn nhiều hơn hầu hết mọi người vẫn tin." },
+        { "english": "The doctor said my health has improved since I quit drinking beer.", "vietnamese": "Bác sĩ nói sức khỏe của tôi đã cải thiện kể từ khi tôi bỏ uống bia." },
+        { "english": "Are you worried about your mother's health after the long flight?", "vietnamese": "Bạn có lo lắng về sức khỏe của mẹ bạn sau chuyến bay dài không?" },
+        { "english": "Good sleep and a balanced diet protect your health for many years.", "vietnamese": "Giấc ngủ ngon và chế độ ăn cân bằng bảo vệ sức khỏe của bạn trong nhiều năm." }
+      ]
+    },
+    {
+      "word": "condition",
+      "sentences": [
+        { "english": "Her heart is in good condition because she avoids sugar and oily food.", "vietnamese": "Tim của cô ấy ở trong tình trạng tốt vì cô ấy tránh đường và đồ ăn nhiều dầu mỡ." },
+        { "english": "The old building is in terrible condition after the heavy flood.", "vietnamese": "Tòa nhà cũ đang trong tình trạng tồi tệ sau trận lụt lớn." },
+        { "english": "My uncle has a serious heart condition, so he avoids spicy food.", "vietnamese": "Chú tôi có một tình trạng tim nghiêm trọng, nên chú ấy tránh đồ ăn cay." },
+        { "english": "Will the road be in better condition when the rainy season ends?", "vietnamese": "Con đường sẽ ở trong tình trạng tốt hơn khi mùa mưa kết thúc chứ?" },
+        { "english": "Doctors are treating her skin condition with a cream twice a day.", "vietnamese": "Các bác sĩ đang điều trị tình trạng da của cô ấy bằng một loại kem hai lần một ngày." }
+      ]
+    },
+    {
+      "word": "anxious",
+      "sentences": [
+        { "english": "I always feel anxious before an important interview.", "vietnamese": "Tôi luôn cảm thấy lo lắng trước một buổi phỏng vấn quan trọng." },
+        { "english": "She was anxious about her first job interview last Monday.", "vietnamese": "Cô ấy đã lo lắng về buổi phỏng vấn xin việc đầu tiên vào thứ Hai tuần trước." },
+        { "english": "Do not feel anxious before the exam; just revise every evening.", "vietnamese": "Đừng cảm thấy lo lắng trước kỳ thi; chỉ cần ôn bài mỗi tối." },
+        { "english": "Many students become anxious when the teacher announces their grades.", "vietnamese": "Nhiều học sinh trở nên lo lắng khi giáo viên công bố điểm của họ." },
+        { "english": "He has been anxious since the company delayed his contract.", "vietnamese": "Anh ấy đã lo lắng kể từ khi công ty trì hoãn hợp đồng của anh ấy." }
+      ]
+    },
+    {
+      "word": "damage",
+      "sentences": [
+        { "english": "Too much alcohol can damage your stomach after only a few years.", "vietnamese": "Quá nhiều rượu bia có thể làm tổn hại dạ dày của bạn chỉ sau vài năm." },
+        { "english": "Loud music at the nightclub can damage your ears in one evening.", "vietnamese": "Nhạc lớn ở hộp đêm có thể làm tổn hại tai của bạn chỉ trong một buổi tối." },
+        { "english": "The typhoon damaged many houses along the coast last week.", "vietnamese": "Cơn bão đã làm tổn hại nhiều ngôi nhà dọc bờ biển tuần trước." },
+        { "english": "Cheap sunglasses are damaging her eyes instead of protecting them.", "vietnamese": "Kính râm rẻ tiền đang làm tổn hại mắt cô ấy thay vì bảo vệ chúng." },
+        { "english": "Do not damage the antique furniture while you move it upstairs.", "vietnamese": "Đừng làm tổn hại món đồ nội thất cổ trong lúc bạn chuyển nó lên gác." }
+      ]
+    },
+    {
+      "word": "body",
+      "sentences": [
+        { "english": "Your body needs both rest and movement to stay strong.", "vietnamese": "Cơ thể bạn cần cả nghỉ ngơi lẫn vận động để giữ được sự khỏe mạnh." },
+        { "english": "Cold water shocks my body every time I swim in the lake.", "vietnamese": "Nước lạnh làm cơ thể tôi bị sốc mỗi lần tôi bơi trong hồ." },
+        { "english": "Drinking enough water helps the body remove waste naturally.", "vietnamese": "Uống đủ nước giúp cơ thể loại bỏ chất thải một cách tự nhiên." },
+        { "english": "My whole body ached after we hiked up the steep hill.", "vietnamese": "Cả cơ thể tôi đau nhức sau khi chúng tôi leo lên ngọn đồi dốc." },
+        { "english": "Does your body feel tired after a long flight to Europe?", "vietnamese": "Cơ thể bạn có thấy mệt sau một chuyến bay dài tới châu Âu không?" }
+      ]
+    },
+    {
+      "word": "embarrassed",
+      "sentences": [
+        { "english": "He felt embarrassed to tell the dentist he never flossed.", "vietnamese": "Anh ấy thấy xấu hổ khi phải nói với nha sĩ rằng mình chưa bao giờ dùng chỉ nha khoa." },
+        { "english": "I was embarrassed when I forgot my neighbour's surname at the party.", "vietnamese": "Tôi đã xấu hổ khi tôi quên mất họ của người hàng xóm ở bữa tiệc." },
+        { "english": "Do not feel embarrassed about asking the nurse a simple question.", "vietnamese": "Đừng cảm thấy xấu hổ khi hỏi cô y tá một câu hỏi đơn giản." },
+        { "english": "She looked embarrassed after spilling wine on the white carpet.", "vietnamese": "Cô ấy trông xấu hổ sau khi làm đổ rượu vang lên tấm thảm trắng." },
+        { "english": "Are you embarrassed to speak English in front of a foreigner?", "vietnamese": "Bạn có xấu hổ khi nói tiếng Anh trước mặt một người nước ngoài không?" }
+      ]
+    },
+    {
+      "word": "weight",
+      "sentences": [
+        { "english": "She lost a lot of weight after following a strict diet.", "vietnamese": "Cô ấy giảm được rất nhiều cân sau khi theo một chế độ ăn nghiêm ngặt." },
+        { "english": "Many people gain weight during the holiday because of sweet snacks.", "vietnamese": "Nhiều người tăng cân trong kỳ nghỉ vì đồ ăn vặt ngọt." },
+        { "english": "The nurse checks my weight every month at the small clinic.", "vietnamese": "Cô y tá kiểm tra cân nặng của tôi mỗi tháng ở phòng khám nhỏ." },
+        { "english": "Will you lose weight if you stop eating oily food?", "vietnamese": "Bạn sẽ giảm cân nếu bạn ngừng ăn đồ nhiều dầu mỡ chứ?" },
+        { "english": "Carrying that heavy weight up the hill made him breathe hard.", "vietnamese": "Việc vác khối nặng đó lên đồi khiến anh ấy phải thở dốc." }
+      ]
+    },
+    {
+      "word": "exercise",
+      "sentences": [
+        { "english": "We exercise together at the gym every morning before work.", "vietnamese": "Chúng tôi tập thể dục cùng nhau ở phòng gym mỗi sáng trước giờ làm." },
+        { "english": "My parents exercised in the park before the sun became too strong.", "vietnamese": "Bố mẹ tôi đã tập thể dục trong công viên trước khi nắng trở nên quá gắt." },
+        { "english": "If you exercise regularly, you will feel more confident about your body.", "vietnamese": "Nếu bạn tập thể dục đều đặn, bạn sẽ cảm thấy tự tin hơn về cơ thể mình." },
+        { "english": "She is exercising at home because the gym is too crowded.", "vietnamese": "Cô ấy đang tập thể dục ở nhà vì phòng gym quá đông." },
+        { "english": "How often do you exercise during a tiring school term?", "vietnamese": "Bạn tập thể dục bao lâu một lần trong một học kỳ mệt mỏi?" }
+      ]
+    },
+    {
+      "word": "muscular",
+      "sentences": [
+        { "english": "After a year of training, my brother looks muscular and confident.", "vietnamese": "Sau một năm luyện tập, anh trai tôi trông cơ bắp và tự tin." },
+        { "english": "The builder looked strong and muscular after years of hard work.", "vietnamese": "Người thợ xây trông rắn rỏi và cơ bắp sau nhiều năm làm việc nặng nhọc." },
+        { "english": "She wants muscular arms, so she trains at the gym daily.", "vietnamese": "Cô ấy muốn có cánh tay cơ bắp, nên cô ấy tập ở phòng gym hằng ngày." },
+        { "english": "Is your relative still as muscular as he was last year?", "vietnamese": "Người họ hàng của bạn có còn cơ bắp như hồi năm ngoái không?" },
+        { "english": "A muscular body does not always mean excellent health.", "vietnamese": "Một cơ thể cơ bắp không phải lúc nào cũng có nghĩa là sức khỏe tuyệt vời." }
+      ]
+    },
+    {
+      "word": "prevent",
+      "sentences": [
+        { "english": "Washing your hands often can prevent many common illnesses.", "vietnamese": "Rửa tay thường xuyên có thể ngăn ngừa nhiều căn bệnh thông thường." },
+        { "english": "Warm clothes prevent colds during the icy days of January.", "vietnamese": "Quần áo ấm ngăn ngừa cảm lạnh trong những ngày giá buốt của tháng Một." },
+        { "english": "The new security system prevented several crimes last month.", "vietnamese": "Hệ thống an ninh mới đã ngăn ngừa vài vụ phạm tội tháng trước." },
+        { "english": "Can a simple mask prevent pollution from harming your lungs?", "vietnamese": "Một chiếc khẩu trang đơn giản có thể ngăn ngừa ô nhiễm gây hại cho phổi của bạn không?" },
+        { "english": "Washing vegetables carefully is preventing many stomach problems in our family.", "vietnamese": "Việc rửa rau cẩn thận đang ngăn ngừa nhiều vấn đề dạ dày trong gia đình chúng tôi." }
+      ]
+    },
+    {
+      "word": "obviously",
+      "sentences": [
+        { "english": "Obviously, a home-cooked meal is better for you than takeaway food.", "vietnamese": "Rõ ràng là bữa ăn nấu tại nhà tốt cho bạn hơn đồ ăn mang về." },
+        { "english": "He is obviously nervous before every important interview.", "vietnamese": "Anh ấy rõ ràng là hồi hộp trước mỗi buổi phỏng vấn quan trọng." },
+        { "english": "The food was obviously undercooked, so we sent it back.", "vietnamese": "Món ăn rõ ràng là chưa chín, nên chúng tôi đã trả lại." },
+        { "english": "Obviously, you should not drink alcohol before driving home.", "vietnamese": "Rõ ràng là bạn không nên uống rượu bia trước khi lái xe về nhà." },
+        { "english": "She was obviously tipsy after only two glasses of wine.", "vietnamese": "Cô ấy rõ ràng là đã ngà ngà sau chỉ hai ly rượu vang." }
+      ]
+    },
+    {
+      "word": "awake",
+      "sentences": [
+        { "english": "A strong cup of coffee keeps me awake during long boring meetings.", "vietnamese": "Một tách cà phê đậm giúp tôi tỉnh táo trong những cuộc họp dài và nhàm chán." },
+        { "english": "The baby stayed awake all night because of the noisy street.", "vietnamese": "Em bé đã thức tỉnh táo cả đêm vì con phố ồn ào." },
+        { "english": "Are you still awake, or should I call you tomorrow morning?", "vietnamese": "Bạn còn thức không, hay tôi nên gọi bạn vào sáng mai?" },
+        { "english": "Loud fireworks kept the whole neighbourhood awake until midnight.", "vietnamese": "Pháo hoa ầm ĩ khiến cả khu phố thức đến nửa đêm." },
+        { "english": "I remained awake during the boring film about the war.", "vietnamese": "Tôi vẫn tỉnh táo trong suốt bộ phim nhàm chán về chiến tranh." }
+      ]
+    },
+    {
+      "word": "heartbeat",
+      "sentences": [
+        { "english": "After climbing the steep hill, I could feel my heartbeat getting faster.", "vietnamese": "Sau khi leo lên ngọn đồi dốc, tôi có thể cảm nhận nhịp tim mình đập nhanh hơn." },
+        { "english": "The doctor listened to my heartbeat and said everything was normal.", "vietnamese": "Bác sĩ đã nghe nhịp tim của tôi và nói mọi thứ đều bình thường." },
+        { "english": "Her heartbeat became faster when the pilot announced the delay.", "vietnamese": "Nhịp tim của cô ấy đập nhanh hơn khi phi công thông báo về sự trì hoãn." },
+        { "english": "Can too much coffee change your heartbeat during a quiet afternoon?", "vietnamese": "Quá nhiều cà phê có thể làm thay đổi nhịp tim của bạn trong một buổi chiều yên tĩnh không?" },
+        { "english": "I could hear my own heartbeat inside the dark cave.", "vietnamese": "Tôi có thể nghe thấy nhịp tim của chính mình bên trong hang động tối." }
+      ]
+    },
+    {
+      "word": "blood",
+      "sentences": [
+        { "english": "Walking leisurely every evening helps your blood flow much better.", "vietnamese": "Đi bộ thong thả mỗi tối giúp máu lưu thông tốt hơn nhiều." },
+        { "english": "The nurse took a small sample of blood from my arm.", "vietnamese": "Cô y tá đã lấy một mẫu máu nhỏ từ cánh tay tôi." },
+        { "english": "Too much salt in your food raises blood pressure quickly.", "vietnamese": "Quá nhiều muối trong đồ ăn làm tăng huyết áp rất nhanh." },
+        { "english": "Have you ever given blood at the hospital near the market?", "vietnamese": "Bạn đã bao giờ hiến máu ở bệnh viện gần chợ chưa?" },
+        { "english": "Icy weather makes blood move more slowly through your legs.", "vietnamese": "Thời tiết giá buốt khiến máu di chuyển chậm hơn trong chân bạn." }
+      ]
+    },
+    {
+      "word": "mind",
+      "sentences": [
+        { "english": "A quiet walk in the forest relaxes my mind after a tiring day.", "vietnamese": "Một buổi đi dạo yên tĩnh trong rừng làm thư giãn tâm trí tôi sau một ngày mệt mỏi." },
+        { "english": "Meditation keeps my mind calm even in a bustling city centre.", "vietnamese": "Thiền giữ cho tâm trí tôi bình tĩnh ngay cả ở trung tâm thành phố náo nhiệt." },
+        { "english": "Her mind was full of worries before the wedding celebration.", "vietnamese": "Tâm trí cô ấy đầy những lo lắng trước lễ cưới." },
+        { "english": "Do not let a small mistake control your mind all day.", "vietnamese": "Đừng để một lỗi nhỏ điều khiển tâm trí bạn cả ngày." },
+        { "english": "Travelling opens your mind to new cultures and customs.", "vietnamese": "Việc đi du lịch mở rộng tâm trí bạn với những nền văn hóa và phong tục mới." }
+      ]
+    },
+    {
+      "word": "brain",
+      "sentences": [
+        { "english": "Reading books every night is useful training for your brain.", "vietnamese": "Đọc sách mỗi tối là bài luyện tập hữu ích cho não bộ của bạn." },
+        { "english": "Sugar gives your brain quick energy, but the effect does not last.", "vietnamese": "Đường mang lại cho não bộ của bạn năng lượng nhanh, nhưng hiệu quả không kéo dài." },
+        { "english": "Scientists have discovered how the brain stores old memories.", "vietnamese": "Các nhà khoa học đã khám phá ra cách não bộ lưu giữ những ký ức cũ." },
+        { "english": "Does loud noise stop your brain from memorising new vocabulary?", "vietnamese": "Tiếng ồn lớn có ngăn não bộ của bạn ghi nhớ từ vựng mới không?" },
+        { "english": "Puzzles are training my brain while I wait for the flight.", "vietnamese": "Những câu đố đang rèn luyện não bộ của tôi trong khi tôi chờ chuyến bay." }
+      ]
+    },
+    {
+      "word": "mindful",
+      "sentences": [
+        { "english": "Being mindful while eating helps you enjoy every delicious bite.", "vietnamese": "Chú tâm khi ăn giúp bạn thưởng thức từng miếng ngon." },
+        { "english": "Be mindful of your spending, or you will be broke by Friday.", "vietnamese": "Hãy chú tâm đến việc chi tiêu của bạn, nếu không bạn sẽ cháy túi vào thứ Sáu." },
+        { "english": "A mindful traveller always respects the local customs.", "vietnamese": "Một người du lịch chú tâm luôn tôn trọng phong tục địa phương." },
+        { "english": "She became more mindful after she started a strict diet.", "vietnamese": "Cô ấy trở nên chú tâm hơn sau khi cô ấy bắt đầu một chế độ ăn nghiêm ngặt." },
+        { "english": "Are you mindful of the rubbish you throw on the beach?", "vietnamese": "Bạn có chú tâm đến rác mà bạn vứt trên bãi biển không?" }
+      ]
+    },
+    {
+      "word": "remain",
+      "sentences": [
+        { "english": "Try to remain calm even when you feel stressed.", "vietnamese": "Hãy cố gắng vẫn giữ bình tĩnh ngay cả khi bạn thấy căng thẳng." },
+        { "english": "Only a few tourists remained at the campsite after the storm.", "vietnamese": "Chỉ còn vài khách du lịch vẫn ở lại khu cắm trại sau cơn bão." },
+        { "english": "The temple has remained peaceful for hundreds of years.", "vietnamese": "Ngôi đền vẫn giữ được sự yên bình suốt hàng trăm năm." },
+        { "english": "Will the price of accommodation remain reasonable next season?", "vietnamese": "Giá chỗ ở sẽ vẫn giữ mức hợp lý vào mùa tới chứ?" },
+        { "english": "Some leftovers remain in the bowl, so do not cook more rice.", "vietnamese": "Vẫn còn ít đồ ăn thừa trong bát, nên đừng nấu thêm cơm." }
+      ]
+    },
+    {
+      "word": "curious",
+      "sentences": [
+        { "english": "I was curious about how much a healthy diet could change my mood.", "vietnamese": "Tôi tò mò không biết một chế độ ăn lành mạnh có thể thay đổi tâm trạng của mình nhiều đến đâu." },
+        { "english": "Children are naturally curious about wildlife in the forest.", "vietnamese": "Trẻ em vốn tò mò về động vật hoang dã trong rừng." },
+        { "english": "He is curious to know why his neighbour moved away.", "vietnamese": "Anh ấy tò mò muốn biết vì sao người hàng xóm của mình chuyển đi." },
+        { "english": "Were you curious about the hidden alley behind the market?", "vietnamese": "Bạn có tò mò về con hẻm khuất phía sau chợ không?" },
+        { "english": "A curious visitor asked our guide about the ancient pagoda.", "vietnamese": "Một vị khách tò mò đã hỏi hướng dẫn viên của chúng tôi về ngôi chùa cổ." }
+      ]
+    },
+    {
+      "word": "extraordinary",
+      "sentences": [
+        { "english": "She made an extraordinary recovery and now feels satisfied with her life.", "vietnamese": "Cô ấy hồi phục một cách phi thường và giờ cảm thấy hài lòng với cuộc sống của mình." },
+        { "english": "The scenery around the bay was absolutely extraordinary at sunrise.", "vietnamese": "Phong cảnh quanh vịnh thật sự phi thường vào lúc bình minh." },
+        { "english": "He has an extraordinary memory for names and addresses.", "vietnamese": "Anh ấy có một trí nhớ phi thường với tên và địa chỉ." },
+        { "english": "That chef creates extraordinary dishes from very plain ingredients.", "vietnamese": "Đầu bếp đó tạo ra những món ăn phi thường từ những nguyên liệu rất bình thường." },
+        { "english": "It takes extraordinary energy to hike up that mountain twice.", "vietnamese": "Cần một nguồn năng lượng phi thường để leo lên ngọn núi đó hai lần." }
+      ]
+    },
+    {
+      "word": "sight",
+      "sentences": [
+        { "english": "My grandfather has poor sight, so he hardly reads the newspaper now.", "vietnamese": "Ông tôi có thị lực kém, nên giờ ông hiếm khi đọc báo." },
+        { "english": "Reading in poor light every night will harm your sight.", "vietnamese": "Đọc sách dưới ánh sáng yếu mỗi tối sẽ làm hại thị lực của bạn." },
+        { "english": "The doctor tested my sight before I applied for a pilot course.", "vietnamese": "Bác sĩ đã kiểm tra thị lực của tôi trước khi tôi nộp đơn vào khóa học phi công." },
+        { "english": "Carrots and fresh vegetables are good for your sight.", "vietnamese": "Cà rốt và rau tươi thì tốt cho thị lực của bạn." },
+        { "english": "Has your grandfather's sight improved since the operation last year?", "vietnamese": "Thị lực của ông bạn đã cải thiện kể từ ca phẫu thuật năm ngoái chưa?" }
+      ]
+    },
+    {
+      "word": "dentist",
+      "sentences": [
+        { "english": "You should visit the dentist twice a year to avoid serious problems.", "vietnamese": "Bạn nên đi khám nha sĩ hai lần một năm để tránh những vấn đề nghiêm trọng." },
+        { "english": "My dentist told me to avoid sweet drinks and sugar.", "vietnamese": "Nha sĩ của tôi bảo tôi tránh đồ uống ngọt và đường." },
+        { "english": "She is working as a dentist in a small clinic downtown.", "vietnamese": "Cô ấy đang làm nha sĩ ở một phòng khám nhỏ trong trung tâm." },
+        { "english": "Did the dentist charge a reasonable fee for the treatment?", "vietnamese": "Nha sĩ có tính một mức phí hợp lý cho ca điều trị không?" },
+        { "english": "Book an appointment with the dentist before the holiday starts.", "vietnamese": "Hãy đặt lịch hẹn với nha sĩ trước khi kỳ nghỉ bắt đầu." }
+      ]
+    },
+    {
+      "word": "unlikely",
+      "sentences": [
+        { "english": "It is unlikely that he will be absent from the gym this week.", "vietnamese": "Khó có khả năng anh ấy sẽ vắng mặt ở phòng gym tuần này." },
+        { "english": "It is unlikely that the weather will remain sunny all weekend.", "vietnamese": "Khó có khả năng thời tiết sẽ vẫn nắng suốt cuối tuần." },
+        { "english": "An unlikely hero saved the children from the flood last year.", "vietnamese": "Một người hùng khó ai ngờ đã cứu bọn trẻ khỏi trận lụt năm ngoái." },
+        { "english": "Rain is unlikely this morning, so we can sunbathe on the beach.", "vietnamese": "Mưa khó xảy ra sáng nay, nên chúng ta có thể tắm nắng trên bãi biển." },
+        { "english": "He is unlikely to succeed without a proper qualification.", "vietnamese": "Anh ấy khó có khả năng thành công nếu không có bằng cấp phù hợp." }
+      ]
+    }
+  ]
+}

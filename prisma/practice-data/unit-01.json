@@ -1,0 +1,247 @@
+{
+  "unit": 1,
+  "deck": "Unit 1: Giấc mơ du học",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ. Unit đầu tiên nên chưa có từ cũ để chêm.",
+  "items": [
+    {
+      "word": "idea",
+      "sentences": [
+        { "english": "I have a good idea for the project.", "vietnamese": "Tôi có một ý tưởng hay cho dự án." },
+        { "english": "Her idea about learning English through films really works for me.", "vietnamese": "Ý tưởng của cô ấy về việc học tiếng Anh qua phim thực sự hiệu quả với tôi." },
+        { "english": "Do you have any ideas for our weekend trip?", "vietnamese": "Bạn có ý tưởng nào cho chuyến đi cuối tuần của chúng ta không?" },
+        { "english": "The teacher wrote all our ideas on the board yesterday.", "vietnamese": "Thầy giáo đã viết tất cả ý tưởng của chúng tôi lên bảng hôm qua." },
+        { "english": "I have never heard such a strange idea before.", "vietnamese": "Tôi chưa bao giờ nghe một ý tưởng kỳ lạ như vậy trước đây." }
+      ]
+    },
+    {
+      "word": "abroad",
+      "sentences": [
+        { "english": "She is studying abroad in Japan.", "vietnamese": "Cô ấy đang du học ở Nhật Bản." },
+        { "english": "My brother has lived abroad for almost five years.", "vietnamese": "Anh trai tôi đã sống ở nước ngoài gần năm năm." },
+        { "english": "Will you work abroad after you finish university?", "vietnamese": "Bạn sẽ làm việc ở nước ngoài sau khi học xong đại học chứ?" },
+        { "english": "We travelled abroad for the first time last summer.", "vietnamese": "Chúng tôi đã đi nước ngoài lần đầu tiên vào mùa hè năm ngoái." },
+        { "english": "Living abroad is not always as easy as people think.", "vietnamese": "Sống ở nước ngoài không phải lúc nào cũng dễ như mọi người nghĩ." }
+      ]
+    },
+    {
+      "word": "culture",
+      "sentences": [
+        { "english": "Vietnamese culture is rich and diverse.", "vietnamese": "Văn hoá Việt Nam phong phú và đa dạng." },
+        { "english": "Young people should learn about other cultures with an open mind.", "vietnamese": "Người trẻ nên tìm hiểu về các nền văn hoá khác với tâm thế cởi mở." },
+        { "english": "Food is an important part of every culture.", "vietnamese": "Đồ ăn là một phần quan trọng của mọi nền văn hoá." },
+        { "english": "She is writing a book about Japanese culture.", "vietnamese": "Cô ấy đang viết một cuốn sách về văn hoá Nhật Bản." },
+        { "english": "Do not judge a culture before you understand it.", "vietnamese": "Đừng phán xét một nền văn hoá trước khi bạn hiểu nó." }
+      ]
+    },
+    {
+      "word": "language",
+      "sentences": [
+        { "english": "English is a global language.", "vietnamese": "Tiếng Anh là một ngôn ngữ toàn cầu." },
+        { "english": "My younger sister speaks three foreign languages quite fluently.", "vietnamese": "Em gái tôi nói ba ngoại ngữ khá trôi chảy." },
+        { "english": "Which language do you want to learn next year?", "vietnamese": "Bạn muốn học ngôn ngữ nào vào năm tới?" },
+        { "english": "Body language can help you when words are not enough.", "vietnamese": "Ngôn ngữ cơ thể có thể giúp bạn khi lời nói không đủ." },
+        { "english": "I have studied this language since I was twelve.", "vietnamese": "Tôi đã học ngôn ngữ này từ khi tôi mười hai tuổi." }
+      ]
+    },
+    {
+      "word": "beginner",
+      "sentences": [
+        { "english": "I am still a beginner in English.", "vietnamese": "Tôi vẫn là người mới bắt đầu học tiếng Anh." },
+        { "english": "This book is perfect for beginners who love grammar.", "vietnamese": "Cuốn sách này hoàn hảo cho những người mới bắt đầu yêu thích ngữ pháp." },
+        { "english": "Do not worry; every expert was once a beginner.", "vietnamese": "Đừng lo; mọi chuyên gia đều từng là người mới bắt đầu." },
+        { "english": "She joined a beginner class at the language centre.", "vietnamese": "Cô ấy đã tham gia một lớp dành cho người mới bắt đầu ở trung tâm ngoại ngữ." },
+        { "english": "Our club is welcoming ten new beginners this month.", "vietnamese": "Câu lạc bộ của chúng tôi đang chào đón mười người mới bắt đầu trong tháng này." }
+      ]
+    },
+    {
+      "word": "foreigner",
+      "sentences": [
+        { "english": "He is the only foreigner in our class.", "vietnamese": "Anh ấy là người nước ngoài duy nhất trong lớp tôi." },
+        { "english": "Many foreigners come to Hanoi to teach English.", "vietnamese": "Nhiều người nước ngoài đến Hà Nội để dạy tiếng Anh." },
+        { "english": "I talked to a foreigner at the bus stop yesterday.", "vietnamese": "Hôm qua tôi đã nói chuyện với một người nước ngoài ở trạm xe buýt." },
+        { "english": "Would you feel nervous if a foreigner asked you something?", "vietnamese": "Bạn có thấy lo lắng nếu một người nước ngoài hỏi bạn điều gì đó không?" },
+        { "english": "The old market is always full of curious foreigners.", "vietnamese": "Khu chợ cũ luôn đầy những người nước ngoài tò mò." }
+      ]
+    },
+    {
+      "word": "shy",
+      "sentences": [
+        { "english": "He is too shy to speak in public.", "vietnamese": "Anh ấy quá nhút nhát để nói trước đám đông." },
+        { "english": "My little brother is very shy around new people.", "vietnamese": "Em trai tôi rất nhút nhát khi ở gần người lạ." },
+        { "english": "I used to be shy, but now I enjoy talking.", "vietnamese": "Tôi từng nhút nhát, nhưng bây giờ tôi thích trò chuyện." },
+        { "english": "Why are you so shy in front of the camera?", "vietnamese": "Sao bạn lại nhút nhát trước máy quay vậy?" },
+        { "english": "Do not be shy; just raise your hand and answer.", "vietnamese": "Đừng nhút nhát; cứ giơ tay lên và trả lời." }
+      ]
+    },
+    {
+      "word": "scared",
+      "sentences": [
+        { "english": "I was scared of making mistakes when speaking English.", "vietnamese": "Tôi đã sợ mắc lỗi khi nói tiếng Anh." },
+        { "english": "My friend is scared of speaking in front of strangers.", "vietnamese": "Bạn tôi sợ nói trước mặt người lạ." },
+        { "english": "Are you scared of flying on a long trip?", "vietnamese": "Bạn có sợ đi máy bay trong một chuyến đi dài không?" },
+        { "english": "The children looked scared when the lights went out.", "vietnamese": "Bọn trẻ trông sợ hãi khi đèn tắt." },
+        { "english": "I am not scared of failing the test anymore.", "vietnamese": "Tôi không còn sợ trượt bài kiểm tra nữa." }
+      ]
+    },
+    {
+      "word": "difficulty",
+      "sentences": [
+        { "english": "I have difficulty pronouncing this word.", "vietnamese": "Tôi gặp khó khăn khi phát âm từ này." },
+        { "english": "Many students have difficulty writing long essays in English.", "vietnamese": "Nhiều học sinh gặp khó khăn khi viết bài luận dài bằng tiếng Anh." },
+        { "english": "She finished the course without any difficulty at all.", "vietnamese": "Cô ấy đã hoàn thành khoá học mà không gặp bất kỳ khó khăn nào." },
+        { "english": "What difficulties did you face during your first month?", "vietnamese": "Bạn đã gặp những khó khăn gì trong tháng đầu tiên?" },
+        { "english": "We are having difficulty finding a quiet place to study.", "vietnamese": "Chúng tôi đang gặp khó khăn trong việc tìm một nơi yên tĩnh để học." }
+      ]
+    },
+    {
+      "word": "course",
+      "sentences": [
+        { "english": "She signed up for an English course online.", "vietnamese": "Cô ấy đăng ký một khoá học tiếng Anh online." },
+        { "english": "The writing course starts next Monday evening.", "vietnamese": "Khoá học viết bắt đầu vào tối thứ Hai tới." },
+        { "english": "How much does this short course cost?", "vietnamese": "Khoá học ngắn này giá bao nhiêu?" },
+        { "english": "I have finished two courses at this centre already.", "vietnamese": "Tôi đã hoàn thành hai khoá học ở trung tâm này rồi." },
+        { "english": "My cousin is taking a cooking course in Da Nang.", "vietnamese": "Anh họ tôi đang theo một khoá học nấu ăn ở Đà Nẵng." }
+      ]
+    },
+    {
+      "word": "speaker",
+      "sentences": [
+        { "english": "He is a native English speaker.", "vietnamese": "Anh ấy là người bản xứ nói tiếng Anh." },
+        { "english": "The speaker at the conference explained everything very clearly.", "vietnamese": "Diễn giả tại hội nghị đã giải thích mọi thứ rất rõ ràng." },
+        { "english": "Our club invites two speakers every month.", "vietnamese": "Câu lạc bộ của chúng tôi mời hai diễn giả mỗi tháng." },
+        { "english": "Who was the best speaker in the competition last night?", "vietnamese": "Ai là người nói hay nhất trong cuộc thi tối qua?" },
+        { "english": "I am listening to a speaker talk about climate change.", "vietnamese": "Tôi đang nghe một diễn giả nói về biến đổi khí hậu." }
+      ]
+    },
+    {
+      "word": "conversation",
+      "sentences": [
+        { "english": "We had a long conversation about our future.", "vietnamese": "Chúng tôi đã có một cuộc trò chuyện dài về tương lai." },
+        { "english": "I had a short conversation with my new neighbour.", "vietnamese": "Tôi đã có một cuộc trò chuyện ngắn với người hàng xóm mới." },
+        { "english": "Starting a conversation in English is easier than I expected.", "vietnamese": "Bắt đầu một cuộc trò chuyện bằng tiếng Anh dễ hơn tôi nghĩ." },
+        { "english": "Do you remember our conversation about studying abroad?", "vietnamese": "Bạn có nhớ cuộc trò chuyện của chúng ta về việc du học không?" },
+        { "english": "Their conversations always last for more than an hour.", "vietnamese": "Những cuộc trò chuyện của họ luôn kéo dài hơn một tiếng." }
+      ]
+    },
+    {
+      "word": "topic",
+      "sentences": [
+        { "english": "Let's change the topic.", "vietnamese": "Hãy đổi chủ đề đi." },
+        { "english": "This topic is too difficult for young learners.", "vietnamese": "Chủ đề này quá khó đối với người học nhỏ tuổi." },
+        { "english": "We have discussed five topics in class this week.", "vietnamese": "Chúng tôi đã thảo luận năm chủ đề trong lớp tuần này." },
+        { "english": "Which topic will you choose for your presentation?", "vietnamese": "Bạn sẽ chọn chủ đề nào cho bài thuyết trình của mình?" },
+        { "english": "The teacher is explaining a new topic right now.", "vietnamese": "Thầy giáo đang giải thích một chủ đề mới ngay lúc này." }
+      ]
+    },
+    {
+      "word": "follow",
+      "sentences": [
+        { "english": "It's hard to follow the teacher when he speaks too fast.", "vietnamese": "Khó theo dõi thầy giáo khi thầy nói quá nhanh." },
+        { "english": "Please follow the instructions carefully before you start.", "vietnamese": "Hãy làm theo hướng dẫn cẩn thận trước khi bạn bắt đầu." },
+        { "english": "She follows a strict study plan every evening.", "vietnamese": "Cô ấy làm theo một kế hoạch học tập nghiêm ngặt mỗi tối." },
+        { "english": "I followed the map, but I still got lost.", "vietnamese": "Tôi đã đi theo bản đồ, nhưng tôi vẫn bị lạc." },
+        { "english": "Are you following this podcast about world news?", "vietnamese": "Bạn có đang theo dõi podcast về tin tức thế giới này không?" }
+      ]
+    },
+    {
+      "word": "understand",
+      "sentences": [
+        { "english": "I don't understand what you mean.", "vietnamese": "Tôi không hiểu ý bạn." },
+        { "english": "Now I understand why she wants to study abroad.", "vietnamese": "Bây giờ tôi hiểu tại sao cô ấy muốn đi du học." },
+        { "english": "Does your teacher understand your questions in English?", "vietnamese": "Thầy giáo của bạn có hiểu các câu hỏi của bạn bằng tiếng Anh không?" },
+        { "english": "Children understand new words faster than adults do.", "vietnamese": "Trẻ em hiểu từ mới nhanh hơn người lớn." },
+        { "english": "I will understand this lesson better after some practice.", "vietnamese": "Tôi sẽ hiểu bài học này hơn sau một chút luyện tập." }
+      ]
+    },
+    {
+      "word": "improve",
+      "sentences": [
+        { "english": "I want to improve my listening skills.", "vietnamese": "Tôi muốn cải thiện kỹ năng nghe của mình." },
+        { "english": "My writing has improved a lot since last year.", "vietnamese": "Kỹ năng viết của tôi đã cải thiện rất nhiều từ năm ngoái." },
+        { "english": "Reading every day improves your vocabulary naturally.", "vietnamese": "Đọc mỗi ngày cải thiện vốn từ vựng của bạn một cách tự nhiên." },
+        { "english": "How can I improve my pronunciation in three months?", "vietnamese": "Làm sao tôi có thể cải thiện phát âm của mình trong ba tháng?" },
+        { "english": "The school is improving its language programme this year.", "vietnamese": "Trường đang cải thiện chương trình ngoại ngữ của mình trong năm nay." }
+      ]
+    },
+    {
+      "word": "vocabulary",
+      "sentences": [
+        { "english": "Reading books helps you build vocabulary.", "vietnamese": "Đọc sách giúp bạn xây dựng vốn từ vựng." },
+        { "english": "I learn ten new vocabulary words before breakfast every morning.", "vietnamese": "Tôi học mười từ vựng mới trước bữa sáng mỗi buổi sáng." },
+        { "english": "Her vocabulary has grown quickly since she moved abroad.", "vietnamese": "Vốn từ vựng của cô ấy đã tăng nhanh từ khi cô ấy chuyển ra nước ngoài." },
+        { "english": "Do you write new vocabulary in a small notebook?", "vietnamese": "Bạn có ghi từ vựng mới vào một cuốn sổ nhỏ không?" },
+        { "english": "Without enough vocabulary, you cannot express your ideas clearly.", "vietnamese": "Nếu không có đủ từ vựng, bạn không thể diễn đạt ý tưởng của mình rõ ràng." }
+      ]
+    },
+    {
+      "word": "skill",
+      "sentences": [
+        { "english": "Speaking is the hardest skill for me.", "vietnamese": "Nói là kỹ năng khó nhất đối với tôi." },
+        { "english": "Listening is a skill that needs daily practice.", "vietnamese": "Nghe là một kỹ năng cần luyện tập hàng ngày." },
+        { "english": "This job requires good computer skills and a lot of patience.", "vietnamese": "Công việc này đòi hỏi kỹ năng máy tính tốt và rất nhiều kiên nhẫn." },
+        { "english": "Which skill do you want to improve first?", "vietnamese": "Bạn muốn cải thiện kỹ năng nào trước?" },
+        { "english": "He has developed his cooking skills since he moved out.", "vietnamese": "Anh ấy đã phát triển kỹ năng nấu ăn từ khi anh ấy dọn ra ở riêng." }
+      ]
+    },
+    {
+      "word": "confident",
+      "sentences": [
+        { "english": "She feels confident speaking English now.", "vietnamese": "Bây giờ cô ấy cảm thấy tự tin khi nói tiếng Anh." },
+        { "english": "I am confident that our team will win the prize.", "vietnamese": "Tôi tự tin rằng đội của chúng tôi sẽ giành được giải thưởng." },
+        { "english": "He was not confident enough to join the debate.", "vietnamese": "Anh ấy đã không đủ tự tin để tham gia buổi tranh luận." },
+        { "english": "Are you confident about your test results this time?", "vietnamese": "Lần này bạn có tự tin về kết quả bài kiểm tra của mình không?" },
+        { "english": "Practice will make you more confident in real conversations.", "vietnamese": "Luyện tập sẽ khiến bạn tự tin hơn trong các cuộc trò chuyện thực tế." }
+      ]
+    },
+    {
+      "word": "progress",
+      "sentences": [
+        { "english": "I'm making good progress with my English.", "vietnamese": "Tôi đang tiến bộ tốt với tiếng Anh." },
+        { "english": "The students have made steady progress this semester.", "vietnamese": "Các học sinh đã có sự tiến bộ đều đặn trong học kỳ này." },
+        { "english": "Her progress in speaking surprised the whole class.", "vietnamese": "Sự tiến bộ trong kỹ năng nói của cô ấy khiến cả lớp ngạc nhiên." },
+        { "english": "Do you keep a record of your daily progress?", "vietnamese": "Bạn có ghi lại sự tiến bộ hàng ngày của mình không?" },
+        { "english": "Without regular practice, progress will be very slow.", "vietnamese": "Nếu không luyện tập thường xuyên, sự tiến bộ sẽ rất chậm." }
+      ]
+    },
+    {
+      "word": "communicate",
+      "sentences": [
+        { "english": "We communicate by email every day.", "vietnamese": "Chúng tôi giao tiếp qua email mỗi ngày." },
+        { "english": "She communicates with her students through a mobile app.", "vietnamese": "Cô ấy giao tiếp với học sinh của mình qua một ứng dụng di động." },
+        { "english": "How do you communicate when you do not share a language?", "vietnamese": "Bạn giao tiếp thế nào khi hai người không chung một ngôn ngữ?" },
+        { "english": "We communicated mostly by gestures during the whole trip.", "vietnamese": "Chúng tôi đã giao tiếp chủ yếu bằng cử chỉ trong suốt chuyến đi." },
+        { "english": "Learning to communicate clearly takes time and patience.", "vietnamese": "Học cách giao tiếp rõ ràng cần thời gian và sự kiên nhẫn." }
+      ]
+    },
+    {
+      "word": "visitor",
+      "sentences": [
+        { "english": "Each visitor to the museum gets a free map.", "vietnamese": "Mỗi du khách đến bảo tàng được nhận một bản đồ miễn phí." },
+        { "english": "The old town welcomes thousands of visitors every summer.", "vietnamese": "Phố cổ đón hàng nghìn du khách mỗi mùa hè." },
+        { "english": "A visitor is waiting for you at the front desk.", "vietnamese": "Một vị khách đang đợi bạn ở quầy lễ tân." },
+        { "english": "How many visitors came to the festival last weekend?", "vietnamese": "Có bao nhiêu du khách đã đến lễ hội cuối tuần trước?" },
+        { "english": "Visitors must show their tickets before entering the hall.", "vietnamese": "Khách tham quan phải xuất trình vé trước khi vào hội trường." }
+      ]
+    },
+    {
+      "word": "original",
+      "sentences": [
+        { "english": "I prefer watching films in the original language.", "vietnamese": "Tôi thích xem phim bằng ngôn ngữ nguyên bản." },
+        { "english": "The original plan was to leave early in the morning.", "vietnamese": "Kế hoạch ban đầu là rời đi sớm vào buổi sáng." },
+        { "english": "Please keep the original document in a safe place.", "vietnamese": "Hãy giữ tài liệu gốc ở một nơi an toàn." },
+        { "english": "Is this the original version of the song?", "vietnamese": "Đây có phải là phiên bản gốc của bài hát không?" },
+        { "english": "They have kept the original design of the old house.", "vietnamese": "Họ đã giữ thiết kế ban đầu của ngôi nhà cũ." }
+      ]
+    },
+    {
+      "word": "certificate",
+      "sentences": [
+        { "english": "She earned an IELTS certificate with a 7.0 score.", "vietnamese": "Cô ấy đã đạt chứng chỉ IELTS với điểm 7.0." },
+        { "english": "You will receive a certificate after finishing the course.", "vietnamese": "Bạn sẽ nhận được một chứng chỉ sau khi hoàn thành khoá học." },
+        { "english": "My certificate expires in two years, so I must take the test again.", "vietnamese": "Chứng chỉ của tôi hết hạn sau hai năm, nên tôi phải thi lại." },
+        { "english": "Do you need a language certificate to apply for this job?", "vietnamese": "Bạn có cần chứng chỉ ngoại ngữ để ứng tuyển công việc này không?" },
+        { "english": "The company keeps copies of all employee certificates.", "vietnamese": "Công ty giữ bản sao của tất cả chứng chỉ của nhân viên." }
+      ]
+    }
+  ]
+}

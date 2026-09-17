@@ -1,0 +1,607 @@
+{
+  "unit": 21,
+  "deck": "Unit 21: Thiên nhiên và làng quê",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "nature",
+      "sentences": [
+        {
+          "english": "Spending time in nature helps me feel calm and happy.",
+          "vietnamese": "Dành thời gian giữa thiên nhiên giúp tôi thấy bình yên và hạnh phúc."
+        },
+        {
+          "english": "Next month I will spend a long holiday close to nature.",
+          "vietnamese": "Tháng tới tôi sẽ dành một kỳ nghỉ dài gần gũi với thiên nhiên."
+        },
+        {
+          "english": "We should keep nature clean and never throw rubbish into the river.",
+          "vietnamese": "Chúng ta nên giữ thiên nhiên sạch sẽ và đừng bao giờ vứt rác xuống sông."
+        },
+        {
+          "english": "Have you ever explored nature outside your hometown?",
+          "vietnamese": "Bạn đã bao giờ khám phá thiên nhiên bên ngoài quê hương mình chưa?"
+        },
+        {
+          "english": "Nature around this area looks amazing at the beginning of the rainy season.",
+          "vietnamese": "Thiên nhiên quanh khu vực này trông tuyệt vời vào đầu mùa mưa."
+        }
+      ]
+    },
+    {
+      "word": "valley",
+      "sentences": [
+        {
+          "english": "A cool breeze blew through the peaceful valley early every morning.",
+          "vietnamese": "Một làn gió mát thổi qua thung lũng yên bình vào sáng sớm mỗi ngày."
+        },
+        {
+          "english": "The valley is famous for its fresh air and green crops.",
+          "vietnamese": "Thung lũng này nổi tiếng với không khí trong lành và những cánh đồng hoa màu xanh mướt."
+        },
+        {
+          "english": "Last year we discovered a hidden valley during our long journey.",
+          "vietnamese": "Năm ngoái chúng tôi phát hiện ra một thung lũng ẩn mình trong chuyến hành trình dài."
+        },
+        {
+          "english": "Are there any homestays in that quiet valley?",
+          "vietnamese": "Trong thung lũng yên tĩnh đó có homestay nào không?"
+        },
+        {
+          "english": "Farmers in the valley are harvesting rice this week.",
+          "vietnamese": "Nông dân trong thung lũng đang thu hoạch lúa trong tuần này."
+        }
+      ]
+    },
+    {
+      "word": "quiet",
+      "sentences": [
+        {
+          "english": "This quiet neighbourhood is very far from the noisy city centre.",
+          "vietnamese": "Khu phố yên tĩnh này cách rất xa trung tâm thành phố ồn ào."
+        },
+        {
+          "english": "Please stay quiet while the priest is praying inside the temple.",
+          "vietnamese": "Xin hãy giữ yên lặng khi vị thầy cúng đang cầu nguyện bên trong ngôi đền."
+        },
+        {
+          "english": "The market becomes quiet after sunset in this small town.",
+          "vietnamese": "Khu chợ trở nên yên tĩnh sau khi mặt trời lặn ở thị trấn nhỏ này."
+        },
+        {
+          "english": "Last weekend was very quiet, so we walked around the pond and enjoyed the breeze.",
+          "vietnamese": "Cuối tuần trước rất yên tĩnh, nên chúng tôi đi dạo quanh ao và tận hưởng làn gió."
+        },
+        {
+          "english": "Do you prefer a quiet homestay or a lively hotel downtown?",
+          "vietnamese": "Bạn thích một homestay yên tĩnh hay một khách sạn sôi động ở trung tâm?"
+        }
+      ]
+    },
+    {
+      "word": "range",
+      "sentences": [
+        {
+          "english": "From my balcony I can see a huge range of green mountains.",
+          "vietnamese": "Từ ban công nhà tôi, tôi có thể nhìn thấy một dãy núi xanh khổng lồ."
+        },
+        {
+          "english": "A thick cloud covered the mountain range all morning.",
+          "vietnamese": "Một đám mây dày phủ kín dãy núi suốt cả buổi sáng."
+        },
+        {
+          "english": "We will hike along the range next holiday if the weather stays dry.",
+          "vietnamese": "Chúng tôi sẽ đi bộ đường dài dọc dãy núi vào kỳ nghỉ tới nếu thời tiết vẫn khô ráo."
+        },
+        {
+          "english": "The range protects the village from strong winds every typhoon season.",
+          "vietnamese": "Dãy núi bảo vệ ngôi làng khỏi những cơn gió mạnh vào mỗi mùa bão."
+        },
+        {
+          "english": "Can you see the long range behind those tall buildings?",
+          "vietnamese": "Bạn có nhìn thấy dãy núi dài phía sau những toà nhà cao kia không?"
+        }
+      ]
+    },
+    {
+      "word": "steep",
+      "sentences": [
+        {
+          "english": "The road was so steep that our old vehicle could not move.",
+          "vietnamese": "Con đường dốc đến mức chiếc xe cũ của chúng tôi không thể đi nổi."
+        },
+        {
+          "english": "The path to the pagoda is steep and quite dangerous in the rain.",
+          "vietnamese": "Con đường lên chùa thì dốc và khá nguy hiểm khi trời mưa."
+        },
+        {
+          "english": "Be careful on the steep alley because a heavy shower is approaching.",
+          "vietnamese": "Hãy cẩn thận trên con hẻm dốc vì một cơn mưa rào lớn đang tới gần."
+        },
+        {
+          "english": "We climbed a steep hill and finally reached the old temple.",
+          "vietnamese": "Chúng tôi leo lên một ngọn đồi dốc và cuối cùng đến được ngôi đền cổ."
+        },
+        {
+          "english": "Is the road to your hometown still steep and narrow?",
+          "vietnamese": "Con đường về quê bạn vẫn còn dốc và hẹp phải không?"
+        }
+      ]
+    },
+    {
+      "word": "hill",
+      "sentences": [
+        {
+          "english": "We climbed a small hill and enjoyed a lovely view of the market.",
+          "vietnamese": "Chúng tôi leo lên một ngọn đồi nhỏ và ngắm khung cảnh đáng yêu của khu chợ."
+        },
+        {
+          "english": "Tea plants grow well on the green hills around our village.",
+          "vietnamese": "Những cây chè phát triển tốt trên các ngọn đồi xanh quanh làng chúng tôi."
+        },
+        {
+          "english": "We will climb that hill tomorrow to watch the fireworks.",
+          "vietnamese": "Ngày mai chúng tôi sẽ leo lên ngọn đồi đó để xem pháo hoa."
+        },
+        {
+          "english": "Behind the hill there is a quiet campsite for tourists.",
+          "vietnamese": "Phía sau ngọn đồi có một khu cắm trại yên tĩnh dành cho khách du lịch."
+        },
+        {
+          "english": "Have you ever hiked up this hill to enjoy the amazing view?",
+          "vietnamese": "Bạn đã bao giờ leo lên ngọn đồi này để ngắm khung cảnh tuyệt vời chưa?"
+        }
+      ]
+    },
+    {
+      "word": "leisurely",
+      "sentences": [
+        {
+          "english": "My grandparents walk leisurely around the pond after their home-cooked dinner.",
+          "vietnamese": "Ông bà tôi đi bộ thong thả quanh cái ao sau bữa tối nấu tại nhà."
+        },
+        {
+          "english": "On holiday mornings I cycle leisurely along the quiet country road.",
+          "vietnamese": "Vào những buổi sáng ngày nghỉ, tôi đạp xe thong thả dọc con đường quê yên tĩnh."
+        },
+        {
+          "english": "The old man drank his coffee leisurely and watched the busy market.",
+          "vietnamese": "Ông lão uống cà phê một cách thong thả và ngắm khu chợ đông đúc."
+        },
+        {
+          "english": "Tourists were walking leisurely around the ancient pagoda.",
+          "vietnamese": "Khách du lịch đang đi dạo thong thả quanh ngôi chùa cổ."
+        },
+        {
+          "english": "Shall we eat leisurely instead of rushing to the next tour?",
+          "vietnamese": "Chúng ta ăn thong thả thay vì vội vã đi tới tour tiếp theo nhé?"
+        }
+      ]
+    },
+    {
+      "word": "part",
+      "sentences": [
+        {
+          "english": "This part of the country is famous for fresh fruit and friendly people.",
+          "vietnamese": "Vùng này của đất nước nổi tiếng với trái cây tươi và những con người thân thiện."
+        },
+        {
+          "english": "This part of the town has many old buildings and narrow alleys.",
+          "vietnamese": "Khu vực này của thị trấn có nhiều toà nhà cũ và những con hẻm nhỏ."
+        },
+        {
+          "english": "Which part of the city do you think is the most convenient?",
+          "vietnamese": "Bạn nghĩ khu vực nào của thành phố là tiện lợi nhất?"
+        },
+        {
+          "english": "The southern part of the province was badly damaged by the flood.",
+          "vietnamese": "Vùng phía nam của tỉnh bị trận lụt tàn phá nặng nề."
+        },
+        {
+          "english": "We will visit the oldest part of the temple during our tour.",
+          "vietnamese": "Chúng tôi sẽ tham quan khu vực cổ nhất của ngôi đền trong chuyến tour."
+        }
+      ]
+    },
+    {
+      "word": "explore",
+      "sentences": [
+        {
+          "english": "Tourists love to explore the old temple and the narrow alleys nearby.",
+          "vietnamese": "Du khách rất thích khám phá ngôi chùa cổ và những con hẻm nhỏ gần đó."
+        },
+        {
+          "english": "Last summer we explored a hidden cave near the campsite.",
+          "vietnamese": "Mùa hè năm ngoái chúng tôi đã khám phá một hang động ẩn giấu gần khu cắm trại."
+        },
+        {
+          "english": "I am exploring the local market to find fresh herbs.",
+          "vietnamese": "Tôi đang khám phá khu chợ địa phương để tìm các loại rau thơm tươi."
+        },
+        {
+          "english": "Will you explore the rainforest with a professional guide?",
+          "vietnamese": "Bạn sẽ khám phá khu rừng nhiệt đới cùng một hướng dẫn viên chuyên nghiệp chứ?"
+        },
+        {
+          "english": "Children love to explore every alley in this friendly neighbourhood.",
+          "vietnamese": "Bọn trẻ thích khám phá từng con hẻm trong khu phố thân thiện này."
+        }
+      ]
+    },
+    {
+      "word": "neighbour",
+      "sentences": [
+        {
+          "english": "Our friendly neighbour gave us fresh fruit from his garden.",
+          "vietnamese": "Người hàng xóm thân thiện của chúng tôi cho trái cây tươi hái từ vườn nhà ông."
+        },
+        {
+          "english": "My neighbour is a skilful cook who makes delicious hotpot.",
+          "vietnamese": "Hàng xóm của tôi là một người nấu ăn khéo tay, người làm món lẩu rất ngon."
+        },
+        {
+          "english": "Our neighbours invited us to their daughter's wedding last Sunday.",
+          "vietnamese": "Hàng xóm của chúng tôi đã mời chúng tôi đến đám cưới con gái họ vào Chủ nhật tuần trước."
+        },
+        {
+          "english": "Do your neighbours often share vegetables from their small garden?",
+          "vietnamese": "Hàng xóm của bạn có thường chia sẻ rau từ khu vườn nhỏ của họ không?"
+        },
+        {
+          "english": "A kind neighbour will look after our house while we are on holiday.",
+          "vietnamese": "Một người hàng xóm tốt bụng sẽ trông nhà giúp chúng tôi khi chúng tôi đi nghỉ."
+        }
+      ]
+    },
+    {
+      "word": "custom",
+      "sentences": [
+        {
+          "english": "Welcoming guests with tea is an old custom in this village.",
+          "vietnamese": "Mời khách uống trà là một phong tục lâu đời ở ngôi làng này."
+        },
+        {
+          "english": "Burning incense before the shrine is an important custom here.",
+          "vietnamese": "Thắp hương trước ban thờ là một phong tục quan trọng ở đây."
+        },
+        {
+          "english": "Foreign visitors sometimes find our customs strange at first.",
+          "vietnamese": "Khách nước ngoài đôi khi thấy phong tục của chúng ta kỳ lạ lúc đầu."
+        },
+        {
+          "english": "Young people today know less about traditional customs than their parents.",
+          "vietnamese": "Người trẻ ngày nay biết ít về phong tục truyền thống hơn bố mẹ họ."
+        },
+        {
+          "english": "Should tourists respect the local customs of every village they visit?",
+          "vietnamese": "Khách du lịch có nên tôn trọng phong tục địa phương của mỗi ngôi làng họ ghé thăm không?"
+        }
+      ]
+    },
+    {
+      "word": "architecture",
+      "sentences": [
+        {
+          "english": "The old temple has beautiful traditional architecture.",
+          "vietnamese": "Ngôi đền cổ có lối kiến trúc truyền thống rất đẹp."
+        },
+        {
+          "english": "The architecture of this pagoda shows the history of our country.",
+          "vietnamese": "Kiến trúc của ngôi chùa này thể hiện lịch sử của đất nước chúng tôi."
+        },
+        {
+          "english": "I am studying architecture because I want to become an architect.",
+          "vietnamese": "Tôi đang học kiến trúc vì tôi muốn trở thành một kiến trúc sư."
+        },
+        {
+          "english": "Modern architecture in the city centre looks cold to me.",
+          "vietnamese": "Kiến trúc hiện đại ở trung tâm thành phố trông lạnh lẽo với tôi."
+        },
+        {
+          "english": "Did you notice the lovely wooden architecture of that old church?",
+          "vietnamese": "Bạn có để ý lối kiến trúc gỗ đáng yêu của nhà thờ cổ đó không?"
+        }
+      ]
+    },
+    {
+      "word": "grow",
+      "sentences": [
+        {
+          "english": "Local farmers grow rice and many kinds of crops on this land.",
+          "vietnamese": "Nông dân địa phương trồng lúa và nhiều loại hoa màu trên mảnh đất này."
+        },
+        {
+          "english": "My uncle grows onions and cabbages behind his house.",
+          "vietnamese": "Chú tôi trồng hành và bắp cải phía sau nhà."
+        },
+        {
+          "english": "We are growing fresh herbs in pots on the balcony.",
+          "vietnamese": "Chúng tôi đang trồng rau thơm tươi trong chậu trên ban công."
+        },
+        {
+          "english": "Will your family grow more vegetables after the flood?",
+          "vietnamese": "Gia đình bạn sẽ trồng thêm rau sau trận lụt chứ?"
+        },
+        {
+          "english": "Farmers here do not grow coffee because the weather is too humid.",
+          "vietnamese": "Nông dân ở đây không trồng cà phê vì thời tiết quá ẩm."
+        }
+      ]
+    },
+    {
+      "word": "handicraft",
+      "sentences": [
+        {
+          "english": "My aunt sells beautiful handicrafts at the market near our hometown.",
+          "vietnamese": "Dì tôi bán những món đồ thủ công đẹp mắt ở khu chợ gần quê chúng tôi."
+        },
+        {
+          "english": "This village has produced beautiful handicrafts for hundreds of years.",
+          "vietnamese": "Ngôi làng này đã làm ra những món đồ thủ công đẹp mắt suốt hàng trăm năm."
+        },
+        {
+          "english": "Tourists often buy small handicrafts as gifts for their families.",
+          "vietnamese": "Khách du lịch thường mua những món đồ thủ công nhỏ làm quà cho gia đình họ."
+        },
+        {
+          "english": "Are these handicrafts made by local people in this area?",
+          "vietnamese": "Những món đồ thủ công này có phải do người dân địa phương trong vùng làm không?"
+        },
+        {
+          "english": "She will sell her handicrafts at the festival next month.",
+          "vietnamese": "Cô ấy sẽ bán đồ thủ công của mình tại lễ hội vào tháng sau."
+        }
+      ]
+    },
+    {
+      "word": "rely",
+      "sentences": [
+        {
+          "english": "Many families here rely on farming for their living.",
+          "vietnamese": "Nhiều gia đình ở đây dựa vào nghề nông để sống."
+        },
+        {
+          "english": "Young people no longer rely on the rice harvest for money.",
+          "vietnamese": "Người trẻ không còn dựa vào vụ thu hoạch lúa để kiếm tiền nữa."
+        },
+        {
+          "english": "We relied on a local guide during our trip through the mountains.",
+          "vietnamese": "Chúng tôi đã dựa vào một hướng dẫn viên địa phương trong chuyến đi xuyên núi."
+        },
+        {
+          "english": "Can I rely on you to protect these plants while I am away?",
+          "vietnamese": "Tôi có thể dựa vào bạn để bảo vệ những cái cây này khi tôi đi vắng không?"
+        },
+        {
+          "english": "This village is relying on tourism to develop its economy.",
+          "vietnamese": "Ngôi làng này đang dựa vào du lịch để phát triển kinh tế."
+        }
+      ]
+    },
+    {
+      "word": "permission",
+      "sentences": [
+        {
+          "english": "We asked the owner for permission to enter his garden.",
+          "vietnamese": "Chúng tôi xin chủ nhà sự cho phép để vào khu vườn của ông."
+        },
+        {
+          "english": "You need permission from the manager before you take photos inside.",
+          "vietnamese": "Bạn cần sự cho phép của quản lý trước khi chụp ảnh bên trong."
+        },
+        {
+          "english": "The council gave permission to build a new bridge over the river.",
+          "vietnamese": "Hội đồng đã cho phép xây một cây cầu mới bắc qua sông."
+        },
+        {
+          "english": "Did you get permission to stay at the homestay for a week?",
+          "vietnamese": "Bạn đã xin được phép ở lại homestay một tuần chưa?"
+        },
+        {
+          "english": "Without permission, visitors cannot enter the ancient shrine.",
+          "vietnamese": "Nếu không có sự cho phép, khách tham quan không được vào ngôi miếu cổ."
+        }
+      ]
+    },
+    {
+      "word": "buffalo",
+      "sentences": [
+        {
+          "english": "Every afternoon a buffalo pulls a heavy cart along the narrow alley.",
+          "vietnamese": "Chiều nào cũng có một con trâu kéo chiếc xe nặng dọc con hẻm nhỏ."
+        },
+        {
+          "english": "Two buffaloes were drinking water beside the old bridge.",
+          "vietnamese": "Hai con trâu đang uống nước bên cạnh cây cầu cũ."
+        },
+        {
+          "english": "My grandfather has raised a buffalo since he was young.",
+          "vietnamese": "Ông tôi đã nuôi một con trâu từ khi ông còn trẻ."
+        },
+        {
+          "english": "Do farmers still use a buffalo to plough the land nowadays?",
+          "vietnamese": "Ngày nay nông dân có còn dùng trâu để cày ruộng không?"
+        },
+        {
+          "english": "The buffalo walks leisurely along the narrow alley every evening.",
+          "vietnamese": "Con trâu đi thong thả dọc con hẻm nhỏ vào mỗi buổi tối."
+        }
+      ]
+    },
+    {
+      "word": "rainforest",
+      "sentences": [
+        {
+          "english": "Thousands of rare plants grow in the tropical rainforest.",
+          "vietnamese": "Hàng nghìn loài cây quý hiếm mọc trong khu rừng nhiệt đới."
+        },
+        {
+          "english": "We spent three amazing days hiking through the rainforest.",
+          "vietnamese": "Chúng tôi đã có ba ngày tuyệt vời đi bộ xuyên qua rừng nhiệt đới."
+        },
+        {
+          "english": "The rainforest is always humid, even in the dry season.",
+          "vietnamese": "Rừng nhiệt đới lúc nào cũng ẩm ướt, ngay cả trong mùa khô."
+        },
+        {
+          "english": "Our local guide will take us deep into the rainforest tomorrow.",
+          "vietnamese": "Hướng dẫn viên địa phương của chúng tôi sẽ đưa chúng tôi vào sâu trong rừng nhiệt đới vào ngày mai."
+        },
+        {
+          "english": "Many rare bugs live in the rainforest near our village.",
+          "vietnamese": "Nhiều loài côn trùng quý hiếm sống trong khu rừng nhiệt đới gần làng chúng tôi."
+        }
+      ]
+    },
+    {
+      "word": "hardly",
+      "sentences": [
+        {
+          "english": "It was so peaceful that we could hardly hear any noise.",
+          "vietnamese": "Nơi đó yên bình đến mức chúng tôi hầu như không nghe thấy tiếng động nào."
+        },
+        {
+          "english": "I can hardly believe how fresh the air is here.",
+          "vietnamese": "Tôi hầu như không thể tin không khí ở đây trong lành đến vậy."
+        },
+        {
+          "english": "There is hardly any rubbish on the pavement in this village.",
+          "vietnamese": "Hầu như không có chút rác nào trên vỉa hè ở ngôi làng này."
+        },
+        {
+          "english": "She hardly ever eats takeaway food because she prefers home-cooked meals.",
+          "vietnamese": "Cô ấy hầu như không bao giờ ăn đồ mang đi vì cô ấy thích các bữa cơm nhà hơn."
+        },
+        {
+          "english": "We could hardly walk on the muddy road after the heavy shower.",
+          "vietnamese": "Chúng tôi hầu như không thể đi nổi trên con đường lầy lội sau cơn mưa rào lớn."
+        }
+      ]
+    },
+    {
+      "word": "bug",
+      "sentences": [
+        {
+          "english": "A tiny bug landed on the leaf while I was drinking my coffee.",
+          "vietnamese": "Một con côn trùng bé xíu đậu lên chiếc lá khi tôi đang uống cà phê."
+        },
+        {
+          "english": "Strange bugs appear everywhere at the beginning of the rainy season.",
+          "vietnamese": "Những con côn trùng kỳ lạ xuất hiện khắp nơi vào đầu mùa mưa."
+        },
+        {
+          "english": "Please close the curtain so the bugs cannot fly inside.",
+          "vietnamese": "Hãy kéo rèm lại để côn trùng không bay vào trong."
+        },
+        {
+          "english": "Have you ever seen such a big bug on a banana leaf?",
+          "vietnamese": "Bạn đã bao giờ thấy một con côn trùng to như vậy trên lá chuối chưa?"
+        },
+        {
+          "english": "The farmer sprayed the crops to kill dangerous bugs.",
+          "vietnamese": "Người nông dân đã phun thuốc lên hoa màu để diệt những con côn trùng nguy hiểm."
+        }
+      ]
+    },
+    {
+      "word": "dangerous",
+      "sentences": [
+        {
+          "english": "Swimming alone in that river is dangerous, especially in the rainy season.",
+          "vietnamese": "Bơi một mình ở con sông đó rất nguy hiểm, nhất là vào mùa mưa."
+        },
+        {
+          "english": "Driving on this steep road at night is really dangerous.",
+          "vietnamese": "Lái xe trên con đường dốc này vào ban đêm thì thật sự nguy hiểm."
+        },
+        {
+          "english": "The typhoon made the sea extremely dangerous for small boats.",
+          "vietnamese": "Cơn bão khiến biển trở nên cực kỳ nguy hiểm đối với những chiếc thuyền nhỏ."
+        },
+        {
+          "english": "Is it dangerous to eat raw seafood from the market?",
+          "vietnamese": "Ăn hải sản sống mua ở chợ có nguy hiểm không?"
+        },
+        {
+          "english": "Do not touch that dangerous plant because it can burn your skin.",
+          "vietnamese": "Đừng chạm vào cái cây nguy hiểm đó vì nó có thể làm bỏng da bạn."
+        }
+      ]
+    },
+    {
+      "word": "brave",
+      "sentences": [
+        {
+          "english": "You have to be brave to cross that old wooden bridge.",
+          "vietnamese": "Bạn phải dũng cảm mới dám băng qua cây cầu gỗ cũ đó."
+        },
+        {
+          "english": "The brave villagers saved many animals during the flood.",
+          "vietnamese": "Những người dân làng dũng cảm đã cứu nhiều con vật trong trận lụt."
+        },
+        {
+          "english": "She was brave enough to try the durian for the first time.",
+          "vietnamese": "Cô ấy đủ dũng cảm để thử quả sầu riêng lần đầu tiên."
+        },
+        {
+          "english": "You must be brave if you want to hike alone in the mountains.",
+          "vietnamese": "Bạn phải dũng cảm nếu muốn đi bộ đường dài một mình trong núi."
+        },
+        {
+          "english": "Are you brave enough to sleep in a campsite deep in the forest?",
+          "vietnamese": "Bạn có đủ dũng cảm để ngủ trong một khu cắm trại sâu trong rừng không?"
+        }
+      ]
+    },
+    {
+      "word": "protect",
+      "sentences": [
+        {
+          "english": "The villagers work together to protect their crops from heavy floods.",
+          "vietnamese": "Dân làng cùng nhau bảo vệ mùa màng của họ khỏi những trận lụt lớn."
+        },
+        {
+          "english": "We should protect the rainforest because it gives us fresh air.",
+          "vietnamese": "Chúng ta nên bảo vệ rừng nhiệt đới vì nó cho chúng ta không khí trong lành."
+        },
+        {
+          "english": "A thick curtain protects the room from the strong sunlight.",
+          "vietnamese": "Một tấm rèm dày bảo vệ căn phòng khỏi ánh nắng gay gắt."
+        },
+        {
+          "english": "The government has protected this ancient temple for many years.",
+          "vietnamese": "Chính phủ đã bảo vệ ngôi đền cổ này trong nhiều năm."
+        },
+        {
+          "english": "How do local people protect their homes during the typhoon season?",
+          "vietnamese": "Người dân địa phương bảo vệ nhà cửa của họ thế nào trong mùa bão?"
+        }
+      ]
+    },
+    {
+      "word": "satisfied",
+      "sentences": [
+        {
+          "english": "I felt satisfied after a tasty home-cooked meal at my grandmother's house.",
+          "vietnamese": "Tôi thấy hài lòng sau bữa cơm nhà ngon miệng ở nhà bà tôi."
+        },
+        {
+          "english": "Our guests were satisfied with the warm welcome at the homestay.",
+          "vietnamese": "Khách của chúng tôi hài lòng với sự đón tiếp nồng hậu tại homestay."
+        },
+        {
+          "english": "Are you satisfied with the service at that small restaurant?",
+          "vietnamese": "Bạn có hài lòng với dịch vụ ở nhà hàng nhỏ đó không?"
+        },
+        {
+          "english": "The manager will not be satisfied until every customer is happy.",
+          "vietnamese": "Người quản lý sẽ không hài lòng cho tới khi mọi khách hàng đều vui vẻ."
+        },
+        {
+          "english": "I am not satisfied with the quality of this cheap handicraft.",
+          "vietnamese": "Tôi không hài lòng với chất lượng của món đồ thủ công rẻ tiền này."
+        }
+      ]
+    }
+  ]
+}

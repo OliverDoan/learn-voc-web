@@ -1,0 +1,607 @@
+{
+  "unit": 4,
+  "deck": "Unit 4: Ngày hội nghề nghiệp",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "company",
+      "sentences": [
+        {
+          "english": "My cousin works for a small company in the centre of our town.",
+          "vietnamese": "Anh họ tôi làm việc cho một công ty nhỏ ở trung tâm thị trấn của chúng tôi."
+        },
+        {
+          "english": "The company will announce a new training course next Monday.",
+          "vietnamese": "Công ty sẽ thông báo một khoá đào tạo mới vào thứ Hai tới."
+        },
+        {
+          "english": "Many big companies enroll young workers who can communicate in English.",
+          "vietnamese": "Nhiều công ty lớn tuyển những nhân sự trẻ có thể giao tiếp bằng tiếng Anh."
+        },
+        {
+          "english": "Do you know which company offered him that job?",
+          "vietnamese": "Bạn có biết công ty nào đã mời anh ấy công việc đó không?"
+        },
+        {
+          "english": "She has worked for this company since she moved to the south.",
+          "vietnamese": "Cô ấy đã làm cho công ty này từ khi chuyển vào miền nam."
+        }
+      ]
+    },
+    {
+      "word": "open",
+      "sentences": [
+        {
+          "english": "They will open a new training centre near my hometown next month.",
+          "vietnamese": "Họ sẽ mở một trung tâm đào tạo mới gần quê tôi vào tháng tới."
+        },
+        {
+          "english": "Please open the window because this room is crowded and hot.",
+          "vietnamese": "Làm ơn mở cửa sổ ra vì căn phòng này đông người và nóng."
+        },
+        {
+          "english": "The library opens at seven so students can revise before class.",
+          "vietnamese": "Thư viện mở cửa lúc bảy giờ để học sinh có thể ôn bài trước giờ học."
+        },
+        {
+          "english": "They opened a language school in the north of the town last year.",
+          "vietnamese": "Họ đã mở một trường ngoại ngữ ở phía bắc thị trấn vào năm ngoái."
+        },
+        {
+          "english": "I am opening an account today, so I need your contact address.",
+          "vietnamese": "Hôm nay tôi đang mở một tài khoản, nên tôi cần địa chỉ liên lạc của bạn."
+        }
+      ]
+    },
+    {
+      "word": "owner",
+      "sentences": [
+        {
+          "english": "The owner of the bookshop is a kind woman who knows everyone in town.",
+          "vietnamese": "Chủ tiệm sách là một người phụ nữ tốt bụng biết tất cả mọi người trong thị trấn."
+        },
+        {
+          "english": "The owner asked me to spell my surname on the list.",
+          "vietnamese": "Người chủ đề nghị tôi đánh vần họ của mình vào danh sách."
+        },
+        {
+          "english": "The shop owners have decided to continue the weekend course.",
+          "vietnamese": "Các chủ cửa hàng đã quyết định tiếp tục khoá học cuối tuần."
+        },
+        {
+          "english": "Is the owner of this beautiful house a foreigner?",
+          "vietnamese": "Chủ sở hữu của ngôi nhà đẹp này có phải là người nước ngoài không?"
+        },
+        {
+          "english": "The new owner will describe his plan at the meeting tomorrow.",
+          "vietnamese": "Chủ sở hữu mới sẽ mô tả kế hoạch của ông ấy trong cuộc họp ngày mai."
+        }
+      ]
+    },
+    {
+      "word": "employer",
+      "sentences": [
+        {
+          "english": "A good employer will tell you clearly what the job requires.",
+          "vietnamese": "Một nhà tuyển dụng tốt sẽ nói rõ cho bạn biết công việc đòi hỏi những gì."
+        },
+        {
+          "english": "My employer never allows anyone to be absent without a reason.",
+          "vietnamese": "Chủ của tôi không bao giờ cho phép ai vắng mặt mà không có lý do."
+        },
+        {
+          "english": "Employers in this town often look for confident young people.",
+          "vietnamese": "Các nhà tuyển dụng ở thị trấn này thường tìm những người trẻ tự tin."
+        },
+        {
+          "english": "Her employer paid for a short course in business English.",
+          "vietnamese": "Chủ của cô ấy đã trả tiền cho một khoá học tiếng Anh thương mại ngắn."
+        },
+        {
+          "english": "Did your employer sign the certificate for you?",
+          "vietnamese": "Nhà tuyển dụng của bạn đã ký giấy chứng nhận cho bạn chưa?"
+        }
+      ]
+    },
+    {
+      "word": "employee",
+      "sentences": [
+        {
+          "english": "Every employee must sign the attendance list before eight o'clock.",
+          "vietnamese": "Mọi nhân viên đều phải ký vào danh sách chấm công trước tám giờ."
+        },
+        {
+          "english": "Each employee receives a uniform on the first working day.",
+          "vietnamese": "Mỗi nhân viên nhận một bộ đồng phục vào ngày làm việc đầu tiên."
+        },
+        {
+          "english": "Employees who attend the training will get a certificate.",
+          "vietnamese": "Những nhân viên tham gia khoá đào tạo sẽ nhận được giấy chứng nhận."
+        },
+        {
+          "english": "A new employee is often nervous during the first week.",
+          "vietnamese": "Một nhân viên mới thường lo lắng trong tuần đầu tiên."
+        },
+        {
+          "english": "Our employees have improved their speaking skills this term.",
+          "vietnamese": "Các nhân viên của chúng tôi đã cải thiện kỹ năng nói trong học kỳ này."
+        }
+      ]
+    },
+    {
+      "word": "assistant",
+      "sentences": [
+        {
+          "english": "The assistant gave me a paper and asked for my address.",
+          "vietnamese": "Người trợ lý đưa cho tôi một tờ giấy và hỏi địa chỉ của tôi."
+        },
+        {
+          "english": "The shop assistant can communicate with visitors from many countries.",
+          "vietnamese": "Người trợ lý bán hàng có thể giao tiếp với khách đến từ nhiều quốc gia."
+        },
+        {
+          "english": "I am working as an assistant while I continue my studies.",
+          "vietnamese": "Tôi đang làm trợ lý trong khi tôi tiếp tục việc học của mình."
+        },
+        {
+          "english": "Will the assistant tell us the meaning of this word?",
+          "vietnamese": "Người trợ lý sẽ nói cho chúng ta biết nghĩa của từ này chứ?"
+        },
+        {
+          "english": "Their assistants live in the south of the city.",
+          "vietnamese": "Các trợ lý của họ sống ở phía nam thành phố."
+        }
+      ]
+    },
+    {
+      "word": "design",
+      "sentences": [
+        {
+          "english": "They design beautiful buildings together.",
+          "vietnamese": "Họ cùng nhau thiết kế những toà nhà đẹp."
+        },
+        {
+          "english": "She designed the uniform for our secondary school last term.",
+          "vietnamese": "Cô ấy đã thiết kế bộ đồng phục cho trường trung học của chúng tôi học kỳ trước."
+        },
+        {
+          "english": "Our teacher is designing a new curriculum for beginners.",
+          "vietnamese": "Giáo viên của chúng tôi đang thiết kế một chương trình học mới cho người mới bắt đầu."
+        },
+        {
+          "english": "Can you design a poster about the culture of our hometown?",
+          "vietnamese": "Bạn có thể thiết kế một tấm áp phích về văn hoá quê hương chúng ta không?"
+        },
+        {
+          "english": "They do not design anything before knowing the topic well.",
+          "vietnamese": "Họ không thiết kế bất cứ thứ gì trước khi hiểu rõ chủ đề."
+        }
+      ]
+    },
+    {
+      "word": "form",
+      "sentences": [
+        {
+          "english": "Please write your surname clearly at the top of this form.",
+          "vietnamese": "Vui lòng viết họ của bạn thật rõ ở đầu tờ đơn này."
+        },
+        {
+          "english": "You must fill in this form before you enroll in the course.",
+          "vietnamese": "Bạn phải điền vào mẫu đơn này trước khi ghi danh vào khoá học."
+        },
+        {
+          "english": "She gave me two forms and asked for my contact number.",
+          "vietnamese": "Cô ấy đưa cho tôi hai tờ đơn và hỏi số liên lạc của tôi."
+        },
+        {
+          "english": "Have you signed the registration form yet?",
+          "vietnamese": "Bạn đã ký vào mẫu đơn đăng ký chưa?"
+        },
+        {
+          "english": "The form asks for your address and your favourite subject.",
+          "vietnamese": "Mẫu đơn hỏi về địa chỉ và môn học yêu thích của bạn."
+        }
+      ]
+    },
+    {
+      "word": "acceptable",
+      "sentences": [
+        {
+          "english": "Arriving five minutes late is acceptable, but being absent is not.",
+          "vietnamese": "Đến muộn năm phút là chấp nhận được, nhưng vắng mặt thì không."
+        },
+        {
+          "english": "Your answer is acceptable, although the spelling still needs work.",
+          "vietnamese": "Câu trả lời của bạn chấp nhận được, mặc dù phần chính tả vẫn cần chỉnh sửa."
+        },
+        {
+          "english": "Is this short essay acceptable for the assignment?",
+          "vietnamese": "Bài luận ngắn này có chấp nhận được cho bài tập không?"
+        },
+        {
+          "english": "That excuse was not acceptable to our teacher last term.",
+          "vietnamese": "Lời bào chữa đó đã không được giáo viên của chúng tôi chấp nhận học kỳ trước."
+        },
+        {
+          "english": "A simple email is acceptable when you contact a new employer.",
+          "vietnamese": "Một email đơn giản là chấp nhận được khi bạn liên hệ với một nhà tuyển dụng mới."
+        }
+      ]
+    },
+    {
+      "word": "offer",
+      "sentences": [
+        {
+          "english": "They offer free gifts to every visitor.",
+          "vietnamese": "Họ tặng quà miễn phí cho mỗi khách thăm."
+        },
+        {
+          "english": "The school offered her a place on the science course.",
+          "vietnamese": "Nhà trường đã mời cô ấy một suất trong khoá học khoa học."
+        },
+        {
+          "english": "They are offering free classes to beginners this month.",
+          "vietnamese": "Họ đang mời các lớp học miễn phí cho người mới bắt đầu trong tháng này."
+        },
+        {
+          "english": "Will they offer him a higher grade of work next year?",
+          "vietnamese": "Sang năm họ sẽ đề nghị anh ấy một bậc công việc cao hơn chứ?"
+        },
+        {
+          "english": "He offered to describe the road to my hometown.",
+          "vietnamese": "Anh ấy đã đề nghị mô tả con đường về quê tôi."
+        }
+      ]
+    },
+    {
+      "word": "punctual",
+      "sentences": [
+        {
+          "english": "My teacher is always punctual, even when the streets are crowded.",
+          "vietnamese": "Giáo viên của tôi luôn đúng giờ, ngay cả khi đường phố đông đúc."
+        },
+        {
+          "english": "Be punctual tomorrow because the visitors will arrive at nine.",
+          "vietnamese": "Ngày mai hãy đúng giờ vì các vị khách sẽ đến lúc chín giờ."
+        },
+        {
+          "english": "She was not punctual, so she missed the first topic of the lesson.",
+          "vietnamese": "Cô ấy đã không đúng giờ, nên cô ấy bỏ lỡ chủ đề đầu tiên của tiết học."
+        },
+        {
+          "english": "Punctual students rarely get a low grade in this class.",
+          "vietnamese": "Những học sinh đúng giờ hiếm khi bị điểm thấp trong lớp này."
+        },
+        {
+          "english": "Is he punctual when he attends an early course?",
+          "vietnamese": "Anh ấy có đúng giờ khi tham gia một khoá học sớm không?"
+        }
+      ]
+    },
+    {
+      "word": "challenging",
+      "sentences": [
+        {
+          "english": "Learning a new language is challenging, but it makes you more confident.",
+          "vietnamese": "Học một ngôn ngữ mới thật đầy thử thách, nhưng điều đó khiến bạn tự tin hơn."
+        },
+        {
+          "english": "The mathematics assignment was challenging for the whole class.",
+          "vietnamese": "Bài tập toán đó đầy thử thách với cả lớp."
+        },
+        {
+          "english": "I find it challenging to understand fast speakers.",
+          "vietnamese": "Tôi thấy thật thử thách khi phải hiểu những người nói nhanh."
+        },
+        {
+          "english": "Is working abroad challenging for a beginner like me?",
+          "vietnamese": "Làm việc ở nước ngoài có đầy thử thách với một người mới như tôi không?"
+        },
+        {
+          "english": "Their curriculum is not challenging enough for confident students.",
+          "vietnamese": "Chương trình học của họ không đủ thử thách với những học sinh tự tin."
+        }
+      ]
+    },
+    {
+      "word": "journalist",
+      "sentences": [
+        {
+          "english": "The journalist asked the students to describe their favourite subject.",
+          "vietnamese": "Nhà báo đề nghị các học sinh mô tả môn học yêu thích của mình."
+        },
+        {
+          "english": "A journalist must communicate clearly with people from every culture.",
+          "vietnamese": "Một nhà báo phải giao tiếp rõ ràng với người từ mọi nền văn hoá."
+        },
+        {
+          "english": "She has worked as a journalist since she left secondary school.",
+          "vietnamese": "Cô ấy đã làm nhà báo từ khi rời trường trung học."
+        },
+        {
+          "english": "Journalists often travel abroad to follow important stories.",
+          "vietnamese": "Các nhà báo thường đi nước ngoài để theo dõi những câu chuyện quan trọng."
+        },
+        {
+          "english": "Do you know the journalist who lives near the town centre?",
+          "vietnamese": "Bạn có biết nhà báo sống gần trung tâm thị trấn không?"
+        }
+      ]
+    },
+    {
+      "word": "accountant",
+      "sentences": [
+        {
+          "english": "She became an accountant because she loved mathematics at school.",
+          "vietnamese": "Cô ấy trở thành kế toán vì cô ấy yêu thích môn toán hồi đi học."
+        },
+        {
+          "english": "Our accountant will attend a short course in the city centre.",
+          "vietnamese": "Kế toán của chúng tôi sẽ tham gia một khoá học ngắn ở trung tâm thành phố."
+        },
+        {
+          "english": "Accountants need good skills with numbers and a calm mind.",
+          "vietnamese": "Kế toán cần kỹ năng tốt với những con số và một cái đầu bình tĩnh."
+        },
+        {
+          "english": "He is studying to become an accountant next term.",
+          "vietnamese": "Anh ấy đang học để trở thành kế toán vào học kỳ tới."
+        },
+        {
+          "english": "Did the accountant sign every paper this morning?",
+          "vietnamese": "Kế toán đã ký mọi giấy tờ sáng nay chưa?"
+        }
+      ]
+    },
+    {
+      "word": "cook",
+      "sentences": [
+        {
+          "english": "The cook at that little restaurant learned his skills abroad.",
+          "vietnamese": "Đầu bếp ở nhà hàng nhỏ đó đã học các kỹ năng của mình ở nước ngoài."
+        },
+        {
+          "english": "Our school cook is popular with all the children.",
+          "vietnamese": "Đầu bếp của trường chúng tôi được tất cả bọn trẻ yêu thích."
+        },
+        {
+          "english": "The cooks are preparing lunch for the visitors today.",
+          "vietnamese": "Các đầu bếp đang chuẩn bị bữa trưa cho khách tham quan hôm nay."
+        },
+        {
+          "english": "He wants to be a cook, so he attends evening classes.",
+          "vietnamese": "Anh ấy muốn làm đầu bếp, nên anh ấy tham gia các lớp học buổi tối."
+        },
+        {
+          "english": "Is the cook at this hotel a foreigner?",
+          "vietnamese": "Đầu bếp ở khách sạn này có phải người nước ngoài không?"
+        }
+      ]
+    },
+    {
+      "word": "lawyer",
+      "sentences": [
+        {
+          "english": "My neighbour is a lawyer who lives in the north of the city.",
+          "vietnamese": "Hàng xóm của tôi là một luật sư sống ở phía bắc thành phố."
+        },
+        {
+          "english": "A lawyer must understand every word in the contract.",
+          "vietnamese": "Một luật sư phải hiểu từng từ trong bản hợp đồng."
+        },
+        {
+          "english": "She will become a lawyer if she succeeds in this exam.",
+          "vietnamese": "Cô ấy sẽ trở thành luật sư nếu cô ấy thành công trong kỳ thi này."
+        },
+        {
+          "english": "Lawyers often use difficult vocabulary that ordinary people cannot follow.",
+          "vietnamese": "Luật sư thường dùng từ vựng khó mà người bình thường không theo kịp."
+        },
+        {
+          "english": "Do you know a good lawyer in our town?",
+          "vietnamese": "Bạn có biết một luật sư giỏi ở thị trấn của chúng ta không?"
+        }
+      ]
+    },
+    {
+      "word": "architect",
+      "sentences": [
+        {
+          "english": "The architect drew a beautiful library for our secondary school.",
+          "vietnamese": "Kiến trúc sư đã vẽ một thư viện đẹp cho trường trung học của chúng tôi."
+        },
+        {
+          "english": "The architect is describing his idea to the owner right now.",
+          "vietnamese": "Kiến trúc sư đang mô tả ý tưởng của mình cho người chủ ngay lúc này."
+        },
+        {
+          "english": "Architects study for many years before they succeed.",
+          "vietnamese": "Các kiến trúc sư học nhiều năm trước khi họ thành công."
+        },
+        {
+          "english": "My cousin became an architect after studying engineering abroad.",
+          "vietnamese": "Anh họ tôi trở thành kiến trúc sư sau khi học ngành kỹ thuật ở nước ngoài."
+        },
+        {
+          "english": "Will the architect attend the meeting in the town centre?",
+          "vietnamese": "Kiến trúc sư sẽ tham dự cuộc họp ở trung tâm thị trấn chứ?"
+        }
+      ]
+    },
+    {
+      "word": "engineer",
+      "sentences": [
+        {
+          "english": "My brother studied hard at university and now works as an engineer abroad.",
+          "vietnamese": "Anh trai tôi đã học rất chăm ở đại học và giờ làm kỹ sư ở nước ngoài."
+        },
+        {
+          "english": "The engineer explained the whole plan in simple language.",
+          "vietnamese": "Kỹ sư đã giải thích toàn bộ kế hoạch bằng ngôn ngữ đơn giản."
+        },
+        {
+          "english": "Engineers must continue learning new skills every year.",
+          "vietnamese": "Kỹ sư phải tiếp tục học các kỹ năng mới mỗi năm."
+        },
+        {
+          "english": "She is a young engineer who lives in the south of the country.",
+          "vietnamese": "Cô ấy là một kỹ sư trẻ sống ở phía nam đất nước."
+        },
+        {
+          "english": "Do engineers need to memorise many formulas?",
+          "vietnamese": "Kỹ sư có cần ghi nhớ nhiều công thức không?"
+        }
+      ]
+    },
+    {
+      "word": "manager",
+      "sentences": [
+        {
+          "english": "Our manager will announce the new schedule at tomorrow's meeting.",
+          "vietnamese": "Quản lý của chúng tôi sẽ thông báo lịch làm việc mới trong cuộc họp ngày mai."
+        },
+        {
+          "english": "The manager was nervous before his first big presentation.",
+          "vietnamese": "Người quản lý đã lo lắng trước buổi thuyết trình lớn đầu tiên của mình."
+        },
+        {
+          "english": "Managers should know the name of every person on the team.",
+          "vietnamese": "Người quản lý nên biết tên của từng người trong đội."
+        },
+        {
+          "english": "Our new manager has improved the way we communicate at work.",
+          "vietnamese": "Quản lý mới của chúng tôi đã cải thiện cách chúng tôi giao tiếp trong công việc."
+        },
+        {
+          "english": "Did the manager tell you about the training course?",
+          "vietnamese": "Người quản lý đã nói với bạn về khoá đào tạo chưa?"
+        }
+      ]
+    },
+    {
+      "word": "pilot",
+      "sentences": [
+        {
+          "english": "He wants to become a pilot, so he is improving his English quickly.",
+          "vietnamese": "Anh ấy muốn trở thành phi công nên đang cải thiện tiếng Anh rất nhanh."
+        },
+        {
+          "english": "A pilot must understand instructions in English very quickly.",
+          "vietnamese": "Một phi công phải hiểu các chỉ dẫn bằng tiếng Anh rất nhanh."
+        },
+        {
+          "english": "Pilots travel abroad every week and meet many cultures.",
+          "vietnamese": "Phi công đi nước ngoài mỗi tuần và tiếp xúc với nhiều nền văn hoá."
+        },
+        {
+          "english": "My uncle was a pilot before he opened a small shop in town.",
+          "vietnamese": "Chú tôi từng là phi công trước khi ông mở một cửa hàng nhỏ trong thị trấn."
+        },
+        {
+          "english": "Do you know any pilot who started as a beginner at thirty?",
+          "vietnamese": "Bạn có biết phi công nào bắt đầu như một người mới ở tuổi ba mươi không?"
+        }
+      ]
+    },
+    {
+      "word": "salesperson",
+      "sentences": [
+        {
+          "english": "A friendly salesperson can communicate well with people from any culture.",
+          "vietnamese": "Một nhân viên bán hàng thân thiện có thể giao tiếp tốt với người từ mọi nền văn hoá."
+        },
+        {
+          "english": "The salesperson described the product clearly to every visitor.",
+          "vietnamese": "Nhân viên bán hàng đã mô tả sản phẩm một cách rõ ràng cho từng vị khách."
+        },
+        {
+          "english": "A good salesperson never looks shy in front of customers.",
+          "vietnamese": "Một nhân viên bán hàng giỏi không bao giờ tỏ ra nhút nhát trước khách hàng."
+        },
+        {
+          "english": "She worked as a salesperson while she attended an evening course.",
+          "vietnamese": "Cô ấy làm nhân viên bán hàng trong khi theo học một khoá học buổi tối."
+        },
+        {
+          "english": "Can a salesperson succeed without good speaking skills?",
+          "vietnamese": "Một nhân viên bán hàng có thể thành công mà không có kỹ năng nói tốt không?"
+        }
+      ]
+    },
+    {
+      "word": "housewife",
+      "sentences": [
+        {
+          "english": "My aunt is a housewife and she attends a cooking course every Saturday.",
+          "vietnamese": "Dì tôi là nội trợ và bà tham gia một khoá học nấu ăn vào mỗi thứ Bảy."
+        },
+        {
+          "english": "A housewife in our town often has a very busy day.",
+          "vietnamese": "Một người nội trợ ở thị trấn chúng tôi thường có một ngày rất bận rộn."
+        },
+        {
+          "english": "She was a housewife for ten years before she enrolled in university.",
+          "vietnamese": "Bà ấy đã làm nội trợ mười năm trước khi ghi danh vào đại học."
+        },
+        {
+          "english": "My grandmother, a housewife all her life, still memorises old songs.",
+          "vietnamese": "Bà tôi, một người nội trợ cả đời, vẫn ghi nhớ những bài hát cũ."
+        },
+        {
+          "english": "Is the woman who lives next door a housewife?",
+          "vietnamese": "Người phụ nữ sống nhà bên có phải là nội trợ không?"
+        }
+      ]
+    },
+    {
+      "word": "receptionist",
+      "sentences": [
+        {
+          "english": "The receptionist asked the visitor to sign his name at the desk.",
+          "vietnamese": "Lễ tân đề nghị vị khách ký tên vào sổ ở quầy."
+        },
+        {
+          "english": "The receptionist will call you when the doctor is free.",
+          "vietnamese": "Lễ tân sẽ gọi cho bạn khi bác sĩ rảnh."
+        },
+        {
+          "english": "Receptionists must know how to spell difficult surnames.",
+          "vietnamese": "Lễ tân phải biết cách đánh vần những họ khó."
+        },
+        {
+          "english": "She is training to be a receptionist at a hotel in the centre.",
+          "vietnamese": "Cô ấy đang được đào tạo để làm lễ tân ở một khách sạn trong trung tâm."
+        },
+        {
+          "english": "Did the receptionist give you the correct address?",
+          "vietnamese": "Lễ tân đã đưa cho bạn đúng địa chỉ chưa?"
+        }
+      ]
+    },
+    {
+      "word": "hairdresser",
+      "sentences": [
+        {
+          "english": "My hairdresser is very popular, so I must call her a week earlier.",
+          "vietnamese": "Thợ làm tóc của tôi rất được yêu thích, nên tôi phải gọi điện trước một tuần."
+        },
+        {
+          "english": "My sister works as a hairdresser in the town centre.",
+          "vietnamese": "Chị tôi làm thợ làm tóc ở trung tâm thị trấn."
+        },
+        {
+          "english": "Hairdressers must communicate well with every customer.",
+          "vietnamese": "Thợ làm tóc phải giao tiếp tốt với mọi khách hàng."
+        },
+        {
+          "english": "A hairdresser needs patient hands and good listening skills.",
+          "vietnamese": "Một thợ làm tóc cần đôi tay kiên nhẫn và kỹ năng lắng nghe tốt."
+        },
+        {
+          "english": "Do you know a hairdresser who works on Sundays?",
+          "vietnamese": "Bạn có biết thợ làm tóc nào làm việc vào Chủ nhật không?"
+        }
+      ]
+    }
+  ]
+}

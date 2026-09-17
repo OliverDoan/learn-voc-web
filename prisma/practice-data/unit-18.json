@@ -1,0 +1,607 @@
+{
+  "unit": 18,
+  "deck": "Unit 18: Công thức & kỹ thuật nấu",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "cooking",
+      "sentences": [
+        {
+          "english": "Cooking is a useful life skill.",
+          "vietnamese": "Nấu ăn là một kỹ năng sống hữu ích."
+        },
+        {
+          "english": "My brother says cooking is his favourite way to relax after work.",
+          "vietnamese": "Anh trai tôi nói nấu ăn là cách thư giãn yêu thích của anh ấy sau giờ làm."
+        },
+        {
+          "english": "Do you think cooking at home is better than eating at a pub?",
+          "vietnamese": "Bạn có nghĩ nấu ăn ở nhà thì tốt hơn ăn ở quán rượu không?"
+        },
+        {
+          "english": "She has been learning cooking from her grandmother since last summer.",
+          "vietnamese": "Cô ấy đã học nấu ăn từ bà của mình kể từ mùa hè năm ngoái."
+        },
+        {
+          "english": "Cooking a big hotpot for ten guests is not an easy job.",
+          "vietnamese": "Nấu một nồi lẩu lớn cho mười vị khách không phải là việc dễ dàng."
+        }
+      ]
+    },
+    {
+      "word": "chef",
+      "sentences": [
+        {
+          "english": "The chef cooked a wonderful dinner.",
+          "vietnamese": "Đầu bếp nấu một bữa tối tuyệt vời."
+        },
+        {
+          "english": "The young chef opened a small restaurant in the city centre.",
+          "vietnamese": "Người đầu bếp trẻ đã mở một nhà hàng nhỏ ở trung tâm thành phố."
+        },
+        {
+          "english": "Our chef will prepare a vegetarian menu for tomorrow's party.",
+          "vietnamese": "Đầu bếp của chúng tôi sẽ chuẩn bị một thực đơn chay cho bữa tiệc ngày mai."
+        },
+        {
+          "english": "Is your uncle still working as a chef in that noisy pub?",
+          "vietnamese": "Chú của bạn còn làm đầu bếp ở quán rượu ồn ào đó không?"
+        },
+        {
+          "english": "Chefs usually taste the soup before they serve it to customers.",
+          "vietnamese": "Các đầu bếp thường nếm món súp trước khi họ dọn nó ra cho khách hàng."
+        }
+      ]
+    },
+    {
+      "word": "recipe",
+      "sentences": [
+        {
+          "english": "I followed my grandma's recipe.",
+          "vietnamese": "Tôi làm theo công thức của bà tôi."
+        },
+        {
+          "english": "This recipe needs three eggs, some cream and a litre of milk.",
+          "vietnamese": "Công thức này cần ba quả trứng, một ít kem và một lít sữa."
+        },
+        {
+          "english": "I have saved many recipes for spicy soups on my phone.",
+          "vietnamese": "Tôi đã lưu nhiều công thức nấu các món súp cay trong điện thoại."
+        },
+        {
+          "english": "Could you send me the recipe for that sweet sauce?",
+          "vietnamese": "Bạn gửi cho tôi công thức của loại nước sốt ngọt đó được không?"
+        },
+        {
+          "english": "She changed the old recipe because her guests do not eat beef.",
+          "vietnamese": "Cô ấy đã đổi công thức cũ vì khách của cô ấy không ăn thịt bò."
+        }
+      ]
+    },
+    {
+      "word": "secret",
+      "sentences": [
+        {
+          "english": "The secret of this soup is one spoon of fish sauce.",
+          "vietnamese": "Bí mật của món súp này là một thìa nước mắm."
+        },
+        {
+          "english": "Please keep this secret between us until the wedding day.",
+          "vietnamese": "Làm ơn giữ bí mật này giữa chúng ta cho tới ngày cưới."
+        },
+        {
+          "english": "The secret of good coffee is clean water and careful timing.",
+          "vietnamese": "Bí mật của một ly cà phê ngon là nước sạch và canh thời gian cẩn thận."
+        },
+        {
+          "english": "He told nobody the secret of his family's fish sauce.",
+          "vietnamese": "Anh ấy không kể cho ai bí mật về nước mắm của gia đình mình."
+        },
+        {
+          "english": "Many chefs share their secrets on social media nowadays.",
+          "vietnamese": "Ngày nay nhiều đầu bếp chia sẻ những bí mật của họ trên mạng xã hội."
+        }
+      ]
+    },
+    {
+      "word": "seasoning",
+      "sentences": [
+        {
+          "english": "Add some seasoning to the soup.",
+          "vietnamese": "Cho thêm chút gia vị vào canh."
+        },
+        {
+          "english": "Vietnamese seasoning often includes salt, sugar and a little fish sauce.",
+          "vietnamese": "Gia vị Việt Nam thường gồm muối, đường và một chút nước mắm."
+        },
+        {
+          "english": "I used too much seasoning, so the beef became very salty.",
+          "vietnamese": "Tôi đã dùng quá nhiều gia vị, nên món thịt bò trở nên rất mặn."
+        },
+        {
+          "english": "Do not put seasoning into the pot while the water is boiling.",
+          "vietnamese": "Đừng cho gia vị vào nồi khi nước đang sôi."
+        },
+        {
+          "english": "Good seasoning can turn a simple dish into something yummy.",
+          "vietnamese": "Gia vị ngon có thể biến một món đơn giản thành món ngon tuyệt."
+        }
+      ]
+    },
+    {
+      "word": "flavour",
+      "sentences": [
+        {
+          "english": "This sauce has a rich flavour.",
+          "vietnamese": "Nước sốt này có hương vị đậm đà."
+        },
+        {
+          "english": "The soup lost its flavour after sitting on the stove all afternoon.",
+          "vietnamese": "Món súp mất hương vị sau khi để trên bếp suốt cả buổi chiều."
+        },
+        {
+          "english": "I love the spicy flavour of this hotpot broth.",
+          "vietnamese": "Tôi rất thích hương vị cay của nước lẩu này."
+        },
+        {
+          "english": "Which flavour of smoothie would you like this morning?",
+          "vietnamese": "Sáng nay bạn muốn sinh tố hương vị gì?"
+        },
+        {
+          "english": "Grilled pork has a deeper flavour than boiled pork.",
+          "vietnamese": "Thịt lợn nướng có hương vị đậm hơn thịt lợn luộc."
+        }
+      ]
+    },
+    {
+      "word": "terrible",
+      "sentences": [
+        {
+          "english": "The food at that place was terrible.",
+          "vietnamese": "Đồ ăn ở chỗ đó thật tồi tệ."
+        },
+        {
+          "english": "The weather was terrible, so we cancelled our picnic by the pool.",
+          "vietnamese": "Thời tiết thật tồi tệ, nên chúng tôi đã huỷ buổi dã ngoại bên hồ bơi."
+        },
+        {
+          "english": "I had a terrible hangover after drinking too much beer.",
+          "vietnamese": "Tôi bị dư âm say tồi tệ sau khi uống quá nhiều bia."
+        },
+        {
+          "english": "Her first soup was terrible, but she kept trying every weekend.",
+          "vietnamese": "Món súp đầu tiên của cô ấy thật tệ, nhưng cô ấy vẫn thử mỗi cuối tuần."
+        },
+        {
+          "english": "Is the service at that new restaurant really terrible?",
+          "vietnamese": "Dịch vụ ở nhà hàng mới đó thật sự tồi tệ sao?"
+        }
+      ]
+    },
+    {
+      "word": "plain",
+      "sentences": [
+        {
+          "english": "After the hangover he only wanted plain rice and hot tea.",
+          "vietnamese": "Sau cơn dư âm say, anh ấy chỉ muốn ăn cơm trắng và uống trà nóng."
+        },
+        {
+          "english": "I prefer plain noodles when my stomach feels bad.",
+          "vietnamese": "Tôi thích ăn mì không khi bụng tôi khó chịu."
+        },
+        {
+          "english": "The sauce tasted too plain, so my mother put in more chilli.",
+          "vietnamese": "Nước sốt có vị quá nhạt, nên mẹ tôi cho thêm ớt."
+        },
+        {
+          "english": "Order a plain coffee if you do not want sugar or cream.",
+          "vietnamese": "Hãy gọi một ly cà phê không nếu bạn không muốn đường hay kem."
+        },
+        {
+          "english": "Plain dishes are typical of the food in my hometown.",
+          "vietnamese": "Những món ăn thanh đạm là đặc trưng của đồ ăn ở quê tôi."
+        }
+      ]
+    },
+    {
+      "word": "strong",
+      "sentences": [
+        {
+          "english": "This coffee is too strong for me.",
+          "vietnamese": "Cà phê này quá mạnh với tôi."
+        },
+        {
+          "english": "A strong breeze blew through the kitchen window this morning.",
+          "vietnamese": "Một cơn gió nhẹ nhưng mạnh thổi qua cửa sổ bếp sáng nay."
+        },
+        {
+          "english": "That wine is strong, so take only one small glass.",
+          "vietnamese": "Loại rượu vang đó rất nồng, nên bạn chỉ nên uống một ly nhỏ thôi."
+        },
+        {
+          "english": "Drinking strong tea every night is a bad habit of my father.",
+          "vietnamese": "Uống trà đặc mỗi tối là một thói quen xấu của bố tôi."
+        },
+        {
+          "english": "Do you feel strong enough to carry that heavy bucket of water?",
+          "vietnamese": "Bạn có thấy đủ khoẻ để xách cái xô nước nặng đó không?"
+        }
+      ]
+    },
+    {
+      "word": "add",
+      "sentences": [
+        {
+          "english": "Add some chilli if you want the hotpot to taste spicy.",
+          "vietnamese": "Thêm một ít ớt nếu bạn muốn món lẩu có vị cay."
+        },
+        {
+          "english": "Add a little sugar if the sauce is not sweet enough.",
+          "vietnamese": "Thêm một chút đường nếu nước sốt chưa đủ ngọt."
+        },
+        {
+          "english": "She added fresh lemon juice to the sparkling water.",
+          "vietnamese": "Cô ấy đã thêm nước chanh vàng tươi vào ly nước có ga."
+        },
+        {
+          "english": "The chef adds seasoning slowly and tastes the soup again.",
+          "vietnamese": "Người đầu bếp thêm gia vị từ từ rồi nếm món súp lần nữa."
+        },
+        {
+          "english": "I have added more vegetables to my daily meals as a new habit.",
+          "vietnamese": "Tôi đã thêm nhiều rau hơn vào các bữa ăn hằng ngày như một thói quen mới."
+        }
+      ]
+    },
+    {
+      "word": "seafood",
+      "sentences": [
+        {
+          "english": "We ate grilled seafood by the sea and drank cold beer.",
+          "vietnamese": "Chúng tôi ăn hải sản nướng bên bờ biển và uống bia lạnh."
+        },
+        {
+          "english": "Fresh seafood is quite expensive at the market near my house.",
+          "vietnamese": "Hải sản tươi khá đắt ở khu chợ gần nhà tôi."
+        },
+        {
+          "english": "We ordered a big seafood hotpot for the whole family.",
+          "vietnamese": "Chúng tôi đã gọi một nồi lẩu hải sản lớn cho cả gia đình."
+        },
+        {
+          "english": "Do you like seafood, or do you prefer pork and beef?",
+          "vietnamese": "Bạn thích hải sản, hay bạn thích thịt lợn và thịt bò hơn?"
+        },
+        {
+          "english": "The seafood was so oily that my stomach hurt later.",
+          "vietnamese": "Món hải sản nhiều dầu mỡ đến mức sau đó bụng tôi bị đau."
+        }
+      ]
+    },
+    {
+      "word": "raw",
+      "sentences": [
+        {
+          "english": "My grandmother never eats raw fish because of her weak stomach.",
+          "vietnamese": "Bà tôi không bao giờ ăn cá sống vì bụng bà yếu."
+        },
+        {
+          "english": "Japanese food often uses raw fish and light sauces.",
+          "vietnamese": "Đồ ăn Nhật thường dùng cá sống và các loại nước sốt thanh nhẹ."
+        },
+        {
+          "english": "Do not serve raw pork to your guests.",
+          "vietnamese": "Đừng dọn thịt lợn sống ra cho khách của bạn."
+        },
+        {
+          "english": "She was scared to try raw beef for the first time.",
+          "vietnamese": "Cô ấy đã sợ khi thử thịt bò sống lần đầu tiên."
+        },
+        {
+          "english": "Raw vegetables give me more energy than fried ones.",
+          "vietnamese": "Rau sống cho tôi nhiều năng lượng hơn rau chiên."
+        }
+      ]
+    },
+    {
+      "word": "undercooked",
+      "sentences": [
+        {
+          "english": "The pork was still undercooked, so I put it back on the stove.",
+          "vietnamese": "Miếng thịt lợn vẫn còn chưa chín, nên tôi đặt nó lại lên bếp."
+        },
+        {
+          "english": "The chicken looked undercooked, so I put it back on the grill.",
+          "vietnamese": "Con gà trông có vẻ chưa chín, nên tôi đặt nó lại lên vỉ nướng."
+        },
+        {
+          "english": "Undercooked seafood can be dangerous for your stomach.",
+          "vietnamese": "Hải sản chưa nấu chín có thể nguy hiểm cho dạ dày của bạn."
+        },
+        {
+          "english": "Was the beef undercooked when the waiter served it?",
+          "vietnamese": "Miếng thịt bò có bị chưa chín khi người phục vụ dọn ra không?"
+        },
+        {
+          "english": "He never eats undercooked eggs because of an old habit.",
+          "vietnamese": "Anh ấy không bao giờ ăn trứng chưa chín vì một thói quen cũ."
+        }
+      ]
+    },
+    {
+      "word": "fresh",
+      "sentences": [
+        {
+          "english": "I buy fresh groceries at the market every Sunday morning.",
+          "vietnamese": "Tôi mua thực phẩm tươi ở chợ vào mỗi sáng chủ nhật."
+        },
+        {
+          "english": "Fresh herbs make this soup smell wonderful.",
+          "vietnamese": "Rau thơm tươi làm món súp này thơm tuyệt vời."
+        },
+        {
+          "english": "My mother buys fresh beef and pork every morning.",
+          "vietnamese": "Mẹ tôi mua thịt bò và thịt lợn tươi mỗi buổi sáng."
+        },
+        {
+          "english": "The cool breeze felt fresh and pleasant after the rainy week.",
+          "vietnamese": "Cơn gió mát cảm giác trong lành và dễ chịu sau một tuần mưa."
+        },
+        {
+          "english": "Are these vegetables still fresh, or should we throw them away?",
+          "vietnamese": "Mấy loại rau này còn tươi không, hay chúng ta nên vứt chúng đi?"
+        }
+      ]
+    },
+    {
+      "word": "frozen",
+      "sentences": [
+        {
+          "english": "Frozen beef is not expensive, but my mother prefers fresh meat.",
+          "vietnamese": "Thịt bò đông lạnh không đắt, nhưng mẹ tôi thích thịt tươi hơn."
+        },
+        {
+          "english": "Frozen seafood is cheap, but it loses some flavour.",
+          "vietnamese": "Hải sản đông lạnh thì rẻ, nhưng nó mất đi một phần hương vị."
+        },
+        {
+          "english": "I keep frozen soup in small boxes for busy evenings.",
+          "vietnamese": "Tôi để súp đông lạnh trong những hộp nhỏ cho những buổi tối bận rộn."
+        },
+        {
+          "english": "Do not put frozen meat straight onto the hot stove.",
+          "vietnamese": "Đừng đặt thịt đông lạnh thẳng lên cái bếp đang nóng."
+        },
+        {
+          "english": "She has bought frozen groceries since she started working late.",
+          "vietnamese": "Cô ấy đã mua thực phẩm đông lạnh kể từ khi cô ấy bắt đầu làm việc muộn."
+        }
+      ]
+    },
+    {
+      "word": "roast",
+      "sentences": [
+        {
+          "english": "We roast a whole chicken when the weather turns dry and cool.",
+          "vietnamese": "Chúng tôi nướng nguyên một con gà khi thời tiết trở nên khô và mát."
+        },
+        {
+          "english": "My aunt will roast a duck for the festival next week.",
+          "vietnamese": "Dì tôi sẽ nướng một con vịt cho lễ hội tuần tới."
+        },
+        {
+          "english": "We roasted pork and drank cold beer in the garden.",
+          "vietnamese": "Chúng tôi đã nướng thịt lợn và uống bia lạnh ngoài vườn."
+        },
+        {
+          "english": "Roast the vegetables for twenty minutes, then serve them hot.",
+          "vietnamese": "Hãy nướng rau trong hai mươi phút, rồi dọn ra khi còn nóng."
+        },
+        {
+          "english": "Do you usually roast or boil your chicken?",
+          "vietnamese": "Bạn thường nướng hay luộc gà?"
+        }
+      ]
+    },
+    {
+      "word": "lemon",
+      "sentences": [
+        {
+          "english": "Put a slice of lemon in your sparkling water before serving.",
+          "vietnamese": "Cho một lát chanh vàng vào ly nước có ga của bạn trước khi dọn ra."
+        },
+        {
+          "english": "A little lemon makes the fish sauce taste much better.",
+          "vietnamese": "Một chút chanh vàng làm nước mắm có vị ngon hơn nhiều."
+        },
+        {
+          "english": "She drinks warm lemon water every morning as a detox habit.",
+          "vietnamese": "Cô ấy uống nước chanh vàng ấm mỗi sáng như một thói quen thanh lọc."
+        },
+        {
+          "english": "The lemon trees in my hometown grow well in the rainy season.",
+          "vietnamese": "Những cây chanh vàng ở quê tôi phát triển tốt vào mùa mưa."
+        },
+        {
+          "english": "Would you like some lemon in your glass of cold tea?",
+          "vietnamese": "Bạn có muốn thêm chút chanh vàng vào ly trà lạnh của mình không?"
+        }
+      ]
+    },
+    {
+      "word": "delicious",
+      "sentences": [
+        {
+          "english": "This soup is really delicious.",
+          "vietnamese": "Món canh này thật sự ngon."
+        },
+        {
+          "english": "The grilled beef was delicious, and everyone asked for more.",
+          "vietnamese": "Món thịt bò nướng rất ngon, và mọi người đều xin thêm."
+        },
+        {
+          "english": "My mother cooks delicious food even when she is tired.",
+          "vietnamese": "Mẹ tôi nấu đồ ăn ngon ngay cả khi bà mệt."
+        },
+        {
+          "english": "Have you ever tried the delicious street food in my hometown?",
+          "vietnamese": "Bạn đã bao giờ thử món ăn đường phố ngon tuyệt ở quê tôi chưa?"
+        },
+        {
+          "english": "Nothing is more delicious than hot soup on a rainy evening.",
+          "vietnamese": "Không gì ngon hơn một bát súp nóng vào một buổi tối mưa."
+        }
+      ]
+    },
+    {
+      "word": "tasty",
+      "sentences": [
+        {
+          "english": "My aunt made a tasty hotpot and served it with sweet sauce.",
+          "vietnamese": "Dì tôi nấu một món lẩu ngon và dọn ra cùng nước sốt ngọt."
+        },
+        {
+          "english": "This sauce is tasty but a bit too oily.",
+          "vietnamese": "Nước sốt này ngon nhưng hơi nhiều dầu mỡ."
+        },
+        {
+          "english": "We had a tasty dinner at a small pub near the river.",
+          "vietnamese": "Chúng tôi đã có một bữa tối ngon ở một quán rượu nhỏ gần sông."
+        },
+        {
+          "english": "Are these vegetarian dishes really tasty?",
+          "vietnamese": "Mấy món chay này có thật sự ngon không?"
+        },
+        {
+          "english": "She will serve us a tasty soup with a lot of chilli.",
+          "vietnamese": "Cô ấy sẽ dọn cho chúng tôi một món súp ngon với thật nhiều ớt."
+        }
+      ]
+    },
+    {
+      "word": "hunger",
+      "sentences": [
+        {
+          "english": "My hunger disappeared after one hot bowl of chicken soup.",
+          "vietnamese": "Cơn đói của tôi biến mất sau một bát súp gà nóng."
+        },
+        {
+          "english": "A bowl of noodles stopped my hunger before the long journey.",
+          "vietnamese": "Một bát mì đã chặn cơn đói của tôi trước chuyến đi dài."
+        },
+        {
+          "english": "Sweet drinks do not really kill your hunger.",
+          "vietnamese": "Đồ uống ngọt không thật sự dập tắt được cơn đói của bạn."
+        },
+        {
+          "english": "His hunger made him hangry and rude at the meeting.",
+          "vietnamese": "Cơn đói khiến anh ấy cáu bẳn vì đói và thô lỗ trong cuộc họp."
+        },
+        {
+          "english": "Hunger comes very quickly in this humid weather.",
+          "vietnamese": "Cơn đói đến rất nhanh trong thời tiết ẩm ướt này."
+        }
+      ]
+    },
+    {
+      "word": "chopstick",
+      "sentences": [
+        {
+          "english": "He dropped one chopstick into the soup and laughed loudly.",
+          "vietnamese": "Anh ấy làm rơi một chiếc đũa vào bát súp và cười to."
+        },
+        {
+          "english": "Foreigners often find it difficult to use chopsticks.",
+          "vietnamese": "Người nước ngoài thường thấy khó khi dùng đũa."
+        },
+        {
+          "english": "Put a clean chopstick beside every bowl before the guests arrive.",
+          "vietnamese": "Hãy đặt một đôi đũa sạch bên cạnh mỗi bát trước khi khách đến."
+        },
+        {
+          "english": "My little sister learned to hold chopsticks at kindergarten.",
+          "vietnamese": "Em gái nhỏ của tôi đã học cách cầm đũa ở trường mẫu giáo."
+        },
+        {
+          "english": "Can you stir the soup with a long chopstick?",
+          "vietnamese": "Bạn khuấy món súp bằng một chiếc đũa dài được không?"
+        }
+      ]
+    },
+    {
+      "word": "leftovers",
+      "sentences": [
+        {
+          "english": "The leftovers from the party were served again the next evening.",
+          "vietnamese": "Đồ ăn thừa từ bữa tiệc được dọn ra lại vào tối hôm sau."
+        },
+        {
+          "english": "Do not throw the leftovers away; we can eat them tomorrow.",
+          "vietnamese": "Đừng vứt đồ ăn thừa đi; chúng ta có thể ăn chúng vào ngày mai."
+        },
+        {
+          "english": "My mother turns the leftovers into a spicy fried rice.",
+          "vietnamese": "Mẹ tôi biến đồ ăn thừa thành một món cơm rang cay."
+        },
+        {
+          "english": "There were a lot of leftovers after the wedding party.",
+          "vietnamese": "Có rất nhiều đồ ăn thừa sau bữa tiệc cưới."
+        },
+        {
+          "english": "Have you finished the leftovers from last night's hotpot?",
+          "vietnamese": "Bạn đã ăn hết chỗ đồ ăn thừa từ nồi lẩu tối qua chưa?"
+        }
+      ]
+    },
+    {
+      "word": "takeaway",
+      "sentences": [
+        {
+          "english": "When the weather is awful, we order a takeaway for dinner.",
+          "vietnamese": "Khi thời tiết tệ hại, chúng tôi gọi đồ ăn mang đi cho bữa tối."
+        },
+        {
+          "english": "I ordered a takeaway because I was too tired to cook.",
+          "vietnamese": "Tôi đã gọi đồ ăn mang đi vì tôi quá mệt để nấu ăn."
+        },
+        {
+          "english": "Takeaway coffee is quite pricey in the city centre.",
+          "vietnamese": "Cà phê mang đi khá đắt đỏ ở trung tâm thành phố."
+        },
+        {
+          "english": "Do you often eat takeaway food when you feel hangry?",
+          "vietnamese": "Bạn có hay ăn đồ mang đi khi bạn thấy cáu vì đói không?"
+        },
+        {
+          "english": "We shared a big takeaway meal with our housemates.",
+          "vietnamese": "Chúng tôi đã chia nhau một bữa ăn mang đi lớn với các bạn cùng nhà."
+        }
+      ]
+    },
+    {
+      "word": "cuisine",
+      "sentences": [
+        {
+          "english": "Vietnamese cuisine is famous for its light soups and fresh herbs.",
+          "vietnamese": "Ẩm thực Việt Nam nổi tiếng với những món súp thanh nhẹ và rau thơm tươi."
+        },
+        {
+          "english": "Thai cuisine is famous for its spicy soups.",
+          "vietnamese": "Ẩm thực Thái Lan nổi tiếng với những món súp cay."
+        },
+        {
+          "english": "I want to discover the local cuisine on my next journey.",
+          "vietnamese": "Tôi muốn khám phá ẩm thực địa phương trong chuyến đi tiếp theo của mình."
+        },
+        {
+          "english": "Which cuisine do you prefer when you travel abroad?",
+          "vietnamese": "Bạn thích nền ẩm thực nào hơn khi bạn đi du lịch nước ngoài?"
+        },
+        {
+          "english": "The cuisine of my hometown uses a lot of fish sauce.",
+          "vietnamese": "Ẩm thực quê tôi dùng rất nhiều nước mắm."
+        }
+      ]
+    }
+  ]
+}

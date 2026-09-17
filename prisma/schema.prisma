@@ -122,12 +122,35 @@ model Card {
 
   reviewLogs         ReviewLog[]
   storyCards         StoryCard[]
+  practiceSentences  PracticeSentence[]
 
   @@index([deckId])
   @@index([nextReviewDate])
   @@index([state])
   @@index([deletedAt])
   @@index([favorite])
+}
+
+/// Câu luyện viết (Việt → Anh) của một thẻ. Mỗi thẻ có nhiều câu, mỗi câu
+/// chứa từ của thẻ VÀ ít nhất một từ đã học ở bất kỳ Unit cũ hơn nào.
+model PracticeSentence {
+  id         String   @id @default(cuid())
+  cardId     String
+  card       Card     @relation(fields: [cardId], references: [id], onDelete: Cascade)
+
+  /// Câu tiếng Anh (đáp án)
+  english    String
+  /// Câu tiếng Việt (đề bài)
+  vietnamese String
+  /// JSON array các từ ôn tập (Unit cũ) xuất hiện trong câu, vd ["culture","shy"]
+  reviewWords String?
+  /// Thứ tự câu trong cùng một thẻ
+  order      Int      @default(0)
+
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([cardId])
 }
 
 model ReviewLog {

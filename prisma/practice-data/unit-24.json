@@ -1,0 +1,247 @@
+{
+  "unit": 24,
+  "deck": "Unit 24: Bệnh tật và triệu chứng",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "cold",
+      "sentences": [
+        { "english": "My sister caught a cold after walking home in the heavy shower.", "vietnamese": "Chị tôi bị cảm lạnh sau khi đi bộ về nhà dưới cơn mưa rào nặng hạt." },
+        { "english": "A bad cold kept me at home during the whole holiday.", "vietnamese": "Một trận cảm lạnh nặng khiến tôi phải ở nhà suốt kỳ nghỉ." },
+        { "english": "Do you often catch a cold when the weather becomes humid?", "vietnamese": "Bạn có hay bị cảm lạnh khi thời tiết trở nên ẩm ướt không?" },
+        { "english": "My little brother has had a cold since the typhoon last week.", "vietnamese": "Em trai tôi bị cảm lạnh từ sau cơn bão tuần trước." },
+        { "english": "Drink hot soup and rest, or your cold will get worse.", "vietnamese": "Hãy uống súp nóng và nghỉ ngơi, nếu không cơn cảm lạnh của bạn sẽ nặng hơn." }
+      ]
+    },
+    {
+      "word": "ill",
+      "sentences": [
+        { "english": "I felt too ill to attend the important meeting yesterday.", "vietnamese": "Tôi thấy quá ốm để tham dự cuộc họp quan trọng hôm qua." },
+        { "english": "My grandmother has been ill since the rainy season began.", "vietnamese": "Bà tôi ốm từ khi mùa mưa bắt đầu." },
+        { "english": "Are you still ill, or can you attend the wedding tomorrow?", "vietnamese": "Bạn vẫn còn ốm, hay bạn có thể dự đám cưới ngày mai?" },
+        { "english": "He was ill for a week and was absent from every class.", "vietnamese": "Anh ấy ốm một tuần và vắng mặt ở mọi buổi học." },
+        { "english": "Do not go to the market if you feel ill this morning.", "vietnamese": "Đừng ra chợ nếu sáng nay bạn thấy ốm." }
+      ]
+    },
+    {
+      "word": "cough",
+      "sentences": [
+        { "english": "I began to cough all night and could hardly breathe.", "vietnamese": "Tôi bắt đầu ho suốt đêm và gần như không thở nổi." },
+        { "english": "Please cover your mouth when you cough near other guests.", "vietnamese": "Hãy che miệng lại khi bạn ho gần những người khách khác." },
+        { "english": "She coughed so loudly that the whole quiet room turned around.", "vietnamese": "Cô ấy ho to đến mức cả căn phòng yên tĩnh quay lại nhìn." },
+        { "english": "My father has been coughing since he stopped his morning exercise.", "vietnamese": "Bố tôi ho liên tục từ khi ông ngừng tập thể dục buổi sáng." },
+        { "english": "Dusty air makes me cough and breathe with difficulty.", "vietnamese": "Không khí đầy bụi khiến tôi ho và thở khó khăn." }
+      ]
+    },
+    {
+      "word": "throat",
+      "sentences": [
+        { "english": "The doctor asked me to open my mouth so he could see my throat.", "vietnamese": "Bác sĩ bảo tôi há miệng để ông ấy nhìn vào cổ họng." },
+        { "english": "Warm lemon tea is very good for a dry throat.", "vietnamese": "Trà chanh ấm rất tốt cho cổ họng khô." },
+        { "english": "My throat still hurts, so I will stay at home today.", "vietnamese": "Cổ họng tôi vẫn đau, nên hôm nay tôi sẽ ở nhà." },
+        { "english": "Singing for three hours damaged his throat completely.", "vietnamese": "Việc hát ba tiếng đồng hồ đã làm hỏng hoàn toàn cổ họng của anh ấy." },
+        { "english": "Does your throat feel better after drinking that hot soup?", "vietnamese": "Cổ họng bạn có dễ chịu hơn sau khi uống bát súp nóng đó không?" }
+      ]
+    },
+    {
+      "word": "sore",
+      "sentences": [
+        { "english": "My throat was so sore that I could hardly speak.", "vietnamese": "Cổ họng tôi đau nhức đến mức gần như không nói được." },
+        { "english": "My legs felt sore after a long hike in the mountains.", "vietnamese": "Chân tôi đau nhức sau một chuyến đi bộ đường dài trên núi." },
+        { "english": "She has a sore shoulder because she carries a heavy bag daily.", "vietnamese": "Cô ấy bị đau nhức vai vì ngày nào cũng mang một chiếc túi nặng." },
+        { "english": "Do not exercise today if your arms are still sore.", "vietnamese": "Đừng tập thể dục hôm nay nếu tay bạn vẫn còn đau nhức." },
+        { "english": "A warm shower will help your sore body relax.", "vietnamese": "Một vòi sen ấm sẽ giúp cơ thể đau nhức của bạn thư giãn." }
+      ]
+    },
+    {
+      "word": "headache",
+      "sentences": [
+        { "english": "I woke up with a terrible headache and couldn't get out of bed.", "vietnamese": "Tôi thức dậy với cơn đau đầu khủng khiếp và không thể ra khỏi giường." },
+        { "english": "Loud music at the party gave me a bad headache.", "vietnamese": "Nhạc lớn ở bữa tiệc làm tôi đau đầu dữ dội." },
+        { "english": "Do you get a headache when the weather is very humid?", "vietnamese": "Bạn có bị đau đầu khi thời tiết rất ẩm không?" },
+        { "english": "She has had a headache all morning and cannot finish her assignment.", "vietnamese": "Cô ấy đau đầu cả buổi sáng và không thể hoàn thành bài tập." },
+        { "english": "Too much coffee often causes a headache in the afternoon.", "vietnamese": "Uống quá nhiều cà phê thường gây đau đầu vào buổi chiều." }
+      ]
+    },
+    {
+      "word": "ache",
+      "sentences": [
+        { "english": "A dull ache in my back kept me awake all night.", "vietnamese": "Một cơn đau âm ỉ ở lưng khiến tôi thức trắng đêm." },
+        { "english": "A strange ache in my knee appeared after the long journey.", "vietnamese": "Một cơn đau âm ỉ lạ ở đầu gối xuất hiện sau chuyến đi dài." },
+        { "english": "I feel a slight ache in my stomach after eating spicy food.", "vietnamese": "Tôi thấy hơi đau âm ỉ ở bụng sau khi ăn đồ cay." },
+        { "english": "The ache in her shoulder has remained for two weeks.", "vietnamese": "Cơn đau âm ỉ ở vai cô ấy vẫn còn suốt hai tuần." },
+        { "english": "Does that ache come back when the season changes?", "vietnamese": "Cơn đau âm ỉ đó có quay lại khi giao mùa không?" }
+      ]
+    },
+    {
+      "word": "hurt",
+      "sentences": [
+        { "english": "Every muscle in my body seemed to hurt that morning.", "vietnamese": "Sáng hôm đó dường như cơ bắp nào của tôi cũng đau." },
+        { "english": "My back hurts every time I carry those heavy bowls.", "vietnamese": "Lưng tôi đau mỗi lần tôi bê những cái bát nặng đó." },
+        { "english": "Do not run on the wet ground, or you will hurt your knee.", "vietnamese": "Đừng chạy trên mặt đất ướt, nếu không bạn sẽ làm đau đầu gối." },
+        { "english": "She hurt her ankle while climbing the steep hill last Sunday.", "vietnamese": "Cô ấy làm đau mắt cá chân khi leo ngọn đồi dốc vào Chủ nhật tuần trước." },
+        { "english": "Bright light hurts my eyes when I wake up in the morning.", "vietnamese": "Ánh sáng chói làm đau mắt tôi khi tôi thức dậy buổi sáng." }
+      ]
+    },
+    {
+      "word": "flu",
+      "sentences": [
+        { "english": "Every winter my whole family gets the flu, which is really tiring.", "vietnamese": "Mùa đông nào cả nhà tôi cũng bị cúm, điều đó thật sự mệt mỏi." },
+        { "english": "The flu spread quickly through our small neighbourhood last month.", "vietnamese": "Bệnh cúm lây lan nhanh khắp khu phố nhỏ của chúng tôi tháng trước." },
+        { "english": "Have you ever had the flu during a long holiday?", "vietnamese": "Bạn đã bao giờ bị cúm trong một kỳ nghỉ dài chưa?" },
+        { "english": "Wash your hands often to prevent the flu.", "vietnamese": "Hãy rửa tay thường xuyên để phòng ngừa bệnh cúm." },
+        { "english": "He is staying in bed because the flu made him very weak.", "vietnamese": "Anh ấy đang nằm nghỉ trên giường vì bệnh cúm làm anh rất yếu." }
+      ]
+    },
+    {
+      "word": "fear",
+      "sentences": [
+        { "english": "A sudden fear gripped me when the doctor called my name.", "vietnamese": "Một nỗi sợ bất chợt bao trùm lấy tôi khi bác sĩ gọi tên." },
+        { "english": "Her fear of spiders makes camping in the forest impossible.", "vietnamese": "Nỗi sợ nhện của cô ấy khiến việc cắm trại trong rừng là không thể." },
+        { "english": "I have a terrible fear of needles, so I avoid the clinic.", "vietnamese": "Tôi có nỗi sợ kim tiêm khủng khiếp, nên tôi tránh đến phòng khám." },
+        { "english": "Do not let fear stop you from asking the nurse questions.", "vietnamese": "Đừng để nỗi sợ ngăn bạn hỏi cô y tá." },
+        { "english": "His fear disappeared when the doctor explained everything in simple language.", "vietnamese": "Nỗi sợ của anh ấy biến mất khi bác sĩ giải thích mọi thứ bằng ngôn ngữ đơn giản." }
+      ]
+    },
+    {
+      "word": "disease",
+      "sentences": [
+        { "english": "The doctor explained that it was not a dangerous disease.", "vietnamese": "Bác sĩ giải thích rằng đó không phải là một căn bệnh nguy hiểm." },
+        { "english": "A healthy diet can protect you from many serious diseases.", "vietnamese": "Một chế độ ăn lành mạnh có thể bảo vệ bạn khỏi nhiều căn bệnh nghiêm trọng." },
+        { "english": "This disease is common among old people in our area.", "vietnamese": "Căn bệnh này phổ biến ở người già trong khu vực của chúng tôi." },
+        { "english": "Doctors have studied this disease since the war ended.", "vietnamese": "Các bác sĩ đã nghiên cứu căn bệnh này từ khi chiến tranh kết thúc." },
+        { "english": "Smoking causes many dangerous diseases, so my uncle finally stopped.", "vietnamese": "Hút thuốc gây ra nhiều căn bệnh nguy hiểm, nên chú tôi cuối cùng đã bỏ." }
+      ]
+    },
+    {
+      "word": "seriously",
+      "sentences": [
+        { "english": "My uncle was seriously sick last year, but his condition is better now.", "vietnamese": "Chú tôi ốm nghiêm trọng hồi năm ngoái, nhưng tình trạng của chú giờ đã khá hơn." },
+        { "english": "The typhoon seriously damaged many houses along the coast.", "vietnamese": "Cơn bão đã tàn phá nghiêm trọng nhiều ngôi nhà dọc bờ biển." },
+        { "english": "Air pollution seriously affects the health of young children.", "vietnamese": "Ô nhiễm không khí ảnh hưởng nghiêm trọng đến sức khỏe của trẻ nhỏ." },
+        { "english": "He is seriously ill, but the doctors remain hopeful.", "vietnamese": "Ông ấy ốm nghiêm trọng, nhưng các bác sĩ vẫn giữ hy vọng." },
+        { "english": "Was anyone seriously injured in the flood last night?", "vietnamese": "Có ai bị thương nghiêm trọng trong trận lụt đêm qua không?" }
+      ]
+    },
+    {
+      "word": "cancer",
+      "sentences": [
+        { "english": "I was afraid the symptoms might be a sign of cancer.", "vietnamese": "Tôi sợ rằng các triệu chứng có thể là dấu hiệu của ung thư." },
+        { "english": "Smoking and alcohol can increase the risk of cancer.", "vietnamese": "Hút thuốc và rượu bia có thể làm tăng nguy cơ ung thư." },
+        { "english": "Her mother survived cancer and now lives a peaceful life.", "vietnamese": "Mẹ cô ấy đã vượt qua ung thư và giờ sống một cuộc sống bình yên." },
+        { "english": "Doctors have discovered new ways to treat cancer.", "vietnamese": "Các bác sĩ đã tìm ra những cách mới để điều trị ung thư." },
+        { "english": "Eating fresh vegetables may help prevent some kinds of cancer.", "vietnamese": "Ăn rau tươi có thể giúp phòng ngừa một số loại ung thư." }
+      ]
+    },
+    {
+      "word": "check",
+      "sentences": [
+        { "english": "The nurse came in to check my temperature and blood pressure.", "vietnamese": "Y tá bước vào để kiểm tra nhiệt độ và huyết áp của tôi." },
+        { "english": "Please check the temperature of the soup before you serve it.", "vietnamese": "Hãy kiểm tra nhiệt độ của món súp trước khi bạn dọn ra." },
+        { "english": "The dentist checked my teeth and said everything looked fine.", "vietnamese": "Nha sĩ đã kiểm tra răng tôi và nói mọi thứ đều ổn." },
+        { "english": "I am checking the weather forecast before our long journey.", "vietnamese": "Tôi đang kiểm tra dự báo thời tiết trước chuyến đi dài của chúng tôi." },
+        { "english": "Did you check the price of that medicine at the local pharmacy?", "vietnamese": "Bạn đã kiểm tra giá của loại thuốc đó ở hiệu thuốc địa phương chưa?" }
+      ]
+    },
+    {
+      "word": "curable",
+      "sentences": [
+        { "english": "The nurse told me my problem was curable, so I stopped feeling anxious.", "vietnamese": "Cô y tá nói với tôi rằng bệnh của tôi chữa được, nên tôi thôi cảm thấy lo lắng." },
+        { "english": "Most common skin problems are curable if you see a doctor early.", "vietnamese": "Hầu hết các vấn đề da phổ biến đều chữa được nếu bạn đi khám sớm." },
+        { "english": "Doctors say the condition is curable, which made us all satisfied.", "vietnamese": "Các bác sĩ nói tình trạng này chữa được, điều đó khiến tất cả chúng tôi hài lòng." },
+        { "english": "Many diseases were not curable before modern medicine appeared.", "vietnamese": "Nhiều căn bệnh đã không chữa được trước khi y học hiện đại xuất hiện." },
+        { "english": "She felt less anxious after learning that her illness was curable.", "vietnamese": "Cô ấy bớt lo lắng sau khi biết rằng bệnh của mình chữa được." }
+      ]
+    },
+    {
+      "word": "suffer",
+      "sentences": [
+        { "english": "Many old people suffer from poor sight and hardly read at night.", "vietnamese": "Nhiều người già phải chịu đựng thị lực kém và hiếm khi đọc sách vào ban đêm." },
+        { "english": "Thousands of families suffered badly during the flood last September.", "vietnamese": "Hàng nghìn gia đình đã chịu đựng khổ sở trong trận lụt tháng Chín vừa rồi." },
+        { "english": "Do you often suffer from headaches after a tiring day?", "vietnamese": "Bạn có hay phải chịu những cơn đau đầu sau một ngày mệt mỏi không?" },
+        { "english": "He has suffered from a weak stomach since he was a child.", "vietnamese": "Anh ấy phải chịu đựng cái dạ dày yếu từ khi còn nhỏ." },
+        { "english": "Nobody should suffer in silence; tell the nurse how you feel.", "vietnamese": "Không ai nên chịu đựng trong im lặng; hãy nói với y tá bạn cảm thấy thế nào." }
+      ]
+    },
+    {
+      "word": "diabetes",
+      "sentences": [
+        { "english": "Her grandfather has lived with diabetes for many years.", "vietnamese": "Ông của cô ấy đã sống chung với bệnh tiểu đường nhiều năm." },
+        { "english": "Too much sugar in your diet can lead to diabetes.", "vietnamese": "Quá nhiều đường trong chế độ ăn có thể dẫn đến bệnh tiểu đường." },
+        { "english": "People with diabetes must avoid sweet drinks and oily food.", "vietnamese": "Người bị tiểu đường phải tránh đồ uống ngọt và thức ăn nhiều dầu mỡ." },
+        { "english": "The doctor said that regular exercise helps control diabetes.", "vietnamese": "Bác sĩ nói rằng tập thể dục đều đặn giúp kiểm soát bệnh tiểu đường." },
+        { "english": "Has anyone in your neighbourhood been living with diabetes?", "vietnamese": "Có ai trong khu phố của bạn đang sống chung với bệnh tiểu đường không?" }
+      ]
+    },
+    {
+      "word": "autism",
+      "sentences": [
+        { "english": "The doctor also talked about children living with autism.", "vietnamese": "Bác sĩ cũng nói về những đứa trẻ sống chung với chứng tự kỷ." },
+        { "english": "Children with autism sometimes find noisy places very difficult.", "vietnamese": "Trẻ tự kỷ đôi khi thấy những nơi ồn ào rất khó chịu đựng." },
+        { "english": "Her son has autism, but he is extraordinary at mathematics.", "vietnamese": "Con trai cô ấy bị tự kỷ, nhưng cậu bé giỏi phi thường môn toán." },
+        { "english": "Teachers should be mindful when a pupil shows signs of autism.", "vietnamese": "Giáo viên nên lưu tâm khi một học sinh có dấu hiệu tự kỷ." },
+        { "english": "We attended a course about autism at the local clinic.", "vietnamese": "Chúng tôi đã tham dự một khóa học về tự kỷ ở phòng khám địa phương." }
+      ]
+    },
+    {
+      "word": "injure",
+      "sentences": [
+        { "english": "She fell down the stairs and managed to injure her knee.", "vietnamese": "Cô ấy ngã cầu thang và bị thương ở đầu gối." },
+        { "english": "Be careful on the steep path, or you may injure your leg.", "vietnamese": "Hãy cẩn thận trên con đường dốc, nếu không bạn có thể bị thương ở chân." },
+        { "english": "Three workers were injured when the old bridge suddenly fell.", "vietnamese": "Ba công nhân bị thương khi cây cầu cũ bất ngờ đổ sập." },
+        { "english": "He injured his shoulder while carrying heavy furniture up the stairs.", "vietnamese": "Anh ấy bị thương ở vai khi khiêng đồ nội thất nặng lên cầu thang." },
+        { "english": "Wear a helmet so that you do not injure your brain in an accident.", "vietnamese": "Hãy đội mũ bảo hiểm để bạn không làm tổn thương não trong một vụ tai nạn." }
+      ]
+    },
+    {
+      "word": "bleed",
+      "sentences": [
+        { "english": "My nose started to bleed after a long exercise under the hot sun.", "vietnamese": "Mũi tôi bắt đầu chảy máu sau một buổi tập dài dưới trời nắng nóng." },
+        { "english": "My gums often bleed, so the dentist gave me a softer brush.", "vietnamese": "Lợi của tôi hay chảy máu, nên nha sĩ đưa tôi một cái bàn chải mềm hơn." },
+        { "english": "The wound is still bleeding; press it firmly to stop the blood.", "vietnamese": "Vết thương vẫn đang chảy máu; hãy ấn mạnh vào đó để cầm máu." },
+        { "english": "Does your nose bleed when the weather is very dry?", "vietnamese": "Mũi bạn có chảy máu khi thời tiết rất khô không?" },
+        { "english": "If a cut keeps bleeding, go to the clinic immediately.", "vietnamese": "Nếu vết cắt cứ chảy máu mãi, hãy đến phòng khám ngay." }
+      ]
+    },
+    {
+      "word": "prescription",
+      "sentences": [
+        { "english": "The doctor gave me a prescription and told me to avoid oily food.", "vietnamese": "Bác sĩ đưa tôi một đơn thuốc và bảo tôi tránh đồ ăn nhiều dầu mỡ." },
+        { "english": "Take this prescription to the pharmacy near the market.", "vietnamese": "Hãy mang đơn thuốc này đến hiệu thuốc gần chợ." },
+        { "english": "The nurse wrote a prescription and explained the amount carefully.", "vietnamese": "Cô y tá viết một đơn thuốc và giải thích cẩn thận liều lượng." },
+        { "english": "I cannot find my prescription, so I will contact the clinic again.", "vietnamese": "Tôi không tìm thấy đơn thuốc, nên tôi sẽ liên hệ lại với phòng khám." },
+        { "english": "Does this prescription contain anything I might be allergic to?", "vietnamese": "Đơn thuốc này có chứa thứ gì mà tôi có thể bị dị ứng không?" }
+      ]
+    },
+    {
+      "word": "ease",
+      "sentences": [
+        { "english": "A hot bath will ease your back after such a tiring day.", "vietnamese": "Một bồn tắm nước nóng sẽ làm dịu lưng của bạn sau một ngày mệt mỏi như thế." },
+        { "english": "These green herbs can ease a sore throat naturally.", "vietnamese": "Những loại thảo mộc xanh này có thể làm dịu cổ họng đau một cách tự nhiên." },
+        { "english": "A cup of warm tea eased her stomach after the spicy meal.", "vietnamese": "Một tách trà ấm đã làm dịu dạ dày cô ấy sau bữa ăn cay." },
+        { "english": "Deep breathing exercises will ease your anxious mind before the interview.", "vietnamese": "Các bài tập thở sâu sẽ làm dịu tâm trí lo lắng của bạn trước buổi phỏng vấn." },
+        { "english": "Nothing eased my headache until I finally went to the clinic.", "vietnamese": "Không gì làm dịu được cơn đau đầu của tôi cho đến khi tôi đến phòng khám." }
+      ]
+    },
+    {
+      "word": "pain",
+      "sentences": [
+        { "english": "A sharp pain ran through my chest when I breathed in.", "vietnamese": "Một cơn đau nhói chạy qua ngực tôi mỗi khi hít vào." },
+        { "english": "The pain in my knee becomes worse during the rainy season.", "vietnamese": "Cơn đau ở đầu gối tôi trở nên tệ hơn trong mùa mưa." },
+        { "english": "She could hardly walk because of the pain in her foot.", "vietnamese": "Cô ấy gần như không đi được vì cơn đau ở bàn chân." },
+        { "english": "Have you felt any pain since the dentist pulled that tooth?", "vietnamese": "Bạn có thấy đau chút nào từ khi nha sĩ nhổ chiếc răng đó không?" },
+        { "english": "Warm water and gentle exercise can reduce back pain.", "vietnamese": "Nước ấm và tập thể dục nhẹ nhàng có thể giảm cơn đau lưng." }
+      ]
+    },
+    {
+      "word": "drop",
+      "sentences": [
+        { "english": "The nurse told me to put two drops in each eye every morning.", "vietnamese": "Cô y tá bảo tôi nhỏ hai giọt vào mỗi bên mắt mỗi sáng." },
+        { "english": "The nurse gave me eye drops for my sore eyes.", "vietnamese": "Cô y tá đưa cho tôi thuốc nhỏ mắt cho đôi mắt đau nhức." },
+        { "english": "Put three drops of this medicine into a glass of water.", "vietnamese": "Hãy nhỏ ba giọt thuốc này vào một cốc nước." },
+        { "english": "Have you used the nose drops that the doctor recommended last week?", "vietnamese": "Bạn đã dùng thuốc nhỏ mũi mà bác sĩ khuyên dùng tuần trước chưa?" },
+        { "english": "Two drops of this medicine every morning will prevent the infection.", "vietnamese": "Hai giọt thuốc này mỗi sáng sẽ ngăn ngừa nhiễm trùng." }
+      ]
+    }
+  ]
+}

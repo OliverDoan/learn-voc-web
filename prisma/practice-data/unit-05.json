@@ -1,0 +1,607 @@
+{
+  "unit": 5,
+  "deck": "Unit 5: Hành trình tìm việc của Naruto",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "jobless",
+      "sentences": [
+        {
+          "english": "He was jobless for six months after the small company closed last year.",
+          "vietnamese": "Anh ấy thất nghiệp suốt sáu tháng sau khi công ty nhỏ đó đóng cửa năm ngoái."
+        },
+        {
+          "english": "Many young people in my hometown are jobless this year.",
+          "vietnamese": "Nhiều người trẻ ở quê tôi đang thất nghiệp trong năm nay."
+        },
+        {
+          "english": "Are you still jobless, or did a manager offer you a job?",
+          "vietnamese": "Bạn vẫn còn thất nghiệp à, hay đã có quản lý nào mời bạn một công việc rồi?"
+        },
+        {
+          "english": "She felt nervous and jobless after she decided to drop out of school.",
+          "vietnamese": "Cô ấy cảm thấy lo lắng và thất nghiệp sau khi quyết định bỏ học."
+        },
+        {
+          "english": "Do not stay jobless; contact an employer and send your letter today.",
+          "vietnamese": "Đừng cứ thất nghiệp mãi; hãy liên hệ một nhà tuyển dụng và gửi thư của bạn ngay hôm nay."
+        }
+      ]
+    },
+    {
+      "word": "career",
+      "sentences": [
+        {
+          "english": "A good manager can help you plan a long career in business.",
+          "vietnamese": "Một người quản lý giỏi có thể giúp bạn lên kế hoạch cho một sự nghiệp lâu dài trong kinh doanh."
+        },
+        {
+          "english": "My cousin started a new career as a hairdresser in our town.",
+          "vietnamese": "Anh họ tôi đã bắt đầu một sự nghiệp mới với nghề thợ làm tóc ở thị trấn chúng tôi."
+        },
+        {
+          "english": "She wants a career in science, so she studies hard every evening.",
+          "vietnamese": "Cô ấy muốn có sự nghiệp trong ngành khoa học, nên cô ấy học chăm chỉ mỗi tối."
+        },
+        {
+          "english": "Have you ever thought about a career abroad?",
+          "vietnamese": "Bạn đã bao giờ nghĩ về một sự nghiệp ở nước ngoài chưa?"
+        },
+        {
+          "english": "A career in engineering is challenging, but it pays very well.",
+          "vietnamese": "Sự nghiệp trong ngành kỹ thuật thì đầy thử thách, nhưng nó trả lương rất tốt."
+        }
+      ]
+    },
+    {
+      "word": "prepare",
+      "sentences": [
+        {
+          "english": "I always prepare answers about my skills before an important meeting.",
+          "vietnamese": "Tôi luôn chuẩn bị câu trả lời về các kỹ năng của mình trước một cuộc gặp quan trọng."
+        },
+        {
+          "english": "We are preparing a short conversation for the English course tomorrow.",
+          "vietnamese": "Chúng tôi đang chuẩn bị một đoạn hội thoại ngắn cho khóa học tiếng Anh vào ngày mai."
+        },
+        {
+          "english": "Did you prepare the form before you met the receptionist?",
+          "vietnamese": "Bạn đã chuẩn bị mẫu đơn trước khi gặp lễ tân chưa?"
+        },
+        {
+          "english": "Please prepare your certificate and your address before the meeting starts.",
+          "vietnamese": "Hãy chuẩn bị chứng chỉ và địa chỉ của bạn trước khi cuộc họp bắt đầu."
+        },
+        {
+          "english": "He prepared a special dinner because his favourite cook was visiting.",
+          "vietnamese": "Anh ấy đã chuẩn bị một bữa tối đặc biệt vì đầu bếp yêu thích của anh ấy đến thăm."
+        }
+      ]
+    },
+    {
+      "word": "arrange",
+      "sentences": [
+        {
+          "english": "The assistant will arrange a meeting with the employer on Monday morning.",
+          "vietnamese": "Người trợ lý sẽ sắp xếp một cuộc gặp với nhà tuyển dụng vào sáng thứ Hai."
+        },
+        {
+          "english": "Can you arrange a call with the manager this afternoon?",
+          "vietnamese": "Bạn có thể sắp xếp một cuộc gọi với quản lý vào chiều nay không?"
+        },
+        {
+          "english": "She arranged the books by subject so students could revise faster.",
+          "vietnamese": "Cô ấy đã sắp xếp sách theo môn học để học sinh có thể ôn tập nhanh hơn."
+        },
+        {
+          "english": "The receptionist is arranging rooms for the visitors from abroad.",
+          "vietnamese": "Lễ tân đang sắp xếp phòng cho những vị khách đến từ nước ngoài."
+        },
+        {
+          "english": "We will arrange a peaceful room in the centre for the interview.",
+          "vietnamese": "Chúng tôi sẽ sắp xếp một căn phòng yên tĩnh ở trung tâm cho buổi phỏng vấn."
+        }
+      ]
+    },
+    {
+      "word": "document",
+      "sentences": [
+        {
+          "english": "Every document must be signed before the new employee starts work.",
+          "vietnamese": "Mọi tài liệu đều phải được ký trước khi nhân viên mới bắt đầu làm việc."
+        },
+        {
+          "english": "The lawyer asked me to sign every document before Friday.",
+          "vietnamese": "Luật sư đã đề nghị tôi ký mọi tài liệu trước thứ Sáu."
+        },
+        {
+          "english": "I cannot open this document on my old computer.",
+          "vietnamese": "Tôi không thể mở tài liệu này trên chiếc máy tính cũ của mình."
+        },
+        {
+          "english": "Have you read the documents that the accountant sent yesterday?",
+          "vietnamese": "Bạn đã đọc những tài liệu mà kế toán viên gửi hôm qua chưa?"
+        },
+        {
+          "english": "Keep the original document safe because the employer may ask for it.",
+          "vietnamese": "Hãy giữ tài liệu gốc cẩn thận vì nhà tuyển dụng có thể hỏi đến nó."
+        }
+      ]
+    },
+    {
+      "word": "file",
+      "sentences": [
+        {
+          "english": "The accountant keeps every receipt in a file on her desk.",
+          "vietnamese": "Kế toán viên giữ mọi hoá đơn trong một hồ sơ trên bàn làm việc."
+        },
+        {
+          "english": "The manager keeps a file for every new employee.",
+          "vietnamese": "Người quản lý giữ một hồ sơ cho mỗi nhân viên mới."
+        },
+        {
+          "english": "Please send me the file that describes your language course.",
+          "vietnamese": "Làm ơn gửi cho tôi hồ sơ mô tả khóa học ngôn ngữ của bạn."
+        },
+        {
+          "english": "I could not open the file because I forgot the password.",
+          "vietnamese": "Tôi đã không thể mở tập tin đó vì tôi quên mật khẩu."
+        },
+        {
+          "english": "All the files about the school curriculum are in that cabinet.",
+          "vietnamese": "Tất cả hồ sơ về chương trình học của trường đều nằm trong chiếc tủ đó."
+        }
+      ]
+    },
+    {
+      "word": "application",
+      "sentences": [
+        {
+          "english": "He sent his application to ten companies.",
+          "vietnamese": "Anh ấy gửi đơn ứng tuyển tới mười công ty."
+        },
+        {
+          "english": "The employer read her application and offered her a better job.",
+          "vietnamese": "Nhà tuyển dụng đã đọc đơn ứng tuyển của cô ấy và mời cô ấy một công việc tốt hơn."
+        },
+        {
+          "english": "Did you sign the application form before you left the office?",
+          "vietnamese": "Bạn đã ký vào mẫu đơn ứng tuyển trước khi rời văn phòng chưa?"
+        },
+        {
+          "english": "My application for the English course is still on his desk.",
+          "vietnamese": "Đơn xin học khóa tiếng Anh của tôi vẫn còn nằm trên bàn của anh ấy."
+        },
+        {
+          "english": "Applications from foreigners must include a certificate of language skills.",
+          "vietnamese": "Đơn ứng tuyển của người nước ngoài phải kèm theo một chứng chỉ về kỹ năng ngôn ngữ."
+        }
+      ]
+    },
+    {
+      "word": "interview",
+      "sentences": [
+        {
+          "english": "Try to be punctual for the interview and dress neatly.",
+          "vietnamese": "Hãy cố gắng đến đúng giờ cho buổi phỏng vấn và ăn mặc gọn gàng."
+        },
+        {
+          "english": "I was very nervous during my first interview with the manager.",
+          "vietnamese": "Tôi đã rất lo lắng trong buổi phỏng vấn đầu tiên với người quản lý."
+        },
+        {
+          "english": "The journalist asked for an interview with the town's oldest architect.",
+          "vietnamese": "Nhà báo đã xin một buổi phỏng vấn với kiến trúc sư lớn tuổi nhất thị trấn."
+        },
+        {
+          "english": "How many interviews have you had since you finished the course?",
+          "vietnamese": "Bạn đã có bao nhiêu buổi phỏng vấn kể từ khi bạn học xong khóa học đó?"
+        },
+        {
+          "english": "Do not be absent from the interview tomorrow morning.",
+          "vietnamese": "Đừng vắng mặt ở buổi phỏng vấn vào sáng mai."
+        }
+      ]
+    },
+    {
+      "word": "secretary",
+      "sentences": [
+        {
+          "english": "The secretary printed the form and gave it to the new employee.",
+          "vietnamese": "Cô thư ký in mẫu đơn và đưa nó cho nhân viên mới."
+        },
+        {
+          "english": "The secretary called every candidate to announce the new schedule.",
+          "vietnamese": "Cô thư ký đã gọi cho từng ứng viên để thông báo lịch mới."
+        },
+        {
+          "english": "She works as a secretary for a small company in the centre.",
+          "vietnamese": "Cô ấy làm thư ký cho một công ty nhỏ ở trung tâm."
+        },
+        {
+          "english": "Ask the secretary to contact the accountant about the missing receipt.",
+          "vietnamese": "Hãy bảo thư ký liên hệ với kế toán viên về tờ hoá đơn bị thiếu."
+        },
+        {
+          "english": "Two secretaries attended the training course last month.",
+          "vietnamese": "Hai thư ký đã tham dự khóa đào tạo vào tháng trước."
+        }
+      ]
+    },
+    {
+      "word": "bank teller",
+      "sentences": [
+        {
+          "english": "The bank teller counted the money and asked me to sign the paper.",
+          "vietnamese": "Giao dịch viên ngân hàng đếm tiền và đề nghị tôi ký vào tờ giấy."
+        },
+        {
+          "english": "My neighbour is a bank teller and she is always punctual.",
+          "vietnamese": "Hàng xóm của tôi là một giao dịch viên ngân hàng và cô ấy luôn đúng giờ."
+        },
+        {
+          "english": "The bank teller opened a new account for the foreign visitor.",
+          "vietnamese": "Giao dịch viên ngân hàng đã mở một tài khoản mới cho vị khách nước ngoài."
+        },
+        {
+          "english": "Do you know how to become a bank teller in this town?",
+          "vietnamese": "Bạn có biết làm thế nào để trở thành giao dịch viên ngân hàng ở thị trấn này không?"
+        },
+        {
+          "english": "A bank teller needs good skills in mathematics and a friendly smile.",
+          "vietnamese": "Một giao dịch viên ngân hàng cần kỹ năng toán học tốt và một nụ cười thân thiện."
+        }
+      ]
+    },
+    {
+      "word": "nurse",
+      "sentences": [
+        {
+          "english": "My sister works as a nurse in a hospital near our hometown.",
+          "vietnamese": "Chị gái tôi làm y tá tại một bệnh viện gần quê chúng tôi."
+        },
+        {
+          "english": "The nurse spoke slowly so the foreigner could understand her.",
+          "vietnamese": "Cô y tá nói chậm rãi để người nước ngoài có thể hiểu cô ấy."
+        },
+        {
+          "english": "Many nurses attend a short course before they start work.",
+          "vietnamese": "Nhiều y tá tham dự một khóa học ngắn trước khi họ bắt đầu làm việc."
+        },
+        {
+          "english": "Would you like to become a nurse, or do you prefer engineering?",
+          "vietnamese": "Bạn có muốn trở thành y tá không, hay bạn thích ngành kỹ thuật hơn?"
+        },
+        {
+          "english": "The nurse stayed calm and peaceful when the little boy was scared.",
+          "vietnamese": "Cô y tá vẫn bình tĩnh và điềm đạm khi cậu bé sợ hãi."
+        }
+      ]
+    },
+    {
+      "word": "film maker",
+      "sentences": [
+        {
+          "english": "He dreams of being a film maker and studies art every weekend.",
+          "vietnamese": "Anh ấy mơ trở thành nhà làm phim và học mỹ thuật vào mỗi cuối tuần."
+        },
+        {
+          "english": "A young film maker from the north received a prize last night.",
+          "vietnamese": "Một nhà làm phim trẻ đến từ miền bắc đã nhận được một giải thưởng tối qua."
+        },
+        {
+          "english": "The film maker described his idea to the journalist very clearly.",
+          "vietnamese": "Nhà làm phim đã mô tả ý tưởng của mình cho nhà báo rất rõ ràng."
+        },
+        {
+          "english": "She wants to be a film maker, so she is learning about culture abroad.",
+          "vietnamese": "Cô ấy muốn trở thành nhà làm phim, nên cô ấy đang tìm hiểu về văn hóa ở nước ngoài."
+        },
+        {
+          "english": "Do you know any famous film maker in our hometown?",
+          "vietnamese": "Bạn có biết nhà làm phim nổi tiếng nào ở quê chúng ta không?"
+        }
+      ]
+    },
+    {
+      "word": "musician",
+      "sentences": [
+        {
+          "english": "The young musician became popular after playing at the town festival.",
+          "vietnamese": "Nhạc công trẻ tuổi trở nên nổi tiếng sau khi chơi nhạc tại lễ hội thị trấn."
+        },
+        {
+          "english": "The musician lives in a quiet town near the sea.",
+          "vietnamese": "Người nhạc sĩ sống ở một thị trấn yên tĩnh gần biển."
+        },
+        {
+          "english": "Many musicians play in the crowded centre every Saturday evening.",
+          "vietnamese": "Nhiều nhạc công chơi nhạc ở khu trung tâm đông đúc vào mỗi tối thứ Bảy."
+        },
+        {
+          "english": "He is a musician and also a very confident speaker.",
+          "vietnamese": "Anh ấy là một nhạc sĩ và cũng là một người nói chuyện rất tự tin."
+        },
+        {
+          "english": "Did the musician announce the date of his next concert?",
+          "vietnamese": "Người nhạc sĩ đã thông báo ngày diễn ra buổi hòa nhạc tiếp theo chưa?"
+        }
+      ]
+    },
+    {
+      "word": "reporter",
+      "sentences": [
+        {
+          "english": "A reporter asked the manager to describe the company's new plan.",
+          "vietnamese": "Một phóng viên đề nghị vị quản lý mô tả kế hoạch mới của công ty."
+        },
+        {
+          "english": "The reporter asked the pilot about the long distance flight.",
+          "vietnamese": "Phóng viên đã hỏi viên phi công về chuyến bay đường dài."
+        },
+        {
+          "english": "Two reporters attended the meeting in the town centre.",
+          "vietnamese": "Hai phóng viên đã tham dự cuộc họp ở trung tâm thị trấn."
+        },
+        {
+          "english": "She has worked as a reporter since she finished her course.",
+          "vietnamese": "Cô ấy đã làm phóng viên kể từ khi cô ấy học xong khóa học của mình."
+        },
+        {
+          "english": "A good reporter must understand many cultures and languages.",
+          "vietnamese": "Một phóng viên giỏi phải hiểu nhiều nền văn hóa và nhiều ngôn ngữ."
+        }
+      ]
+    },
+    {
+      "word": "photographer",
+      "sentences": [
+        {
+          "english": "The photographer took beautiful pictures of the old town centre.",
+          "vietnamese": "Nhiếp ảnh gia đã chụp những bức ảnh đẹp về khu trung tâm thị trấn cổ."
+        },
+        {
+          "english": "The photographer is very popular among young people in the north.",
+          "vietnamese": "Nhiếp ảnh gia đó rất được yêu thích trong giới trẻ ở miền bắc."
+        },
+        {
+          "english": "My brother wants to become a photographer instead of an engineer.",
+          "vietnamese": "Anh trai tôi muốn trở thành nhiếp ảnh gia thay vì một kỹ sư."
+        },
+        {
+          "english": "Photographers often travel abroad to find beautiful places.",
+          "vietnamese": "Các nhiếp ảnh gia thường đi nước ngoài để tìm những nơi đẹp."
+        },
+        {
+          "english": "Can you tell the photographer to arrive before ten o'clock?",
+          "vietnamese": "Bạn có thể nói với nhiếp ảnh gia đến trước mười giờ không?"
+        }
+      ]
+    },
+    {
+      "word": "designer",
+      "sentences": [
+        {
+          "english": "She is a designer who worked abroad for two years.",
+          "vietnamese": "Cô ấy là một nhà thiết kế đã làm việc ở nước ngoài hai năm."
+        },
+        {
+          "english": "The designer showed her new idea to the manager this morning.",
+          "vietnamese": "Nhà thiết kế đã cho người quản lý xem ý tưởng mới của cô ấy sáng nay."
+        },
+        {
+          "english": "Many designers live in the city centre because the work is there.",
+          "vietnamese": "Nhiều nhà thiết kế sống ở trung tâm thành phố vì công việc ở đó."
+        },
+        {
+          "english": "He became a famous designer after he studied art abroad.",
+          "vietnamese": "Anh ấy trở thành một nhà thiết kế nổi tiếng sau khi học mỹ thuật ở nước ngoài."
+        },
+        {
+          "english": "Is your sister a designer or an accountant?",
+          "vietnamese": "Chị của bạn là nhà thiết kế hay là kế toán viên?"
+        }
+      ]
+    },
+    {
+      "word": "qualified",
+      "sentences": [
+        {
+          "english": "He is qualified for this job because he has a teaching certificate.",
+          "vietnamese": "Anh ấy đủ tiêu chuẩn cho công việc này vì anh ấy có chứng chỉ giảng dạy."
+        },
+        {
+          "english": "She is not qualified yet because she has no certificate.",
+          "vietnamese": "Cô ấy chưa đủ tiêu chuẩn vì cô ấy chưa có chứng chỉ."
+        },
+        {
+          "english": "Only qualified engineers can sign this kind of drawing.",
+          "vietnamese": "Chỉ những kỹ sư đủ năng lực mới có thể ký loại bản vẽ này."
+        },
+        {
+          "english": "Are you qualified to teach mathematics at a secondary school?",
+          "vietnamese": "Bạn có đủ tiêu chuẩn để dạy toán ở trường trung học không?"
+        },
+        {
+          "english": "The company needs a qualified accountant before the end of the term.",
+          "vietnamese": "Công ty cần một kế toán viên đủ năng lực trước khi kỳ học này kết thúc."
+        }
+      ]
+    },
+    {
+      "word": "tool",
+      "sentences": [
+        {
+          "english": "A dictionary is a useful tool when you learn new vocabulary.",
+          "vietnamese": "Từ điển là một công cụ hữu ích khi bạn học từ vựng mới."
+        },
+        {
+          "english": "A small notebook is a simple tool for revising new words.",
+          "vietnamese": "Một cuốn sổ nhỏ là một công cụ đơn giản để ôn lại từ mới."
+        },
+        {
+          "english": "The workers left their tools at the new house in the south.",
+          "vietnamese": "Những người thợ đã để dụng cụ của họ ở ngôi nhà mới phía nam."
+        },
+        {
+          "english": "This website is a useful tool when you want to improve your writing.",
+          "vietnamese": "Trang web này là một công cụ hữu ích khi bạn muốn cải thiện kỹ năng viết."
+        },
+        {
+          "english": "Do you know which tool the hairdresser uses most often?",
+          "vietnamese": "Bạn có biết người thợ làm tóc dùng dụng cụ nào nhiều nhất không?"
+        }
+      ]
+    },
+    {
+      "word": "expert",
+      "sentences": [
+        {
+          "english": "She is an expert in user interface design.",
+          "vietnamese": "Cô ấy là chuyên gia về thiết kế giao diện người dùng."
+        },
+        {
+          "english": "He is an expert in Japanese culture and language.",
+          "vietnamese": "Anh ấy là một chuyên gia về văn hóa và ngôn ngữ Nhật Bản."
+        },
+        {
+          "english": "The experts announced the results of the test yesterday.",
+          "vietnamese": "Các chuyên gia đã công bố kết quả của bài kiểm tra vào hôm qua."
+        },
+        {
+          "english": "Ask an expert if you have difficulty with this subject.",
+          "vietnamese": "Hãy hỏi một chuyên gia nếu bạn gặp khó khăn với môn học này."
+        },
+        {
+          "english": "She became an expert after ten years of hard work abroad.",
+          "vietnamese": "Cô ấy trở thành một chuyên gia sau mười năm làm việc vất vả ở nước ngoài."
+        }
+      ]
+    },
+    {
+      "word": "customer",
+      "sentences": [
+        {
+          "english": "The salesperson listened carefully to every customer in the crowded shop.",
+          "vietnamese": "Nhân viên bán hàng lắng nghe cẩn thận từng khách hàng trong cửa hàng đông đúc."
+        },
+        {
+          "english": "The receptionist greets every customer with a warm smile.",
+          "vietnamese": "Lễ tân chào đón mỗi khách hàng bằng một nụ cười ấm áp."
+        },
+        {
+          "english": "Customers often call the shop before they visit the centre.",
+          "vietnamese": "Khách hàng thường gọi điện cho cửa hàng trước khi họ đến trung tâm."
+        },
+        {
+          "english": "A customer asked the manager to open a second counter.",
+          "vietnamese": "Một khách hàng đã đề nghị người quản lý mở thêm một quầy thứ hai."
+        },
+        {
+          "english": "We must understand what each customer really needs.",
+          "vietnamese": "Chúng ta phải hiểu điều mà mỗi khách hàng thực sự cần."
+        }
+      ]
+    },
+    {
+      "word": "builder",
+      "sentences": [
+        {
+          "english": "The builder and the architect discussed the plan for the new office.",
+          "vietnamese": "Người thợ xây và kiến trúc sư đã thảo luận về kế hoạch cho văn phòng mới."
+        },
+        {
+          "english": "The builder lives in a small house north of the town.",
+          "vietnamese": "Người thợ xây sống trong một ngôi nhà nhỏ ở phía bắc thị trấn."
+        },
+        {
+          "english": "Builders and architects must follow the plan very carefully.",
+          "vietnamese": "Thợ xây và kiến trúc sư phải tuân theo bản kế hoạch rất cẩn thận."
+        },
+        {
+          "english": "My uncle worked as a builder before he became a manager.",
+          "vietnamese": "Chú tôi đã làm thợ xây trước khi ông ấy trở thành quản lý."
+        },
+        {
+          "english": "Did the builder tell you when the work will finish?",
+          "vietnamese": "Người thợ xây có nói với bạn khi nào công việc sẽ xong không?"
+        }
+      ]
+    },
+    {
+      "word": "employed",
+      "sentences": [
+        {
+          "english": "She has been employed at that company since last summer.",
+          "vietnamese": "Cô ấy đã được tuyển dụng ở công ty đó từ mùa hè năm ngoái."
+        },
+        {
+          "english": "He has been employed as a lawyer since March.",
+          "vietnamese": "Anh ấy đã làm luật sư từ tháng Ba."
+        },
+        {
+          "english": "Are you employed at that company, or are you still studying abroad?",
+          "vietnamese": "Bạn đang làm việc ở công ty đó, hay bạn vẫn đang du học ở nước ngoài?"
+        },
+        {
+          "english": "She was employed by a small design studio in the town centre.",
+          "vietnamese": "Cô ấy đã được tuyển vào một xưởng thiết kế nhỏ ở trung tâm thị trấn."
+        },
+        {
+          "english": "Fewer people are employed in farming in my hometown these days.",
+          "vietnamese": "Ngày nay ít người làm việc trong ngành nông nghiệp ở quê tôi hơn."
+        }
+      ]
+    },
+    {
+      "word": "contract",
+      "sentences": [
+        {
+          "english": "She signed the contract yesterday.",
+          "vietnamese": "Cô ấy đã ký hợp đồng hôm qua."
+        },
+        {
+          "english": "The manager asked me to read the contract carefully before signing.",
+          "vietnamese": "Người quản lý đã đề nghị tôi đọc hợp đồng thật kỹ trước khi ký."
+        },
+        {
+          "english": "My contract with the company ends at the end of this term.",
+          "vietnamese": "Hợp đồng của tôi với công ty kết thúc vào cuối kỳ này."
+        },
+        {
+          "english": "Have you signed the new contract yet?",
+          "vietnamese": "Bạn đã ký hợp đồng mới chưa?"
+        },
+        {
+          "english": "The lawyer explained every part of the contract in simple language.",
+          "vietnamese": "Luật sư đã giải thích từng phần của hợp đồng bằng ngôn ngữ đơn giản."
+        }
+      ]
+    },
+    {
+      "word": "freelancer",
+      "sentences": [
+        {
+          "english": "As a freelancer, he can choose his own hours and live anywhere.",
+          "vietnamese": "Là một người làm việc tự do, anh ấy có thể tự chọn giờ giấc và sống ở bất cứ đâu."
+        },
+        {
+          "english": "Many freelancers work from home and choose their own topics.",
+          "vietnamese": "Nhiều người làm tự do làm việc tại nhà và tự chọn chủ đề của mình."
+        },
+        {
+          "english": "A freelancer must be punctual, or people will not come back.",
+          "vietnamese": "Một người làm việc tự do phải đúng giờ, nếu không người ta sẽ không quay lại."
+        },
+        {
+          "english": "She left the company last year and became a freelancer.",
+          "vietnamese": "Cô ấy đã rời công ty năm ngoái và trở thành người làm việc tự do."
+        },
+        {
+          "english": "Do you know any freelancer who designs websites?",
+          "vietnamese": "Bạn có biết người làm tự do nào thiết kế trang web không?"
+        }
+      ]
+    }
+  ]
+}

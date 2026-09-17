@@ -1,0 +1,607 @@
+{
+  "unit": 3,
+  "deck": "Unit 3: Naruto và biệt danh Sunny",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "town",
+      "sentences": [
+        {
+          "english": "Every visitor to our town says the old market is worth seeing.",
+          "vietnamese": "Mọi du khách đến thị trấn của chúng tôi đều nói rằng khu chợ cổ rất đáng để ghé thăm."
+        },
+        {
+          "english": "Our small town has a popular market every Sunday morning.",
+          "vietnamese": "Thị trấn nhỏ của chúng tôi có một khu chợ phổ biến vào mỗi sáng Chủ nhật."
+        },
+        {
+          "english": "Did you attend the music festival in town last summer?",
+          "vietnamese": "Bạn có tham dự lễ hội âm nhạc ở thị trấn vào mùa hè năm ngoái không?"
+        },
+        {
+          "english": "Many foreigners have moved to this town to study the local language.",
+          "vietnamese": "Nhiều người nước ngoài đã chuyển đến thị trấn này để học ngôn ngữ địa phương."
+        },
+        {
+          "english": "The town will open a new science museum next year.",
+          "vietnamese": "Thị trấn sẽ mở một bảo tàng khoa học mới vào năm tới."
+        }
+      ]
+    },
+    {
+      "word": "nickname",
+      "sentences": [
+        {
+          "english": "My primary school teacher gave me a funny nickname that everyone still remembers.",
+          "vietnamese": "Cô giáo tiểu học của tôi đã đặt cho tôi một biệt danh vui nhộn mà mọi người vẫn còn nhớ."
+        },
+        {
+          "english": "Teachers should not use a nickname when they announce the final grades.",
+          "vietnamese": "Giáo viên không nên dùng biệt danh khi họ thông báo điểm cuối kỳ."
+        },
+        {
+          "english": "My nickname at kindergarten was Bunny because I loved carrots.",
+          "vietnamese": "Biệt danh của tôi hồi mẫu giáo là Bunny vì tôi rất thích cà rốt."
+        },
+        {
+          "english": "Shy students rarely tell anyone their childhood nickname.",
+          "vietnamese": "Những học sinh nhút nhát hiếm khi kể cho ai nghe biệt danh thời thơ ấu của mình."
+        },
+        {
+          "english": "Write your real name, not your nickname, on the assignment.",
+          "vietnamese": "Hãy viết tên thật của bạn, không phải biệt danh, lên bài tập."
+        }
+      ]
+    },
+    {
+      "word": "special",
+      "sentences": [
+        {
+          "english": "Our art teacher planned something special for the last day of the term.",
+          "vietnamese": "Thầy dạy mỹ thuật của chúng tôi đã chuẩn bị một điều gì đó đặc biệt cho ngày cuối của học kỳ."
+        },
+        {
+          "english": "This course is special because every lesson includes a real conversation.",
+          "vietnamese": "Khoá học này đặc biệt vì mỗi bài học đều có một cuộc trò chuyện thật."
+        },
+        {
+          "english": "Our teacher announced a special prize for the best project.",
+          "vietnamese": "Giáo viên của chúng tôi đã thông báo một giải thưởng đặc biệt cho dự án xuất sắc nhất."
+        },
+        {
+          "english": "Is there anything special in the new curriculum this year?",
+          "vietnamese": "Có điều gì đặc biệt trong chương trình học mới của năm nay không?"
+        },
+        {
+          "english": "Nothing special happens when beginners memorise long lists of words.",
+          "vietnamese": "Không có gì đặc biệt xảy ra khi người mới bắt đầu học thuộc những danh sách từ dài."
+        }
+      ]
+    },
+    {
+      "word": "call",
+      "sentences": [
+        {
+          "english": "My classmates call me Sunny because I smile during every conversation.",
+          "vietnamese": "Các bạn cùng lớp gọi tôi là Sunny vì tôi luôn cười trong mọi cuộc trò chuyện."
+        },
+        {
+          "english": "Please call the office if you cannot attend the lesson tomorrow.",
+          "vietnamese": "Hãy gọi cho văn phòng nếu ngày mai bạn không thể tham dự buổi học."
+        },
+        {
+          "english": "My teacher called my parents because I was absent for a week.",
+          "vietnamese": "Giáo viên của tôi đã gọi cho bố mẹ tôi vì tôi đã vắng mặt một tuần."
+        },
+        {
+          "english": "Foreigners often call our city the most peaceful place in Vietnam.",
+          "vietnamese": "Người nước ngoài thường gọi thành phố của chúng tôi là nơi yên bình nhất Việt Nam."
+        },
+        {
+          "english": "I am calling the school to ask about the new term.",
+          "vietnamese": "Tôi đang gọi cho trường để hỏi về học kỳ mới."
+        }
+      ]
+    },
+    {
+      "word": "know",
+      "sentences": [
+        {
+          "english": "I did not know that our new classmate was a foreigner from Canada.",
+          "vietnamese": "Tôi đã không biết rằng người bạn cùng lớp mới của chúng tôi là một người nước ngoài đến từ Canada."
+        },
+        {
+          "english": "Do you know how to improve your listening skills quickly?",
+          "vietnamese": "Bạn có biết làm thế nào để cải thiện kỹ năng nghe của mình nhanh chóng không?"
+        },
+        {
+          "english": "Beginners should know a few hundred words before the first course.",
+          "vietnamese": "Người mới bắt đầu nên biết vài trăm từ trước khoá học đầu tiên."
+        },
+        {
+          "english": "She knows every topic in the new curriculum by heart.",
+          "vietnamese": "Cô ấy thuộc lòng mọi chủ đề trong chương trình học mới."
+        },
+        {
+          "english": "Knowing many idioms makes me more confident when I speak English.",
+          "vietnamese": "Việc biết nhiều thành ngữ khiến tôi tự tin hơn khi nói tiếng Anh."
+        }
+      ]
+    },
+    {
+      "word": "meaning",
+      "sentences": [
+        {
+          "english": "Nobody could explain the meaning of this word, so we checked our vocabulary list.",
+          "vietnamese": "Không ai giải thích được ý nghĩa của từ này, nên chúng tôi đã kiểm tra danh sách từ vựng."
+        },
+        {
+          "english": "The teacher explained the meaning of each new word in simple language.",
+          "vietnamese": "Giáo viên đã giải thích ý nghĩa của từng từ mới bằng ngôn ngữ đơn giản."
+        },
+        {
+          "english": "Do not guess the meaning; check the dictionary and revise it tonight.",
+          "vietnamese": "Đừng đoán ý nghĩa; hãy tra từ điển và ôn lại nó tối nay."
+        },
+        {
+          "english": "Understanding the meaning of a poem is harder than memorising it.",
+          "vietnamese": "Hiểu ý nghĩa của một bài thơ thì khó hơn là học thuộc nó."
+        },
+        {
+          "english": "This old symbol has a special meaning in our culture.",
+          "vietnamese": "Biểu tượng cổ này mang một ý nghĩa đặc biệt trong văn hoá của chúng tôi."
+        }
+      ]
+    },
+    {
+      "word": "tell",
+      "sentences": [
+        {
+          "english": "Please tell me the topic of your assignment before Friday.",
+          "vietnamese": "Hãy nói cho tôi biết chủ đề bài tập của bạn trước thứ Sáu."
+        },
+        {
+          "english": "Can you tell me which subject you enjoy most at school?",
+          "vietnamese": "Bạn có thể nói cho tôi biết môn học nào bạn thích nhất ở trường không?"
+        },
+        {
+          "english": "My grandmother often tells stories about the culture of her village.",
+          "vietnamese": "Bà tôi thường kể những câu chuyện về văn hoá của làng bà."
+        },
+        {
+          "english": "The teacher is telling us how to revise before the exam.",
+          "vietnamese": "Giáo viên đang nói cho chúng tôi biết cách ôn tập trước kỳ thi."
+        },
+        {
+          "english": "Do not tell anyone that I was absent yesterday.",
+          "vietnamese": "Đừng nói với ai rằng hôm qua tôi đã vắng mặt."
+        }
+      ]
+    },
+    {
+      "word": "live",
+      "sentences": [
+        {
+          "english": "Two foreign students live near my house and attend the same course.",
+          "vietnamese": "Hai sinh viên nước ngoài sống gần nhà tôi và theo học cùng một khoá học."
+        },
+        {
+          "english": "My cousin lives abroad and studies engineering in Germany.",
+          "vietnamese": "Anh họ tôi sống ở nước ngoài và học ngành kỹ thuật tại Đức."
+        },
+        {
+          "english": "We lived near the primary school when I was a child.",
+          "vietnamese": "Chúng tôi đã sống gần trường tiểu học khi tôi còn nhỏ."
+        },
+        {
+          "english": "Would you like to live in a quiet place with few visitors?",
+          "vietnamese": "Bạn có muốn sống ở một nơi yên tĩnh với ít du khách không?"
+        },
+        {
+          "english": "Students who live far from school often continue their lessons online.",
+          "vietnamese": "Những học sinh sống xa trường thường tiếp tục các bài học của mình trực tuyến."
+        }
+      ]
+    },
+    {
+      "word": "beautiful",
+      "sentences": [
+        {
+          "english": "The school garden looks beautiful when the new term begins in September.",
+          "vietnamese": "Khu vườn của trường trông thật đẹp khi học kỳ mới bắt đầu vào tháng Chín."
+        },
+        {
+          "english": "The art teacher showed us a beautiful painting from the last century.",
+          "vietnamese": "Thầy dạy mỹ thuật đã cho chúng tôi xem một bức tranh đẹp từ thế kỷ trước."
+        },
+        {
+          "english": "My village looks beautiful in autumn, and visitors come every weekend.",
+          "vietnamese": "Làng tôi trông thật đẹp vào mùa thu, và du khách đến mỗi cuối tuần."
+        },
+        {
+          "english": "She wrote a beautiful essay about her science teacher.",
+          "vietnamese": "Cô ấy đã viết một bài luận đẹp về giáo viên khoa học của mình."
+        },
+        {
+          "english": "Is the old library as beautiful as the new language centre?",
+          "vietnamese": "Thư viện cũ có đẹp như trung tâm ngoại ngữ mới không?"
+        }
+      ]
+    },
+    {
+      "word": "peaceful",
+      "sentences": [
+        {
+          "english": "Shy people often prefer a peaceful place to read and study.",
+          "vietnamese": "Những người nhút nhát thường thích một nơi yên bình để đọc sách và học."
+        },
+        {
+          "english": "The library is a peaceful place where students revise for their exams.",
+          "vietnamese": "Thư viện là một nơi yên bình nơi học sinh ôn tập cho các kỳ thi của mình."
+        },
+        {
+          "english": "Our peaceful village has no traffic, so nobody feels nervous walking home.",
+          "vietnamese": "Ngôi làng yên bình của chúng tôi không có xe cộ, nên không ai thấy lo lắng khi đi bộ về nhà."
+        },
+        {
+          "english": "I found a peaceful corner to memorise my new vocabulary.",
+          "vietnamese": "Tôi đã tìm được một góc yên bình để học thuộc từ vựng mới của mình."
+        },
+        {
+          "english": "Life became peaceful again after the school announced a longer holiday.",
+          "vietnamese": "Cuộc sống lại trở nên yên bình sau khi nhà trường thông báo một kỳ nghỉ dài hơn."
+        }
+      ]
+    },
+    {
+      "word": "centre",
+      "sentences": [
+        {
+          "english": "A new language centre opened last month and many adults enrolled immediately.",
+          "vietnamese": "Một trung tâm ngoại ngữ mới đã mở tháng trước và nhiều người lớn đã ghi danh ngay lập tức."
+        },
+        {
+          "english": "The sports centre near my house is popular with young people.",
+          "vietnamese": "Trung tâm thể thao gần nhà tôi rất phổ biến với giới trẻ."
+        },
+        {
+          "english": "I will enroll at a language centre to improve my speaking.",
+          "vietnamese": "Tôi sẽ ghi danh vào một trung tâm ngoại ngữ để cải thiện kỹ năng nói của mình."
+        },
+        {
+          "english": "Does the centre offer a course for complete beginners?",
+          "vietnamese": "Trung tâm có mở khoá học nào cho người mới bắt đầu hoàn toàn không?"
+        },
+        {
+          "english": "The training centre gave every student a certificate last Friday.",
+          "vietnamese": "Trung tâm đào tạo đã trao cho mỗi học viên một tấm chứng chỉ vào thứ Sáu tuần trước."
+        }
+      ]
+    },
+    {
+      "word": "crowded",
+      "sentences": [
+        {
+          "english": "The science lab was crowded because two classes attended the same lesson.",
+          "vietnamese": "Phòng thí nghiệm khoa học đông đúc vì hai lớp cùng dự một tiết học."
+        },
+        {
+          "english": "The bus to school is always crowded during the first term.",
+          "vietnamese": "Xe buýt đến trường luôn đông đúc trong học kỳ đầu tiên."
+        },
+        {
+          "english": "I feel nervous when the classroom becomes too crowded.",
+          "vietnamese": "Tôi cảm thấy lo lắng khi lớp học trở nên quá đông đúc."
+        },
+        {
+          "english": "The hall was crowded because the principal announced the exam results.",
+          "vietnamese": "Hội trường đông đúc vì thầy hiệu trưởng thông báo kết quả kỳ thi."
+        },
+        {
+          "english": "Is the library crowded before every assignment deadline?",
+          "vietnamese": "Thư viện có đông đúc trước mỗi hạn nộp bài tập không?"
+        }
+      ]
+    },
+    {
+      "word": "common",
+      "sentences": [
+        {
+          "english": "It is common for beginners to feel nervous during their first lesson.",
+          "vietnamese": "Việc người mới bắt đầu cảm thấy lo lắng trong buổi học đầu tiên là chuyện phổ biến."
+        },
+        {
+          "english": "It is common for shy students to avoid a long conversation.",
+          "vietnamese": "Việc học sinh nhút nhát tránh một cuộc trò chuyện dài là chuyện phổ biến."
+        },
+        {
+          "english": "Spelling mistakes are common when you learn a new language.",
+          "vietnamese": "Lỗi chính tả là chuyện phổ biến khi bạn học một ngôn ngữ mới."
+        },
+        {
+          "english": "Our teacher listed the most common words in the curriculum.",
+          "vietnamese": "Giáo viên của chúng tôi đã liệt kê những từ phổ biến nhất trong chương trình học."
+        },
+        {
+          "english": "Was it common to wear a uniform at your primary school?",
+          "vietnamese": "Việc mặc đồng phục ở trường tiểu học của bạn có phổ biến không?"
+        }
+      ]
+    },
+    {
+      "word": "hometown",
+      "sentences": [
+        {
+          "english": "I return to my hometown at the end of every school term.",
+          "vietnamese": "Tôi trở về quê hương vào cuối mỗi học kỳ."
+        },
+        {
+          "english": "My hometown is famous for its traditional art and friendly people.",
+          "vietnamese": "Quê hương tôi nổi tiếng với nghệ thuật truyền thống và những con người thân thiện."
+        },
+        {
+          "english": "She returned to her hometown after she succeeded in the final exam.",
+          "vietnamese": "Cô ấy đã trở về quê hương sau khi cô ấy thành công trong kỳ thi cuối."
+        },
+        {
+          "english": "Will you describe your hometown to the foreign visitors tomorrow?",
+          "vietnamese": "Ngày mai bạn sẽ mô tả quê hương của mình cho các du khách nước ngoài chứ?"
+        },
+        {
+          "english": "There was no secondary school in my hometown twenty years ago.",
+          "vietnamese": "Hai mươi năm trước ở quê hương tôi không có trường trung học nào."
+        }
+      ]
+    },
+    {
+      "word": "north",
+      "sentences": [
+        {
+          "english": "My uncle moved to the north to study engineering ten years ago.",
+          "vietnamese": "Chú tôi đã chuyển ra phía bắc để học ngành kỹ thuật mười năm trước."
+        },
+        {
+          "english": "People in the north speak a different dialect, so I cannot always understand them.",
+          "vietnamese": "Người ở phía bắc nói một phương ngữ khác, nên tôi không phải lúc nào cũng hiểu họ."
+        },
+        {
+          "english": "Many visitors travel to the north during the summer holiday.",
+          "vietnamese": "Nhiều du khách đi về phía bắc trong kỳ nghỉ hè."
+        },
+        {
+          "english": "My sister enrolled at a university in the north last September.",
+          "vietnamese": "Chị tôi đã ghi danh vào một trường đại học ở phía bắc hồi tháng Chín năm ngoái."
+        },
+        {
+          "english": "Is the culture in the north very different from ours?",
+          "vietnamese": "Văn hoá ở phía bắc có rất khác với văn hoá của chúng ta không?"
+        }
+      ]
+    },
+    {
+      "word": "south",
+      "sentences": [
+        {
+          "english": "Many visitors travel to the south to enjoy the local culture and food.",
+          "vietnamese": "Nhiều du khách đi về phía nam để tận hưởng văn hoá và ẩm thực địa phương."
+        },
+        {
+          "english": "The south of our country is warm, so a thick uniform is unnecessary.",
+          "vietnamese": "Phía nam đất nước chúng tôi ấm áp, nên một bộ đồng phục dày là không cần thiết."
+        },
+        {
+          "english": "I will continue my studies in the south next year.",
+          "vietnamese": "Tôi sẽ tiếp tục việc học của mình ở phía nam vào năm tới."
+        },
+        {
+          "english": "Students from the south often attend summer courses in the capital.",
+          "vietnamese": "Học sinh từ phía nam thường tham dự các khoá học hè ở thủ đô."
+        },
+        {
+          "english": "Do people in the south use words that beginners find difficult?",
+          "vietnamese": "Người ở phía nam có dùng những từ mà người mới bắt đầu thấy khó không?"
+        }
+      ]
+    },
+    {
+      "word": "distance",
+      "sentences": [
+        {
+          "english": "The distance from my house to the secondary school is about three kilometres.",
+          "vietnamese": "Khoảng cách từ nhà tôi đến trường trung học khoảng ba ki lô mét."
+        },
+        {
+          "english": "The distance between the two campuses makes it hard to attend both classes.",
+          "vietnamese": "Khoảng cách giữa hai cơ sở khiến việc tham dự cả hai lớp trở nên khó khăn."
+        },
+        {
+          "english": "Distance learning has become popular among busy adults.",
+          "vietnamese": "Việc học từ xa đã trở nên phổ biến với những người lớn bận rộn."
+        },
+        {
+          "english": "We measured the distance in our mathematics lesson yesterday.",
+          "vietnamese": "Chúng tôi đã đo khoảng cách đó trong tiết toán hôm qua."
+        },
+        {
+          "english": "Does the distance to the language centre worry you?",
+          "vietnamese": "Khoảng cách đến trung tâm ngoại ngữ có làm bạn lo lắng không?"
+        }
+      ]
+    },
+    {
+      "word": "spell",
+      "sentences": [
+        {
+          "english": "Many beginners have difficulty when they spell long English words.",
+          "vietnamese": "Nhiều người mới bắt đầu gặp khó khăn khi đánh vần những từ tiếng Anh dài."
+        },
+        {
+          "english": "Can you spell that word slowly so I can understand it?",
+          "vietnamese": "Bạn có thể đánh vần từ đó chậm lại để tôi có thể hiểu được không?"
+        },
+        {
+          "english": "I spelled every new word correctly and improved my grade.",
+          "vietnamese": "Tôi đã đánh vần đúng mọi từ mới và cải thiện được điểm số của mình."
+        },
+        {
+          "english": "Young children learn to spell before they enter primary school.",
+          "vietnamese": "Trẻ nhỏ học đánh vần trước khi vào trường tiểu học."
+        },
+        {
+          "english": "She is spelling the names of the foreign visitors on the list.",
+          "vietnamese": "Cô ấy đang đánh vần tên của các du khách nước ngoài trong danh sách."
+        }
+      ]
+    },
+    {
+      "word": "surname",
+      "sentences": [
+        {
+          "english": "Write your surname in capital letters on the certificate, please.",
+          "vietnamese": "Vui lòng viết họ của bạn bằng chữ in hoa trên tấm chứng chỉ."
+        },
+        {
+          "english": "The teacher could not announce my surname correctly.",
+          "vietnamese": "Giáo viên đã không thể đọc tên họ của tôi một cách chính xác."
+        },
+        {
+          "english": "Foreigners often find my surname difficult to pronounce.",
+          "vietnamese": "Người nước ngoài thường thấy họ của tôi khó phát âm."
+        },
+        {
+          "english": "Please write your surname on every assignment you hand in.",
+          "vietnamese": "Hãy viết họ của bạn lên mọi bài tập mà bạn nộp."
+        },
+        {
+          "english": "Does your surname come before your first name in your culture?",
+          "vietnamese": "Trong văn hoá của bạn, họ có đứng trước tên không?"
+        }
+      ]
+    },
+    {
+      "word": "contact",
+      "sentences": [
+        {
+          "english": "Leave your contact details with the teacher if you are absent tomorrow.",
+          "vietnamese": "Hãy để lại thông tin liên lạc cho giáo viên nếu ngày mai bạn vắng mặt."
+        },
+        {
+          "english": "The school keeps the contact details of every student in the course.",
+          "vietnamese": "Nhà trường lưu giữ thông tin liên lạc của mọi học viên trong khoá học."
+        },
+        {
+          "english": "I have no contact with my old classmates since I moved abroad.",
+          "vietnamese": "Tôi không có liên lạc gì với các bạn học cũ kể từ khi tôi chuyển ra nước ngoài."
+        },
+        {
+          "english": "Update your contact information before the new term starts.",
+          "vietnamese": "Hãy cập nhật thông tin liên lạc của bạn trước khi học kỳ mới bắt đầu."
+        },
+        {
+          "english": "Do you have the contact number of the language centre?",
+          "vietnamese": "Bạn có số liên lạc của trung tâm ngoại ngữ không?"
+        }
+      ]
+    },
+    {
+      "word": "address",
+      "sentences": [
+        {
+          "english": "The foreign visitor asked for my address so he could send a postcard.",
+          "vietnamese": "Vị khách nước ngoài hỏi địa chỉ của tôi để anh ấy có thể gửi một tấm bưu thiếp."
+        },
+        {
+          "english": "Write your address clearly before you enroll in the course.",
+          "vietnamese": "Hãy viết địa chỉ của bạn rõ ràng trước khi bạn ghi danh vào khoá học."
+        },
+        {
+          "english": "My address changed when my family moved closer to the secondary school.",
+          "vietnamese": "Địa chỉ của tôi đã thay đổi khi gia đình tôi chuyển đến gần trường trung học hơn."
+        },
+        {
+          "english": "The foreigner asked me to spell my address twice.",
+          "vietnamese": "Người nước ngoài đó đã đề nghị tôi đánh vần địa chỉ của mình hai lần."
+        },
+        {
+          "english": "Is this the correct address of the art centre?",
+          "vietnamese": "Đây có phải là địa chỉ đúng của trung tâm nghệ thuật không?"
+        }
+      ]
+    },
+    {
+      "word": "sign",
+      "sentences": [
+        {
+          "english": "Your parents must sign this assignment before you hand it in.",
+          "vietnamese": "Bố mẹ bạn phải ký tên vào bài tập này trước khi bạn nộp."
+        },
+        {
+          "english": "Please sign here to confirm that you will attend the course.",
+          "vietnamese": "Vui lòng ký tên vào đây để xác nhận rằng bạn sẽ tham dự khoá học."
+        },
+        {
+          "english": "My father signed the certificate and gave it back to me.",
+          "vietnamese": "Bố tôi đã ký tên vào tấm chứng chỉ và đưa lại nó cho tôi."
+        },
+        {
+          "english": "Every student signs the list before they attend the science lesson.",
+          "vietnamese": "Mọi học sinh đều ký tên vào danh sách trước khi họ dự tiết khoa học."
+        },
+        {
+          "english": "Who is signing the letter to the new language teacher?",
+          "vietnamese": "Ai đang ký tên vào lá thư gửi giáo viên ngoại ngữ mới vậy?"
+        }
+      ]
+    },
+    {
+      "word": "describe",
+      "sentences": [
+        {
+          "english": "Please describe your favourite teacher using new vocabulary from this lesson.",
+          "vietnamese": "Hãy mô tả giáo viên yêu thích của bạn bằng cách dùng từ vựng mới trong bài học này."
+        },
+        {
+          "english": "Can you describe the culture of your village in five sentences?",
+          "vietnamese": "Bạn có thể mô tả văn hoá của làng mình trong năm câu không?"
+        },
+        {
+          "english": "She described her difficulty with English grammar to the teacher.",
+          "vietnamese": "Cô ấy đã mô tả khó khăn của mình với ngữ pháp tiếng Anh cho giáo viên nghe."
+        },
+        {
+          "english": "The speaker is describing how students can improve their pronunciation.",
+          "vietnamese": "Diễn giả đang mô tả cách học sinh có thể cải thiện phát âm của mình."
+        },
+        {
+          "english": "I will describe my favourite subject in tomorrow's presentation.",
+          "vietnamese": "Tôi sẽ mô tả môn học yêu thích của mình trong bài thuyết trình ngày mai."
+        }
+      ]
+    },
+    {
+      "word": "favourite",
+      "sentences": [
+        {
+          "english": "Science is my favourite subject because the experiments are always interesting.",
+          "vietnamese": "Khoa học là môn học yêu thích của tôi vì các thí nghiệm luôn thú vị."
+        },
+        {
+          "english": "Mathematics was my favourite subject at secondary school.",
+          "vietnamese": "Toán học đã là môn học yêu thích của tôi ở trường trung học."
+        },
+        {
+          "english": "My favourite speaker gave a talk about learning a language abroad.",
+          "vietnamese": "Diễn giả yêu thích của tôi đã có một bài nói về việc học ngoại ngữ ở nước ngoài."
+        },
+        {
+          "english": "What is your favourite way to memorise new vocabulary?",
+          "vietnamese": "Cách yêu thích của bạn để học thuộc từ vựng mới là gì?"
+        },
+        {
+          "english": "Art is not my favourite subject, but I attend every lesson.",
+          "vietnamese": "Mỹ thuật không phải là môn học yêu thích của tôi, nhưng tôi vẫn dự mọi tiết học."
+        }
+      ]
+    }
+  ]
+}

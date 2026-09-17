@@ -1,0 +1,607 @@
+{
+  "unit": 13,
+  "deck": "Unit 13: Mùa cưới và lễ hội",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "generally",
+      "sentences": [
+        {
+          "english": "Local weddings generally take place near a temple in early spring.",
+          "vietnamese": "Các đám cưới ở địa phương nhìn chung diễn ra gần một ngôi đền vào đầu mùa xuân."
+        },
+        {
+          "english": "Tourists generally book their accommodation online before the busy season.",
+          "vietnamese": "Khách du lịch nhìn chung đặt chỗ ở trực tuyến trước mùa cao điểm."
+        },
+        {
+          "english": "Street food at the market is generally cheap, so we always try new dishes.",
+          "vietnamese": "Đồ ăn đường phố ở chợ nhìn chung rẻ, nên chúng tôi luôn thử các món mới."
+        },
+        {
+          "english": "My cousins will generally stay at a homestay near the pagoda.",
+          "vietnamese": "Các anh chị em họ của tôi nhìn chung sẽ ở tại một homestay gần ngôi chùa."
+        },
+        {
+          "english": "Have you noticed that guests generally arrive late in our hometown?",
+          "vietnamese": "Bạn có để ý rằng khách nhìn chung đến muộn ở quê tôi không?"
+        }
+      ]
+    },
+    {
+      "word": "celebration",
+      "sentences": [
+        {
+          "english": "The celebration at the resort lasted until midnight and everyone felt excited.",
+          "vietnamese": "Buổi ăn mừng ở khu nghỉ dưỡng kéo dài đến nửa đêm và mọi người đều thấy hào hứng."
+        },
+        {
+          "english": "The whole neighbourhood joined the celebration in the square last night.",
+          "vietnamese": "Cả khu phố đã tham gia buổi ăn mừng ở quảng trường tối qua."
+        },
+        {
+          "english": "We are planning a small celebration at our flat this weekend.",
+          "vietnamese": "Chúng tôi đang lên kế hoạch cho một buổi ăn mừng nhỏ tại căn hộ của mình vào cuối tuần này."
+        },
+        {
+          "english": "Do not forget to invite your housemate to the celebration.",
+          "vietnamese": "Đừng quên mời người bạn cùng nhà của bạn đến buổi ăn mừng."
+        },
+        {
+          "english": "Spring celebrations in my hometown have become more vibrant nowadays.",
+          "vietnamese": "Các buổi ăn mừng mùa xuân ở quê tôi ngày nay đã trở nên sôi động hơn."
+        }
+      ]
+    },
+    {
+      "word": "occasion",
+      "sentences": [
+        {
+          "english": "My parents invite all their neighbours on every important occasion.",
+          "vietnamese": "Bố mẹ tôi mời tất cả hàng xóm trong mọi dịp quan trọng."
+        },
+        {
+          "english": "We saved for months to make this occasion really special.",
+          "vietnamese": "Chúng tôi đã tiết kiệm nhiều tháng để làm cho dịp này thật đặc biệt."
+        },
+        {
+          "english": "A birthday is a good occasion to try a new restaurant.",
+          "vietnamese": "Sinh nhật là một dịp tốt để thử một nhà hàng mới."
+        },
+        {
+          "english": "On special occasions my mother decorates the living room beautifully.",
+          "vietnamese": "Vào những dịp đặc biệt, mẹ tôi trang trí phòng khách rất đẹp."
+        },
+        {
+          "english": "Will you wear your uniform on such a formal occasion?",
+          "vietnamese": "Bạn sẽ mặc đồng phục vào một dịp trang trọng như vậy chứ?"
+        }
+      ]
+    },
+    {
+      "word": "wedding",
+      "sentences": [
+        {
+          "english": "Her wedding was a lovely moment that our whole family still remembers.",
+          "vietnamese": "Đám cưới của cô ấy là một khoảnh khắc đáng yêu mà cả gia đình tôi vẫn còn nhớ."
+        },
+        {
+          "english": "They are arranging a beautiful wedding at a resort near the sea.",
+          "vietnamese": "Họ đang sắp xếp một lễ cưới đẹp tại một khu nghỉ dưỡng gần biển."
+        },
+        {
+          "english": "How much does a wedding in the city centre usually cost?",
+          "vietnamese": "Một lễ cưới ở trung tâm thành phố thường tốn bao nhiêu tiền?"
+        },
+        {
+          "english": "We have attended three weddings since the rainy season started.",
+          "vietnamese": "Chúng tôi đã dự ba lễ cưới kể từ khi mùa mưa bắt đầu."
+        },
+        {
+          "english": "Do not book a wedding date without checking your visa first.",
+          "vietnamese": "Đừng đặt ngày cưới mà không kiểm tra thị thực của bạn trước."
+        }
+      ]
+    },
+    {
+      "word": "guest",
+      "sentences": [
+        {
+          "english": "Every guest received a small postcard with a photo of the bride.",
+          "vietnamese": "Mỗi vị khách đều nhận được một tấm bưu thiếp nhỏ có ảnh của cô dâu."
+        },
+        {
+          "english": "The hotel greets every guest with a friendly smile and hot tea.",
+          "vietnamese": "Khách sạn chào đón mỗi vị khách bằng một nụ cười thân thiện và trà nóng."
+        },
+        {
+          "english": "Our guests arrived late because their flight had a long delay.",
+          "vietnamese": "Khách của chúng tôi đến muộn vì chuyến bay của họ bị hoãn lâu."
+        },
+        {
+          "english": "Are the guests staying at a homestay or at the campsite?",
+          "vietnamese": "Các vị khách đang ở tại homestay hay ở khu cắm trại?"
+        },
+        {
+          "english": "I will describe every guest in my long letter to you.",
+          "vietnamese": "Tôi sẽ miêu tả từng vị khách trong lá thư dài gửi cho bạn."
+        }
+      ]
+    },
+    {
+      "word": "relative",
+      "sentences": [
+        {
+          "english": "A distant relative travels from the south to join our family dinner.",
+          "vietnamese": "Một người họ hàng xa đi từ miền Nam đến để dự bữa tối gia đình."
+        },
+        {
+          "english": "My relatives always bring homemade food when they visit our flat.",
+          "vietnamese": "Họ hàng của tôi luôn mang đồ ăn nhà làm khi họ đến thăm căn hộ của chúng tôi."
+        },
+        {
+          "english": "We have not seen those relatives since we moved to the north.",
+          "vietnamese": "Chúng tôi chưa gặp những người họ hàng đó kể từ khi chuyển ra miền Bắc."
+        },
+        {
+          "english": "Ask your relatives to share the photos from the temple visit.",
+          "vietnamese": "Hãy bảo họ hàng của bạn chia sẻ những bức ảnh từ chuyến thăm ngôi đền."
+        },
+        {
+          "english": "Several relatives are travelling from abroad for the big ceremony.",
+          "vietnamese": "Vài người họ hàng đang đi từ nước ngoài về dự buổi lễ lớn."
+        }
+      ]
+    },
+    {
+      "word": "congratulations",
+      "sentences": [
+        {
+          "english": "Everyone shouted congratulations when the lovely couple walked into the reception.",
+          "vietnamese": "Mọi người hô vang lời chúc mừng khi cặp đôi đáng yêu bước vào buổi tiệc chiêu đãi."
+        },
+        {
+          "english": "She sent congratulations to her old classmate by postcard.",
+          "vietnamese": "Cô ấy đã gửi lời chúc mừng đến người bạn học cũ bằng bưu thiếp."
+        },
+        {
+          "english": "Everyone is shouting congratulations in the crowded reception hall.",
+          "vietnamese": "Mọi người đang hô vang lời chúc mừng trong sảnh tiệc đông đúc."
+        },
+        {
+          "english": "Please write congratulations on the card before you sign it.",
+          "vietnamese": "Hãy viết lời chúc mừng lên tấm thiệp trước khi bạn ký tên."
+        },
+        {
+          "english": "Have you sent congratulations to your friendly neighbour yet?",
+          "vietnamese": "Bạn đã gửi lời chúc mừng đến người hàng xóm thân thiện của mình chưa?"
+        }
+      ]
+    },
+    {
+      "word": "welcome",
+      "sentences": [
+        {
+          "english": "Host families warmly welcome every tourist who stays at their homestay.",
+          "vietnamese": "Các gia đình chủ nhà nồng nhiệt chào đón mọi du khách ở lại homestay của họ."
+        },
+        {
+          "english": "The guide welcomed our group at the entrance of the mausoleum.",
+          "vietnamese": "Hướng dẫn viên đã chào đón nhóm chúng tôi ở lối vào lăng."
+        },
+        {
+          "english": "Local people always welcome visitors with warm tea and sweet cakes.",
+          "vietnamese": "Người dân địa phương luôn hoan nghênh khách tham quan bằng trà ấm và bánh ngọt."
+        },
+        {
+          "english": "We are welcoming a new housemate into our cosy flat tonight.",
+          "vietnamese": "Tối nay chúng tôi đang chào đón một người bạn cùng nhà mới vào căn hộ ấm cúng của mình."
+        },
+        {
+          "english": "Will the old man welcome us into his quiet church?",
+          "vietnamese": "Ông cụ sẽ hoan nghênh chúng ta vào nhà thờ yên tĩnh của ông chứ?"
+        }
+      ]
+    },
+    {
+      "word": "party",
+      "sentences": [
+        {
+          "english": "We party all night whenever we escape the noisy city for a weekend.",
+          "vietnamese": "Chúng tôi tiệc tùng cả đêm mỗi khi trốn khỏi thành phố ồn ào vào cuối tuần."
+        },
+        {
+          "english": "Young people party at the nightclub until the streets become quiet.",
+          "vietnamese": "Người trẻ tiệc tùng ở hộp đêm cho đến khi đường phố trở nên yên tĩnh."
+        },
+        {
+          "english": "We partied on the balcony and watched the busy street below.",
+          "vietnamese": "Chúng tôi đã tiệc tùng trên ban công và ngắm con phố nhộn nhịp bên dưới."
+        },
+        {
+          "english": "They are partying at a resort beside the pool this weekend.",
+          "vietnamese": "Cuối tuần này họ đang tiệc tùng ở một khu nghỉ dưỡng bên cạnh hồ bơi."
+        },
+        {
+          "english": "Do not party too loudly, because our neighbourhood is very peaceful.",
+          "vietnamese": "Đừng tiệc tùng quá ồn, vì khu phố của chúng ta rất yên bình."
+        }
+      ]
+    },
+    {
+      "word": "luck",
+      "sentences": [
+        {
+          "english": "Many people visit the pagoda at new year to ask for good luck.",
+          "vietnamese": "Nhiều người đến thăm ngôi chùa vào dịp năm mới để cầu xin vận may."
+        },
+        {
+          "english": "With a little luck we will find a cheap flight next month.",
+          "vietnamese": "Với một chút vận may, chúng tôi sẽ tìm được một chuyến bay rẻ vào tháng tới."
+        },
+        {
+          "english": "My grandmother believes red envelopes bring luck to every visitor.",
+          "vietnamese": "Bà tôi tin rằng bao lì xì đỏ mang lại vận may cho mọi vị khách."
+        },
+        {
+          "english": "Did you have any luck booking a room at that homestay?",
+          "vietnamese": "Bạn có may mắn đặt được một phòng ở homestay đó không?"
+        },
+        {
+          "english": "Good luck with your interview at the new company tomorrow.",
+          "vietnamese": "Chúc bạn may mắn với buổi phỏng vấn ở công ty mới vào ngày mai."
+        }
+      ]
+    },
+    {
+      "word": "festival",
+      "sentences": [
+        {
+          "english": "The spring festival brings a vibrant atmosphere to our small town.",
+          "vietnamese": "Lễ hội mùa xuân mang lại bầu không khí sôi động cho thị trấn nhỏ của chúng tôi."
+        },
+        {
+          "english": "We are travelling to the north for a flower festival next week.",
+          "vietnamese": "Tuần tới chúng tôi sẽ đi ra miền Bắc để dự một lễ hội hoa."
+        },
+        {
+          "english": "The music festival attracted a huge crowd of young tourists.",
+          "vietnamese": "Lễ hội âm nhạc đã thu hút một đám đông khổng lồ khách du lịch trẻ."
+        },
+        {
+          "english": "Have you ever been to a festival in a small mountain town?",
+          "vietnamese": "Bạn đã bao giờ đến một lễ hội ở một thị trấn miền núi nhỏ chưa?"
+        },
+        {
+          "english": "Local festivals give our district a very lively atmosphere.",
+          "vietnamese": "Các lễ hội địa phương mang lại cho quận của chúng tôi một bầu không khí rất nhộn nhịp."
+        }
+      ]
+    },
+    {
+      "word": "national",
+      "sentences": [
+        {
+          "english": "The national day gives us a chance to visit our hometown together.",
+          "vietnamese": "Ngày lễ toàn quốc cho chúng tôi cơ hội cùng nhau về thăm quê."
+        },
+        {
+          "english": "The national museum near the square opens at eight every morning.",
+          "vietnamese": "Bảo tàng quốc gia gần quảng trường mở cửa lúc tám giờ mỗi sáng."
+        },
+        {
+          "english": "We visited a national park and hiked for six hours.",
+          "vietnamese": "Chúng tôi đã thăm một vườn quốc gia và đi bộ đường dài sáu tiếng."
+        },
+        {
+          "english": "Is the national day a good chance to escape the noisy city?",
+          "vietnamese": "Ngày lễ toàn quốc có phải là cơ hội tốt để trốn khỏi thành phố ồn ào không?"
+        },
+        {
+          "english": "Our national team will play at the modern stadium in the capital.",
+          "vietnamese": "Đội tuyển quốc gia của chúng ta sẽ thi đấu ở sân vận động hiện đại tại thủ đô."
+        }
+      ]
+    },
+    {
+      "word": "lantern",
+      "sentences": [
+        {
+          "english": "Children carry a bright lantern around the market on that special night.",
+          "vietnamese": "Trẻ em cầm một chiếc đèn lồng sáng đi quanh khu chợ trong đêm đặc biệt đó."
+        },
+        {
+          "english": "Shops in the old town sell lanterns of every colour and size.",
+          "vietnamese": "Các cửa hàng ở phố cổ bán đèn lồng đủ mọi màu sắc và kích cỡ."
+        },
+        {
+          "english": "She hung a red lantern on the balcony before the ceremony.",
+          "vietnamese": "Cô ấy đã treo một chiếc đèn lồng đỏ trên ban công trước buổi lễ."
+        },
+        {
+          "english": "Children are carrying paper lanterns along the crowded pavement.",
+          "vietnamese": "Bọn trẻ đang cầm những chiếc đèn lồng giấy đi dọc vỉa hè đông đúc."
+        },
+        {
+          "english": "Where can I buy a cheap lantern for my little sister?",
+          "vietnamese": "Tôi có thể mua một chiếc đèn lồng rẻ cho em gái tôi ở đâu?"
+        }
+      ]
+    },
+    {
+      "word": "firework",
+      "sentences": [
+        {
+          "english": "We watched a huge firework display from the balcony of our flat.",
+          "vietnamese": "Chúng tôi xem màn pháo hoa khổng lồ từ ban công căn hộ của mình."
+        },
+        {
+          "english": "The fireworks above the tower looked amazing from our rooftop.",
+          "vietnamese": "Pháo hoa phía trên tòa tháp trông thật tuyệt vời từ sân thượng của chúng tôi."
+        },
+        {
+          "english": "People gather in the square every year to watch the fireworks.",
+          "vietnamese": "Mỗi năm người ta tụ tập ở quảng trường để xem pháo hoa."
+        },
+        {
+          "english": "Are they preparing a firework show for the whole district?",
+          "vietnamese": "Họ có đang chuẩn bị một màn pháo hoa cho cả quận không?"
+        },
+        {
+          "english": "Do not light fireworks near the playground or the swimming pool.",
+          "vietnamese": "Đừng đốt pháo hoa gần sân chơi hay hồ bơi."
+        }
+      ]
+    },
+    {
+      "word": "public",
+      "sentences": [
+        {
+          "english": "The garden is now open to the public.",
+          "vietnamese": "Khu vườn giờ đã mở cửa cho công chúng."
+        },
+        {
+          "english": "The new library will open to the public next month.",
+          "vietnamese": "Thư viện mới sẽ mở cửa cho công chúng vào tháng tới."
+        },
+        {
+          "english": "The old mausoleum has been closed to the public since last year.",
+          "vietnamese": "Lăng cũ đã đóng cửa với công chúng từ năm ngoái."
+        },
+        {
+          "english": "Does the temple allow the public to enter during the ceremony?",
+          "vietnamese": "Ngôi đền có cho phép công chúng vào trong lúc diễn ra buổi lễ không?"
+        },
+        {
+          "english": "The company informed the public about the new bus service.",
+          "vietnamese": "Công ty đã thông báo cho công chúng về tuyến xe buýt mới."
+        }
+      ]
+    },
+    {
+      "word": "pray",
+      "sentences": [
+        {
+          "english": "My grandmother goes to the temple to pray for her family every month.",
+          "vietnamese": "Bà tôi đến ngôi đền để cầu nguyện cho gia đình mỗi tháng."
+        },
+        {
+          "english": "Many visitors pray at the pagoda on the first day of the year.",
+          "vietnamese": "Nhiều khách tham quan cầu nguyện ở ngôi chùa vào ngày đầu năm."
+        },
+        {
+          "english": "We prayed together and then walked along the peaceful alley.",
+          "vietnamese": "Chúng tôi đã cầu nguyện cùng nhau rồi đi bộ dọc con hẻm yên bình."
+        },
+        {
+          "english": "She is praying inside the small church near our neighbourhood.",
+          "vietnamese": "Cô ấy đang cầu nguyện bên trong nhà thờ nhỏ gần khu phố của chúng tôi."
+        },
+        {
+          "english": "Will you pray with us before the long journey starts?",
+          "vietnamese": "Bạn sẽ cầu nguyện cùng chúng tôi trước khi chuyến hành trình dài bắt đầu chứ?"
+        }
+      ]
+    },
+    {
+      "word": "offering",
+      "sentences": [
+        {
+          "english": "They placed fruit as an offering on the altar.",
+          "vietnamese": "Họ đặt trái cây làm lễ vật trên bàn thờ."
+        },
+        {
+          "english": "My mother prepares a simple offering of rice and fresh fruit.",
+          "vietnamese": "Mẹ tôi chuẩn bị một lễ vật đơn giản gồm gạo và trái cây tươi."
+        },
+        {
+          "english": "The offerings on the altar looked beautiful in the morning light.",
+          "vietnamese": "Những lễ vật trên bàn thờ trông thật đẹp trong ánh sáng ban mai."
+        },
+        {
+          "english": "People are bringing offerings to the temple all day.",
+          "vietnamese": "Người ta đang mang lễ vật đến ngôi đền suốt cả ngày."
+        },
+        {
+          "english": "Do not move the offerings while the old man is praying at the temple.",
+          "vietnamese": "Đừng di chuyển lễ vật trong khi ông cụ đang cầu nguyện ở ngôi đền."
+        }
+      ]
+    },
+    {
+      "word": "priest",
+      "sentences": [
+        {
+          "english": "The priest welcomed everyone into the small church.",
+          "vietnamese": "Vị linh mục chào đón mọi người vào nhà thờ nhỏ."
+        },
+        {
+          "english": "The priest invited our family to the church on Sunday morning.",
+          "vietnamese": "Vị linh mục đã mời gia đình tôi đến nhà thờ vào sáng Chủ nhật."
+        },
+        {
+          "english": "A young priest is guiding visitors around the ancient building.",
+          "vietnamese": "Một linh mục trẻ đang hướng dẫn khách tham quan đi quanh tòa nhà cổ."
+        },
+        {
+          "english": "Have you met the priest who lives near the market?",
+          "vietnamese": "Bạn đã gặp vị linh mục sống gần khu chợ chưa?"
+        },
+        {
+          "english": "The priest will describe the history of this quiet village.",
+          "vietnamese": "Vị linh mục sẽ kể về lịch sử của ngôi làng yên tĩnh này."
+        }
+      ]
+    },
+    {
+      "word": "peace",
+      "sentences": [
+        {
+          "english": "The quiet temple gives me a sense of peace.",
+          "vietnamese": "Ngôi đền yên tĩnh cho tôi cảm giác bình yên."
+        },
+        {
+          "english": "After the war our country finally enjoyed many years of peace.",
+          "vietnamese": "Sau chiến tranh, đất nước chúng tôi cuối cùng cũng được hưởng nhiều năm bình yên."
+        },
+        {
+          "english": "I find peace when I walk along the narrow alley at sunset.",
+          "vietnamese": "Tôi tìm thấy sự bình yên khi đi bộ dọc con hẻm nhỏ lúc hoàng hôn."
+        },
+        {
+          "english": "Do you ever feel peace in this crowded capital?",
+          "vietnamese": "Bạn có bao giờ cảm thấy bình yên ở thủ đô đông đúc này không?"
+        },
+        {
+          "english": "The lovely garden has given our neighbourhood a sense of peace.",
+          "vietnamese": "Khu vườn đáng yêu đã mang lại cho khu phố chúng tôi một cảm giác bình yên."
+        }
+      ]
+    },
+    {
+      "word": "holiday",
+      "sentences": [
+        {
+          "english": "During the holiday we always try new food at the local market.",
+          "vietnamese": "Trong kỳ nghỉ lễ chúng tôi luôn thử món ăn mới ở chợ địa phương."
+        },
+        {
+          "english": "We are saving carefully for a long holiday in the south.",
+          "vietnamese": "Chúng tôi đang tiết kiệm cẩn thận cho một kỳ nghỉ lễ dài ở miền Nam."
+        },
+        {
+          "english": "Their holiday was ruined by a long delay at the airport.",
+          "vietnamese": "Kỳ nghỉ lễ của họ bị hỏng vì một sự trì hoãn dài ở sân bay."
+        },
+        {
+          "english": "Where will you spend the next long holiday?",
+          "vietnamese": "Bạn sẽ dành kỳ nghỉ lễ dài tiếp theo ở đâu?"
+        },
+        {
+          "english": "Hotels raise their prices during every big holiday.",
+          "vietnamese": "Các khách sạn tăng giá trong mỗi kỳ nghỉ lễ lớn."
+        }
+      ]
+    },
+    {
+      "word": "tidy",
+      "sentences": [
+        {
+          "english": "We tidy every room in the flat before our cousins arrive.",
+          "vietnamese": "Chúng tôi dọn dẹp mọi căn phòng trong căn hộ trước khi các anh chị em họ đến."
+        },
+        {
+          "english": "My sister tidies the balcony before our guests arrive.",
+          "vietnamese": "Chị tôi dọn dẹp ban công trước khi khách của chúng tôi đến."
+        },
+        {
+          "english": "They tidied the whole house after the noisy celebration.",
+          "vietnamese": "Họ đã dọn dẹp cả ngôi nhà sau buổi ăn mừng ồn ào."
+        },
+        {
+          "english": "Please tidy your room before the visitors come upstairs.",
+          "vietnamese": "Hãy dọn dẹp phòng của bạn trước khi khách lên gác."
+        },
+        {
+          "english": "I am tidying the kitchen while my brother decorates the living room.",
+          "vietnamese": "Tôi đang dọn dẹp nhà bếp trong khi em trai tôi trang trí phòng khách."
+        }
+      ]
+    },
+    {
+      "word": "exchange",
+      "sentences": [
+        {
+          "english": "The two families exchange small gifts and share a peaceful dinner.",
+          "vietnamese": "Hai gia đình trao đổi những món quà nhỏ và cùng chia sẻ một bữa tối yên bình."
+        },
+        {
+          "english": "Couples exchange rings in front of their friendly neighbours.",
+          "vietnamese": "Các cặp đôi trao nhẫn cho nhau trước mặt những người hàng xóm thân thiện."
+        },
+        {
+          "english": "We exchanged phone numbers and addresses after the walking tour.",
+          "vietnamese": "Chúng tôi đã trao đổi số điện thoại và địa chỉ sau chuyến tham quan đi bộ."
+        },
+        {
+          "english": "Are you exchanging money before your flight to Japan?",
+          "vietnamese": "Bạn có đổi tiền trước chuyến bay đến Nhật Bản không?"
+        },
+        {
+          "english": "Students often exchange books to save money during the term.",
+          "vietnamese": "Sinh viên thường trao đổi sách để tiết kiệm tiền trong học kỳ."
+        }
+      ]
+    },
+    {
+      "word": "loved one",
+      "sentences": [
+        {
+          "english": "People light candles to remember a loved one.",
+          "vietnamese": "Người ta thắp nến để tưởng nhớ một người thân yêu."
+        },
+        {
+          "english": "At this time of year people remember a loved one who lived far away.",
+          "vietnamese": "Vào thời điểm này trong năm, người ta nhớ về một người thân yêu đã sống ở nơi xa."
+        },
+        {
+          "english": "She sent a postcard to a loved one in the north.",
+          "vietnamese": "Cô ấy đã gửi một tấm bưu thiếp cho một người thân yêu ở miền Bắc."
+        },
+        {
+          "english": "Do you call a loved one every single day?",
+          "vietnamese": "Bạn có gọi cho một người thân yêu mỗi ngày không?"
+        },
+        {
+          "english": "Losing a loved one is the hardest experience in life.",
+          "vietnamese": "Mất đi một người thân yêu là trải nghiệm khó khăn nhất trong đời."
+        }
+      ]
+    },
+    {
+      "word": "anniversary",
+      "sentences": [
+        {
+          "english": "My parents celebrate their anniversary at an expensive restaurant every year.",
+          "vietnamese": "Bố mẹ tôi kỷ niệm ngày cưới ở một nhà hàng đắt tiền mỗi năm."
+        },
+        {
+          "english": "They booked a luxury room for their tenth anniversary.",
+          "vietnamese": "Họ đã đặt một phòng sang trọng cho ngày kỷ niệm thứ mười của mình."
+        },
+        {
+          "english": "Our company is celebrating its twentieth anniversary this month.",
+          "vietnamese": "Công ty chúng tôi đang kỷ niệm hai mươi năm thành lập trong tháng này."
+        },
+        {
+          "english": "Will you travel abroad for your anniversary next spring?",
+          "vietnamese": "Bạn sẽ đi nước ngoài vào ngày kỷ niệm của mình mùa xuân tới chứ?"
+        },
+        {
+          "english": "Small anniversaries are a lovely chance to visit our hometown.",
+          "vietnamese": "Những ngày kỷ niệm nhỏ là một cơ hội đáng yêu để về thăm quê."
+        }
+      ]
+    }
+  ]
+}

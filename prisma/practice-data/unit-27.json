@@ -1,0 +1,607 @@
+{
+  "unit": 27,
+  "deck": "Unit 27: Thể thao và thi đấu",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "tournament",
+      "sentences": [
+        {
+          "english": "The tennis tournament was quite long, so all the players felt exhausted.",
+          "vietnamese": "Giải đấu quần vợt khá dài, nên tất cả các tay vợt đều thấy kiệt sức."
+        },
+        {
+          "english": "Our school will host a badminton tournament during the national holiday.",
+          "vietnamese": "Trường chúng tôi sẽ tổ chức một giải cầu lông vào dịp lễ quốc gia."
+        },
+        {
+          "english": "Have you ever watched a chess tournament on local television?",
+          "vietnamese": "Bạn đã bao giờ xem một giải cờ vua trên truyền hình địa phương chưa?"
+        },
+        {
+          "english": "The tournament tickets were quite expensive, but every seat was full.",
+          "vietnamese": "Vé của giải đấu khá đắt, nhưng mọi ghế đều kín chỗ."
+        },
+        {
+          "english": "Do not forget that the tournament starts at noon tomorrow.",
+          "vietnamese": "Đừng quên rằng giải đấu bắt đầu lúc trưa mai."
+        }
+      ]
+    },
+    {
+      "word": "badminton",
+      "sentences": [
+        {
+          "english": "We play badminton every evening to stay fit and feel active.",
+          "vietnamese": "Chúng tôi chơi cầu lông mỗi tối để giữ dáng và cảm thấy năng động."
+        },
+        {
+          "english": "My father learned badminton after the doctor asked him to exercise.",
+          "vietnamese": "Bố tôi học cầu lông sau khi bác sĩ bảo ông phải tập thể dục."
+        },
+        {
+          "english": "Badminton is very popular in my neighbourhood, especially on holiday mornings.",
+          "vietnamese": "Cầu lông rất phổ biến ở khu phố tôi, nhất là vào các buổi sáng ngày lễ."
+        },
+        {
+          "english": "Are you free tonight, or are you playing badminton with your team?",
+          "vietnamese": "Tối nay bạn rảnh không, hay bạn chơi cầu lông với đội của bạn?"
+        },
+        {
+          "english": "She has played badminton since she was in primary school.",
+          "vietnamese": "Cô ấy đã chơi cầu lông từ khi còn học tiểu học."
+        }
+      ]
+    },
+    {
+      "word": "athlete",
+      "sentences": [
+        {
+          "english": "A young athlete must sleep well and eat good food every day.",
+          "vietnamese": "Một vận động viên trẻ phải ngủ ngon và ăn thức ăn tốt mỗi ngày."
+        },
+        {
+          "english": "That athlete injured his knee, so he will rest for a month.",
+          "vietnamese": "Vận động viên đó bị chấn thương đầu gối, nên anh ấy sẽ nghỉ ngơi một tháng."
+        },
+        {
+          "english": "Athletes usually follow a strict diet and avoid sugar completely.",
+          "vietnamese": "Các vận động viên thường theo một chế độ ăn nghiêm ngặt và tránh đường hoàn toàn."
+        },
+        {
+          "english": "Do you know which athlete won the gold medal last night?",
+          "vietnamese": "Bạn có biết vận động viên nào giành huy chương vàng tối qua không?"
+        },
+        {
+          "english": "Every athlete felt exhausted after training hard in the humid weather.",
+          "vietnamese": "Mọi vận động viên đều thấy kiệt sức sau khi tập luyện vất vả trong thời tiết ẩm."
+        }
+      ]
+    },
+    {
+      "word": "racquet",
+      "sentences": [
+        {
+          "english": "My new racquet was quite expensive, but my game has improved fast.",
+          "vietnamese": "Cây vợt mới của tôi khá đắt, nhưng lối chơi của tôi đã tiến bộ nhanh."
+        },
+        {
+          "english": "He broke his racquet during the match and looked really angry.",
+          "vietnamese": "Anh ấy làm gãy cây vợt trong trận đấu và trông rất tức giận."
+        },
+        {
+          "english": "Please keep the racquets safe, because they were quite expensive.",
+          "vietnamese": "Làm ơn giữ các cây vợt cẩn thận, vì chúng khá đắt."
+        },
+        {
+          "english": "A light racquet helps beginners improve their skill more quickly.",
+          "vietnamese": "Một cây vợt nhẹ giúp người mới bắt đầu cải thiện kỹ năng nhanh hơn."
+        },
+        {
+          "english": "Which racquet do you use when you play at the local gym?",
+          "vietnamese": "Bạn dùng cây vợt nào khi chơi ở phòng gym gần nhà?"
+        }
+      ]
+    },
+    {
+      "word": "strong",
+      "sentences": [
+        {
+          "english": "After months of training, she felt strong and ready to compete.",
+          "vietnamese": "Sau nhiều tháng tập luyện, cô ấy cảm thấy khỏe mạnh và sẵn sàng thi đấu."
+        },
+        {
+          "english": "Drink plenty of water and sleep well to keep your body strong.",
+          "vietnamese": "Hãy uống nhiều nước và ngủ đủ giấc để giữ cho cơ thể bạn khỏe mạnh."
+        },
+        {
+          "english": "Their goalkeeper is strong, so it is hard to score against them.",
+          "vietnamese": "Thủ môn của họ rất khỏe, nên rất khó ghi bàn vào lưới họ."
+        },
+        {
+          "english": "Is your right arm strong enough after the painful injury?",
+          "vietnamese": "Cánh tay phải của bạn đã đủ khỏe sau chấn thương đau đớn chưa?"
+        },
+        {
+          "english": "She was not strong last season, but daily exercise changed everything.",
+          "vietnamese": "Cô ấy đã không khỏe ở mùa giải trước, nhưng việc tập luyện hằng ngày đã thay đổi tất cả."
+        }
+      ]
+    },
+    {
+      "word": "contest",
+      "sentences": [
+        {
+          "english": "He joined a cooking contest and made a delicious bowl of soup.",
+          "vietnamese": "Anh ấy tham gia một cuộc thi nấu ăn và làm một tô súp ngon."
+        },
+        {
+          "english": "The singing contest will be shown on national television next month.",
+          "vietnamese": "Cuộc thi hát sẽ được chiếu trên truyền hình quốc gia vào tháng tới."
+        },
+        {
+          "english": "Are you going to enter the photo contest at the festival?",
+          "vietnamese": "Bạn có định tham gia cuộc thi ảnh ở lễ hội không?"
+        },
+        {
+          "english": "Our class has won three contests since the term started.",
+          "vietnamese": "Lớp tôi đã thắng ba cuộc thi kể từ khi học kỳ bắt đầu."
+        },
+        {
+          "english": "Do not waste your chance; join the contest this weekend.",
+          "vietnamese": "Đừng lãng phí cơ hội của bạn; hãy tham gia cuộc thi cuối tuần này."
+        }
+      ]
+    },
+    {
+      "word": "compete",
+      "sentences": [
+        {
+          "english": "Ten schools will compete this Saturday, so the students practise very hard.",
+          "vietnamese": "Mười trường sẽ thi đấu vào thứ Bảy này, nên các học sinh luyện tập rất chăm chỉ."
+        },
+        {
+          "english": "She competed abroad for the first time and felt very nervous.",
+          "vietnamese": "Cô ấy đã thi đấu ở nước ngoài lần đầu tiên và cảm thấy rất lo lắng."
+        },
+        {
+          "english": "Small clubs cannot compete with rich teams that spend a lot.",
+          "vietnamese": "Các câu lạc bộ nhỏ không thể cạnh tranh với những đội giàu chi tiêu rất nhiều."
+        },
+        {
+          "english": "Are you competing this weekend, or are you still recovering?",
+          "vietnamese": "Cuối tuần này bạn có thi đấu không, hay bạn vẫn đang hồi phục?"
+        },
+        {
+          "english": "Athletes compete better when they sleep well and stay calm.",
+          "vietnamese": "Các vận động viên thi đấu tốt hơn khi họ ngủ ngon và giữ bình tĩnh."
+        }
+      ]
+    },
+    {
+      "word": "match",
+      "sentences": [
+        {
+          "english": "The football match lasted for ninety minutes.",
+          "vietnamese": "Trận đấu bóng đá kéo dài chín mươi phút."
+        },
+        {
+          "english": "The match was delayed because of the heavy rain last night.",
+          "vietnamese": "Trận đấu bị hoãn vì cơn mưa lớn tối qua."
+        },
+        {
+          "english": "Have you bought tickets for the match on the public holiday?",
+          "vietnamese": "Bạn đã mua vé cho trận đấu vào ngày lễ công cộng chưa?"
+        },
+        {
+          "english": "Our coach watches every match twice and explains our mistakes.",
+          "vietnamese": "Huấn luyện viên của chúng tôi xem mỗi trận hai lần và giải thích các lỗi của chúng tôi."
+        },
+        {
+          "english": "They will play three matches during the busy festival week.",
+          "vietnamese": "Họ sẽ chơi ba trận trong tuần lễ hội bận rộn."
+        }
+      ]
+    },
+    {
+      "word": "supporter",
+      "sentences": [
+        {
+          "english": "Every supporter shouted loudly, and the noisy stadium became really lively.",
+          "vietnamese": "Mọi cổ động viên đều hò hét lớn, và sân vận động ồn ào trở nên thực sự sôi động."
+        },
+        {
+          "english": "Thousands of supporters travelled north to watch the final.",
+          "vietnamese": "Hàng nghìn cổ động viên đã đi lên phía bắc để xem trận chung kết."
+        },
+        {
+          "english": "A good supporter stays calm even after a painful defeat.",
+          "vietnamese": "Một cổ động viên tốt vẫn bình tĩnh ngay cả sau một thất bại đau đớn."
+        },
+        {
+          "english": "Are you a supporter of the local team or the national one?",
+          "vietnamese": "Bạn là cổ động viên của đội địa phương hay đội tuyển quốc gia?"
+        },
+        {
+          "english": "Supporters must respect the rules inside the crowded stadium.",
+          "vietnamese": "Các cổ động viên phải tôn trọng các quy định bên trong sân vận động đông đúc."
+        }
+      ]
+    },
+    {
+      "word": "competitor",
+      "sentences": [
+        {
+          "english": "Her main competitor remained calm and quite confident during the whole race.",
+          "vietnamese": "Đối thủ chính của cô ấy vẫn bình tĩnh và khá tự tin trong suốt cuộc đua."
+        },
+        {
+          "english": "Every competitor received a free bottle of water before the race.",
+          "vietnamese": "Mỗi đối thủ nhận được một chai nước miễn phí trước cuộc đua."
+        },
+        {
+          "english": "His competitors are quite young, but they train seriously every day.",
+          "vietnamese": "Các đối thủ của anh ấy khá trẻ, nhưng họ tập luyện nghiêm túc mỗi ngày."
+        },
+        {
+          "english": "Do not obsess about your competitor; just improve your own skill.",
+          "vietnamese": "Đừng ám ảnh về đối thủ của bạn; hãy cải thiện kỹ năng của chính mình."
+        },
+        {
+          "english": "The strongest competitor injured his ankle and left the tournament.",
+          "vietnamese": "Đối thủ mạnh nhất bị chấn thương mắt cá và rời giải đấu."
+        }
+      ]
+    },
+    {
+      "word": "argue",
+      "sentences": [
+        {
+          "english": "The two brothers often argue about football, but they never stay angry.",
+          "vietnamese": "Hai anh em thường tranh cãi về bóng đá, nhưng họ không bao giờ giận nhau lâu."
+        },
+        {
+          "english": "They argued about the price of the tickets for ten minutes.",
+          "vietnamese": "Họ đã tranh cãi về giá vé suốt mười phút."
+        },
+        {
+          "english": "Please do not argue with the referee; it only wastes time.",
+          "vietnamese": "Làm ơn đừng tranh cãi với trọng tài; nó chỉ lãng phí thời gian."
+        },
+        {
+          "english": "Why do fans always argue about which player is better?",
+          "vietnamese": "Tại sao người hâm mộ luôn tranh cãi về việc cầu thủ nào hay hơn?"
+        },
+        {
+          "english": "My sister and I are arguing about a quite silly rule.",
+          "vietnamese": "Chị tôi và tôi đang tranh cãi về một quy định khá ngớ ngẩn."
+        }
+      ]
+    },
+    {
+      "word": "sportsman",
+      "sentences": [
+        {
+          "english": "A true sportsman respects the rules and his rivals.",
+          "vietnamese": "Một vận động viên chân chính tôn trọng luật chơi và đối thủ."
+        },
+        {
+          "english": "A real sportsman never lies, even when nobody is watching.",
+          "vietnamese": "Một vận động viên thực thụ không bao giờ nói dối, ngay cả khi không ai nhìn."
+        },
+        {
+          "english": "My uncle was a popular sportsman before he opened a gym.",
+          "vietnamese": "Chú tôi từng là một vận động viên nổi tiếng trước khi ông mở một phòng gym."
+        },
+        {
+          "english": "Is he a good sportsman, or does he always complain loudly?",
+          "vietnamese": "Anh ấy là một vận động viên tốt, hay anh ấy luôn phàn nàn ầm ĩ?"
+        },
+        {
+          "english": "Every young sportsman should sleep early and avoid junk food.",
+          "vietnamese": "Mọi vận động viên trẻ nên ngủ sớm và tránh đồ ăn vặt."
+        }
+      ]
+    },
+    {
+      "word": "final",
+      "sentences": [
+        {
+          "english": "Both teams played hard to reach the final.",
+          "vietnamese": "Cả hai đội chơi hết mình để vào trận chung kết."
+        },
+        {
+          "english": "We watched the final at a crowded pub near my house.",
+          "vietnamese": "Chúng tôi đã xem trận chung kết ở một quán pub đông đúc gần nhà tôi."
+        },
+        {
+          "english": "The final will start at noon, so do not be late.",
+          "vietnamese": "Trận chung kết sẽ bắt đầu lúc trưa, nên đừng đến muộn."
+        },
+        {
+          "english": "Have they ever reached the final of a national competition?",
+          "vietnamese": "Họ đã bao giờ vào đến trận chung kết của một giải quốc gia chưa?"
+        },
+        {
+          "english": "Tickets for the final are pricey, but my brother saved enough money.",
+          "vietnamese": "Vé cho trận chung kết khá đắt, nhưng anh trai tôi đã tiết kiệm đủ tiền."
+        }
+      ]
+    },
+    {
+      "word": "team",
+      "sentences": [
+        {
+          "english": "Our team practised hard all summer and beat three strong clubs.",
+          "vietnamese": "Đội của chúng tôi luyện tập chăm chỉ cả mùa hè và đánh bại ba câu lạc bộ mạnh."
+        },
+        {
+          "english": "Our team is preparing carefully for the match next Sunday.",
+          "vietnamese": "Đội của chúng tôi đang chuẩn bị kỹ càng cho trận đấu Chủ nhật tới."
+        },
+        {
+          "english": "Which team is your favourite, and how long have you followed it?",
+          "vietnamese": "Đội nào là đội yêu thích của bạn, và bạn đã theo dõi nó bao lâu rồi?"
+        },
+        {
+          "english": "The team travels abroad twice a year for friendly games.",
+          "vietnamese": "Đội đi nước ngoài hai lần một năm để đá các trận giao hữu."
+        },
+        {
+          "english": "A good team never gives up, even after a painful defeat.",
+          "vietnamese": "Một đội tốt không bao giờ bỏ cuộc, kể cả sau một thất bại đau đớn."
+        }
+      ]
+    },
+    {
+      "word": "captain",
+      "sentences": [
+        {
+          "english": "The captain explained the plan slowly so everybody could understand it.",
+          "vietnamese": "Đội trưởng giải thích kế hoạch chậm rãi để mọi người có thể hiểu nó."
+        },
+        {
+          "english": "Our captain is quite calm and never argues with the referee.",
+          "vietnamese": "Đội trưởng của chúng tôi khá bình tĩnh và không bao giờ tranh cãi với trọng tài."
+        },
+        {
+          "english": "Who will be the new captain after this season ends?",
+          "vietnamese": "Ai sẽ là đội trưởng mới sau khi mùa giải này kết thúc?"
+        },
+        {
+          "english": "The captain injured his shoulder, so he cannot play tomorrow.",
+          "vietnamese": "Đội trưởng bị chấn thương vai, nên anh ấy không thể chơi ngày mai."
+        },
+        {
+          "english": "Listen to the captain and follow her plan during the second half.",
+          "vietnamese": "Hãy nghe đội trưởng và làm theo kế hoạch của cô ấy trong hiệp hai."
+        }
+      ]
+    },
+    {
+      "word": "coach",
+      "sentences": [
+        {
+          "english": "The coach gave clear instructions during the break.",
+          "vietnamese": "Huấn luyện viên đưa ra những chỉ dẫn rõ ràng trong giờ nghỉ."
+        },
+        {
+          "english": "The coach asked us to rest well before the important final.",
+          "vietnamese": "Huấn luyện viên bảo chúng tôi nghỉ ngơi kỹ trước trận chung kết quan trọng."
+        },
+        {
+          "english": "Our new coach has improved the team since last December.",
+          "vietnamese": "Huấn luyện viên mới của chúng tôi đã cải thiện đội bóng kể từ tháng Mười Hai năm ngoái."
+        },
+        {
+          "english": "Does your coach explain the tactics slowly and clearly enough?",
+          "vietnamese": "Huấn luyện viên của bạn có giải thích chiến thuật chậm rãi và đủ rõ ràng không?"
+        },
+        {
+          "english": "Two coaches were arguing loudly, and the crowd became noisy.",
+          "vietnamese": "Hai huấn luyện viên đang tranh cãi to tiếng, và đám đông trở nên ồn ào."
+        }
+      ]
+    },
+    {
+      "word": "practice",
+      "sentences": [
+        {
+          "english": "Daily practice helped the players improve quickly.",
+          "vietnamese": "Việc luyện tập hằng ngày giúp các cầu thủ tiến bộ nhanh."
+        },
+        {
+          "english": "Morning practice starts at six, so we must sleep early.",
+          "vietnamese": "Buổi luyện tập sáng bắt đầu lúc sáu giờ, nên chúng tôi phải ngủ sớm."
+        },
+        {
+          "english": "She missed practice yesterday because she had a bad headache.",
+          "vietnamese": "Cô ấy đã bỏ buổi luyện tập hôm qua vì cô ấy bị đau đầu nặng."
+        },
+        {
+          "english": "Is there any practice during the holiday, or are we free?",
+          "vietnamese": "Có buổi luyện tập nào trong kỳ nghỉ không, hay chúng ta được nghỉ?"
+        },
+        {
+          "english": "Regular practice has made his passing skill much better.",
+          "vietnamese": "Việc luyện tập đều đặn đã làm cho kỹ năng chuyền bóng của anh ấy tốt hơn nhiều."
+        }
+      ]
+    },
+    {
+      "word": "footballer",
+      "sentences": [
+        {
+          "english": "The young footballer dreams of playing abroad for a famous club.",
+          "vietnamese": "Cầu thủ bóng đá trẻ mơ được thi đấu ở nước ngoài cho một câu lạc bộ nổi tiếng."
+        },
+        {
+          "english": "That footballer earns a lot, but he still lives simply.",
+          "vietnamese": "Cầu thủ bóng đá đó kiếm được rất nhiều, nhưng anh ấy vẫn sống giản dị."
+        },
+        {
+          "english": "Many footballers retire early because of painful knee problems.",
+          "vietnamese": "Nhiều cầu thủ bóng đá giải nghệ sớm vì những vấn đề đau đớn ở đầu gối."
+        },
+        {
+          "english": "Do you think a young footballer should attend university too?",
+          "vietnamese": "Bạn có nghĩ một cầu thủ trẻ cũng nên học đại học không?"
+        },
+        {
+          "english": "The footballer was injured last month, but he is recovering slowly.",
+          "vietnamese": "Cầu thủ bóng đá bị chấn thương tháng trước, nhưng anh ấy đang hồi phục chậm rãi."
+        }
+      ]
+    },
+    {
+      "word": "score",
+      "sentences": [
+        {
+          "english": "Nobody could believe the score at the end of that exciting game.",
+          "vietnamese": "Không ai có thể tin được tỉ số ở cuối trận đấu hấp dẫn đó."
+        },
+        {
+          "english": "The final score was two to one after a long, exciting match.",
+          "vietnamese": "Tỉ số chung cuộc là hai một sau một trận đấu dài và hấp dẫn."
+        },
+        {
+          "english": "What was the score when you left the noisy stadium?",
+          "vietnamese": "Tỉ số là bao nhiêu khi bạn rời sân vận động ồn ào?"
+        },
+        {
+          "english": "I have checked the score three times on my phone already.",
+          "vietnamese": "Tôi đã kiểm tra tỉ số ba lần trên điện thoại rồi."
+        },
+        {
+          "english": "Do not tell me the score; I will watch the recording tonight.",
+          "vietnamese": "Đừng nói cho tôi biết tỉ số; tôi sẽ xem lại bản ghi tối nay."
+        }
+      ]
+    },
+    {
+      "word": "weak",
+      "sentences": [
+        {
+          "english": "He was ill last week, so his legs still feel weak today.",
+          "vietnamese": "Anh ấy bị ốm tuần trước, nên chân anh ấy hôm nay vẫn còn thấy yếu."
+        },
+        {
+          "english": "Our defence is weak, so the coach arranged extra practice.",
+          "vietnamese": "Hàng phòng ngự của chúng tôi yếu, nên huấn luyện viên đã sắp xếp buổi tập thêm."
+        },
+        {
+          "english": "Do not feel weak; your body just needs rest and medicine.",
+          "vietnamese": "Đừng thấy yếu đuối; cơ thể bạn chỉ cần nghỉ ngơi và thuốc."
+        },
+        {
+          "english": "Are you still weak after the flu, or have you recovered?",
+          "vietnamese": "Bạn vẫn còn yếu sau khi bị cúm, hay bạn đã hồi phục rồi?"
+        },
+        {
+          "english": "The weak team lost again, and their supporters looked disappointed.",
+          "vietnamese": "Đội yếu lại thua, và các cổ động viên của họ trông thất vọng."
+        }
+      ]
+    },
+    {
+      "word": "win",
+      "sentences": [
+        {
+          "english": "They hoped to win the final match of the season.",
+          "vietnamese": "Họ hy vọng thắng trận chung kết của mùa giải."
+        },
+        {
+          "english": "If we train every day, we can win the local cup.",
+          "vietnamese": "Nếu chúng tôi tập luyện mỗi ngày, chúng tôi có thể thắng cúp địa phương."
+        },
+        {
+          "english": "Winning is nice, but staying friendly matters more.",
+          "vietnamese": "Thắng thì tốt, nhưng giữ được sự thân thiện còn quan trọng hơn."
+        },
+        {
+          "english": "Do you think our team wins more matches during the rainy season?",
+          "vietnamese": "Bạn có nghĩ đội chúng ta thắng nhiều trận hơn vào mùa mưa không?"
+        },
+        {
+          "english": "She is winning easily because her competitor looks quite exhausted.",
+          "vietnamese": "Cô ấy đang thắng dễ dàng vì đối thủ của cô ấy trông khá kiệt sức."
+        }
+      ]
+    },
+    {
+      "word": "cup",
+      "sentences": [
+        {
+          "english": "The players lifted the golden cup and felt extremely proud of themselves.",
+          "vietnamese": "Các cầu thủ nâng chiếc cúp vàng và cảm thấy vô cùng tự hào về bản thân."
+        },
+        {
+          "english": "Our club has never won this cup in its long history.",
+          "vietnamese": "Câu lạc bộ của chúng tôi chưa bao giờ giành chiếc cúp này trong lịch sử dài của nó."
+        },
+        {
+          "english": "The old cup is kept safe in a glass box.",
+          "vietnamese": "Chiếc cúp cũ được giữ an toàn trong một hộp kính."
+        },
+        {
+          "english": "Which team will lift the cup at the end of May?",
+          "vietnamese": "Đội nào sẽ nâng cúp vào cuối tháng Năm?"
+        },
+        {
+          "english": "Two cups are standing on the bookshelf beside his old medals.",
+          "vietnamese": "Hai chiếc cúp đang đứng trên kệ sách bên cạnh các huy chương cũ của anh ấy."
+        }
+      ]
+    },
+    {
+      "word": "loser",
+      "sentences": [
+        {
+          "english": "The loser shook hands politely and admitted that his rival played better.",
+          "vietnamese": "Người thua bắt tay lịch sự và thừa nhận rằng đối thủ của anh ấy chơi hay hơn."
+        },
+        {
+          "english": "Nobody wants to be the loser, but somebody must lose.",
+          "vietnamese": "Không ai muốn là người thua, nhưng ai đó phải thua."
+        },
+        {
+          "english": "The losers left the field quietly and looked really disappointed.",
+          "vietnamese": "Những người thua rời sân lặng lẽ và trông thực sự thất vọng."
+        },
+        {
+          "english": "Will the loser of this match still receive a free ticket?",
+          "vietnamese": "Người thua trận này có vẫn nhận được một vé miễn phí không?"
+        },
+        {
+          "english": "Do not call him a loser; he tried very hard.",
+          "vietnamese": "Đừng gọi anh ấy là người thua cuộc; anh ấy đã cố gắng rất nhiều."
+        }
+      ]
+    },
+    {
+      "word": "winner",
+      "sentences": [
+        {
+          "english": "The winner received a medal and looked quite happy on the stage.",
+          "vietnamese": "Người thắng nhận một tấm huy chương và trông khá vui vẻ trên sân khấu."
+        },
+        {
+          "english": "The winners will travel abroad for the next tournament.",
+          "vietnamese": "Những người thắng sẽ đi nước ngoài cho giải đấu tiếp theo."
+        },
+        {
+          "english": "Who was the winner of the cooking contest last night?",
+          "vietnamese": "Ai là người thắng cuộc thi nấu ăn tối qua?"
+        },
+        {
+          "english": "Every winner must respect the rules and thank the losers.",
+          "vietnamese": "Mọi người thắng đều phải tôn trọng luật và cảm ơn những người thua."
+        },
+        {
+          "english": "Our coach is proud of the winner and her speedy progress.",
+          "vietnamese": "Huấn luyện viên của chúng tôi tự hào về người thắng và sự tiến bộ nhanh chóng của cô ấy."
+        }
+      ]
+    }
+  ]
+}

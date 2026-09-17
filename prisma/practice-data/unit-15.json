@@ -1,0 +1,607 @@
+{
+  "unit": 15,
+  "deck": "Unit 15: Bạn gái và thời tiết quê tôi",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "climate",
+      "sentences": [
+        {
+          "english": "The climate in my hometown is hot and wet for most of the year.",
+          "vietnamese": "Khí hậu ở quê tôi nóng và ẩm ướt trong phần lớn thời gian của năm."
+        },
+        {
+          "english": "Many tourists love the warm climate of our small southern town.",
+          "vietnamese": "Nhiều du khách yêu thích khí hậu ấm áp của thị trấn nhỏ phía nam của chúng tôi."
+        },
+        {
+          "english": "Has the climate changed a lot since your grandparents lived here?",
+          "vietnamese": "Khí hậu đã thay đổi nhiều kể từ khi ông bà bạn sống ở đây chưa?"
+        },
+        {
+          "english": "The dry climate makes it hard to grow rice in that area.",
+          "vietnamese": "Khí hậu khô làm cho việc trồng lúa ở khu vực đó trở nên khó khăn."
+        },
+        {
+          "english": "Scientists are studying how the climate affects local festivals and traditional farming.",
+          "vietnamese": "Các nhà khoa học đang nghiên cứu khí hậu ảnh hưởng thế nào đến các lễ hội địa phương và nghề nông truyền thống."
+        }
+      ]
+    },
+    {
+      "word": "season",
+      "sentences": [
+        {
+          "english": "The wet season generally lasts for three months in the south.",
+          "vietnamese": "Mùa mưa nhìn chung kéo dài ba tháng ở miền Nam."
+        },
+        {
+          "english": "My favourite season is autumn because the air is cool and quiet.",
+          "vietnamese": "Mùa yêu thích của tôi là mùa thu vì không khí mát mẻ và yên tĩnh."
+        },
+        {
+          "english": "Which season do you recommend for sightseeing in the north?",
+          "vietnamese": "Bạn gợi ý mùa nào để đi tham quan ở miền Bắc?"
+        },
+        {
+          "english": "During the dry seasons, farmers save water for their small gardens.",
+          "vietnamese": "Trong những mùa khô, người nông dân tiết kiệm nước cho những khu vườn nhỏ của họ."
+        },
+        {
+          "english": "The wet season has already started, so we cancelled the outdoor party.",
+          "vietnamese": "Mùa mưa đã bắt đầu rồi, nên chúng tôi đã huỷ bữa tiệc ngoài trời."
+        }
+      ]
+    },
+    {
+      "word": "typical",
+      "sentences": [
+        {
+          "english": "Hot summers are typical in the south.",
+          "vietnamese": "Mùa hè nóng là điển hình ở miền nam."
+        },
+        {
+          "english": "A typical winter day here is grey, cold and rather noisy.",
+          "vietnamese": "Một ngày mùa đông điển hình ở đây thì xám xịt, lạnh và khá ồn ào."
+        },
+        {
+          "english": "Is heavy rain typical during your national holiday in September?",
+          "vietnamese": "Mưa lớn có điển hình trong kỳ nghỉ lễ quốc gia của bạn vào tháng Chín không?"
+        },
+        {
+          "english": "This typical wooden house belongs to a very traditional family.",
+          "vietnamese": "Ngôi nhà gỗ điển hình này thuộc về một gia đình rất truyền thống."
+        },
+        {
+          "english": "Last August we had a typical storm, and the market closed early.",
+          "vietnamese": "Tháng Tám năm ngoái chúng tôi gặp một cơn bão điển hình, và khu chợ đóng cửa sớm."
+        }
+      ]
+    },
+    {
+      "word": "beginning",
+      "sentences": [
+        {
+          "english": "Spring is the beginning of a new year, so families tidy their houses.",
+          "vietnamese": "Mùa xuân là sự khởi đầu của một năm mới, nên các gia đình dọn dẹp nhà cửa."
+        },
+        {
+          "english": "At the beginning of the term, students buy a new uniform.",
+          "vietnamese": "Vào đầu học kỳ, học sinh mua một bộ đồng phục mới."
+        },
+        {
+          "english": "The beginning of our journey was hard because the flight was delayed.",
+          "vietnamese": "Sự khởi đầu của chuyến đi của chúng tôi thật vất vả vì chuyến bay bị hoãn."
+        },
+        {
+          "english": "Do you remember the beginning of that lovely film about two lovers?",
+          "vietnamese": "Bạn có nhớ đoạn mở đầu của bộ phim đáng yêu về hai người yêu nhau không?"
+        },
+        {
+          "english": "From the beginning, my girlfriend has believed in my career plans.",
+          "vietnamese": "Ngay từ đầu, bạn gái tôi đã tin vào những kế hoạch nghề nghiệp của tôi."
+        }
+      ]
+    },
+    {
+      "word": "sunny",
+      "sentences": [
+        {
+          "english": "We expect a sunny morning for the outdoor wedding tomorrow.",
+          "vietnamese": "Chúng tôi mong đợi một buổi sáng nhiều nắng cho đám cưới ngoài trời ngày mai."
+        },
+        {
+          "english": "It was sunny all week, so we went hiking near the temple.",
+          "vietnamese": "Trời nhiều nắng suốt cả tuần, nên chúng tôi đã đi bộ đường dài gần ngôi đền."
+        },
+        {
+          "english": "Do you prefer sunny mornings or cool evenings at the campsite?",
+          "vietnamese": "Bạn thích những buổi sáng nhiều nắng hay những buổi tối mát mẻ ở khu cắm trại?"
+        },
+        {
+          "english": "The guide promised a sunny afternoon for our sightseeing tour.",
+          "vietnamese": "Hướng dẫn viên hứa hẹn một buổi chiều nhiều nắng cho chuyến tham quan của chúng tôi."
+        },
+        {
+          "english": "If tomorrow is sunny, we will walk to the old pagoda together.",
+          "vietnamese": "Nếu ngày mai nhiều nắng, chúng tôi sẽ cùng nhau đi bộ đến ngôi chùa cổ."
+        }
+      ]
+    },
+    {
+      "word": "humid",
+      "sentences": [
+        {
+          "english": "My girlfriend is not familiar with such humid weather in the north.",
+          "vietnamese": "Bạn gái tôi không quen với thời tiết ẩm như vậy ở miền Bắc."
+        },
+        {
+          "english": "The air becomes humid before every storm reaches our local coast.",
+          "vietnamese": "Không khí trở nên ẩm trước khi mỗi cơn bão tiến tới bờ biển địa phương của chúng tôi."
+        },
+        {
+          "english": "Is it always so humid inside that small crowded market?",
+          "vietnamese": "Bên trong khu chợ nhỏ đông đúc đó lúc nào cũng ẩm như vậy à?"
+        },
+        {
+          "english": "Humid weather is normal here, so we welcome any cool wind.",
+          "vietnamese": "Thời tiết ẩm là bình thường ở đây, nên chúng tôi chào đón bất kỳ cơn gió mát nào."
+        },
+        {
+          "english": "We stayed in a humid room without an air conditioner last July.",
+          "vietnamese": "Chúng tôi đã ở trong một căn phòng ẩm không có máy điều hoà vào tháng Bảy năm ngoái."
+        }
+      ]
+    },
+    {
+      "word": "forecast",
+      "sentences": [
+        {
+          "english": "They forecast heavy rain, so the village cancelled the festival parade.",
+          "vietnamese": "Họ dự báo mưa lớn, nên ngôi làng đã huỷ cuộc diễu hành lễ hội."
+        },
+        {
+          "english": "The app forecasts a cold night, so please close the balcony door.",
+          "vietnamese": "Ứng dụng dự báo một đêm lạnh, nên làm ơn đóng cửa ban công lại."
+        },
+        {
+          "english": "They are forecasting strong winds around the national holiday this weekend.",
+          "vietnamese": "Họ đang dự báo gió mạnh vào khoảng kỳ nghỉ lễ quốc gia cuối tuần này."
+        },
+        {
+          "english": "Nobody forecast such heavy rain during the wedding last Sunday.",
+          "vietnamese": "Không ai dự báo mưa lớn như vậy trong đám cưới Chủ nhật tuần trước."
+        },
+        {
+          "english": "Can you forecast the weather for our journey to the resort?",
+          "vietnamese": "Bạn có thể dự báo thời tiết cho chuyến đi của chúng tôi đến khu nghỉ dưỡng không?"
+        }
+      ]
+    },
+    {
+      "word": "temperature",
+      "sentences": [
+        {
+          "english": "The temperature dropped quickly and every guest felt cold at the party.",
+          "vietnamese": "Nhiệt độ giảm nhanh và mọi vị khách đều thấy lạnh trong bữa tiệc."
+        },
+        {
+          "english": "The temperature rises quickly at noon in our crowded district.",
+          "vietnamese": "Nhiệt độ tăng nhanh vào buổi trưa ở quận đông đúc của chúng tôi."
+        },
+        {
+          "english": "What temperature do you expect in the north next week?",
+          "vietnamese": "Bạn mong đợi nhiệt độ bao nhiêu ở miền Bắc vào tuần tới?"
+        },
+        {
+          "english": "High temperatures are common here, so people avoid the afternoon sun.",
+          "vietnamese": "Nhiệt độ cao là chuyện thường ở đây, nên mọi người tránh nắng buổi chiều."
+        },
+        {
+          "english": "Please check the temperature before you invite guests to the garden party.",
+          "vietnamese": "Làm ơn kiểm tra nhiệt độ trước khi bạn mời khách đến bữa tiệc ngoài vườn."
+        }
+      ]
+    },
+    {
+      "word": "Celsius",
+      "sentences": [
+        {
+          "english": "Yesterday it reached forty degrees Celsius in our noisy city.",
+          "vietnamese": "Hôm qua nhiệt độ lên tới bốn mươi độ C ở thành phố ồn ào của chúng tôi."
+        },
+        {
+          "english": "In winter it can fall to ten degrees Celsius in the north.",
+          "vietnamese": "Vào mùa đông nhiệt độ có thể giảm xuống mười độ C ở miền Bắc."
+        },
+        {
+          "english": "Is thirty degrees Celsius normal for this time in your hometown?",
+          "vietnamese": "Ba mươi độ C có bình thường vào thời điểm này ở quê bạn không?"
+        },
+        {
+          "english": "My girlfriend says twenty degrees Celsius feels the most comfortable.",
+          "vietnamese": "Bạn gái tôi nói rằng hai mươi độ C là dễ chịu nhất."
+        },
+        {
+          "english": "The guide said it was five degrees Celsius on the mountain.",
+          "vietnamese": "Hướng dẫn viên nói rằng trên núi là năm độ C."
+        }
+      ]
+    },
+    {
+      "word": "breeze",
+      "sentences": [
+        {
+          "english": "A cool breeze made the whole afternoon lovely at the temple.",
+          "vietnamese": "Một cơn gió nhẹ mát mẻ khiến cả buổi chiều thật dễ chịu ở ngôi đền."
+        },
+        {
+          "english": "A gentle breeze moved the curtain in my quiet room.",
+          "vietnamese": "Một cơn gió nhẹ dịu dàng làm lay động tấm rèm trong căn phòng yên tĩnh của tôi."
+        },
+        {
+          "english": "We sat on the balcony and enjoyed the evening breeze together.",
+          "vietnamese": "Chúng tôi ngồi trên ban công và cùng nhau tận hưởng cơn gió nhẹ buổi tối."
+        },
+        {
+          "english": "Do you feel that cool breeze coming from the local river?",
+          "vietnamese": "Bạn có cảm nhận được cơn gió nhẹ mát mẻ thổi từ con sông địa phương không?"
+        },
+        {
+          "english": "Sea breezes make the resort comfortable even in the hottest months.",
+          "vietnamese": "Những cơn gió nhẹ từ biển làm khu nghỉ dưỡng dễ chịu ngay cả trong những tháng nóng nhất."
+        }
+      ]
+    },
+    {
+      "word": "pleasant",
+      "sentences": [
+        {
+          "english": "Autumn brings pleasant weather, so we often hike in the hills.",
+          "vietnamese": "Mùa thu mang đến thời tiết dễ chịu, nên chúng tôi thường đi bộ đường dài trên những ngọn đồi."
+        },
+        {
+          "english": "The atmosphere at the festival was pleasant and very friendly.",
+          "vietnamese": "Bầu không khí ở lễ hội thật dễ chịu và rất thân thiện."
+        },
+        {
+          "english": "Is October a pleasant month for a homestay in the mountains?",
+          "vietnamese": "Tháng Mười có phải là một tháng dễ chịu để ở homestay trên núi không?"
+        },
+        {
+          "english": "Our guests found the cool evening pleasant after a long day.",
+          "vietnamese": "Những vị khách của chúng tôi thấy buổi tối mát mẻ thật dễ chịu sau một ngày dài."
+        },
+        {
+          "english": "I will remember this pleasant moment for many years.",
+          "vietnamese": "Tôi sẽ nhớ khoảnh khắc dễ chịu này trong nhiều năm."
+        }
+      ]
+    },
+    {
+      "word": "rainy",
+      "sentences": [
+        {
+          "english": "We rarely go out on a cold, rainy day during the holiday.",
+          "vietnamese": "Chúng tôi hiếm khi ra ngoài vào một ngày lạnh và nhiều mưa trong kỳ nghỉ lễ."
+        },
+        {
+          "english": "The rainy months in my hometown start in May every year.",
+          "vietnamese": "Những tháng nhiều mưa ở quê tôi bắt đầu vào tháng Năm mỗi năm."
+        },
+        {
+          "english": "On rainy days we usually stay home and revise our vocabulary.",
+          "vietnamese": "Vào những ngày nhiều mưa chúng tôi thường ở nhà và ôn lại từ vựng."
+        },
+        {
+          "english": "Was it rainy during your holiday at the campsite last month?",
+          "vietnamese": "Trời có nhiều mưa trong kỳ nghỉ của bạn ở khu cắm trại tháng trước không?"
+        },
+        {
+          "english": "A rainy afternoon can be lovely if you have a good book.",
+          "vietnamese": "Một buổi chiều nhiều mưa có thể thật dễ chịu nếu bạn có một cuốn sách hay."
+        }
+      ]
+    },
+    {
+      "word": "drizzle",
+      "sentences": [
+        {
+          "english": "A light drizzle fell while the lovely couple took their photos.",
+          "vietnamese": "Một cơn mưa phùn nhẹ rơi trong lúc cặp đôi đáng yêu chụp ảnh."
+        },
+        {
+          "english": "A cold drizzle fell all morning, so the market looked empty.",
+          "vietnamese": "Một cơn mưa phùn lạnh rơi suốt buổi sáng, nên khu chợ trông vắng vẻ."
+        },
+        {
+          "english": "It is drizzling outside, so please bring the guests some hot tea.",
+          "vietnamese": "Bên ngoài đang mưa phùn, nên làm ơn mang cho các vị khách ít trà nóng."
+        },
+        {
+          "english": "Does a light drizzle often continue for several days in the north?",
+          "vietnamese": "Một cơn mưa phùn nhẹ có thường kéo dài vài ngày ở miền Bắc không?"
+        },
+        {
+          "english": "We walked through the drizzle to reach the old church.",
+          "vietnamese": "Chúng tôi đi bộ trong cơn mưa phùn để đến nhà thờ cổ."
+        }
+      ]
+    },
+    {
+      "word": "shower",
+      "sentences": [
+        {
+          "english": "A sudden shower surprised the tourists at the outdoor market.",
+          "vietnamese": "Một cơn mưa rào bất chợt làm các du khách ở khu chợ ngoài trời giật mình."
+        },
+        {
+          "english": "Heavy showers are common in September, so carry a raincoat.",
+          "vietnamese": "Những cơn mưa rào lớn là chuyện thường vào tháng Chín, nên hãy mang theo áo mưa."
+        },
+        {
+          "english": "A short shower delayed our flight to the island this morning.",
+          "vietnamese": "Một cơn mưa rào ngắn đã làm hoãn chuyến bay của chúng tôi ra đảo sáng nay."
+        },
+        {
+          "english": "Will a sudden shower spoil the wedding photos this afternoon?",
+          "vietnamese": "Một cơn mưa rào bất chợt có làm hỏng ảnh cưới chiều nay không?"
+        },
+        {
+          "english": "After the shower, the whole neighbourhood smelled clean and fresh.",
+          "vietnamese": "Sau cơn mưa rào, cả khu phố có mùi sạch sẽ và tươi mát."
+        }
+      ]
+    },
+    {
+      "word": "cloud",
+      "sentences": [
+        {
+          "english": "A dark cloud covered the sun and the whole area turned grey.",
+          "vietnamese": "Một đám mây đen che khuất mặt trời và cả khu vực chuyển sang màu xám."
+        },
+        {
+          "english": "Grey clouds are moving towards the temple on the hill.",
+          "vietnamese": "Những đám mây xám đang di chuyển về phía ngôi đền trên đồi."
+        },
+        {
+          "english": "There is not a single cloud above our peaceful hometown today.",
+          "vietnamese": "Hôm nay không có một đám mây nào trên quê hương yên bình của chúng tôi."
+        },
+        {
+          "english": "Look at that huge cloud above the mausoleum over there.",
+          "vietnamese": "Hãy nhìn đám mây khổng lồ phía trên lăng mộ đằng kia."
+        },
+        {
+          "english": "Thick clouds hid the mountain, so our sightseeing tour was short.",
+          "vietnamese": "Những đám mây dày che khuất ngọn núi, nên chuyến tham quan của chúng tôi bị ngắn lại."
+        }
+      ]
+    },
+    {
+      "word": "approach",
+      "sentences": [
+        {
+          "english": "Storms usually approach the local coast in September.",
+          "vietnamese": "Bão thường tiếp cận bờ biển địa phương vào tháng Chín."
+        },
+        {
+          "english": "As winter approaches, families prepare warm clothes for their children.",
+          "vietnamese": "Khi mùa đông tiếp cận, các gia đình chuẩn bị quần áo ấm cho con cái."
+        },
+        {
+          "english": "A big storm is approaching, so the guide cancelled our hike.",
+          "vietnamese": "Một cơn bão lớn đang tiếp cận, nên hướng dẫn viên đã huỷ chuyến đi bộ của chúng tôi."
+        },
+        {
+          "english": "Do not approach the river when heavy rain is expected.",
+          "vietnamese": "Đừng tiếp cận con sông khi mưa lớn được dự báo."
+        },
+        {
+          "english": "The taxi approached the old pagoda slowly because the alley was narrow.",
+          "vietnamese": "Chiếc taxi tiếp cận ngôi chùa cổ một cách chậm rãi vì con hẻm rất hẹp."
+        }
+      ]
+    },
+    {
+      "word": "nasty",
+      "sentences": [
+        {
+          "english": "We had really nasty weather during our journey to the resort.",
+          "vietnamese": "Chúng tôi gặp thời tiết thật khó chịu trong chuyến đi đến khu nghỉ dưỡng."
+        },
+        {
+          "english": "A nasty wind blew all night near our noisy neighbourhood.",
+          "vietnamese": "Một cơn gió khó chịu thổi suốt đêm gần khu phố ồn ào của chúng tôi."
+        },
+        {
+          "english": "Do you often get nasty weather during the festival in March?",
+          "vietnamese": "Các bạn có thường gặp thời tiết khó chịu trong lễ hội tháng Ba không?"
+        },
+        {
+          "english": "The nasty heat made every guest leave the party early.",
+          "vietnamese": "Cái nóng khó chịu khiến mọi vị khách rời bữa tiệc sớm."
+        },
+        {
+          "english": "We will avoid the coast because a nasty storm is coming.",
+          "vietnamese": "Chúng tôi sẽ tránh bờ biển vì một cơn bão khó chịu đang tới."
+        }
+      ]
+    },
+    {
+      "word": "awful",
+      "sentences": [
+        {
+          "english": "The traffic was awful, so we arrived late at the celebration.",
+          "vietnamese": "Giao thông thật kinh khủng, nên chúng tôi đến buổi ăn mừng muộn."
+        },
+        {
+          "english": "The weather was awful, so we stayed inside the homestay.",
+          "vietnamese": "Thời tiết thật kinh khủng, nên chúng tôi ở lại bên trong homestay."
+        },
+        {
+          "english": "Is the pollution in the capital really that awful nowadays?",
+          "vietnamese": "Ô nhiễm ở thủ đô ngày nay thực sự kinh khủng như vậy sao?"
+        },
+        {
+          "english": "An awful smell came from the rubbish behind the market.",
+          "vietnamese": "Một mùi kinh khủng bốc ra từ đống rác phía sau khu chợ."
+        },
+        {
+          "english": "Our relatives have had an awful journey because of the storm.",
+          "vietnamese": "Họ hàng của chúng tôi đã trải qua một chuyến đi kinh khủng vì cơn bão."
+        }
+      ]
+    },
+    {
+      "word": "middle",
+      "sentences": [
+        {
+          "english": "In the middle of the night a strong wind broke our balcony door.",
+          "vietnamese": "Vào giữa đêm, một cơn gió mạnh đã làm hỏng cửa ban công nhà chúng tôi."
+        },
+        {
+          "english": "We live in the middle of a busy district near the market.",
+          "vietnamese": "Chúng tôi sống ở giữa một quận nhộn nhịp gần khu chợ."
+        },
+        {
+          "english": "In the middle of the festival, heavy rain surprised everyone.",
+          "vietnamese": "Vào giữa lễ hội, mưa lớn đã làm mọi người bất ngờ."
+        },
+        {
+          "english": "Is your homestay in the middle of the old town?",
+          "vietnamese": "Homestay của bạn có nằm ở giữa phố cổ không?"
+        },
+        {
+          "english": "Put the lantern in the middle of the table, please.",
+          "vietnamese": "Làm ơn đặt chiếc đèn lồng vào giữa bàn."
+        }
+      ]
+    },
+    {
+      "word": "typhoon",
+      "sentences": [
+        {
+          "english": "A strong typhoon hit the coast and delayed every flight.",
+          "vietnamese": "Một cơn bão nhiệt đới mạnh đã đổ bộ vào bờ biển và làm hoãn mọi chuyến bay."
+        },
+        {
+          "english": "Typhoons usually arrive between August and October in the north.",
+          "vietnamese": "Bão nhiệt đới thường đến trong khoảng tháng Tám và tháng Mười ở miền Bắc."
+        },
+        {
+          "english": "Have you ever experienced a serious typhoon in your hometown?",
+          "vietnamese": "Bạn đã bao giờ trải qua một cơn bão nhiệt đới nghiêm trọng ở quê mình chưa?"
+        },
+        {
+          "english": "The typhoon destroyed many poor houses near the local bridge.",
+          "vietnamese": "Cơn bão nhiệt đới đã phá huỷ nhiều ngôi nhà nghèo gần cây cầu địa phương."
+        },
+        {
+          "english": "People pray for peace and safety whenever a typhoon comes.",
+          "vietnamese": "Mọi người cầu nguyện cho sự bình yên và an toàn mỗi khi một cơn bão nhiệt đới ập đến."
+        }
+      ]
+    },
+    {
+      "word": "flood",
+      "sentences": [
+        {
+          "english": "The flood damaged many houses in our poor neighbourhood.",
+          "vietnamese": "Trận lũ lụt đã làm hư hại nhiều ngôi nhà ở khu phố nghèo của chúng tôi."
+        },
+        {
+          "english": "Floods often happen after a big storm, so people prepare rice and water.",
+          "vietnamese": "Lũ lụt thường xảy ra sau một cơn bão lớn, nên mọi người chuẩn bị gạo và nước."
+        },
+        {
+          "english": "Did the flood reach your relatives in the countryside last year?",
+          "vietnamese": "Trận lũ lụt có đến chỗ họ hàng của bạn ở vùng quê năm ngoái không?"
+        },
+        {
+          "english": "The road was flooded, so the guests arrived very late.",
+          "vietnamese": "Con đường bị ngập lụt, nên các vị khách đã đến rất muộn."
+        },
+        {
+          "english": "A serious flood can destroy roads, bridges and public buildings.",
+          "vietnamese": "Một trận lũ lụt nghiêm trọng có thể phá huỷ đường sá, cầu cống và các toà nhà công cộng."
+        }
+      ]
+    },
+    {
+      "word": "last",
+      "sentences": [
+        {
+          "english": "A cold spell can last for two weeks in the north.",
+          "vietnamese": "Một đợt lạnh có thể kéo dài hai tuần ở miền Bắc."
+        },
+        {
+          "english": "The festival lasts three days and attracts thousands of visitors.",
+          "vietnamese": "Lễ hội kéo dài ba ngày và thu hút hàng nghìn du khách."
+        },
+        {
+          "english": "How long does the wet season last in your hometown?",
+          "vietnamese": "Mùa mưa kéo dài bao lâu ở quê bạn?"
+        },
+        {
+          "english": "Our holiday lasted only five days, but every moment was lovely.",
+          "vietnamese": "Kỳ nghỉ của chúng tôi chỉ kéo dài năm ngày, nhưng mọi khoảnh khắc đều thật đáng yêu."
+        },
+        {
+          "english": "The heavy rain is lasting longer than the guide expected.",
+          "vietnamese": "Cơn mưa lớn đang kéo dài hơn những gì hướng dẫn viên dự tính."
+        }
+      ]
+    },
+    {
+      "word": "period",
+      "sentences": [
+        {
+          "english": "There is a quiet period before the festival begins each year.",
+          "vietnamese": "Có một khoảng thời gian yên ắng trước khi lễ hội bắt đầu mỗi năm."
+        },
+        {
+          "english": "During that cold period, my relatives stayed at home every evening.",
+          "vietnamese": "Trong khoảng thời gian lạnh đó, họ hàng của tôi ở nhà mỗi tối."
+        },
+        {
+          "english": "Which period of the year do you recommend for a homestay?",
+          "vietnamese": "Bạn gợi ý khoảng thời gian nào trong năm để ở homestay?"
+        },
+        {
+          "english": "This period is busy because many couples plan their wedding parties.",
+          "vietnamese": "Khoảng thời gian này bận rộn vì nhiều cặp đôi lên kế hoạch cho tiệc cưới của họ."
+        },
+        {
+          "english": "A short period of sunshine followed the rain, and the guests smiled.",
+          "vietnamese": "Một khoảng thời gian ngắn có nắng đến sau cơn mưa, và các vị khách mỉm cười."
+        }
+      ]
+    },
+    {
+      "word": "end",
+      "sentences": [
+        {
+          "english": "At the end of the wet season, farmers pray for a good harvest.",
+          "vietnamese": "Vào cuối mùa mưa, những người nông dân cầu nguyện cho một vụ mùa bội thu."
+        },
+        {
+          "english": "At the end of the year, we tidy the house and pray together.",
+          "vietnamese": "Vào cuối năm, chúng tôi dọn dẹp nhà cửa và cùng nhau cầu nguyện."
+        },
+        {
+          "english": "The end of the wet months brings cool air to the north.",
+          "vietnamese": "Sự kết thúc của những tháng mưa mang không khí mát mẻ đến miền Bắc."
+        },
+        {
+          "english": "Will you stay until the end of the festival tonight?",
+          "vietnamese": "Bạn sẽ ở lại đến hết lễ hội tối nay chứ?"
+        },
+        {
+          "english": "By the end of March, the temperature in the south rises quickly.",
+          "vietnamese": "Đến cuối tháng Ba, nhiệt độ ở miền Nam tăng nhanh."
+        }
+      ]
+    }
+  ]
+}

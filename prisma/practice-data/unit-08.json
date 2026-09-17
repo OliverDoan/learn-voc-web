@@ -1,0 +1,247 @@
+{
+  "unit": 8,
+  "deck": "Unit 8: Sự thật về thủ đô",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "pricey",
+      "sentences": [
+        { "english": "Living in the capital is pricey.", "vietnamese": "Sống ở thủ đô khá đắt đỏ." },
+        { "english": "Restaurants around the central square are pricey, but the food is excellent.", "vietnamese": "Các nhà hàng quanh quảng trường trung tâm thì đắt đỏ, nhưng đồ ăn rất ngon." },
+        { "english": "Why is everything so pricey in this modern district?", "vietnamese": "Tại sao mọi thứ lại đắt đỏ như vậy ở quận hiện đại này?" },
+        { "english": "I did not buy that luxury jacket because it was too pricey for me.", "vietnamese": "Tôi đã không mua chiếc áo khoác sang trọng đó vì nó quá đắt đỏ với tôi." },
+        { "english": "My sister is saving money now because good furniture is pricey.", "vietnamese": "Chị tôi đang tiết kiệm tiền vì đồ nội thất tốt thì đắt đỏ." }
+      ]
+    },
+    {
+      "word": "accommodation",
+      "sentences": [
+        { "english": "Accommodation here is expensive.", "vietnamese": "Chỗ ở ở đây rất đắt." },
+        { "english": "Students often look for cheap accommodation near the city centre.", "vietnamese": "Sinh viên thường tìm chỗ ở giá rẻ gần trung tâm thành phố." },
+        { "english": "Has your company arranged accommodation for the new employees?", "vietnamese": "Công ty của bạn đã sắp xếp chỗ ở cho các nhân viên mới chưa?" },
+        { "english": "We will book accommodation close to the highway to save time.", "vietnamese": "Chúng tôi sẽ đặt chỗ ở gần đường cao tốc để tiết kiệm thời gian." },
+        { "english": "The hotel offered us free accommodation after the long interview.", "vietnamese": "Khách sạn đã mời chúng tôi chỗ ở miễn phí sau buổi phỏng vấn dài." }
+      ]
+    },
+    {
+      "word": "room",
+      "sentences": [
+        { "english": "The bus was so crowded that there was no room for my bag.", "vietnamese": "Xe buýt đông đến nỗi không còn chỗ nào cho chiếc túi của tôi." },
+        { "english": "There is not enough room on the pavement for so many motorbikes.", "vietnamese": "Không có đủ chỗ trên vỉa hè cho quá nhiều xe máy như vậy." },
+        { "english": "Is there any room in your flat for one more visitor?", "vietnamese": "Căn hộ của bạn còn chỗ nào cho thêm một vị khách nữa không?" },
+        { "english": "The narrow alley left no room for a large vehicle.", "vietnamese": "Con hẻm hẹp không chừa chỗ nào cho một phương tiện lớn." },
+        { "english": "We are making room in the office for the new assistant.", "vietnamese": "Chúng tôi đang dọn chỗ trong văn phòng cho người trợ lý mới." }
+      ]
+    },
+    {
+      "word": "daily",
+      "sentences": [
+        { "english": "Millions of people travel into the capital daily for work.", "vietnamese": "Hàng triệu người đi vào thủ đô hàng ngày để làm việc." },
+        { "english": "She revises her new vocabulary daily before going to bed.", "vietnamese": "Cô ấy ôn lại từ vựng mới hàng ngày trước khi đi ngủ." },
+        { "english": "Do you contact your manager daily, or only when there is a problem?", "vietnamese": "Bạn có liên lạc với quản lý của mình hàng ngày không, hay chỉ khi có vấn đề?" },
+        { "english": "The buses on this highway run daily from five in the morning.", "vietnamese": "Các xe buýt trên đường cao tốc này chạy hàng ngày từ năm giờ sáng." },
+        { "english": "I have been saving a small amount of money daily since January.", "vietnamese": "Tôi đã tiết kiệm một khoản tiền nhỏ hàng ngày kể từ tháng Một." }
+      ]
+    },
+    {
+      "word": "pollution",
+      "sentences": [
+        { "english": "Pollution in the central district is much worse than in my hometown.", "vietnamese": "Ô nhiễm ở quận trung tâm tệ hơn nhiều so với ở quê tôi." },
+        { "english": "Pollution from old vehicles makes the atmosphere heavy in summer.", "vietnamese": "Ô nhiễm từ các phương tiện cũ làm bầu không khí trở nên nặng nề vào mùa hè." },
+        { "english": "The modern factories near my town have created serious pollution.", "vietnamese": "Các nhà máy hiện đại gần thị trấn của tôi đã tạo ra ô nhiễm nghiêm trọng." },
+        { "english": "Will the new bus system reduce pollution in the capital?", "vietnamese": "Hệ thống xe buýt mới có làm giảm ô nhiễm ở thủ đô không?" },
+        { "english": "People are leaving the crowded centre because of noise and pollution.", "vietnamese": "Người ta đang rời khỏi khu trung tâm đông đúc vì tiếng ồn và ô nhiễm." }
+      ]
+    },
+    {
+      "word": "vehicle",
+      "sentences": [
+        { "english": "Every vehicle must stop before the traffic lights on this highway.", "vietnamese": "Mọi phương tiện phải dừng lại trước đèn giao thông trên đường cao tốc này." },
+        { "english": "My uncle is saving money to buy an electric vehicle next year.", "vietnamese": "Chú tôi đang tiết kiệm tiền để mua một phương tiện chạy điện vào năm sau." },
+        { "english": "Each vehicle pays a small fee before crossing the old bridge.", "vietnamese": "Mỗi phương tiện trả một khoản phí nhỏ trước khi qua cây cầu cũ." },
+        { "english": "Thousands of vehicles enter the central district every morning.", "vietnamese": "Hàng nghìn phương tiện đi vào quận trung tâm mỗi buổi sáng." },
+        { "english": "Do not park your vehicle on the narrow pavement, please.", "vietnamese": "Xin đừng đỗ phương tiện của bạn trên vỉa hè hẹp." }
+      ]
+    },
+    {
+      "word": "rubbish",
+      "sentences": [
+        { "english": "People leave rubbish on the pavement after the night market closes.", "vietnamese": "Người ta để lại rác trên vỉa hè sau khi chợ đêm đóng cửa." },
+        { "english": "Please do not leave rubbish in the alley behind the nightclub.", "vietnamese": "Xin đừng để rác trong con hẻm phía sau hộp đêm." },
+        { "english": "Workers collect rubbish from our neighbourhood twice a week.", "vietnamese": "Công nhân thu gom rác từ khu phố của chúng tôi hai lần một tuần." },
+        { "english": "The square was full of rubbish after the exciting festival.", "vietnamese": "Quảng trường đầy rác sau lễ hội thú vị đó." },
+        { "english": "Have the workers cleared the rubbish from the crowded market yet?", "vietnamese": "Các công nhân đã dọn rác khỏi khu chợ đông đúc chưa?" }
+      ]
+    },
+    {
+      "word": "throw",
+      "sentences": [
+        { "english": "Please do not throw plastic bottles into the alley behind our house.", "vietnamese": "Xin đừng vứt chai nhựa vào con hẻm phía sau nhà chúng tôi." },
+        { "english": "Some people throw waste into the river beside the modern tower.", "vietnamese": "Một số người vứt rác thải xuống con sông bên cạnh tòa tháp hiện đại." },
+        { "english": "He is throwing away a bill that he has not paid yet.", "vietnamese": "Anh ấy đang vứt đi một hóa đơn mà anh ấy còn chưa thanh toán." },
+        { "english": "Never throw your documents away before the interview finishes.", "vietnamese": "Đừng bao giờ vứt giấy tờ của bạn đi trước khi buổi phỏng vấn kết thúc." },
+        { "english": "The children throw a ball in the square every afternoon.", "vietnamese": "Bọn trẻ ném bóng ở quảng trường mỗi buổi chiều." }
+      ]
+    },
+    {
+      "word": "unhealthy",
+      "sentences": [
+        { "english": "The air in this bustling area is unhealthy for small children.", "vietnamese": "Không khí ở khu vực nhộn nhịp này có hại cho sức khỏe của trẻ nhỏ." },
+        { "english": "Eating cheap fast food every day is unhealthy for young workers.", "vietnamese": "Ăn đồ ăn nhanh giá rẻ mỗi ngày thì không lành mạnh với những người lao động trẻ." },
+        { "english": "The nurse warned us that sitting all day is unhealthy.", "vietnamese": "Cô y tá đã cảnh báo chúng tôi rằng ngồi cả ngày thì có hại cho sức khỏe." },
+        { "english": "Is it unhealthy to live beside a busy highway?", "vietnamese": "Sống cạnh một đường cao tốc đông đúc có hại cho sức khỏe không?" },
+        { "english": "The atmosphere in that crowded alley feels unhealthy at night.", "vietnamese": "Bầu không khí trong con hẻm đông đúc đó có cảm giác không lành mạnh vào ban đêm." }
+      ]
+    },
+    {
+      "word": "overpopulated",
+      "sentences": [
+        { "english": "The city centre is overpopulated.", "vietnamese": "Khu trung tâm quá đông dân." },
+        { "english": "This district has become overpopulated since the new factories opened.", "vietnamese": "Quận này đã trở nên quá đông dân kể từ khi các nhà máy mới mở cửa." },
+        { "english": "Many modern cities are overpopulated and short of clean water.", "vietnamese": "Nhiều thành phố hiện đại thì quá đông dân và thiếu nước sạch." },
+        { "english": "Will our neighbourhood be overpopulated in ten years?", "vietnamese": "Khu phố của chúng ta sẽ quá đông dân trong mười năm nữa chứ?" },
+        { "english": "People move away from the capital when it becomes overpopulated.", "vietnamese": "Người ta chuyển khỏi thủ đô khi nó trở nên quá đông dân." }
+      ]
+    },
+    {
+      "word": "population",
+      "sentences": [
+        { "english": "The population of this district has doubled in only ten years.", "vietnamese": "Dân số của quận này đã tăng gấp đôi chỉ trong mười năm." },
+        { "english": "The population of my hometown is much smaller than the capital.", "vietnamese": "Dân số quê tôi nhỏ hơn nhiều so với thủ đô." },
+        { "english": "A large population needs a better transport system and more hospitals.", "vietnamese": "Một dân số lớn cần một hệ thống giao thông tốt hơn và nhiều bệnh viện hơn." },
+        { "english": "Has the population in this neighbourhood grown since last year?", "vietnamese": "Dân số ở khu phố này đã tăng lên kể từ năm ngoái chưa?" },
+        { "english": "Experts say the population will continue rising for another decade.", "vietnamese": "Các chuyên gia nói dân số sẽ tiếp tục tăng thêm một thập kỷ nữa." }
+      ]
+    },
+    {
+      "word": "lack",
+      "sentences": [
+        { "english": "Many old neighbourhoods lack clean water and modern hospitals.", "vietnamese": "Nhiều khu phố cũ thiếu nước sạch và bệnh viện hiện đại." },
+        { "english": "Many alleys here lack street lights, so people feel scared at night.", "vietnamese": "Nhiều con hẻm ở đây thiếu đèn đường, nên người ta cảm thấy sợ hãi vào ban đêm." },
+        { "english": "Our town lacked a proper library until the government paid for one.", "vietnamese": "Thị trấn của chúng tôi đã thiếu một thư viện tử tế cho đến khi chính quyền chi tiền cho một cái." },
+        { "english": "Does your company lack qualified staff at the moment?", "vietnamese": "Công ty của bạn có đang thiếu nhân viên đủ trình độ vào lúc này không?" },
+        { "english": "The service was slow because the restaurant was lacking staff.", "vietnamese": "Dịch vụ chậm chạp vì nhà hàng đang thiếu nhân viên." }
+      ]
+    },
+    {
+      "word": "facility",
+      "sentences": [
+        { "english": "This building has a modern sports facility.", "vietnamese": "Tòa nhà này có một cơ sở thể thao hiện đại." },
+        { "english": "The new sports facility near the tower opens next month.", "vietnamese": "Cơ sở thể thao mới gần tòa tháp sẽ mở cửa vào tháng tới." },
+        { "english": "Our neighbourhood lacks a decent medical facility.", "vietnamese": "Khu phố của chúng tôi thiếu một cơ sở y tế tử tế." },
+        { "english": "Are the facilities in this district free for local residents?", "vietnamese": "Các tiện ích ở quận này có miễn phí cho cư dân địa phương không?" },
+        { "english": "The company paid for a modern training facility for its employees.", "vietnamese": "Công ty đã chi tiền cho một cơ sở đào tạo hiện đại dành cho nhân viên của mình." }
+      ]
+    },
+    {
+      "word": "build",
+      "sentences": [
+        { "english": "The city plans to build a new tower near the river.", "vietnamese": "Thành phố dự định xây một tòa tháp mới gần con sông." },
+        { "english": "They are building a new road beside the highway this year.", "vietnamese": "Họ đang xây một con đường mới bên cạnh đường cao tốc trong năm nay." },
+        { "english": "The government will build more cheap houses for young families.", "vietnamese": "Chính phủ sẽ xây thêm nhà giá rẻ cho các gia đình trẻ." },
+        { "english": "Who is going to build the skyscraper in the central district?", "vietnamese": "Ai sẽ xây tòa nhà chọc trời ở quận trung tâm?" },
+        { "english": "My uncle wants to build a small house in his peaceful hometown.", "vietnamese": "Chú tôi muốn xây một ngôi nhà nhỏ ở quê hương yên bình của chú." }
+      ]
+    },
+    {
+      "word": "bridge",
+      "sentences": [
+        { "english": "The old bridge is convenient for students who live on the other side.", "vietnamese": "Cây cầu cũ rất tiện lợi cho những học sinh sống ở bờ bên kia." },
+        { "english": "We crossed the bridge and walked towards the busy square.", "vietnamese": "Chúng tôi đã đi qua cây cầu và đi bộ về phía quảng trường nhộn nhịp." },
+        { "english": "A long bridge connects our district to the modern airport.", "vietnamese": "Một cây cầu dài nối quận của chúng tôi với sân bay hiện đại." },
+        { "english": "Is this old bridge safe for heavy trucks during the crowded rush hour?", "vietnamese": "Cây cầu cũ này có an toàn cho xe tải nặng trong giờ cao điểm đông đúc không?" },
+        { "english": "The city will open a new bridge to reduce traffic on the highway.", "vietnamese": "Thành phố sẽ mở một cây cầu mới để giảm giao thông trên đường cao tốc." }
+      ]
+    },
+    {
+      "word": "beggar",
+      "sentences": [
+        { "english": "A beggar sat quietly near the entrance of the nightclub.", "vietnamese": "Một người ăn xin ngồi lặng lẽ gần lối vào của hộp đêm." },
+        { "english": "A beggar asked me for money outside the luxury hotel.", "vietnamese": "Một người ăn xin đã xin tiền tôi bên ngoài khách sạn sang trọng." },
+        { "english": "Generous visitors often give food to the beggars on this street.", "vietnamese": "Những du khách hào phóng thường cho đồ ăn những người ăn xin trên con phố này." },
+        { "english": "Have you seen the old beggar who sits near the square?", "vietnamese": "Bạn đã nhìn thấy người ăn xin già ngồi gần quảng trường chưa?" },
+        { "english": "The beggar was too shy to speak to anyone in the crowded market.", "vietnamese": "Người ăn xin đó quá rụt rè để nói chuyện với ai trong khu chợ đông đúc." }
+      ]
+    },
+    {
+      "word": "poor",
+      "sentences": [
+        { "english": "Many poor families cannot pay the high rent in this city.", "vietnamese": "Nhiều gia đình nghèo không thể trả tiền thuê nhà cao ở thành phố này." },
+        { "english": "My grandmother was poor, but she was always generous with her friends.", "vietnamese": "Bà tôi nghèo, nhưng bà luôn hào phóng với bạn bè của mình." },
+        { "english": "Poor students can borrow books from the school library for free.", "vietnamese": "Học sinh nghèo có thể mượn sách từ thư viện trường miễn phí." },
+        { "english": "Is it difficult for poor people to find a job in the capital?", "vietnamese": "Người nghèo có khó tìm việc làm ở thủ đô không?" },
+        { "english": "Many poor families spend most of their money on rent and food.", "vietnamese": "Nhiều gia đình nghèo tiêu phần lớn tiền của họ vào tiền thuê nhà và thức ăn." }
+      ]
+    },
+    {
+      "word": "selfish",
+      "sentences": [
+        { "english": "Some rich people are selfish and never help anyone around them.", "vietnamese": "Một số người giàu có thì ích kỷ và không bao giờ giúp đỡ ai xung quanh họ." },
+        { "english": "Do not be selfish; lend your notes to your classmates.", "vietnamese": "Đừng ích kỷ; hãy cho bạn cùng lớp mượn ghi chú của bạn." },
+        { "english": "It was selfish of him to park his car on the narrow pavement.", "vietnamese": "Thật ích kỷ khi anh ta đỗ xe trên vỉa hè hẹp." },
+        { "english": "My manager is generous, but his assistant is rather selfish.", "vietnamese": "Quản lý của tôi thì hào phóng, nhưng trợ lý của ông ấy khá ích kỷ." },
+        { "english": "Selfish drivers never stop for people crossing the busy square.", "vietnamese": "Những tài xế ích kỷ không bao giờ dừng lại cho người đi qua quảng trường đông đúc." }
+      ]
+    },
+    {
+      "word": "pickpocket",
+      "sentences": [
+        { "english": "A pickpocket stole her phone on the lively shopping street.", "vietnamese": "Một kẻ móc túi đã lấy trộm điện thoại của cô ấy trên con phố mua sắm sống động." },
+        { "english": "Watch your bag, because pickpockets work in this crowded market.", "vietnamese": "Hãy trông chừng túi của bạn, vì những kẻ móc túi hoạt động ở khu chợ đông đúc này." },
+        { "english": "A pickpocket took my wallet near the central bus station.", "vietnamese": "Một kẻ móc túi đã lấy ví của tôi gần bến xe buýt trung tâm." },
+        { "english": "Have the police caught the pickpocket who works around the square?", "vietnamese": "Cảnh sát đã bắt được kẻ móc túi hoạt động quanh quảng trường chưa?" },
+        { "english": "Pickpockets often choose visitors who look rich and careless.", "vietnamese": "Những kẻ móc túi thường chọn các du khách trông giàu có và bất cẩn." }
+      ]
+    },
+    {
+      "word": "crime",
+      "sentences": [
+        { "english": "Crime is rising in this area, so people feel nervous at night.", "vietnamese": "Tội phạm đang gia tăng ở khu vực này, nên người dân cảm thấy lo lắng vào ban đêm." },
+        { "english": "Crime usually decreases when the streets have better lighting.", "vietnamese": "Tội phạm thường giảm xuống khi các con phố có ánh sáng tốt hơn." },
+        { "english": "My neighbourhood is peaceful, and serious crime is very rare here.", "vietnamese": "Khu phố của tôi yên bình, và tội phạm nghiêm trọng rất hiếm ở đây." },
+        { "english": "Have you ever described a crime to the local police?", "vietnamese": "Bạn đã bao giờ mô tả một tội ác cho cảnh sát địa phương chưa?" },
+        { "english": "The government must reduce crime in the bustling city centre.", "vietnamese": "Chính phủ phải giảm tội phạm ở khu trung tâm thành phố nhộn nhịp." }
+      ]
+    },
+    {
+      "word": "security",
+      "sentences": [
+        { "english": "Security in this neighbourhood improved after the new cameras appeared.", "vietnamese": "An ninh ở khu phố này đã được cải thiện sau khi những chiếc camera mới xuất hiện." },
+        { "english": "Security guards check every document before you enter the tower.", "vietnamese": "Nhân viên an ninh kiểm tra mọi giấy tờ trước khi bạn vào tòa tháp." },
+        { "english": "Good security makes this district appealing to young families.", "vietnamese": "An ninh tốt khiến quận này hấp dẫn với các gia đình trẻ." },
+        { "english": "Is the security system in your building working properly?", "vietnamese": "Hệ thống an ninh trong tòa nhà của bạn có đang hoạt động tốt không?" },
+        { "english": "The company spends a lot of money on security every year.", "vietnamese": "Công ty chi rất nhiều tiền cho an ninh mỗi năm." }
+      ]
+    },
+    {
+      "word": "scam",
+      "sentences": [
+        { "english": "That cheap tour was a scam, and the visitors lost all their money.", "vietnamese": "Chuyến du lịch giá rẻ đó là một trò lừa đảo, và các du khách đã mất hết tiền." },
+        { "english": "That job offer was a scam, so I did not sign the contract.", "vietnamese": "Lời mời làm việc đó là một trò lừa đảo, nên tôi đã không ký hợp đồng." },
+        { "english": "Be careful, because online scams can steal the money you save.", "vietnamese": "Hãy cẩn thận, vì các trò lừa đảo trực tuyến có thể lấy mất số tiền bạn tiết kiệm." },
+        { "english": "Has anyone warned the new visitors about this common scam?", "vietnamese": "Đã có ai cảnh báo các du khách mới về trò lừa đảo phổ biến này chưa?" },
+        { "english": "The police discovered a scam involving fake job applications.", "vietnamese": "Cảnh sát đã phát hiện một trò lừa đảo liên quan đến các đơn xin việc giả." }
+      ]
+    },
+    {
+      "word": "affordable",
+      "sentences": [
+        { "english": "Young workers need affordable housing near the city centre.", "vietnamese": "Những người lao động trẻ cần nhà ở giá phải chăng gần trung tâm thành phố." },
+        { "english": "This neighbourhood is appealing because the rent is still affordable.", "vietnamese": "Khu phố này hấp dẫn vì tiền thuê nhà vẫn ở mức phải chăng." },
+        { "english": "We are looking for an affordable flat near the highway.", "vietnamese": "Chúng tôi đang tìm một căn hộ giá phải chăng gần đường cao tốc." },
+        { "english": "Are these luxury cars affordable for an ordinary employee?", "vietnamese": "Những chiếc xe sang trọng này có phải chăng với một nhân viên bình thường không?" },
+        { "english": "The new bus service made travel more affordable for students.", "vietnamese": "Dịch vụ xe buýt mới đã làm việc đi lại trở nên phải chăng hơn cho học sinh." }
+      ]
+    },
+    {
+      "word": "demand",
+      "sentences": [
+        { "english": "There is high demand for cheap housing.", "vietnamese": "Có nhu cầu cao về nhà ở giá rẻ." },
+        { "english": "Demand for skilled builders has risen in the capital.", "vietnamese": "Nhu cầu về thợ xây lành nghề đã tăng lên ở thủ đô." },
+        { "english": "There is little demand for expensive flats in my quiet hometown.", "vietnamese": "Có rất ít nhu cầu về những căn hộ đắt tiền ở quê hương yên tĩnh của tôi." },
+        { "english": "Why is the demand for modern offices so high this year?", "vietnamese": "Tại sao nhu cầu về văn phòng hiện đại lại cao như vậy trong năm nay?" },
+        { "english": "The company increased its prices because demand was very strong.", "vietnamese": "Công ty đã tăng giá vì nhu cầu rất mạnh." }
+      ]
+    }
+  ]
+}

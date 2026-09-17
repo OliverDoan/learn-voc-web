@@ -120,6 +120,24 @@ export interface Card {
   updatedAt: string;
 }
 
+/** Một câu luyện viết (Việt → Anh) gắn với một thẻ. */
+export interface PracticeSentence {
+  id: string;
+  cardId: string;
+  /** Câu tiếng Anh — đáp án */
+  english: string;
+  /** Câu tiếng Việt — đề bài */
+  vietnamese: string;
+  /** JSON array các từ ôn tập (Unit cũ) xuất hiện trong câu */
+  reviewWords: string | null;
+  order: number;
+}
+
+/** Thẻ kèm bộ câu luyện viết (API `/api/practice-sentences` trả về dạng này). */
+export interface CardWithPractice extends Card {
+  practiceSentences?: PracticeSentence[];
+}
+
 export interface Story {
   id: string;
   deckId: string;

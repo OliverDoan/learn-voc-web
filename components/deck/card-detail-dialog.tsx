@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import {
   Blocks,
   ChevronLeft,
@@ -21,6 +21,7 @@ import {
 } from "@/components/ui/dialog";
 import { cn, displayRootWord, parseTags, posBadgeClass } from "@/lib/utils";
 import { DialectBadge } from "@/components/deck/dialect-badge";
+import { CardExamples } from "@/components/deck/card-examples";
 import {
   parseWordForms,
   parseWordFormMeanings,
@@ -70,6 +71,12 @@ export function CardDetailDialog<T extends Card = Card>({
     return () => window.removeEventListener("keydown", onKey);
   }, [open, canNavigate, prevCard, nextCard, onNavigate]);
 
+  // Chuyển sang từ khác thì cuộn nội dung về đầu (không giữ vị trí cuộn của từ trước).
+  const bodyRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    bodyRef.current?.scrollTo({ top: 0 });
+  }, [card?.id]);
+
   if (!card) return null;
 
   const tags = parseTags(card.tags);
@@ -81,7 +88,7 @@ export function CardDetailDialog<T extends Card = Card>({
   const formRows = WORD_FORM_ORDER.filter((pos) => forms[pos]);
 
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
+    <Dialog open={open} onOpenChange={onOpenChange} className="max-w-2xl">
       {canNavigate ? (
         <>
           <button
@@ -106,8 +113,12 @@ export function CardDetailDialog<T extends Card = Card>({
           </button>
         </>
       ) : null}
-      <DialogContent onClose={() => onOpenChange(false)} className="max-w-lg">
-        <DialogHeader>
+      {/* Chiều cao cố định: đổi từ bằng ‹ › không làm hộp thoại co giãn/nhảy vị trí. */}
+      <DialogContent
+        onClose={() => onOpenChange(false)}
+        className="flex h-[min(82vh,780px)] flex-col overflow-hidden p-0"
+      >
+        <DialogHeader className="mb-0 shrink-0 px-6 pb-3 pt-6">
           <DialogTitle className="flex flex-wrap items-center gap-2">
             <span className="text-2xl font-bold">{card.word}</span>
             <Button
@@ -137,7 +148,7 @@ export function CardDetailDialog<T extends Card = Card>({
           </DialogTitle>
         </DialogHeader>
 
-        <div className="space-y-4">
+        <div ref={bodyRef} className="min-h-0 flex-1 space-y-4 overflow-y-auto px-6 pb-6">
           <p className="text-lg font-medium">{card.meaning}</p>
 
           <DialectBadge dialect={card.dialect} variantWord={card.variantWord} variant="full" />
@@ -153,14 +164,7 @@ export function CardDetailDialog<T extends Card = Card>({
             </div>
           ) : null}
 
-          {card.example ? (
-            <div className="rounded-lg border bg-muted/30 p-3">
-              <p className="text-sm italic">&ldquo;{card.example}&rdquo;</p>
-              {card.exampleTranslation ? (
-                <p className="mt-1 text-sm text-muted-foreground">{card.exampleTranslation}</p>
-              ) : null}
-            </div>
-          ) : null}
+          <CardExamples card={card} enabled={open} />
 
           {synonyms.length > 0 ? (
             <div className="flex flex-wrap items-center gap-1.5 text-sm">
@@ -245,7 +249,7 @@ export function CardDetailDialog<T extends Card = Card>({
         </div>
 
         {onEdit || onDelete ? (
-          <DialogFooter>
+          <DialogFooter className="mt-0 shrink-0 border-t px-6 py-4">
             {onDelete ? (
               <Button
                 variant="outline"

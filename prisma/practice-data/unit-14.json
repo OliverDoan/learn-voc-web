@@ -1,0 +1,607 @@
+{
+  "unit": 14,
+  "deck": "Unit 14: Khác biệt văn hoá của tôi và bạn gái",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "difference",
+      "sentences": [
+        {
+          "english": "There is a big difference between a Vietnamese wedding and a Western celebration.",
+          "vietnamese": "Có một sự khác biệt lớn giữa đám cưới Việt Nam và một buổi ăn mừng phương Tây."
+        },
+        {
+          "english": "Can you explain the difference between a temple and a pagoda?",
+          "vietnamese": "Bạn có thể giải thích sự khác biệt giữa một ngôi đền và một ngôi chùa không?"
+        },
+        {
+          "english": "Nowadays young couples do not see a big difference between the two cultures.",
+          "vietnamese": "Ngày nay các cặp đôi trẻ không thấy sự khác biệt lớn giữa hai nền văn hoá."
+        },
+        {
+          "english": "There were many differences in the way our families welcome a guest.",
+          "vietnamese": "Đã có nhiều sự khác biệt trong cách gia đình chúng tôi chào đón một vị khách."
+        },
+        {
+          "english": "Living abroad has taught me to enjoy the differences instead of fearing them.",
+          "vietnamese": "Sống ở nước ngoài đã dạy tôi tận hưởng những sự khác biệt thay vì sợ chúng."
+        }
+      ]
+    },
+    {
+      "word": "normal",
+      "sentences": [
+        {
+          "english": "It is normal to feel nervous before a wedding.",
+          "vietnamese": "Cảm thấy lo lắng trước đám cưới là điều bình thường."
+        },
+        {
+          "english": "In my hometown it is normal to invite every relative to a wedding.",
+          "vietnamese": "Ở quê tôi, việc mời mọi người họ hàng đến đám cưới là chuyện bình thường."
+        },
+        {
+          "english": "Is it normal for tourists to take off their shoes at the temple?",
+          "vietnamese": "Việc khách du lịch cởi giày ở ngôi đền có bình thường không?"
+        },
+        {
+          "english": "Her daily routine became normal again after the long holiday.",
+          "vietnamese": "Thói quen hằng ngày của cô ấy đã trở lại bình thường sau kỳ nghỉ dài."
+        },
+        {
+          "english": "A delay of one hour is not normal for this flight.",
+          "vietnamese": "Trễ một tiếng là không bình thường đối với chuyến bay này."
+        }
+      ]
+    },
+    {
+      "word": "strange",
+      "sentences": [
+        {
+          "english": "It felt strange to live so far from home.",
+          "vietnamese": "Sống xa nhà như vậy cảm thấy thật kì lạ."
+        },
+        {
+          "english": "The local food tasted strange to me at first, but now I love it.",
+          "vietnamese": "Món ăn địa phương lúc đầu có vị kì lạ với tôi, nhưng giờ tôi rất thích nó."
+        },
+        {
+          "english": "Do not think it is strange when older people pray every morning.",
+          "vietnamese": "Đừng nghĩ là kì lạ khi người lớn tuổi cầu nguyện mỗi sáng."
+        },
+        {
+          "english": "Many foreigners find our festival customs strange and exciting.",
+          "vietnamese": "Nhiều người nước ngoài thấy phong tục lễ hội của chúng tôi vừa kì lạ vừa thú vị."
+        },
+        {
+          "english": "She had a strange feeling when the guide suddenly changed the route.",
+          "vietnamese": "Cô ấy có một cảm giác kì lạ khi hướng dẫn viên đột ngột đổi lộ trình."
+        }
+      ]
+    },
+    {
+      "word": "respect",
+      "sentences": [
+        {
+          "english": "We respect the old customs when we join her family at the festival.",
+          "vietnamese": "Chúng tôi tôn trọng những phong tục cũ khi tham gia cùng gia đình cô ấy trong lễ hội."
+        },
+        {
+          "english": "We should respect the culture of every country we travel to.",
+          "vietnamese": "Chúng ta nên tôn trọng văn hoá của mọi quốc gia mà chúng ta đi du lịch tới."
+        },
+        {
+          "english": "Do you respect your partner's opinion about the wedding party?",
+          "vietnamese": "Bạn có tôn trọng ý kiến của bạn đời về bữa tiệc cưới không?"
+        },
+        {
+          "english": "My girlfriend respects my parents even when she does not understand our habits.",
+          "vietnamese": "Bạn gái tôi tôn trọng bố mẹ tôi ngay cả khi cô ấy không hiểu những thói quen của chúng tôi."
+        },
+        {
+          "english": "Tourists are asked to respect the quiet atmosphere inside the pagoda.",
+          "vietnamese": "Khách du lịch được yêu cầu tôn trọng bầu không khí yên tĩnh bên trong ngôi chùa."
+        }
+      ]
+    },
+    {
+      "word": "fair",
+      "sentences": [
+        {
+          "english": "The parents tried to be fair to both children.",
+          "vietnamese": "Bố mẹ cố gắng công bằng với cả hai đứa con."
+        },
+        {
+          "english": "It is not fair that only the guests from the north received an invitation.",
+          "vietnamese": "Thật không công bằng khi chỉ những vị khách từ miền bắc nhận được lời mời."
+        },
+        {
+          "english": "Do you think the price of that homestay is fair?",
+          "vietnamese": "Bạn có nghĩ giá của homestay đó là công bằng không?"
+        },
+        {
+          "english": "The manager always tries to be fair with every employee.",
+          "vietnamese": "Người quản lý luôn cố gắng công bằng với mọi nhân viên."
+        },
+        {
+          "english": "We shared the holiday costs in a fair way.",
+          "vietnamese": "Chúng tôi đã chia chi phí kỳ nghỉ theo một cách công bằng."
+        }
+      ]
+    },
+    {
+      "word": "marriage",
+      "sentences": [
+        {
+          "english": "A happy marriage generally needs trust, patience and a little luck.",
+          "vietnamese": "Một cuộc hôn nhân hạnh phúc nhìn chung cần sự tin tưởng, kiên nhẫn và một chút may mắn."
+        },
+        {
+          "english": "Their marriage started with a small wedding in a quiet church.",
+          "vietnamese": "Cuộc hôn nhân của họ bắt đầu bằng một đám cưới nhỏ trong một nhà thờ yên tĩnh."
+        },
+        {
+          "english": "Nowadays many couples delay marriage until they have a stable career.",
+          "vietnamese": "Ngày nay nhiều cặp đôi hoãn hôn nhân cho tới khi họ có sự nghiệp ổn định."
+        },
+        {
+          "english": "Does a happy marriage need parents who welcome both cultures?",
+          "vietnamese": "Một cuộc hôn nhân hạnh phúc có cần bố mẹ chào đón cả hai nền văn hoá không?"
+        },
+        {
+          "english": "After ten years of marriage, they still exchange small gifts on their anniversary.",
+          "vietnamese": "Sau mười năm hôn nhân, họ vẫn trao đổi những món quà nhỏ vào ngày kỷ niệm."
+        }
+      ]
+    },
+    {
+      "word": "expect",
+      "sentences": [
+        {
+          "english": "My parents expect me to call them every week.",
+          "vietnamese": "Bố mẹ tôi mong đợi tôi gọi điện mỗi tuần."
+        },
+        {
+          "english": "Her relatives expect the groom to bring a gift to every guest.",
+          "vietnamese": "Họ hàng của cô ấy mong đợi chú rể mang quà cho mọi vị khách."
+        },
+        {
+          "english": "I did not expect such a warm welcome from her hometown.",
+          "vietnamese": "Tôi đã không mong đợi một sự chào đón ấm áp như vậy từ quê hương cô ấy."
+        },
+        {
+          "english": "Do not expect the flight to leave on time during the holiday season.",
+          "vietnamese": "Đừng mong đợi chuyến bay khởi hành đúng giờ trong mùa nghỉ lễ."
+        },
+        {
+          "english": "We are expecting good luck this year because the festival went well.",
+          "vietnamese": "Chúng tôi đang mong đợi may mắn trong năm nay vì lễ hội đã diễn ra tốt đẹp."
+        }
+      ]
+    },
+    {
+      "word": "rule",
+      "sentences": [
+        {
+          "english": "Her family has a strict rule about inviting every relative to dinner.",
+          "vietnamese": "Gia đình cô ấy có một quy tắc nghiêm ngặt về việc mời mọi người họ hàng đến ăn tối."
+        },
+        {
+          "english": "There is a simple rule at the temple: keep your voice low.",
+          "vietnamese": "Có một quy tắc đơn giản ở ngôi đền: hãy giữ giọng nói nhỏ."
+        },
+        {
+          "english": "Did the guide explain the rules of the local market to you?",
+          "vietnamese": "Hướng dẫn viên đã giải thích các quy tắc của khu chợ địa phương cho bạn chưa?"
+        },
+        {
+          "english": "Many old rules about weddings have changed nowadays.",
+          "vietnamese": "Nhiều quy tắc cũ về đám cưới đã thay đổi trong thời nay."
+        },
+        {
+          "english": "Our house has one rule: we always tidy the rooms before the celebration.",
+          "vietnamese": "Nhà chúng tôi có một quy tắc: chúng tôi luôn dọn dẹp các phòng trước buổi lễ ăn mừng."
+        }
+      ]
+    },
+    {
+      "word": "taboo",
+      "sentences": [
+        {
+          "english": "In some cultures, that topic is a real taboo.",
+          "vietnamese": "Ở một số nền văn hóa, chủ đề đó là một điều cấm kỵ thực sự."
+        },
+        {
+          "english": "Talking about money is still a taboo at a family party.",
+          "vietnamese": "Nói về tiền bạc vẫn là một điều cấm kỵ trong bữa tiệc gia đình."
+        },
+        {
+          "english": "Her grandmother explained an old taboo to us before the wedding.",
+          "vietnamese": "Bà của cô ấy đã giải thích cho chúng tôi một điều cấm kỵ cũ trước đám cưới."
+        },
+        {
+          "english": "Are there any taboos that tourists should know in this town?",
+          "vietnamese": "Có điều cấm kỵ nào mà khách du lịch nên biết ở thị trấn này không?"
+        },
+        {
+          "english": "People say that breaking this taboo during the festival brings bad luck.",
+          "vietnamese": "Người ta nói rằng phá vỡ điều cấm kỵ này trong lễ hội sẽ mang lại xui xẻo."
+        }
+      ]
+    },
+    {
+      "word": "avoid",
+      "sentences": [
+        {
+          "english": "We try to avoid arguments during family dinners.",
+          "vietnamese": "Chúng tôi cố gắng tránh cãi vã trong bữa cơm gia đình."
+        },
+        {
+          "english": "Please avoid loud talking while the priest is praying.",
+          "vietnamese": "Xin hãy tránh nói to trong khi vị thầy tu đang cầu nguyện."
+        },
+        {
+          "english": "We avoided the touristy streets and discovered a lovely cafe.",
+          "vietnamese": "Chúng tôi đã tránh những con phố đầy khách du lịch và khám phá ra một quán cà phê đáng yêu."
+        },
+        {
+          "english": "He avoids every noisy party because he is quite shy.",
+          "vietnamese": "Anh ấy tránh mọi bữa tiệc ồn ào vì anh ấy khá nhút nhát."
+        },
+        {
+          "english": "You can avoid a long delay by booking the early flight.",
+          "vietnamese": "Bạn có thể tránh một sự trì hoãn dài bằng cách đặt chuyến bay sớm."
+        }
+      ]
+    },
+    {
+      "word": "familiar",
+      "sentences": [
+        {
+          "english": "These old customs are familiar to every guest at the temple.",
+          "vietnamese": "Những phong tục cũ này quen thuộc với mọi vị khách ở ngôi đền."
+        },
+        {
+          "english": "The smell of the market is familiar to everyone who lives here.",
+          "vietnamese": "Mùi của khu chợ thì quen thuộc với tất cả những ai sống ở đây."
+        },
+        {
+          "english": "Her face looked familiar, but I could not remember her name.",
+          "vietnamese": "Khuôn mặt của cô ấy trông quen thuộc, nhưng tôi không thể nhớ tên cô ấy."
+        },
+        {
+          "english": "After three visits, the route to the pagoda became familiar.",
+          "vietnamese": "Sau ba lần ghé thăm, lộ trình tới ngôi chùa đã trở nên quen thuộc."
+        },
+        {
+          "english": "Are you familiar with the rules of this national holiday?",
+          "vietnamese": "Bạn có quen thuộc với các quy tắc của ngày lễ quốc gia này không?"
+        }
+      ]
+    },
+    {
+      "word": "angry",
+      "sentences": [
+        {
+          "english": "My father got angry when I came home late from the party.",
+          "vietnamese": "Bố tôi tức giận khi tôi về nhà muộn từ bữa tiệc."
+        },
+        {
+          "english": "Do not be angry if the guests arrive late at the celebration.",
+          "vietnamese": "Đừng tức giận nếu khách đến muộn ở buổi lễ ăn mừng."
+        },
+        {
+          "english": "She was angry because the hotel reception lost her document.",
+          "vietnamese": "Cô ấy đã tức giận vì quầy lễ tân khách sạn làm mất giấy tờ của cô ấy."
+        },
+        {
+          "english": "My girlfriend gets angry when I forget our anniversary.",
+          "vietnamese": "Bạn gái tôi tức giận khi tôi quên ngày kỷ niệm của chúng tôi."
+        },
+        {
+          "english": "The tourists looked angry about the poor service in the resort.",
+          "vietnamese": "Những khách du lịch trông tức giận về dịch vụ tồi ở khu nghỉ dưỡng."
+        }
+      ]
+    },
+    {
+      "word": "mean",
+      "sentences": [
+        {
+          "english": "I did not mean to upset her relatives during the holiday.",
+          "vietnamese": "Tôi không có ý làm phật lòng họ hàng của cô ấy trong kỳ nghỉ lễ."
+        },
+        {
+          "english": "I did not mean to drop the bowl during the offering.",
+          "vietnamese": "Tôi không có ý làm rơi cái bát trong lúc dâng lễ."
+        },
+        {
+          "english": "What do you mean by a warm welcome in your culture?",
+          "vietnamese": "Bạn có ý gì khi nói về một sự chào đón ấm áp trong văn hoá của bạn?"
+        },
+        {
+          "english": "She means to invite every relative to the party next month.",
+          "vietnamese": "Cô ấy có ý định mời mọi người họ hàng đến bữa tiệc vào tháng sau."
+        },
+        {
+          "english": "Sorry, I did not mean to spoil your holiday memory.",
+          "vietnamese": "Xin lỗi, tôi không có ý làm hỏng kỷ niệm kỳ nghỉ của bạn."
+        }
+      ]
+    },
+    {
+      "word": "proud",
+      "sentences": [
+        {
+          "english": "Her parents are very proud of the beautiful lantern she made.",
+          "vietnamese": "Bố mẹ cô ấy rất tự hào về chiếc đèn lồng đẹp mà cô ấy đã làm."
+        },
+        {
+          "english": "I am proud of my girlfriend because she speaks three languages.",
+          "vietnamese": "Tôi tự hào về bạn gái mình vì cô ấy nói được ba ngôn ngữ."
+        },
+        {
+          "english": "The whole town feels proud during the national festival.",
+          "vietnamese": "Cả thị trấn cảm thấy tự hào trong dịp lễ hội quốc gia."
+        },
+        {
+          "english": "Are your parents proud of your new career?",
+          "vietnamese": "Bố mẹ bạn có tự hào về sự nghiệp mới của bạn không?"
+        },
+        {
+          "english": "He was proud to show the tourists his lovely hometown.",
+          "vietnamese": "Anh ấy đã tự hào khi cho các khách du lịch xem quê hương đáng yêu của mình."
+        }
+      ]
+    },
+    {
+      "word": "traditional",
+      "sentences": [
+        {
+          "english": "We wear traditional clothes during family festivals.",
+          "vietnamese": "Chúng tôi mặc trang phục truyền thống trong các lễ hội gia đình."
+        },
+        {
+          "english": "The traditional market near the church opens very early.",
+          "vietnamese": "Khu chợ truyền thống gần nhà thờ mở cửa rất sớm."
+        },
+        {
+          "english": "Have you tried traditional food at a homestay in the north?",
+          "vietnamese": "Bạn đã thử món ăn truyền thống ở một homestay ngoài miền bắc chưa?"
+        },
+        {
+          "english": "A traditional wedding usually lasts two days in her village.",
+          "vietnamese": "Một đám cưới truyền thống thường kéo dài hai ngày ở làng của cô ấy."
+        },
+        {
+          "english": "Tourists love the traditional lanterns hanging along the old street.",
+          "vietnamese": "Khách du lịch rất thích những chiếc đèn lồng truyền thống treo dọc con phố cổ."
+        }
+      ]
+    },
+    {
+      "word": "religion",
+      "sentences": [
+        {
+          "english": "Religion plays an important part in their daily life.",
+          "vietnamese": "Tôn giáo đóng vai trò quan trọng trong cuộc sống hằng ngày của họ."
+        },
+        {
+          "english": "Religion and culture are not exactly the same thing.",
+          "vietnamese": "Tôn giáo và văn hoá không hoàn toàn là một thứ giống nhau."
+        },
+        {
+          "english": "We never discuss religion at a party with new guests.",
+          "vietnamese": "Chúng tôi không bao giờ bàn về tôn giáo trong bữa tiệc với những vị khách mới."
+        },
+        {
+          "english": "Her religion asks her to pray twice a day.",
+          "vietnamese": "Tôn giáo của cô ấy yêu cầu cô ấy cầu nguyện hai lần một ngày."
+        },
+        {
+          "english": "Many tourists study the local religions before their journey.",
+          "vietnamese": "Nhiều khách du lịch tìm hiểu các tôn giáo địa phương trước chuyến hành trình của họ."
+        }
+      ]
+    },
+    {
+      "word": "Buddhist",
+      "sentences": [
+        {
+          "english": "My grandmother is a devout Buddhist and prays at the pagoda every week.",
+          "vietnamese": "Bà tôi là một Phật tử mộ đạo và cầu nguyện ở chùa mỗi tuần."
+        },
+        {
+          "english": "Many Buddhists visit the pagoda during the national holiday.",
+          "vietnamese": "Nhiều Phật tử tới thăm ngôi chùa trong dịp lễ quốc gia."
+        },
+        {
+          "english": "Is every guest at the celebration a Buddhist?",
+          "vietnamese": "Có phải mọi vị khách ở buổi lễ ăn mừng đều là Phật tử không?"
+        },
+        {
+          "english": "A young Buddhist showed us the route to the old temple.",
+          "vietnamese": "Một Phật tử trẻ đã chỉ cho chúng tôi lộ trình tới ngôi đền cổ."
+        },
+        {
+          "english": "The Buddhists were praying quietly while the tourists took photos.",
+          "vietnamese": "Các Phật tử đang cầu nguyện lặng lẽ trong khi khách du lịch chụp ảnh."
+        }
+      ]
+    },
+    {
+      "word": "shrine",
+      "sentences": [
+        {
+          "english": "Every home keeps a small shrine where the family prays for a loved one.",
+          "vietnamese": "Mỗi ngôi nhà đều giữ một miếu thờ nhỏ nơi gia đình cầu nguyện cho người thân yêu."
+        },
+        {
+          "english": "We stopped at a small shrine on the way to the market.",
+          "vietnamese": "Chúng tôi đã dừng lại ở một miếu thờ nhỏ trên đường tới khu chợ."
+        },
+        {
+          "english": "Tourists often leave an offering at the shrine for good luck.",
+          "vietnamese": "Khách du lịch thường để lại một lễ vật ở miếu thờ để cầu may mắn."
+        },
+        {
+          "english": "Her family cleans the shrine carefully before every festival.",
+          "vietnamese": "Gia đình cô ấy lau dọn miếu thờ cẩn thận trước mỗi lễ hội."
+        },
+        {
+          "english": "Is there a shrine near your hometown?",
+          "vietnamese": "Có một miếu thờ nào gần quê bạn không?"
+        }
+      ]
+    },
+    {
+      "word": "pillar",
+      "sentences": [
+        {
+          "english": "The old wooden pillar was decorated with red paper for the festival.",
+          "vietnamese": "Cây cột gỗ cũ được trang trí bằng giấy đỏ cho lễ hội."
+        },
+        {
+          "english": "The temple has eight red pillars and a huge wooden door.",
+          "vietnamese": "Ngôi đền có tám cây cột đỏ và một cánh cửa gỗ khổng lồ."
+        },
+        {
+          "english": "Tourists take photos beside the tall pillars of the mausoleum.",
+          "vietnamese": "Khách du lịch chụp ảnh bên cạnh những cây cột cao của lăng mộ."
+        },
+        {
+          "english": "Workers are painting the pillar before the national celebration.",
+          "vietnamese": "Các công nhân đang sơn cây cột trước buổi lễ ăn mừng quốc gia."
+        },
+        {
+          "english": "Do not hang that heavy lantern on the old pillar.",
+          "vietnamese": "Đừng treo chiếc đèn lồng nặng đó lên cây cột cũ."
+        }
+      ]
+    },
+    {
+      "word": "believe",
+      "sentences": [
+        {
+          "english": "Many people believe that family always comes first.",
+          "vietnamese": "Nhiều người tin rằng gia đình luôn là trên hết."
+        },
+        {
+          "english": "Many people believe that a red lantern brings good luck.",
+          "vietnamese": "Nhiều người tin rằng một chiếc đèn lồng đỏ mang lại may mắn."
+        },
+        {
+          "english": "I did not believe her story about the hidden temple.",
+          "vietnamese": "Tôi đã không tin câu chuyện của cô ấy về ngôi đền ẩn giấu."
+        },
+        {
+          "english": "Do you believe what the guide said about this route?",
+          "vietnamese": "Bạn có tin những gì hướng dẫn viên nói về lộ trình này không?"
+        },
+        {
+          "english": "She has always believed that a good marriage needs patience.",
+          "vietnamese": "Cô ấy luôn tin rằng một cuộc hôn nhân tốt đẹp cần sự kiên nhẫn."
+        }
+      ]
+    },
+    {
+      "word": "care",
+      "sentences": [
+        {
+          "english": "She looks after her old parents with great care during every holiday.",
+          "vietnamese": "Cô ấy chăm sóc bố mẹ già với sự quan tâm lớn trong mỗi kỳ nghỉ lễ."
+        },
+        {
+          "english": "Handle that antique bowl with care, please.",
+          "vietnamese": "Làm ơn hãy cầm cái bát cổ đó một cách cẩn thận."
+        },
+        {
+          "english": "The guide chose the mountain route with great care.",
+          "vietnamese": "Hướng dẫn viên đã chọn lộ trình lên núi với sự chú tâm lớn."
+        },
+        {
+          "english": "Older relatives need daily care during the long festival week.",
+          "vietnamese": "Những người họ hàng lớn tuổi cần sự chăm sóc hằng ngày trong tuần lễ hội dài."
+        },
+        {
+          "english": "With a little care, your postcards will arrive before the celebration.",
+          "vietnamese": "Với một chút chú tâm, những tấm bưu thiếp của bạn sẽ đến trước buổi lễ ăn mừng."
+        }
+      ]
+    },
+    {
+      "word": "control",
+      "sentences": [
+        {
+          "english": "Her father tries to control the guest list for the whole wedding.",
+          "vietnamese": "Bố cô ấy cố gắng kiểm soát danh sách khách mời cho cả đám cưới."
+        },
+        {
+          "english": "The police control the crowded streets during the festival.",
+          "vietnamese": "Cảnh sát điều khiển những con phố đông đúc trong lễ hội."
+        },
+        {
+          "english": "Can you control your temper when the guests arrive very late?",
+          "vietnamese": "Bạn có thể điều khiển cơn nóng giận của mình khi khách đến rất muộn không?"
+        },
+        {
+          "english": "She controlled the whole celebration budget without any help.",
+          "vietnamese": "Cô ấy đã điều khiển toàn bộ ngân sách của buổi lễ ăn mừng mà không cần giúp đỡ."
+        },
+        {
+          "english": "Nobody can control the weather on a wedding day.",
+          "vietnamese": "Không ai có thể điều khiển thời tiết vào ngày cưới."
+        }
+      ]
+    },
+    {
+      "word": "persuade",
+      "sentences": [
+        {
+          "english": "She tried to persuade her father to agree.",
+          "vietnamese": "Cô ấy cố gắng thuyết phục bố mình đồng ý."
+        },
+        {
+          "english": "I persuaded my girlfriend to try the local street food.",
+          "vietnamese": "Tôi đã thuyết phục bạn gái mình thử món ăn đường phố địa phương."
+        },
+        {
+          "english": "Can you persuade your parents to join the holiday tour?",
+          "vietnamese": "Bạn có thể thuyết phục bố mẹ tham gia chuyến tham quan kỳ nghỉ không?"
+        },
+        {
+          "english": "He is persuading his brother to book a homestay instead of a resort.",
+          "vietnamese": "Anh ấy đang thuyết phục em trai đặt một homestay thay vì một khu nghỉ dưỡng."
+        },
+        {
+          "english": "Nothing could persuade her to miss the family celebration.",
+          "vietnamese": "Không gì có thể thuyết phục cô ấy bỏ lỡ buổi lễ ăn mừng của gia đình."
+        }
+      ]
+    },
+    {
+      "word": "surprise",
+      "sentences": [
+        {
+          "english": "They wanted to surprise their mother on her wedding anniversary.",
+          "vietnamese": "Họ muốn làm mẹ mình bất ngờ vào ngày kỷ niệm đám cưới của bà."
+        },
+        {
+          "english": "A warm welcome from her relatives surprised me completely.",
+          "vietnamese": "Một sự chào đón ấm áp từ họ hàng cô ấy đã làm tôi hoàn toàn bất ngờ."
+        },
+        {
+          "english": "Do not surprise your girlfriend with a party she does not want.",
+          "vietnamese": "Đừng làm bạn gái bạn bất ngờ bằng một bữa tiệc mà cô ấy không muốn."
+        },
+        {
+          "english": "The lovely lanterns in the old town surprise every visitor.",
+          "vietnamese": "Những chiếc đèn lồng đáng yêu ở khu phố cổ làm mọi du khách bất ngờ."
+        },
+        {
+          "english": "We are planning to surprise the guests with a traditional dance.",
+          "vietnamese": "Chúng tôi đang lên kế hoạch làm các vị khách bất ngờ bằng một điệu múa truyền thống."
+        }
+      ]
+    }
+  ]
+}

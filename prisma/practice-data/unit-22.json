@@ -1,0 +1,247 @@
+{
+  "unit": 22,
+  "deck": "Unit 22: Cảnh đẹp thiên nhiên",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "map",
+      "sentences": [
+        { "english": "She opened the map to find the way to the waterfall.", "vietnamese": "Cô ấy mở bản đồ để tìm đường đến thác nước." },
+        { "english": "I always take a paper map when I explore a new town.", "vietnamese": "Tôi luôn mang theo một tấm bản đồ giấy khi tôi khám phá một thị trấn mới." },
+        { "english": "Can you show me the campsite on this map?", "vietnamese": "Bạn có thể chỉ cho tôi khu cắm trại trên bản đồ này không?" },
+        { "english": "Our local guide drew a simple map for the whole group.", "vietnamese": "Hướng dẫn viên địa phương của chúng tôi đã vẽ một bản đồ đơn giản cho cả nhóm." },
+        { "english": "I will buy a map before our journey to the north.", "vietnamese": "Tôi sẽ mua một tấm bản đồ trước chuyến hành trình của chúng tôi lên phía bắc." }
+      ]
+    },
+    {
+      "word": "coast",
+      "sentences": [
+        { "english": "We drove along the coast and explored a quiet fishing village.", "vietnamese": "Chúng tôi lái xe dọc bờ biển và khám phá một làng chài yên tĩnh." },
+        { "english": "The coast looks beautiful when the weather is sunny.", "vietnamese": "Bờ biển trông rất đẹp khi thời tiết nắng." },
+        { "english": "Have you ever stayed in a homestay near the coast?", "vietnamese": "Bạn đã bao giờ ở homestay gần bờ biển chưa?" },
+        { "english": "Many tourists visit this coast during the summer holiday.", "vietnamese": "Nhiều du khách đến thăm bờ biển này trong kỳ nghỉ hè." },
+        { "english": "The coast is not safe when a typhoon is approaching.", "vietnamese": "Bờ biển không an toàn khi một cơn bão đang tới gần." }
+      ]
+    },
+    {
+      "word": "scenery",
+      "sentences": [
+        { "english": "The mountain scenery took our breath away.", "vietnamese": "Phong cảnh núi non khiến chúng tôi nghẹt thở vì đẹp." },
+        { "english": "The scenery along the valley is peaceful in the early morning.", "vietnamese": "Phong cảnh dọc thung lũng rất yên bình vào sáng sớm." },
+        { "english": "I have never seen such lovely scenery before.", "vietnamese": "Tôi chưa bao giờ nhìn thấy phong cảnh đáng yêu như vậy trước đây." },
+        { "english": "Tourists often stop here to enjoy the scenery for a while.", "vietnamese": "Du khách thường dừng lại đây để thưởng thức phong cảnh một lúc." },
+        { "english": "Do you prefer city views or natural scenery?", "vietnamese": "Bạn thích khung cảnh thành phố hay phong cảnh thiên nhiên hơn?" }
+      ]
+    },
+    {
+      "word": "bay",
+      "sentences": [
+        { "english": "The boats floated calmly in the quiet bay.", "vietnamese": "Những chiếc thuyền trôi êm đềm trong vịnh yên tĩnh." },
+        { "english": "We took a slow boat around the bay during our holiday.", "vietnamese": "Chúng tôi đi một chuyến thuyền chậm vòng quanh vịnh trong kỳ nghỉ." },
+        { "english": "The bay is famous for its amazing limestone islands.", "vietnamese": "Vịnh này nổi tiếng với những hòn đảo đá vôi tuyệt vời." },
+        { "english": "Fishermen return to the bay before the typhoon arrives.", "vietnamese": "Ngư dân trở về vịnh trước khi cơn bão tới." },
+        { "english": "Would you like to explore the bay by kayak tomorrow?", "vietnamese": "Ngày mai bạn có muốn khám phá vịnh bằng thuyền kayak không?" }
+      ]
+    },
+    {
+      "word": "gorgeous",
+      "sentences": [
+        { "english": "The view from the top of the hill was absolutely gorgeous.", "vietnamese": "Khung cảnh từ đỉnh đồi thật sự tuyệt đẹp." },
+        { "english": "Her photographs of the rainforest look absolutely gorgeous.", "vietnamese": "Những bức ảnh của cô ấy về rừng nhiệt đới trông thật tuyệt đẹp." },
+        { "english": "The sunset over the quiet water was gorgeous last night.", "vietnamese": "Hoàng hôn trên mặt nước yên tĩnh thật tuyệt đẹp tối qua." },
+        { "english": "This is a gorgeous place for a wedding.", "vietnamese": "Đây là một nơi tuyệt đẹp để tổ chức đám cưới." },
+        { "english": "I did not expect the old temple to look so gorgeous.", "vietnamese": "Tôi đã không ngờ ngôi chùa cổ lại trông tuyệt đẹp đến thế." }
+      ]
+    },
+    {
+      "word": "island",
+      "sentences": [
+        { "english": "This tiny island is a perfect place to explore during the holiday.", "vietnamese": "Hòn đảo bé nhỏ này là nơi hoàn hảo để khám phá trong kỳ nghỉ." },
+        { "english": "We will visit the island by boat next season.", "vietnamese": "Chúng tôi sẽ đến thăm hòn đảo bằng thuyền vào mùa tới." },
+        { "english": "The island has hardly any traffic, so it feels very peaceful.", "vietnamese": "Hòn đảo hầu như không có xe cộ, nên nó rất yên bình." },
+        { "english": "Have you ever stayed overnight on a small island?", "vietnamese": "Bạn đã bao giờ ở lại qua đêm trên một hòn đảo nhỏ chưa?" },
+        { "english": "Local people on the island grow rice and vegetables.", "vietnamese": "Người dân địa phương trên đảo trồng lúa và rau." }
+      ]
+    },
+    {
+      "word": "mountain",
+      "sentences": [
+        { "english": "A range of high mountains stands behind our peaceful little village.", "vietnamese": "Một dãy núi cao đứng sừng sững phía sau ngôi làng nhỏ yên bình của chúng tôi." },
+        { "english": "We climbed the mountain slowly because the path was steep.", "vietnamese": "Chúng tôi leo núi chậm rãi vì con đường rất dốc." },
+        { "english": "The mountain air is fresh and pleasant in the morning.", "vietnamese": "Không khí trên núi trong lành và dễ chịu vào buổi sáng." },
+        { "english": "Do not walk on the mountain alone when the weather is nasty.", "vietnamese": "Đừng đi bộ một mình trên núi khi thời tiết xấu." },
+        { "english": "Many mountains in the north are covered with clouds all year.", "vietnamese": "Nhiều ngọn núi ở phía bắc bị mây bao phủ quanh năm." }
+      ]
+    },
+    {
+      "word": "surround",
+      "sentences": [
+        { "english": "Green hills surround the old temple on every side.", "vietnamese": "Những ngọn đồi xanh bao quanh ngôi chùa cổ ở mọi phía." },
+        { "english": "Tall trees surround the small pagoda near my hometown.", "vietnamese": "Những hàng cây cao bao quanh ngôi chùa nhỏ gần quê tôi." },
+        { "english": "A thick forest surrounds the quiet valley.", "vietnamese": "Một khu rừng rậm bao quanh thung lũng yên tĩnh." },
+        { "english": "Water surrounded the whole area after the flood last month.", "vietnamese": "Nước bao quanh cả khu vực sau trận lụt tháng trước." },
+        { "english": "Will high walls surround the new building?", "vietnamese": "Những bức tường cao sẽ bao quanh toà nhà mới chứ?" }
+      ]
+    },
+    {
+      "word": "wonder",
+      "sentences": [
+        { "english": "This bay is often called a natural wonder.", "vietnamese": "Vịnh này thường được gọi là một kỳ quan thiên nhiên." },
+        { "english": "Many tourists call this cave a natural wonder.", "vietnamese": "Nhiều du khách gọi hang động này là một kỳ quan thiên nhiên." },
+        { "english": "The seven wonders of the world attract millions of visitors.", "vietnamese": "Bảy kỳ quan thế giới thu hút hàng triệu du khách." },
+        { "english": "That waterfall is a real wonder of nature.", "vietnamese": "Thác nước đó là một kỳ quan thực sự của thiên nhiên." },
+        { "english": "I hope to see this wonder during my next journey.", "vietnamese": "Tôi hy vọng được nhìn thấy kỳ quan này trong chuyến hành trình tới." }
+      ]
+    },
+    {
+      "word": "sunbathe",
+      "sentences": [
+        { "english": "Many tourists sunbathe on the warm sand for the whole afternoon.", "vietnamese": "Nhiều du khách tắm nắng trên bãi cát ấm suốt cả buổi chiều." },
+        { "english": "She likes to sunbathe by the pool at the resort.", "vietnamese": "Cô ấy thích tắm nắng bên hồ bơi ở khu nghỉ dưỡng." },
+        { "english": "We sunbathed on the sand after a long hike.", "vietnamese": "Chúng tôi tắm nắng trên bãi cát sau một chuyến đi bộ đường dài." },
+        { "english": "Do not sunbathe for too long when it is very humid.", "vietnamese": "Đừng tắm nắng quá lâu khi trời rất ẩm." },
+        { "english": "They are sunbathing near the quiet water right now.", "vietnamese": "Họ đang tắm nắng gần mặt nước yên tĩnh ngay lúc này." }
+      ]
+    },
+    {
+      "word": "fishing",
+      "sentences": [
+        { "english": "We spent the whole morning fishing by the quiet river.", "vietnamese": "Chúng tôi dành cả buổi sáng câu cá bên dòng sông yên tĩnh." },
+        { "english": "My father goes fishing at the lake every holiday.", "vietnamese": "Bố tôi đi câu cá ở hồ vào mỗi kỳ nghỉ." },
+        { "english": "Fishing is a leisurely activity for many old men here.", "vietnamese": "Câu cá là một hoạt động thong thả của nhiều người đàn ông lớn tuổi ở đây." },
+        { "english": "Have you tried fishing on this island before?", "vietnamese": "Bạn đã thử câu cá trên hòn đảo này bao giờ chưa?" },
+        { "english": "The fishing boats return before the heavy shower starts.", "vietnamese": "Những chiếc thuyền câu cá trở về trước khi cơn mưa rào lớn bắt đầu." }
+      ]
+    },
+    {
+      "word": "rough",
+      "sentences": [
+        { "english": "The path up the hill was steep and rough.", "vietnamese": "Con đường lên đồi vừa dốc vừa gồ ghề." },
+        { "english": "The sea was rough, so our boat trip was delayed.", "vietnamese": "Biển động mạnh, nên chuyến đi thuyền của chúng tôi bị hoãn." },
+        { "english": "Rough roads make the journey to the valley very tiring.", "vietnamese": "Những con đường gồ ghề khiến hành trình vào thung lũng rất mệt mỏi." },
+        { "english": "Be careful on this rough ground near the cliff.", "vietnamese": "Hãy cẩn thận trên mặt đất gồ ghề gần vách đá này." },
+        { "english": "His hands are rough because he harvests rice every day.", "vietnamese": "Tay anh ấy thô ráp vì anh ấy gặt lúa mỗi ngày." }
+      ]
+    },
+    {
+      "word": "forest",
+      "sentences": [
+        { "english": "The forest near my hometown is full of strange sounds at night.", "vietnamese": "Khu rừng gần quê tôi đầy những âm thanh kỳ lạ vào ban đêm." },
+        { "english": "We hiked through the forest and found a hidden waterfall.", "vietnamese": "Chúng tôi đi bộ xuyên qua khu rừng và tìm thấy một thác nước ẩn mình." },
+        { "english": "The forest protects many rare plants and animals.", "vietnamese": "Khu rừng bảo vệ nhiều loài thực vật và động vật quý hiếm." },
+        { "english": "Do not throw rubbish in the forest, please.", "vietnamese": "Làm ơn đừng vứt rác trong rừng." },
+        { "english": "Forests in the north are disappearing quite fast nowadays.", "vietnamese": "Những khu rừng ở phía bắc đang biến mất khá nhanh ngày nay." }
+      ]
+    },
+    {
+      "word": "bamboo",
+      "sentences": [
+        { "english": "The villagers make handicrafts from bamboo and sell them at the market.", "vietnamese": "Dân làng làm đồ thủ công từ tre và bán chúng ở chợ." },
+        { "english": "My grandmother grows bamboo behind her old house.", "vietnamese": "Bà tôi trồng tre phía sau ngôi nhà cũ của bà." },
+        { "english": "This bamboo bridge is safe for bicycles only.", "vietnamese": "Cây cầu tre này chỉ an toàn cho xe đạp." },
+        { "english": "Have you ever tasted young bamboo shoots?", "vietnamese": "Bạn đã bao giờ nếm thử măng tre non chưa?" },
+        { "english": "The chef cooks fresh bamboo shoots in a hotpot.", "vietnamese": "Người đầu bếp nấu măng tre tươi trong món lẩu." }
+      ]
+    },
+    {
+      "word": "waterfall",
+      "sentences": [
+        { "english": "We hiked for an hour to reach a beautiful waterfall in the valley.", "vietnamese": "Chúng tôi đi bộ đường dài một tiếng để đến một thác nước tuyệt đẹp trong thung lũng." },
+        { "english": "The waterfall looks gorgeous after a heavy rainy season.", "vietnamese": "Thác nước trông tuyệt đẹp sau một mùa mưa lớn." },
+        { "english": "Can tourists swim near that waterfall?", "vietnamese": "Du khách có thể bơi gần thác nước đó không?" },
+        { "english": "A local guide showed us the way to a hidden waterfall.", "vietnamese": "Một hướng dẫn viên địa phương đã chỉ cho chúng tôi đường tới một thác nước ẩn mình." },
+        { "english": "The sound of the waterfall made the quiet forest feel alive.", "vietnamese": "Tiếng thác nước khiến khu rừng yên tĩnh trở nên sống động." }
+      ]
+    },
+    {
+      "word": "cave",
+      "sentences": [
+        { "english": "We explored a dark cave hidden behind the waterfall.", "vietnamese": "Chúng tôi khám phá một hang động tối ẩn sau thác nước." },
+        { "english": "The cave was cold, dark and a bit dangerous.", "vietnamese": "Hang động thì lạnh, tối và hơi nguy hiểm." },
+        { "english": "Brave tourists explore this cave every summer.", "vietnamese": "Những du khách dũng cảm khám phá hang động này vào mỗi mùa hè." },
+        { "english": "Will you visit the famous cave during your tour?", "vietnamese": "Bạn sẽ đến thăm hang động nổi tiếng đó trong chuyến tham quan chứ?" },
+        { "english": "Bugs live in the deepest part of the cave.", "vietnamese": "Các loài côn trùng sống ở phần sâu nhất của hang động." }
+      ]
+    },
+    {
+      "word": "lighter",
+      "sentences": [
+        { "english": "He used a lighter to light a small torch in the cave.", "vietnamese": "Anh ấy dùng bật lửa để thắp một ngọn đuốc nhỏ trong hang." },
+        { "english": "Do not bring a lighter into the dry forest.", "vietnamese": "Đừng mang bật lửa vào khu rừng khô." },
+        { "english": "The cook always carries a lighter to start the stove.", "vietnamese": "Người đầu bếp luôn mang theo một chiếc bật lửa để nhóm bếp." },
+        { "english": "She lost her lighter somewhere near the campsite.", "vietnamese": "Cô ấy làm mất chiếc bật lửa đâu đó gần khu cắm trại." },
+        { "english": "Can you lend me your lighter for a moment?", "vietnamese": "Bạn cho tôi mượn bật lửa một lát được không?" }
+      ]
+    },
+    {
+      "word": "icy",
+      "sentences": [
+        { "english": "The icy wind on the steep path made us walk much faster.", "vietnamese": "Cơn gió băng giá trên con đường dốc khiến chúng tôi đi nhanh hơn nhiều." },
+        { "english": "The icy water in the mountain lake is hardly warm enough for swimming.", "vietnamese": "Nước băng giá trong hồ trên núi hầu như không đủ ấm để bơi." },
+        { "english": "An icy breeze came from the north last night.", "vietnamese": "Một làn gió băng giá thổi từ phía bắc tối qua." },
+        { "english": "Be careful because the icy pavement is dangerous for old people.", "vietnamese": "Hãy cẩn thận vì vỉa hè băng giá rất nguy hiểm cho người già." },
+        { "english": "Winter here is icy, so people stay at home more often.", "vietnamese": "Mùa đông ở đây băng giá, nên mọi người ở nhà thường xuyên hơn." }
+      ]
+    },
+    {
+      "word": "spider",
+      "sentences": [
+        { "english": "A big spider made its web above my balcony last night.", "vietnamese": "Một con nhện lớn giăng tơ phía trên ban công nhà tôi tối qua." },
+        { "english": "I am scared of every spider in the rainforest.", "vietnamese": "Tôi sợ mọi con nhện trong rừng nhiệt đới." },
+        { "english": "Spiders eat bugs, so farmers do not kill them.", "vietnamese": "Nhện ăn côn trùng, nên nông dân không giết chúng." },
+        { "english": "Did you see the huge spider near the cave entrance?", "vietnamese": "Bạn có thấy con nhện khổng lồ gần cửa hang không?" },
+        { "english": "A spider is hardly dangerous if you leave it alone.", "vietnamese": "Một con nhện hầu như không nguy hiểm nếu bạn để yên cho nó." }
+      ]
+    },
+    {
+      "word": "surprisingly",
+      "sentences": [
+        { "english": "The cave was surprisingly warm, so we stayed there for an hour.", "vietnamese": "Hang động ấm áp một cách đáng ngạc nhiên, nên chúng tôi ở lại đó một tiếng." },
+        { "english": "The homestay was surprisingly comfortable and cheap.", "vietnamese": "Homestay thoải mái và rẻ một cách đáng ngạc nhiên." },
+        { "english": "She writes English essays surprisingly well after only one course.", "vietnamese": "Cô ấy viết bài luận tiếng Anh tốt một cách đáng ngạc nhiên sau chỉ một khoá học." },
+        { "english": "The market was surprisingly quiet on a national holiday.", "vietnamese": "Khu chợ yên tĩnh một cách đáng ngạc nhiên vào một ngày lễ quốc gia." },
+        { "english": "Our journey to the island was surprisingly short.", "vietnamese": "Hành trình của chúng tôi tới hòn đảo ngắn một cách đáng ngạc nhiên." }
+      ]
+    },
+    {
+      "word": "sanctuary",
+      "sentences": [
+        { "english": "We visited a sanctuary that protects wild birds.", "vietnamese": "Chúng tôi đến thăm một khu bảo tồn dành cho các loài chim hoang dã." },
+        { "english": "This sanctuary protects turtles and many other rare animals.", "vietnamese": "Khu bảo tồn này bảo vệ rùa và nhiều loài động vật quý hiếm khác." },
+        { "english": "Visitors need permission to enter the sanctuary.", "vietnamese": "Du khách cần giấy phép để vào khu bảo tồn." },
+        { "english": "They will build a new sanctuary for elephants next year.", "vietnamese": "Họ sẽ xây một khu bảo tồn mới cho voi vào năm tới." },
+        { "english": "The sanctuaries in the valley are quiet and well managed.", "vietnamese": "Các khu bảo tồn trong thung lũng yên tĩnh và được quản lý tốt." }
+      ]
+    },
+    {
+      "word": "wildlife",
+      "sentences": [
+        { "english": "The rainforest protects rare wildlife that we hardly ever see.", "vietnamese": "Rừng nhiệt đới bảo vệ những loài động vật hoang dã quý hiếm mà chúng ta hiếm khi nhìn thấy." },
+        { "english": "Wildlife in the forest is hardly ever seen during the day.", "vietnamese": "Động vật hoang dã trong rừng hầu như không bao giờ được nhìn thấy vào ban ngày." },
+        { "english": "Brave volunteers protect wildlife from hunters every night.", "vietnamese": "Những tình nguyện viên dũng cảm bảo vệ động vật hoang dã khỏi thợ săn mỗi đêm." },
+        { "english": "Pollution and rubbish are dangerous for local wildlife.", "vietnamese": "Ô nhiễm và rác thải rất nguy hiểm cho động vật hoang dã địa phương." },
+        { "english": "Did you enjoy the wildlife tour in the national park?", "vietnamese": "Bạn có thích chuyến tham quan động vật hoang dã trong vườn quốc gia không?" }
+      ]
+    },
+    {
+      "word": "lake",
+      "sentences": [
+        { "english": "We walked leisurely around the lake and took some lovely photos.", "vietnamese": "Chúng tôi đi bộ thong thả quanh hồ và chụp vài bức ảnh đáng yêu." },
+        { "english": "The lake near my hometown is very peaceful in autumn.", "vietnamese": "Cái hồ gần quê tôi rất yên bình vào mùa thu." },
+        { "english": "Children are swimming in the lake while their parents cook lunch.", "vietnamese": "Bọn trẻ đang bơi trong hồ trong khi bố mẹ chúng nấu bữa trưa." },
+        { "english": "Have you ever slept beside this quiet lake?", "vietnamese": "Bạn đã bao giờ ngủ bên cạnh cái hồ yên tĩnh này chưa?" },
+        { "english": "We will not swim in the lake after the heavy flood.", "vietnamese": "Chúng tôi sẽ không bơi trong hồ sau trận lụt lớn." }
+      ]
+    },
+    {
+      "word": "cliff",
+      "sentences": [
+        { "english": "Standing near that cliff can be dangerous when the wind is strong.", "vietnamese": "Đứng gần vách đá đó có thể rất nguy hiểm khi gió mạnh." },
+        { "english": "The narrow path along the cliff is steep and rough.", "vietnamese": "Con đường hẹp dọc vách đá vừa dốc vừa gồ ghề." },
+        { "english": "Tourists take photographs from the top of the cliff every morning.", "vietnamese": "Du khách chụp ảnh từ đỉnh vách đá vào mỗi buổi sáng." },
+        { "english": "A small temple sits on the cliff above the bay.", "vietnamese": "Một ngôi chùa nhỏ nằm trên vách đá phía trên vịnh." },
+        { "english": "Brave climbers go up these cliffs every holiday.", "vietnamese": "Những người leo núi dũng cảm trèo lên những vách đá này vào mỗi kỳ nghỉ." }
+      ]
+    }
+  ]
+}

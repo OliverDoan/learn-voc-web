@@ -1,0 +1,247 @@
+{
+  "unit": 26,
+  "deck": "Unit 26: Nghỉ ngơi và thư giãn",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "hard",
+      "sentences": [
+        { "english": "My father works hard every day, so he often feels exhausted at night.", "vietnamese": "Bố tôi làm việc chăm chỉ mỗi ngày, nên ông ấy thường thấy kiệt sức vào ban đêm." },
+        { "english": "She studied hard for the exam and finally succeeded last term.", "vietnamese": "Cô ấy đã học chăm chỉ cho kỳ thi và cuối cùng đã thành công vào học kỳ trước." },
+        { "english": "Do not work too hard; your health is more important than money.", "vietnamese": "Đừng làm việc quá chăm chỉ; sức khoẻ của bạn quan trọng hơn tiền bạc." },
+        { "english": "If you practise hard, your speaking skill will improve very quickly.", "vietnamese": "Nếu bạn luyện tập chăm chỉ, kỹ năng nói của bạn sẽ tiến bộ rất nhanh." },
+        { "english": "The whole team has been training hard for the coming festival.", "vietnamese": "Cả đội đã luyện tập chăm chỉ cho lễ hội sắp tới." }
+      ]
+    },
+    {
+      "word": "quite",
+      "sentences": [
+        { "english": "After a long exercise session, I felt quite tired but really happy.", "vietnamese": "Sau một buổi tập thể dục dài, tôi thấy khá mệt nhưng thực sự hạnh phúc." },
+        { "english": "The new gym near my flat is quite modern and clean.", "vietnamese": "Phòng gym mới gần căn hộ của tôi khá hiện đại và sạch sẽ." },
+        { "english": "Are you quite sure that this medicine is safe for children?", "vietnamese": "Bạn có khá chắc rằng loại thuốc này an toàn cho trẻ em không?" },
+        { "english": "He was quite anxious before the interview last Monday.", "vietnamese": "Anh ấy đã khá lo lắng trước buổi phỏng vấn thứ Hai tuần trước." },
+        { "english": "My daily walk in the park has become quite boring lately.", "vietnamese": "Buổi đi bộ hằng ngày của tôi trong công viên đã trở nên khá nhàm chán gần đây." }
+      ]
+    },
+    {
+      "word": "stressful",
+      "sentences": [
+        { "english": "Her job is so stressful that it slowly damages her health.", "vietnamese": "Công việc của cô ấy căng thẳng đến mức nó dần dần làm hại sức khoẻ của cô ấy." },
+        { "english": "Living in a crowded city can be stressful for many young people.", "vietnamese": "Sống ở một thành phố đông đúc có thể căng thẳng với nhiều người trẻ." },
+        { "english": "Why is the interview week always so stressful for students?", "vietnamese": "Tại sao tuần phỏng vấn luôn căng thẳng như vậy với sinh viên?" },
+        { "english": "That period was stressful, but I stayed calm and did some exercise.", "vietnamese": "Giai đoạn đó thật căng thẳng, nhưng tôi vẫn giữ bình tĩnh và tập thể dục một chút." },
+        { "english": "A stressful lifestyle can cause a headache and even a serious disease.", "vietnamese": "Một lối sống căng thẳng có thể gây đau đầu và thậm chí là bệnh nghiêm trọng." }
+      ]
+    },
+    {
+      "word": "obsess",
+      "sentences": [
+        { "english": "Do not obsess about your weight; just care about your health instead.", "vietnamese": "Đừng ám ảnh về cân nặng của bạn; thay vào đó hãy quan tâm đến sức khoẻ của bạn." },
+        { "english": "She obsesses over small mistakes and then feels anxious all day.", "vietnamese": "Cô ấy ám ảnh về những lỗi nhỏ rồi cảm thấy lo lắng cả ngày." },
+        { "english": "My brother is obsessing about his exercise plan these days.", "vietnamese": "Anh trai tôi đang ám ảnh về kế hoạch tập thể dục của mình những ngày này." },
+        { "english": "Many students obsess about grades instead of enjoying the lessons.", "vietnamese": "Nhiều học sinh ám ảnh về điểm số thay vì tận hưởng các bài học." },
+        { "english": "He obsessed over money for years and damaged his own body.", "vietnamese": "Anh ấy đã ám ảnh về tiền bạc trong nhiều năm và làm hại chính cơ thể mình." }
+      ]
+    },
+    {
+      "word": "forget",
+      "sentences": [
+        { "english": "I always forget to take my medicine when the office is busy.", "vietnamese": "Tôi luôn quên uống thuốc khi văn phòng bận rộn." },
+        { "english": "Do not forget to bring your prescription to the pharmacy.", "vietnamese": "Đừng quên mang đơn thuốc của bạn đến hiệu thuốc." },
+        { "english": "She often forgets her keys when she feels exhausted.", "vietnamese": "Cô ấy thường quên chìa khoá khi cảm thấy kiệt sức." },
+        { "english": "I will never forget that lovely holiday by the sea.", "vietnamese": "Tôi sẽ không bao giờ quên kỳ nghỉ đáng yêu đó bên bờ biển." },
+        { "english": "Why do you keep forgetting your daily pill every morning?", "vietnamese": "Tại sao bạn cứ quên viên thuốc hằng ngày của mình mỗi sáng?" }
+      ]
+    },
+    {
+      "word": "waste",
+      "sentences": [
+        { "english": "Do not waste your energy on problems you cannot control at all.", "vietnamese": "Đừng lãng phí năng lượng của bạn vào những vấn đề bạn hoàn toàn không thể kiểm soát." },
+        { "english": "We waste too much time on the phone instead of exercise.", "vietnamese": "Chúng ta lãng phí quá nhiều thời gian vào điện thoại thay vì tập thể dục." },
+        { "english": "He wasted all his money and then had to borrow from friends.", "vietnamese": "Anh ấy đã lãng phí hết tiền rồi phải vay mượn từ bạn bè." },
+        { "english": "Stop wasting your holiday; go outside and enjoy the fresh air.", "vietnamese": "Đừng lãng phí kỳ nghỉ của bạn; hãy ra ngoài và tận hưởng không khí trong lành." },
+        { "english": "Do you think staying at home all day is a waste of time?", "vietnamese": "Bạn có nghĩ ở nhà cả ngày là lãng phí thời gian không?" }
+      ]
+    },
+    {
+      "word": "detective",
+      "sentences": [
+        { "english": "I read a detective novel every evening to relax my tired mind.", "vietnamese": "Tôi đọc một cuốn tiểu thuyết thám tử mỗi tối để thư giãn cái đầu mệt mỏi của mình." },
+        { "english": "The detective asked the patient many difficult questions.", "vietnamese": "Vị thám tử đã hỏi bệnh nhân nhiều câu hỏi khó." },
+        { "english": "We watched a detective film together during the national holiday.", "vietnamese": "Chúng tôi đã xem một bộ phim thám tử cùng nhau trong kỳ nghỉ lễ quốc gia." },
+        { "english": "Detective stories are quite popular among my classmates.", "vietnamese": "Truyện thám tử khá phổ biến trong số các bạn cùng lớp của tôi." },
+        { "english": "My little brother wants to be a detective because he is very curious.", "vietnamese": "Em trai tôi muốn làm thám tử vì cậu ấy rất tò mò." }
+      ]
+    },
+    {
+      "word": "defeat",
+      "sentences": [
+        { "english": "A short holiday can defeat stress and make your body strong again.", "vietnamese": "Một kỳ nghỉ ngắn có thể đánh bại căng thẳng và làm cơ thể bạn khoẻ mạnh trở lại." },
+        { "english": "Our school team defeated the visitors in a friendly match.", "vietnamese": "Đội của trường tôi đã đánh bại đội khách trong một trận đấu giao hữu." },
+        { "english": "Good sleep and exercise can defeat many common diseases.", "vietnamese": "Ngủ ngon và tập thể dục có thể đánh bại nhiều bệnh thông thường." },
+        { "english": "Nothing can defeat a calm and mindful person.", "vietnamese": "Không gì có thể đánh bại một người bình tĩnh và tỉnh thức." },
+        { "english": "She is slowly defeating her fear of speaking in public.", "vietnamese": "Cô ấy đang từ từ đánh bại nỗi sợ nói trước công chúng của mình." }
+      ]
+    },
+    {
+      "word": "free",
+      "sentences": [
+        { "english": "In my free time I usually exercise or listen to soft music.", "vietnamese": "Vào thời gian rảnh rỗi, tôi thường tập thể dục hoặc nghe nhạc nhẹ." },
+        { "english": "Are you free this Sunday for a short hike in the hills?", "vietnamese": "Bạn có rảnh Chủ nhật này để đi bộ đường dài ngắn trên đồi không?" },
+        { "english": "I am not free tomorrow because I must attend a meeting.", "vietnamese": "Ngày mai tôi không rảnh vì tôi phải tham dự một cuộc họp." },
+        { "english": "He spends his free evenings drinking coffee with old friends.", "vietnamese": "Anh ấy dành những buổi tối rảnh rỗi để uống cà phê với bạn cũ." },
+        { "english": "In her free hours she likes to breathe fresh air in the park.", "vietnamese": "Vào những giờ rảnh rỗi, cô ấy thích hít thở không khí trong lành trong công viên." }
+      ]
+    },
+    {
+      "word": "proper",
+      "sentences": [
+        { "english": "Proper sleep every night is the best medicine for a tired body.", "vietnamese": "Ngủ đúng cách mỗi đêm là liều thuốc tốt nhất cho một cơ thể mệt mỏi." },
+        { "english": "A proper diet helps you prevent many serious diseases.", "vietnamese": "Một chế độ ăn đúng cách giúp bạn phòng ngừa nhiều bệnh nghiêm trọng." },
+        { "english": "Children need proper care and a quiet place to study.", "vietnamese": "Trẻ em cần sự chăm sóc đúng cách và một nơi yên tĩnh để học." },
+        { "english": "Did the nurse give you proper advice about your condition?", "vietnamese": "Y tá có cho bạn lời khuyên đúng cách về tình trạng của bạn không?" },
+        { "english": "Proper exercise in the morning keeps my mind fresh all day.", "vietnamese": "Tập thể dục đúng cách vào buổi sáng giúp đầu óc tôi tỉnh táo cả ngày." }
+      ]
+    },
+    {
+      "word": "noon",
+      "sentences": [
+        { "english": "We often take a short nap at noon to feel fresh again.", "vietnamese": "Chúng tôi thường ngủ một giấc ngắn vào buổi trưa để thấy tỉnh táo trở lại." },
+        { "english": "At noon the sun is strong, so we stay inside.", "vietnamese": "Vào buổi trưa mặt trời rất gắt, nên chúng tôi ở trong nhà." },
+        { "english": "I usually drink coffee just before noon to stay awake.", "vietnamese": "Tôi thường uống cà phê ngay trước buổi trưa để giữ tỉnh táo." },
+        { "english": "The clinic opens again at noon for new patients.", "vietnamese": "Phòng khám mở cửa lại vào buổi trưa cho các bệnh nhân mới." },
+        { "english": "Shall we meet around noon at the market near your house?", "vietnamese": "Chúng ta gặp nhau vào khoảng buổi trưa ở khu chợ gần nhà bạn nhé?" }
+      ]
+    },
+    {
+      "word": "break",
+      "sentences": [
+        { "english": "Let us take a short break because my eyes really hurt now.", "vietnamese": "Chúng ta hãy nghỉ giải lao một lát vì mắt tôi thực sự đau bây giờ." },
+        { "english": "During the lunch break I usually drink a cup of coffee.", "vietnamese": "Trong giờ nghỉ trưa tôi thường uống một cốc cà phê." },
+        { "english": "Our teacher gives us a short break after every difficult subject.", "vietnamese": "Giáo viên cho chúng tôi một giờ nghỉ ngắn sau mỗi môn học khó." },
+        { "english": "She had a long break last term because she was seriously ill.", "vietnamese": "Cô ấy đã nghỉ một thời gian dài vào học kỳ trước vì bị ốm nặng." },
+        { "english": "A ten-minute break helps my brain work much better.", "vietnamese": "Một giờ nghỉ mười phút giúp não của tôi làm việc tốt hơn nhiều." }
+      ]
+    },
+    {
+      "word": "lie",
+      "sentences": [
+        { "english": "On Sunday I like to lie on the grass in a peaceful garden.", "vietnamese": "Vào Chủ nhật tôi thích nằm trên bãi cỏ trong một khu vườn yên bình." },
+        { "english": "After a painful day I just want to lie down and close my eyes.", "vietnamese": "Sau một ngày đau đớn tôi chỉ muốn nằm xuống và nhắm mắt lại." },
+        { "english": "The patient must lie still while the nurse checks his blood.", "vietnamese": "Bệnh nhân phải nằm yên trong khi y tá kiểm tra máu của anh ấy." },
+        { "english": "My cat lies on the warm carpet every afternoon.", "vietnamese": "Con mèo của tôi nằm trên tấm thảm ấm mỗi buổi chiều." },
+        { "english": "Do not lie on the cold ground; you will get a cough.", "vietnamese": "Đừng nằm trên nền đất lạnh; bạn sẽ bị ho." }
+      ]
+    },
+    {
+      "word": "imagine",
+      "sentences": [
+        { "english": "I close my eyes and imagine a quiet beach to relax.", "vietnamese": "Tôi nhắm mắt lại và tưởng tượng một bãi biển yên tĩnh để thư giãn." },
+        { "english": "Can you imagine living abroad without any friends?", "vietnamese": "Bạn có thể tưởng tượng việc sống ở nước ngoài mà không có người bạn nào không?" },
+        { "english": "She imagined a huge waterfall and felt calm at once.", "vietnamese": "Cô ấy đã tưởng tượng một thác nước khổng lồ và ngay lập tức thấy bình tĩnh." },
+        { "english": "I often imagine my future career while I am walking.", "vietnamese": "Tôi thường tưởng tượng về sự nghiệp tương lai của mình khi đang đi bộ." },
+        { "english": "Imagine a peaceful island with soft wind and no noisy traffic.", "vietnamese": "Hãy tưởng tượng một hòn đảo yên bình với gió nhẹ và không có giao thông ồn ào." }
+      ]
+    },
+    {
+      "word": "silent",
+      "sentences": [
+        { "english": "The room was silent, and I felt calm at last.", "vietnamese": "Căn phòng im lặng, và cuối cùng tôi cảm thấy bình tĩnh." },
+        { "english": "The whole class stayed silent while the teacher announced the grades.", "vietnamese": "Cả lớp im lặng trong khi giáo viên công bố điểm." },
+        { "english": "I keep my phone silent at night to protect my sleep.", "vietnamese": "Tôi để điện thoại im lặng vào ban đêm để bảo vệ giấc ngủ của mình." },
+        { "english": "Why were you so silent during the party yesterday?", "vietnamese": "Tại sao bạn im lặng như vậy trong bữa tiệc hôm qua?" },
+        { "english": "A silent temple in the mountains is a perfect place to relax.", "vietnamese": "Một ngôi chùa im lặng trên núi là nơi hoàn hảo để thư giãn." }
+      ]
+    },
+    {
+      "word": "calm",
+      "sentences": [
+        { "english": "Deep breathing helps me stay calm when I feel nervous.", "vietnamese": "Hít thở sâu giúp tôi giữ bình tĩnh khi thấy lo lắng." },
+        { "english": "Stay calm when an emergency happens at home.", "vietnamese": "Hãy giữ bình tĩnh khi có trường hợp khẩn cấp xảy ra ở nhà." },
+        { "english": "The sea was calm, and the view from our balcony was lovely.", "vietnamese": "Biển lặng, và khung cảnh từ ban công của chúng tôi thật đáng yêu." },
+        { "english": "Her heartbeat became calm after she breathed slowly for a minute.", "vietnamese": "Nhịp tim của cô ấy trở nên bình ổn sau khi cô thở chậm trong một phút." },
+        { "english": "My father remains calm even when the situation is terrible.", "vietnamese": "Bố tôi vẫn bình tĩnh ngay cả khi tình huống thật tồi tệ." }
+      ]
+    },
+    {
+      "word": "meditate",
+      "sentences": [
+        { "english": "I meditate for fifteen minutes each morning to keep my mind clear.", "vietnamese": "Tôi thiền mười lăm phút mỗi sáng để giữ cho đầu óc mình sáng suốt." },
+        { "english": "My grandmother meditates in the pagoda every Sunday morning.", "vietnamese": "Bà tôi thiền ở chùa vào mỗi sáng Chủ nhật." },
+        { "english": "Do you meditate when you feel anxious about your health?", "vietnamese": "Bạn có thiền khi cảm thấy lo lắng về sức khoẻ của mình không?" },
+        { "english": "We meditated together in a quiet garden last holiday.", "vietnamese": "Chúng tôi đã cùng thiền trong một khu vườn yên tĩnh vào kỳ nghỉ trước." },
+        { "english": "She has been meditating daily to prevent stress and stay mindful.", "vietnamese": "Cô ấy đã thiền hằng ngày để phòng ngừa căng thẳng và giữ sự tỉnh thức." }
+      ]
+    },
+    {
+      "word": "lazy",
+      "sentences": [
+        { "english": "On a lazy Sunday we stay at home and cook something simple.", "vietnamese": "Vào một ngày Chủ nhật lười biếng, chúng tôi ở nhà và nấu món gì đó đơn giản." },
+        { "english": "Do not be lazy; a little exercise every day is enough.", "vietnamese": "Đừng lười biếng; một chút tập thể dục mỗi ngày là đủ." },
+        { "english": "After a big meal I always feel lazy and sleepy.", "vietnamese": "Sau một bữa ăn no tôi luôn cảm thấy lười biếng và buồn ngủ." },
+        { "english": "He was too lazy to attend the gym last week.", "vietnamese": "Anh ấy đã quá lười biếng để đến phòng gym tuần trước." },
+        { "english": "A lazy habit can damage your health after many years.", "vietnamese": "Một thói quen lười biếng có thể làm hại sức khoẻ của bạn sau nhiều năm." }
+      ]
+    },
+    {
+      "word": "active",
+      "sentences": [
+        { "english": "Even when we relax, we try to stay active with short walks.", "vietnamese": "Ngay cả khi thư giãn, chúng tôi vẫn cố gắng năng động bằng những buổi đi bộ ngắn." },
+        { "english": "My grandfather remains active and healthy at seventy.", "vietnamese": "Ông tôi vẫn năng động và khoẻ mạnh ở tuổi bảy mươi." },
+        { "english": "Active children usually have a stronger body and better sleep.", "vietnamese": "Trẻ em năng động thường có cơ thể khoẻ hơn và giấc ngủ tốt hơn." },
+        { "english": "Are you active enough to prevent heart disease?", "vietnamese": "Bạn có đủ năng động để phòng ngừa bệnh tim không?" },
+        { "english": "She became more active after she joined a friendly yoga club.", "vietnamese": "Cô ấy trở nên năng động hơn sau khi tham gia một câu lạc bộ yoga thân thiện." }
+      ]
+    },
+    {
+      "word": "relaxation",
+      "sentences": [
+        { "english": "Reading and gentle music are my favourite forms of relaxation.", "vietnamese": "Đọc sách và nhạc nhẹ là những hình thức thư giãn yêu thích của tôi." },
+        { "english": "A short holiday by the coast is perfect relaxation for me.", "vietnamese": "Một kỳ nghỉ ngắn bên bờ biển là sự thư giãn hoàn hảo với tôi." },
+        { "english": "Doctors say relaxation can prevent many serious diseases.", "vietnamese": "Các bác sĩ nói rằng sự thư giãn có thể phòng ngừa nhiều bệnh nghiêm trọng." },
+        { "english": "What kind of relaxation do you enjoy after a busy term?", "vietnamese": "Bạn thích kiểu thư giãn nào sau một học kỳ bận rộn?" },
+        { "english": "He has found real relaxation in fishing at the quiet lake.", "vietnamese": "Anh ấy đã tìm thấy sự thư giãn thực sự khi câu cá ở hồ yên tĩnh." }
+      ]
+    },
+    {
+      "word": "through",
+      "sentences": [
+        { "english": "A good habit helps me sleep well through the whole night.", "vietnamese": "Một thói quen tốt giúp tôi ngủ ngon xuyên suốt cả đêm." },
+        { "english": "She slept badly through the whole holiday because of noisy neighbours.", "vietnamese": "Cô ấy đã ngủ không ngon xuyên suốt cả kỳ nghỉ vì hàng xóm ồn ào." },
+        { "english": "The pain stayed through the night, so I took a painkiller.", "vietnamese": "Cơn đau kéo dài xuyên suốt đêm, nên tôi đã uống một viên thuốc giảm đau." },
+        { "english": "He remained calm through the whole emergency.", "vietnamese": "Anh ấy vẫn bình tĩnh xuyên suốt toàn bộ tình huống khẩn cấp." },
+        { "english": "Will you stay awake through the long festival night?", "vietnamese": "Bạn sẽ thức xuyên suốt đêm lễ hội dài chứ?" }
+      ]
+    },
+    {
+      "word": "sleep",
+      "sentences": [
+        { "english": "If you sleep badly, you will feel exhausted and get a headache.", "vietnamese": "Nếu bạn ngủ không ngon, bạn sẽ thấy kiệt sức và bị đau đầu." },
+        { "english": "I cannot sleep when my stomach is empty.", "vietnamese": "Tôi không thể ngủ khi bụng tôi đói." },
+        { "english": "Children should sleep at least nine hours to grow well.", "vietnamese": "Trẻ em nên ngủ ít nhất chín tiếng để phát triển tốt." },
+        { "english": "Do you usually sleep well after a long journey?", "vietnamese": "Bạn có thường ngủ ngon sau một chuyến đi dài không?" },
+        { "english": "He is sleeping now because the medicine made him tired.", "vietnamese": "Anh ấy đang ngủ bây giờ vì thuốc làm anh ấy mệt." }
+      ]
+    },
+    {
+      "word": "dream",
+      "sentences": [
+        { "english": "Last night I had a peaceful dream about the sea.", "vietnamese": "Đêm qua tôi có một giấc mơ yên bình về biển." },
+        { "english": "I had a strange dream about a dark forest.", "vietnamese": "Tôi đã có một giấc mơ kỳ lạ về một khu rừng tối." },
+        { "english": "Her dream of becoming a lawyer finally came true.", "vietnamese": "Giấc mơ trở thành luật sư của cô ấy cuối cùng đã thành sự thật." },
+        { "english": "Bad dreams and nightmares often follow a stressful day.", "vietnamese": "Những giấc mơ xấu và ác mộng thường theo sau một ngày căng thẳng." },
+        { "english": "Can you describe the dream you had last night?", "vietnamese": "Bạn có thể mô tả giấc mơ bạn đã có đêm qua không?" }
+      ]
+    },
+    {
+      "word": "rest",
+      "sentences": [
+        { "english": "The doctor told me to rest at home until I recover completely.", "vietnamese": "Bác sĩ bảo tôi nghỉ ngơi ở nhà cho đến khi tôi hồi phục hoàn toàn." },
+        { "english": "You should rest for a few days until the pain eases.", "vietnamese": "Bạn nên nghỉ ngơi vài ngày cho đến khi cơn đau dịu đi." },
+        { "english": "We rested under a big tree during our long hike.", "vietnamese": "Chúng tôi đã nghỉ ngơi dưới một gốc cây lớn trong chuyến đi bộ đường dài." },
+        { "english": "My legs hurt, so I am resting on the comfortable sofa.", "vietnamese": "Chân tôi đau, nên tôi đang nghỉ ngơi trên chiếc ghế sofa thoải mái." },
+        { "english": "Rest well tonight so you can stay active tomorrow.", "vietnamese": "Hãy nghỉ ngơi thật tốt tối nay để ngày mai bạn có thể năng động." }
+      ]
+    }
+  ]
+}

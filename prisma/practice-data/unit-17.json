@@ -1,0 +1,607 @@
+{
+  "unit": 17,
+  "deck": "Unit 17: Đồ uống & detox",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "pub",
+      "sentences": [
+        {
+          "english": "After work we met at a small pub and ordered spicy chicken wings.",
+          "vietnamese": "Sau giờ làm, chúng tôi gặp nhau ở một quán rượu nhỏ và gọi món cánh gà cay."
+        },
+        {
+          "english": "Is there a pub near the market where we can watch football?",
+          "vietnamese": "Có quán rượu nào gần chợ mà chúng ta có thể xem bóng đá không?"
+        },
+        {
+          "english": "The pubs in the centre are crowded during the festival season.",
+          "vietnamese": "Các quán rượu ở trung tâm đông đúc trong mùa lễ hội."
+        },
+        {
+          "english": "We will meet at the pub after the typhoon passes.",
+          "vietnamese": "Chúng tôi sẽ gặp nhau ở quán rượu sau khi cơn bão đi qua."
+        },
+        {
+          "english": "My father has never visited a pub in his hometown.",
+          "vietnamese": "Bố tôi chưa bao giờ ghé một quán rượu nào ở quê ông ấy."
+        }
+      ]
+    },
+    {
+      "word": "thirsty",
+      "sentences": [
+        {
+          "english": "The weather was so humid that I felt thirsty all afternoon.",
+          "vietnamese": "Thời tiết ẩm đến mức tôi thấy khát nước suốt cả buổi chiều."
+        },
+        {
+          "english": "Are you thirsty after eating that spicy hotpot at lunch?",
+          "vietnamese": "Bạn có khát nước sau khi ăn món lẩu cay đó vào bữa trưa không?"
+        },
+        {
+          "english": "The children were thirsty because the temperature reached forty degrees Celsius.",
+          "vietnamese": "Bọn trẻ khát nước vì nhiệt độ lên tới bốn mươi độ C."
+        },
+        {
+          "english": "I have been thirsty all afternoon because that sauce was too salty.",
+          "vietnamese": "Tôi đã khát nước suốt cả chiều vì nước sốt đó quá mặn."
+        },
+        {
+          "english": "Do not let the guests feel thirsty during the long party.",
+          "vietnamese": "Đừng để khách thấy khát nước trong suốt bữa tiệc dài."
+        }
+      ]
+    },
+    {
+      "word": "bottle",
+      "sentences": [
+        {
+          "english": "She opened a bottle of water.",
+          "vietnamese": "Cô ấy mở một chai nước."
+        },
+        {
+          "english": "Please put the empty bottles in the rubbish bin outside.",
+          "vietnamese": "Làm ơn bỏ những cái chai rỗng vào thùng rác bên ngoài."
+        },
+        {
+          "english": "I bought two bottles of fish sauce at the local market.",
+          "vietnamese": "Tôi đã mua hai chai nước mắm ở chợ địa phương."
+        },
+        {
+          "english": "Are you carrying a bottle of water on this long journey?",
+          "vietnamese": "Bạn có đang mang theo một chai nước trong chuyến đi dài này không?"
+        },
+        {
+          "english": "My sister will bring a bottle of juice to the wedding.",
+          "vietnamese": "Chị tôi sẽ mang một chai nước ép đến đám cưới."
+        }
+      ]
+    },
+    {
+      "word": "beer",
+      "sentences": [
+        {
+          "english": "My uncle enjoys cold beer with grilled pork at the weekend.",
+          "vietnamese": "Chú tôi thích uống bia lạnh cùng thịt lợn nướng vào cuối tuần."
+        },
+        {
+          "english": "Do you want a cold beer after eating that salty soup?",
+          "vietnamese": "Bạn có muốn một cốc bia lạnh sau khi ăn món súp mặn đó không?"
+        },
+        {
+          "english": "Beer is very popular at family parties in my hometown.",
+          "vietnamese": "Bia rất phổ biến trong các bữa tiệc gia đình ở quê tôi."
+        },
+        {
+          "english": "We drank beer and ate crispy chicken during the football match.",
+          "vietnamese": "Chúng tôi đã uống bia và ăn gà giòn trong trận bóng đá."
+        },
+        {
+          "english": "I have not bought any beer since I started saving money.",
+          "vietnamese": "Tôi chưa mua bia nào từ khi tôi bắt đầu tiết kiệm tiền."
+        }
+      ]
+    },
+    {
+      "word": "glass",
+      "sentences": [
+        {
+          "english": "She washed every glass before the guests arrived for dinner.",
+          "vietnamese": "Cô ấy rửa từng chiếc cốc trước khi khách đến ăn tối."
+        },
+        {
+          "english": "Pour the juice into a clean glass for our visitor.",
+          "vietnamese": "Rót nước ép vào một chiếc cốc sạch cho vị khách của chúng ta."
+        },
+        {
+          "english": "He dropped two glasses when the typhoon hit the old building.",
+          "vietnamese": "Anh ấy làm rơi hai chiếc cốc khi cơn bão đổ vào toà nhà cũ."
+        },
+        {
+          "english": "Glasses of iced tea are served to every guest at noon.",
+          "vietnamese": "Những cốc trà đá được phục vụ cho mỗi vị khách vào buổi trưa."
+        },
+        {
+          "english": "Will you buy new glasses before the wedding next month?",
+          "vietnamese": "Bạn sẽ mua cốc thuỷ tinh mới trước đám cưới tháng sau chứ?"
+        }
+      ]
+    },
+    {
+      "word": "pour",
+      "sentences": [
+        {
+          "english": "He poured hot soup into two bowls and served them quickly.",
+          "vietnamese": "Anh ấy rót súp nóng vào hai cái bát và phục vụ chúng thật nhanh."
+        },
+        {
+          "english": "Pour a little sauce over the grilled beef before you serve it.",
+          "vietnamese": "Rót một ít nước sốt lên thịt bò nướng trước khi bạn dọn nó ra."
+        },
+        {
+          "english": "The sky is pouring rain on the crowded market this afternoon.",
+          "vietnamese": "Bầu trời đang trút mưa xuống khu chợ đông đúc chiều nay."
+        },
+        {
+          "english": "She pours boiling water into the cup before breakfast every morning.",
+          "vietnamese": "Cô ấy rót nước sôi vào cốc trước bữa sáng mỗi buổi sáng."
+        },
+        {
+          "english": "Have you poured the tea for our relatives yet?",
+          "vietnamese": "Bạn đã rót trà cho họ hàng của chúng ta chưa?"
+        }
+      ]
+    },
+    {
+      "word": "wine",
+      "sentences": [
+        {
+          "english": "We opened a bottle of red wine at the end of the rainy season.",
+          "vietnamese": "Chúng tôi mở một chai rượu vang đỏ vào cuối mùa mưa."
+        },
+        {
+          "english": "My parents drink red wine only on special occasions.",
+          "vietnamese": "Bố mẹ tôi chỉ uống rượu vang đỏ vào những dịp đặc biệt."
+        },
+        {
+          "english": "Do you prefer sweet wine or something more dry?",
+          "vietnamese": "Bạn thích rượu vang ngọt hay thứ gì đó khô hơn?"
+        },
+        {
+          "english": "They will bring French wine to the anniversary dinner next Sunday.",
+          "vietnamese": "Họ sẽ mang rượu vang Pháp đến bữa tối kỷ niệm Chủ nhật tới."
+        },
+        {
+          "english": "I have never tried rice wine made in that small village.",
+          "vietnamese": "Tôi chưa bao giờ thử rượu gạo được làm ở ngôi làng nhỏ đó."
+        }
+      ]
+    },
+    {
+      "word": "cheers",
+      "sentences": [
+        {
+          "english": "Everyone raised a glass and shouted cheers before the hotpot was served.",
+          "vietnamese": "Mọi người nâng ly và hô chúc mừng trước khi món lẩu được dọn ra."
+        },
+        {
+          "english": "Say cheers loudly when everyone raises a glass at the wedding.",
+          "vietnamese": "Hãy hô chúc mừng thật to khi mọi người nâng ly ở đám cưới."
+        },
+        {
+          "english": "We shouted cheers together before the fireworks started.",
+          "vietnamese": "Chúng tôi đã cùng hô chúc mừng trước khi pháo hoa bắt đầu."
+        },
+        {
+          "english": "In my hometown people say cheers many times during one meal.",
+          "vietnamese": "Ở quê tôi người ta hô chúc mừng nhiều lần trong một bữa ăn."
+        },
+        {
+          "english": "Will you teach our guests how to say cheers in Vietnamese?",
+          "vietnamese": "Bạn sẽ dạy khách của chúng ta cách hô chúc mừng bằng tiếng Việt chứ?"
+        }
+      ]
+    },
+    {
+      "word": "shot",
+      "sentences": [
+        {
+          "english": "He drank one shot of rice wine and his stomach felt warm.",
+          "vietnamese": "Anh ấy uống một chén rượu gạo và bụng thấy ấm lên."
+        },
+        {
+          "english": "He offered me a shot of strong rice wine after dinner.",
+          "vietnamese": "Anh ấy mời tôi một chén rượu gạo mạnh sau bữa tối."
+        },
+        {
+          "english": "They are pouring shots for the visitors at the traditional festival.",
+          "vietnamese": "Họ đang rót những chén rượu cho khách tham quan ở lễ hội truyền thống."
+        },
+        {
+          "english": "Do not drink another shot before you drive home.",
+          "vietnamese": "Đừng uống thêm một chén nữa trước khi bạn lái xe về nhà."
+        },
+        {
+          "english": "My uncle will pour a shot for every guest at the celebration.",
+          "vietnamese": "Chú tôi sẽ rót một chén cho mỗi vị khách ở buổi lễ."
+        }
+      ]
+    },
+    {
+      "word": "drinking",
+      "sentences": [
+        {
+          "english": "Heavy drinking on an empty stomach is never a good idea.",
+          "vietnamese": "Uống rượu bia nhiều khi bụng đói không bao giờ là một ý hay."
+        },
+        {
+          "english": "Heavy drinking often causes an awful headache the next morning.",
+          "vietnamese": "Uống rượu bia nhiều thường gây ra cơn đau đầu kinh khủng vào sáng hôm sau."
+        },
+        {
+          "english": "Drinking with colleagues is a normal habit at company parties here.",
+          "vietnamese": "Uống rượu bia cùng đồng nghiệp là một thói quen bình thường ở các bữa tiệc công ty tại đây."
+        },
+        {
+          "english": "Avoid drinking before you drive home from the party tonight.",
+          "vietnamese": "Hãy tránh uống rượu bia trước khi bạn lái xe về nhà từ bữa tiệc tối nay."
+        },
+        {
+          "english": "Drinking was not allowed at the temple during the festival.",
+          "vietnamese": "Việc uống rượu bia không được phép ở ngôi đền trong lễ hội."
+        }
+      ]
+    },
+    {
+      "word": "tipsy",
+      "sentences": [
+        {
+          "english": "My sister got tipsy after two glasses at the wedding party.",
+          "vietnamese": "Chị tôi ngà ngà say sau hai ly ở tiệc cưới."
+        },
+        {
+          "english": "My cousin is getting tipsy, so please bring him some soup.",
+          "vietnamese": "Anh họ tôi đang ngà ngà say, nên làm ơn mang cho anh ấy một ít súp."
+        },
+        {
+          "english": "Are you tipsy already, or can you still drive home?",
+          "vietnamese": "Bạn đã ngà ngà say rồi à, hay bạn vẫn lái xe về nhà được?"
+        },
+        {
+          "english": "The guests became tipsy and started singing traditional songs loudly.",
+          "vietnamese": "Khách khứa trở nên ngà ngà say và bắt đầu hát vang những bài hát truyền thống."
+        },
+        {
+          "english": "I will probably feel tipsy before the end of this celebration.",
+          "vietnamese": "Tôi có lẽ sẽ thấy ngà ngà say trước khi buổi lễ này kết thúc."
+        }
+      ]
+    },
+    {
+      "word": "alcohol",
+      "sentences": [
+        {
+          "english": "I try to avoid alcohol on weekdays.",
+          "vietnamese": "Tôi cố tránh đồ uống có cồn vào ngày thường."
+        },
+        {
+          "english": "Alcohol is not allowed inside the pagoda during big festivals.",
+          "vietnamese": "Đồ uống có cồn không được phép mang vào trong chùa trong những lễ hội lớn."
+        },
+        {
+          "english": "He gave up alcohol after a nasty stomach problem last winter.",
+          "vietnamese": "Anh ấy đã bỏ đồ uống có cồn sau một vấn đề dạ dày khó chịu mùa đông năm ngoái."
+        },
+        {
+          "english": "Does alcohol always make your face turn red so quickly?",
+          "vietnamese": "Cồn có luôn làm mặt bạn đỏ lên nhanh như vậy không?"
+        },
+        {
+          "english": "I have not touched alcohol since the beginning of this season.",
+          "vietnamese": "Tôi chưa động đến đồ uống có cồn từ đầu mùa này."
+        }
+      ]
+    },
+    {
+      "word": "useless",
+      "sentences": [
+        {
+          "english": "My old phone is useless now, so I cannot check the weather forecast.",
+          "vietnamese": "Điện thoại cũ của tôi giờ vô dụng, nên tôi không kiểm tra được dự báo thời tiết."
+        },
+        {
+          "english": "His advice was useless because he had never cooked anything.",
+          "vietnamese": "Lời khuyên của anh ấy vô dụng vì anh ấy chưa bao giờ nấu món gì."
+        },
+        {
+          "english": "Do not buy that useless tool; it breaks after one week.",
+          "vietnamese": "Đừng mua cái dụng cụ vô dụng đó; nó hỏng sau một tuần."
+        },
+        {
+          "english": "These old curtains are useless now, so we should throw them away.",
+          "vietnamese": "Mấy tấm rèm cũ này giờ vô dụng, nên chúng ta nên vứt chúng đi."
+        },
+        {
+          "english": "Is that useless old fan still sitting in your cramped room?",
+          "vietnamese": "Cái quạt cũ vô dụng đó vẫn còn nằm trong căn phòng chật chội của bạn à?"
+        }
+      ]
+    },
+    {
+      "word": "hangover",
+      "sentences": [
+        {
+          "english": "She had a terrible hangover, so her husband cooked a light soup.",
+          "vietnamese": "Cô ấy bị dư âm say khủng khiếp, nên chồng cô ấy nấu một món súp nhẹ."
+        },
+        {
+          "english": "I have had this hangover since the wedding party ended.",
+          "vietnamese": "Tôi bị dư âm say này từ khi bữa tiệc cưới kết thúc."
+        },
+        {
+          "english": "He had an awful hangover, so he missed the morning interview.",
+          "vietnamese": "Anh ấy bị dư âm say kinh khủng, nên anh ấy lỡ buổi phỏng vấn buổi sáng."
+        },
+        {
+          "english": "Do you get a hangover after drinking cheap rice wine?",
+          "vietnamese": "Bạn có bị dư âm say sau khi uống rượu gạo rẻ tiền không?"
+        },
+        {
+          "english": "Drink plenty of water tonight to avoid a hangover tomorrow.",
+          "vietnamese": "Hãy uống thật nhiều nước tối nay để tránh dư âm say vào ngày mai."
+        }
+      ]
+    },
+    {
+      "word": "energy",
+      "sentences": [
+        {
+          "english": "Sweet fruit gives me enough energy to hike up the hill.",
+          "vietnamese": "Trái cây ngọt cho tôi đủ năng lượng để leo lên ngọn đồi."
+        },
+        {
+          "english": "Coffee gives me energy, but it also hurts my stomach.",
+          "vietnamese": "Cà phê cho tôi năng lượng, nhưng nó cũng làm hại dạ dày của tôi."
+        },
+        {
+          "english": "The children had no energy after the long journey to the temple.",
+          "vietnamese": "Bọn trẻ không còn năng lượng sau chuyến đi dài đến ngôi đền."
+        },
+        {
+          "english": "Are you saving energy for the football match this evening?",
+          "vietnamese": "Bạn có đang để dành năng lượng cho trận bóng đá tối nay không?"
+        },
+        {
+          "english": "A warm bowl of soup will give you energy on rainy days.",
+          "vietnamese": "Một bát súp ấm sẽ cho bạn năng lượng vào những ngày mưa."
+        }
+      ]
+    },
+    {
+      "word": "coffee",
+      "sentences": [
+        {
+          "english": "I prepare hot coffee every morning before I leave for the office.",
+          "vietnamese": "Tôi pha cà phê nóng mỗi sáng trước khi tôi rời nhà đến văn phòng."
+        },
+        {
+          "english": "Vietnamese coffee has become popular among foreign visitors in this district.",
+          "vietnamese": "Cà phê Việt Nam đã trở nên phổ biến với khách nước ngoài ở quận này."
+        },
+        {
+          "english": "We drank iced coffee in a lovely cafe near the pagoda.",
+          "vietnamese": "Chúng tôi đã uống cà phê đá trong một quán đáng yêu gần chùa."
+        },
+        {
+          "english": "Would you like coffee, or do you prefer sweet tea?",
+          "vietnamese": "Bạn muốn cà phê, hay bạn thích trà ngọt hơn?"
+        },
+        {
+          "english": "Do not drink strong coffee before an important interview.",
+          "vietnamese": "Đừng uống cà phê đậm trước một buổi phỏng vấn quan trọng."
+        }
+      ]
+    },
+    {
+      "word": "cream",
+      "sentences": [
+        {
+          "english": "Put a little cream in the soup to make it less spicy.",
+          "vietnamese": "Cho một chút kem sữa vào súp để món đó bớt cay."
+        },
+        {
+          "english": "She put fresh cream on the sweet cake for her guests.",
+          "vietnamese": "Cô ấy phết kem sữa tươi lên chiếc bánh ngọt cho khách của mình."
+        },
+        {
+          "english": "Do you want cream on your yummy dessert?",
+          "vietnamese": "Bạn có muốn kem sữa trên món tráng miệng ngon của mình không?"
+        },
+        {
+          "english": "Cream makes the sauce thicker and much more savoury.",
+          "vietnamese": "Kem sữa làm nước sốt đặc hơn và đậm đà hơn nhiều."
+        },
+        {
+          "english": "We will buy cream and other groceries before the party starts.",
+          "vietnamese": "Chúng tôi sẽ mua kem sữa và các thực phẩm khác trước khi bữa tiệc bắt đầu."
+        }
+      ]
+    },
+    {
+      "word": "smoothie",
+      "sentences": [
+        {
+          "english": "My vegetarian friend drinks a green smoothie instead of breakfast.",
+          "vietnamese": "Người bạn ăn chay của tôi uống một ly sinh tố xanh thay cho bữa sáng."
+        },
+        {
+          "english": "Yesterday I made a green smoothie with sweet fruit and milk.",
+          "vietnamese": "Hôm qua tôi đã làm một ly sinh tố xanh với trái cây ngọt và sữa."
+        },
+        {
+          "english": "She is making a mango smoothie for our visitors right now.",
+          "vietnamese": "Cô ấy đang làm một ly sinh tố xoài cho khách của chúng tôi ngay bây giờ."
+        },
+        {
+          "english": "Have you ever tried an avocado smoothie at the local market?",
+          "vietnamese": "Bạn đã bao giờ thử sinh tố bơ ở chợ địa phương chưa?"
+        },
+        {
+          "english": "Add some ice to the smoothie so it tastes fresher.",
+          "vietnamese": "Thêm một ít đá vào ly sinh tố để nó có vị tươi mát hơn."
+        }
+      ]
+    },
+    {
+      "word": "detox",
+      "sentences": [
+        {
+          "english": "She started a detox after the holidays.",
+          "vietnamese": "Cô ấy bắt đầu thải độc sau kỳ nghỉ."
+        },
+        {
+          "english": "My sister is doing a detox because her stomach feels awful.",
+          "vietnamese": "Chị tôi đang thải độc vì dạ dày của chị ấy thấy rất khó chịu."
+        },
+        {
+          "english": "A short detox after the festival season helps me sleep better.",
+          "vietnamese": "Một đợt thải độc ngắn sau mùa lễ hội giúp tôi ngủ ngon hơn."
+        },
+        {
+          "english": "Will you join a detox with me at the beginning of May?",
+          "vietnamese": "Bạn sẽ thải độc cùng tôi vào đầu tháng Năm chứ?"
+        },
+        {
+          "english": "Do not expect a detox to fix every unhealthy habit.",
+          "vietnamese": "Đừng mong một đợt thải độc sửa được mọi thói quen không lành mạnh."
+        }
+      ]
+    },
+    {
+      "word": "stir",
+      "sentences": [
+        {
+          "english": "Stir the sauce slowly so it does not burn on the stove.",
+          "vietnamese": "Khuấy nước sốt từ từ để nó không bị cháy trên bếp."
+        },
+        {
+          "english": "He stirs his coffee slowly and looks at the rainy street.",
+          "vietnamese": "Anh ấy khuấy cà phê từ từ và nhìn ra con phố mưa."
+        },
+        {
+          "english": "She stirred the beef and vegetables in the pan for five minutes.",
+          "vietnamese": "Cô ấy khuấy thịt bò và rau trong chảo trong năm phút."
+        },
+        {
+          "english": "I am stirring the sauce now, so please pass me the chilli.",
+          "vietnamese": "Tôi đang khuấy nước sốt, nên làm ơn đưa tôi quả ớt."
+        },
+        {
+          "english": "Should I stir the rice soup while it boils?",
+          "vietnamese": "Tôi có nên khuấy món cháo trong khi nó sôi không?"
+        }
+      ]
+    },
+    {
+      "word": "litre",
+      "sentences": [
+        {
+          "english": "I drink two litres of water when the temperature is very high.",
+          "vietnamese": "Tôi uống hai lít nước khi nhiệt độ rất cao."
+        },
+        {
+          "english": "Buy two litres of milk when you get the groceries.",
+          "vietnamese": "Hãy mua hai lít sữa khi bạn đi mua thực phẩm."
+        },
+        {
+          "english": "He drank a whole litre of water after his long hike.",
+          "vietnamese": "Anh ấy đã uống hết cả một lít nước sau chuyến đi bộ đường dài."
+        },
+        {
+          "english": "I have already drunk three litres of water in this humid weather.",
+          "vietnamese": "Tôi đã uống hết ba lít nước trong thời tiết ẩm này rồi."
+        },
+        {
+          "english": "How many litres of soup will you cook for the party?",
+          "vietnamese": "Bạn sẽ nấu bao nhiêu lít súp cho bữa tiệc?"
+        }
+      ]
+    },
+    {
+      "word": "sparkling",
+      "sentences": [
+        {
+          "english": "We ordered sparkling water and a yummy dessert after the hotpot.",
+          "vietnamese": "Chúng tôi gọi nước có ga và một món tráng miệng ngon sau món lẩu."
+        },
+        {
+          "english": "Sparkling water is more expensive than normal water here.",
+          "vietnamese": "Nước có ga đắt hơn nước thường ở đây."
+        },
+        {
+          "english": "She ordered a sparkling drink because the weather was very humid.",
+          "vietnamese": "Cô ấy gọi một ly nước có ga vì thời tiết rất ẩm."
+        },
+        {
+          "english": "Do you prefer sparkling water with spicy food?",
+          "vietnamese": "Bạn có thích nước có ga khi ăn đồ cay không?"
+        },
+        {
+          "english": "I will bring sparkling juice for the guests at the celebration.",
+          "vietnamese": "Tôi sẽ mang nước ép có ga cho khách ở buổi lễ."
+        }
+      ]
+    },
+    {
+      "word": "bucket",
+      "sentences": [
+        {
+          "english": "The rain filled a bucket on the balcony in ten minutes.",
+          "vietnamese": "Cơn mưa làm đầy một cái xô trên ban công chỉ trong mười phút."
+        },
+        {
+          "english": "Fill a bucket with clean water before the flood arrives.",
+          "vietnamese": "Hãy đổ đầy một cái xô nước sạch trước khi lũ đến."
+        },
+        {
+          "english": "We carried two buckets of water up to our cramped flat.",
+          "vietnamese": "Chúng tôi xách hai xô nước lên căn hộ chật chội của mình."
+        },
+        {
+          "english": "The builder is mixing cement in a large bucket near the bridge.",
+          "vietnamese": "Người thợ xây đang trộn xi măng trong một cái xô lớn gần cây cầu."
+        },
+        {
+          "english": "Where did you put the red bucket after the shower stopped?",
+          "vietnamese": "Bạn đã để cái xô đỏ ở đâu sau khi cơn mưa rào tạnh?"
+        }
+      ]
+    },
+    {
+      "word": "habit",
+      "sentences": [
+        {
+          "english": "Boiling water before drinking is a healthy habit in my hometown.",
+          "vietnamese": "Đun sôi nước trước khi uống là một thói quen lành mạnh ở quê tôi."
+        },
+        {
+          "english": "Reading before bed has become a good habit that improves my vocabulary.",
+          "vietnamese": "Đọc sách trước khi ngủ đã trở thành một thói quen tốt giúp cải thiện vốn từ của tôi."
+        },
+        {
+          "english": "He changed his eating habits after a nasty stomach problem last year.",
+          "vietnamese": "Anh ấy đã thay đổi thói quen ăn uống sau một vấn đề dạ dày khó chịu năm ngoái."
+        },
+        {
+          "english": "Do you have any strange habits that surprise your relatives?",
+          "vietnamese": "Bạn có thói quen kỳ lạ nào làm họ hàng của bạn ngạc nhiên không?"
+        },
+        {
+          "english": "I will drop this bad habit before the end of the year.",
+          "vietnamese": "Tôi sẽ bỏ thói quen xấu này trước khi năm nay kết thúc."
+        }
+      ]
+    }
+  ]
+}

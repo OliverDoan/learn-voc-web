@@ -1,0 +1,607 @@
+{
+  "unit": 10,
+  "deck": "Unit 10: Khu phố mới của Hinata",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "area",
+      "sentences": [
+        {
+          "english": "This area is quiet, and every flat here has a small balcony.",
+          "vietnamese": "Khu vực này yên tĩnh, và mỗi căn hộ ở đây đều có một ban công nhỏ."
+        },
+        {
+          "english": "Have you visited the area near the central square yet?",
+          "vietnamese": "Bạn đã ghé khu vực gần quảng trường trung tâm chưa?"
+        },
+        {
+          "english": "Last year this area lacked good facilities, so many families moved away.",
+          "vietnamese": "Năm ngoái khu vực này thiếu tiện ích tốt, nên nhiều gia đình đã chuyển đi."
+        },
+        {
+          "english": "The areas around the highway are noisy because thousands of vehicles pass daily.",
+          "vietnamese": "Những khu vực quanh đường cao tốc ồn ào vì hàng nghìn phương tiện đi qua mỗi ngày."
+        },
+        {
+          "english": "We are looking for a quiet area with affordable accommodation for students.",
+          "vietnamese": "Chúng tôi đang tìm một khu vực yên tĩnh với chỗ ở giá phải chăng cho sinh viên."
+        }
+      ]
+    },
+    {
+      "word": "block",
+      "sentences": [
+        {
+          "english": "Our block of flats stands near the river, so the view is beautiful.",
+          "vietnamese": "Dãy căn hộ của chúng tôi nằm gần sông, nên tầm nhìn rất đẹp."
+        },
+        {
+          "english": "Do not throw rubbish in front of our block, please.",
+          "vietnamese": "Đừng vứt rác trước dãy nhà của chúng ta, làm ơn."
+        },
+        {
+          "english": "A new block of flats is being built beside the bridge.",
+          "vietnamese": "Một dãy căn hộ mới đang được xây bên cạnh cây cầu."
+        },
+        {
+          "english": "My office is only two blocks away from the modern shopping centre.",
+          "vietnamese": "Văn phòng của tôi chỉ cách trung tâm mua sắm hiện đại hai dãy nhà."
+        },
+        {
+          "english": "Have you ever lived in a block without a lift before?",
+          "vietnamese": "Bạn đã bao giờ sống trong một dãy nhà không có thang máy chưa?"
+        }
+      ]
+    },
+    {
+      "word": "develop",
+      "sentences": [
+        {
+          "english": "The city plans to develop this district and build a new bridge.",
+          "vietnamese": "Thành phố dự định phát triển khu vực này và xây một cây cầu mới."
+        },
+        {
+          "english": "The government is developing a better transport system for the whole capital.",
+          "vietnamese": "Chính phủ đang phát triển một hệ thống giao thông tốt hơn cho cả thủ đô."
+        },
+        {
+          "english": "Our town developed quickly after the new highway opened last year.",
+          "vietnamese": "Thị trấn của chúng tôi phát triển nhanh chóng sau khi đường cao tốc mới mở năm ngoái."
+        },
+        {
+          "english": "If we develop this district carefully, the atmosphere will stay peaceful.",
+          "vietnamese": "Nếu chúng ta phát triển khu này cẩn thận, bầu không khí sẽ vẫn yên bình."
+        },
+        {
+          "english": "How long will it take to develop the area behind the skyscraper?",
+          "vietnamese": "Sẽ mất bao lâu để phát triển khu vực phía sau toà nhà chọc trời?"
+        }
+      ]
+    },
+    {
+      "word": "friendly",
+      "sentences": [
+        {
+          "english": "The people in this neighbourhood are friendly, so I never feel lonely.",
+          "vietnamese": "Mọi người trong khu phố này rất thân thiện, nên tôi không bao giờ thấy cô đơn."
+        },
+        {
+          "english": "My new housemate is very friendly and often cooks dinner for me.",
+          "vietnamese": "Bạn cùng nhà mới của tôi rất thân thiện và thường nấu bữa tối cho tôi."
+        },
+        {
+          "english": "The shop assistant was friendly, so I bought two lamps there.",
+          "vietnamese": "Nhân viên bán hàng thân thiện, nên tôi đã mua hai chiếc đèn ở đó."
+        },
+        {
+          "english": "Are the people in your neighbourhood friendly to foreigners?",
+          "vietnamese": "Mọi người trong khu phố của bạn có thân thiện với người nước ngoài không?"
+        },
+        {
+          "english": "We have become friendly with the owner of the small clinic nearby.",
+          "vietnamese": "Chúng tôi đã trở nên thân thiết với chủ phòng khám nhỏ gần đây."
+        }
+      ]
+    },
+    {
+      "word": "inform",
+      "sentences": [
+        {
+          "english": "Please inform the security guard before you move your furniture upstairs.",
+          "vietnamese": "Hãy thông báo cho bảo vệ trước khi bạn chuyển đồ nội thất lên tầng trên."
+        },
+        {
+          "english": "The manager will inform every employee about the new contract tomorrow.",
+          "vietnamese": "Người quản lý sẽ thông báo cho từng nhân viên về hợp đồng mới vào ngày mai."
+        },
+        {
+          "english": "They informed us that the rent would increase next month.",
+          "vietnamese": "Họ đã thông báo với chúng tôi rằng tiền thuê sẽ tăng vào tháng tới."
+        },
+        {
+          "english": "Did the owner inform you about the extra service fee?",
+          "vietnamese": "Chủ nhà có thông báo cho bạn về phí dịch vụ thêm không?"
+        },
+        {
+          "english": "I am informing my housemate that the air conditioner is broken.",
+          "vietnamese": "Tôi đang thông báo cho bạn cùng nhà rằng máy điều hoà bị hỏng."
+        }
+      ]
+    },
+    {
+      "word": "invite",
+      "sentences": [
+        {
+          "english": "We will invite our neighbours to see the flat after we decorate it.",
+          "vietnamese": "Chúng tôi sẽ mời hàng xóm đến xem căn hộ sau khi chúng tôi trang trí nó."
+        },
+        {
+          "english": "She invited her roommate to a small party on the balcony.",
+          "vietnamese": "Cô ấy đã mời bạn cùng phòng đến một bữa tiệc nhỏ trên ban công."
+        },
+        {
+          "english": "Please invite your friends to visit our cosy living room.",
+          "vietnamese": "Hãy mời bạn bè của bạn đến thăm phòng khách ấm cúng của chúng tôi."
+        },
+        {
+          "english": "Why did you not invite our new neighbours to the nightclub?",
+          "vietnamese": "Tại sao bạn không mời hàng xóm mới của chúng ta đến hộp đêm?"
+        },
+        {
+          "english": "My manager has invited the whole team to a restaurant downtown.",
+          "vietnamese": "Quản lý của tôi đã mời cả nhóm đến một nhà hàng ở trung tâm."
+        }
+      ]
+    },
+    {
+      "word": "safe",
+      "sentences": [
+        {
+          "english": "The alley is safe at night because there are many bright lights.",
+          "vietnamese": "Con hẻm an toàn vào ban đêm vì có nhiều đèn sáng."
+        },
+        {
+          "english": "Is this neighbourhood safe for children after dark?",
+          "vietnamese": "Khu phố này có an toàn cho trẻ em sau khi trời tối không?"
+        },
+        {
+          "english": "Keep your money in a safe place when you visit crowded markets.",
+          "vietnamese": "Hãy giữ tiền của bạn ở một nơi an toàn khi bạn đến những khu chợ đông đúc."
+        },
+        {
+          "english": "The streets felt safe because the security cameras worked all night.",
+          "vietnamese": "Các con phố có cảm giác an toàn vì camera an ninh hoạt động suốt đêm."
+        },
+        {
+          "english": "Pickpockets are common here, so no wallet is really safe in this alley.",
+          "vietnamese": "Bọn móc túi phổ biến ở đây, nên không chiếc ví nào thực sự an toàn trong con hẻm này."
+        }
+      ]
+    },
+    {
+      "word": "vibrant",
+      "sentences": [
+        {
+          "english": "The central district becomes vibrant when the nightlife starts on Friday evening.",
+          "vietnamese": "Khu trung tâm trở nên sôi động khi cuộc sống về đêm bắt đầu vào tối thứ Sáu."
+        },
+        {
+          "english": "This market is vibrant every morning, and the atmosphere makes me happy.",
+          "vietnamese": "Khu chợ này sôi động mỗi sáng, và bầu không khí khiến tôi thấy vui."
+        },
+        {
+          "english": "Our old town became vibrant after the new square was opened.",
+          "vietnamese": "Thị trấn cũ của chúng tôi trở nên sôi động sau khi quảng trường mới được mở."
+        },
+        {
+          "english": "Do you prefer a vibrant city or a peaceful hometown?",
+          "vietnamese": "Bạn thích một thành phố sôi động hay một quê hương yên bình?"
+        },
+        {
+          "english": "The district near the university will become more vibrant next term.",
+          "vietnamese": "Khu gần trường đại học sẽ trở nên sôi động hơn vào kỳ học tới."
+        }
+      ]
+    },
+    {
+      "word": "complicated",
+      "sentences": [
+        {
+          "english": "The bus system here is complicated, so I usually drive to work.",
+          "vietnamese": "Hệ thống xe buýt ở đây phức tạp, nên tôi thường lái xe đi làm."
+        },
+        {
+          "english": "The rental contract looks complicated, so my lawyer will read it carefully.",
+          "vietnamese": "Hợp đồng thuê nhà trông phức tạp, nên luật sư của tôi sẽ đọc nó cẩn thận."
+        },
+        {
+          "english": "Paying bills online was complicated before, but now it is convenient.",
+          "vietnamese": "Việc thanh toán hoá đơn trực tuyến trước đây phức tạp, nhưng giờ thì tiện lợi."
+        },
+        {
+          "english": "Why is the application form so complicated for foreign workers?",
+          "vietnamese": "Tại sao mẫu đơn xin việc lại phức tạp như vậy đối với lao động nước ngoài?"
+        },
+        {
+          "english": "Do not make the design more complicated than the customer wants.",
+          "vietnamese": "Đừng làm cho thiết kế phức tạp hơn những gì khách hàng muốn."
+        }
+      ]
+    },
+    {
+      "word": "one-way",
+      "sentences": [
+        {
+          "english": "Many streets near the square are one-way, which makes driving quite difficult.",
+          "vietnamese": "Nhiều con phố gần quảng trường là đường một chiều, điều đó khiến việc lái xe khá khó."
+        },
+        {
+          "english": "This alley became one-way last month, so drivers must use the highway.",
+          "vietnamese": "Con hẻm này trở thành đường một chiều tháng trước, nên tài xế phải dùng đường cao tốc."
+        },
+        {
+          "english": "Is this road one-way, or can I drive back the same way?",
+          "vietnamese": "Con đường này là một chiều, hay tôi có thể lái xe ngược lại theo cùng đường đó?"
+        },
+        {
+          "english": "One-way streets in the central district confuse many new visitors.",
+          "vietnamese": "Những con phố một chiều ở khu trung tâm làm nhiều du khách mới bối rối."
+        },
+        {
+          "english": "The council will turn these narrow streets near the tower into one-way roads.",
+          "vietnamese": "Hội đồng sẽ biến những con phố hẹp gần toà tháp thành đường một chiều."
+        }
+      ]
+    },
+    {
+      "word": "mostly",
+      "sentences": [
+        {
+          "english": "The people living in this building are mostly young workers and students.",
+          "vietnamese": "Những người sống trong toà nhà này hầu hết là công nhân trẻ và sinh viên."
+        },
+        {
+          "english": "We mostly buy cheap furniture because we want to save money.",
+          "vietnamese": "Chúng tôi hầu như mua đồ nội thất rẻ vì chúng tôi muốn tiết kiệm tiền."
+        },
+        {
+          "english": "The shops here mostly open at nine and close before midnight.",
+          "vietnamese": "Các cửa hàng ở đây hầu hết mở cửa lúc chín giờ và đóng cửa trước nửa đêm."
+        },
+        {
+          "english": "Last winter I mostly stayed in my room and revised for exams.",
+          "vietnamese": "Mùa đông năm ngoái tôi hầu như ở trong phòng và ôn bài cho các kỳ thi."
+        },
+        {
+          "english": "Are the people on your street mostly young employees?",
+          "vietnamese": "Những người trên phố của bạn hầu hết là nhân viên trẻ phải không?"
+        }
+      ]
+    },
+    {
+      "word": "ground",
+      "sentences": [
+        {
+          "english": "Children often drop their toys on the ground in front of our building.",
+          "vietnamese": "Trẻ con thường làm rơi đồ chơi xuống đất trước toà nhà của chúng tôi."
+        },
+        {
+          "english": "Do not throw your rubbish on the ground near the school gate.",
+          "vietnamese": "Đừng vứt rác của bạn xuống đất gần cổng trường."
+        },
+        {
+          "english": "The gym is on the ground floor of this modern building.",
+          "vietnamese": "Phòng tập thể hình nằm ở tầng trệt của toà nhà hiện đại này."
+        },
+        {
+          "english": "Heavy rain has made the ground behind our building very wet.",
+          "vietnamese": "Mưa lớn đã làm mặt đất phía sau toà nhà của chúng tôi rất ướt."
+        },
+        {
+          "english": "Why are so many leaves lying on the ground in this alley?",
+          "vietnamese": "Tại sao có nhiều lá cây nằm trên mặt đất trong con hẻm này thế?"
+        }
+      ]
+    },
+    {
+      "word": "clinic",
+      "sentences": [
+        {
+          "english": "She works as a nurse at a small clinic.",
+          "vietnamese": "Cô ấy làm y tá tại một phòng khám nhỏ."
+        },
+        {
+          "english": "There is a small clinic near the square, so treatment is convenient.",
+          "vietnamese": "Có một phòng khám nhỏ gần quảng trường, nên việc khám chữa rất tiện lợi."
+        },
+        {
+          "english": "The clinic will open a new room for children next month.",
+          "vietnamese": "Phòng khám sẽ mở một phòng mới cho trẻ em vào tháng tới."
+        },
+        {
+          "english": "Have you paid the fee at the clinic yet?",
+          "vietnamese": "Bạn đã trả phí ở phòng khám chưa?"
+        },
+        {
+          "english": "Our district lacks good clinics, so people travel to the capital.",
+          "vietnamese": "Khu của chúng tôi thiếu phòng khám tốt, nên người dân phải đi đến thủ đô."
+        }
+      ]
+    },
+    {
+      "word": "gym",
+      "sentences": [
+        {
+          "english": "There is a modern gym on the ground floor of our building.",
+          "vietnamese": "Có một phòng tập thể hình hiện đại ở tầng trệt toà nhà của chúng tôi."
+        },
+        {
+          "english": "I go to the gym daily before I start work.",
+          "vietnamese": "Tôi đến phòng tập thể hình mỗi ngày trước khi tôi bắt đầu làm việc."
+        },
+        {
+          "english": "The gym fee is reasonable, so many students join it.",
+          "vietnamese": "Phí phòng tập thể hình hợp lý, nên nhiều sinh viên tham gia."
+        },
+        {
+          "english": "My roommate has joined an expensive gym in the city centre.",
+          "vietnamese": "Bạn cùng phòng của tôi đã tham gia một phòng tập đắt tiền ở trung tâm thành phố."
+        },
+        {
+          "english": "Is there a gym in this building, or must we drive somewhere?",
+          "vietnamese": "Có phòng tập thể hình trong toà nhà này không, hay chúng ta phải lái xe đi đâu đó?"
+        }
+      ]
+    },
+    {
+      "word": "everywhere",
+      "sentences": [
+        {
+          "english": "After the festival, rubbish was everywhere on the pavement outside our building.",
+          "vietnamese": "Sau lễ hội, rác ở khắp mọi nơi trên vỉa hè bên ngoài toà nhà của chúng tôi."
+        },
+        {
+          "english": "Vehicles are parked everywhere along this narrow pavement.",
+          "vietnamese": "Xe cộ đậu khắp mọi nơi dọc theo vỉa hè hẹp này."
+        },
+        {
+          "english": "I have looked everywhere in my room, but I cannot find the contract.",
+          "vietnamese": "Tôi đã tìm khắp mọi nơi trong phòng, nhưng tôi không thể tìm thấy hợp đồng."
+        },
+        {
+          "english": "In the capital, tall towers are rising everywhere these days.",
+          "vietnamese": "Ở thủ đô, những toà tháp cao đang mọc lên khắp mọi nơi trong những ngày này."
+        },
+        {
+          "english": "Why do beggars sit everywhere around this busy market?",
+          "vietnamese": "Tại sao những người ăn xin ngồi khắp mọi nơi quanh khu chợ đông đúc này?"
+        }
+      ]
+    },
+    {
+      "word": "noisy",
+      "sentences": [
+        {
+          "english": "The street is noisy in the evening, but our flat is still comfortable.",
+          "vietnamese": "Con phố ồn ào vào buổi tối, nhưng căn hộ của chúng tôi vẫn thoải mái."
+        },
+        {
+          "english": "The nightclub downstairs is noisy, so I cannot sleep before midnight.",
+          "vietnamese": "Hộp đêm ở tầng dưới ồn ào, nên tôi không thể ngủ trước nửa đêm."
+        },
+        {
+          "english": "Our old flat was noisy because the highway ran beside it.",
+          "vietnamese": "Căn hộ cũ của chúng tôi ồn ào vì đường cao tốc chạy bên cạnh nó."
+        },
+        {
+          "english": "Is your neighbourhood noisy at the weekend?",
+          "vietnamese": "Khu phố của bạn có ồn ào vào cuối tuần không?"
+        },
+        {
+          "english": "The bustling market is always noisy from early morning until late evening.",
+          "vietnamese": "Khu chợ nhộn nhịp luôn ồn ào từ sáng sớm đến tối muộn."
+        }
+      ]
+    },
+    {
+      "word": "always",
+      "sentences": [
+        {
+          "english": "My roommate always opens the curtains as soon as she wakes up.",
+          "vietnamese": "Bạn cùng phòng của tôi luôn mở rèm cửa ngay khi cô ấy thức dậy."
+        },
+        {
+          "english": "My father always saves part of his salary for the family.",
+          "vietnamese": "Bố tôi luôn tiết kiệm một phần lương của ông cho gia đình."
+        },
+        {
+          "english": "Prices in the capital are always rising, which worries young couples.",
+          "vietnamese": "Giá cả ở thủ đô luôn tăng, điều đó khiến các cặp vợ chồng trẻ lo lắng."
+        },
+        {
+          "english": "Do you always lock the balcony door before going out?",
+          "vietnamese": "Bạn có luôn khoá cửa ban công trước khi ra ngoài không?"
+        },
+        {
+          "english": "The receptionist has always been punctual and polite with visitors.",
+          "vietnamese": "Nhân viên lễ tân luôn đúng giờ và lịch sự với khách."
+        }
+      ]
+    },
+    {
+      "word": "chilled",
+      "sentences": [
+        {
+          "english": "The small cafe here is a chilled place to spend a rainy afternoon.",
+          "vietnamese": "Quán cà phê nhỏ ở đây là một nơi thư giãn để trải qua một buổi chiều mưa."
+        },
+        {
+          "english": "My housemate is very chilled about noise and never complains.",
+          "vietnamese": "Bạn cùng nhà của tôi rất thư thái về tiếng ồn và không bao giờ phàn nàn."
+        },
+        {
+          "english": "The atmosphere in this bookshop feels chilled on Sunday mornings.",
+          "vietnamese": "Bầu không khí trong hiệu sách này thật thư giãn vào các sáng Chủ nhật."
+        },
+        {
+          "english": "Do you feel chilled when you sit on the balcony after work?",
+          "vietnamese": "Bạn có thấy thư giãn khi bạn ngồi trên ban công sau giờ làm việc không?"
+        },
+        {
+          "english": "Our new manager is chilled, so the whole office has become quieter.",
+          "vietnamese": "Quản lý mới của chúng tôi rất thư thái, nên cả văn phòng đã trở nên yên ắng hơn."
+        }
+      ]
+    },
+    {
+      "word": "vibe",
+      "sentences": [
+        {
+          "english": "This old neighbourhood has a lively vibe, especially when the nightlife begins.",
+          "vietnamese": "Khu phố cũ này có bầu không khí sôi nổi, đặc biệt là khi cuộc sống về đêm bắt đầu."
+        },
+        {
+          "english": "The vibe of this alley changes completely when the shops open.",
+          "vietnamese": "Bầu không khí của con hẻm này thay đổi hoàn toàn khi các cửa hàng mở cửa."
+        },
+        {
+          "english": "I love the quiet vibe of my hometown in the north.",
+          "vietnamese": "Tôi yêu bầu không khí yên tĩnh của quê tôi ở phía bắc."
+        },
+        {
+          "english": "Does the modern shopping centre have a friendly vibe?",
+          "vietnamese": "Trung tâm mua sắm hiện đại có bầu không khí thân thiện không?"
+        },
+        {
+          "english": "The cafe lost its cosy vibe after the owner decorated it again.",
+          "vietnamese": "Quán cà phê mất đi bầu không khí ấm cúng sau khi chủ quán trang trí lại nó."
+        }
+      ]
+    },
+    {
+      "word": "comfy",
+      "sentences": [
+        {
+          "english": "The old armchair near the balcony is comfy and was not expensive.",
+          "vietnamese": "Chiếc ghế bành cũ cạnh ban công rất dễ chịu và không hề đắt."
+        },
+        {
+          "english": "Our new sofa is comfy, and it was quite cheap.",
+          "vietnamese": "Chiếc ghế sofa mới của chúng tôi rất dễ chịu, và nó khá rẻ."
+        },
+        {
+          "english": "She has bought a comfy rug for her small room.",
+          "vietnamese": "Cô ấy đã mua một tấm thảm dễ chịu cho căn phòng nhỏ của cô ấy."
+        },
+        {
+          "english": "Are these chairs comfy enough for your visitors?",
+          "vietnamese": "Những chiếc ghế này có đủ dễ chịu cho khách của bạn không?"
+        },
+        {
+          "english": "I will buy comfy furniture when I have saved enough money.",
+          "vietnamese": "Tôi sẽ mua đồ nội thất dễ chịu khi tôi đã tiết kiệm đủ tiền."
+        }
+      ]
+    },
+    {
+      "word": "cosy",
+      "sentences": [
+        {
+          "english": "Their living room feels warm and cosy in winter.",
+          "vietnamese": "Phòng khách của họ ấm áp và ấm cúng vào mùa đông."
+        },
+        {
+          "english": "We decorated our flat carefully to make it cosy.",
+          "vietnamese": "Chúng tôi đã trang trí căn hộ cẩn thận để làm nó ấm cúng."
+        },
+        {
+          "english": "This cafe is cosy, so I often revise my lessons here.",
+          "vietnamese": "Quán cà phê này ấm cúng, nên tôi thường ôn bài ở đây."
+        },
+        {
+          "english": "Is your new room cosy in winter, or is it cold?",
+          "vietnamese": "Phòng mới của bạn có ấm cúng vào mùa đông không, hay nó lạnh?"
+        },
+        {
+          "english": "Thick curtains will make the bedroom cosy on rainy evenings.",
+          "vietnamese": "Những tấm rèm dày sẽ làm cho phòng ngủ ấm cúng vào những tối mưa."
+        }
+      ]
+    },
+    {
+      "word": "property",
+      "sentences": [
+        {
+          "english": "Prices of property in the capital rise every year, so young people cannot buy houses.",
+          "vietnamese": "Giá tài sản ở thủ đô tăng mỗi năm, nên người trẻ không thể mua nhà."
+        },
+        {
+          "english": "My uncle owns three properties near the new bridge.",
+          "vietnamese": "Chú tôi sở hữu ba tài sản nhà đất gần cây cầu mới."
+        },
+        {
+          "english": "Buying property in this district is not affordable for young workers.",
+          "vietnamese": "Việc mua tài sản nhà đất ở khu này không vừa túi tiền của người lao động trẻ."
+        },
+        {
+          "english": "Has the property price increased since the highway opened?",
+          "vietnamese": "Giá tài sản nhà đất có tăng kể từ khi đường cao tốc mở không?"
+        },
+        {
+          "english": "Please do not damage any property that belongs to the owner.",
+          "vietnamese": "Xin đừng làm hỏng bất kỳ tài sản nào thuộc về người chủ."
+        }
+      ]
+    },
+    {
+      "word": "playground",
+      "sentences": [
+        {
+          "english": "The children play safely on the playground behind our building every afternoon.",
+          "vietnamese": "Bọn trẻ chơi an toàn ở sân chơi phía sau toà nhà của chúng tôi mỗi buổi chiều."
+        },
+        {
+          "english": "Our neighbourhood lacks a large playground for small children.",
+          "vietnamese": "Khu phố của chúng tôi thiếu một sân chơi lớn cho trẻ nhỏ."
+        },
+        {
+          "english": "The city will build two playgrounds beside the river next year.",
+          "vietnamese": "Thành phố sẽ xây hai sân chơi bên cạnh con sông vào năm tới."
+        },
+        {
+          "english": "Is the playground behind your building safe at night?",
+          "vietnamese": "Sân chơi phía sau toà nhà của bạn có an toàn vào ban đêm không?"
+        },
+        {
+          "english": "Someone has left rubbish all over the playground again.",
+          "vietnamese": "Ai đó lại để rác khắp sân chơi một lần nữa."
+        }
+      ]
+    },
+    {
+      "word": "pool",
+      "sentences": [
+        {
+          "english": "Our building has a small pool, but using it costs an extra fee.",
+          "vietnamese": "Toà nhà của chúng tôi có một bể bơi nhỏ, nhưng dùng nó phải trả thêm một khoản phí."
+        },
+        {
+          "english": "I swim in the pool daily before I drive to the office.",
+          "vietnamese": "Tôi bơi ở bể bơi mỗi ngày trước khi tôi lái xe đến văn phòng."
+        },
+        {
+          "english": "The pool was closed last week because the water was unhealthy.",
+          "vietnamese": "Bể bơi đã bị đóng cửa tuần trước vì nước không tốt cho sức khoẻ."
+        },
+        {
+          "english": "Does this expensive building have a rooftop pool?",
+          "vietnamese": "Toà nhà đắt tiền này có bể bơi trên sân thượng không?"
+        },
+        {
+          "english": "Do not throw rubbish into the pool, please.",
+          "vietnamese": "Xin đừng vứt rác xuống bể bơi."
+        }
+      ]
+    }
+  ]
+}

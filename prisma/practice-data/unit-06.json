@@ -1,0 +1,607 @@
+{
+  "unit": 6,
+  "deck": "Unit 6: Bài học chi tiêu của Hinata",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "rich",
+      "sentences": [
+        {
+          "english": "The company owner is rich, but he still lives in a small town.",
+          "vietnamese": "Người chủ công ty thì giàu có, nhưng ông ấy vẫn sống trong một thị trấn nhỏ."
+        },
+        {
+          "english": "Many people think a lawyer becomes rich very quickly after a few years.",
+          "vietnamese": "Nhiều người nghĩ rằng một luật sư trở nên giàu có rất nhanh sau vài năm."
+        },
+        {
+          "english": "Is your favourite musician rich enough to buy that beautiful old house?",
+          "vietnamese": "Nhạc sĩ yêu thích của bạn có đủ giàu để mua căn nhà cổ xinh đẹp đó không?"
+        },
+        {
+          "english": "My grandmother was not rich, but she always helped her jobless neighbours.",
+          "vietnamese": "Bà tôi không giàu có, nhưng bà luôn giúp đỡ những người hàng xóm thất nghiệp."
+        },
+        {
+          "english": "If I become rich, I will open a small school in my hometown.",
+          "vietnamese": "Nếu tôi trở nên giàu có, tôi sẽ mở một ngôi trường nhỏ ở quê tôi."
+        }
+      ]
+    },
+    {
+      "word": "luxury",
+      "sentences": [
+        {
+          "english": "They live in luxury.",
+          "vietnamese": "Họ sống trong xa hoa."
+        },
+        {
+          "english": "A new laptop is a luxury for a jobless student like me.",
+          "vietnamese": "Một chiếc laptop mới là thứ xa xỉ đối với một sinh viên thất nghiệp như tôi."
+        },
+        {
+          "english": "The hotel manager showed the visitor a luxury room near the city centre.",
+          "vietnamese": "Người quản lý khách sạn đã cho vị khách xem một phòng sang trọng gần trung tâm thành phố."
+        },
+        {
+          "english": "We cannot afford luxury holidays abroad while we are paying for this course.",
+          "vietnamese": "Chúng tôi không thể chi trả cho những kỳ nghỉ sang trọng ở nước ngoài khi còn đang trả tiền cho khoá học này."
+        },
+        {
+          "english": "Do you think a personal assistant is a luxury or a real need?",
+          "vietnamese": "Bạn có nghĩ một trợ lý riêng là sự xa xỉ hay là một nhu cầu thật sự không?"
+        }
+      ]
+    },
+    {
+      "word": "expensive",
+      "sentences": [
+        {
+          "english": "Life in the city centre is more expensive than life in my hometown.",
+          "vietnamese": "Cuộc sống ở trung tâm thành phố đắt đỏ hơn cuộc sống ở quê tôi."
+        },
+        {
+          "english": "This design software is expensive, so our small company bought only two copies.",
+          "vietnamese": "Phần mềm thiết kế này đắt đỏ, nên công ty nhỏ của chúng tôi chỉ mua hai bản."
+        },
+        {
+          "english": "The course looked expensive, but the certificate helped me find a better job.",
+          "vietnamese": "Khoá học trông có vẻ đắt đỏ, nhưng tấm chứng chỉ đã giúp tôi tìm được công việc tốt hơn."
+        },
+        {
+          "english": "Do not buy that expensive camera before you talk to a photographer.",
+          "vietnamese": "Đừng mua chiếc máy ảnh đắt đỏ đó trước khi bạn nói chuyện với một nhiếp ảnh gia."
+        },
+        {
+          "english": "Houses near the beautiful old town have become very expensive this year.",
+          "vietnamese": "Những ngôi nhà gần thị trấn cổ xinh đẹp đã trở nên rất đắt đỏ trong năm nay."
+        }
+      ]
+    },
+    {
+      "word": "price",
+      "sentences": [
+        {
+          "english": "The customer asked the salesperson about the price of the laptop.",
+          "vietnamese": "Vị khách hàng hỏi người bán hàng về giá của chiếc laptop."
+        },
+        {
+          "english": "The owner will not change the price, even for a regular customer.",
+          "vietnamese": "Người chủ sẽ không thay đổi giá, ngay cả với một khách hàng quen."
+        },
+        {
+          "english": "What is the price of an English course at that popular centre?",
+          "vietnamese": "Giá của một khoá tiếng Anh ở trung tâm nổi tiếng đó là bao nhiêu?"
+        },
+        {
+          "english": "Prices in the crowded market are rising, so I cook at home.",
+          "vietnamese": "Giá cả trong khu chợ đông đúc đang tăng lên, nên tôi nấu ăn ở nhà."
+        },
+        {
+          "english": "Our designer agreed a fair price before he signed the contract.",
+          "vietnamese": "Nhà thiết kế của chúng tôi đã đồng ý một mức giá hợp lý trước khi anh ấy ký hợp đồng."
+        }
+      ]
+    },
+    {
+      "word": "spend",
+      "sentences": [
+        {
+          "english": "I spend less money now because I want to prepare for my new career.",
+          "vietnamese": "Bây giờ tôi tiêu ít tiền hơn vì tôi muốn chuẩn bị cho sự nghiệp mới của mình."
+        },
+        {
+          "english": "I spend two hours a day learning new vocabulary for my exam.",
+          "vietnamese": "Tôi dành hai tiếng mỗi ngày để học từ vựng mới cho kỳ thi của mình."
+        },
+        {
+          "english": "How much does a student spend on food in this crowded city?",
+          "vietnamese": "Một sinh viên tiêu bao nhiêu tiền cho đồ ăn ở thành phố đông đúc này?"
+        },
+        {
+          "english": "Do not spend all your money before the interview next week.",
+          "vietnamese": "Đừng tiêu hết tiền của bạn trước buổi phỏng vấn tuần tới."
+        },
+        {
+          "english": "She is spending less this term because she wants to save for a course.",
+          "vietnamese": "Cô ấy đang tiêu ít hơn trong học kỳ này vì cô ấy muốn tiết kiệm cho một khoá học."
+        }
+      ]
+    },
+    {
+      "word": "wasteful",
+      "sentences": [
+        {
+          "english": "Printing every document is wasteful, so please read it on the screen.",
+          "vietnamese": "In mọi tài liệu ra là lãng phí, nên hãy đọc nó trên màn hình."
+        },
+        {
+          "english": "Buying a new uniform every term is wasteful for a poor family.",
+          "vietnamese": "Mua một bộ đồng phục mới mỗi học kỳ là lãng phí đối với một gia đình nghèo."
+        },
+        {
+          "english": "My manager says long meetings are wasteful and often cancels them.",
+          "vietnamese": "Quản lý của tôi nói rằng các cuộc họp dài là lãng phí và thường huỷ chúng."
+        },
+        {
+          "english": "It is wasteful to print the application form three times.",
+          "vietnamese": "Thật lãng phí khi in đơn xin việc ra ba lần."
+        },
+        {
+          "english": "Were your shopping habits wasteful when you first lived abroad?",
+          "vietnamese": "Thói quen mua sắm của bạn có lãng phí không khi bạn mới sống ở nước ngoài?"
+        }
+      ]
+    },
+    {
+      "word": "generous",
+      "sentences": [
+        {
+          "english": "Our manager is generous and often buys lunch for every employee.",
+          "vietnamese": "Quản lý của chúng tôi hào phóng và thường mua bữa trưa cho mọi nhân viên."
+        },
+        {
+          "english": "Our company made a generous offer, so the engineer accepted the job.",
+          "vietnamese": "Công ty chúng tôi đã đưa ra một lời đề nghị hào phóng, nên người kỹ sư đã nhận công việc."
+        },
+        {
+          "english": "She is generous with her time and helps every beginner in the class.",
+          "vietnamese": "Cô ấy hào phóng với thời gian của mình và giúp mọi người mới bắt đầu trong lớp."
+        },
+        {
+          "english": "Be generous when a visitor asks you for directions in your hometown.",
+          "vietnamese": "Hãy rộng lượng khi một vị khách hỏi bạn đường đi ở quê bạn."
+        },
+        {
+          "english": "The owner was not generous, so many employees left after one contract.",
+          "vietnamese": "Người chủ đã không hào phóng, nên nhiều nhân viên nghỉ việc sau một hợp đồng."
+        }
+      ]
+    },
+    {
+      "word": "save",
+      "sentences": [
+        {
+          "english": "She wants to save money to attend an English course abroad.",
+          "vietnamese": "Cô ấy muốn tiết kiệm tiền để tham gia một khoá học tiếng Anh ở nước ngoài."
+        },
+        {
+          "english": "We save water at home because the bills in this town are high.",
+          "vietnamese": "Chúng tôi tiết kiệm nước ở nhà vì hoá đơn ở thị trấn này rất cao."
+        },
+        {
+          "english": "I am saving for a camera because I want to become a photographer.",
+          "vietnamese": "Tôi đang tiết kiệm để mua một chiếc máy ảnh vì tôi muốn trở thành nhiếp ảnh gia."
+        },
+        {
+          "english": "Buying a monthly ticket saves me a lot of money every term.",
+          "vietnamese": "Việc mua vé tháng giúp tôi tiết kiệm rất nhiều tiền mỗi học kỳ."
+        },
+        {
+          "english": "How do you save money while you are studying abroad?",
+          "vietnamese": "Bạn tiết kiệm tiền bằng cách nào khi đang du học ở nước ngoài?"
+        }
+      ]
+    },
+    {
+      "word": "bill",
+      "sentences": [
+        {
+          "english": "The receptionist gave me the bill and asked me to sign it.",
+          "vietnamese": "Cô lễ tân đưa tôi hóa đơn và bảo tôi ký vào đó."
+        },
+        {
+          "english": "Our electricity bill is higher in summer, so we opened the windows instead.",
+          "vietnamese": "Hoá đơn tiền điện của chúng tôi cao hơn vào mùa hè, nên chúng tôi mở cửa sổ thay vì bật máy lạnh."
+        },
+        {
+          "english": "Please pay this bill before you sign the new contract.",
+          "vietnamese": "Hãy thanh toán hoá đơn này trước khi bạn ký hợp đồng mới."
+        },
+        {
+          "english": "The accountant checks every bill before the manager approves it.",
+          "vietnamese": "Người kế toán kiểm tra từng hoá đơn trước khi quản lý duyệt nó."
+        },
+        {
+          "english": "Did the receptionist send the bills to your email address?",
+          "vietnamese": "Cô lễ tân đã gửi các hoá đơn đến địa chỉ email của bạn chưa?"
+        }
+      ]
+    },
+    {
+      "word": "due",
+      "sentences": [
+        {
+          "english": "My assignment is due on Friday, but I have not started it yet.",
+          "vietnamese": "Bài tập của tôi đến hạn vào thứ Sáu, nhưng tôi vẫn chưa bắt đầu làm."
+        },
+        {
+          "english": "The fee is due at the end of this term.",
+          "vietnamese": "Khoản phí đến hạn vào cuối học kỳ này."
+        },
+        {
+          "english": "My report is due tomorrow, so I cannot attend the party.",
+          "vietnamese": "Báo cáo của tôi đến hạn vào ngày mai, nên tôi không thể tham dự bữa tiệc."
+        },
+        {
+          "english": "When is your assignment due, and have you started writing it?",
+          "vietnamese": "Bài tập của bạn đến hạn khi nào, và bạn đã bắt đầu viết nó chưa?"
+        },
+        {
+          "english": "The payment was due last Friday, so the company sent a polite note.",
+          "vietnamese": "Khoản thanh toán đã đến hạn thứ Sáu tuần trước, nên công ty đã gửi một lời nhắc lịch sự."
+        }
+      ]
+    },
+    {
+      "word": "rent",
+      "sentences": [
+        {
+          "english": "The rent here is too high for a jobless student like me.",
+          "vietnamese": "Tiền thuê nhà ở đây quá cao đối với một sinh viên thất nghiệp như tôi."
+        },
+        {
+          "english": "Our rent went up again, so we moved closer to my hometown.",
+          "vietnamese": "Tiền thuê nhà của chúng tôi lại tăng, nên chúng tôi chuyển về gần quê tôi hơn."
+        },
+        {
+          "english": "The owner asked for two months of rent before we got the keys.",
+          "vietnamese": "Người chủ đã đòi hai tháng tiền thuê nhà trước khi chúng tôi nhận chìa khoá."
+        },
+        {
+          "english": "How much rent do students pay in this crowded part of town?",
+          "vietnamese": "Sinh viên trả bao nhiêu tiền thuê nhà ở khu vực đông đúc này của thị trấn?"
+        },
+        {
+          "english": "I cannot pay the rent because I am still jobless this month.",
+          "vietnamese": "Tôi không thể trả tiền thuê nhà vì tháng này tôi vẫn còn thất nghiệp."
+        }
+      ]
+    },
+    {
+      "word": "fee",
+      "sentences": [
+        {
+          "english": "The course fee is acceptable, so many students enroll every term.",
+          "vietnamese": "Học phí của khoá học ở mức chấp nhận được, nên nhiều sinh viên đăng ký mỗi học kỳ."
+        },
+        {
+          "english": "The bank teller explained the fee for sending money abroad.",
+          "vietnamese": "Nhân viên ngân hàng đã giải thích khoản phí cho việc gửi tiền ra nước ngoài."
+        },
+        {
+          "english": "Students must pay the fee before they enroll in the new course.",
+          "vietnamese": "Sinh viên phải nộp phí trước khi họ đăng ký khoá học mới."
+        },
+        {
+          "english": "Is there a fee if I contact the lawyer by email?",
+          "vietnamese": "Có mất phí không nếu tôi liên hệ với luật sư qua email?"
+        },
+        {
+          "english": "The fees at that primary school increased after the owner changed.",
+          "vietnamese": "Các khoản phí ở trường tiểu học đó đã tăng sau khi người chủ thay đổi."
+        }
+      ]
+    },
+    {
+      "word": "note",
+      "sentences": [
+        {
+          "english": "He wrote a note to remind his employer about the new contract.",
+          "vietnamese": "Anh ấy viết một mẩu giấy nhắc để nhắc sếp của mình về hợp đồng mới."
+        },
+        {
+          "english": "She left a short note for the secretary about the interview.",
+          "vietnamese": "Cô ấy để lại một mẩu giấy ngắn cho cô thư ký về buổi phỏng vấn."
+        },
+        {
+          "english": "Take notes during the conversation so you can revise them later.",
+          "vietnamese": "Hãy ghi chú trong lúc trò chuyện để bạn có thể ôn lại chúng sau."
+        },
+        {
+          "english": "I found a note on my desk from the new assistant.",
+          "vietnamese": "Tôi tìm thấy một mẩu giấy nhắn trên bàn của mình từ người trợ lý mới."
+        },
+        {
+          "english": "Did you read my note about the fee for the course?",
+          "vietnamese": "Bạn đã đọc ghi chú của tôi về khoản phí cho khoá học chưa?"
+        }
+      ]
+    },
+    {
+      "word": "cost",
+      "sentences": [
+        {
+          "english": "The cost of living is rising.",
+          "vietnamese": "Chi phí sinh hoạt đang tăng."
+        },
+        {
+          "english": "The cost of the course is acceptable for most students here.",
+          "vietnamese": "Chi phí của khoá học ở mức chấp nhận được với phần lớn sinh viên ở đây."
+        },
+        {
+          "english": "Our accountant calculated the total cost of the new office design.",
+          "vietnamese": "Kế toán của chúng tôi đã tính tổng chi phí của thiết kế văn phòng mới."
+        },
+        {
+          "english": "What is the cost of a flight to the north of the country?",
+          "vietnamese": "Chi phí của một chuyến bay ra miền bắc đất nước là bao nhiêu?"
+        },
+        {
+          "english": "Rising costs made the owner close one shop in our town.",
+          "vietnamese": "Chi phí tăng cao đã khiến người chủ đóng cửa một cửa hàng ở thị trấn của chúng tôi."
+        }
+      ]
+    },
+    {
+      "word": "broke",
+      "sentences": [
+        {
+          "english": "I am broke this month, so I cook at home every evening.",
+          "vietnamese": "Tháng này tôi cháy túi, nên tôi nấu ăn ở nhà mỗi tối."
+        },
+        {
+          "english": "My brother is broke again, so he cannot attend the trip.",
+          "vietnamese": "Anh trai tôi lại cháy túi, nên anh ấy không thể tham gia chuyến đi."
+        },
+        {
+          "english": "I was broke last term, so I borrowed money from my sister.",
+          "vietnamese": "Tôi đã cháy túi vào học kỳ trước, nên tôi đã vay tiền của chị tôi."
+        },
+        {
+          "english": "Are you broke, or can you help your jobless friend this week?",
+          "vietnamese": "Bạn đang cháy túi, hay bạn có thể giúp người bạn thất nghiệp của mình tuần này?"
+        },
+        {
+          "english": "Being broke helped me learn a useful skill about planning money.",
+          "vietnamese": "Việc cháy túi đã giúp tôi học được một kỹ năng hữu ích về việc lên kế hoạch tiền bạc."
+        }
+      ]
+    },
+    {
+      "word": "borrow",
+      "sentences": [
+        {
+          "english": "I had to borrow money from my employer before my first salary arrived.",
+          "vietnamese": "Tôi đã phải vay tiền của sếp trước khi tháng lương đầu tiên của tôi về."
+        },
+        {
+          "english": "Can I borrow your camera for the photographer course next weekend?",
+          "vietnamese": "Tôi có thể mượn máy ảnh của bạn cho khoá học nhiếp ảnh cuối tuần tới không?"
+        },
+        {
+          "english": "She borrowed a book about engineering from the school library.",
+          "vietnamese": "Cô ấy đã mượn một cuốn sách về kỹ thuật từ thư viện trường."
+        },
+        {
+          "english": "Do not borrow money from a stranger you do not know well.",
+          "vietnamese": "Đừng vay tiền từ một người lạ mà bạn không biết rõ."
+        },
+        {
+          "english": "He is borrowing a suit for his first interview tomorrow morning.",
+          "vietnamese": "Anh ấy đang mượn một bộ vest cho buổi phỏng vấn đầu tiên vào sáng mai."
+        }
+      ]
+    },
+    {
+      "word": "lend",
+      "sentences": [
+        {
+          "english": "My assistant agreed to lend me her laptop for the presentation.",
+          "vietnamese": "Trợ lý của tôi đồng ý cho tôi mượn laptop của cô ấy cho buổi thuyết trình."
+        },
+        {
+          "english": "Banks lend money to people who have a stable job and contract.",
+          "vietnamese": "Các ngân hàng cho vay tiền với những người có công việc và hợp đồng ổn định."
+        },
+        {
+          "english": "Will you lend me your dictionary so I can revise new vocabulary?",
+          "vietnamese": "Bạn sẽ cho tôi mượn từ điển của bạn để tôi có thể ôn lại từ vựng mới chứ?"
+        },
+        {
+          "english": "My neighbour is lending us a tool for the kitchen repair.",
+          "vietnamese": "Người hàng xóm của tôi đang cho chúng tôi mượn một dụng cụ để sửa bếp."
+        },
+        {
+          "english": "Please lend this document to the secretary before lunch.",
+          "vietnamese": "Hãy cho cô thư ký mượn tài liệu này trước bữa trưa."
+        }
+      ]
+    },
+    {
+      "word": "owe",
+      "sentences": [
+        {
+          "english": "I still owe my brother some money for the interview suit.",
+          "vietnamese": "Tôi vẫn còn nợ anh trai tôi một ít tiền cho bộ vest đi phỏng vấn."
+        },
+        {
+          "english": "How much do you owe the company after that expensive trip?",
+          "vietnamese": "Bạn nợ công ty bao nhiêu sau chuyến đi đắt đỏ đó?"
+        },
+        {
+          "english": "She owes the school one term of fees, so she cannot enroll.",
+          "vietnamese": "Cô ấy nợ nhà trường một học kỳ tiền phí, nên cô ấy không thể đăng ký học."
+        },
+        {
+          "english": "I owed my employer a long explanation about my absent days.",
+          "vietnamese": "Tôi đã nợ sếp của mình một lời giải thích dài về những ngày vắng mặt."
+        },
+        {
+          "english": "We do not owe anyone money now, and that feels peaceful.",
+          "vietnamese": "Bây giờ chúng tôi không nợ ai tiền cả, và điều đó thật yên bình."
+        }
+      ]
+    },
+    {
+      "word": "manage",
+      "sentences": [
+        {
+          "english": "A good accountant can manage the money of a small company.",
+          "vietnamese": "Một kế toán giỏi có thể quản lý tiền bạc của một công ty nhỏ."
+        },
+        {
+          "english": "She manages a busy team of designers in the city centre.",
+          "vietnamese": "Cô ấy quản lý một nhóm nhà thiết kế bận rộn ở trung tâm thành phố."
+        },
+        {
+          "english": "I cannot manage my time well when I have many assignments.",
+          "vietnamese": "Tôi không thể quản lý thời gian tốt khi tôi có nhiều bài tập."
+        },
+        {
+          "english": "He is managing a small company while he continues his course.",
+          "vietnamese": "Anh ấy đang quản lý một công ty nhỏ trong khi anh ấy tiếp tục khoá học của mình."
+        },
+        {
+          "english": "Can a freelancer manage money without an accountant?",
+          "vietnamese": "Một người làm tự do có thể quản lý tiền bạc mà không cần kế toán không?"
+        }
+      ]
+    },
+    {
+      "word": "expense",
+      "sentences": [
+        {
+          "english": "Travel is my biggest expense because I live far from the city centre.",
+          "vietnamese": "Đi lại là khoản chi lớn nhất của tôi vì tôi sống xa trung tâm thành phố."
+        },
+        {
+          "english": "The company pays every expense during a business trip abroad.",
+          "vietnamese": "Công ty trả mọi khoản chi trong một chuyến công tác ở nước ngoài."
+        },
+        {
+          "english": "Books were my biggest expense when I attended that secondary school.",
+          "vietnamese": "Sách là khoản chi lớn nhất của tôi khi tôi học ở trường trung học đó."
+        },
+        {
+          "english": "Our accountant listed all the expenses in one clear document.",
+          "vietnamese": "Kế toán của chúng tôi đã liệt kê tất cả các khoản chi trong một tài liệu rõ ràng."
+        },
+        {
+          "english": "Is a private English course an expense or a good investment?",
+          "vietnamese": "Một khoá tiếng Anh riêng là một khoản chi hay một khoản đầu tư tốt?"
+        }
+      ]
+    },
+    {
+      "word": "cheap",
+      "sentences": [
+        {
+          "english": "The food in this crowded market is cheap and surprisingly good.",
+          "vietnamese": "Đồ ăn ở khu chợ đông đúc này rẻ và ngon một cách bất ngờ."
+        },
+        {
+          "english": "This hotel is cheap, and the staff are always punctual and polite.",
+          "vietnamese": "Khách sạn này rẻ, và nhân viên thì luôn đúng giờ và lịch sự."
+        },
+        {
+          "english": "I bought a cheap tool from the builder near my house.",
+          "vietnamese": "Tôi đã mua một dụng cụ rẻ từ người thợ xây gần nhà tôi."
+        },
+        {
+          "english": "Flights to the south are cheap in October, so book early.",
+          "vietnamese": "Các chuyến bay vào miền nam rẻ vào tháng Mười, nên hãy đặt vé sớm."
+        },
+        {
+          "english": "Do not choose a cheap course if the teachers are not qualified.",
+          "vietnamese": "Đừng chọn một khoá học rẻ nếu các giáo viên không đủ trình độ."
+        }
+      ]
+    },
+    {
+      "word": "reasonable",
+      "sentences": [
+        {
+          "english": "The builder offered a reasonable price for our new kitchen.",
+          "vietnamese": "Người thợ xây đưa ra một mức giá hợp lý cho căn bếp mới của chúng tôi."
+        },
+        {
+          "english": "Her salary offer sounds reasonable for a beginner in this career.",
+          "vietnamese": "Mức lương cô ấy đề nghị nghe có vẻ hợp lý với một người mới vào nghề này."
+        },
+        {
+          "english": "The fee is reasonable, so many students from my town enroll here.",
+          "vietnamese": "Khoản phí này hợp lý, nên nhiều sinh viên từ thị trấn của tôi đăng ký học ở đây."
+        },
+        {
+          "english": "Is that a reasonable price for a qualified private teacher?",
+          "vietnamese": "Đó có phải là một mức giá hợp lý cho một giáo viên riêng có trình độ không?"
+        },
+        {
+          "english": "We made a reasonable plan to save money before the interview trip.",
+          "vietnamese": "Chúng tôi đã lập một kế hoạch hợp lý để tiết kiệm tiền trước chuyến đi phỏng vấn."
+        }
+      ]
+    },
+    {
+      "word": "raise",
+      "sentences": [
+        {
+          "english": "She got a raise because she was always punctual and worked hard.",
+          "vietnamese": "Cô ấy được tăng lương vì cô ấy luôn đúng giờ và làm việc chăm chỉ."
+        },
+        {
+          "english": "He asked his employer for a raise after finishing the big project.",
+          "vietnamese": "Anh ấy đã xin sếp tăng lương sau khi hoàn thành dự án lớn."
+        },
+        {
+          "english": "Every employee hopes for a raise at the end of the year.",
+          "vietnamese": "Mọi nhân viên đều mong được tăng lương vào cuối năm."
+        },
+        {
+          "english": "Did the manager promise you a raise or only a new contract?",
+          "vietnamese": "Quản lý đã hứa tăng lương cho bạn hay chỉ hứa một hợp đồng mới?"
+        },
+        {
+          "english": "A small raise will not cover the rising cost of living here.",
+          "vietnamese": "Một mức tăng lương nhỏ sẽ không bù nổi chi phí sinh hoạt đang tăng ở đây."
+        }
+      ]
+    },
+    {
+      "word": "decrease",
+      "sentences": [
+        {
+          "english": "The company wants to decrease costs, so it hired fewer employees.",
+          "vietnamese": "Công ty muốn giảm chi phí, nên họ đã tuyển ít nhân viên hơn."
+        },
+        {
+          "english": "Prices usually decrease after the crowded holiday season ends.",
+          "vietnamese": "Giá cả thường giảm sau khi mùa lễ đông đúc kết thúc."
+        },
+        {
+          "english": "My expenses decreased when I moved back to my peaceful hometown.",
+          "vietnamese": "Các khoản chi của tôi đã giảm khi tôi chuyển về quê nhà yên bình của mình."
+        },
+        {
+          "english": "The number of students is decreasing at that primary school.",
+          "vietnamese": "Số lượng học sinh đang giảm ở ngôi trường tiểu học đó."
+        },
+        {
+          "english": "How can a freelancer decrease costs without losing good customers?",
+          "vietnamese": "Một người làm tự do có thể giảm chi phí mà không mất khách hàng tốt bằng cách nào?"
+        }
+      ]
+    }
+  ]
+}

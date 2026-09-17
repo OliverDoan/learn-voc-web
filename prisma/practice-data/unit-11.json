@@ -1,0 +1,247 @@
+{
+  "unit": 11,
+  "deck": "Unit 11: Chuyến du lịch đầu tiên của hai người",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "nowadays",
+      "sentences": [
+        { "english": "Nowadays most people book their trips online because it is cheap and convenient.", "vietnamese": "Ngày nay hầu hết mọi người đặt chuyến đi trực tuyến vì nó rẻ và tiện lợi." },
+        { "english": "Nowadays many tourists prefer a cheap flat to an expensive hotel room.", "vietnamese": "Ngày nay nhiều khách du lịch thích một căn hộ rẻ hơn là một phòng khách sạn đắt đỏ." },
+        { "english": "Do people nowadays still write to their friends from abroad?", "vietnamese": "Ngày nay người ta còn viết thư cho bạn bè từ nước ngoài nữa không?" },
+        { "english": "Nowadays the city centre is always crowded with young visitors.", "vietnamese": "Ngày nay trung tâm thành phố luôn đông đúc khách tham quan trẻ tuổi." },
+        { "english": "Prices have risen a lot nowadays, so we spend less on luxury things.", "vietnamese": "Giá cả đã tăng nhiều ngày nay, nên chúng tôi chi ít hơn cho những thứ xa xỉ." }
+      ]
+    },
+    {
+      "word": "travelling",
+      "sentences": [
+        { "english": "Travelling by train is comfortable and quite cheap.", "vietnamese": "Du lịch bằng tàu hỏa thoải mái và khá rẻ." },
+        { "english": "Travelling abroad gives you a real chance to learn another culture.", "vietnamese": "Du lịch nước ngoài cho bạn một cơ hội thực sự để học một nền văn hoá khác." },
+        { "english": "My father says travelling is the best way to open your mind.", "vietnamese": "Bố tôi nói du lịch là cách tốt nhất để mở mang đầu óc." },
+        { "english": "We have saved enough money for travelling next summer.", "vietnamese": "Chúng tôi đã tiết kiệm đủ tiền cho việc du lịch vào mùa hè tới." },
+        { "english": "Is travelling by bus around the capital safe at night?", "vietnamese": "Đi du lịch bằng xe buýt quanh thủ đô có an toàn vào ban đêm không?" }
+      ]
+    },
+    {
+      "word": "excited",
+      "sentences": [
+        { "english": "The children were excited when they saw the pool at the hotel.", "vietnamese": "Bọn trẻ rất hào hứng khi chúng nhìn thấy bể bơi ở khách sạn." },
+        { "english": "I am so excited about our first trip abroad next month.", "vietnamese": "Tôi rất hào hứng về chuyến đi nước ngoài đầu tiên của chúng ta vào tháng tới." },
+        { "english": "She was excited when the friendly owner invited us to dinner.", "vietnamese": "Cô ấy hào hứng khi người chủ thân thiện mời chúng tôi ăn tối." },
+        { "english": "Why are you not excited about the lively nightlife of this district?", "vietnamese": "Sao bạn không hào hứng với cuộc sống về đêm sôi động của quận này?" },
+        { "english": "The whole class has been excited since the teacher announced the school tour.", "vietnamese": "Cả lớp đã hào hứng từ khi giáo viên thông báo chuyến tham quan của trường." }
+      ]
+    },
+    {
+      "word": "destination",
+      "sentences": [
+        { "english": "Da Nang is a popular destination for summer holidays.", "vietnamese": "Đà Nẵng là điểm đến nổi tiếng cho kỳ nghỉ hè." },
+        { "english": "Our final destination was a peaceful town in the north.", "vietnamese": "Điểm đến cuối cùng của chúng tôi là một thị trấn yên bình ở phía bắc." },
+        { "english": "Which destination do you think is safe and affordable for students?", "vietnamese": "Bạn nghĩ điểm đến nào an toàn và có giá phải chăng cho sinh viên?" },
+        { "english": "Choose a destination with good services and modern facilities.", "vietnamese": "Hãy chọn một điểm đến có dịch vụ tốt và các tiện ích hiện đại." },
+        { "english": "Many destinations near the capital have developed quickly in recent years.", "vietnamese": "Nhiều điểm đến gần thủ đô đã phát triển nhanh chóng trong những năm gần đây." }
+      ]
+    },
+    {
+      "word": "visa",
+      "sentences": [
+        { "english": "You need a valid visa, so please prepare your documents at least one month early.", "vietnamese": "Bạn cần một thị thực hợp lệ, nên hãy chuẩn bị giấy tờ trước ít nhất một tháng." },
+        { "english": "My visa application took three weeks, so I had to wait.", "vietnamese": "Hồ sơ xin thị thực của tôi mất ba tuần, nên tôi phải chờ." },
+        { "english": "Do foreigners need a visa to live in this country?", "vietnamese": "Người nước ngoài có cần thị thực để sống ở đất nước này không?" },
+        { "english": "The officer at the counter will inform you about the visa fee.", "vietnamese": "Nhân viên ở quầy sẽ thông báo cho bạn về lệ phí thị thực." },
+        { "english": "She has already arranged her visa and booked a cosy room downtown.", "vietnamese": "Cô ấy đã sắp xếp xong thị thực và đặt một căn phòng ấm cúng ở trung tâm." }
+      ]
+    },
+    {
+      "word": "flight",
+      "sentences": [
+        { "english": "Our flight to Tokyo leaves early, so we must drive to the airport at dawn.", "vietnamese": "Chuyến bay đến Tokyo của chúng tôi khởi hành sớm, nên chúng tôi phải lái xe ra sân bay lúc rạng sáng." },
+        { "english": "Our flight was cheap because we booked it six months early.", "vietnamese": "Chuyến bay của chúng tôi rẻ vì chúng tôi đã đặt trước sáu tháng." },
+        { "english": "How much does a flight to the capital cost nowadays?", "vietnamese": "Một chuyến bay đến thủ đô giá bao nhiêu ngày nay?" },
+        { "english": "Please contact the company if your flight is cancelled.", "vietnamese": "Hãy liên hệ công ty nếu chuyến bay của bạn bị huỷ." },
+        { "english": "Night flights are noisy, but they are always cheaper than morning ones.", "vietnamese": "Các chuyến bay đêm ồn ào, nhưng chúng luôn rẻ hơn các chuyến bay buổi sáng." }
+      ]
+    },
+    {
+      "word": "reservation",
+      "sentences": [
+        { "english": "I made a reservation at a comfortable hotel near the central square.", "vietnamese": "Tôi đã đặt chỗ ở một khách sạn thoải mái gần quảng trường trung tâm." },
+        { "english": "I have changed my reservation because the price was too expensive.", "vietnamese": "Tôi đã đổi đặt chỗ vì giá quá đắt." },
+        { "english": "Did you make a reservation at that lively restaurant near the square?", "vietnamese": "Bạn đã đặt chỗ ở nhà hàng sôi động gần quảng trường đó chưa?" },
+        { "english": "Please show your reservation to the friendly staff at the gate.", "vietnamese": "Hãy đưa phiếu đặt chỗ của bạn cho nhân viên thân thiện ở cổng." },
+        { "english": "Reservations for this cosy hotel open two months before summer.", "vietnamese": "Việc đặt chỗ cho khách sạn ấm cúng này mở trước mùa hè hai tháng." }
+      ]
+    },
+    {
+      "word": "delay",
+      "sentences": [
+        { "english": "The flight had a long delay, so we had to wait in the noisy airport.", "vietnamese": "Chuyến bay có một sự trì hoãn dài, nên chúng tôi phải đợi trong sân bay ồn ào." },
+        { "english": "A short delay is common when the weather is bad.", "vietnamese": "Một sự trì hoãn ngắn là chuyện thường khi thời tiết xấu." },
+        { "english": "Will the delay cost us more money at the hotel?", "vietnamese": "Sự trì hoãn có khiến chúng ta tốn thêm tiền ở khách sạn không?" },
+        { "english": "The staff did not inform us about the delay until midnight.", "vietnamese": "Nhân viên đã không thông báo cho chúng tôi về sự trì hoãn cho tới nửa đêm." },
+        { "english": "Long delays are always annoying for tourists who travel with children.", "vietnamese": "Những sự trì hoãn dài luôn gây khó chịu cho khách du lịch đi cùng trẻ nhỏ." }
+      ]
+    },
+    {
+      "word": "disappointed",
+      "sentences": [
+        { "english": "We were disappointed because the hotel room was cramped and quite dirty.", "vietnamese": "Chúng tôi thất vọng vì căn phòng khách sạn chật chội và khá bẩn." },
+        { "english": "I was disappointed with the poor service at the reception desk.", "vietnamese": "Tôi thất vọng với dịch vụ kém ở quầy tiếp tân." },
+        { "english": "Do not be disappointed if the weather is not beautiful tomorrow.", "vietnamese": "Đừng thất vọng nếu thời tiết ngày mai không đẹp." },
+        { "english": "My housemate looked disappointed because the pool was closed all week.", "vietnamese": "Bạn cùng nhà của tôi trông thất vọng vì hồ bơi đóng cửa cả tuần." },
+        { "english": "Many visitors have been disappointed by the rubbish on the beautiful beach.", "vietnamese": "Nhiều du khách đã thất vọng vì rác trên bãi biển xinh đẹp." }
+      ]
+    },
+    {
+      "word": "journey",
+      "sentences": [
+        { "english": "The journey to the mountain took six hours, but the view was amazing.", "vietnamese": "Cuộc hành trình đến ngọn núi mất sáu tiếng, nhưng khung cảnh thật tuyệt vời." },
+        { "english": "Our journey to the south was long but quite comfortable.", "vietnamese": "Hành trình của chúng tôi vào miền nam dài nhưng khá thoải mái." },
+        { "english": "How long is the journey from your hometown to the capital?", "vietnamese": "Hành trình từ quê bạn đến thủ đô dài bao lâu?" },
+        { "english": "We are planning a cheap journey across the country by train.", "vietnamese": "Chúng tôi đang lên kế hoạch cho một hành trình rẻ xuyên đất nước bằng tàu hoả." },
+        { "english": "Long journeys always make my grandmother tired, so she prefers short trips.", "vietnamese": "Những hành trình dài luôn làm bà tôi mệt, nên bà thích các chuyến đi ngắn." }
+      ]
+    },
+    {
+      "word": "chance",
+      "sentences": [
+        { "english": "This trip is a good chance to leave the noisy city for a week.", "vietnamese": "Chuyến đi này là một cơ hội tốt để rời xa thành phố ồn ào trong một tuần." },
+        { "english": "I never had the chance to live abroad when I was young.", "vietnamese": "Tôi chưa bao giờ có cơ hội sống ở nước ngoài khi còn trẻ." },
+        { "english": "Is there any chance of finding affordable accommodation near the centre?", "vietnamese": "Có cơ hội nào tìm được chỗ ở giá phải chăng gần trung tâm không?" },
+        { "english": "Take this chance to improve your speaking skills with foreigners.", "vietnamese": "Hãy nắm lấy cơ hội này để cải thiện kỹ năng nói của bạn với người nước ngoài." },
+        { "english": "Students will have many chances to travel if they save money early.", "vietnamese": "Sinh viên sẽ có nhiều cơ hội đi du lịch nếu họ tiết kiệm tiền sớm." }
+      ]
+    },
+    {
+      "word": "escape",
+      "sentences": [
+        { "english": "Many people travel to the mountains to escape the pollution of the capital.", "vietnamese": "Nhiều người đi du lịch lên núi để thoát khỏi ô nhiễm của thủ đô." },
+        { "english": "We escaped the crowded town for two peaceful days by the sea.", "vietnamese": "Chúng tôi đã trốn khỏi thị trấn đông đúc để có hai ngày yên bình bên biển." },
+        { "english": "I often escape the noisy office and walk along the quiet alley.", "vietnamese": "Tôi thường trốn khỏi văn phòng ồn ào và đi bộ dọc con hẻm yên tĩnh." },
+        { "english": "Can we escape this expensive city and rent a small house instead?", "vietnamese": "Chúng ta có thể thoát khỏi thành phố đắt đỏ này và thuê một căn nhà nhỏ thay vào đó không?" },
+        { "english": "She is escaping the daily traffic by cycling to work.", "vietnamese": "Cô ấy đang thoát khỏi cảnh giao thông hằng ngày bằng cách đạp xe đi làm." }
+      ]
+    },
+    {
+      "word": "reception",
+      "sentences": [
+        { "english": "Please leave your key at the reception and inform the staff before leaving.", "vietnamese": "Hãy để chìa khoá ở quầy tiếp tân và thông báo cho nhân viên trước khi rời đi." },
+        { "english": "The reception is open all night, so you can arrive late.", "vietnamese": "Quầy tiếp tân mở cả đêm, nên bạn có thể đến muộn." },
+        { "english": "Ask the reception if the gym is free for guests.", "vietnamese": "Hãy hỏi quầy tiếp tân xem phòng tập có miễn phí cho khách không." },
+        { "english": "A friendly woman at the reception described the area to us.", "vietnamese": "Một người phụ nữ thân thiện ở quầy tiếp tân đã mô tả khu vực đó cho chúng tôi." },
+        { "english": "We waited at the reception because our room was not ready.", "vietnamese": "Chúng tôi đợi ở quầy tiếp tân vì phòng của chúng tôi chưa sẵn sàng." }
+      ]
+    },
+    {
+      "word": "stay",
+      "sentences": [
+        { "english": "During our stay, the friendly owner gave us free breakfast every morning.", "vietnamese": "Trong thời gian chúng tôi ở đó, người chủ thân thiện đã cho chúng tôi bữa sáng miễn phí mỗi sáng." },
+        { "english": "Our stay in the cosy flat cost less than a hotel.", "vietnamese": "Kỳ lưu trú của chúng tôi trong căn hộ ấm cúng tốn ít hơn ở khách sạn." },
+        { "english": "How long was your stay in that beautiful town?", "vietnamese": "Kỳ lưu trú của bạn ở thị trấn xinh đẹp đó kéo dài bao lâu?" },
+        { "english": "Enjoy your stay and please contact the manager if you need help.", "vietnamese": "Chúc bạn có kỳ lưu trú vui vẻ và hãy liên hệ quản lý nếu bạn cần giúp đỡ." },
+        { "english": "Short stays in the capital are always pricey during the summer.", "vietnamese": "Những kỳ lưu trú ngắn ở thủ đô luôn đắt đỏ vào mùa hè." }
+      ]
+    },
+    {
+      "word": "experience",
+      "sentences": [
+        { "english": "I want to experience the vibrant nightlife of this city at least once.", "vietnamese": "Tôi muốn trải nghiệm cuộc sống về đêm sôi động của thành phố này ít nhất một lần." },
+        { "english": "We experienced the local culture by living with a friendly family.", "vietnamese": "Chúng tôi đã trải nghiệm văn hoá địa phương bằng cách sống cùng một gia đình thân thiện." },
+        { "english": "Have you ever experienced the bustling atmosphere of a night market?", "vietnamese": "Bạn đã bao giờ trải nghiệm bầu không khí náo nhiệt của một khu chợ đêm chưa?" },
+        { "english": "Young travellers experience many difficulties when they do not know the language.", "vietnamese": "Những người trẻ đi du lịch trải nghiệm nhiều khó khăn khi họ không biết ngôn ngữ." },
+        { "english": "Come here to experience the peaceful vibe of the old town.", "vietnamese": "Hãy đến đây để trải nghiệm không khí yên bình của khu phố cổ." }
+      ]
+    },
+    {
+      "word": "amazing",
+      "sentences": [
+        { "english": "The view from the top was simply amazing.", "vietnamese": "Khung cảnh từ trên đỉnh thật đáng kinh ngạc." },
+        { "english": "The food at that cheap restaurant was absolutely amazing.", "vietnamese": "Đồ ăn ở nhà hàng rẻ đó thật sự đáng kinh ngạc." },
+        { "english": "We had an amazing time at the lively square last night.", "vietnamese": "Chúng tôi đã có một khoảng thời gian tuyệt vời ở quảng trường sôi động tối qua." },
+        { "english": "Is it amazing to live so close to a beautiful beach?", "vietnamese": "Sống gần một bãi biển xinh đẹp như vậy có tuyệt vời không?" },
+        { "english": "Our guide has shown us many amazing places around the capital.", "vietnamese": "Hướng dẫn viên của chúng tôi đã cho chúng tôi xem nhiều nơi tuyệt vời quanh thủ đô." }
+      ]
+    },
+    {
+      "word": "huge",
+      "sentences": [
+        { "english": "The hotel had a huge swimming pool outside.", "vietnamese": "Khách sạn có một hồ bơi khổng lồ bên ngoài." },
+        { "english": "A huge skyscraper now stands in the centre of our town.", "vietnamese": "Một toà nhà chọc trời khổng lồ giờ đứng ở trung tâm thị trấn chúng tôi." },
+        { "english": "The hotel charged us a huge fee for the late check out.", "vietnamese": "Khách sạn đã tính cho chúng tôi một khoản phí khổng lồ vì trả phòng muộn." },
+        { "english": "Do not throw rubbish into that huge river, please.", "vietnamese": "Xin đừng vứt rác xuống con sông khổng lồ đó." },
+        { "english": "There is a huge demand for affordable rooms during the holidays.", "vietnamese": "Có một nhu cầu khổng lồ về phòng giá phải chăng trong các kỳ nghỉ." }
+      ]
+    },
+    {
+      "word": "adventure",
+      "sentences": [
+        { "english": "Our walk through the old alley became a small adventure that afternoon.", "vietnamese": "Chuyến đi bộ của chúng tôi qua con hẻm cũ đã trở thành một cuộc phiêu lưu nhỏ vào chiều hôm đó." },
+        { "english": "Our first adventure abroad taught us a lot about other cultures.", "vietnamese": "Cuộc phiêu lưu đầu tiên ở nước ngoài dạy chúng tôi nhiều điều về các nền văn hoá khác." },
+        { "english": "Do you want a peaceful holiday or a real adventure?", "vietnamese": "Bạn muốn một kỳ nghỉ yên bình hay một cuộc phiêu lưu thực sự?" },
+        { "english": "Climbing that tower was an adventure we will never forget.", "vietnamese": "Leo lên toà tháp đó là một cuộc phiêu lưu chúng tôi sẽ không bao giờ quên." },
+        { "english": "My housemate is always looking for cheap adventures in the mountains.", "vietnamese": "Bạn cùng nhà của tôi luôn tìm kiếm những cuộc phiêu lưu rẻ tiền trên núi." }
+      ]
+    },
+    {
+      "word": "discover",
+      "sentences": [
+        { "english": "We love to discover new places on our travels.", "vietnamese": "Chúng tôi thích khám phá những nơi mới khi đi du lịch." },
+        { "english": "I discovered a cosy little cafe in a narrow alley yesterday.", "vietnamese": "Tôi đã khám phá ra một quán cà phê nhỏ ấm cúng trong một con hẻm hẹp hôm qua." },
+        { "english": "Tourists often discover the best food outside the crowded centre.", "vietnamese": "Khách du lịch thường khám phá ra đồ ăn ngon nhất bên ngoài khu trung tâm đông đúc." },
+        { "english": "Have you discovered the new playground behind our building yet?", "vietnamese": "Bạn đã khám phá ra sân chơi mới phía sau toà nhà của chúng ta chưa?" },
+        { "english": "We are discovering the quiet neighbourhoods near the old bridge.", "vietnamese": "Chúng tôi đang khám phá những khu phố yên tĩnh gần cây cầu cũ." }
+      ]
+    },
+    {
+      "word": "tour",
+      "sentences": [
+        { "english": "We joined a city tour and visited every famous area in one day.", "vietnamese": "Chúng tôi tham gia một chuyến tham quan thành phố và ghé thăm mọi khu vực nổi tiếng trong một ngày." },
+        { "english": "The night tour of the capital was exciting and quite cheap.", "vietnamese": "Chuyến tham quan ban đêm của thủ đô thú vị và khá rẻ." },
+        { "english": "Shall we arrange a boat tour along the river tomorrow morning?", "vietnamese": "Chúng ta sắp xếp một chuyến tham quan bằng thuyền dọc sông vào sáng mai nhé?" },
+        { "english": "The tour guide informed us about the local culture and food.", "vietnamese": "Hướng dẫn viên của chuyến tham quan đã thông báo cho chúng tôi về văn hoá và ẩm thực địa phương." },
+        { "english": "Walking tours are popular because they are safe and free.", "vietnamese": "Các chuyến tham quan đi bộ được ưa chuộng vì chúng an toàn và miễn phí." }
+      ]
+    },
+    {
+      "word": "tourist",
+      "sentences": [
+        { "english": "Every tourist wants a photo in front of the tall tower.", "vietnamese": "Mọi khách du lịch đều muốn có một bức ảnh trước toà tháp cao." },
+        { "english": "Thousands of tourists visit this beautiful square every summer.", "vietnamese": "Hàng nghìn khách du lịch ghé thăm quảng trường xinh đẹp này mỗi mùa hè." },
+        { "english": "A careless tourist lost his wallet to a pickpocket yesterday.", "vietnamese": "Một khách du lịch bất cẩn đã mất ví vào tay một kẻ móc túi hôm qua." },
+        { "english": "Are tourists allowed to enter this old building for free?", "vietnamese": "Khách du lịch có được phép vào toà nhà cổ này miễn phí không?" },
+        { "english": "The town has become more crowded since tourists discovered its peaceful beaches.", "vietnamese": "Thị trấn đã trở nên đông đúc hơn từ khi khách du lịch khám phá ra những bãi biển yên bình của nó." }
+      ]
+    },
+    {
+      "word": "moment",
+      "sentences": [
+        { "english": "Please wait a moment while I find your room.", "vietnamese": "Xin chờ một khoảnh khắc trong khi tôi tìm phòng cho bạn." },
+        { "english": "At that moment the light in our room suddenly went out.", "vietnamese": "Vào khoảnh khắc đó ánh đèn trong phòng chúng tôi đột nhiên tắt." },
+        { "english": "I will never forget the moment we saw the huge tower.", "vietnamese": "Tôi sẽ không bao giờ quên khoảnh khắc chúng tôi nhìn thấy toà tháp khổng lồ." },
+        { "english": "Can you wait a moment while I contact the manager?", "vietnamese": "Bạn có thể đợi một lát trong khi tôi liên hệ với quản lý không?" },
+        { "english": "Our best moments abroad were always simple and cheap ones.", "vietnamese": "Những khoảnh khắc đẹp nhất của chúng tôi ở nước ngoài luôn là những khoảnh khắc giản dị và rẻ tiền." }
+      ]
+    },
+    {
+      "word": "memory",
+      "sentences": [
+        { "english": "That quiet beach gave me a beautiful memory of our first holiday together.", "vietnamese": "Bãi biển yên tĩnh đó đã cho tôi một kỉ niệm đẹp về kỳ nghỉ đầu tiên của chúng tôi cùng nhau." },
+        { "english": "My grandmother still has a good memory of her old hometown.", "vietnamese": "Bà tôi vẫn có trí nhớ tốt về quê cũ của bà." },
+        { "english": "These photos bring back happy memories of our peaceful village.", "vietnamese": "Những bức ảnh này mang lại những kỉ niệm hạnh phúc về ngôi làng yên bình của chúng tôi." },
+        { "english": "Do you have any memory of the friendly family we stayed with?", "vietnamese": "Bạn có kỉ niệm nào về gia đình thân thiện mà chúng ta đã ở cùng không?" },
+        { "english": "Learning new vocabulary improves your memory and your speaking skills.", "vietnamese": "Học từ vựng mới cải thiện trí nhớ và kỹ năng nói của bạn." }
+      ]
+    },
+    {
+      "word": "postcard",
+      "sentences": [
+        { "english": "She sent me a postcard from Paris and wrote about the friendly people.", "vietnamese": "Cô ấy gửi cho tôi một tấm bưu thiếp từ Paris và viết về những người dân thân thiện." },
+        { "english": "I bought two postcards near the central square this morning.", "vietnamese": "Tôi đã mua hai tấm bưu thiếp gần quảng trường trung tâm sáng nay." },
+        { "english": "Write your address on the postcard before you post it.", "vietnamese": "Hãy viết địa chỉ của bạn lên tấm bưu thiếp trước khi gửi." },
+        { "english": "This old postcard describes a town that has changed completely.", "vietnamese": "Tấm bưu thiếp cũ này mô tả một thị trấn đã thay đổi hoàn toàn." },
+        { "english": "Are postcards still cheap in this expensive tourist area?", "vietnamese": "Bưu thiếp có còn rẻ ở khu du lịch đắt đỏ này không?" }
+      ]
+    }
+  ]
+}

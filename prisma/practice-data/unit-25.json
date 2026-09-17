@@ -1,0 +1,247 @@
+{
+  "unit": 25,
+  "deck": "Unit 25: Thuốc men và hồi phục",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "nightmare",
+      "sentences": [
+        { "english": "The high fever gave me a terrible nightmare all night.", "vietnamese": "Cơn sốt cao khiến tôi gặp một cơn ác mộng kinh khủng suốt đêm." },
+        { "english": "Children often have nightmares when they are ill or too anxious.", "vietnamese": "Trẻ em thường gặp ác mộng khi chúng bị ốm hoặc quá lo lắng." },
+        { "english": "Did you have a nightmare about the dentist again last night?", "vietnamese": "Tối qua bạn lại gặp ác mộng về nha sĩ à?" },
+        { "english": "She has had the same nightmare since the fall hurt her back.", "vietnamese": "Cô ấy gặp đi gặp lại cùng một cơn ác mộng kể từ khi cú ngã làm đau lưng cô ấy." },
+        { "english": "Do not watch horror films before bed, or nightmares will damage your sleep.", "vietnamese": "Đừng xem phim kinh dị trước khi ngủ, nếu không những cơn ác mộng sẽ phá hỏng giấc ngủ của bạn." }
+      ]
+    },
+    {
+      "word": "painful",
+      "sentences": [
+        { "english": "My throat was so painful that I could hardly speak.", "vietnamese": "Cổ họng tôi đau đớn đến mức gần như không nói được." },
+        { "english": "The injection was painful, but the nurse worked very quickly.", "vietnamese": "Mũi tiêm thì đau đớn, nhưng cô y tá làm rất nhanh." },
+        { "english": "Is your headache still painful this morning?", "vietnamese": "Sáng nay cơn đau đầu của bạn còn đau đớn không?" },
+        { "english": "My knee has been painful since I injured it at the gym.", "vietnamese": "Đầu gối tôi đau đớn kể từ khi tôi làm nó bị thương ở phòng gym." },
+        { "english": "Losing a loved one is the most painful experience in life.", "vietnamese": "Mất đi một người thân yêu là trải nghiệm đau đớn nhất trong đời." }
+      ]
+    },
+    {
+      "word": "exhausted",
+      "sentences": [
+        { "english": "I felt completely exhausted after coughing all night long.", "vietnamese": "Tôi thấy hoàn toàn kiệt sức sau khi ho suốt cả đêm." },
+        { "english": "She looks exhausted after working two shifts at the clinic.", "vietnamese": "Cô ấy trông kiệt sức sau khi làm hai ca ở phòng khám." },
+        { "english": "Are you exhausted, or can you continue the exercise?", "vietnamese": "Bạn kiệt sức rồi à, hay bạn còn tập tiếp được bài tập này?" },
+        { "english": "We were exhausted when the long journey finally ended.", "vietnamese": "Chúng tôi đã kiệt sức khi hành trình dài cuối cùng cũng kết thúc." },
+        { "english": "Do not drive home while you are exhausted and sleepy.", "vietnamese": "Đừng lái xe về nhà khi bạn đang kiệt sức và buồn ngủ." }
+      ]
+    },
+    {
+      "word": "dehydrated",
+      "sentences": [
+        { "english": "After a long day in the sun, the children were dehydrated and thirsty.", "vietnamese": "Sau một ngày dài dưới nắng, bọn trẻ bị mất nước và khát." },
+        { "english": "You will feel dehydrated if you do not drink enough during exercise.", "vietnamese": "Bạn sẽ thấy mất nước nếu không uống đủ trong lúc tập thể dục." },
+        { "english": "The runner became dehydrated and his heartbeat was very fast.", "vietnamese": "Người chạy bộ bị mất nước và nhịp tim của anh ấy rất nhanh." },
+        { "english": "Is your baby dehydrated, or is it just a mild cold?", "vietnamese": "Em bé của bạn bị mất nước, hay chỉ là cảm lạnh nhẹ thôi?" },
+        { "english": "Sick people often get dehydrated when they suffer from a high fever.", "vietnamese": "Người ốm thường bị mất nước khi họ chịu đựng cơn sốt cao." }
+      ]
+    },
+    {
+      "word": "emergency",
+      "sentences": [
+        { "english": "Call an ambulance if it is a real emergency.", "vietnamese": "Hãy gọi xe cứu thương nếu đó là trường hợp cấp cứu thật sự." },
+        { "english": "The hospital emergency room was crowded on the holiday weekend.", "vietnamese": "Phòng cấp cứu của bệnh viện đông nghịt vào cuối tuần lễ." },
+        { "english": "In an emergency, stay calm and check the person's blood pressure.", "vietnamese": "Trong trường hợp cấp cứu, hãy bình tĩnh và kiểm tra huyết áp của người đó." },
+        { "english": "She has dealt with many emergencies since she became a nurse.", "vietnamese": "Cô ấy đã xử lý nhiều ca cấp cứu kể từ khi trở thành y tá." },
+        { "english": "Will you drive me to the emergency department if my pain gets worse?", "vietnamese": "Bạn sẽ chở tôi đến khoa cấp cứu chứ nếu cơn đau của tôi nặng hơn?" }
+      ]
+    },
+    {
+      "word": "lose",
+      "sentences": [
+        { "english": "If you don't rest, you might lose your energy quickly.", "vietnamese": "Nếu không nghỉ ngơi, bạn có thể nhanh chóng mất sức." },
+        { "english": "Many people lose weight when they follow a strict diet.", "vietnamese": "Nhiều người giảm cân khi họ theo một chế độ ăn nghiêm ngặt." },
+        { "english": "He is losing his appetite because the medicine upsets his stomach.", "vietnamese": "Anh ấy đang mất cảm giác thèm ăn vì thuốc làm khó chịu dạ dày của anh ấy." },
+        { "english": "Do not lose your prescription before you go to the pharmacy.", "vietnamese": "Đừng làm mất đơn thuốc của bạn trước khi đến hiệu thuốc." },
+        { "english": "If she loses her balance again, she might injure her back.", "vietnamese": "Nếu cô ấy lại mất thăng bằng, cô ấy có thể làm lưng mình bị thương." }
+      ]
+    },
+    {
+      "word": "pharmacy",
+      "sentences": [
+        { "english": "There is a small pharmacy right next to the clinic on our street.", "vietnamese": "Có một hiệu thuốc nhỏ ngay cạnh phòng khám trên con phố nhà tôi." },
+        { "english": "The pharmacy near the market opens at seven every morning.", "vietnamese": "Hiệu thuốc gần chợ mở cửa lúc bảy giờ mỗi sáng." },
+        { "english": "Could you buy some cough syrup at the pharmacy for me?", "vietnamese": "Bạn mua giúp tôi ít siro ho ở hiệu thuốc được không?" },
+        { "english": "Most pharmacies will not sell this medicine without a prescription.", "vietnamese": "Hầu hết các hiệu thuốc sẽ không bán loại thuốc này nếu không có đơn thuốc." },
+        { "english": "I walked to the pharmacy because my headache was getting worse.", "vietnamese": "Tôi đi bộ đến hiệu thuốc vì cơn đau đầu của tôi đang nặng dần." }
+      ]
+    },
+    {
+      "word": "chemist",
+      "sentences": [
+        { "english": "The chemist recommended a gentle cough syrup.", "vietnamese": "Người dược sĩ giới thiệu một loại siro ho nhẹ dịu." },
+        { "english": "Ask the chemist before you mix two different medicines.", "vietnamese": "Hãy hỏi dược sĩ trước khi bạn trộn hai loại thuốc khác nhau." },
+        { "english": "The chemist said these tablets would ease my pain in an hour.", "vietnamese": "Dược sĩ nói những viên thuốc này sẽ làm dịu cơn đau của tôi trong một giờ." },
+        { "english": "The chemists at this clinic are always friendly and helpful.", "vietnamese": "Các dược sĩ ở phòng khám này luôn thân thiện và nhiệt tình." },
+        { "english": "Have you asked the chemist about a cheap syrup for your sore throat?", "vietnamese": "Bạn đã hỏi dược sĩ về một loại siro rẻ cho cổ họng đau chưa?" }
+      ]
+    },
+    {
+      "word": "patient",
+      "sentences": [
+        { "english": "The nurse asked the patient to describe her symptoms.", "vietnamese": "Y tá yêu cầu bệnh nhân mô tả các triệu chứng của cô ấy." },
+        { "english": "Every patient must wait for their turn at the clinic.", "vietnamese": "Mọi bệnh nhân đều phải đợi đến lượt mình ở phòng khám." },
+        { "english": "The patients in this room all suffer from diabetes.", "vietnamese": "Các bệnh nhân trong phòng này đều mắc bệnh tiểu đường." },
+        { "english": "Has the patient had his blood test this morning?", "vietnamese": "Bệnh nhân đã làm xét nghiệm máu sáng nay chưa?" },
+        { "english": "A good nurse treats every patient with respect and care.", "vietnamese": "Một y tá giỏi đối xử với mọi bệnh nhân bằng sự tôn trọng và quan tâm." }
+      ]
+    },
+    {
+      "word": "explain",
+      "sentences": [
+        { "english": "The nurse took time to explain everything written on my prescription.", "vietnamese": "Cô y tá dành thời gian giải thích mọi thứ được viết trong đơn thuốc của tôi." },
+        { "english": "Can you explain why my throat still hurts after three days?", "vietnamese": "Bạn giải thích được vì sao cổ họng tôi vẫn đau sau ba ngày không?" },
+        { "english": "The doctor explained the disease in very simple words.", "vietnamese": "Bác sĩ đã giải thích căn bệnh bằng những từ rất đơn giản." },
+        { "english": "She is explaining how to prevent the flu at work.", "vietnamese": "Cô ấy đang giải thích cách phòng tránh cúm ở nơi làm việc." },
+        { "english": "Please explain this to me again, because I am really anxious.", "vietnamese": "Làm ơn giải thích lại điều này cho tôi, vì tôi đang rất lo lắng." }
+      ]
+    },
+    {
+      "word": "packet",
+      "sentences": [
+        { "english": "He bought a packet of cold medicine at the pharmacy.", "vietnamese": "Anh ấy mua một gói thuốc cảm ở hiệu thuốc." },
+        { "english": "There are twelve tablets in each packet, so check the label carefully.", "vietnamese": "Có mười hai viên trong mỗi gói, nên hãy kiểm tra nhãn cẩn thận." },
+        { "english": "She opened a packet of tissues because her cold got worse.", "vietnamese": "Cô ấy mở một gói khăn giấy vì cơn cảm lạnh của cô ấy nặng hơn." },
+        { "english": "How much does a packet of vitamin C cost here?", "vietnamese": "Một gói vitamin C ở đây giá bao nhiêu?" },
+        { "english": "He has kept the empty packet to show the nurse next time.", "vietnamese": "Anh ấy đã giữ lại cái gói rỗng để đưa cho y tá xem lần tới." }
+      ]
+    },
+    {
+      "word": "pill",
+      "sentences": [
+        { "english": "Take one pill after every meal to ease the pain in your stomach.", "vietnamese": "Uống một viên thuốc sau mỗi bữa ăn để làm dịu cơn đau trong dạ dày của bạn." },
+        { "english": "The nurse gave me two small pills for my headache.", "vietnamese": "Cô y tá đưa cho tôi hai viên thuốc nhỏ cho cơn đau đầu." },
+        { "english": "Do not take sleeping pills without checking with a doctor first.", "vietnamese": "Đừng uống thuốc ngủ mà không kiểm tra với bác sĩ trước." },
+        { "english": "These pills will ease your cough within a few hours.", "vietnamese": "Những viên thuốc này sẽ làm dịu cơn ho của bạn trong vài giờ." },
+        { "english": "Is this pill safe for someone who has diabetes?", "vietnamese": "Viên thuốc này có an toàn cho người bị tiểu đường không?" }
+      ]
+    },
+    {
+      "word": "capsule",
+      "sentences": [
+        { "english": "Swallow the capsule with a full glass of water.", "vietnamese": "Hãy nuốt viên nang với một cốc nước đầy." },
+        { "english": "Each capsule contains a small amount of vitamin D.", "vietnamese": "Mỗi viên nang chứa một lượng nhỏ vitamin D." },
+        { "english": "He swallowed the capsule quickly and drank a glass of warm milk.", "vietnamese": "Anh ấy nuốt viên nang thật nhanh và uống một cốc sữa ấm." },
+        { "english": "Do these capsules have any bad effect on the stomach?", "vietnamese": "Những viên nang này có tác dụng xấu nào lên dạ dày không?" },
+        { "english": "Young children cannot swallow capsules, so a sweet syrup is better.", "vietnamese": "Trẻ nhỏ không nuốt được viên nang, nên một loại siro ngọt thì tốt hơn." }
+      ]
+    },
+    {
+      "word": "consider",
+      "sentences": [
+        { "english": "You should consider seeing a doctor if the pain gets worse.", "vietnamese": "Bạn nên cân nhắc đi khám bác sĩ nếu cơn đau nặng hơn." },
+        { "english": "I am considering a new exercise plan to improve my health.", "vietnamese": "Tôi đang cân nhắc một kế hoạch tập luyện mới để cải thiện sức khoẻ." },
+        { "english": "Have you considered going to the dentist about that ache?", "vietnamese": "Bạn đã cân nhắc đi nha sĩ về cơn đau đó chưa?" },
+        { "english": "The manager considered his condition serious and sent him home.", "vietnamese": "Người quản lý cân nhắc rằng tình trạng của anh ấy nghiêm trọng và cho anh ấy về nhà." },
+        { "english": "Please consider taking a break before your body gives up.", "vietnamese": "Hãy cân nhắc nghỉ một chút trước khi cơ thể bạn gục ngã." }
+      ]
+    },
+    {
+      "word": "painkiller",
+      "sentences": [
+        { "english": "She took a painkiller to ease her sore throat.", "vietnamese": "Cô ấy uống một viên thuốc giảm đau để dịu cơn đau họng." },
+        { "english": "The chemist said this painkiller works well for a bad headache.", "vietnamese": "Dược sĩ nói loại thuốc giảm đau này hiệu quả với chứng đau đầu nặng." },
+        { "english": "Do not take a painkiller on an empty stomach.", "vietnamese": "Đừng uống thuốc giảm đau khi bụng đói." },
+        { "english": "He has taken too many painkillers since the accident damaged his knee.", "vietnamese": "Anh ấy đã uống quá nhiều thuốc giảm đau kể từ khi tai nạn làm hỏng đầu gối anh ấy." },
+        { "english": "Will a simple painkiller ease this terrible pain in my back?", "vietnamese": "Một viên thuốc giảm đau đơn giản có làm dịu được cơn đau kinh khủng ở lưng tôi không?" }
+      ]
+    },
+    {
+      "word": "medicine",
+      "sentences": [
+        { "english": "Remember to take your medicine on time, or your cough will get worse.", "vietnamese": "Nhớ uống thuốc đúng giờ, nếu không cơn ho của bạn sẽ nặng hơn." },
+        { "english": "This medicine can prevent the flu if you take it early.", "vietnamese": "Loại thuốc này có thể phòng ngừa cúm nếu bạn uống sớm." },
+        { "english": "Traditional medicine is still very popular in my hometown.", "vietnamese": "Thuốc cổ truyền vẫn rất phổ biến ở quê tôi." },
+        { "english": "Did the chemist give you the right medicine for your sore throat?", "vietnamese": "Dược sĩ đã đưa cho bạn đúng loại thuốc cho cổ họng đau chưa?" },
+        { "english": "She has been taking this medicine since she was seriously ill.", "vietnamese": "Cô ấy đã uống loại thuốc này kể từ khi cô ấy ốm nghiêm trọng." }
+      ]
+    },
+    {
+      "word": "effect",
+      "sentences": [
+        { "english": "This painkiller has a fast effect on headaches.", "vietnamese": "Loại thuốc giảm đau này có tác dụng nhanh với chứng đau đầu." },
+        { "english": "Too much sugar has a bad effect on your health.", "vietnamese": "Quá nhiều đường có tác dụng xấu lên sức khoẻ của bạn." },
+        { "english": "The new syrup had no effect on his cough at all.", "vietnamese": "Loại siro mới hoàn toàn không có tác dụng gì với cơn ho của anh ấy." },
+        { "english": "Does this pill have any side effects on the brain?", "vietnamese": "Viên thuốc này có tác dụng phụ nào lên não không?" },
+        { "english": "Regular exercise will have a good effect on your heartbeat.", "vietnamese": "Tập thể dục đều đặn sẽ có tác dụng tốt lên nhịp tim của bạn." }
+      ]
+    },
+    {
+      "word": "slowly",
+      "sentences": [
+        { "english": "She drank the warm water slowly because her throat still hurt.", "vietnamese": "Cô ấy uống nước ấm chậm rãi vì cổ họng cô ấy vẫn còn đau." },
+        { "english": "Walk slowly up the hill, or your knee will hurt again.", "vietnamese": "Hãy đi bộ chậm rãi lên đồi, nếu không đầu gối bạn sẽ lại đau." },
+        { "english": "His back is healing slowly because he did not follow the doctor's advice.", "vietnamese": "Lưng anh ấy đang lành chậm rãi vì anh ấy không làm theo lời khuyên của bác sĩ." },
+        { "english": "She spoke slowly so that every patient could understand her.", "vietnamese": "Cô ấy nói chậm rãi để mọi bệnh nhân đều có thể hiểu cô ấy." },
+        { "english": "My temperature is slowly going down after two days of rest.", "vietnamese": "Nhiệt độ của tôi đang hạ xuống chậm rãi sau hai ngày nghỉ ngơi." }
+      ]
+    },
+    {
+      "word": "repair",
+      "sentences": [
+        { "english": "Sleep helps the body repair itself after an illness.", "vietnamese": "Giấc ngủ giúp cơ thể tự phục hồi sau khi ốm." },
+        { "english": "Good food and deep sleep repair the body after a long fever.", "vietnamese": "Thức ăn tốt và giấc ngủ sâu phục hồi cơ thể sau một cơn sốt dài." },
+        { "english": "The doctors repaired the damaged blood vessel during the operation.", "vietnamese": "Các bác sĩ đã phục hồi mạch máu bị tổn thương trong ca mổ." },
+        { "english": "Gentle exercise is repairing my legs after the injury.", "vietnamese": "Bài tập nhẹ nhàng đang phục hồi đôi chân tôi sau chấn thương." },
+        { "english": "Can rest alone repair a brain that never stops working?", "vietnamese": "Chỉ nghỉ ngơi thôi có phục hồi được một bộ não không bao giờ ngừng làm việc không?" }
+      ]
+    },
+    {
+      "word": "remove",
+      "sentences": [
+        { "english": "This medicine helps remove the germs from your body.", "vietnamese": "Loại thuốc này giúp loại bỏ vi khuẩn khỏi cơ thể bạn." },
+        { "english": "The dentist removed my bad tooth in ten minutes.", "vietnamese": "Nha sĩ đã loại bỏ chiếc răng hỏng của tôi trong mười phút." },
+        { "english": "Please remove sugar from your diet if you want to lose weight.", "vietnamese": "Hãy loại bỏ đường khỏi chế độ ăn nếu bạn muốn giảm cân." },
+        { "english": "Surgery can remove the cancer if they find it early.", "vietnamese": "Phẫu thuật có thể loại bỏ khối ung thư nếu họ phát hiện sớm." },
+        { "english": "Are they removing the old equipment from the clinic today?", "vietnamese": "Hôm nay họ có loại bỏ thiết bị cũ khỏi phòng khám không?" }
+      ]
+    },
+    {
+      "word": "recover",
+      "sentences": [
+        { "english": "It took me three days to fully recover from the flu.", "vietnamese": "Tôi mất ba ngày để hồi phục hoàn toàn sau cơn cúm." },
+        { "english": "He is recovering well after the operation on his blood vessels.", "vietnamese": "Anh ấy đang hồi phục tốt sau ca mổ ở mạch máu." },
+        { "english": "Most people recover quickly if the disease is curable.", "vietnamese": "Hầu hết mọi người hồi phục nhanh nếu căn bệnh có thể chữa được." },
+        { "english": "How long will it take to recover from this bad cough?", "vietnamese": "Sẽ mất bao lâu để hồi phục sau cơn ho nặng này?" },
+        { "english": "She recovered her strength after a week of good food and care.", "vietnamese": "Cô ấy đã hồi phục sức lực sau một tuần ăn uống tốt và được chăm sóc." }
+      ]
+    },
+    {
+      "word": "admit",
+      "sentences": [
+        { "english": "The doctors decided to admit him to hospital because he was seriously ill.", "vietnamese": "Các bác sĩ quyết định cho anh ấy nhập viện vì anh ấy ốm nghiêm trọng." },
+        { "english": "They admitted her to hospital because she would not stop bleeding.", "vietnamese": "Họ cho cô ấy nhập viện vì cô ấy chảy máu không ngừng." },
+        { "english": "This clinic admits urgent cases at any hour of the night.", "vietnamese": "Phòng khám này nhận bệnh nhân cấp cứu nhập viện vào bất kỳ giờ nào trong đêm." },
+        { "english": "Will the hospital admit him if his condition gets worse?", "vietnamese": "Bệnh viện sẽ cho anh ấy nhập viện chứ nếu tình trạng của anh ấy xấu đi?" },
+        { "english": "He has been admitted twice this year because of his heart disease.", "vietnamese": "Anh ấy đã nhập viện hai lần trong năm nay vì bệnh tim." }
+      ]
+    },
+    {
+      "word": "speedy",
+      "sentences": [
+        { "english": "My friends at the gym wished me a speedy recovery after the surgery.", "vietnamese": "Bạn bè tôi ở phòng gym chúc tôi hồi phục nhanh chóng sau ca phẫu thuật." },
+        { "english": "We all wish you a speedy recovery from the flu.", "vietnamese": "Tất cả chúng tôi chúc bạn hồi phục nhanh chóng sau cơn cúm." },
+        { "english": "The nurse gave speedy care to every injured child.", "vietnamese": "Cô y tá chăm sóc nhanh chóng cho mọi đứa trẻ bị thương." },
+        { "english": "A light diet helps a speedy return to normal life.", "vietnamese": "Một chế độ ăn nhẹ giúp việc trở lại cuộc sống bình thường nhanh chóng hơn." },
+        { "english": "Is a speedy recovery possible after such serious damage?", "vietnamese": "Việc hồi phục nhanh chóng có khả thi không sau tổn thương nặng như vậy?" }
+      ]
+    },
+    {
+      "word": "fit",
+      "sentences": [
+        { "english": "After a week of rest, I finally felt fit and satisfied again.", "vietnamese": "Sau một tuần nghỉ ngơi, cuối cùng tôi cũng thấy khỏe mạnh và hài lòng trở lại." },
+        { "english": "My grandfather stays fit by walking to the market every day.", "vietnamese": "Ông tôi giữ được khỏe mạnh nhờ đi bộ ra chợ mỗi ngày." },
+        { "english": "Are you fit enough to join the exercise class tomorrow?", "vietnamese": "Bạn đủ khỏe mạnh để tham gia lớp tập thể dục ngày mai chứ?" },
+        { "english": "She kept fit during the holiday and never got ill.", "vietnamese": "Cô ấy giữ được khỏe mạnh trong kỳ nghỉ và không hề bị ốm." },
+        { "english": "Regular sport will keep your body fit and your mind calm.", "vietnamese": "Chơi thể thao đều đặn sẽ giữ cơ thể bạn khỏe mạnh và tâm trí bình thản." }
+      ]
+    }
+  ]
+}

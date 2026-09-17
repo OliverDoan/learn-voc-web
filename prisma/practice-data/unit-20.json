@@ -1,0 +1,607 @@
+{
+  "unit": 20,
+  "deck": "Unit 20: Vườn rau trái",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "plant",
+      "sentences": [
+        {
+          "english": "We plant fresh herbs in small pots on our balcony.",
+          "vietnamese": "Chúng tôi trồng rau thơm tươi trong những chậu nhỏ trên ban công."
+        },
+        {
+          "english": "Last spring my father planted a row of peas behind the kitchen.",
+          "vietnamese": "Mùa xuân năm ngoái bố tôi đã trồng một hàng đậu Hà Lan phía sau bếp."
+        },
+        {
+          "english": "Are you going to plant that crop before the rainy season starts?",
+          "vietnamese": "Bạn có định trồng loại cây đó trước khi mùa mưa bắt đầu không?"
+        },
+        {
+          "english": "She is planting a variety of local vegetables in her new garden.",
+          "vietnamese": "Cô ấy đang trồng nhiều loại rau địa phương trong khu vườn mới của cô ấy."
+        },
+        {
+          "english": "We have planted many trees around the playground since last summer.",
+          "vietnamese": "Chúng tôi đã trồng nhiều cây quanh sân chơi từ mùa hè năm ngoái."
+        }
+      ]
+    },
+    {
+      "word": "harvest",
+      "sentences": [
+        {
+          "english": "Farmers harvest their crops when the rainy season ends.",
+          "vietnamese": "Nông dân thu hoạch cây trồng của họ khi mùa mưa kết thúc."
+        },
+        {
+          "english": "Do not harvest the leaf too early or the taste will be plain.",
+          "vietnamese": "Đừng thu hoạch lá quá sớm nếu không mùi vị sẽ nhạt nhẽo."
+        },
+        {
+          "english": "My uncle harvested a huge amount of sugar cane last December.",
+          "vietnamese": "Chú tôi đã thu hoạch một lượng mía khổng lồ vào tháng Mười Hai năm ngoái."
+        },
+        {
+          "english": "The farmers are harvesting peas while the weather stays dry.",
+          "vietnamese": "Những người nông dân đang thu hoạch đậu Hà Lan trong khi thời tiết vẫn khô ráo."
+        },
+        {
+          "english": "When will your family harvest the coffee on that hill?",
+          "vietnamese": "Khi nào gia đình bạn sẽ thu hoạch cà phê trên ngọn đồi đó?"
+        }
+      ]
+    },
+    {
+      "word": "sprout",
+      "sentences": [
+        {
+          "english": "A tiny green sprout grew beside the old bucket in our garden.",
+          "vietnamese": "Một mầm cây xanh nhỏ mọc lên cạnh cái xô cũ trong vườn nhà tôi."
+        },
+        {
+          "english": "A small sprout appeared in the soil after a pleasant shower.",
+          "vietnamese": "Một mầm cây nhỏ xuất hiện trong đất sau một cơn mưa rào dễ chịu."
+        },
+        {
+          "english": "Do not throw these sprouts away because they are still fresh.",
+          "vietnamese": "Đừng vứt bỏ những mầm cây này vì chúng vẫn còn tươi."
+        },
+        {
+          "english": "Each sprout needs light, water and a little care every morning.",
+          "vietnamese": "Mỗi mầm cây cần ánh sáng, nước và một chút chăm sóc mỗi buổi sáng."
+        },
+        {
+          "english": "Have you seen the new sprouts near the old bamboo bridge?",
+          "vietnamese": "Bạn đã thấy những mầm cây mới gần cây cầu tre cũ chưa?"
+        }
+      ]
+    },
+    {
+      "word": "cabbage",
+      "sentences": [
+        {
+          "english": "My mother buys cabbage at the market when the weather gets dry.",
+          "vietnamese": "Mẹ tôi mua bắp cải ở chợ khi thời tiết trở nên khô hanh."
+        },
+        {
+          "english": "I always boil cabbage for a few minutes before I stir-fry it.",
+          "vietnamese": "Tôi luôn luộc bắp cải vài phút trước khi tôi xào nó."
+        },
+        {
+          "english": "This cabbage is cheap, so we can save some money today.",
+          "vietnamese": "Bắp cải này rẻ, nên hôm nay chúng ta có thể tiết kiệm một chút tiền."
+        },
+        {
+          "english": "Are you going to add cabbage to the hotpot tonight?",
+          "vietnamese": "Tối nay bạn có định cho bắp cải vào món lẩu không?"
+        },
+        {
+          "english": "My grandmother has cooked cabbages in many traditional dishes.",
+          "vietnamese": "Bà tôi đã nấu bắp cải trong nhiều món ăn truyền thống."
+        }
+      ]
+    },
+    {
+      "word": "lettuce",
+      "sentences": [
+        {
+          "english": "Wash the lettuce carefully before you mix it with the sauce.",
+          "vietnamese": "Rửa rau xà lách thật kỹ trước khi bạn trộn nó với nước sốt."
+        },
+        {
+          "english": "Fresh lettuce makes every sandwich taste lighter and more delicious.",
+          "vietnamese": "Rau xà lách tươi làm mỗi chiếc bánh mì kẹp có vị nhẹ nhàng và ngon hơn."
+        },
+        {
+          "english": "We bought lettuce at the local market this morning.",
+          "vietnamese": "Chúng tôi đã mua rau xà lách ở chợ địa phương sáng nay."
+        },
+        {
+          "english": "Do not keep lettuce in the freezer because frozen leaves become soft.",
+          "vietnamese": "Đừng để rau xà lách trong ngăn đá vì lá bị đông lạnh sẽ trở nên mềm nhũn."
+        },
+        {
+          "english": "She is washing the lettuce while I prepare the seasoning.",
+          "vietnamese": "Cô ấy đang rửa rau xà lách trong khi tôi chuẩn bị gia vị."
+        }
+      ]
+    },
+    {
+      "word": "onion",
+      "sentences": [
+        {
+          "english": "I cry every time I cut an onion for the hotpot.",
+          "vietnamese": "Tôi khóc mỗi lần tôi thái hành tây cho món lẩu."
+        },
+        {
+          "english": "Add one onion and a little chilli to make the soup spicy.",
+          "vietnamese": "Thêm một củ hành tây và một chút ớt để món súp có vị cay."
+        },
+        {
+          "english": "My mother fried the onions until they turned brown and crispy.",
+          "vietnamese": "Mẹ tôi rán hành tây cho đến khi chúng chuyển màu nâu và giòn."
+        },
+        {
+          "english": "Why do onions always make your eyes water?",
+          "vietnamese": "Tại sao hành tây luôn làm mắt bạn chảy nước?"
+        },
+        {
+          "english": "We have used this onion recipe since our trip abroad.",
+          "vietnamese": "Chúng tôi đã dùng công thức hành tây này từ chuyến đi nước ngoài của mình."
+        }
+      ]
+    },
+    {
+      "word": "mushroom",
+      "sentences": [
+        {
+          "english": "The chef put one large mushroom on top of the pizza.",
+          "vietnamese": "Đầu bếp đặt một cây nấm lớn lên trên chiếc bánh pizza."
+        },
+        {
+          "english": "I put fresh mushrooms into the pan and stir them gently.",
+          "vietnamese": "Tôi cho nấm tươi vào chảo và đảo chúng nhẹ nhàng."
+        },
+        {
+          "english": "This mushroom soup is a favourite dish in our neighbourhood.",
+          "vietnamese": "Món súp nấm này là món ăn yêu thích trong khu phố của chúng tôi."
+        },
+        {
+          "english": "Do not eat any mushroom that looks strange or smells nasty.",
+          "vietnamese": "Đừng ăn bất kỳ cây nấm nào trông kỳ lạ hoặc có mùi khó chịu."
+        },
+        {
+          "english": "Have you ever tried grilled mushrooms at a Japanese pub?",
+          "vietnamese": "Bạn đã bao giờ thử nấm nướng ở một quán rượu Nhật Bản chưa?"
+        }
+      ]
+    },
+    {
+      "word": "herb",
+      "sentences": [
+        {
+          "english": "Mint is a popular herb in cooking.",
+          "vietnamese": "Bạc hà là một loại rau thơm phổ biến khi nấu ăn."
+        },
+        {
+          "english": "My mother adds a few herbs to every home-cooked meal.",
+          "vietnamese": "Mẹ tôi thêm vài loại rau thơm vào mỗi bữa cơm nhà."
+        },
+        {
+          "english": "Which herb gives this sauce such a strong flavour?",
+          "vietnamese": "Loại rau thơm nào tạo cho nước sốt này một hương vị nồng như vậy?"
+        },
+        {
+          "english": "We are drying these herbs before we store them for winter.",
+          "vietnamese": "Chúng tôi đang phơi khô những loại rau thơm này trước khi cất chúng cho mùa đông."
+        },
+        {
+          "english": "Herbs have been useful in traditional medicine for many centuries.",
+          "vietnamese": "Rau thơm đã hữu ích trong y học cổ truyền suốt nhiều thế kỷ."
+        }
+      ]
+    },
+    {
+      "word": "basil",
+      "sentences": [
+        {
+          "english": "She added fresh basil to the noodles.",
+          "vietnamese": "Cô ấy cho húng quế tươi vào mì."
+        },
+        {
+          "english": "Do you put basil in your beef soup?",
+          "vietnamese": "Bạn có cho húng quế vào món súp bò của mình không?"
+        },
+        {
+          "english": "The chef picked some basil leaves before he served the hotpot.",
+          "vietnamese": "Đầu bếp hái vài lá húng quế trước khi anh ấy phục vụ món lẩu."
+        },
+        {
+          "english": "Basil grows quickly in warm and humid weather.",
+          "vietnamese": "Húng quế mọc nhanh trong thời tiết ấm và ẩm."
+        },
+        {
+          "english": "I have never cooked Italian cuisine without basil.",
+          "vietnamese": "Tôi chưa bao giờ nấu món Ý mà không có húng quế."
+        }
+      ]
+    },
+    {
+      "word": "slice",
+      "sentences": [
+        {
+          "english": "She cut a thin slice of lemon for my cup of tea.",
+          "vietnamese": "Cô ấy cắt một lát chanh vàng mỏng cho tách trà của tôi."
+        },
+        {
+          "english": "Put a slice of cheese on the bread and grill it.",
+          "vietnamese": "Đặt một lát phô mai lên bánh mì và nướng nó."
+        },
+        {
+          "english": "She served each guest a thin slice of the wedding cake.",
+          "vietnamese": "Cô ấy phục vụ mỗi vị khách một lát bánh cưới mỏng."
+        },
+        {
+          "english": "How many slices of bacon do you want for breakfast?",
+          "vietnamese": "Bạn muốn mấy lát thịt xông khói cho bữa sáng?"
+        },
+        {
+          "english": "I have eaten three slices of pizza and my stomach hurts.",
+          "vietnamese": "Tôi đã ăn ba lát pizza và bụng tôi đau."
+        }
+      ]
+    },
+    {
+      "word": "bowl",
+      "sentences": [
+        {
+          "english": "He finished a big bowl of soup and felt warm again.",
+          "vietnamese": "Anh ấy ăn hết một tô súp lớn và thấy ấm người trở lại."
+        },
+        {
+          "english": "Please pour the sauce into a small bowl before serving.",
+          "vietnamese": "Hãy rót nước sốt vào một cái bát nhỏ trước khi phục vụ."
+        },
+        {
+          "english": "My father eats a bowl of rice with chopsticks every evening.",
+          "vietnamese": "Bố tôi ăn một bát cơm bằng đũa mỗi buổi tối."
+        },
+        {
+          "english": "Where did you put the bowls after the party last night?",
+          "vietnamese": "Bạn đã để những cái bát ở đâu sau bữa tiệc tối qua?"
+        },
+        {
+          "english": "She is mixing the eggs in a big glass bowl.",
+          "vietnamese": "Cô ấy đang trộn trứng trong một cái bát thuỷ tinh lớn."
+        }
+      ]
+    },
+    {
+      "word": "cucumber",
+      "sentences": [
+        {
+          "english": "I added a fresh cucumber to the salad.",
+          "vietnamese": "Tôi cho một quả dưa chuột tươi vào salad."
+        },
+        {
+          "english": "A cold cucumber drink gives me more energy on hot days.",
+          "vietnamese": "Một ly nước dưa chuột mát lạnh cho tôi nhiều năng lượng hơn vào những ngày nóng."
+        },
+        {
+          "english": "Do you peel the cucumber before you cut it?",
+          "vietnamese": "Bạn có gọt vỏ dưa chuột trước khi cắt nó không?"
+        },
+        {
+          "english": "We are pickling cucumbers in a large bottle this weekend.",
+          "vietnamese": "Chúng tôi đang muối chua dưa chuột trong một cái chai lớn vào cuối tuần này."
+        },
+        {
+          "english": "My sister has eaten cucumbers every day since she started her diet.",
+          "vietnamese": "Chị tôi ăn dưa chuột mỗi ngày kể từ khi chị ấy bắt đầu chế độ ăn kiêng."
+        }
+      ]
+    },
+    {
+      "word": "pickle",
+      "sentences": [
+        {
+          "english": "My grandmother likes to pickle vegetables when she has fresh groceries.",
+          "vietnamese": "Bà tôi thích muối chua rau củ khi bà có thực phẩm tươi."
+        },
+        {
+          "english": "In winter we pickle cabbage and keep it in a bucket.",
+          "vietnamese": "Vào mùa đông chúng tôi muối chua bắp cải và giữ nó trong một cái xô."
+        },
+        {
+          "english": "Did your mother pickle these peas last month?",
+          "vietnamese": "Mẹ bạn đã muối chua những hạt đậu này tháng trước phải không?"
+        },
+        {
+          "english": "They are pickling vegetables because the amount of fresh crops is huge.",
+          "vietnamese": "Họ đang muối chua rau củ vì lượng nông sản tươi rất lớn."
+        },
+        {
+          "english": "People have pickled food to save it for many centuries.",
+          "vietnamese": "Người ta đã muối chua thực phẩm để bảo quản nó suốt nhiều thế kỷ."
+        }
+      ]
+    },
+    {
+      "word": "juicy",
+      "sentences": [
+        {
+          "english": "These oranges are juicy and sweet, so the children love them.",
+          "vietnamese": "Những quả cam này mọng nước và ngọt, nên bọn trẻ rất thích chúng."
+        },
+        {
+          "english": "This grilled beef is juicy and full of flavour.",
+          "vietnamese": "Miếng thịt bò nướng này mọng nước và đậm đà hương vị."
+        },
+        {
+          "english": "Are these mangoes juicy enough for the smoothie?",
+          "vietnamese": "Những quả xoài này có đủ mọng nước cho món sinh tố không?"
+        },
+        {
+          "english": "The chef roasted a juicy chicken for the special occasion.",
+          "vietnamese": "Đầu bếp quay một con gà mọng nước cho dịp đặc biệt."
+        },
+        {
+          "english": "I have never tasted such a juicy pear in my life.",
+          "vietnamese": "Tôi chưa bao giờ nếm một quả lê mọng nước như vậy trong đời."
+        }
+      ]
+    },
+    {
+      "word": "grapefruit",
+      "sentences": [
+        {
+          "english": "I eat half a grapefruit before my morning coffee every day.",
+          "vietnamese": "Tôi ăn nửa quả bưởi trước tách cà phê buổi sáng mỗi ngày."
+        },
+        {
+          "english": "A cold grapefruit juice is good for a detox day.",
+          "vietnamese": "Một ly nước bưởi mát lạnh tốt cho một ngày thanh lọc cơ thể."
+        },
+        {
+          "english": "My grandmother planted a grapefruit tree behind the temple.",
+          "vietnamese": "Bà tôi đã trồng một cây bưởi phía sau ngôi chùa."
+        },
+        {
+          "english": "Does grapefruit taste too sour for your children?",
+          "vietnamese": "Bưởi có vị quá chua đối với con bạn không?"
+        },
+        {
+          "english": "We are peeling a grapefruit for the festival tonight.",
+          "vietnamese": "Chúng tôi đang bóc một quả bưởi cho lễ hội tối nay."
+        }
+      ]
+    },
+    {
+      "word": "mandarin",
+      "sentences": [
+        {
+          "english": "I peeled a sweet mandarin after lunch.",
+          "vietnamese": "Tôi bóc một quả quýt ngọt sau bữa trưa."
+        },
+        {
+          "english": "During the holiday my aunt gives every guest a mandarin.",
+          "vietnamese": "Vào dịp lễ, dì tôi tặng mỗi vị khách một quả quýt."
+        },
+        {
+          "english": "These mandarins are cheap at the market in December.",
+          "vietnamese": "Những quả quýt này rẻ ở chợ vào tháng Mười Hai."
+        },
+        {
+          "english": "Do you prefer a mandarin or a glass of orange juice?",
+          "vietnamese": "Bạn thích một quả quýt hay một ly nước cam hơn?"
+        },
+        {
+          "english": "She has bought mandarins for the party every year.",
+          "vietnamese": "Năm nào cô ấy cũng mua quýt cho bữa tiệc."
+        }
+      ]
+    },
+    {
+      "word": "kumquat",
+      "sentences": [
+        {
+          "english": "During the festival my mother buys a small kumquat tree.",
+          "vietnamese": "Vào dịp lễ hội, mẹ tôi mua một cây quất nhỏ."
+        },
+        {
+          "english": "My neighbour sells kumquat trees near the pagoda every spring.",
+          "vietnamese": "Hàng xóm của tôi bán cây quất gần ngôi chùa vào mỗi mùa xuân."
+        },
+        {
+          "english": "Kumquat tea with honey helps me when I cannot breathe well.",
+          "vietnamese": "Trà quất mật ong giúp tôi khi tôi không thở được dễ dàng."
+        },
+        {
+          "english": "Did you add sugar to the kumquat juice?",
+          "vietnamese": "Bạn đã cho đường vào nước quất chưa?"
+        },
+        {
+          "english": "These kumquats taste quite strong, so use a small amount.",
+          "vietnamese": "Những quả quất này có vị khá gắt, nên hãy dùng một lượng nhỏ."
+        }
+      ]
+    },
+    {
+      "word": "sour",
+      "sentences": [
+        {
+          "english": "The lemon tastes very sour.",
+          "vietnamese": "Quả chanh có vị rất chua."
+        },
+        {
+          "english": "This soup is too sour because my brother added extra lemon.",
+          "vietnamese": "Món súp này quá chua vì em trai tôi đã cho thêm chanh."
+        },
+        {
+          "english": "Do not pour that sour wine into my glass.",
+          "vietnamese": "Đừng rót thứ rượu vang chua đó vào ly của tôi."
+        },
+        {
+          "english": "Vietnamese cuisine often mixes sour and spicy flavours in one dish.",
+          "vietnamese": "Ẩm thực Việt Nam thường trộn vị chua và cay trong cùng một món."
+        },
+        {
+          "english": "Why does this sauce become sour after two days?",
+          "vietnamese": "Tại sao nước sốt này lại bị chua sau hai ngày?"
+        }
+      ]
+    },
+    {
+      "word": "durian",
+      "sentences": [
+        {
+          "english": "Many foreigners dislike the strong smell of durian fruit.",
+          "vietnamese": "Nhiều người nước ngoài không thích mùi nồng của quả sầu riêng."
+        },
+        {
+          "english": "My friends love durian, but I prefer a plain snack.",
+          "vietnamese": "Bạn bè tôi thích sầu riêng, nhưng tôi thích một món ăn vặt đơn giản hơn."
+        },
+        {
+          "english": "We bought a huge durian at the market last weekend.",
+          "vietnamese": "Chúng tôi đã mua một quả sầu riêng khổng lồ ở chợ cuối tuần trước."
+        },
+        {
+          "english": "Are you allergic to durian or to peanut butter?",
+          "vietnamese": "Bạn bị dị ứng với sầu riêng hay với bơ đậu phộng?"
+        },
+        {
+          "english": "Do not take durian into the hotel room, please.",
+          "vietnamese": "Xin đừng mang sầu riêng vào phòng khách sạn."
+        }
+      ]
+    },
+    {
+      "word": "jackfruit",
+      "sentences": [
+        {
+          "english": "We bought a huge jackfruit at the market.",
+          "vietnamese": "Chúng tôi mua một quả mít to ở chợ."
+        },
+        {
+          "english": "Dried jackfruit is a tasty snack during long journeys.",
+          "vietnamese": "Mít sấy khô là một món ăn vặt ngon trong những chuyến đi dài."
+        },
+        {
+          "english": "My uncle is peeling a jackfruit in the yard.",
+          "vietnamese": "Chú tôi đang bóc một quả mít ngoài sân."
+        },
+        {
+          "english": "Have you tried jackfruit ice cream at that new place?",
+          "vietnamese": "Bạn đã thử kem mít ở chỗ mới đó chưa?"
+        },
+        {
+          "english": "Jackfruit trees grow well in hot and humid areas.",
+          "vietnamese": "Cây mít phát triển tốt ở những vùng nóng và ẩm."
+        }
+      ]
+    },
+    {
+      "word": "mangosteen",
+      "sentences": [
+        {
+          "english": "A ripe mangosteen is purple and sweet.",
+          "vietnamese": "Quả măng cụt chín có màu tím và ngọt."
+        },
+        {
+          "english": "Mangosteen is quite pricey when the season ends.",
+          "vietnamese": "Măng cụt khá đắt khi mùa vụ kết thúc."
+        },
+        {
+          "english": "We are washing mangosteens before we serve them to our guests.",
+          "vietnamese": "Chúng tôi đang rửa măng cụt trước khi mang chúng ra mời khách."
+        },
+        {
+          "english": "Did you try mangosteen on your trip to the south?",
+          "vietnamese": "Bạn đã thử măng cụt trong chuyến đi miền Nam chưa?"
+        },
+        {
+          "english": "Farmers sell mangosteens at the local market every summer.",
+          "vietnamese": "Nông dân bán măng cụt ở chợ địa phương vào mỗi mùa hè."
+        }
+      ]
+    },
+    {
+      "word": "seedless",
+      "sentences": [
+        {
+          "english": "Seedless grapes are useful when I make a fruit smoothie.",
+          "vietnamese": "Nho không hạt rất hữu ích khi tôi làm sinh tố trái cây."
+        },
+        {
+          "english": "Seedless watermelon is popular with children at every party.",
+          "vietnamese": "Dưa hấu không hạt được trẻ em ưa chuộng trong mọi bữa tiệc."
+        },
+        {
+          "english": "Are these seedless oranges more expensive than the normal ones?",
+          "vietnamese": "Những quả cam không hạt này có đắt hơn loại thường không?"
+        },
+        {
+          "english": "I always choose seedless fruit when I prepare a fresh salad.",
+          "vietnamese": "Tôi luôn chọn trái cây không hạt khi tôi chuẩn bị một đĩa salad tươi."
+        },
+        {
+          "english": "The shop has sold seedless grapes at a reasonable price.",
+          "vietnamese": "Cửa hàng đã bán nho không hạt với mức giá hợp lý."
+        }
+      ]
+    },
+    {
+      "word": "olive",
+      "sentences": [
+        {
+          "english": "The chef added one black olive to each plate of salad.",
+          "vietnamese": "Đầu bếp thêm một quả ô liu đen vào mỗi đĩa salad."
+        },
+        {
+          "english": "Olive oil is useful when you roast chicken in the oven.",
+          "vietnamese": "Dầu ô liu rất hữu ích khi bạn quay gà trong lò."
+        },
+        {
+          "english": "Do you want olives in your takeaway pizza?",
+          "vietnamese": "Bạn có muốn ô liu trong chiếc pizza mang về của mình không?"
+        },
+        {
+          "english": "She is mixing olives, cheese and herbs in one bowl.",
+          "vietnamese": "Cô ấy đang trộn ô liu, phô mai và rau thơm trong một cái bát."
+        },
+        {
+          "english": "Olives have become a common ingredient in modern cooking.",
+          "vietnamese": "Ô liu đã trở thành một nguyên liệu phổ biến trong nấu ăn hiện đại."
+        }
+      ]
+    },
+    {
+      "word": "spoil",
+      "sentences": [
+        {
+          "english": "Hot and humid weather can spoil fresh milk very quickly.",
+          "vietnamese": "Thời tiết nóng và ẩm có thể làm hỏng sữa tươi rất nhanh."
+        },
+        {
+          "english": "Leftovers will spoil quickly if you leave them on the stove.",
+          "vietnamese": "Đồ ăn thừa sẽ nhanh bị hỏng nếu bạn để chúng trên bếp."
+        },
+        {
+          "english": "Too much sugar can spoil the flavour of this soup.",
+          "vietnamese": "Quá nhiều đường có thể làm hỏng hương vị của món súp này."
+        },
+        {
+          "english": "Did the heavy rain spoil your holiday at the resort?",
+          "vietnamese": "Cơn mưa lớn có làm hỏng kỳ nghỉ của bạn ở khu nghỉ dưỡng không?"
+        },
+        {
+          "english": "The seafood is spoiling because the fridge has stopped working.",
+          "vietnamese": "Hải sản đang bị hỏng vì tủ lạnh đã ngừng hoạt động."
+        }
+      ]
+    }
+  ]
+}

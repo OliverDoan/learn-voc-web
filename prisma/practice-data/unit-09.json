@@ -1,0 +1,247 @@
+{
+  "unit": 9,
+  "deck": "Unit 9: Căn hộ mới của Hinata",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "drive",
+      "sentences": [
+        { "english": "She has to drive along the highway for an hour to reach the city centre.", "vietnamese": "Cô ấy phải lái xe trên đường cao tốc một tiếng để đến trung tâm thành phố." },
+        { "english": "I drive to the central district every morning because the bus service is slow.", "vietnamese": "Tôi lái xe đến quận trung tâm mỗi sáng vì dịch vụ xe buýt rất chậm." },
+        { "english": "Does he drive a new vehicle, or does he take the bus daily?", "vietnamese": "Anh ấy lái một chiếc xe mới, hay anh ấy đi xe buýt hằng ngày?" },
+        { "english": "My father is driving along the pavement slowly to avoid the crowded market.", "vietnamese": "Bố tôi đang lái xe chậm dọc theo vỉa hè để tránh khu chợ đông đúc." },
+        { "english": "We will drive to my hometown next weekend to save the train fee.", "vietnamese": "Chúng tôi sẽ lái xe về quê tôi vào cuối tuần tới để tiết kiệm tiền vé tàu." }
+      ]
+    },
+    {
+      "word": "away",
+      "sentences": [
+        { "english": "They moved away from the bustling district because the rent was too expensive.", "vietnamese": "Họ chuyển đi xa khỏi khu phố náo nhiệt vì tiền thuê nhà quá đắt." },
+        { "english": "Please throw the rubbish away before the neighbours complain about the smell.", "vietnamese": "Làm ơn vứt rác đi trước khi hàng xóm phàn nàn về mùi hôi." },
+        { "english": "My office is only two kilometres away from this convenient neighbourhood.", "vietnamese": "Văn phòng của tôi chỉ cách khu phố tiện lợi này hai ki lô mét." },
+        { "english": "She has been away from her hometown since she started her new career.", "vietnamese": "Cô ấy đã đi xa quê hương từ khi cô ấy bắt đầu sự nghiệp mới." },
+        { "english": "Are you going away this summer, or will you save your money instead?", "vietnamese": "Bạn sẽ đi xa vào mùa hè này, hay bạn sẽ tiết kiệm tiền thay vì thế?" }
+      ]
+    },
+    {
+      "word": "place",
+      "sentences": [
+        { "english": "They look for a new place to live.", "vietnamese": "Họ tìm một nơi mới để ở." },
+        { "english": "This coffee shop is my favourite place because the atmosphere is very peaceful.", "vietnamese": "Quán cà phê này là nơi yêu thích của tôi vì bầu không khí rất yên bình." },
+        { "english": "We visited several places near the square before we signed the rent contract.", "vietnamese": "Chúng tôi đã xem vài nơi gần quảng trường trước khi chúng tôi ký hợp đồng thuê nhà." },
+        { "english": "Is there a cheap place to eat in this bustling alley?", "vietnamese": "Có nơi nào ăn uống rẻ trong con hẻm náo nhiệt này không?" },
+        { "english": "The council will build a safe place for children near the bridge.", "vietnamese": "Hội đồng thành phố sẽ xây một nơi an toàn cho trẻ em gần cây cầu." }
+      ]
+    },
+    {
+      "word": "building",
+      "sentences": [
+        { "english": "The building is clean and new.", "vietnamese": "Tòa nhà sạch sẽ và mới." },
+        { "english": "That tall building next to the tower belongs to a foreign company.", "vietnamese": "Tòa nhà cao kế bên toà tháp thuộc về một công ty nước ngoài." },
+        { "english": "Many old buildings in the capital were destroyed to make space for skyscrapers.", "vietnamese": "Nhiều tòa nhà cũ ở thủ đô đã bị phá bỏ để lấy chỗ cho các toà nhà chọc trời." },
+        { "english": "Our building has a good security system, so I feel safe at night.", "vietnamese": "Tòa nhà của chúng tôi có hệ thống an ninh tốt, nên tôi cảm thấy an toàn vào ban đêm." },
+        { "english": "Do not throw rubbish behind the building, because the smell is unhealthy.", "vietnamese": "Đừng vứt rác phía sau tòa nhà, vì mùi hôi rất có hại cho sức khoẻ." }
+      ]
+    },
+    {
+      "word": "flat",
+      "sentences": [
+        { "english": "Their new flat is affordable and very convenient for both of them.", "vietnamese": "Căn hộ mới của họ có giá phải chăng và rất tiện lợi cho cả hai người." },
+        { "english": "I rent a small flat in the city centre with two friends.", "vietnamese": "Tôi thuê một căn hộ nhỏ ở trung tâm thành phố với hai người bạn." },
+        { "english": "Their flat is on the tenth floor, so the district looks really wide from there.", "vietnamese": "Căn hộ của họ ở tầng mười, nên quận này trông rất rộng khi nhìn từ đó." },
+        { "english": "Have you found an affordable flat near the highway yet?", "vietnamese": "Bạn đã tìm được căn hộ giá phải chăng gần đường cao tốc chưa?" },
+        { "english": "We spend too much money on this flat, so we must move soon.", "vietnamese": "Chúng tôi tiêu quá nhiều tiền cho căn hộ này, nên chúng tôi phải chuyển đi sớm." }
+      ]
+    },
+    {
+      "word": "face",
+      "sentences": [
+        { "english": "The windows of my room face the river, so the atmosphere is peaceful.", "vietnamese": "Cửa sổ phòng tôi hướng ra sông, nên bầu không khí rất yên bình." },
+        { "english": "Our balcony faces the busy square, so the nightlife feels very close.", "vietnamese": "Ban công của chúng tôi hướng ra quảng trường nhộn nhịp, nên cuộc sống về đêm cảm thấy rất gần." },
+        { "english": "The old building faces north, so the rooms are cold in winter.", "vietnamese": "Tòa nhà cũ hướng về phía bắc, nên các phòng đều lạnh vào mùa đông." },
+        { "english": "Does your flat face the noisy highway or the peaceful park?", "vietnamese": "Căn hộ của bạn hướng ra đường cao tốc ồn ào hay công viên yên bình?" },
+        { "english": "The hotel will face a modern shopping centre after they finish the bridge.", "vietnamese": "Khách sạn sẽ hướng về một trung tâm mua sắm hiện đại sau khi họ xây xong cây cầu." }
+      ]
+    },
+    {
+      "word": "light",
+      "sentences": [
+        { "english": "The room is full of natural light.", "vietnamese": "Căn phòng đầy ánh sáng tự nhiên." },
+        { "english": "There is not enough light in this cramped room, so I feel tired.", "vietnamese": "Không có đủ ánh sáng trong căn phòng chật chội này, nên tôi cảm thấy mệt mỏi." },
+        { "english": "The lights of the skyscrapers make the capital look exciting at night.", "vietnamese": "Ánh đèn của những toà nhà chọc trời làm cho thủ đô trông thú vị vào ban đêm." },
+        { "english": "Turn off the light before you leave, because the electricity bill is high.", "vietnamese": "Hãy tắt đèn trước khi bạn rời đi, vì hoá đơn tiền điện rất cao." },
+        { "english": "She opened the curtains to let the morning light into the living room.", "vietnamese": "Cô ấy mở rèm cửa để ánh sáng buổi sáng vào phòng khách." }
+      ]
+    },
+    {
+      "word": "balcony",
+      "sentences": [
+        { "english": "From the balcony we can see the tall tower and the whole square.", "vietnamese": "Từ ban công chúng tôi có thể nhìn thấy toà tháp cao và cả quảng trường." },
+        { "english": "Our balcony is small, but the rent is reasonable for this district.", "vietnamese": "Ban công của chúng tôi nhỏ, nhưng tiền thuê thì hợp lý với khu vực này." },
+        { "english": "He grows various flowers on the balcony every spring.", "vietnamese": "Anh ấy trồng nhiều loại hoa khác nhau trên ban công mỗi mùa xuân." },
+        { "english": "Do not throw anything from the balcony, because it is dangerous for people below.", "vietnamese": "Đừng ném bất cứ thứ gì từ ban công, vì nó nguy hiểm cho người ở bên dưới." },
+        { "english": "Many flats in this modern building have wide balconies facing the river.", "vietnamese": "Nhiều căn hộ trong tòa nhà hiện đại này có ban công rộng hướng ra sông." }
+      ]
+    },
+    {
+      "word": "view",
+      "sentences": [
+        { "english": "The view is beautiful.", "vietnamese": "Khung cảnh thật tuyệt đẹp." },
+        { "english": "The view from the top of the tower is really exciting at sunset.", "vietnamese": "Khung cảnh từ đỉnh toà tháp thật sự thú vị lúc hoàng hôn." },
+        { "english": "We paid a higher price for a room with a sea view.", "vietnamese": "Chúng tôi trả giá cao hơn cho một phòng có tầm nhìn ra biển." },
+        { "english": "Does your new flat have a view of the central square?", "vietnamese": "Căn hộ mới của bạn có tầm nhìn ra quảng trường trung tâm không?" },
+        { "english": "From this window the view of the neighbourhood looks quite appealing.", "vietnamese": "Từ cửa sổ này khung cảnh của khu phố trông khá hấp dẫn." }
+      ]
+    },
+    {
+      "word": "fully",
+      "sentences": [
+        { "english": "The room is fully furnished, so we do not need to spend much money.", "vietnamese": "Căn phòng được trang bị nội thất đầy đủ, nên chúng tôi không cần tiêu nhiều tiền." },
+        { "english": "The flat is fully equipped with modern furniture and a good security system.", "vietnamese": "Căn hộ được trang bị đầy đủ nội thất hiện đại và một hệ thống an ninh tốt." },
+        { "english": "I have not fully paid the rent for this month yet.", "vietnamese": "Tôi vẫn chưa trả đầy đủ tiền thuê nhà của tháng này." },
+        { "english": "The new bridge is fully open to all vehicles from tomorrow morning.", "vietnamese": "Cây cầu mới mở hoàn toàn cho mọi phương tiện từ sáng mai." },
+        { "english": "She fully understands how expensive life in the capital can be.", "vietnamese": "Cô ấy hiểu hoàn toàn cuộc sống ở thủ đô có thể đắt đỏ đến mức nào." }
+      ]
+    },
+    {
+      "word": "furniture",
+      "sentences": [
+        { "english": "The furniture is modern.", "vietnamese": "Đồ nội thất rất hiện đại." },
+        { "english": "We bought cheap furniture because we could not manage such a big expense.", "vietnamese": "Chúng tôi mua đồ nội thất rẻ vì chúng tôi không thể xoay xở một khoản chi lớn như vậy." },
+        { "english": "The furniture in this room is old, but it is still comfortable.", "vietnamese": "Đồ nội thất trong căn phòng này cũ, nhưng nó vẫn thoải mái." },
+        { "english": "Are they selling any affordable furniture in that shop near the alley?", "vietnamese": "Họ có bán đồ nội thất giá phải chăng nào trong cửa hàng gần con hẻm đó không?" },
+        { "english": "He will design new furniture for the office next year.", "vietnamese": "Anh ấy sẽ thiết kế đồ nội thất mới cho văn phòng vào năm tới." }
+      ]
+    },
+    {
+      "word": "bookshelf",
+      "sentences": [
+        { "english": "I bought a cheap bookshelf because the wooden one was too pricey.", "vietnamese": "Tôi mua một cái kệ sách rẻ vì cái bằng gỗ thì quá đắt." },
+        { "english": "There is a wooden bookshelf beside my bed in the small room.", "vietnamese": "Có một cái kệ sách bằng gỗ bên cạnh giường tôi trong căn phòng nhỏ." },
+        { "english": "She keeps her favourite novels on the bookshelf above the desk.", "vietnamese": "Cô ấy để những cuốn tiểu thuyết yêu thích trên kệ sách phía trên bàn làm việc." },
+        { "english": "Can you build a simple bookshelf for my new bedroom?", "vietnamese": "Bạn có thể đóng một cái kệ sách đơn giản cho phòng ngủ mới của tôi không?" },
+        { "english": "I have cleaned the bookshelf, and now it looks quite appealing.", "vietnamese": "Tôi đã lau dọn cái kệ sách, và bây giờ nó trông khá hấp dẫn." }
+      ]
+    },
+    {
+      "word": "curtain",
+      "sentences": [
+        { "english": "We chose thick curtains at a reasonable price to keep the room dark.", "vietnamese": "Chúng tôi chọn rèm cửa dày với giá hợp lý để giữ cho căn phòng tối." },
+        { "english": "Please close the curtains, because the light from the highway is too bright.", "vietnamese": "Làm ơn đóng rèm cửa lại, vì ánh sáng từ đường cao tốc quá chói." },
+        { "english": "She is washing the curtains before the new owner comes to check.", "vietnamese": "Cô ấy đang giặt rèm cửa trước khi chủ nhà mới đến kiểm tra." },
+        { "english": "The blue curtain matches the modern furniture in the living room.", "vietnamese": "Cái rèm cửa màu xanh hợp với đồ nội thất hiện đại trong phòng khách." },
+        { "english": "We will buy new curtains when we manage to save enough money.", "vietnamese": "Chúng tôi sẽ mua rèm cửa mới khi chúng tôi xoay xở tiết kiệm đủ tiền." }
+      ]
+    },
+    {
+      "word": "air conditioner",
+      "sentences": [
+        { "english": "The old air conditioner costs a lot of money, so the bill is high.", "vietnamese": "Cái máy điều hoà cũ tốn rất nhiều tiền, nên hoá đơn rất cao." },
+        { "english": "Our air conditioner does not work, so the room is very hot today.", "vietnamese": "Máy điều hoà của chúng tôi không chạy, nên căn phòng rất nóng hôm nay." },
+        { "english": "Turn off the air conditioner to save electricity and reduce the bill.", "vietnamese": "Hãy tắt máy điều hoà để tiết kiệm điện và giảm hoá đơn." },
+        { "english": "Does every room in this building have an air conditioner?", "vietnamese": "Mọi căn phòng trong tòa nhà này đều có máy điều hoà phải không?" },
+        { "english": "They installed a modern air conditioner in the bedroom last summer.", "vietnamese": "Họ đã lắp một cái máy điều hoà hiện đại trong phòng ngủ vào mùa hè năm ngoái." }
+      ]
+    },
+    {
+      "word": "carpet",
+      "sentences": [
+        { "english": "A soft carpet makes the living room warm, and it was quite cheap.", "vietnamese": "Một tấm thảm mềm làm cho phòng khách ấm áp, và nó khá rẻ." },
+        { "english": "The grey carpet is dirty because my housemate never throws the rubbish out.", "vietnamese": "Tấm thảm màu xám bị bẩn vì người ở chung nhà với tôi không bao giờ đổ rác." },
+        { "english": "We bought a soft carpet at a reasonable price for the bedroom.", "vietnamese": "Chúng tôi đã mua một tấm thảm mềm với giá hợp lý cho phòng ngủ." },
+        { "english": "Do not put a carpet in the kitchen, because it gets unhealthy quickly.", "vietnamese": "Đừng trải thảm trong bếp, vì nó nhanh chóng trở nên mất vệ sinh." },
+        { "english": "The hotel has replaced all the old carpets in its luxury rooms.", "vietnamese": "Khách sạn đã thay toàn bộ những tấm thảm cũ trong các phòng hạng sang của nó." }
+      ]
+    },
+    {
+      "word": "rug",
+      "sentences": [
+        { "english": "A colourful rug lies near the sofa and gives the room a warm atmosphere.", "vietnamese": "Một tấm thảm nhỏ nhiều màu nằm cạnh ghế sofa và mang lại cho căn phòng bầu không khí ấm áp." },
+        { "english": "A small rug near the door keeps the room clean and warm.", "vietnamese": "Một tấm thảm nhỏ gần cửa giữ cho căn phòng sạch sẽ và ấm áp." },
+        { "english": "This handmade rug was quite expensive, but I do not regret buying it.", "vietnamese": "Tấm thảm nhỏ làm bằng tay này khá đắt, nhưng tôi không hối hận vì đã mua nó." },
+        { "english": "Are you going to buy a new rug, or is it too pricey?", "vietnamese": "Bạn sẽ mua một tấm thảm nhỏ mới, hay là nó quá đắt?" },
+        { "english": "My grandmother has kept that old rug since she lived in the north.", "vietnamese": "Bà tôi đã giữ tấm thảm nhỏ cũ đó từ khi bà sống ở miền bắc." }
+      ]
+    },
+    {
+      "word": "share",
+      "sentences": [
+        { "english": "They share the flat to save money.", "vietnamese": "Họ dùng chung căn hộ để tiết kiệm." },
+        { "english": "I share a room with my younger brother in our flat.", "vietnamese": "Tôi dùng chung một phòng với em trai tôi trong căn hộ của chúng tôi." },
+        { "english": "They shared the taxi fee to save money after the nightclub closed.", "vietnamese": "Họ đã chia tiền taxi để tiết kiệm sau khi hộp đêm đóng cửa." },
+        { "english": "Would you like to share the rent with a quiet student?", "vietnamese": "Bạn có muốn chia tiền thuê nhà với một sinh viên trầm tính không?" },
+        { "english": "Many families share one small kitchen in this crowded neighbourhood.", "vietnamese": "Nhiều gia đình dùng chung một căn bếp nhỏ trong khu phố đông đúc này." }
+      ]
+    },
+    {
+      "word": "housemate",
+      "sentences": [
+        { "english": "My housemate always throws the rubbish away before eight in the morning.", "vietnamese": "Người ở chung nhà với tôi luôn đổ rác trước tám giờ sáng." },
+        { "english": "My housemate works as an accountant in a big company downtown.", "vietnamese": "Người ở chung nhà với tôi làm kế toán trong một công ty lớn ở trung tâm." },
+        { "english": "Our housemates always pay the bill on time, so we never worry.", "vietnamese": "Những người ở chung nhà với chúng tôi luôn trả hoá đơn đúng hạn, nên chúng tôi không bao giờ lo lắng." },
+        { "english": "Does your housemate lend you money when you are broke?", "vietnamese": "Người ở chung nhà có cho bạn mượn tiền khi bạn hết sạch tiền không?" },
+        { "english": "I have found a friendly housemate through a website about accommodation.", "vietnamese": "Tôi đã tìm được một người ở chung nhà thân thiện qua một trang web về chỗ ở." }
+      ]
+    },
+    {
+      "word": "roommate",
+      "sentences": [
+        { "english": "My roommate borrows money from me whenever he is broke at the weekend.", "vietnamese": "Bạn cùng phòng của tôi mượn tiền tôi mỗi khi cậu ấy hết tiền vào cuối tuần." },
+        { "english": "My roommate is very generous, so she often cooks dinner for me.", "vietnamese": "Bạn cùng phòng của tôi rất hào phóng, nên cô ấy thường nấu bữa tối cho tôi." },
+        { "english": "We were roommates at university, and we still live in the same district.", "vietnamese": "Chúng tôi là bạn cùng phòng thời đại học, và chúng tôi vẫn sống trong cùng một quận." },
+        { "english": "Ask your roommate to throw the rubbish out before noon.", "vietnamese": "Hãy bảo bạn cùng phòng của bạn đổ rác trước buổi trưa." },
+        { "english": "A noisy roommate can make daily life in a small room difficult.", "vietnamese": "Một người bạn cùng phòng ồn ào có thể làm cho cuộc sống hằng ngày trong một căn phòng nhỏ trở nên khó khăn." }
+      ]
+    },
+    {
+      "word": "decorate",
+      "sentences": [
+        { "english": "They decorate the flat with cheap plants to make it look more appealing.", "vietnamese": "Họ trang trí căn hộ bằng những cây cảnh rẻ tiền để nó trông hấp dẫn hơn." },
+        { "english": "She decorated her bedroom with cheap pictures from the local market.", "vietnamese": "Cô ấy đã trang trí phòng ngủ bằng những bức tranh rẻ tiền từ khu chợ địa phương." },
+        { "english": "They are decorating the hotel for the opening party next Saturday.", "vietnamese": "Họ đang trang trí khách sạn cho bữa tiệc khai trương vào thứ Bảy tới." },
+        { "english": "Shall we decorate the square with lanterns before the festival begins?", "vietnamese": "Chúng ta trang trí quảng trường bằng đèn lồng trước khi lễ hội bắt đầu nhé?" },
+        { "english": "He decorates his office every year, and it costs a lot of money.", "vietnamese": "Anh ấy trang trí văn phòng của mình mỗi năm, và nó tốn rất nhiều tiền." }
+      ]
+    },
+    {
+      "word": "beautifully",
+      "sentences": [
+        { "english": "She decorated the room beautifully.", "vietnamese": "Cô ấy trang trí căn phòng thật đẹp." },
+        { "english": "The hotel is beautifully designed, and the service is excellent.", "vietnamese": "Khách sạn được thiết kế một cách đẹp đẽ, và dịch vụ thì tuyệt vời." },
+        { "english": "She sings beautifully at the nightclub near our neighbourhood every Friday.", "vietnamese": "Cô ấy hát rất hay ở hộp đêm gần khu phố của chúng tôi mỗi tối thứ Sáu." },
+        { "english": "The old bridge was beautifully lit during the festival last night.", "vietnamese": "Cây cầu cũ được thắp sáng một cách đẹp đẽ trong lễ hội tối qua." },
+        { "english": "Our flat is beautifully arranged, although the rent is quite expensive.", "vietnamese": "Căn hộ của chúng tôi được sắp xếp thật đẹp, mặc dù tiền thuê khá đắt." }
+      ]
+    },
+    {
+      "word": "antique",
+      "sentences": [
+        { "english": "She bought a beautiful antique at the market.", "vietnamese": "Cô ấy mua một món đồ cổ đẹp ở chợ." },
+        { "english": "My grandfather collects antiques, and some of them are very expensive.", "vietnamese": "Ông tôi sưu tầm đồ cổ, và một vài món trong số đó rất đắt." },
+        { "english": "This antique costs more than my monthly rent.", "vietnamese": "Món đồ cổ này có giá cao hơn tiền thuê nhà hằng tháng của tôi." },
+        { "english": "Have you seen the antiques in that small shop along the alley?", "vietnamese": "Bạn đã nhìn thấy những món đồ cổ trong cửa hàng nhỏ dọc con hẻm đó chưa?" },
+        { "english": "She will sell an antique to pay the electricity bill this month.", "vietnamese": "Cô ấy sẽ bán một món đồ cổ để trả hoá đơn tiền điện tháng này." }
+      ]
+    },
+    {
+      "word": "comfortable",
+      "sentences": [
+        { "english": "This sofa is comfortable, and the price was very reasonable last month.", "vietnamese": "Chiếc ghế sofa này rất thoải mái, và giá của nó rất hợp lý hồi tháng trước." },
+        { "english": "The seats on the new bus are comfortable and the service is quick.", "vietnamese": "Ghế ngồi trên chiếc xe buýt mới rất thoải mái và dịch vụ thì nhanh chóng." },
+        { "english": "I do not feel comfortable living in such a crowded neighbourhood.", "vietnamese": "Tôi không cảm thấy thoải mái khi sống trong một khu phố đông đúc như vậy." },
+        { "english": "Is this room comfortable enough, or should we look for another one?", "vietnamese": "Căn phòng này đủ thoải mái chưa, hay chúng ta nên tìm một phòng khác?" },
+        { "english": "They have made the office more comfortable by buying modern chairs.", "vietnamese": "Họ đã làm cho văn phòng thoải mái hơn bằng cách mua những chiếc ghế hiện đại." }
+      ]
+    },
+    {
+      "word": "cramped",
+      "sentences": [
+        { "english": "Our first room was dark and cramped, but the rent was cheap.", "vietnamese": "Căn phòng đầu tiên của chúng tôi vừa tối vừa chật chội, nhưng tiền thuê thì rẻ." },
+        { "english": "The bus is always cramped during the daily rush hour in the capital.", "vietnamese": "Xe buýt luôn chật chội trong giờ cao điểm hằng ngày ở thủ đô." },
+        { "english": "We moved out because the old room felt too cramped for three people.", "vietnamese": "Chúng tôi đã chuyển đi vì căn phòng cũ cảm thấy quá chật chội cho ba người." },
+        { "english": "Do not choose a cramped flat just because the price is low.", "vietnamese": "Đừng chọn một căn hộ chật chội chỉ vì giá thấp." },
+        { "english": "His office is cramped, but the location near the highway is convenient.", "vietnamese": "Văn phòng của anh ấy chật chội, nhưng vị trí gần đường cao tốc thì tiện lợi." }
+      ]
+    }
+  ]
+}

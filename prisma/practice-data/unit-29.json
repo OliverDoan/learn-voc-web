@@ -1,0 +1,247 @@
+{
+  "unit": 29,
+  "deck": "Unit 29: Giao thông và đường phố",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "traffic",
+      "sentences": [
+        { "english": "The terrible traffic made me quite late for my morning class.", "vietnamese": "Giao thông tệ hại khiến tôi khá muộn giờ học buổi sáng." },
+        { "english": "The traffic near the central market is always noisy after six.", "vietnamese": "Giao thông gần khu chợ trung tâm luôn ồn ào sau sáu giờ." },
+        { "english": "Has the traffic on this highway improved since the new bridge opened?", "vietnamese": "Giao thông trên xa lộ này đã cải thiện kể từ khi cây cầu mới thông xe chưa?" },
+        { "english": "Heavy traffic wastes the free time of many local workers.", "vietnamese": "Giao thông đông đúc làm lãng phí thời gian rảnh của nhiều người lao động địa phương." },
+        { "english": "We will avoid the traffic if we leave before noon.", "vietnamese": "Chúng tôi sẽ tránh được giao thông nếu chúng tôi đi trước buổi trưa." }
+      ]
+    },
+    {
+      "word": "heavy",
+      "sentences": [
+        { "english": "Traffic is very heavy at noon, so I always leave home early.", "vietnamese": "Giao thông rất đông đúc vào buổi trưa, nên tôi luôn rời nhà sớm." },
+        { "english": "The traffic gets heavy whenever the rainy season begins.", "vietnamese": "Giao thông trở nên đông đúc mỗi khi mùa mưa bắt đầu." },
+        { "english": "Was the traffic heavy on the highway to your hometown?", "vietnamese": "Giao thông có đông đúc trên xa lộ về quê bạn không?" },
+        { "english": "Heavy traffic in the central district makes me anxious every evening.", "vietnamese": "Giao thông đông đúc ở quận trung tâm khiến tôi lo lắng mỗi buổi tối." },
+        { "english": "Do not drive through the centre when the traffic is heavy.", "vietnamese": "Đừng lái xe qua trung tâm khi giao thông đang đông đúc." }
+      ]
+    },
+    {
+      "word": "light",
+      "sentences": [
+        { "english": "Please stop when the traffic light turns red.", "vietnamese": "Hãy dừng lại khi đèn giao thông chuyển sang màu đỏ." },
+        { "english": "The traffic light near the local market stopped working last week.", "vietnamese": "Đèn giao thông gần khu chợ địa phương đã ngừng hoạt động từ tuần trước." },
+        { "english": "Drivers often ignore the red light in this crowded district.", "vietnamese": "Người lái xe thường phớt lờ đèn đỏ ở quận đông đúc này." },
+        { "english": "Are you waiting at the light on the corner of that alley?", "vietnamese": "Bạn đang đợi ở đèn giao thông tại góc con hẻm đó phải không?" },
+        { "english": "A new light will make this junction safe for every pedestrian.", "vietnamese": "Một cái đèn giao thông mới sẽ làm ngã tư này an toàn cho mọi người đi bộ." }
+      ]
+    },
+    {
+      "word": "patient",
+      "sentences": [
+        { "english": "You must stay patient when you are driving in a jam.", "vietnamese": "Bạn phải giữ kiên nhẫn khi lái xe trong lúc kẹt đường." },
+        { "english": "Be patient with the slow vehicle in front of you.", "vietnamese": "Hãy kiên nhẫn với chiếc xe chạy chậm phía trước bạn." },
+        { "english": "My coach taught me to stay patient during a long journey.", "vietnamese": "Huấn luyện viên của tôi dạy tôi giữ kiên nhẫn trong một hành trình dài." },
+        { "english": "She was not patient enough and became angry at the corner.", "vietnamese": "Cô ấy không đủ kiên nhẫn và đã nổi giận ở khúc cua." },
+        { "english": "Drivers in this area have grown more patient since the new rule.", "vietnamese": "Người lái xe ở khu vực này đã trở nên kiên nhẫn hơn kể từ khi có quy định mới." }
+      ]
+    },
+    {
+      "word": "honk",
+      "sentences": [
+        { "english": "Angry drivers behind us began to honk, and my head started to ache.", "vietnamese": "Những người lái xe giận dữ phía sau chúng tôi bắt đầu bấm còi, và đầu tôi bắt đầu đau." },
+        { "english": "Please do not honk near the clinic after ten.", "vietnamese": "Xin đừng bấm còi gần phòng khám sau mười giờ." },
+        { "english": "The taxi driver honked twice and drove away quickly.", "vietnamese": "Tài xế taxi đã bấm còi hai lần rồi nhanh chóng lái xe đi." },
+        { "english": "People honk everywhere in this bustling district at rush hour.", "vietnamese": "Mọi người bấm còi khắp nơi ở quận nhộn nhịp này vào giờ cao điểm." },
+        { "english": "Why do those young men honk when the light is still red?", "vietnamese": "Tại sao mấy chàng trai trẻ đó lại bấm còi khi đèn vẫn còn đỏ?" }
+      ]
+    },
+    {
+      "word": "annoyed",
+      "sentences": [
+        { "english": "I felt annoyed when a taxi stopped in the middle of the street.", "vietnamese": "Tôi thấy bực mình khi một chiếc taxi dừng lại giữa đường." },
+        { "english": "My father looked annoyed because the noisy street kept him awake.", "vietnamese": "Bố tôi trông bực mình vì con phố ồn ào khiến ông thức giấc." },
+        { "english": "Are you annoyed with the crowded pavement in front of your flat?", "vietnamese": "Bạn có bực mình với vỉa hè đông đúc trước căn hộ của bạn không?" },
+        { "english": "She gets annoyed whenever someone throws rubbish onto the road.", "vietnamese": "Cô ấy bực mình mỗi khi ai đó ném rác ra đường." },
+        { "english": "I was annoyed, but I tried to stay calm and quiet.", "vietnamese": "Tôi đã bực mình, nhưng tôi cố giữ bình tĩnh và im lặng." }
+      ]
+    },
+    {
+      "word": "cyclist",
+      "sentences": [
+        { "english": "The cyclist waved at us and turned into a quiet lane.", "vietnamese": "Người đi xe đạp vẫy tay với chúng tôi rồi rẽ vào một con hẻm yên tĩnh." },
+        { "english": "A young cyclist rides along the bridge every morning.", "vietnamese": "Một người đi xe đạp trẻ tuổi đạp xe dọc cây cầu mỗi buổi sáng." },
+        { "english": "Cyclists must avoid the highway because it is dangerous.", "vietnamese": "Những người đi xe đạp phải tránh xa lộ vì nó nguy hiểm." },
+        { "english": "Have you ever seen a cyclist carry a huge box of groceries?", "vietnamese": "Bạn đã bao giờ thấy một người đi xe đạp chở một thùng thực phẩm khổng lồ chưa?" },
+        { "english": "The cyclist was injured, so an ambulance took him to the clinic.", "vietnamese": "Người đi xe đạp bị thương, nên một xe cứu thương đã đưa anh ấy tới phòng khám." }
+      ]
+    },
+    {
+      "word": "pedestrian",
+      "sentences": [
+        { "english": "An old pedestrian walked slowly across the busy square near my house.", "vietnamese": "Một người đi bộ lớn tuổi đi chậm rãi qua quảng trường đông đúc gần nhà tôi." },
+        { "english": "Every pedestrian should use the pavement instead of the busy road.", "vietnamese": "Mọi người đi bộ nên đi trên vỉa hè thay vì lòng đường đông xe." },
+        { "english": "Pedestrians feel safe when drivers slow down near the square.", "vietnamese": "Người đi bộ cảm thấy an toàn khi người lái xe chạy chậm lại gần quảng trường." },
+        { "english": "A pedestrian bridge was built near our neighbourhood last year.", "vietnamese": "Một cây cầu dành cho người đi bộ đã được xây gần khu phố của chúng tôi năm ngoái." },
+        { "english": "Do not park your vehicle on the pedestrian crossing.", "vietnamese": "Đừng đỗ xe của bạn trên vạch dành cho người đi bộ." }
+      ]
+    },
+    {
+      "word": "passenger",
+      "sentences": [
+        { "english": "The passenger beside me explained the route to our young driver.", "vietnamese": "Hành khách bên cạnh tôi giải thích tuyến đường cho tài xế trẻ của chúng tôi." },
+        { "english": "Every passenger on the train looked tired and silent.", "vietnamese": "Mọi hành khách trên tàu đều trông mệt mỏi và im lặng." },
+        { "english": "The bus was crowded, so some passengers had to stand.", "vietnamese": "Xe buýt đông đúc, nên vài hành khách phải đứng." },
+        { "english": "A passenger left her document on the seat yesterday.", "vietnamese": "Một hành khách đã để quên giấy tờ của cô ấy trên ghế hôm qua." },
+        { "english": "Will the passenger beside you mind if we open the window?", "vietnamese": "Hành khách bên cạnh bạn có phiền không nếu chúng ta mở cửa sổ?" }
+      ]
+    },
+    {
+      "word": "hole",
+      "sentences": [
+        { "english": "A deep hole in the pavement can injure people who walk at night.", "vietnamese": "Một cái ổ gà sâu trên vỉa hè có thể làm bị thương những người đi bộ vào ban đêm." },
+        { "english": "There is a big hole in the alley behind our flat.", "vietnamese": "Có một ổ gà lớn trong con hẻm phía sau căn hộ của chúng tôi." },
+        { "english": "Workers repaired the hole near the bridge last weekend.", "vietnamese": "Công nhân đã sửa cái ổ gà gần cây cầu vào cuối tuần trước." },
+        { "english": "Did your bike fall into that hole on the highway?", "vietnamese": "Xe của bạn có bị sụp vào cái ổ gà đó trên xa lộ không?" },
+        { "english": "Holes in the road make every journey slow and painful.", "vietnamese": "Những ổ gà trên đường khiến mọi hành trình trở nên chậm chạp và đau đớn." }
+      ]
+    },
+    {
+      "word": "fast",
+      "sentences": [
+        { "english": "That young man drives too fast, and his friends always feel scared.", "vietnamese": "Chàng trai trẻ đó lái xe quá nhanh, và bạn bè anh ấy luôn cảm thấy sợ hãi." },
+        { "english": "The new highway lets vehicles move fast between the two districts.", "vietnamese": "Xa lộ mới cho phép xe cộ di chuyển nhanh giữa hai quận." },
+        { "english": "Do not ride too fast when the ground is wet.", "vietnamese": "Đừng chạy xe quá nhanh khi mặt đất ướt." },
+        { "english": "His car is fast, but he always drives carefully in town.", "vietnamese": "Xe của anh ấy chạy nhanh, nhưng anh ấy luôn lái cẩn thận trong thị trấn." },
+        { "english": "She walked at a fast pace to catch the last train.", "vietnamese": "Cô ấy đi bộ với nhịp nhanh để kịp chuyến tàu cuối." }
+      ]
+    },
+    {
+      "word": "pass",
+      "sentences": [
+        { "english": "He tried to pass the truck on a narrow street.", "vietnamese": "Anh ấy cố vượt qua chiếc xe tải trên con phố hẹp." },
+        { "english": "We passed the old temple on our way to the coast.", "vietnamese": "Chúng tôi đã vượt qua ngôi đền cổ trên đường ra bờ biển." },
+        { "english": "Cars cannot pass because a huge tree fell across the alley.", "vietnamese": "Xe hơi không thể vượt qua vì một cái cây khổng lồ đổ ngang con hẻm." },
+        { "english": "Are they passing the bridge now or waiting at the light?", "vietnamese": "Họ đang vượt qua cây cầu bây giờ hay đang đợi ở đèn giao thông?" },
+        { "english": "Please pass carefully when a cyclist is riding beside you.", "vietnamese": "Hãy vượt qua cẩn thận khi có người đi xe đạp đang đi bên cạnh bạn." }
+      ]
+    },
+    {
+      "word": "crazy",
+      "sentences": [
+        { "english": "Riding without a helmet in this city is completely crazy and dangerous.", "vietnamese": "Đi xe không đội mũ bảo hiểm ở thành phố này là hoàn toàn điên rồ và nguy hiểm." },
+        { "english": "The traffic here is crazy during the rainy season.", "vietnamese": "Giao thông ở đây thật điên rồ trong mùa mưa." },
+        { "english": "It sounds crazy, but he drives to work through the flood.", "vietnamese": "Nghe có vẻ điên rồ, nhưng anh ấy lái xe đi làm qua vùng ngập lụt." },
+        { "english": "My brother had a crazy idea about moving to the capital.", "vietnamese": "Anh trai tôi đã có một ý tưởng điên rồ về việc chuyển tới thủ đô." },
+        { "english": "Are you crazy enough to ride a motorbike in this typhoon?", "vietnamese": "Bạn có đủ điên rồ để chạy xe máy trong cơn bão này không?" }
+      ]
+    },
+    {
+      "word": "accident",
+      "sentences": [
+        { "english": "A small accident blocked the road for twenty minutes.", "vietnamese": "Một vụ tai nạn nhỏ làm tắc đường suốt hai mươi phút." },
+        { "english": "He had an accident last year and hurt his leg badly.", "vietnamese": "Anh ấy đã gặp một tai nạn năm ngoái và làm chân bị thương nặng." },
+        { "english": "Accidents happen when drivers are exhausted and the light is poor.", "vietnamese": "Tai nạn xảy ra khi người lái xe kiệt sức và ánh sáng kém." },
+        { "english": "The police announced that the accident was not serious.", "vietnamese": "Cảnh sát thông báo rằng vụ tai nạn không nghiêm trọng." },
+        { "english": "Wear a helmet to prevent a terrible accident on the highway.", "vietnamese": "Hãy đội mũ bảo hiểm để ngăn một vụ tai nạn khủng khiếp trên xa lộ." }
+      ]
+    },
+    {
+      "word": "push",
+      "sentences": [
+        { "english": "We had to push the motorbike to a small repair shop nearby.", "vietnamese": "Chúng tôi phải đẩy chiếc xe máy đến một tiệm sửa xe nhỏ gần đó." },
+        { "english": "Do not push other passengers when the bus is crowded.", "vietnamese": "Đừng đẩy những hành khách khác khi xe buýt đông đúc." },
+        { "english": "She pushed the door open and walked into the busy clinic.", "vietnamese": "Cô ấy đẩy cửa mở ra và bước vào phòng khám đông người." },
+        { "english": "They are pushing a heavy cart of groceries along the pavement.", "vietnamese": "Họ đang đẩy một xe hàng thực phẩm nặng dọc theo vỉa hè." },
+        { "english": "Could you push my bike across the bridge for a moment?", "vietnamese": "Bạn có thể đẩy xe của tôi qua cây cầu một lát được không?" }
+      ]
+    },
+    {
+      "word": "quickly",
+      "sentences": [
+        { "english": "The ambulance arrived quickly, so the injured man got help in time.", "vietnamese": "Xe cứu thương đến nhanh chóng, nên người đàn ông bị thương được giúp đỡ kịp thời." },
+        { "english": "Please walk quickly because the light will change soon.", "vietnamese": "Hãy đi nhanh lên vì đèn sắp chuyển màu." },
+        { "english": "The driver quickly turned into a narrow alley to avoid the jam.", "vietnamese": "Tài xế nhanh chóng rẽ vào một con hẻm hẹp để tránh kẹt xe." },
+        { "english": "News about the accident spread quickly around our neighbourhood.", "vietnamese": "Tin về vụ tai nạn lan nhanh chóng khắp khu phố của chúng tôi." },
+        { "english": "He recovered quickly after the doctor removed the glass from his arm.", "vietnamese": "Anh ấy hồi phục nhanh chóng sau khi bác sĩ lấy mảnh thủy tinh ra khỏi cánh tay." }
+      ]
+    },
+    {
+      "word": "officer",
+      "sentences": [
+        { "english": "A police officer checked my papers and explained the new rule politely.", "vietnamese": "Một cảnh sát kiểm tra giấy tờ của tôi và giải thích quy định mới một cách lịch sự." },
+        { "english": "An officer stood near the square and controlled the busy crossing.", "vietnamese": "Một cảnh sát đứng gần quảng trường và điều khiển giao lộ đông đúc." },
+        { "english": "Two officers arrived quickly after the accident on the highway.", "vietnamese": "Hai cảnh sát đã tới nhanh chóng sau vụ tai nạn trên xa lộ." },
+        { "english": "The officer asked for my document and checked it carefully.", "vietnamese": "Viên cảnh sát hỏi giấy tờ của tôi và kiểm tra nó một cách cẩn thận." },
+        { "english": "Should we call an officer when a vehicle blocks the pavement?", "vietnamese": "Chúng ta có nên gọi cảnh sát khi một chiếc xe chắn vỉa hè không?" }
+      ]
+    },
+    {
+      "word": "speed",
+      "sentences": [
+        { "english": "Please slow down and check your speed near the corner.", "vietnamese": "Hãy chạy chậm lại và để ý tốc độ khi tới gần khúc cua." },
+        { "english": "The speed of the traffic drops sharply during the rainy season.", "vietnamese": "Tốc độ của dòng xe giảm mạnh trong mùa mưa." },
+        { "english": "Drivers often increase their speed on the empty highway at noon.", "vietnamese": "Người lái xe thường tăng tốc độ trên xa lộ vắng vào buổi trưa." },
+        { "english": "What is the speed limit in this quiet neighbourhood?", "vietnamese": "Giới hạn tốc độ ở khu phố yên tĩnh này là bao nhiêu?" },
+        { "english": "High speed in a crowded area is extremely dangerous.", "vietnamese": "Tốc độ cao ở khu vực đông đúc là cực kỳ nguy hiểm." }
+      ]
+    },
+    {
+      "word": "fine",
+      "sentences": [
+        { "english": "He had to pay a fine for driving too fast.", "vietnamese": "Anh ấy phải nộp tiền phạt vì chạy xe quá nhanh." },
+        { "english": "The officer gave him a fine because he ignored the red light.", "vietnamese": "Viên cảnh sát phạt anh ấy một khoản tiền phạt vì anh ấy đã phớt lờ đèn đỏ." },
+        { "english": "Fines for dangerous driving have increased since last year.", "vietnamese": "Tiền phạt cho việc lái xe nguy hiểm đã tăng lên kể từ năm ngoái." },
+        { "english": "I cannot afford a big fine this month, so I drive carefully.", "vietnamese": "Tháng này tôi không kham nổi một khoản tiền phạt lớn, nên tôi lái xe cẩn thận." },
+        { "english": "Did you pay the fine before the due date last week?", "vietnamese": "Bạn đã nộp tiền phạt trước ngày đến hạn vào tuần trước chưa?" }
+      ]
+    },
+    {
+      "word": "carefully",
+      "sentences": [
+        { "english": "She always drives carefully near the school gate.", "vietnamese": "Cô ấy luôn lái xe cẩn thận gần cổng trường." },
+        { "english": "Read the rule carefully before you ride in a strange country.", "vietnamese": "Hãy đọc quy định cẩn thận trước khi bạn chạy xe ở một đất nước xa lạ." },
+        { "english": "He crossed the busy square carefully because the ground was wet.", "vietnamese": "Anh ấy băng qua quảng trường đông đúc một cách cẩn thận vì mặt đất ướt." },
+        { "english": "You should check your vehicle carefully before a long journey.", "vietnamese": "Bạn nên kiểm tra xe của mình cẩn thận trước một hành trình dài." },
+        { "english": "The nurse carefully cleaned the wound after the accident.", "vietnamese": "Cô y tá cẩn thận rửa sạch vết thương sau vụ tai nạn." }
+      ]
+    },
+    {
+      "word": "station",
+      "sentences": [
+        { "english": "There is a petrol station near the market at the end of this street.", "vietnamese": "Có một trạm xăng gần chợ ở cuối con phố này." },
+        { "english": "We waited for our train at the old station near the centre.", "vietnamese": "Chúng tôi đợi tàu ở nhà ga cũ gần trung tâm." },
+        { "english": "The police station is open every day, even on a holiday.", "vietnamese": "Đồn cảnh sát mở cửa mỗi ngày, ngay cả vào ngày lễ." },
+        { "english": "Is there a petrol station on the highway to the coast?", "vietnamese": "Có trạm xăng nào trên xa lộ ra bờ biển không?" },
+        { "english": "They are building a modern station beside the new bridge.", "vietnamese": "Họ đang xây một nhà ga hiện đại bên cạnh cây cầu mới." }
+      ]
+    },
+    {
+      "word": "fuel",
+      "sentences": [
+        { "english": "We stopped to buy fuel because the journey to the coast was long.", "vietnamese": "Chúng tôi dừng lại mua nhiên liệu vì hành trình ra bờ biển rất dài." },
+        { "english": "The price of fuel has risen again this month.", "vietnamese": "Giá nhiên liệu lại tăng lần nữa trong tháng này." },
+        { "english": "My old vehicle uses more fuel than a modern motorbike.", "vietnamese": "Chiếc xe cũ của tôi tốn nhiên liệu hơn một chiếc xe máy hiện đại." },
+        { "english": "Do not waste fuel by driving around the crowded centre.", "vietnamese": "Đừng lãng phí nhiên liệu bằng cách lái xe vòng quanh trung tâm đông đúc." },
+        { "english": "Cheap fuel is hard to find in this quiet area.", "vietnamese": "Nhiên liệu rẻ thì khó tìm ở khu vực yên tĩnh này." }
+      ]
+    },
+    {
+      "word": "safely",
+      "sentences": [
+        { "english": "We finally got home safely after the long journey.", "vietnamese": "Cuối cùng chúng tôi cũng về nhà an toàn sau chặng đường dài." },
+        { "english": "Drive safely through the flooded street after a heavy shower.", "vietnamese": "Hãy lái xe an toàn qua con phố ngập nước sau một trận mưa rào lớn." },
+        { "english": "The guide led every tourist safely across the narrow bridge.", "vietnamese": "Hướng dẫn viên đã dẫn mọi du khách qua cây cầu hẹp một cách an toàn." },
+        { "english": "Park your vehicle safely and lock it before you leave.", "vietnamese": "Hãy đỗ xe của bạn an toàn và khóa lại trước khi bạn rời đi." },
+        { "english": "Did the children arrive safely at the playground this afternoon?", "vietnamese": "Bọn trẻ có tới sân chơi an toàn chiều nay không?" }
+      ]
+    },
+    {
+      "word": "worse",
+      "sentences": [
+        { "english": "Traffic gets worse every morning, and the air quality is truly awful.", "vietnamese": "Giao thông tệ hơn mỗi buổi sáng, và chất lượng không khí thực sự tồi tệ." },
+        { "english": "The pollution becomes worse when the traffic stops moving.", "vietnamese": "Ô nhiễm trở nên tệ hơn khi dòng xe ngừng di chuyển." },
+        { "english": "His health got worse after the accident last winter.", "vietnamese": "Sức khỏe của anh ấy tệ hơn sau vụ tai nạn mùa đông năm ngoái." },
+        { "english": "Riding without a helmet is worse than driving too fast.", "vietnamese": "Chạy xe không đội mũ bảo hiểm còn tệ hơn lái xe quá nhanh." },
+        { "english": "Nothing is worse than a long journey on a crowded bus.", "vietnamese": "Không gì tệ hơn một hành trình dài trên chiếc xe buýt đông đúc." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,607 @@
+{
+  "unit": 19,
+  "deck": "Unit 19: Ăn uống lành mạnh",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "follow",
+      "sentences": [
+        {
+          "english": "I try to follow a simple recipe.",
+          "vietnamese": "Tôi cố làm theo một công thức đơn giản."
+        },
+        {
+          "english": "Please follow the seasoning steps or the soup will taste plain.",
+          "vietnamese": "Hãy tuân theo các bước nêm gia vị, nếu không món súp sẽ có vị nhạt."
+        },
+        {
+          "english": "My sister followed a vegetarian menu for three months last year.",
+          "vietnamese": "Chị tôi đã tuân theo một thực đơn chay trong ba tháng vào năm ngoái."
+        },
+        {
+          "english": "Do you always follow your mother's advice about cooking?",
+          "vietnamese": "Bạn có luôn tuân theo lời khuyên của mẹ bạn về việc nấu ăn không?"
+        },
+        {
+          "english": "We are following a new habit of drinking water before every meal.",
+          "vietnamese": "Chúng tôi đang tuân theo một thói quen mới là uống nước trước mỗi bữa ăn."
+        }
+      ]
+    },
+    {
+      "word": "diet",
+      "sentences": [
+        {
+          "english": "My brother started a healthy diet and gave up takeaway food.",
+          "vietnamese": "Anh trai tôi bắt đầu một chế độ ăn lành mạnh và bỏ đồ ăn mang đi."
+        },
+        {
+          "english": "A balanced diet gives you more energy during a busy week.",
+          "vietnamese": "Một chế độ ăn cân bằng cho bạn nhiều năng lượng hơn trong một tuần bận rộn."
+        },
+        {
+          "english": "My diet changed a lot after I started cooking at home.",
+          "vietnamese": "Chế độ ăn của tôi thay đổi rất nhiều sau khi tôi bắt đầu nấu ăn ở nhà."
+        },
+        {
+          "english": "Have you ever tried a detox diet with fresh fruit juice?",
+          "vietnamese": "Bạn đã bao giờ thử một chế độ ăn thải độc với nước ép trái cây tươi chưa?"
+        },
+        {
+          "english": "Doctors say a poor diet can be terrible for your stomach.",
+          "vietnamese": "Các bác sĩ nói rằng một chế độ ăn nghèo nàn có thể rất tệ cho dạ dày của bạn."
+        }
+      ]
+    },
+    {
+      "word": "strict",
+      "sentences": [
+        {
+          "english": "She follows a strict diet.",
+          "vietnamese": "Cô ấy theo một chế độ ăn nghiêm ngặt."
+        },
+        {
+          "english": "My chef is very strict about fresh ingredients in the kitchen.",
+          "vietnamese": "Bếp trưởng của tôi rất nghiêm ngặt về nguyên liệu tươi trong bếp."
+        },
+        {
+          "english": "The pub has strict rules about alcohol after midnight.",
+          "vietnamese": "Quán rượu có những quy định nghiêm ngặt về đồ có cồn sau nửa đêm."
+        },
+        {
+          "english": "Were your parents strict about sweet snacks when you were young?",
+          "vietnamese": "Bố mẹ bạn có nghiêm ngặt về đồ ăn vặt ngọt khi bạn còn nhỏ không?"
+        },
+        {
+          "english": "I am not strict with my habit of drinking coffee at work.",
+          "vietnamese": "Tôi không nghiêm ngặt với thói quen uống cà phê ở chỗ làm của mình."
+        }
+      ]
+    },
+    {
+      "word": "stay",
+      "sentences": [
+        {
+          "english": "I want to stay healthy and fit.",
+          "vietnamese": "Tôi muốn giữ sức khỏe và vóc dáng."
+        },
+        {
+          "english": "Fresh seafood will not stay good outside the fridge for long.",
+          "vietnamese": "Hải sản tươi sẽ không giữ được ngon lâu khi để ngoài tủ lạnh."
+        },
+        {
+          "english": "Drink enough water and your energy will stay high all day.",
+          "vietnamese": "Hãy uống đủ nước và năng lượng của bạn sẽ duy trì ở mức cao cả ngày."
+        },
+        {
+          "english": "The soup stayed hot because I kept the pot on the stove.",
+          "vietnamese": "Món súp vẫn giữ được nóng vì tôi để nồi trên bếp."
+        },
+        {
+          "english": "How do you stay away from oily takeaway food every evening?",
+          "vietnamese": "Làm sao bạn giữ được việc tránh xa đồ ăn mang đi nhiều dầu mỡ mỗi tối?"
+        }
+      ]
+    },
+    {
+      "word": "sugar",
+      "sentences": [
+        {
+          "english": "She put too much sugar in the coffee.",
+          "vietnamese": "Cô ấy cho quá nhiều đường vào cà phê."
+        },
+        {
+          "english": "Too much sugar in your diet is terrible for your teeth.",
+          "vietnamese": "Quá nhiều đường trong chế độ ăn thì rất tệ cho răng của bạn."
+        },
+        {
+          "english": "I stopped adding sugar to my morning smoothie last month.",
+          "vietnamese": "Tôi đã ngừng thêm đường vào ly sinh tố buổi sáng của mình từ tháng trước."
+        },
+        {
+          "english": "Does this sparkling drink contain a lot of sugar?",
+          "vietnamese": "Loại nước có ga này có chứa nhiều đường không?"
+        },
+        {
+          "english": "Brown sugar makes the sauce sweet and a little bit dark.",
+          "vietnamese": "Đường nâu làm nước sốt ngọt và hơi sẫm màu một chút."
+        }
+      ]
+    },
+    {
+      "word": "crappy",
+      "sentences": [
+        {
+          "english": "I felt crappy all morning after eating those oily leftovers.",
+          "vietnamese": "Tôi thấy người tồi tệ suốt buổi sáng sau khi ăn chỗ đồ thừa nhiều dầu mỡ đó."
+        },
+        {
+          "english": "That pub serves crappy beer at a very high price.",
+          "vietnamese": "Quán rượu đó phục vụ bia dở tệ với giá rất cao."
+        },
+        {
+          "english": "I had a crappy hangover after drinking too much wine.",
+          "vietnamese": "Tôi đã bị một cơn say rượu tồi tệ sau khi uống quá nhiều rượu vang."
+        },
+        {
+          "english": "Why do you buy such crappy groceries at that market?",
+          "vietnamese": "Sao bạn lại mua thực phẩm tệ như vậy ở cái chợ đó?"
+        },
+        {
+          "english": "The crispy pork was good but the soup tasted crappy.",
+          "vietnamese": "Món thịt heo giòn thì ngon nhưng món súp có vị tồi tệ."
+        }
+      ]
+    },
+    {
+      "word": "tiring",
+      "sentences": [
+        {
+          "english": "Cooking all day is very tiring.",
+          "vietnamese": "Nấu ăn cả ngày rất mệt."
+        },
+        {
+          "english": "Shopping for groceries every evening is tiring after a long shift.",
+          "vietnamese": "Đi mua thực phẩm mỗi tối thật mệt mỏi sau một ca làm dài."
+        },
+        {
+          "english": "My detox week was tiring because I could not eat much.",
+          "vietnamese": "Tuần thải độc của tôi rất mệt mỏi vì tôi không thể ăn nhiều."
+        },
+        {
+          "english": "Was the cooking class tiring or did you enjoy it?",
+          "vietnamese": "Lớp nấu ăn có mệt không hay bạn thấy thích nó?"
+        },
+        {
+          "english": "Standing near the hot stove for hours is really tiring.",
+          "vietnamese": "Đứng gần cái bếp nóng hàng giờ thật sự rất mệt."
+        }
+      ]
+    },
+    {
+      "word": "ingredient",
+      "sentences": [
+        {
+          "english": "Fish sauce is the main ingredient in many Vietnamese dishes.",
+          "vietnamese": "Nước mắm là nguyên liệu chính trong nhiều món ăn Việt Nam."
+        },
+        {
+          "english": "Write down every ingredient before you go to the market.",
+          "vietnamese": "Hãy ghi ra từng nguyên liệu trước khi bạn đi chợ."
+        },
+        {
+          "english": "The chef hides one secret ingredient in his famous soup.",
+          "vietnamese": "Người bếp trưởng giấu một nguyên liệu bí mật trong món súp nổi tiếng của ông ấy."
+        },
+        {
+          "english": "Fresh ingredients always make a simple dish taste better.",
+          "vietnamese": "Nguyên liệu tươi luôn làm một món ăn đơn giản có vị ngon hơn."
+        },
+        {
+          "english": "We could not find the last ingredient for the hotpot yesterday.",
+          "vietnamese": "Hôm qua chúng tôi không tìm được nguyên liệu cuối cùng cho món lẩu."
+        }
+      ]
+    },
+    {
+      "word": "amount",
+      "sentences": [
+        {
+          "english": "Add a small amount of salt.",
+          "vietnamese": "Cho một lượng nhỏ muối."
+        },
+        {
+          "english": "A large amount of sugar makes the coffee too sweet.",
+          "vietnamese": "Một lượng đường lớn làm cho cà phê quá ngọt."
+        },
+        {
+          "english": "She poured the same amount of wine into every glass.",
+          "vietnamese": "Cô ấy rót cùng một lượng rượu vang vào mỗi cái ly."
+        },
+        {
+          "english": "What amount of chilli do you usually add to the sauce?",
+          "vietnamese": "Bạn thường cho lượng ớt bao nhiêu vào nước sốt?"
+        },
+        {
+          "english": "We wasted a huge amount of food and threw the leftovers away.",
+          "vietnamese": "Chúng tôi đã lãng phí một lượng đồ ăn khổng lồ và vứt bỏ chỗ đồ thừa."
+        }
+      ]
+    },
+    {
+      "word": "home-cooked",
+      "sentences": [
+        {
+          "english": "I love a good home-cooked meal.",
+          "vietnamese": "Tôi thích một bữa ăn nấu tại nhà ngon lành."
+        },
+        {
+          "english": "Home-cooked soup costs much less than takeaway from the city centre.",
+          "vietnamese": "Súp nấu tại nhà tốn ít tiền hơn nhiều so với đồ mang đi từ trung tâm thành phố."
+        },
+        {
+          "english": "My grandmother served a home-cooked dinner for all the guests.",
+          "vietnamese": "Bà tôi đã dọn một bữa tối nấu tại nhà cho tất cả các vị khách."
+        },
+        {
+          "english": "Do you prefer home-cooked food or street cuisine at weekends?",
+          "vietnamese": "Bạn thích đồ ăn nấu tại nhà hay ẩm thực đường phố vào cuối tuần?"
+        },
+        {
+          "english": "We have eaten home-cooked meals every day since we bought the stove.",
+          "vietnamese": "Chúng tôi đã ăn các bữa nấu tại nhà mỗi ngày kể từ khi mua cái bếp."
+        }
+      ]
+    },
+    {
+      "word": "efficient",
+      "sentences": [
+        {
+          "english": "This new stove is very efficient.",
+          "vietnamese": "Cái bếp mới này rất hiệu quả."
+        },
+        {
+          "english": "A good chef is efficient and never wastes fresh ingredients.",
+          "vietnamese": "Một bếp trưởng giỏi thì làm việc hiệu quả và không bao giờ lãng phí nguyên liệu tươi."
+        },
+        {
+          "english": "This recipe is an efficient way to use the leftovers.",
+          "vietnamese": "Công thức này là một cách hiệu quả để dùng hết chỗ đồ ăn thừa."
+        },
+        {
+          "english": "Our kitchen became more efficient after we bought a small grill.",
+          "vietnamese": "Căn bếp của chúng tôi trở nên hiệu quả hơn sau khi chúng tôi mua một cái vỉ nướng nhỏ."
+        },
+        {
+          "english": "Is boiling water in a kettle more efficient than using the stove?",
+          "vietnamese": "Đun sôi nước bằng ấm điện có hiệu quả hơn dùng bếp không?"
+        }
+      ]
+    },
+    {
+      "word": "useful",
+      "sentences": [
+        {
+          "english": "This recipe book is very useful when I cook for guests.",
+          "vietnamese": "Cuốn sách công thức này rất hữu ích khi tôi nấu ăn cho khách."
+        },
+        {
+          "english": "These chopsticks are useful when you eat noodles in soup.",
+          "vietnamese": "Những chiếc đũa này rất hữu ích khi bạn ăn mì trong nước súp."
+        },
+        {
+          "english": "Her advice about seasoning was really useful for my first hotpot.",
+          "vietnamese": "Lời khuyên của cô ấy về nêm nếm thật sự hữu ích cho nồi lẩu đầu tiên của tôi."
+        },
+        {
+          "english": "A sharp knife is the most useful tool in any cooking class.",
+          "vietnamese": "Một con dao sắc là dụng cụ hữu ích nhất trong bất kỳ lớp nấu ăn nào."
+        },
+        {
+          "english": "Would a big bucket be useful for washing all these vegetables?",
+          "vietnamese": "Một cái xô lớn có hữu ích cho việc rửa hết chỗ rau này không?"
+        }
+      ]
+    },
+    {
+      "word": "benefit",
+      "sentences": [
+        {
+          "english": "Walking after dinner has a real benefit for your stomach.",
+          "vietnamese": "Đi bộ sau bữa tối có một lợi ích thật sự cho dạ dày của bạn."
+        },
+        {
+          "english": "Green tea has many benefits for people who love spicy food.",
+          "vietnamese": "Trà xanh có nhiều lợi ích cho những người thích đồ ăn cay."
+        },
+        {
+          "english": "One benefit of cooking at home is that you save money.",
+          "vietnamese": "Một lợi ích của việc nấu ăn ở nhà là bạn tiết kiệm được tiền."
+        },
+        {
+          "english": "Does a detox drink really have any benefit for your skin?",
+          "vietnamese": "Một loại nước thải độc có thật sự mang lại lợi ích nào cho da của bạn không?"
+        },
+        {
+          "english": "We felt the benefit of the new habit after only two weeks.",
+          "vietnamese": "Chúng tôi đã cảm nhận được lợi ích của thói quen mới chỉ sau hai tuần."
+        }
+      ]
+    },
+    {
+      "word": "ageing",
+      "sentences": [
+        {
+          "english": "Fresh vegetables and green tea can slow down ageing.",
+          "vietnamese": "Rau tươi và trà xanh có thể làm chậm quá trình lão hóa."
+        },
+        {
+          "english": "Too much alcohol can speed up ageing and ruin your skin.",
+          "vietnamese": "Quá nhiều đồ có cồn có thể đẩy nhanh sự lão hóa và phá hỏng làn da của bạn."
+        },
+        {
+          "english": "Ageing is normal, but a good diet makes it much slower.",
+          "vietnamese": "Sự lão hóa là bình thường, nhưng một chế độ ăn tốt làm nó chậm hơn nhiều."
+        },
+        {
+          "english": "Doctors study ageing to help people live longer with more energy.",
+          "vietnamese": "Các bác sĩ nghiên cứu sự lão hóa để giúp con người sống lâu hơn với nhiều năng lượng hơn."
+        },
+        {
+          "english": "Fresh fruit and daily exercise can slow the ageing process.",
+          "vietnamese": "Trái cây tươi và việc tập thể dục hằng ngày có thể làm chậm quá trình lão hóa."
+        }
+      ]
+    },
+    {
+      "word": "allergic",
+      "sentences": [
+        {
+          "english": "My brother is allergic to seafood.",
+          "vietnamese": "Em trai tôi bị dị ứng với hải sản."
+        },
+        {
+          "english": "I am allergic to raw fish, so I never order sushi.",
+          "vietnamese": "Tôi bị dị ứng với cá sống, nên tôi không bao giờ gọi sushi."
+        },
+        {
+          "english": "Are you allergic to any ingredient in this sauce?",
+          "vietnamese": "Bạn có bị dị ứng với nguyên liệu nào trong nước sốt này không?"
+        },
+        {
+          "english": "She became allergic to cream after she got sick last winter.",
+          "vietnamese": "Cô ấy trở nên bị dị ứng với kem sữa sau khi cô ấy bị ốm mùa đông năm ngoái."
+        },
+        {
+          "english": "Tell the chef that my son is allergic to chilli.",
+          "vietnamese": "Hãy nói với bếp trưởng rằng con trai tôi bị dị ứng với ớt."
+        }
+      ]
+    },
+    {
+      "word": "peanut",
+      "sentences": [
+        {
+          "english": "She is allergic to peanut sauce.",
+          "vietnamese": "Cô ấy bị dị ứng với nước sốt đậu phộng."
+        },
+        {
+          "english": "Add some crushed peanuts on top before you serve the noodles.",
+          "vietnamese": "Hãy rắc một ít đậu phộng giã lên trên trước khi bạn dọn món mì ra."
+        },
+        {
+          "english": "This peanut smoothie tastes sweet and very rich.",
+          "vietnamese": "Ly sinh tố đậu phộng này có vị ngọt và rất béo."
+        },
+        {
+          "english": "My mother roasted the peanuts on the stove for ten minutes.",
+          "vietnamese": "Mẹ tôi đã rang đậu phộng trên bếp trong mười phút."
+        },
+        {
+          "english": "Do you put peanut sauce in your fresh spring rolls?",
+          "vietnamese": "Bạn có cho nước sốt đậu phộng vào món gỏi cuốn tươi của mình không?"
+        }
+      ]
+    },
+    {
+      "word": "snack",
+      "sentences": [
+        {
+          "english": "I often snack on nuts instead of drinking sweet coffee.",
+          "vietnamese": "Tôi hay ăn vặt bằng các loại hạt thay vì uống cà phê ngọt."
+        },
+        {
+          "english": "I snacked on crispy bacon while I waited for dinner.",
+          "vietnamese": "Tôi đã ăn vặt bằng thịt xông khói giòn trong lúc chờ bữa tối."
+        },
+        {
+          "english": "Do not snack before dinner or you will not feel any hunger.",
+          "vietnamese": "Đừng ăn vặt trước bữa tối, nếu không bạn sẽ không thấy đói chút nào."
+        },
+        {
+          "english": "She is snacking on dry fruit instead of eating oily chips.",
+          "vietnamese": "Cô ấy đang ăn vặt bằng trái cây khô thay vì ăn khoai tây chiên nhiều dầu."
+        },
+        {
+          "english": "We snacked all evening at the pub and shared one bottle.",
+          "vietnamese": "Chúng tôi đã ăn vặt suốt buổi tối ở quán rượu và chia nhau một chai."
+        }
+      ]
+    },
+    {
+      "word": "breathe",
+      "sentences": [
+        {
+          "english": "Try to breathe slowly and relax.",
+          "vietnamese": "Hãy thử hít thở chậm và thư giãn."
+        },
+        {
+          "english": "It is hard to breathe when the chilli smoke fills the room.",
+          "vietnamese": "Thật khó hít thở khi khói ớt tràn đầy căn phòng."
+        },
+        {
+          "english": "He breathed deeply and then poured the wine for the guests.",
+          "vietnamese": "Anh ấy hít thở sâu rồi rót rượu vang cho các vị khách."
+        },
+        {
+          "english": "Can you breathe easily after running to the market?",
+          "vietnamese": "Bạn có hít thở dễ dàng sau khi chạy ra chợ không?"
+        },
+        {
+          "english": "Breathing fresh air in the morning gives me more energy.",
+          "vietnamese": "Hít thở không khí trong lành vào buổi sáng cho tôi nhiều năng lượng hơn."
+        }
+      ]
+    },
+    {
+      "word": "mix",
+      "sentences": [
+        {
+          "english": "Mix the lemon juice with honey and stir it well.",
+          "vietnamese": "Trộn nước cốt chanh vàng với mật ong rồi khuấy đều."
+        },
+        {
+          "english": "Mix the sauce well before you serve the hotpot.",
+          "vietnamese": "Hãy trộn đều nước sốt trước khi bạn dọn món lẩu ra."
+        },
+        {
+          "english": "She mixed cream into the coffee and stirred it slowly.",
+          "vietnamese": "Cô ấy đã trộn kem sữa vào cà phê và khuấy nó chầm chậm."
+        },
+        {
+          "english": "Do not mix beer and wine or you will get a hangover.",
+          "vietnamese": "Đừng trộn bia với rượu vang, nếu không bạn sẽ bị say mệt vào hôm sau."
+        },
+        {
+          "english": "We are mixing fresh fruit to make a healthy smoothie.",
+          "vietnamese": "Chúng tôi đang trộn trái cây tươi để làm một ly sinh tố lành mạnh."
+        }
+      ]
+    },
+    {
+      "word": "crop",
+      "sentences": [
+        {
+          "english": "Rice is the most important crop in my hometown every season.",
+          "vietnamese": "Lúa là cây trồng quan trọng nhất ở quê tôi mỗi mùa vụ."
+        },
+        {
+          "english": "Farmers sell their crops at the local market every morning.",
+          "vietnamese": "Nông dân bán cây trồng của họ ở chợ địa phương mỗi buổi sáng."
+        },
+        {
+          "english": "The flood destroyed many crops in the north last year.",
+          "vietnamese": "Trận lụt đã phá hủy nhiều mùa vụ ở miền bắc vào năm ngoái."
+        },
+        {
+          "english": "Which crop grows best during the rainy season?",
+          "vietnamese": "Cây trồng nào phát triển tốt nhất trong mùa mưa?"
+        },
+        {
+          "english": "A good crop of vegetables keeps groceries cheap for everyone.",
+          "vietnamese": "Một vụ rau tốt giữ cho thực phẩm rẻ đối với mọi người."
+        }
+      ]
+    },
+    {
+      "word": "variety",
+      "sentences": [
+        {
+          "english": "The market sells a wide variety of fruit.",
+          "vietnamese": "Chợ bán rất nhiều loại trái cây đa dạng."
+        },
+        {
+          "english": "This pub offers a wide variety of beer from many countries.",
+          "vietnamese": "Quán rượu này cung cấp sự đa dạng các loại bia từ nhiều nước."
+        },
+        {
+          "english": "A variety of fresh seafood arrived at the restaurant this morning.",
+          "vietnamese": "Một loạt hải sản tươi đa dạng đã về nhà hàng sáng nay."
+        },
+        {
+          "english": "Do you cook a variety of dishes or only one cuisine?",
+          "vietnamese": "Bạn nấu đa dạng các món hay chỉ một nền ẩm thực thôi?"
+        },
+        {
+          "english": "We tried a variety of spicy sauces during the festival.",
+          "vietnamese": "Chúng tôi đã thử đa dạng các loại nước sốt cay trong lễ hội."
+        }
+      ]
+    },
+    {
+      "word": "pea",
+      "sentences": [
+        {
+          "english": "She dropped one green pea into the soup by accident.",
+          "vietnamese": "Cô ấy vô tình làm rơi một hạt đậu Hà Lan vào nồi súp."
+        },
+        {
+          "english": "Add some green peas to the soup before you boil it again.",
+          "vietnamese": "Hãy cho thêm ít hạt đậu Hà Lan vào nồi súp trước khi bạn đun sôi lại."
+        },
+        {
+          "english": "My son never eats peas, but he loves crispy bacon.",
+          "vietnamese": "Con trai tôi không bao giờ ăn đậu Hà Lan, nhưng nó thích thịt xông khói giòn."
+        },
+        {
+          "english": "Are these peas fresh or did you buy them frozen?",
+          "vietnamese": "Chỗ đậu Hà Lan này tươi hay bạn đã mua loại đông lạnh?"
+        },
+        {
+          "english": "She stirred the peas and carrots in the hot pan carefully.",
+          "vietnamese": "Cô ấy khuấy đậu Hà Lan và cà rốt trong chảo nóng một cách cẩn thận."
+        }
+      ]
+    },
+    {
+      "word": "leaf",
+      "sentences": [
+        {
+          "english": "Wrap the meat in a banana leaf before you grill it.",
+          "vietnamese": "Gói miếng thịt trong một chiếc lá chuối trước khi bạn nướng nó."
+        },
+        {
+          "english": "Put one lemon leaf into the pot to improve the flavour.",
+          "vietnamese": "Cho một chiếc lá chanh vào nồi để cải thiện hương vị."
+        },
+        {
+          "english": "A tea leaf can make your drink taste fresh and light.",
+          "vietnamese": "Một chiếc lá trà có thể làm cho đồ uống của bạn có vị tươi mát và nhẹ nhàng."
+        },
+        {
+          "english": "Every leaf in this salad came from our local market.",
+          "vietnamese": "Mỗi chiếc lá trong đĩa rau trộn này đều đến từ chợ địa phương của chúng tôi."
+        },
+        {
+          "english": "Did you wash each leaf before you served the hotpot?",
+          "vietnamese": "Bạn đã rửa từng chiếc lá trước khi dọn món lẩu ra chưa?"
+        }
+      ]
+    },
+    {
+      "word": "peel",
+      "sentences": [
+        {
+          "english": "Don't throw the orange peel away.",
+          "vietnamese": "Đừng vứt vỏ cam đi."
+        },
+        {
+          "english": "Lemon peel gives the sauce a strong and fresh smell.",
+          "vietnamese": "Vỏ chanh vàng cho nước sốt một mùi thơm nồng và tươi mát."
+        },
+        {
+          "english": "My mother dried the peels and kept them in a glass jar.",
+          "vietnamese": "Mẹ tôi đã phơi khô những miếng vỏ và cất chúng trong một cái lọ thủy tinh."
+        },
+        {
+          "english": "Is the peel of this fruit safe to eat?",
+          "vietnamese": "Vỏ của loại quả này có an toàn để ăn không?"
+        },
+        {
+          "english": "Cooks often boil orange peel with sugar to make sweet candy.",
+          "vietnamese": "Các đầu bếp thường đun vỏ cam với đường để làm kẹo ngọt."
+        }
+      ]
+    }
+  ]
+}

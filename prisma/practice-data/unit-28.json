@@ -1,0 +1,607 @@
+{
+  "unit": 28,
+  "deck": "Unit 28: Rèn luyện thể chất",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "train",
+      "sentences": [
+        {
+          "english": "We train together five mornings a week to stay fit and strong.",
+          "vietnamese": "Chúng tôi rèn luyện cùng nhau năm buổi sáng một tuần để giữ dáng và khoẻ mạnh."
+        },
+        {
+          "english": "Our team trains at the gym every evening before the tournament.",
+          "vietnamese": "Đội của chúng tôi rèn luyện ở phòng gym mỗi tối trước giải đấu."
+        },
+        {
+          "english": "Did you train hard for the final match last month?",
+          "vietnamese": "Bạn có rèn luyện chăm chỉ cho trận chung kết tháng trước không?"
+        },
+        {
+          "english": "She is training with a new coach to become a serious athlete.",
+          "vietnamese": "Cô ấy đang rèn luyện với một huấn luyện viên mới để trở thành một vận động viên nghiêm túc."
+        },
+        {
+          "english": "I have trained for six months and I feel really fit now.",
+          "vietnamese": "Tôi đã rèn luyện sáu tháng và bây giờ tôi cảm thấy thực sự khoẻ khoắn."
+        }
+      ]
+    },
+    {
+      "word": "form",
+      "sentences": [
+        {
+          "english": "The runner is in great form this season.",
+          "vietnamese": "Vận động viên chạy đang có phong độ tuyệt vời mùa này."
+        },
+        {
+          "english": "The captain lost his form after a painful injury last season.",
+          "vietnamese": "Đội trưởng đã mất phong độ sau một chấn thương đau đớn mùa trước."
+        },
+        {
+          "english": "Good sleep and a proper diet keep an athlete in top form.",
+          "vietnamese": "Giấc ngủ tốt và chế độ ăn hợp lý giữ cho một vận động viên ở phong độ đỉnh cao."
+        },
+        {
+          "english": "Are you worried about your form before the big contest?",
+          "vietnamese": "Bạn có lo lắng về phong độ của mình trước cuộc thi lớn không?"
+        },
+        {
+          "english": "He is slowly getting back into form after two months of rest.",
+          "vietnamese": "Anh ấy đang dần lấy lại phong độ sau hai tháng nghỉ ngơi."
+        }
+      ]
+    },
+    {
+      "word": "timetable",
+      "sentences": [
+        {
+          "english": "Our coach gave every athlete a clear timetable for the new season.",
+          "vietnamese": "Huấn luyện viên của chúng tôi đưa cho mỗi vận động viên một thời gian biểu rõ ràng cho mùa giải mới."
+        },
+        {
+          "english": "My timetable is quite strict, so I never waste a free hour.",
+          "vietnamese": "Thời gian biểu của tôi khá nghiêm ngặt, nên tôi không bao giờ lãng phí một giờ rảnh nào."
+        },
+        {
+          "english": "Did the coach change the timetable for next week?",
+          "vietnamese": "Huấn luyện viên có đổi thời gian biểu cho tuần tới không?"
+        },
+        {
+          "english": "Please follow the timetable and do not forget your evening practice.",
+          "vietnamese": "Hãy theo đúng thời gian biểu và đừng quên buổi tập buổi tối của bạn."
+        },
+        {
+          "english": "I have made a new timetable that includes proper meals and enough rest.",
+          "vietnamese": "Tôi đã lập một thời gian biểu mới bao gồm các bữa ăn hợp lý và nghỉ ngơi đủ."
+        }
+      ]
+    },
+    {
+      "word": "age",
+      "sentences": [
+        {
+          "english": "You can stay fit at any age with regular exercise.",
+          "vietnamese": "Bạn có thể giữ dáng ở bất kỳ tuổi nào nếu tập luyện đều đặn."
+        },
+        {
+          "english": "At my age, a hard workout can leave me completely exhausted.",
+          "vietnamese": "Ở tuổi của tôi, một buổi tập nặng có thể khiến tôi kiệt sức hoàn toàn."
+        },
+        {
+          "english": "Children learn new skills much faster at a young age.",
+          "vietnamese": "Trẻ em học các kỹ năng mới nhanh hơn nhiều ở tuổi nhỏ."
+        },
+        {
+          "english": "What age did you start playing badminton seriously?",
+          "vietnamese": "Bạn bắt đầu chơi cầu lông nghiêm túc ở tuổi nào?"
+        },
+        {
+          "english": "Many athletes retire at an early age because of painful injuries.",
+          "vietnamese": "Nhiều vận động viên giải nghệ ở tuổi còn trẻ vì những chấn thương đau đớn."
+        }
+      ]
+    },
+    {
+      "word": "ability",
+      "sentences": [
+        {
+          "english": "Regular practice improves your ability quickly.",
+          "vietnamese": "Tập luyện đều đặn cải thiện khả năng của bạn nhanh chóng."
+        },
+        {
+          "english": "His ability to stay calm helps the team win close matches.",
+          "vietnamese": "Khả năng giữ bình tĩnh của anh ấy giúp đội thắng những trận sát nút."
+        },
+        {
+          "english": "Do not waste your natural ability by skipping practice every week.",
+          "vietnamese": "Đừng lãng phí khả năng thiên bẩm của bạn bằng cách bỏ tập mỗi tuần."
+        },
+        {
+          "english": "She has the ability to swim for an hour without feeling exhausted.",
+          "vietnamese": "Cô ấy có khả năng bơi một tiếng mà không cảm thấy kiệt sức."
+        },
+        {
+          "english": "Young players are improving their abilities quickly with a patient coach.",
+          "vietnamese": "Các cầu thủ trẻ đang cải thiện khả năng của họ nhanh chóng với một huấn luyện viên kiên nhẫn."
+        }
+      ]
+    },
+    {
+      "word": "jogging",
+      "sentences": [
+        {
+          "english": "I go jogging every morning because it keeps my mind wonderfully calm.",
+          "vietnamese": "Tôi chạy bộ mỗi sáng vì nó giữ cho đầu óc tôi bình tĩnh một cách tuyệt vời."
+        },
+        {
+          "english": "Jogging is quite cheap and very good for your health.",
+          "vietnamese": "Chạy bộ khá rẻ và rất tốt cho sức khoẻ của bạn."
+        },
+        {
+          "english": "She went jogging along the lake before noon yesterday.",
+          "vietnamese": "Cô ấy đã chạy bộ dọc bờ hồ trước buổi trưa hôm qua."
+        },
+        {
+          "english": "Is jogging better than weights for people with low energy?",
+          "vietnamese": "Chạy bộ có tốt hơn tập tạ cho những người ít năng lượng không?"
+        },
+        {
+          "english": "My doctor says jogging can prevent heart disease at any age.",
+          "vietnamese": "Bác sĩ của tôi nói rằng chạy bộ có thể ngăn ngừa bệnh tim ở mọi lứa tuổi."
+        }
+      ]
+    },
+    {
+      "word": "running",
+      "sentences": [
+        {
+          "english": "Running is cheap and easy, so even lazy people should try it.",
+          "vietnamese": "Chạy là môn rẻ và dễ, nên ngay cả người lười biếng cũng nên thử nó."
+        },
+        {
+          "english": "Running every morning keeps my body strong and my mind calm.",
+          "vietnamese": "Chạy mỗi sáng giữ cho cơ thể tôi khoẻ mạnh và đầu óc tôi bình tĩnh."
+        },
+        {
+          "english": "Long-distance running is hard, but the feeling afterwards is amazing.",
+          "vietnamese": "Chạy đường dài thì vất vả, nhưng cảm giác sau đó thật tuyệt vời."
+        },
+        {
+          "english": "He gave up running after a painful knee injury last year.",
+          "vietnamese": "Anh ấy đã bỏ chạy sau một chấn thương đầu gối đau đớn năm ngoái."
+        },
+        {
+          "english": "Do you think running is a good way to escape daily stress?",
+          "vietnamese": "Bạn có nghĩ chạy là một cách tốt để thoát khỏi căng thẳng hằng ngày không?"
+        }
+      ]
+    },
+    {
+      "word": "burn",
+      "sentences": [
+        {
+          "english": "A long walk can burn more energy than a stressful hour at work.",
+          "vietnamese": "Một chuyến đi bộ dài có thể đốt cháy nhiều năng lượng hơn một giờ căng thẳng ở chỗ làm."
+        },
+        {
+          "english": "Hard training burns a lot of energy, so I sleep well afterwards.",
+          "vietnamese": "Tập luyện nặng đốt cháy rất nhiều năng lượng, nên sau đó tôi ngủ ngon."
+        },
+        {
+          "english": "I burned nearly six hundred calories during the morning practice.",
+          "vietnamese": "Tôi đã đốt cháy gần sáu trăm calo trong buổi tập buổi sáng."
+        },
+        {
+          "english": "You will not burn much fat if your diet is full of sugar.",
+          "vietnamese": "Bạn sẽ không đốt cháy được nhiều mỡ nếu chế độ ăn của bạn đầy đường."
+        },
+        {
+          "english": "She is burning energy on the bike while her coach counts the minutes.",
+          "vietnamese": "Cô ấy đang đốt cháy năng lượng trên chiếc xe đạp trong khi huấn luyện viên đếm từng phút."
+        }
+      ]
+    },
+    {
+      "word": "tear",
+      "sentences": [
+        {
+          "english": "A tear ran down her face when she lifted the golden cup.",
+          "vietnamese": "Một giọt nước mắt lăn trên mặt cô ấy khi cô ấy nâng chiếc cúp vàng."
+        },
+        {
+          "english": "There were tears in his eyes after the team lost the final.",
+          "vietnamese": "Đã có những giọt nước mắt trong mắt anh ấy sau khi đội thua trận chung kết."
+        },
+        {
+          "english": "Do not let one weak performance bring tears to your face.",
+          "vietnamese": "Đừng để một màn trình diễn yếu kém mang nước mắt lên gương mặt bạn."
+        },
+        {
+          "english": "A single tear of joy fell when the loser finally became a winner.",
+          "vietnamese": "Một giọt nước mắt hạnh phúc rơi xuống khi kẻ thua cuộc cuối cùng trở thành người chiến thắng."
+        },
+        {
+          "english": "Her mother is wiping a tear away while watching the tournament.",
+          "vietnamese": "Mẹ của cô ấy đang lau một giọt nước mắt trong khi xem giải đấu."
+        }
+      ]
+    },
+    {
+      "word": "push-up",
+      "sentences": [
+        {
+          "english": "He does fifty push-ups without a break and never looks exhausted.",
+          "vietnamese": "Anh ấy hít đất năm mươi cái không nghỉ và không bao giờ trông kiệt sức."
+        },
+        {
+          "english": "Can you do twenty push-ups without stopping to rest?",
+          "vietnamese": "Bạn có thể hít đất hai mươi cái mà không dừng lại nghỉ không?"
+        },
+        {
+          "english": "I add ten push-ups to my routine each week to build strong arms.",
+          "vietnamese": "Tôi thêm mười cái hít đất vào bài tập của mình mỗi tuần để xây dựng đôi tay khoẻ."
+        },
+        {
+          "english": "The coach asked every competitor to finish fifty push-ups before noon.",
+          "vietnamese": "Huấn luyện viên yêu cầu mỗi đối thủ hoàn thành năm mươi cái hít đất trước buổi trưa."
+        },
+        {
+          "english": "She was doing push-ups on the balcony when the heavy rain started.",
+          "vietnamese": "Cô ấy đang hít đất trên ban công thì cơn mưa lớn bắt đầu."
+        }
+      ]
+    },
+    {
+      "word": "lift",
+      "sentences": [
+        {
+          "english": "He can lift heavy weights at the gym now.",
+          "vietnamese": "Bây giờ anh ấy có thể nâng tạ nặng ở phòng gym."
+        },
+        {
+          "english": "Do not lift heavy weights when your body feels exhausted.",
+          "vietnamese": "Đừng nâng tạ nặng khi cơ thể bạn cảm thấy kiệt sức."
+        },
+        {
+          "english": "He lifted the golden cup above his head and smiled at the supporters.",
+          "vietnamese": "Anh ấy đã nâng chiếc cúp vàng lên trên đầu và mỉm cười với những người hâm mộ."
+        },
+        {
+          "english": "I am lifting weights three times a week to become more muscular.",
+          "vietnamese": "Tôi đang nâng tạ ba lần một tuần để trở nên cơ bắp hơn."
+        },
+        {
+          "english": "Has your coach taught you the proper way to lift a barbell?",
+          "vietnamese": "Huấn luyện viên đã dạy bạn cách nâng thanh tạ đúng chuẩn chưa?"
+        }
+      ]
+    },
+    {
+      "word": "trainer",
+      "sentences": [
+        {
+          "english": "Our trainer designed a workout plan for the whole week.",
+          "vietnamese": "Huấn luyện viên của chúng tôi thiết kế một kế hoạch tập luyện cho cả tuần."
+        },
+        {
+          "english": "My trainer never lets me skip the warm-up before a hard session.",
+          "vietnamese": "Huấn luyện viên của tôi không bao giờ cho tôi bỏ phần khởi động trước một buổi tập nặng."
+        },
+        {
+          "english": "A good trainer can explain every exercise clearly and patiently.",
+          "vietnamese": "Một huấn luyện viên giỏi có thể giải thích mọi bài tập một cách rõ ràng và kiên nhẫn."
+        },
+        {
+          "english": "Did your trainer change the plan after that painful injury?",
+          "vietnamese": "Huấn luyện viên của bạn có đổi kế hoạch sau chấn thương đau đớn đó không?"
+        },
+        {
+          "english": "The trainers at that gym are quite friendly and very qualified.",
+          "vietnamese": "Các huấn luyện viên ở phòng gym đó khá thân thiện và rất có chuyên môn."
+        }
+      ]
+    },
+    {
+      "word": "beast",
+      "sentences": [
+        {
+          "english": "After a year of hard practice he became a real beast.",
+          "vietnamese": "Sau một năm luyện tập chăm chỉ, anh ấy trở thành một quái vật thực sự."
+        },
+        {
+          "english": "That young footballer is an absolute beast in every match.",
+          "vietnamese": "Cầu thủ bóng đá trẻ đó là một quái vật đúng nghĩa trong mọi trận đấu."
+        },
+        {
+          "english": "He is training like a beast and has defeated every competitor.",
+          "vietnamese": "Anh ấy đang tập như một quái vật và đã đánh bại mọi đối thủ."
+        },
+        {
+          "english": "Do not try to be a beast on your first day at the gym.",
+          "vietnamese": "Đừng cố làm một quái vật ngay ngày đầu tiên ở phòng gym."
+        },
+        {
+          "english": "Our captain looks calm outside, but he becomes a beast during a contest.",
+          "vietnamese": "Đội trưởng của chúng tôi trông bình tĩnh bên ngoài, nhưng anh ấy trở thành một quái vật trong cuộc thi."
+        }
+      ]
+    },
+    {
+      "word": "gain",
+      "sentences": [
+        {
+          "english": "I eat more beef and rice because I want to gain weight.",
+          "vietnamese": "Tôi ăn nhiều thịt bò và cơm hơn vì tôi muốn tăng cân."
+        },
+        {
+          "english": "You will gain weight quickly if you eat too much sugar.",
+          "vietnamese": "Bạn sẽ tăng cân nhanh chóng nếu bạn ăn quá nhiều đường."
+        },
+        {
+          "english": "He gained five kilos of muscle after a year of hard work.",
+          "vietnamese": "Anh ấy đã tăng năm ký cơ sau một năm làm việc chăm chỉ."
+        },
+        {
+          "english": "Are you trying to gain weight or just stay fit?",
+          "vietnamese": "Bạn đang cố tăng cân hay chỉ giữ dáng thôi?"
+        },
+        {
+          "english": "I have gained a lot of energy since I joined the team.",
+          "vietnamese": "Tôi đã tăng được rất nhiều năng lượng kể từ khi tôi tham gia đội."
+        }
+      ]
+    },
+    {
+      "word": "ride",
+      "sentences": [
+        {
+          "english": "I ride my bike to the gym every day.",
+          "vietnamese": "Tôi đạp xe đến phòng gym mỗi ngày."
+        },
+        {
+          "english": "I ride to the pool every morning instead of taking a taxi.",
+          "vietnamese": "Tôi đạp xe đến hồ bơi mỗi sáng thay vì bắt taxi."
+        },
+        {
+          "english": "She rides along the coast when the weather is pleasant.",
+          "vietnamese": "Cô ấy đạp xe dọc bờ biển khi thời tiết dễ chịu."
+        },
+        {
+          "english": "We are riding up the steep hill to test our new bikes.",
+          "vietnamese": "Chúng tôi đang đạp lên ngọn đồi dốc để thử những chiếc xe đạp mới."
+        },
+        {
+          "english": "Do not ride too fast on wet pavements, it is dangerous.",
+          "vietnamese": "Đừng đạp quá nhanh trên vỉa hè ướt, nó nguy hiểm."
+        }
+      ]
+    },
+    {
+      "word": "racing",
+      "sentences": [
+        {
+          "english": "Bicycle racing looks exciting, but it is quite dangerous on wet streets.",
+          "vietnamese": "Đua xe đạp trông hấp dẫn, nhưng nó khá nguy hiểm trên những con phố ướt."
+        },
+        {
+          "english": "Motorbike racing is exciting but rather dangerous for young athletes.",
+          "vietnamese": "Đua xe máy thì hấp dẫn nhưng khá nguy hiểm với các vận động viên trẻ."
+        },
+        {
+          "english": "He has enjoyed racing since he watched his first tournament on television.",
+          "vietnamese": "Anh ấy đã thích đua từ khi xem giải đấu đầu tiên trên truyền hình."
+        },
+        {
+          "english": "Racing teaches you to stay calm when every competitor is faster.",
+          "vietnamese": "Đua dạy bạn giữ bình tĩnh khi mọi đối thủ đều nhanh hơn."
+        },
+        {
+          "english": "Are you going to watch the boat racing at the festival?",
+          "vietnamese": "Bạn có định xem đua thuyền ở lễ hội không?"
+        }
+      ]
+    },
+    {
+      "word": "swimming",
+      "sentences": [
+        {
+          "english": "Swimming is great for building overall strength.",
+          "vietnamese": "Bơi rất tốt cho việc xây dựng sức mạnh toàn thân."
+        },
+        {
+          "english": "Swimming in the lake is peaceful on a quiet summer afternoon.",
+          "vietnamese": "Bơi ở hồ thật yên bình vào một buổi chiều mùa hè tĩnh lặng."
+        },
+        {
+          "english": "I joined a swimming contest last year and finished in third place.",
+          "vietnamese": "Tôi đã tham gia một cuộc thi bơi năm ngoái và về thứ ba."
+        },
+        {
+          "english": "Swimming keeps my heartbeat steady and my body strong.",
+          "vietnamese": "Bơi giữ cho nhịp tim tôi ổn định và cơ thể tôi khoẻ mạnh."
+        },
+        {
+          "english": "Do you think swimming is the best exercise for a painful back?",
+          "vietnamese": "Bạn có nghĩ bơi là bài tập tốt nhất cho một cái lưng đau không?"
+        }
+      ]
+    },
+    {
+      "word": "hiking",
+      "sentences": [
+        {
+          "english": "We spent the weekend hiking up the mountain.",
+          "vietnamese": "Chúng tôi dành cả cuối tuần đi bộ đường dài lên núi."
+        },
+        {
+          "english": "Hiking through the forest makes me feel calm and free.",
+          "vietnamese": "Đi bộ đường dài xuyên qua rừng khiến tôi cảm thấy bình tĩnh và tự do."
+        },
+        {
+          "english": "We are going hiking near the waterfall if the weather stays dry.",
+          "vietnamese": "Chúng tôi sẽ đi bộ đường dài gần thác nước nếu thời tiết vẫn khô ráo."
+        },
+        {
+          "english": "Hiking with a heavy bag can be painful for a weak back.",
+          "vietnamese": "Đi bộ đường dài với một cái túi nặng có thể gây đau cho một cái lưng yếu."
+        },
+        {
+          "english": "Have you ever tried hiking up that steep hill before noon?",
+          "vietnamese": "Bạn đã bao giờ thử đi bộ đường dài lên ngọn đồi dốc đó trước buổi trưa chưa?"
+        }
+      ]
+    },
+    {
+      "word": "paddle",
+      "sentences": [
+        {
+          "english": "They paddle the canoe across the calm lake.",
+          "vietnamese": "Họ chèo chiếc xuồng qua mặt hồ phẳng lặng."
+        },
+        {
+          "english": "Can you paddle faster than the other team in the contest?",
+          "vietnamese": "Bạn có thể chèo nhanh hơn đội kia trong cuộc thi không?"
+        },
+        {
+          "english": "They paddled for two hours and looked completely exhausted.",
+          "vietnamese": "Họ đã chèo suốt hai tiếng và trông kiệt sức hoàn toàn."
+        },
+        {
+          "english": "We were paddling along the bay when the rain suddenly arrived.",
+          "vietnamese": "Chúng tôi đang chèo dọc vịnh thì cơn mưa bất ngờ ập đến."
+        },
+        {
+          "english": "Do not paddle far from the coast if the water looks rough.",
+          "vietnamese": "Đừng chèo ra xa bờ biển nếu mặt nước trông động."
+        }
+      ]
+    },
+    {
+      "word": "sailing",
+      "sentences": [
+        {
+          "english": "Sailing on a windy day is exciting.",
+          "vietnamese": "Chèo thuyền buồm vào một ngày lộng gió thật thú vị."
+        },
+        {
+          "english": "Sailing around the island is a lovely way to spend a holiday.",
+          "vietnamese": "Chèo thuyền buồm quanh hòn đảo là một cách đáng yêu để tận hưởng một kỳ nghỉ."
+        },
+        {
+          "english": "He has been sailing for ten years and never feels scared.",
+          "vietnamese": "Anh ấy đã chèo thuyền buồm mười năm và không bao giờ thấy sợ."
+        },
+        {
+          "english": "Is sailing dangerous when a typhoon is approaching the coast?",
+          "vietnamese": "Chèo thuyền buồm có nguy hiểm không khi một cơn bão đang tiến vào bờ biển?"
+        },
+        {
+          "english": "Our sailing coach told us to stay calm in rough water.",
+          "vietnamese": "Huấn luyện viên chèo thuyền buồm bảo chúng tôi giữ bình tĩnh trong vùng nước động."
+        }
+      ]
+    },
+    {
+      "word": "brave",
+      "sentences": [
+        {
+          "english": "You have to be brave to try diving for the first time.",
+          "vietnamese": "Bạn phải dũng cảm mới dám thử lặn lần đầu tiên."
+        },
+        {
+          "english": "You need a brave heart to compete in an open water race.",
+          "vietnamese": "Bạn cần một trái tim dũng cảm để thi đấu trong một cuộc đua ngoài biển."
+        },
+        {
+          "english": "The brave captain kept playing despite a painful shoulder.",
+          "vietnamese": "Người đội trưởng dũng cảm vẫn tiếp tục thi đấu dù vai bị đau."
+        },
+        {
+          "english": "Are you brave enough to swim into that dark cave?",
+          "vietnamese": "Bạn có đủ dũng cảm để bơi vào cái hang tối đó không?"
+        },
+        {
+          "english": "She was very brave when the doctor explained her condition.",
+          "vietnamese": "Cô ấy đã rất dũng cảm khi bác sĩ giải thích tình trạng của cô ấy."
+        }
+      ]
+    },
+    {
+      "word": "diving",
+      "sentences": [
+        {
+          "english": "Scuba diving lets you explore the world underwater.",
+          "vietnamese": "Lặn bình khí cho phép bạn khám phá thế giới dưới nước."
+        },
+        {
+          "english": "Diving in the bay was the most amazing experience of my holiday.",
+          "vietnamese": "Lặn ở vịnh là trải nghiệm tuyệt vời nhất trong kỳ nghỉ của tôi."
+        },
+        {
+          "english": "He is taking a diving course to explore the coral safely.",
+          "vietnamese": "Anh ấy đang học một khoá lặn để khám phá rạn san hô một cách an toàn."
+        },
+        {
+          "english": "Diving can be dangerous if you forget the safety rules.",
+          "vietnamese": "Lặn có thể nguy hiểm nếu bạn quên các quy tắc an toàn."
+        },
+        {
+          "english": "Would you like to try diving near that beautiful island next summer?",
+          "vietnamese": "Bạn có muốn thử lặn gần hòn đảo xinh đẹp đó vào mùa hè tới không?"
+        }
+      ]
+    },
+    {
+      "word": "snorkel",
+      "sentences": [
+        {
+          "english": "We snorkel near the island every summer to watch the colourful fish.",
+          "vietnamese": "Chúng tôi lặn ống thở gần hòn đảo mỗi mùa hè để ngắm những con cá đầy màu sắc."
+        },
+        {
+          "english": "Can we snorkel here, or is the water too rough today?",
+          "vietnamese": "Chúng ta có thể lặn ống thở ở đây không, hay hôm nay nước quá động?"
+        },
+        {
+          "english": "They snorkelled for hours and came back completely exhausted.",
+          "vietnamese": "Họ đã lặn ống thở hàng giờ và trở về hoàn toàn kiệt sức."
+        },
+        {
+          "english": "I am learning to snorkel because I feel scared under deep water.",
+          "vietnamese": "Tôi đang học lặn ống thở vì tôi thấy sợ khi ở dưới làn nước sâu."
+        },
+        {
+          "english": "Do not snorkel alone near the cliff, it is quite dangerous.",
+          "vietnamese": "Đừng lặn ống thở một mình gần vách đá, nó khá nguy hiểm."
+        }
+      ]
+    },
+    {
+      "word": "net",
+      "sentences": [
+        {
+          "english": "She served the ball into the net and looked quite embarrassed.",
+          "vietnamese": "Cô ấy giao bóng vào lưới và trông khá ngượng ngùng."
+        },
+        {
+          "english": "The ball hit the net and the supporters shouted loudly.",
+          "vietnamese": "Quả bóng chạm lưới và những người hâm mộ hò reo ầm ĩ."
+        },
+        {
+          "english": "Our captain hung a new net before the badminton match started.",
+          "vietnamese": "Đội trưởng của chúng tôi treo một cái lưới mới trước khi trận cầu lông bắt đầu."
+        },
+        {
+          "english": "Two men were pulling a heavy net out of the bay at noon.",
+          "vietnamese": "Hai người đàn ông đang kéo một tấm lưới nặng ra khỏi vịnh vào buổi trưa."
+        },
+        {
+          "english": "Do not touch the net during the final, or you will lose a point.",
+          "vietnamese": "Đừng chạm vào lưới trong trận chung kết, nếu không bạn sẽ mất một điểm."
+        }
+      ]
+    }
+  ]
+}

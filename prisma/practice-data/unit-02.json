@@ -1,0 +1,607 @@
+{
+  "unit": 2,
+  "deck": "Unit 2: Hành trình đi học của Naruto",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "kindergarten",
+      "sentences": [
+        {
+          "english": "At kindergarten, children learn their first language through songs and games.",
+          "vietnamese": "Ở trường mẫu giáo, trẻ em học ngôn ngữ đầu tiên qua bài hát và trò chơi."
+        },
+        {
+          "english": "My little sister was shy on her first day at kindergarten.",
+          "vietnamese": "Em gái tôi nhút nhát trong ngày đầu tiên đi mẫu giáo."
+        },
+        {
+          "english": "Does your kindergarten teach English to beginners every afternoon?",
+          "vietnamese": "Trường mẫu giáo của bạn có dạy tiếng Anh cho người mới bắt đầu mỗi buổi chiều không?"
+        },
+        {
+          "english": "The kindergarten has invited a visitor to talk about her culture.",
+          "vietnamese": "Trường mẫu giáo đã mời một vị khách đến nói về văn hoá của cô ấy."
+        },
+        {
+          "english": "Children at kindergarten make progress quickly when teachers sing with them.",
+          "vietnamese": "Trẻ ở trường mẫu giáo tiến bộ nhanh khi giáo viên hát cùng chúng."
+        }
+      ]
+    },
+    {
+      "word": "primary",
+      "sentences": [
+        {
+          "english": "I was a shy child when I started primary school six years ago.",
+          "vietnamese": "Tôi là một đứa trẻ nhút nhát khi bắt đầu vào trường tiểu học sáu năm trước."
+        },
+        {
+          "english": "In primary school I was a beginner, so every lesson felt hard.",
+          "vietnamese": "Hồi tiểu học tôi là người mới bắt đầu, nên tiết học nào cũng thấy khó."
+        },
+        {
+          "english": "Our primary teacher helped us improve our reading every week.",
+          "vietnamese": "Cô giáo tiểu học của chúng tôi giúp chúng tôi cải thiện việc đọc mỗi tuần."
+        },
+        {
+          "english": "My primary school will open a new course for young learners next year.",
+          "vietnamese": "Trường tiểu học của tôi sẽ mở một khoá học mới cho học sinh nhỏ tuổi vào năm tới."
+        },
+        {
+          "english": "Do you still remember your primary teacher who taught you new vocabulary?",
+          "vietnamese": "Bạn còn nhớ cô giáo tiểu học đã dạy bạn từ vựng mới không?"
+        }
+      ]
+    },
+    {
+      "word": "secondary",
+      "sentences": [
+        {
+          "english": "In secondary school we learn about the culture of many countries.",
+          "vietnamese": "Ở trường trung học, chúng tôi học về văn hoá của nhiều quốc gia."
+        },
+        {
+          "english": "Secondary school students often study the culture of other countries.",
+          "vietnamese": "Học sinh trung học thường tìm hiểu văn hoá của các nước khác."
+        },
+        {
+          "english": "She became more confident after her first year at secondary school.",
+          "vietnamese": "Cô ấy tự tin hơn sau năm đầu tiên ở trường trung học."
+        },
+        {
+          "english": "Secondary students are learning how to communicate with guests this month.",
+          "vietnamese": "Học sinh trung học đang học cách giao tiếp với khách trong tháng này."
+        },
+        {
+          "english": "I did not understand chemistry when I was in secondary school.",
+          "vietnamese": "Tôi đã không hiểu môn hoá khi tôi còn học trung học."
+        }
+      ]
+    },
+    {
+      "word": "mathematics",
+      "sentences": [
+        {
+          "english": "Many students have difficulty with mathematics, but daily practice really helps.",
+          "vietnamese": "Nhiều học sinh gặp khó khăn với môn toán học, nhưng luyện tập hàng ngày thực sự có ích."
+        },
+        {
+          "english": "Many students have difficulty with mathematics, but daily practice helps a lot.",
+          "vietnamese": "Nhiều học sinh gặp khó khăn với môn toán, nhưng luyện tập hằng ngày giúp ích rất nhiều."
+        },
+        {
+          "english": "He signed up for an online course in mathematics last summer.",
+          "vietnamese": "Anh ấy đã đăng ký một khoá học toán trực tuyến vào mùa hè năm ngoái."
+        },
+        {
+          "english": "Mathematics has improved my thinking skill more than any other subject.",
+          "vietnamese": "Toán học đã cải thiện kỹ năng tư duy của tôi hơn bất kỳ môn nào khác."
+        },
+        {
+          "english": "Do not be scared of mathematics; practise a little every day.",
+          "vietnamese": "Đừng sợ môn toán học; hãy luyện tập một chút mỗi ngày."
+        }
+      ]
+    },
+    {
+      "word": "engineering",
+      "sentences": [
+        {
+          "english": "He studies engineering abroad and wants to work in Japan later.",
+          "vietnamese": "Anh ấy học ngành kỹ thuật ở nước ngoài và muốn làm việc ở Nhật sau này."
+        },
+        {
+          "english": "He studies engineering abroad and wants to work there after graduation.",
+          "vietnamese": "Anh ấy học ngành kỹ thuật ở nước ngoài và muốn làm việc ở đó sau khi tốt nghiệp."
+        },
+        {
+          "english": "An engineering degree needs both maths and a good problem-solving skill.",
+          "vietnamese": "Bằng kỹ thuật cần cả toán lẫn kỹ năng giải quyết vấn đề tốt."
+        },
+        {
+          "english": "She has a clear idea about studying engineering after secondary school.",
+          "vietnamese": "Cô ấy có một ý tưởng rõ ràng về việc học ngành kỹ thuật sau khi hết trung học."
+        },
+        {
+          "english": "Are you confident enough to follow an engineering course in English?",
+          "vietnamese": "Bạn có đủ tự tin để theo một khoá học kỹ thuật bằng tiếng Anh không?"
+        }
+      ]
+    },
+    {
+      "word": "subject",
+      "sentences": [
+        {
+          "english": "My favourite subject is English because I enjoy learning new vocabulary.",
+          "vietnamese": "Môn học tôi thích nhất là tiếng Anh vì tôi thích học từ vựng mới."
+        },
+        {
+          "english": "We had a long conversation about which subject to choose this year.",
+          "vietnamese": "Chúng tôi đã có một cuộc trò chuyện dài về việc chọn môn nào năm nay."
+        },
+        {
+          "english": "Which subject gives you the most difficulty this term?",
+          "vietnamese": "Môn học nào khiến bạn gặp khó khăn nhất trong học kỳ này?"
+        },
+        {
+          "english": "History was my original choice, but I changed the subject last week.",
+          "vietnamese": "Lịch sử là lựa chọn ban đầu của tôi, nhưng tôi đã đổi môn học vào tuần trước."
+        },
+        {
+          "english": "A good teacher makes every subject easy to understand for beginners.",
+          "vietnamese": "Một giáo viên giỏi làm cho mọi môn học trở nên dễ hiểu với người mới bắt đầu."
+        }
+      ]
+    },
+    {
+      "word": "science",
+      "sentences": [
+        {
+          "english": "Our science teacher is a foreigner, so every lesson is in English.",
+          "vietnamese": "Giáo viên khoa học của chúng tôi là người nước ngoài, nên mọi tiết học đều bằng tiếng Anh."
+        },
+        {
+          "english": "Reading science articles helped me improve my English quickly.",
+          "vietnamese": "Việc đọc các bài báo khoa học đã giúp tôi cải thiện tiếng Anh nhanh chóng."
+        },
+        {
+          "english": "Science is a popular subject among students who want to study abroad.",
+          "vietnamese": "Khoa học là môn học phổ biến với những học sinh muốn đi du học."
+        },
+        {
+          "english": "We had a long conversation about science with our new teacher.",
+          "vietnamese": "Chúng tôi đã có một cuộc trò chuyện dài về khoa học với giáo viên mới."
+        },
+        {
+          "english": "I will follow a free science course online next summer.",
+          "vietnamese": "Tôi sẽ theo một khoá học khoa học miễn phí trên mạng vào mùa hè tới."
+        }
+      ]
+    },
+    {
+      "word": "art",
+      "sentences": [
+        {
+          "english": "In art class I had an original idea for a painting about my hometown.",
+          "vietnamese": "Trong giờ mỹ thuật, tôi đã có một ý tưởng nguyên bản để vẽ bức tranh về quê tôi."
+        },
+        {
+          "english": "The art class gave me a new idea for my final project.",
+          "vietnamese": "Tiết mỹ thuật đã cho tôi một ý tưởng mới cho dự án cuối kỳ."
+        },
+        {
+          "english": "Learning art helps students understand the culture of a country.",
+          "vietnamese": "Học mỹ thuật giúp học sinh hiểu văn hoá của một đất nước."
+        },
+        {
+          "english": "Art lessons help shy children communicate their feelings without words.",
+          "vietnamese": "Các tiết mỹ thuật giúp những đứa trẻ nhút nhát bày tỏ cảm xúc mà không cần lời nói."
+        },
+        {
+          "english": "Are you confident enough to show your art to everyone?",
+          "vietnamese": "Bạn có đủ tự tin để cho mọi người xem tranh của mình không?"
+        }
+      ]
+    },
+    {
+      "word": "announce",
+      "sentences": [
+        {
+          "english": "The school will announce the new English course next Monday.",
+          "vietnamese": "Nhà trường sẽ thông báo khoá học tiếng Anh mới vào thứ Hai tới."
+        },
+        {
+          "english": "The teacher will announce the topic of the essay tomorrow morning.",
+          "vietnamese": "Cô giáo sẽ thông báo chủ đề bài luận vào sáng mai."
+        },
+        {
+          "english": "The school will announce a free course for beginners next week.",
+          "vietnamese": "Trường sẽ thông báo một khoá học miễn phí cho người mới bắt đầu vào tuần tới."
+        },
+        {
+          "english": "They announced the winners after a short conversation with the judges.",
+          "vietnamese": "Họ đã công bố người thắng cuộc sau một cuộc trao đổi ngắn với ban giám khảo."
+        },
+        {
+          "english": "Please announce the result slowly so that every foreigner can understand.",
+          "vietnamese": "Xin hãy thông báo kết quả thật chậm để mọi người nước ngoài đều có thể hiểu."
+        }
+      ]
+    },
+    {
+      "word": "nervous",
+      "sentences": [
+        {
+          "english": "I feel nervous and scared before every important speaking test.",
+          "vietnamese": "Tôi cảm thấy lo lắng và sợ hãi trước mỗi bài kiểm tra nói quan trọng."
+        },
+        {
+          "english": "I always feel nervous when I talk to a foreigner in English.",
+          "vietnamese": "Tôi luôn thấy hồi hộp khi nói chuyện với người nước ngoài bằng tiếng Anh."
+        },
+        {
+          "english": "She was nervous before the test, but she stayed confident.",
+          "vietnamese": "Cô ấy lo lắng trước bài kiểm tra, nhưng vẫn giữ được sự tự tin."
+        },
+        {
+          "english": "I was nervous during the first conversation, but the visitor was kind.",
+          "vietnamese": "Tôi đã lo lắng trong cuộc trò chuyện đầu tiên, nhưng vị khách rất tử tế."
+        },
+        {
+          "english": "Do not feel nervous; every beginner makes mistakes at the start.",
+          "vietnamese": "Đừng thấy hồi hộp; người mới bắt đầu nào cũng mắc lỗi lúc đầu."
+        }
+      ]
+    },
+    {
+      "word": "grade",
+      "sentences": [
+        {
+          "english": "She got a high grade because she felt confident during the whole test.",
+          "vietnamese": "Cô ấy đạt điểm cao vì cảm thấy tự tin trong suốt bài kiểm tra."
+        },
+        {
+          "english": "My grade improved after I practised talking with a native speaker.",
+          "vietnamese": "Điểm của tôi đã cải thiện sau khi tôi luyện nói với người bản xứ."
+        },
+        {
+          "english": "He got a good grade because he knew the topic very well.",
+          "vietnamese": "Cậu ấy được điểm cao vì nắm chủ đề rất chắc."
+        },
+        {
+          "english": "My grades have improved since I started learning new vocabulary daily.",
+          "vietnamese": "Điểm của tôi đã cải thiện từ khi tôi bắt đầu học từ vựng mới mỗi ngày."
+        },
+        {
+          "english": "Which grade did you get in the speaking course last term?",
+          "vietnamese": "Bạn được điểm mấy trong khoá học nói ở học kỳ trước?"
+        }
+      ]
+    },
+    {
+      "word": "attend",
+      "sentences": [
+        {
+          "english": "I attend an evening class to improve my speaking skill.",
+          "vietnamese": "Tôi tham dự một lớp học buổi tối để cải thiện kỹ năng nói của mình."
+        },
+        {
+          "english": "I attend an English course every Saturday morning.",
+          "vietnamese": "Tôi tham dự một khoá học tiếng Anh vào sáng thứ Bảy hằng tuần."
+        },
+        {
+          "english": "Many foreigners attend this class to learn our language.",
+          "vietnamese": "Nhiều người nước ngoài tham dự lớp này để học ngôn ngữ của chúng tôi."
+        },
+        {
+          "english": "She has attended every class and made good progress this year.",
+          "vietnamese": "Cô ấy đã tham dự mọi buổi học và tiến bộ tốt trong năm nay."
+        },
+        {
+          "english": "Will you attend the conversation club with me tomorrow evening?",
+          "vietnamese": "Bạn sẽ tham dự câu lạc bộ hội thoại cùng tôi vào tối mai chứ?"
+        }
+      ]
+    },
+    {
+      "word": "absent",
+      "sentences": [
+        {
+          "english": "He was absent, so he missed the conversation with a native speaker.",
+          "vietnamese": "Anh ấy vắng mặt nên đã bỏ lỡ buổi trò chuyện với một người bản ngữ."
+        },
+        {
+          "english": "She was absent last week, so she missed the conversation practice.",
+          "vietnamese": "Cô ấy vắng mặt tuần trước nên đã bỏ lỡ buổi luyện hội thoại."
+        },
+        {
+          "english": "Being absent often makes it hard to follow the lesson.",
+          "vietnamese": "Việc hay vắng mặt khiến bạn khó theo kịp bài học."
+        },
+        {
+          "english": "I was absent yesterday, so I could not understand the new lesson.",
+          "vietnamese": "Hôm qua tôi vắng mặt, nên tôi đã không hiểu bài học mới."
+        },
+        {
+          "english": "If you are absent too often, your progress will slow down.",
+          "vietnamese": "Nếu bạn vắng mặt quá thường xuyên, sự tiến bộ của bạn sẽ chậm lại."
+        }
+      ]
+    },
+    {
+      "word": "term",
+      "sentences": [
+        {
+          "english": "At the end of this term, every student will receive a certificate.",
+          "vietnamese": "Vào cuối học kỳ này, mỗi học sinh sẽ nhận được một chứng chỉ."
+        },
+        {
+          "english": "This term we will study the culture of three countries.",
+          "vietnamese": "Học kỳ này chúng tôi sẽ tìm hiểu văn hoá của ba quốc gia."
+        },
+        {
+          "english": "At the end of the term, students receive a certificate.",
+          "vietnamese": "Cuối học kỳ, học sinh nhận được một chứng chỉ."
+        },
+        {
+          "english": "Next term I want to improve my writing skill a lot.",
+          "vietnamese": "Học kỳ tới tôi muốn cải thiện kỹ năng viết của mình thật nhiều."
+        },
+        {
+          "english": "She learned fifty new words each term and never felt shy.",
+          "vietnamese": "Cô ấy học năm mươi từ mới mỗi học kỳ và chưa bao giờ thấy nhút nhát."
+        }
+      ]
+    },
+    {
+      "word": "popular",
+      "sentences": [
+        {
+          "english": "This topic is very popular among students who want to study abroad.",
+          "vietnamese": "Chủ đề này rất phổ biến với những học sinh muốn đi du học."
+        },
+        {
+          "english": "English is a popular language among young people here.",
+          "vietnamese": "Tiếng Anh là ngôn ngữ phổ biến với người trẻ ở đây."
+        },
+        {
+          "english": "That teacher is popular because she makes every topic easy.",
+          "vietnamese": "Cô giáo đó được yêu thích vì cô làm cho mọi chủ đề trở nên dễ hiểu."
+        },
+        {
+          "english": "Short videos have become popular with beginners who study alone.",
+          "vietnamese": "Video ngắn đã trở nên phổ biến với những người mới bắt đầu tự học."
+        },
+        {
+          "english": "Why is this course so popular among foreign visitors?",
+          "vietnamese": "Vì sao khoá học này lại được khách nước ngoài yêu thích đến vậy?"
+        }
+      ]
+    },
+    {
+      "word": "revise",
+      "sentences": [
+        {
+          "english": "I revise my new vocabulary every evening before I go to bed.",
+          "vietnamese": "Tôi ôn lại từ vựng mới mỗi tối trước khi đi ngủ."
+        },
+        {
+          "english": "I revise new vocabulary every night before bed.",
+          "vietnamese": "Tôi ôn lại từ vựng mới mỗi tối trước khi đi ngủ."
+        },
+        {
+          "english": "We revise together whenever the course gets difficult.",
+          "vietnamese": "Chúng tôi ôn tập cùng nhau mỗi khi khoá học trở nên khó."
+        },
+        {
+          "english": "I am revising the grammar because I still have difficulty with tenses.",
+          "vietnamese": "Tôi đang ôn lại ngữ pháp vì tôi vẫn gặp khó khăn với các thì."
+        },
+        {
+          "english": "Revise the lesson tonight so you can follow the conversation tomorrow.",
+          "vietnamese": "Hãy ôn lại bài tối nay để ngày mai bạn có thể theo kịp cuộc hội thoại."
+        }
+      ]
+    },
+    {
+      "word": "memorise",
+      "sentences": [
+        {
+          "english": "A beginner should not try to memorise the whole dictionary.",
+          "vietnamese": "Người mới bắt đầu không nên cố học thuộc cả cuốn từ điển."
+        },
+        {
+          "english": "Do not just memorise words; try to understand them in context.",
+          "vietnamese": "Đừng chỉ học thuộc từ; hãy cố hiểu chúng trong ngữ cảnh."
+        },
+        {
+          "english": "She can memorise a long list of vocabulary in one hour.",
+          "vietnamese": "Cô ấy có thể học thuộc một danh sách từ vựng dài trong một giờ."
+        },
+        {
+          "english": "He memorised the whole speech and felt confident on stage.",
+          "vietnamese": "Anh ấy đã học thuộc toàn bộ bài phát biểu và thấy tự tin trên sân khấu."
+        },
+        {
+          "english": "Can you memorise ten words a day to make faster progress?",
+          "vietnamese": "Bạn có thể ghi nhớ mười từ mỗi ngày để tiến bộ nhanh hơn không?"
+        }
+      ]
+    },
+    {
+      "word": "assignment",
+      "sentences": [
+        {
+          "english": "Our assignment is to interview a visitor about her country.",
+          "vietnamese": "Bài tập của chúng tôi là phỏng vấn một vị khách về đất nước của cô ấy."
+        },
+        {
+          "english": "My assignment is about the culture of Japan.",
+          "vietnamese": "Bài tập của tôi nói về văn hoá Nhật Bản."
+        },
+        {
+          "english": "I had difficulty finishing the assignment on time.",
+          "vietnamese": "Tôi gặp khó khăn khi hoàn thành bài tập đúng hạn."
+        },
+        {
+          "english": "I will finish my assignment after the English course tonight.",
+          "vietnamese": "Tôi sẽ hoàn thành bài tập của mình sau khoá học tiếng Anh tối nay."
+        },
+        {
+          "english": "Our teacher has not announced the new assignment topic yet.",
+          "vietnamese": "Giáo viên của chúng tôi vẫn chưa thông báo chủ đề bài tập mới."
+        }
+      ]
+    },
+    {
+      "word": "enroll",
+      "sentences": [
+        {
+          "english": "I want to enroll in an English course next month.",
+          "vietnamese": "Tôi muốn đăng ký một khóa tiếng Anh vào tháng tới."
+        },
+        {
+          "english": "I want to enroll in a speaking course next month.",
+          "vietnamese": "Tôi muốn đăng ký một khoá học nói vào tháng tới."
+        },
+        {
+          "english": "Many beginners enroll in this class every year.",
+          "vietnamese": "Nhiều người mới bắt đầu ghi danh vào lớp này mỗi năm."
+        },
+        {
+          "english": "She enrolled in a writing class to improve her academic skill.",
+          "vietnamese": "Cô ấy đã ghi danh vào một lớp viết để cải thiện kỹ năng học thuật của mình."
+        },
+        {
+          "english": "Should I enroll now or wait until I feel more confident?",
+          "vietnamese": "Tôi nên đăng ký ngay bây giờ hay chờ đến khi thấy tự tin hơn?"
+        }
+      ]
+    },
+    {
+      "word": "continue",
+      "sentences": [
+        {
+          "english": "I want to continue my studies abroad.",
+          "vietnamese": "Tôi muốn tiếp tục việc học ở nước ngoài."
+        },
+        {
+          "english": "If you continue practising, your English will improve quickly.",
+          "vietnamese": "Nếu bạn tiếp tục luyện tập, tiếng Anh của bạn sẽ cải thiện nhanh."
+        },
+        {
+          "english": "She wants to continue her studies abroad after school.",
+          "vietnamese": "Cô ấy muốn tiếp tục việc học ở nước ngoài sau khi tốt nghiệp."
+        },
+        {
+          "english": "They continued the conversation even though the topic was difficult.",
+          "vietnamese": "Họ đã tiếp tục cuộc trò chuyện dù chủ đề rất khó."
+        },
+        {
+          "english": "Do not stop now; continue reading until you understand the text.",
+          "vietnamese": "Đừng dừng lại lúc này; hãy tiếp tục đọc cho tới khi bạn hiểu bài đọc."
+        }
+      ]
+    },
+    {
+      "word": "succeed",
+      "sentences": [
+        {
+          "english": "If you follow your teacher's advice, you will succeed in the exam.",
+          "vietnamese": "Nếu bạn làm theo lời khuyên của giáo viên, bạn sẽ thành công trong kỳ thi."
+        },
+        {
+          "english": "You can succeed if you communicate with confidence every day.",
+          "vietnamese": "Bạn có thể thành công nếu giao tiếp một cách tự tin mỗi ngày."
+        },
+        {
+          "english": "He succeeded in the test because he followed his teacher's advice.",
+          "vietnamese": "Cậu ấy thành công trong bài kiểm tra vì đã làm theo lời khuyên của thầy."
+        },
+        {
+          "english": "Many beginners succeed because they never stop asking simple questions.",
+          "vietnamese": "Nhiều người mới bắt đầu thành công vì họ không bao giờ ngừng đặt những câu hỏi đơn giản."
+        },
+        {
+          "english": "Will she succeed in getting the certificate this year?",
+          "vietnamese": "Liệu cô ấy có thành công trong việc lấy chứng chỉ năm nay không?"
+        }
+      ]
+    },
+    {
+      "word": "curriculum",
+      "sentences": [
+        {
+          "english": "The new curriculum helps students communicate better in real situations.",
+          "vietnamese": "Chương trình học mới giúp học sinh giao tiếp tốt hơn trong các tình huống thực tế."
+        },
+        {
+          "english": "The new curriculum includes more speaking and listening skills.",
+          "vietnamese": "Chương trình học mới có thêm nhiều kỹ năng nói và nghe."
+        },
+        {
+          "english": "Our curriculum covers the culture of English-speaking countries.",
+          "vietnamese": "Chương trình học của chúng tôi bao gồm văn hoá của các nước nói tiếng Anh."
+        },
+        {
+          "english": "The old curriculum gave students too little vocabulary for daily life.",
+          "vietnamese": "Chương trình học cũ cho học sinh quá ít từ vựng cho đời sống hằng ngày."
+        },
+        {
+          "english": "Has the school changed the curriculum for beginners this year?",
+          "vietnamese": "Nhà trường đã thay đổi chương trình học cho người mới bắt đầu trong năm nay chưa?"
+        }
+      ]
+    },
+    {
+      "word": "uniform",
+      "sentences": [
+        {
+          "english": "I did not understand why we must wear a uniform to school.",
+          "vietnamese": "Tôi đã không hiểu vì sao chúng tôi phải mặc đồng phục đến trường."
+        },
+        {
+          "english": "Students wear a school uniform, which visitors often find interesting.",
+          "vietnamese": "Học sinh mặc đồng phục, điều mà khách tham quan thường thấy thú vị."
+        },
+        {
+          "english": "The original uniform was blue, but the school changed it.",
+          "vietnamese": "Bộ đồng phục ban đầu màu xanh, nhưng nhà trường đã thay đổi nó."
+        },
+        {
+          "english": "Wearing a uniform makes some shy students feel more comfortable.",
+          "vietnamese": "Việc mặc đồng phục khiến một số học sinh nhút nhát cảm thấy thoải mái hơn."
+        },
+        {
+          "english": "A foreigner took a photo of our school uniform yesterday.",
+          "vietnamese": "Một người nước ngoài đã chụp ảnh bộ đồng phục của trường chúng tôi hôm qua."
+        }
+      ]
+    },
+    {
+      "word": "drop out",
+      "sentences": [
+        {
+          "english": "Some students drop out because they cannot make progress in class.",
+          "vietnamese": "Một số học sinh bỏ học vì không thể tiến bộ trong lớp."
+        },
+        {
+          "english": "Some students drop out because they have difficulty with the lessons.",
+          "vietnamese": "Một số học sinh bỏ học vì gặp khó khăn với các bài học."
+        },
+        {
+          "english": "Do not drop out of the course; ask your teacher for help.",
+          "vietnamese": "Đừng bỏ khoá học; hãy nhờ giáo viên giúp đỡ."
+        },
+        {
+          "english": "If you drop out now, your English will never improve.",
+          "vietnamese": "Nếu bạn bỏ học bây giờ, tiếng Anh của bạn sẽ không bao giờ tiến bộ."
+        },
+        {
+          "english": "Do not drop out; a good speaker also started as a beginner.",
+          "vietnamese": "Đừng bỏ học; một người nói giỏi cũng từng bắt đầu như một người mới."
+        }
+      ]
+    }
+  ]
+}

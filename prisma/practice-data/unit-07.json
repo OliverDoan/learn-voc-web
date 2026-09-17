@@ -1,0 +1,607 @@
+{
+  "unit": 7,
+  "deck": "Unit 7: Hinata khám phá thủ đô",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "capital",
+      "sentences": [
+        {
+          "english": "The capital is much more expensive than my peaceful hometown.",
+          "vietnamese": "Thủ đô đắt đỏ hơn nhiều so với quê hương yên bình của tôi."
+        },
+        {
+          "english": "Many young people move to the capital to start a new career.",
+          "vietnamese": "Nhiều người trẻ chuyển đến thủ đô để bắt đầu một sự nghiệp mới."
+        },
+        {
+          "english": "Is the capital more crowded than your hometown in the summer?",
+          "vietnamese": "Thủ đô có đông đúc hơn quê bạn vào mùa hè không?"
+        },
+        {
+          "english": "She has lived in the capital since she finished her English course.",
+          "vietnamese": "Cô ấy đã sống ở thủ đô từ khi cô ấy học xong khoá tiếng Anh."
+        },
+        {
+          "english": "Do not spend all your money on the first day in the capital.",
+          "vietnamese": "Đừng tiêu hết tiền của bạn trong ngày đầu tiên ở thủ đô."
+        }
+      ]
+    },
+    {
+      "word": "highway",
+      "sentences": [
+        {
+          "english": "The new highway shortens the distance between the two cities.",
+          "vietnamese": "Đường cao tốc mới rút ngắn khoảng cách giữa hai thành phố."
+        },
+        {
+          "english": "Travelling by highway is fast, but petrol is very expensive now.",
+          "vietnamese": "Đi bằng đường cao tốc thì nhanh, nhưng xăng bây giờ rất đắt."
+        },
+        {
+          "english": "The taxi driver took the highway to save us thirty minutes.",
+          "vietnamese": "Người lái taxi đã đi đường cao tốc để tiết kiệm cho chúng tôi ba mươi phút."
+        },
+        {
+          "english": "Will they open a new highway between the two small towns?",
+          "vietnamese": "Họ sẽ mở một đường cao tốc mới giữa hai thị trấn nhỏ chứ?"
+        },
+        {
+          "english": "Our company pays a monthly fee to use this private highway.",
+          "vietnamese": "Công ty chúng tôi trả một khoản phí hàng tháng để dùng đường cao tốc riêng này."
+        }
+      ]
+    },
+    {
+      "word": "skyscraper",
+      "sentences": [
+        {
+          "english": "My sister works as a receptionist in that tall glass skyscraper.",
+          "vietnamese": "Chị tôi làm lễ tân trong tòa nhà chọc trời bằng kính cao đó."
+        },
+        {
+          "english": "A young architect designed the tallest skyscraper in this city.",
+          "vietnamese": "Một kiến trúc sư trẻ đã thiết kế tòa nhà chọc trời cao nhất thành phố này."
+        },
+        {
+          "english": "The rent in that skyscraper is too high for a freelancer.",
+          "vietnamese": "Tiền thuê trong tòa nhà chọc trời đó quá cao đối với một người làm tự do."
+        },
+        {
+          "english": "Have you ever visited the skyscraper near the town centre?",
+          "vietnamese": "Bạn đã bao giờ đến tòa nhà chọc trời gần trung tâm thị trấn chưa?"
+        },
+        {
+          "english": "They are opening a small library inside the new skyscraper.",
+          "vietnamese": "Họ đang mở một thư viện nhỏ bên trong tòa nhà chọc trời mới."
+        }
+      ]
+    },
+    {
+      "word": "tower",
+      "sentences": [
+        {
+          "english": "From the top of the tower, you can see the whole town.",
+          "vietnamese": "Từ đỉnh tháp, bạn có thể nhìn thấy toàn bộ thị trấn."
+        },
+        {
+          "english": "The old tower beside my school is a popular place for weddings.",
+          "vietnamese": "Ngọn tháp cũ bên cạnh trường tôi là một nơi phổ biến để chụp ảnh cưới."
+        },
+        {
+          "english": "Tourists pay a small fee to climb the water tower.",
+          "vietnamese": "Khách du lịch trả một khoản phí nhỏ để leo lên tháp nước."
+        },
+        {
+          "english": "Do you know the meaning of the name of that tower?",
+          "vietnamese": "Bạn có biết ý nghĩa của cái tên của ngọn tháp đó không?"
+        },
+        {
+          "english": "Engineers are repairing the television tower this week.",
+          "vietnamese": "Các kỹ sư đang sửa chữa tháp truyền hình trong tuần này."
+        }
+      ]
+    },
+    {
+      "word": "exciting",
+      "sentences": [
+        {
+          "english": "Living in a big city is exciting, but the rent is very high.",
+          "vietnamese": "Sống ở một thành phố lớn thì thú vị, nhưng tiền thuê nhà rất cao."
+        },
+        {
+          "english": "My first interview in the capital was exciting and a little frightening.",
+          "vietnamese": "Buổi phỏng vấn đầu tiên của tôi ở thủ đô thật thú vị và hơi đáng sợ."
+        },
+        {
+          "english": "Is your new job exciting, or is it simply too challenging?",
+          "vietnamese": "Công việc mới của bạn có thú vị không, hay nó đơn giản là quá thử thách?"
+        },
+        {
+          "english": "We have found an exciting course for beginners near our house.",
+          "vietnamese": "Chúng tôi đã tìm được một khoá học thú vị cho người mới bắt đầu gần nhà."
+        },
+        {
+          "english": "The film maker is writing an exciting story about the north.",
+          "vietnamese": "Nhà làm phim đang viết một câu chuyện thú vị về miền bắc."
+        }
+      ]
+    },
+    {
+      "word": "central",
+      "sentences": [
+        {
+          "english": "Her office is in a central area, so the address is easy to find.",
+          "vietnamese": "Văn phòng của cô ấy ở một khu vực trung tâm, nên địa chỉ rất dễ tìm."
+        },
+        {
+          "english": "Our company moved to a central office to stay close to customers.",
+          "vietnamese": "Công ty chúng tôi đã chuyển tới một văn phòng trung tâm để ở gần khách hàng."
+        },
+        {
+          "english": "The central market is always crowded on Sunday mornings.",
+          "vietnamese": "Khu chợ trung tâm luôn đông đúc vào các sáng Chủ nhật."
+        },
+        {
+          "english": "Do you live in a central part of the city?",
+          "vietnamese": "Bạn có sống ở một khu vực trung tâm của thành phố không?"
+        },
+        {
+          "english": "A central location is useful, but the rent is never cheap.",
+          "vietnamese": "Một vị trí trung tâm thì hữu ích, nhưng tiền thuê thì không bao giờ rẻ."
+        }
+      ]
+    },
+    {
+      "word": "district",
+      "sentences": [
+        {
+          "english": "This district is famous for cheap food and friendly people.",
+          "vietnamese": "Quận này nổi tiếng với đồ ăn rẻ và người dân thân thiện."
+        },
+        {
+          "english": "The owner of that shop lives in a quiet district near the river.",
+          "vietnamese": "Chủ của cửa hàng đó sống ở một quận yên tĩnh gần con sông."
+        },
+        {
+          "english": "Which district has the most reasonable house prices?",
+          "vietnamese": "Quận nào có giá nhà hợp lý nhất?"
+        },
+        {
+          "english": "The city will open a new hospital in the district south of here.",
+          "vietnamese": "Thành phố sẽ mở một bệnh viện mới ở quận phía nam nơi đây."
+        },
+        {
+          "english": "I have worked in this district since I signed my first contract.",
+          "vietnamese": "Tôi đã làm việc ở quận này từ khi tôi ký hợp đồng đầu tiên."
+        }
+      ]
+    },
+    {
+      "word": "atmosphere",
+      "sentences": [
+        {
+          "english": "The atmosphere in the old quarter is peaceful early in the morning.",
+          "vietnamese": "Bầu không khí ở khu phố cổ rất yên bình vào lúc sáng sớm."
+        },
+        {
+          "english": "The atmosphere at the interview was friendly, so I felt confident.",
+          "vietnamese": "Bầu không khí ở buổi phỏng vấn rất thân thiện, nên tôi cảm thấy tự tin."
+        },
+        {
+          "english": "Cheap restaurants often have a warmer atmosphere than luxury hotels.",
+          "vietnamese": "Các nhà hàng rẻ tiền thường có bầu không khí ấm cúng hơn khách sạn sang trọng."
+        },
+        {
+          "english": "Do you prefer the quiet atmosphere of a small town?",
+          "vietnamese": "Bạn có thích bầu không khí yên tĩnh của một thị trấn nhỏ không?"
+        },
+        {
+          "english": "The atmosphere in our office has improved since the new manager arrived.",
+          "vietnamese": "Bầu không khí ở văn phòng chúng tôi đã cải thiện từ khi quản lý mới đến."
+        }
+      ]
+    },
+    {
+      "word": "lively",
+      "sentences": [
+        {
+          "english": "The night market is lively and always crowded with young visitors.",
+          "vietnamese": "Chợ đêm rất sống động và luôn đông nghịt khách tham quan trẻ tuổi."
+        },
+        {
+          "english": "The whole campus becomes lively when students finish the last term.",
+          "vietnamese": "Cả khuôn viên trường trở nên sống động khi sinh viên kết thúc học kỳ cuối."
+        },
+        {
+          "english": "Our teacher makes every lesson lively, so nobody is absent.",
+          "vietnamese": "Cô giáo của chúng tôi làm cho mỗi tiết học thật sống động, nên không ai vắng mặt."
+        },
+        {
+          "english": "Was the party lively, or did most visitors leave early?",
+          "vietnamese": "Bữa tiệc có sống động không, hay hầu hết khách đã về sớm?"
+        },
+        {
+          "english": "A lively musician was playing the guitar outside the coffee shop.",
+          "vietnamese": "Một nhạc sĩ sôi nổi đang chơi ghi ta bên ngoài quán cà phê."
+        }
+      ]
+    },
+    {
+      "word": "bustling",
+      "sentences": [
+        {
+          "english": "The bustling market near my house opens at five every morning.",
+          "vietnamese": "Khu chợ nhộn nhịp gần nhà tôi mở cửa lúc năm giờ mỗi sáng."
+        },
+        {
+          "english": "The bustling city centre is full of shops and small offices.",
+          "vietnamese": "Trung tâm thành phố nhộn nhịp đầy những cửa hàng và văn phòng nhỏ."
+        },
+        {
+          "english": "I could not sleep well because the bustling street was so crowded.",
+          "vietnamese": "Tôi đã không ngủ ngon được vì con phố nhộn nhịp quá đông đúc."
+        },
+        {
+          "english": "Will this bustling old quarter change after the new railway opens?",
+          "vietnamese": "Khu phố cổ nhộn nhịp này sẽ thay đổi sau khi tuyến đường sắt mới mở chứ?"
+        },
+        {
+          "english": "A photographer is taking pictures of the bustling street at sunrise.",
+          "vietnamese": "Một nhiếp ảnh gia đang chụp ảnh con phố nhộn nhịp vào lúc bình minh."
+        }
+      ]
+    },
+    {
+      "word": "neighbourhood",
+      "sentences": [
+        {
+          "english": "My neighbourhood is quiet and safe, so I know all my neighbours.",
+          "vietnamese": "Khu phố của tôi yên tĩnh và an toàn, nên tôi biết tất cả hàng xóm của mình."
+        },
+        {
+          "english": "A small coffee shop has opened in our neighbourhood this week.",
+          "vietnamese": "Một quán cà phê nhỏ đã mở trong khu phố của chúng tôi tuần này."
+        },
+        {
+          "english": "Houses in this neighbourhood are expensive, but the streets are beautiful.",
+          "vietnamese": "Nhà ở khu dân cư này đắt đỏ, nhưng những con đường thì rất đẹp."
+        },
+        {
+          "english": "Does your neighbourhood have a primary school nearby?",
+          "vietnamese": "Khu phố của bạn có trường tiểu học ở gần không?"
+        },
+        {
+          "english": "People describe our neighbourhood as peaceful and friendly.",
+          "vietnamese": "Mọi người mô tả khu phố của chúng tôi là yên bình và thân thiện."
+        }
+      ]
+    },
+    {
+      "word": "various",
+      "sentences": [
+        {
+          "english": "The supermarket sells various brands at reasonable prices.",
+          "vietnamese": "Siêu thị bán nhiều nhãn hiệu khác nhau với giá cả hợp lý."
+        },
+        {
+          "english": "This course offers various subjects for students of every grade.",
+          "vietnamese": "Khoá học này cung cấp nhiều môn học đa dạng cho học sinh ở mọi khối lớp."
+        },
+        {
+          "english": "Various companies are looking for a qualified accountant this month.",
+          "vietnamese": "Nhiều công ty khác nhau đang tìm một kế toán đủ trình độ trong tháng này."
+        },
+        {
+          "english": "I have tried various ways to memorise new vocabulary.",
+          "vietnamese": "Tôi đã thử nhiều cách khác nhau để ghi nhớ từ vựng mới."
+        },
+        {
+          "english": "Does that shop sell various tools at reasonable prices?",
+          "vietnamese": "Cửa hàng đó có bán nhiều loại dụng cụ với giá hợp lý không?"
+        }
+      ]
+    },
+    {
+      "word": "quality",
+      "sentences": [
+        {
+          "english": "The quality of these cheap shoes is surprisingly good.",
+          "vietnamese": "Chất lượng của đôi giày rẻ tiền này tốt một cách bất ngờ."
+        },
+        {
+          "english": "The quality of this hotel is worth every dong we spend.",
+          "vietnamese": "Chất lượng của khách sạn này xứng đáng với từng đồng chúng tôi tiêu."
+        },
+        {
+          "english": "Customers always compare the price and the quality before they buy.",
+          "vietnamese": "Khách hàng luôn so sánh giá cả và chất lượng trước khi họ mua."
+        },
+        {
+          "english": "Has the quality of your work improved since the new contract?",
+          "vietnamese": "Chất lượng công việc của bạn đã cải thiện từ khi có hợp đồng mới chưa?"
+        },
+        {
+          "english": "Cheap clothes are not always low in quality.",
+          "vietnamese": "Quần áo rẻ không phải lúc nào cũng thấp về chất lượng."
+        }
+      ]
+    },
+    {
+      "word": "service",
+      "sentences": [
+        {
+          "english": "The hotel service is excellent, and every customer feels welcome.",
+          "vietnamese": "Dịch vụ của khách sạn rất tuyệt vời, và mọi khách hàng đều cảm thấy được chào đón."
+        },
+        {
+          "english": "The bank teller explained the new service to every customer politely.",
+          "vietnamese": "Nhân viên ngân hàng đã giải thích dịch vụ mới cho mọi khách hàng một cách lịch sự."
+        },
+        {
+          "english": "Their delivery service is fast, and the fee is quite reasonable.",
+          "vietnamese": "Dịch vụ giao hàng của họ nhanh, và phí thì khá hợp lý."
+        },
+        {
+          "english": "Have you used the online service of that company before?",
+          "vietnamese": "Bạn đã dùng dịch vụ trực tuyến của công ty đó trước đây chưa?"
+        },
+        {
+          "english": "Poor service will make customers leave and never come back.",
+          "vietnamese": "Dịch vụ kém sẽ khiến khách hàng rời đi và không bao giờ quay lại."
+        }
+      ]
+    },
+    {
+      "word": "system",
+      "sentences": [
+        {
+          "english": "The bus system here is cheap, so I rarely spend money on taxis.",
+          "vietnamese": "Hệ thống xe buýt ở đây rẻ, nên tôi hiếm khi tiêu tiền cho taxi."
+        },
+        {
+          "english": "The school changed its grading system at the start of the term.",
+          "vietnamese": "Trường đã thay đổi hệ thống chấm điểm vào đầu học kỳ."
+        },
+        {
+          "english": "Our company uses a new system to manage every document.",
+          "vietnamese": "Công ty chúng tôi dùng một hệ thống mới để quản lý mọi tài liệu."
+        },
+        {
+          "english": "Do you understand how the tax system works in this country?",
+          "vietnamese": "Bạn có hiểu hệ thống thuế hoạt động thế nào ở đất nước này không?"
+        },
+        {
+          "english": "The old payment system was slow, so many customers complained.",
+          "vietnamese": "Hệ thống thanh toán cũ chậm chạp, nên nhiều khách hàng đã phàn nàn."
+        }
+      ]
+    },
+    {
+      "word": "modern",
+      "sentences": [
+        {
+          "english": "This modern building was designed by a famous young architect.",
+          "vietnamese": "Tòa nhà hiện đại này được thiết kế bởi một kiến trúc sư trẻ nổi tiếng."
+        },
+        {
+          "english": "This modern office was designed for a large engineering company.",
+          "vietnamese": "Văn phòng hiện đại này được thiết kế cho một công ty kỹ thuật lớn."
+        },
+        {
+          "english": "Modern tools help a builder finish the work much faster.",
+          "vietnamese": "Dụng cụ hiện đại giúp một người thợ xây hoàn thành công việc nhanh hơn nhiều."
+        },
+        {
+          "english": "Is this modern design acceptable to the owner of the house?",
+          "vietnamese": "Thiết kế hiện đại này có được chủ nhà chấp nhận không?"
+        },
+        {
+          "english": "Young people prefer modern furniture, but it is often expensive.",
+          "vietnamese": "Người trẻ thích đồ nội thất hiện đại, nhưng nó thường đắt đỏ."
+        }
+      ]
+    },
+    {
+      "word": "convenient",
+      "sentences": [
+        {
+          "english": "The new metro line is convenient and saves me thirty minutes every day.",
+          "vietnamese": "Tuyến tàu điện ngầm mới rất tiện lợi và giúp tôi tiết kiệm ba mươi phút mỗi ngày."
+        },
+        {
+          "english": "Paying the electricity bill online is convenient and very fast.",
+          "vietnamese": "Trả hóa đơn tiền điện trực tuyến thì tiện lợi và rất nhanh."
+        },
+        {
+          "english": "Is Monday morning convenient for our interview?",
+          "vietnamese": "Sáng thứ Hai có tiện cho buổi phỏng vấn của chúng ta không?"
+        },
+        {
+          "english": "Living near the centre is convenient, but I spend a lot on rent.",
+          "vietnamese": "Sống gần trung tâm thì tiện lợi, nhưng tôi tiêu rất nhiều cho tiền thuê nhà."
+        },
+        {
+          "english": "This app is not convenient for beginners who cannot follow English.",
+          "vietnamese": "Ứng dụng này không tiện lợi cho người mới bắt đầu không thể theo kịp tiếng Anh."
+        }
+      ]
+    },
+    {
+      "word": "pavement",
+      "sentences": [
+        {
+          "english": "Many small shops open right on the pavement in this area.",
+          "vietnamese": "Nhiều cửa hàng nhỏ mở ngay trên vỉa hè ở khu vực này."
+        },
+        {
+          "english": "Do not leave your motorbike on the pavement in front of our company.",
+          "vietnamese": "Đừng để xe máy của bạn trên vỉa hè trước công ty chúng tôi."
+        },
+        {
+          "english": "Workers are repairing the pavement near the primary school.",
+          "vietnamese": "Công nhân đang sửa vỉa hè gần trường tiểu học."
+        },
+        {
+          "english": "A street musician was singing on the pavement last night.",
+          "vietnamese": "Một nhạc sĩ đường phố đã hát trên vỉa hè tối qua."
+        },
+        {
+          "english": "The pavement here is narrow, so it always feels crowded.",
+          "vietnamese": "Vỉa hè ở đây hẹp, nên nó luôn có cảm giác đông đúc."
+        }
+      ]
+    },
+    {
+      "word": "alley",
+      "sentences": [
+        {
+          "english": "A famous cook sells noodles in the small alley behind my school.",
+          "vietnamese": "Một đầu bếp nổi tiếng bán mì trong con hẻm nhỏ phía sau trường tôi."
+        },
+        {
+          "english": "Our house is in a narrow alley, so the rent is cheap.",
+          "vietnamese": "Nhà chúng tôi ở trong một con hẻm hẹp, nên tiền thuê rẻ."
+        },
+        {
+          "english": "Do you know the small alley behind the town market?",
+          "vietnamese": "Bạn có biết con hẻm nhỏ phía sau chợ thị trấn không?"
+        },
+        {
+          "english": "The hairdresser has opened a new shop at the end of our alley.",
+          "vietnamese": "Người thợ cắt tóc đã mở một tiệm mới ở cuối con hẻm của chúng tôi."
+        },
+        {
+          "english": "Visitors often get lost in every narrow alley of the old quarter.",
+          "vietnamese": "Khách tham quan thường bị lạc trong mọi con hẻm hẹp của khu phố cổ."
+        }
+      ]
+    },
+    {
+      "word": "appealing",
+      "sentences": [
+        {
+          "english": "The offer is very appealing.",
+          "vietnamese": "Lời đề nghị rất hấp dẫn."
+        },
+        {
+          "english": "The salary in that contract is appealing, but the work is challenging.",
+          "vietnamese": "Mức lương trong hợp đồng đó thì hấp dẫn, nhưng công việc thì đầy thử thách."
+        },
+        {
+          "english": "Is a career in design appealing to you?",
+          "vietnamese": "Một sự nghiệp trong ngành thiết kế có hấp dẫn với bạn không?"
+        },
+        {
+          "english": "The hotel looked appealing in the photos, and the price was reasonable.",
+          "vietnamese": "Khách sạn trông hấp dẫn trong các bức ảnh, và giá thì hợp lý."
+        },
+        {
+          "english": "Cheap products are appealing, but their quality is often poor.",
+          "vietnamese": "Sản phẩm rẻ thì hấp dẫn, nhưng chất lượng của chúng thường kém."
+        }
+      ]
+    },
+    {
+      "word": "square",
+      "sentences": [
+        {
+          "english": "We met at the town square.",
+          "vietnamese": "Chúng tôi gặp nhau ở quảng trường thị trấn."
+        },
+        {
+          "english": "Thousands of visitors gather in the square on the last night of the year.",
+          "vietnamese": "Hàng nghìn khách tham quan tụ tập ở quảng trường vào đêm cuối cùng của năm."
+        },
+        {
+          "english": "The square near my company is peaceful early in the morning.",
+          "vietnamese": "Quảng trường gần công ty tôi rất yên bình vào lúc sáng sớm."
+        },
+        {
+          "english": "Shall we meet in the square after your interview?",
+          "vietnamese": "Chúng ta gặp nhau ở quảng trường sau buổi phỏng vấn của bạn nhé?"
+        },
+        {
+          "english": "They will open a big coffee shop beside the old square.",
+          "vietnamese": "Họ sẽ mở một quán cà phê lớn bên cạnh quảng trường cũ."
+        }
+      ]
+    },
+    {
+      "word": "nightlife",
+      "sentences": [
+        {
+          "english": "The nightlife in this city is amazing, but it can be expensive.",
+          "vietnamese": "Cuộc sống về đêm ở thành phố này thật tuyệt vời, nhưng nó có thể đắt đỏ."
+        },
+        {
+          "english": "Students love the nightlife here, but many of them are broke by Sunday.",
+          "vietnamese": "Sinh viên yêu thích cuộc sống về đêm ở đây, nhưng nhiều người trong số họ cháy túi vào Chủ nhật."
+        },
+        {
+          "english": "Does this quiet town have any nightlife at all?",
+          "vietnamese": "Thị trấn yên tĩnh này có cuộc sống về đêm nào không?"
+        },
+        {
+          "english": "The nightlife here has become more popular with foreign visitors.",
+          "vietnamese": "Cuộc sống về đêm ở đây đã trở nên phổ biến hơn với du khách nước ngoài."
+        },
+        {
+          "english": "Enjoy the nightlife, but do not spend all your money.",
+          "vietnamese": "Hãy tận hưởng cuộc sống về đêm, nhưng đừng tiêu hết tiền của bạn."
+        }
+      ]
+    },
+    {
+      "word": "nightclub",
+      "sentences": [
+        {
+          "english": "My friends went to a nightclub, but I was broke that weekend.",
+          "vietnamese": "Bạn bè tôi đã đi hộp đêm, nhưng cuối tuần đó tôi cháy túi."
+        },
+        {
+          "english": "A famous musician will play at that nightclub on Saturday evening.",
+          "vietnamese": "Một nhạc sĩ nổi tiếng sẽ chơi nhạc ở hộp đêm đó vào tối thứ Bảy."
+        },
+        {
+          "english": "This nightclub charges a high entrance fee at the weekend.",
+          "vietnamese": "Hộp đêm này thu một khoản phí vào cửa cao vào cuối tuần."
+        },
+        {
+          "english": "Have you ever worked as an assistant in a nightclub?",
+          "vietnamese": "Bạn đã bao giờ làm trợ lý trong một hộp đêm chưa?"
+        },
+        {
+          "english": "The owner of that nightclub is a very generous man.",
+          "vietnamese": "Chủ của hộp đêm đó là một người đàn ông rất hào phóng."
+        }
+      ]
+    },
+    {
+      "word": "opportunity",
+      "sentences": [
+        {
+          "english": "The city offers a great opportunity for young people.",
+          "vietnamese": "Thành phố mang lại một cơ hội tuyệt vời cho người trẻ."
+        },
+        {
+          "english": "This internship is a wonderful opportunity for a qualified student.",
+          "vietnamese": "Kỳ thực tập này là một cơ hội tuyệt vời cho một sinh viên đủ trình độ."
+        },
+        {
+          "english": "She took the opportunity to improve her English with native speakers.",
+          "vietnamese": "Cô ấy đã nắm lấy cơ hội để cải thiện tiếng Anh của mình với người bản xứ."
+        },
+        {
+          "english": "Do not miss this opportunity to sign a long contract.",
+          "vietnamese": "Đừng bỏ lỡ cơ hội này để ký một hợp đồng dài hạn."
+        },
+        {
+          "english": "Have you had an opportunity to talk with the manager about the offer?",
+          "vietnamese": "Bạn đã có cơ hội nói chuyện với quản lý về lời đề nghị chưa?"
+        }
+      ]
+    }
+  ]
+}

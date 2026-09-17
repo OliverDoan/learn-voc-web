@@ -1,0 +1,247 @@
+{
+  "unit": 16,
+  "deck": "Unit 16: Nấu ăn & bữa tối",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "prepare",
+      "sentences": [
+        { "english": "I prepare dinner for my family every evening.", "vietnamese": "Tôi chuẩn bị bữa tối cho gia đình mỗi tối." },
+        { "english": "She prepared a special meal for the wedding of her relative.", "vietnamese": "Cô ấy đã chuẩn bị một bữa ăn đặc biệt cho đám cưới của người họ hàng." },
+        { "english": "Are you preparing anything for the national holiday this weekend?", "vietnamese": "Bạn có đang chuẩn bị gì cho ngày lễ quốc gia cuối tuần này không?" },
+        { "english": "We will prepare the kitchen before our guests arrive tomorrow.", "vietnamese": "Chúng tôi sẽ chuẩn bị nhà bếp trước khi khách của chúng tôi đến vào ngày mai." },
+        { "english": "He has prepared hot tea because the temperature fell last night.", "vietnamese": "Anh ấy đã chuẩn bị trà nóng vì nhiệt độ giảm xuống đêm qua." }
+      ]
+    },
+    {
+      "word": "groceries",
+      "sentences": [
+        { "english": "I bought some groceries at the local market before the rainy afternoon.", "vietnamese": "Tôi đã mua một ít thực phẩm ở chợ địa phương trước buổi chiều mưa." },
+        { "english": "My mother buys groceries at the market every Sunday morning.", "vietnamese": "Mẹ tôi mua thực phẩm ở chợ vào mỗi sáng Chủ nhật." },
+        { "english": "Did you put the groceries away before the shower started?", "vietnamese": "Bạn đã cất thực phẩm đi trước khi cơn mưa rào bắt đầu chưa?" },
+        { "english": "We are carrying heavy groceries home through a light drizzle.", "vietnamese": "Chúng tôi đang mang những túi thực phẩm nặng về nhà dưới cơn mưa phùn nhẹ." },
+        { "english": "I will not buy expensive groceries this month because money is tight.", "vietnamese": "Tôi sẽ không mua thực phẩm đắt tiền trong tháng này vì tiền eo hẹp." }
+      ]
+    },
+    {
+      "word": "beef",
+      "sentences": [
+        { "english": "She cooked a bowl of beef noodles.", "vietnamese": "Cô ấy nấu một tô phở bò." },
+        { "english": "My father does not eat beef during the traditional festival.", "vietnamese": "Bố tôi không ăn thịt bò trong lễ hội truyền thống." },
+        { "english": "Have you ever tried beef cooked in the Vietnamese style?", "vietnamese": "Bạn đã bao giờ thử thịt bò nấu theo kiểu Việt Nam chưa?" },
+        { "english": "We will buy fresh beef at the market before the guests come.", "vietnamese": "Chúng tôi sẽ mua thịt bò tươi ở chợ trước khi khách đến." },
+        { "english": "The beef here is cheap, and the taste is amazing.", "vietnamese": "Thịt bò ở đây rẻ, và hương vị thì rất tuyệt." }
+      ]
+    },
+    {
+      "word": "pork",
+      "sentences": [
+        { "english": "We grilled some pork for the family celebration last Sunday.", "vietnamese": "Chúng tôi đã nướng một ít thịt lợn cho buổi ăn mừng của gia đình vào Chủ nhật tuần trước." },
+        { "english": "My grandmother cooks pork with eggs for the Tet celebration.", "vietnamese": "Bà tôi nấu thịt lợn với trứng cho dịp ăn mừng Tết." },
+        { "english": "Do you prefer pork or chicken for the party tonight?", "vietnamese": "Bạn thích thịt lợn hay thịt gà cho bữa tiệc tối nay?" },
+        { "english": "She has cooked pork many times, and her relatives love it.", "vietnamese": "Cô ấy đã nấu thịt lợn nhiều lần, và họ hàng của cô ấy rất thích nó." },
+        { "english": "Please do not buy pork at that expensive shop again.", "vietnamese": "Làm ơn đừng mua thịt lợn ở cửa hàng đắt đỏ đó nữa." }
+      ]
+    },
+    {
+      "word": "bacon",
+      "sentences": [
+        { "english": "My girlfriend fried bacon and eggs on a cold, rainy morning.", "vietnamese": "Bạn gái tôi đã rán thịt ba chỉ xông khói và trứng vào một buổi sáng lạnh và mưa." },
+        { "english": "He fries bacon every Sunday, and the smell welcomes everyone.", "vietnamese": "Anh ấy rán thịt ba chỉ xông khói vào mỗi Chủ nhật, và mùi thơm chào đón mọi người." },
+        { "english": "Would you like some bacon with your bread, dear guest?", "vietnamese": "Bạn có muốn dùng một ít thịt ba chỉ xông khói với bánh mì không, vị khách quý?" },
+        { "english": "We did not buy bacon because the price was really high.", "vietnamese": "Chúng tôi đã không mua thịt ba chỉ xông khói vì giá thực sự cao." },
+        { "english": "The children are eating bacon while a heavy shower falls outside.", "vietnamese": "Bọn trẻ đang ăn thịt ba chỉ xông khói trong khi một cơn mưa rào nặng hạt rơi bên ngoài." }
+      ]
+    },
+    {
+      "word": "vegetarian",
+      "sentences": [
+        { "english": "My girlfriend is a vegetarian, and her whole family respects that choice.", "vietnamese": "Bạn gái tôi là người ăn chay, và cả gia đình cô ấy tôn trọng lựa chọn đó." },
+        { "english": "Many Buddhist people become vegetarian on the first day of the month.", "vietnamese": "Nhiều người theo đạo Phật ăn chay vào ngày đầu tiên của tháng." },
+        { "english": "Is this restaurant good for vegetarians who avoid meat completely?", "vietnamese": "Nhà hàng này có tốt cho những người ăn chay hoàn toàn không ăn thịt không?" },
+        { "english": "She has been a vegetarian since her wedding last year.", "vietnamese": "Cô ấy đã ăn chay kể từ đám cưới của mình năm ngoái." },
+        { "english": "We will order a vegetarian dish for our foreign visitor.", "vietnamese": "Chúng tôi sẽ gọi một món chay cho vị khách nước ngoài của chúng tôi." }
+      ]
+    },
+    {
+      "word": "stove",
+      "sentences": [
+        { "english": "She put a big pot on the stove before the guests arrived.", "vietnamese": "Cô ấy đặt một cái nồi lớn lên bếp trước khi khách đến." },
+        { "english": "Our old stove stopped working last week, so we bought a modern one.", "vietnamese": "Cái bếp cũ của chúng tôi đã hỏng tuần trước, nên chúng tôi đã mua một cái hiện đại." },
+        { "english": "Do not touch the stove, dear guest, it is still very hot.", "vietnamese": "Đừng chạm vào bếp, vị khách quý, nó vẫn còn rất nóng." },
+        { "english": "She is cleaning the stove after a long holiday dinner.", "vietnamese": "Cô ấy đang lau bếp sau một bữa tối ngày lễ dài." },
+        { "english": "We will buy a new gas stove when we move to the new flat.", "vietnamese": "Chúng tôi sẽ mua một cái bếp ga mới khi chúng tôi chuyển đến căn hộ mới." }
+      ]
+    },
+    {
+      "word": "boil",
+      "sentences": [
+        { "english": "Boil the eggs for ten minutes while I tidy the kitchen.", "vietnamese": "Hãy luộc trứng trong mười phút trong lúc tôi dọn dẹp bếp." },
+        { "english": "My mother boils water every morning for her traditional green tea.", "vietnamese": "Mẹ tôi đun sôi nước mỗi sáng để pha trà xanh truyền thống của bà." },
+        { "english": "She boiled the vegetables, and then she tidied the whole kitchen.", "vietnamese": "Cô ấy đã luộc rau, và sau đó cô ấy đã dọn dẹp cả căn bếp." },
+        { "english": "Is the water boiling yet, or should we wait a moment?", "vietnamese": "Nước đã sôi chưa, hay chúng ta nên đợi một lát?" },
+        { "english": "We have boiled too many eggs for this small party.", "vietnamese": "Chúng tôi đã luộc quá nhiều trứng cho bữa tiệc nhỏ này." }
+      ]
+    },
+    {
+      "word": "grill",
+      "sentences": [
+        { "english": "We grill fish in the garden whenever the weather is pleasant.", "vietnamese": "Chúng tôi nướng cá ngoài vườn mỗi khi thời tiết dễ chịu." },
+        { "english": "My uncle grilled pork for the whole neighbourhood last weekend.", "vietnamese": "Chú tôi đã nướng thịt lợn cho cả khu phố vào cuối tuần trước." },
+        { "english": "Shall we grill some meat at the campsite tonight?", "vietnamese": "Chúng ta nướng một ít thịt ở khu cắm trại tối nay nhé?" },
+        { "english": "They are grilling corn beside the busy night market.", "vietnamese": "Họ đang nướng ngô bên cạnh khu chợ đêm nhộn nhịp." },
+        { "english": "Do not grill the fish too long, or our guests will complain.", "vietnamese": "Đừng nướng cá quá lâu, nếu không khách của chúng ta sẽ phàn nàn." }
+      ]
+    },
+    {
+      "word": "crispy",
+      "sentences": [
+        { "english": "My father loves crispy fried chicken more than any expensive dish.", "vietnamese": "Bố tôi thích gà rán giòn hơn bất kỳ món ăn đắt tiền nào." },
+        { "english": "This bread is crispy outside and soft inside, and my housemate loves it.", "vietnamese": "Bánh mì này giòn bên ngoài và mềm bên trong, và bạn cùng nhà của tôi rất thích nó." },
+        { "english": "We ate crispy spring rolls at the festival yesterday.", "vietnamese": "Chúng tôi đã ăn nem giòn ở lễ hội hôm qua." },
+        { "english": "Are these crispy snacks cheap enough for a student like me?", "vietnamese": "Những món ăn vặt giòn này có đủ rẻ cho một sinh viên như tôi không?" },
+        { "english": "She will fry the chicken again to make the skin crispy for her guests.", "vietnamese": "Cô ấy sẽ rán con gà lần nữa để làm cho lớp da giòn cho khách của cô ấy." }
+      ]
+    },
+    {
+      "word": "stir-fry",
+      "sentences": [
+        { "english": "I stir-fry vegetables with garlic, and my grandmother always adds fish sauce.", "vietnamese": "Tôi xào rau với tỏi, và bà tôi luôn thêm nước mắm vào." },
+        { "english": "She stir-fried beef with onions while the rain continued outside.", "vietnamese": "Cô ấy đã xào thịt bò với hành trong khi trời tiếp tục mưa bên ngoài." },
+        { "english": "Can you stir-fry these vegetables before the guests arrive?", "vietnamese": "Bạn có thể xào chỗ rau này trước khi khách đến không?" },
+        { "english": "My brother is stir-frying noodles for our traditional family dinner.", "vietnamese": "Anh trai tôi đang xào mì cho bữa tối truyền thống của gia đình chúng tôi." },
+        { "english": "We will stir-fry the pork quickly because the party starts soon.", "vietnamese": "Chúng tôi sẽ xào thịt lợn thật nhanh vì bữa tiệc sắp bắt đầu." }
+      ]
+    },
+    {
+      "word": "chilli",
+      "sentences": [
+        { "english": "She added a red chilli to the soup to surprise her brother.", "vietnamese": "Cô ấy đã thêm một quả ớt đỏ vào món canh để làm anh trai cô ấy bất ngờ." },
+        { "english": "My girlfriend never eats chilli, but she loves this local dish.", "vietnamese": "Bạn gái tôi không bao giờ ăn ớt, nhưng cô ấy rất thích món ăn địa phương này." },
+        { "english": "Have you put any chilli in the fish sauce for our guests?", "vietnamese": "Bạn đã cho ớt nào vào nước mắm cho khách của chúng ta chưa?" },
+        { "english": "The chillies in this market are fresh and reasonable in price.", "vietnamese": "Ớt ở chợ này tươi và có giá hợp lý." },
+        { "english": "He is cutting a green chilli for the traditional dipping sauce.", "vietnamese": "Anh ấy đang thái một quả ớt xanh cho món nước chấm truyền thống." }
+      ]
+    },
+    {
+      "word": "spicy",
+      "sentences": [
+        { "english": "This curry is much too spicy for our foreign guests.", "vietnamese": "Món cà ri này quá cay đối với những vị khách nước ngoài của chúng tôi." },
+        { "english": "I love spicy noodles, especially on a cold rainy evening.", "vietnamese": "Tôi thích mì cay, đặc biệt là vào một buổi tối mưa lạnh." },
+        { "english": "Was the food too spicy for your relatives last night?", "vietnamese": "Đồ ăn có quá cay với họ hàng của bạn tối qua không?" },
+        { "english": "My sister will not order spicy dishes at that lovely restaurant.", "vietnamese": "Chị tôi sẽ không gọi các món cay ở nhà hàng đáng yêu đó." },
+        { "english": "Vietnamese food is generally less spicy than Thai food.", "vietnamese": "Đồ ăn Việt Nam nhìn chung ít cay hơn đồ ăn Thái." }
+      ]
+    },
+    {
+      "word": "hotpot",
+      "sentences": [
+        { "english": "We had a hotpot dinner together while a light drizzle fell outside.", "vietnamese": "Chúng tôi đã cùng nhau ăn lẩu trong khi một cơn mưa phùn nhẹ rơi bên ngoài." },
+        { "english": "We are cooking hotpot tonight because the temperature dropped quickly.", "vietnamese": "Chúng tôi đang nấu lẩu tối nay vì nhiệt độ đã giảm nhanh." },
+        { "english": "Do you want to invite your relatives to our hotpot dinner?", "vietnamese": "Bạn có muốn mời họ hàng của bạn đến bữa lẩu của chúng ta không?" },
+        { "english": "The hotpot at that restaurant is affordable and very tasty.", "vietnamese": "Món lẩu ở nhà hàng đó có giá phải chăng và rất ngon." },
+        { "english": "She has never eaten hotpot with so many guests before.", "vietnamese": "Cô ấy chưa bao giờ ăn lẩu với nhiều khách như vậy trước đây." }
+      ]
+    },
+    {
+      "word": "soup",
+      "sentences": [
+        { "english": "He made a hot bowl of soup because the temperature dropped suddenly.", "vietnamese": "Anh ấy đã nấu một bát canh nóng vì nhiệt độ giảm đột ngột." },
+        { "english": "My grandmother makes chicken soup whenever someone feels unhealthy.", "vietnamese": "Bà tôi nấu súp gà mỗi khi có ai đó cảm thấy không khỏe." },
+        { "english": "Would you like some hot soup on this cold rainy day?", "vietnamese": "Bạn có muốn dùng một ít canh nóng vào ngày mưa lạnh này không?" },
+        { "english": "They gave every guest a small bowl of soup at the wedding.", "vietnamese": "Họ đã đưa cho mỗi vị khách một bát canh nhỏ ở đám cưới." },
+        { "english": "Do not add salt to the soup before you taste it.", "vietnamese": "Đừng thêm muối vào canh trước khi bạn nếm nó." }
+      ]
+    },
+    {
+      "word": "sauce",
+      "sentences": [
+        { "english": "Pour some sauce over the noodles before your relatives sit down.", "vietnamese": "Hãy rưới một ít nước sốt lên mì trước khi họ hàng của bạn ngồi xuống." },
+        { "english": "Vietnamese people use fish sauce in almost every traditional meal.", "vietnamese": "Người Việt Nam dùng nước mắm trong hầu hết mọi bữa ăn truyền thống." },
+        { "english": "She is making a special sauce for the family celebration.", "vietnamese": "Cô ấy đang làm một loại nước sốt đặc biệt cho buổi ăn mừng của gia đình." },
+        { "english": "Did you buy tomato sauce at the market yesterday?", "vietnamese": "Bạn đã mua sốt cà chua ở chợ hôm qua chưa?" },
+        { "english": "The sauces in this shop are cheap, but the quality is good.", "vietnamese": "Các loại nước sốt ở cửa hàng này rẻ, nhưng chất lượng thì tốt." }
+      ]
+    },
+    {
+      "word": "sweet",
+      "sentences": [
+        { "english": "The cake at the wedding was very sweet and everyone wanted more.", "vietnamese": "Chiếc bánh ở đám cưới rất ngọt và ai cũng muốn ăn thêm." },
+        { "english": "This tea is too sweet for my girlfriend, who avoids sugar.", "vietnamese": "Trà này quá ngọt đối với bạn gái tôi, người tránh đường." },
+        { "english": "Vietnamese desserts are generally sweet and very colourful.", "vietnamese": "Các món tráng miệng Việt Nam nhìn chung ngọt và rất nhiều màu sắc." },
+        { "english": "Are these sweet cakes expensive at that famous market?", "vietnamese": "Những chiếc bánh ngọt này có đắt ở khu chợ nổi tiếng đó không?" },
+        { "english": "My grandmother made a sweet drink during the summer festival.", "vietnamese": "Bà tôi đã làm một loại đồ uống ngọt trong lễ hội mùa hè." }
+      ]
+    },
+    {
+      "word": "savoury",
+      "sentences": [
+        { "english": "I prefer savoury food, especially during the cold rainy season.", "vietnamese": "Tôi thích đồ ăn đậm đà hơn, đặc biệt là trong mùa mưa lạnh." },
+        { "english": "My father prefers savoury snacks during the long national holiday.", "vietnamese": "Bố tôi thích đồ ăn vặt đậm đà trong kỳ nghỉ lễ quốc gia dài." },
+        { "english": "Do you like savoury pancakes with fresh herbs from the local market?", "vietnamese": "Bạn có thích bánh xèo mặn với rau thơm tươi từ chợ địa phương không?" },
+        { "english": "She is cooking a savoury dish for her hungry guests.", "vietnamese": "Cô ấy đang nấu một món đậm đà cho những vị khách đang đói của mình." },
+        { "english": "This bread was not savoury enough, so my housemate added more salt.", "vietnamese": "Bánh mì này chưa đủ đậm đà, nên bạn cùng nhà của tôi đã thêm muối." }
+      ]
+    },
+    {
+      "word": "oily",
+      "sentences": [
+        { "english": "Street food here is often oily, but it tastes amazing.", "vietnamese": "Đồ ăn đường phố ở đây thường nhiều dầu mỡ, nhưng nó có vị rất tuyệt." },
+        { "english": "Fried food is often oily, and it is generally unhealthy.", "vietnamese": "Đồ chiên rán thường nhiều dầu mỡ, và nó nhìn chung không tốt cho sức khỏe." },
+        { "english": "This dish looks too oily for our vegetarian guests.", "vietnamese": "Món này trông quá nhiều dầu mỡ đối với những vị khách ăn chay của chúng ta." },
+        { "english": "Do not eat oily food before a long journey.", "vietnamese": "Đừng ăn đồ nhiều dầu mỡ trước một chuyến đi dài." },
+        { "english": "The rice became oily, so the children did not enjoy their holiday dinner.", "vietnamese": "Cơm bị nhiều dầu mỡ, nên bọn trẻ đã không thích bữa tối ngày lễ của chúng." }
+      ]
+    },
+    {
+      "word": "dry",
+      "sentences": [
+        { "english": "The chicken was too dry because she cooked it for a whole hour.", "vietnamese": "Con gà quá khô vì cô ấy đã nấu nó suốt một tiếng đồng hồ." },
+        { "english": "The weather is dry at the beginning of this season.", "vietnamese": "Thời tiết khô vào đầu mùa này." },
+        { "english": "My mouth feels dry after such a long journey.", "vietnamese": "Miệng tôi cảm thấy khô sau một chuyến đi dài như vậy." },
+        { "english": "Keep the bread dry, or it will taste strange tomorrow.", "vietnamese": "Hãy giữ bánh mì khô ráo, nếu không nó sẽ có vị lạ vào ngày mai." },
+        { "english": "The cake was dry, but our guests still said kind words.", "vietnamese": "Chiếc bánh bị khô, nhưng khách của chúng tôi vẫn nói những lời tử tế." }
+      ]
+    },
+    {
+      "word": "stomach",
+      "sentences": [
+        { "english": "My stomach hurts after I tried too much street food.", "vietnamese": "Dạ dày tôi đau sau khi tôi thử quá nhiều đồ ăn đường phố." },
+        { "english": "My stomach feels strange after that oily meal.", "vietnamese": "Dạ dày tôi thấy lạ sau bữa ăn nhiều dầu mỡ đó." },
+        { "english": "Do not fill your stomach with cakes before the wedding dinner.", "vietnamese": "Đừng lấp đầy dạ dày của bạn bằng bánh trước bữa tối đám cưới." },
+        { "english": "Her stomach was hurting during the whole festival.", "vietnamese": "Dạ dày cô ấy đã đau trong suốt cả lễ hội." },
+        { "english": "A warm bowl of rice will settle your stomach on a rainy day.", "vietnamese": "Một bát cơm ấm sẽ làm dịu dạ dày của bạn vào một ngày mưa." }
+      ]
+    },
+    {
+      "word": "hangry",
+      "sentences": [
+        { "english": "I get hangry when I skip lunch on a busy holiday.", "vietnamese": "Tôi cáu vì đói khi bỏ bữa trưa vào một ngày lễ bận rộn." },
+        { "english": "She becomes hangry when dinner is late, and everyone avoids her.", "vietnamese": "Cô ấy cáu vì đói khi bữa tối muộn, và mọi người đều tránh cô ấy." },
+        { "english": "Do not talk to me when I am hangry after a long journey.", "vietnamese": "Đừng nói chuyện với tôi khi tôi đang cáu vì đói sau một chuyến đi dài." },
+        { "english": "The children were hangry during the long celebration yesterday.", "vietnamese": "Bọn trẻ đã cáu vì đói trong buổi lễ ăn mừng dài hôm qua." },
+        { "english": "My girlfriend has been hangry since the restaurant delayed our order.", "vietnamese": "Bạn gái tôi đã cáu vì đói kể từ khi nhà hàng làm chậm đơn của chúng tôi." }
+      ]
+    },
+    {
+      "word": "serve",
+      "sentences": [
+        { "english": "They serve dinner at seven o'clock in that lovely little restaurant.", "vietnamese": "Họ phục vụ bữa tối lúc bảy giờ trong nhà hàng nhỏ đáng yêu đó." },
+        { "english": "That small restaurant served us a wonderful meal last night.", "vietnamese": "Nhà hàng nhỏ đó đã phục vụ chúng tôi một bữa ăn tuyệt vời tối qua." },
+        { "english": "Do they serve breakfast before the morning tour starts?", "vietnamese": "Họ có phục vụ bữa sáng trước khi chuyến tham quan buổi sáng bắt đầu không?" },
+        { "english": "We are serving tea to the guests in the living room.", "vietnamese": "Chúng tôi đang phục vụ trà cho khách trong phòng khách." },
+        { "english": "She has served this traditional dish at every family celebration.", "vietnamese": "Cô ấy đã phục vụ món truyền thống này ở mọi buổi ăn mừng của gia đình." }
+      ]
+    },
+    {
+      "word": "yummy",
+      "sentences": [
+        { "english": "This dessert is so yummy that I want to recommend it to you.", "vietnamese": "Món tráng miệng này ngon đến mức tôi muốn giới thiệu nó cho bạn." },
+        { "english": "The fried fish at that market stall was really yummy.", "vietnamese": "Món cá rán ở quầy chợ đó thực sự rất ngon." },
+        { "english": "Are these cakes yummy enough for our wedding guests?", "vietnamese": "Những chiếc bánh này có đủ ngon cho khách dự đám cưới của chúng ta không?" },
+        { "english": "My little brother says this local dish is yummy every time.", "vietnamese": "Em trai tôi nói món ăn địa phương này ngon mỗi lần ăn." },
+        { "english": "We had a yummy dinner at the homestay during our holiday.", "vietnamese": "Chúng tôi đã có một bữa tối ngon ở nhà nghỉ homestay trong kỳ nghỉ của mình." }
+      ]
+    }
+  ]
+}

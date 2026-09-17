@@ -1,0 +1,607 @@
+{
+  "unit": 30,
+  "deck": "Unit 30: Xe cộ và sửa chữa",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "motorbike",
+      "sentences": [
+        {
+          "english": "We rode into town on my old motorbike.",
+          "vietnamese": "Chúng tôi phóng vào thị trấn trên chiếc xe máy cũ của tôi."
+        },
+        {
+          "english": "My brother bought a second-hand motorbike at a reasonable price.",
+          "vietnamese": "Anh trai tôi đã mua một chiếc xe máy cũ với giá hợp lý."
+        },
+        {
+          "english": "Do you always wear a helmet when you ride your motorbike?",
+          "vietnamese": "Bạn có luôn đội mũ bảo hiểm khi bạn chạy xe máy của mình không?"
+        },
+        {
+          "english": "The traffic was heavy, so hundreds of motorbikes moved very slowly.",
+          "vietnamese": "Giao thông đông đúc, nên hàng trăm chiếc xe máy di chuyển rất chậm."
+        },
+        {
+          "english": "She has never driven a motorbike on the highway before.",
+          "vietnamese": "Cô ấy chưa bao giờ lái xe máy trên đường cao tốc trước đây."
+        }
+      ]
+    },
+    {
+      "word": "full",
+      "sentences": [
+        {
+          "english": "The fuel tank was full before we started the trip.",
+          "vietnamese": "Bình xăng đã đầy trước khi chúng tôi bắt đầu chuyến đi."
+        },
+        {
+          "english": "The morning bus was full of tired passengers.",
+          "vietnamese": "Chiếc xe buýt buổi sáng đầy những hành khách mệt mỏi."
+        },
+        {
+          "english": "My schedule is full this week, so I cannot practice with the team.",
+          "vietnamese": "Lịch của tôi kín tuần này, nên tôi không thể tập luyện với đội."
+        },
+        {
+          "english": "Is the petrol station full of cars at this time of day?",
+          "vietnamese": "Trạm xăng có đầy xe hơi vào giờ này trong ngày không?"
+        },
+        {
+          "english": "The river was full of rubbish after the heavy flood.",
+          "vietnamese": "Con sông đầy rác sau trận lụt lớn."
+        }
+      ]
+    },
+    {
+      "word": "regularly",
+      "sentences": [
+        {
+          "english": "You should check your engine oil regularly.",
+          "vietnamese": "Bạn nên kiểm tra dầu động cơ thường xuyên."
+        },
+        {
+          "english": "I go jogging regularly to stay fit and strong.",
+          "vietnamese": "Tôi đi chạy bộ thường xuyên để giữ dáng và khoẻ mạnh."
+        },
+        {
+          "english": "The coach reminds us to practice regularly before the final match.",
+          "vietnamese": "Huấn luyện viên nhắc chúng tôi tập luyện thường xuyên trước trận chung kết."
+        },
+        {
+          "english": "Do you visit the local market regularly?",
+          "vietnamese": "Bạn có đi chợ địa phương thường xuyên không?"
+        },
+        {
+          "english": "He did not eat regularly last month, so his health got worse.",
+          "vietnamese": "Anh ấy đã không ăn uống điều độ tháng trước, nên sức khoẻ của anh ấy tệ đi."
+        }
+      ]
+    },
+    {
+      "word": "navigate",
+      "sentences": [
+        {
+          "english": "She used her phone to navigate through the busy streets.",
+          "vietnamese": "Cô ấy dùng điện thoại để định hướng qua những con phố đông đúc."
+        },
+        {
+          "english": "It is hard to navigate this old town without a map.",
+          "vietnamese": "Thật khó để định hướng trong thị trấn cũ này mà không có bản đồ."
+        },
+        {
+          "english": "The tourist guide navigated the group through the crowded market.",
+          "vietnamese": "Người hướng dẫn du lịch đã dẫn đường cho cả nhóm qua khu chợ đông đúc."
+        },
+        {
+          "english": "We were navigating the narrow alley when a truck honked behind us.",
+          "vietnamese": "Chúng tôi đang dò đường trong con hẻm nhỏ thì một chiếc xe tải bóp còi phía sau."
+        },
+        {
+          "english": "Can your phone navigate you to the nearest petrol station?",
+          "vietnamese": "Điện thoại của bạn có thể dẫn đường bạn tới trạm xăng gần nhất không?"
+        }
+      ]
+    },
+    {
+      "word": "shortcut",
+      "sentences": [
+        {
+          "english": "He took a shortcut through the narrow alley.",
+          "vietnamese": "Anh ấy đi đường tắt qua con hẻm nhỏ."
+        },
+        {
+          "english": "This shortcut saves us twenty minutes in heavy traffic.",
+          "vietnamese": "Đường tắt này tiết kiệm cho chúng tôi hai mươi phút khi giao thông đông đúc."
+        },
+        {
+          "english": "The local people know a few shortcuts to the river.",
+          "vietnamese": "Người dân địa phương biết vài đường tắt ra bờ sông."
+        },
+        {
+          "english": "Do not take that shortcut at night because it is dangerous.",
+          "vietnamese": "Đừng đi đường tắt đó vào ban đêm vì nó nguy hiểm."
+        },
+        {
+          "english": "My coach said there is no shortcut in a hard sport.",
+          "vietnamese": "Huấn luyện viên của tôi nói rằng không có đường tắt nào trong một môn thể thao khắc nghiệt."
+        }
+      ]
+    },
+    {
+      "word": "nightmare",
+      "sentences": [
+        {
+          "english": "The long journey home turned into a real nightmare.",
+          "vietnamese": "Chuyến về nhà dài đằng đẵng biến thành một cơn ác mộng thực sự."
+        },
+        {
+          "english": "Driving in heavy traffic every morning is a nightmare for me.",
+          "vietnamese": "Lái xe trong dòng xe đông đúc mỗi sáng là một cơn ác mộng với tôi."
+        },
+        {
+          "english": "Last night I had a nightmare about a terrible accident.",
+          "vietnamese": "Đêm qua tôi đã gặp một cơn ác mộng về một vụ tai nạn khủng khiếp."
+        },
+        {
+          "english": "Finding cheap accommodation during the festival was a real nightmare.",
+          "vietnamese": "Việc tìm chỗ ở giá rẻ trong lễ hội là một cơn ác mộng thực sự."
+        },
+        {
+          "english": "Do you think the new one-way system will become a nightmare for cyclists?",
+          "vietnamese": "Bạn có nghĩ hệ thống đường một chiều mới sẽ trở thành cơn ác mộng cho người đi xe đạp không?"
+        }
+      ]
+    },
+    {
+      "word": "lost",
+      "sentences": [
+        {
+          "english": "We got completely lost because the map on my phone stopped working.",
+          "vietnamese": "Chúng tôi bị lạc đường hoàn toàn vì bản đồ trên điện thoại của tôi ngừng hoạt động."
+        },
+        {
+          "english": "I felt lost in the busy centre of the capital.",
+          "vietnamese": "Tôi thấy lạc lối giữa trung tâm nhộn nhịp của thủ đô."
+        },
+        {
+          "english": "Tourists often get lost in these narrow alleys.",
+          "vietnamese": "Khách du lịch thường bị lạc trong những con hẻm nhỏ này."
+        },
+        {
+          "english": "Do not feel lost; just ask a police officer for help.",
+          "vietnamese": "Đừng thấy lạc lối; cứ hỏi một viên cảnh sát để được giúp đỡ."
+        },
+        {
+          "english": "She looked completely lost when the train timetable changed.",
+          "vietnamese": "Cô ấy trông hoàn toàn lạc lối khi lịch tàu thay đổi."
+        }
+      ]
+    },
+    {
+      "word": "turn",
+      "sentences": [
+        {
+          "english": "We had to turn left at the old bridge.",
+          "vietnamese": "Chúng tôi phải rẽ trái ở cây cầu cũ."
+        },
+        {
+          "english": "Turn right after the bridge and you will see the market.",
+          "vietnamese": "Rẽ phải sau cây cầu và bạn sẽ thấy khu chợ."
+        },
+        {
+          "english": "The taxi turned left too quickly and hit a hole.",
+          "vietnamese": "Chiếc taxi rẽ trái quá nhanh và đâm vào một cái ổ gà."
+        },
+        {
+          "english": "Are you turning at the next petrol station or going straight?",
+          "vietnamese": "Bạn sẽ rẽ ở trạm xăng tiếp theo hay đi thẳng?"
+        },
+        {
+          "english": "We turned back because the road ahead was flooded.",
+          "vietnamese": "Chúng tôi đã quay đầu lại vì con đường phía trước bị ngập."
+        }
+      ]
+    },
+    {
+      "word": "suddenly",
+      "sentences": [
+        {
+          "english": "The motorbike suddenly stopped in the middle of the road.",
+          "vietnamese": "Chiếc xe máy đột nhiên chết máy giữa đường."
+        },
+        {
+          "english": "The cyclist in front suddenly stopped and I nearly fell.",
+          "vietnamese": "Người đi xe đạp phía trước đột nhiên dừng lại và tôi suýt ngã."
+        },
+        {
+          "english": "It suddenly started to rain, so we rode home carefully.",
+          "vietnamese": "Trời đột nhiên đổ mưa, nên chúng tôi chạy xe về nhà một cách cẩn thận."
+        },
+        {
+          "english": "Why did the engine suddenly stop on the highway?",
+          "vietnamese": "Tại sao động cơ lại đột nhiên tắt trên đường cao tốc?"
+        },
+        {
+          "english": "Prices have suddenly gone up at every petrol station in town.",
+          "vietnamese": "Giá cả đột nhiên tăng lên ở mọi trạm xăng trong thị trấn."
+        }
+      ]
+    },
+    {
+      "word": "smoke",
+      "sentences": [
+        {
+          "english": "Thick smoke came out of the engine, so we had to push the car away.",
+          "vietnamese": "Khói dày bốc ra từ động cơ, nên chúng tôi phải đẩy chiếc xe ra xa."
+        },
+        {
+          "english": "Black smoke filled the street after the accident.",
+          "vietnamese": "Khói đen tràn ngập con phố sau vụ tai nạn."
+        },
+        {
+          "english": "There was thick smoke everywhere, and the traffic stopped completely.",
+          "vietnamese": "Khói dày ở khắp mọi nơi, và giao thông dừng lại hoàn toàn."
+        },
+        {
+          "english": "The smoke from old vehicles makes the pollution much worse.",
+          "vietnamese": "Khói từ những chiếc xe cũ làm ô nhiễm tệ hơn nhiều."
+        },
+        {
+          "english": "Do not breathe that smoke because it is very unhealthy.",
+          "vietnamese": "Đừng hít thứ khói đó vì nó rất có hại cho sức khoẻ."
+        }
+      ]
+    },
+    {
+      "word": "engine",
+      "sentences": [
+        {
+          "english": "The engine made a strange noise and then died.",
+          "vietnamese": "Động cơ phát ra tiếng lạ rồi tắt lịm."
+        },
+        {
+          "english": "The mechanic checked the engine carefully and found the problem.",
+          "vietnamese": "Người thợ máy đã kiểm tra động cơ cẩn thận và tìm ra vấn đề."
+        },
+        {
+          "english": "A modern engine uses less fuel on long journeys.",
+          "vietnamese": "Một động cơ hiện đại dùng ít nhiên liệu hơn trên những hành trình dài."
+        },
+        {
+          "english": "My engine has been making a terrible noise since last week.",
+          "vietnamese": "Động cơ của tôi đã phát ra tiếng ồn kinh khủng từ tuần trước."
+        },
+        {
+          "english": "Do not start the engine before the mechanic finishes the repair.",
+          "vietnamese": "Đừng khởi động động cơ trước khi người thợ máy hoàn thành việc sửa chữa."
+        }
+      ]
+    },
+    {
+      "word": "brake",
+      "sentences": [
+        {
+          "english": "He pressed the brake hard to avoid an accident.",
+          "vietnamese": "Anh ấy đạp phanh thật mạnh để tránh tai nạn."
+        },
+        {
+          "english": "The brakes on my bicycle are weak, so I ride slowly.",
+          "vietnamese": "Phanh trên chiếc xe đạp của tôi yếu, nên tôi đạp chậm."
+        },
+        {
+          "english": "A good mechanic will check your brakes for a small fee.",
+          "vietnamese": "Một người thợ máy giỏi sẽ kiểm tra phanh của bạn với một khoản phí nhỏ."
+        },
+        {
+          "english": "Are the brakes safe enough for such a steep hill?",
+          "vietnamese": "Phanh có đủ an toàn cho một con dốc dựng đứng như vậy không?"
+        },
+        {
+          "english": "He could not control the bike because the front brake failed.",
+          "vietnamese": "Anh ấy không thể kiểm soát chiếc xe vì phanh trước bị hỏng."
+        }
+      ]
+    },
+    {
+      "word": "truck",
+      "sentences": [
+        {
+          "english": "A heavy truck blocked the whole road.",
+          "vietnamese": "Một chiếc xe tải nặng chắn kín cả con đường."
+        },
+        {
+          "english": "A truck driver honked loudly at the pedestrians.",
+          "vietnamese": "Một tài xế xe tải bóp còi inh ỏi vào những người đi bộ."
+        },
+        {
+          "english": "Trucks are not allowed on this narrow one-way street.",
+          "vietnamese": "Xe tải không được phép đi trên con phố một chiều hẹp này."
+        },
+        {
+          "english": "The company bought two new trucks last year.",
+          "vietnamese": "Công ty đã mua hai chiếc xe tải mới vào năm ngoái."
+        },
+        {
+          "english": "Have you ever driven a truck on the highway?",
+          "vietnamese": "Bạn đã bao giờ lái một chiếc xe tải trên đường cao tốc chưa?"
+        }
+      ]
+    },
+    {
+      "word": "hit",
+      "sentences": [
+        {
+          "english": "A fast motorbike almost hit a pedestrian near the petrol station.",
+          "vietnamese": "Một chiếc xe máy chạy nhanh suýt đâm vào một người đi bộ gần trạm xăng."
+        },
+        {
+          "english": "A careless cyclist hit my car near the station.",
+          "vietnamese": "Một người đi xe đạp bất cẩn đã đâm vào xe của tôi gần nhà ga."
+        },
+        {
+          "english": "Slow down or you will hit that hole in the road.",
+          "vietnamese": "Chạy chậm lại nếu không bạn sẽ đâm vào cái ổ gà đó trên đường."
+        },
+        {
+          "english": "The truck hit a tree, but luckily nobody was hurt.",
+          "vietnamese": "Chiếc xe tải đâm vào một cái cây, nhưng may mắn là không ai bị thương."
+        },
+        {
+          "english": "Did the bus hit the pedestrian at high speed?",
+          "vietnamese": "Chiếc xe buýt có đâm vào người đi bộ với tốc độ cao không?"
+        }
+      ]
+    },
+    {
+      "word": "bicycle",
+      "sentences": [
+        {
+          "english": "My girlfriend prefers to ride her bicycle to work.",
+          "vietnamese": "Bạn gái tôi thích đạp xe đạp đi làm hơn."
+        },
+        {
+          "english": "My bicycle is light, so I can carry it upstairs easily.",
+          "vietnamese": "Xe đạp của tôi nhẹ, nên tôi có thể mang nó lên gác dễ dàng."
+        },
+        {
+          "english": "Many cyclists park their bicycles in front of the school.",
+          "vietnamese": "Nhiều người đi xe đạp để xe đạp của họ trước cổng trường."
+        },
+        {
+          "english": "He rides his bicycle to the gym every morning.",
+          "vietnamese": "Anh ấy đạp xe đạp tới phòng gym mỗi sáng."
+        },
+        {
+          "english": "Would you like to buy a cheap second-hand bicycle?",
+          "vietnamese": "Bạn có muốn mua một chiếc xe đạp cũ giá rẻ không?"
+        }
+      ]
+    },
+    {
+      "word": "tricycle",
+      "sentences": [
+        {
+          "english": "An old woman sells sweet snacks from her tricycle beside the market.",
+          "vietnamese": "Một bà cụ bán đồ ăn vặt ngọt từ chiếc xe ba bánh của bà bên cạnh chợ."
+        },
+        {
+          "english": "A man sells fresh fruit from a tricycle in our neighbourhood.",
+          "vietnamese": "Một người đàn ông bán trái cây tươi từ một chiếc xe ba bánh trong khu phố của chúng tôi."
+        },
+        {
+          "english": "Tricycles are still common in many small towns.",
+          "vietnamese": "Xe ba bánh vẫn còn phổ biến ở nhiều thị trấn nhỏ."
+        },
+        {
+          "english": "The tourist took a slow tricycle ride around the old quarter.",
+          "vietnamese": "Người khách du lịch đã đi một vòng xe ba bánh chậm rãi quanh khu phố cổ."
+        },
+        {
+          "english": "Can a tricycle carry such a heavy load safely?",
+          "vietnamese": "Một chiếc xe ba bánh có thể chở một khối hàng nặng như vậy một cách an toàn không?"
+        }
+      ]
+    },
+    {
+      "word": "lift",
+      "sentences": [
+        {
+          "english": "A kind man offered us a lift to the nearest garage.",
+          "vietnamese": "Một người đàn ông tốt bụng cho chúng tôi đi nhờ xe đến xưởng gần nhất."
+        },
+        {
+          "english": "Could you give me a lift to the train station tomorrow?",
+          "vietnamese": "Bạn có thể cho tôi đi nhờ xe tới ga tàu vào ngày mai không?"
+        },
+        {
+          "english": "My neighbour offered me a lift because the traffic was terrible.",
+          "vietnamese": "Người hàng xóm của tôi cho tôi đi nhờ xe vì giao thông tệ hại."
+        },
+        {
+          "english": "She got a lift home from a kind coach after practice.",
+          "vietnamese": "Cô ấy được một huấn luyện viên tốt bụng cho đi nhờ xe về nhà sau buổi tập."
+        },
+        {
+          "english": "We did not need a lift because the market was very close.",
+          "vietnamese": "Chúng tôi không cần đi nhờ xe vì khu chợ ở rất gần."
+        }
+      ]
+    },
+    {
+      "word": "fare",
+      "sentences": [
+        {
+          "english": "The taxi fare was higher than we expected.",
+          "vietnamese": "Tiền vé taxi cao hơn chúng tôi tưởng."
+        },
+        {
+          "english": "The bus fare is cheap, but the journey takes two hours.",
+          "vietnamese": "Tiền vé xe buýt rẻ, nhưng hành trình mất hai tiếng."
+        },
+        {
+          "english": "Train fares will rise again at the beginning of next year.",
+          "vietnamese": "Tiền vé tàu sẽ tăng lần nữa vào đầu năm sau."
+        },
+        {
+          "english": "How much is the fare from the airport to the centre?",
+          "vietnamese": "Tiền vé từ sân bay tới trung tâm là bao nhiêu?"
+        },
+        {
+          "english": "We saved money by paying a lower fare on the slow boat.",
+          "vietnamese": "Chúng tôi đã tiết kiệm tiền bằng cách trả tiền vé thấp hơn trên chiếc thuyền chậm."
+        }
+      ]
+    },
+    {
+      "word": "garage",
+      "sentences": [
+        {
+          "english": "We pushed the motorbike to the nearest garage.",
+          "vietnamese": "Chúng tôi dắt chiếc xe máy đến xưởng sửa xe gần nhất."
+        },
+        {
+          "english": "There is a small garage near the petrol station.",
+          "vietnamese": "Có một xưởng sửa xe nhỏ gần trạm xăng."
+        },
+        {
+          "english": "The garage asked a reasonable price for the new wheel.",
+          "vietnamese": "Xưởng sửa xe đòi một mức giá hợp lý cho chiếc bánh xe mới."
+        },
+        {
+          "english": "My father keeps his old tools in the garage.",
+          "vietnamese": "Bố tôi cất những dụng cụ cũ của ông trong xưởng sửa xe."
+        },
+        {
+          "english": "Have you found a garage that opens on public holidays?",
+          "vietnamese": "Bạn đã tìm được một xưởng sửa xe mở cửa vào ngày lễ công cộng chưa?"
+        }
+      ]
+    },
+    {
+      "word": "boat",
+      "sentences": [
+        {
+          "english": "We watched a small boat cross the quiet lake at sunset.",
+          "vietnamese": "Chúng tôi ngắm một chiếc thuyền nhỏ băng qua hồ nước yên tĩnh lúc hoàng hôn."
+        },
+        {
+          "english": "We took a boat tour around the bay last summer.",
+          "vietnamese": "Chúng tôi đã đi một tour bằng thuyền quanh vịnh vào mùa hè năm ngoái."
+        },
+        {
+          "english": "Fishing boats leave the coast early every morning.",
+          "vietnamese": "Những chiếc thuyền đánh cá rời bờ biển sớm mỗi buổi sáng."
+        },
+        {
+          "english": "Is the boat safe when the sea gets rough?",
+          "vietnamese": "Chiếc thuyền có an toàn khi biển động không?"
+        },
+        {
+          "english": "They are building a wooden boat beside the river.",
+          "vietnamese": "Họ đang đóng một chiếc thuyền gỗ bên cạnh con sông."
+        }
+      ]
+    },
+    {
+      "word": "mechanic",
+      "sentences": [
+        {
+          "english": "We called a mechanic to look at the broken engine.",
+          "vietnamese": "Chúng tôi gọi một thợ máy đến xem cái động cơ bị hỏng."
+        },
+        {
+          "english": "A good mechanic can solve this problem quickly.",
+          "vietnamese": "Một người thợ máy giỏi có thể giải quyết vấn đề này một cách nhanh chóng."
+        },
+        {
+          "english": "The mechanics at that garage are friendly and honest.",
+          "vietnamese": "Những người thợ máy ở xưởng đó thân thiện và trung thực."
+        },
+        {
+          "english": "Did the mechanic ask you a fair price for the repair?",
+          "vietnamese": "Người thợ máy có đòi bạn một mức giá công bằng cho việc sửa chữa không?"
+        },
+        {
+          "english": "My uncle has been a mechanic since he left secondary school.",
+          "vietnamese": "Chú tôi đã làm thợ máy từ khi ông rời trường trung học cơ sở."
+        }
+      ]
+    },
+    {
+      "word": "wheel",
+      "sentences": [
+        {
+          "english": "The front wheel was badly damaged, so the repair will be expensive.",
+          "vietnamese": "Bánh xe trước bị hỏng nặng, nên việc sửa chữa sẽ tốn kém."
+        },
+        {
+          "english": "The back wheel of my old bicycle turns very slowly now.",
+          "vietnamese": "Bánh xe sau của chiếc xe đạp cũ của tôi bây giờ quay rất chậm."
+        },
+        {
+          "english": "A heavy truck usually has six large wheels.",
+          "vietnamese": "Một chiếc xe tải nặng thường có sáu bánh xe lớn."
+        },
+        {
+          "english": "He hit a deep hole and damaged the front wheel.",
+          "vietnamese": "Anh ấy đâm vào một cái ổ gà sâu và làm hỏng bánh xe trước."
+        },
+        {
+          "english": "Are these wheels strong enough for such a rough road?",
+          "vietnamese": "Những bánh xe này có đủ chắc chắn cho một con đường gồ ghề như vậy không?"
+        }
+      ]
+    },
+    {
+      "word": "fix",
+      "sentences": [
+        {
+          "english": "It took an hour to fix the flat tyre.",
+          "vietnamese": "Mất một tiếng để sửa cái lốp xẹp."
+        },
+        {
+          "english": "Can you fix the light on my bicycle today?",
+          "vietnamese": "Bạn có thể sửa cái đèn trên xe đạp của tôi hôm nay không?"
+        },
+        {
+          "english": "The mechanic fixed the engine quickly and went home early.",
+          "vietnamese": "Người thợ máy đã sửa động cơ nhanh chóng và về nhà sớm."
+        },
+        {
+          "english": "They are fixing the road after the terrible flood.",
+          "vietnamese": "Họ đang sửa con đường sau trận lụt khủng khiếp."
+        },
+        {
+          "english": "I have fixed this old machine many times without any tools.",
+          "vietnamese": "Tôi đã sửa cái máy cũ này nhiều lần mà không cần dụng cụ nào."
+        }
+      ]
+    },
+    {
+      "word": "charge",
+      "sentences": [
+        {
+          "english": "The mechanic did not charge us much for the repair.",
+          "vietnamese": "Người thợ máy không tính phí chúng tôi nhiều cho việc sửa chữa."
+        },
+        {
+          "english": "Some garages charge a high fee for a simple repair.",
+          "vietnamese": "Một vài xưởng sửa xe tính phí cao cho một lần sửa đơn giản."
+        },
+        {
+          "english": "They charged us double because we were tourists.",
+          "vietnamese": "Họ đã tính phí chúng tôi gấp đôi vì chúng tôi là khách du lịch."
+        },
+        {
+          "english": "Will the hotel charge extra for an early check-in?",
+          "vietnamese": "Khách sạn có tính thêm phí cho việc nhận phòng sớm không?"
+        },
+        {
+          "english": "Our local shop never charges customers for delivery.",
+          "vietnamese": "Cửa hàng địa phương của chúng tôi không bao giờ tính phí khách hàng cho việc giao hàng."
+        }
+      ]
+    }
+  ]
+}

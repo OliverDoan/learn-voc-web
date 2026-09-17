@@ -1,0 +1,607 @@
+{
+  "unit": 12,
+  "deck": "Unit 12: Một ngày tham quan cùng nhau",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "leisure",
+      "sentences": [
+        {
+          "english": "In her leisure time she reads books about travelling in Asia and Europe.",
+          "vietnamese": "Trong thời gian rảnh, cô ấy đọc sách về du lịch ở châu Á và châu Âu."
+        },
+        {
+          "english": "Do you always have enough leisure time after a busy working week?",
+          "vietnamese": "Bạn có luôn có đủ thời gian rảnh sau một tuần làm việc bận rộn không?"
+        },
+        {
+          "english": "Last summer I enjoyed my leisure hours beside the hotel pool.",
+          "vietnamese": "Mùa hè năm ngoái tôi tận hưởng những giờ rảnh rỗi bên hồ bơi của khách sạn."
+        },
+        {
+          "english": "Many people use their leisure time to discover new places nearby.",
+          "vietnamese": "Nhiều người dùng thời gian rảnh của họ để khám phá những nơi mới gần đó."
+        },
+        {
+          "english": "We have not had any leisure time since the long journey began.",
+          "vietnamese": "Chúng tôi chưa có chút thời gian rảnh nào kể từ khi hành trình dài bắt đầu."
+        }
+      ]
+    },
+    {
+      "word": "sightseeing",
+      "sentences": [
+        {
+          "english": "Sightseeing is the main reason why tourists visit this quiet old town.",
+          "vietnamese": "Ngắm cảnh là lý do chính khiến khách du lịch đến thăm thị trấn cổ yên tĩnh này."
+        },
+        {
+          "english": "We are going sightseeing in the old district tomorrow morning.",
+          "vietnamese": "Chúng tôi sẽ đi ngắm cảnh ở khu phố cổ vào sáng mai."
+        },
+        {
+          "english": "Sightseeing by bicycle is cheap and very safe here.",
+          "vietnamese": "Ngắm cảnh bằng xe đạp thì rẻ và rất an toàn ở đây."
+        },
+        {
+          "english": "Did you do any sightseeing during your short stay in the capital?",
+          "vietnamese": "Bạn có đi ngắm cảnh chút nào trong kỳ lưu trú ngắn ở thủ đô không?"
+        },
+        {
+          "english": "The heavy rain ruined our sightseeing plans, so we felt disappointed.",
+          "vietnamese": "Cơn mưa lớn đã phá hỏng kế hoạch ngắm cảnh của chúng tôi, nên chúng tôi thấy thất vọng."
+        }
+      ]
+    },
+    {
+      "word": "guide",
+      "sentences": [
+        {
+          "english": "Our guide shared many stories with us during the tour around the ancient city.",
+          "vietnamese": "Hướng dẫn viên của chúng tôi chia sẻ nhiều câu chuyện với chúng tôi trong chuyến tham quan quanh thành phố cổ."
+        },
+        {
+          "english": "A friendly guide met us at the reception yesterday evening.",
+          "vietnamese": "Một hướng dẫn viên thân thiện đã đón chúng tôi tại quầy lễ tân vào tối qua."
+        },
+        {
+          "english": "Our guides will show us the quiet alleys of the old town.",
+          "vietnamese": "Các hướng dẫn viên của chúng tôi sẽ chỉ cho chúng tôi những con hẻm yên tĩnh của phố cổ."
+        },
+        {
+          "english": "Do we need a guide, or can we discover the temple alone?",
+          "vietnamese": "Chúng ta có cần một hướng dẫn viên không, hay chúng ta có thể tự khám phá ngôi đền?"
+        },
+        {
+          "english": "The guide is explaining the history of this tower to excited visitors.",
+          "vietnamese": "Hướng dẫn viên đang giải thích lịch sử của tòa tháp này cho những du khách hào hứng."
+        }
+      ]
+    },
+    {
+      "word": "local",
+      "sentences": [
+        {
+          "english": "The local food here is cheap, and every tourist wants to try it.",
+          "vietnamese": "Đồ ăn địa phương ở đây rẻ, và mọi khách du lịch đều muốn thử nó."
+        },
+        {
+          "english": "The local people are friendly and always help lost tourists.",
+          "vietnamese": "Người dân địa phương thân thiện và luôn giúp đỡ những khách du lịch bị lạc."
+        },
+        {
+          "english": "We stayed with a local family and shared every meal together.",
+          "vietnamese": "Chúng tôi đã ở với một gia đình địa phương và chia sẻ mọi bữa ăn cùng nhau."
+        },
+        {
+          "english": "Is the local bus service convenient for visitors without a car?",
+          "vietnamese": "Dịch vụ xe buýt địa phương có thuận tiện cho du khách không có ô tô không?"
+        },
+        {
+          "english": "Local markets are becoming more modern nowadays, but the prices stay reasonable.",
+          "vietnamese": "Các khu chợ địa phương đang trở nên hiện đại hơn ngày nay, nhưng giá cả vẫn hợp lý."
+        }
+      ]
+    },
+    {
+      "word": "route",
+      "sentences": [
+        {
+          "english": "The bus takes a beautiful route along the coast to our next destination.",
+          "vietnamese": "Xe buýt đi theo một tuyến đường đẹp dọc bờ biển đến điểm đến tiếp theo của chúng tôi."
+        },
+        {
+          "english": "Our driver chose a shorter route to avoid the noisy highway.",
+          "vietnamese": "Tài xế của chúng tôi chọn một tuyến đường ngắn hơn để tránh con đường cao tốc ồn ào."
+        },
+        {
+          "english": "This route is complicated because many streets here are one-way.",
+          "vietnamese": "Tuyến đường này phức tạp vì nhiều con phố ở đây là đường một chiều."
+        },
+        {
+          "english": "Which route did the tour bus take to the old bridge?",
+          "vietnamese": "Xe buýt du lịch đã đi tuyến đường nào đến cây cầu cổ?"
+        },
+        {
+          "english": "They are planning new routes so that people can cross the district easily.",
+          "vietnamese": "Họ đang lên kế hoạch cho những tuyến đường mới để mọi người có thể đi ngang qua khu vực một cách dễ dàng."
+        }
+      ]
+    },
+    {
+      "word": "history",
+      "sentences": [
+        {
+          "english": "This city has a long and rich history.",
+          "vietnamese": "Thành phố này có một lịch sử lâu đời và phong phú."
+        },
+        {
+          "english": "Our guide explained the history of this area to the tourists.",
+          "vietnamese": "Hướng dẫn viên của chúng tôi giải thích lịch sử của khu vực này cho các du khách."
+        },
+        {
+          "english": "I have loved history since my school days in my hometown.",
+          "vietnamese": "Tôi đã yêu thích lịch sử kể từ những ngày đi học ở quê tôi."
+        },
+        {
+          "english": "Does this old building have an interesting history?",
+          "vietnamese": "Tòa nhà cổ này có một lịch sử thú vị không?"
+        },
+        {
+          "english": "Read about the history of the capital before your flight next week.",
+          "vietnamese": "Hãy đọc về lịch sử của thủ đô trước chuyến bay của bạn vào tuần tới."
+        }
+      ]
+    },
+    {
+      "word": "mausoleum",
+      "sentences": [
+        {
+          "english": "Many visitors come to see the old mausoleum daily.",
+          "vietnamese": "Nhiều du khách đến xem lăng tẩm cổ kính mỗi ngày."
+        },
+        {
+          "english": "The mausoleum opens early, so tourists arrive before breakfast.",
+          "vietnamese": "Lăng mở cửa sớm, nên khách du lịch đến trước bữa sáng."
+        },
+        {
+          "english": "We visited the famous mausoleum during our short tour of the capital.",
+          "vietnamese": "Chúng tôi đã thăm lăng nổi tiếng trong chuyến tham quan ngắn ở thủ đô."
+        },
+        {
+          "english": "Have you ever seen the mausoleum in the central square?",
+          "vietnamese": "Bạn đã bao giờ thấy lăng ở quảng trường trung tâm chưa?"
+        },
+        {
+          "english": "Photos are not allowed inside the mausoleum, so please keep your camera away.",
+          "vietnamese": "Không được chụp ảnh bên trong lăng, nên hãy cất máy ảnh của bạn đi."
+        }
+      ]
+    },
+    {
+      "word": "church",
+      "sentences": [
+        {
+          "english": "The old church stands in the middle of town.",
+          "vietnamese": "Nhà thờ cổ nằm giữa trung tâm thị trấn."
+        },
+        {
+          "english": "A small church stands near our hotel, and its bells ring daily.",
+          "vietnamese": "Một nhà thờ nhỏ nằm gần khách sạn của chúng tôi, và những quả chuông của nó vang lên mỗi ngày."
+        },
+        {
+          "english": "We are visiting two old churches this afternoon with our friendly guide.",
+          "vietnamese": "Chiều nay chúng tôi sẽ thăm hai nhà thờ cổ cùng hướng dẫn viên thân thiện của chúng tôi."
+        },
+        {
+          "english": "Is that church open to visitors at the weekend?",
+          "vietnamese": "Nhà thờ đó có mở cửa cho du khách vào cuối tuần không?"
+        },
+        {
+          "english": "The church was built in a peaceful area far from the centre.",
+          "vietnamese": "Nhà thờ được xây ở một khu vực yên bình xa trung tâm."
+        }
+      ]
+    },
+    {
+      "word": "temple",
+      "sentences": [
+        {
+          "english": "People light incense at the temple every morning.",
+          "vietnamese": "Người ta thắp hương tại ngôi đền mỗi sáng."
+        },
+        {
+          "english": "Take off your shoes before entering the temple, and stay quiet inside.",
+          "vietnamese": "Hãy cởi giày trước khi vào đền, và giữ yên lặng bên trong."
+        },
+        {
+          "english": "The temple on the hill offers an amazing view of the whole town.",
+          "vietnamese": "Ngôi đền trên đồi mang lại một tầm nhìn tuyệt vời ra toàn thị trấn."
+        },
+        {
+          "english": "Thousands of visitors come to these temples during the festival every spring.",
+          "vietnamese": "Hàng nghìn du khách đến những ngôi đền này trong dịp lễ hội mỗi mùa xuân."
+        },
+        {
+          "english": "Did you light incense at the temple yesterday morning?",
+          "vietnamese": "Bạn đã thắp hương ở đền vào sáng hôm qua phải không?"
+        }
+      ]
+    },
+    {
+      "word": "pagoda",
+      "sentences": [
+        {
+          "english": "The old pagoda on the hill is a peaceful place for visitors.",
+          "vietnamese": "Ngôi chùa cổ trên đồi là một nơi yên bình cho du khách."
+        },
+        {
+          "english": "The pagoda is three hundred years old, and its garden is beautiful.",
+          "vietnamese": "Ngôi chùa đã ba trăm năm tuổi, và khu vườn của nó rất đẹp."
+        },
+        {
+          "english": "We walked to the pagoda to escape the noisy market street.",
+          "vietnamese": "Chúng tôi đi bộ đến chùa để thoát khỏi con phố chợ ồn ào."
+        },
+        {
+          "english": "How many pagodas are there in this district?",
+          "vietnamese": "Có bao nhiêu ngôi chùa trong khu vực này?"
+        },
+        {
+          "english": "Our tour will stop at a famous pagoda before lunch.",
+          "vietnamese": "Chuyến tham quan của chúng tôi sẽ dừng ở một ngôi chùa nổi tiếng trước bữa trưa."
+        }
+      ]
+    },
+    {
+      "word": "war",
+      "sentences": [
+        {
+          "english": "The museum shows photographs of the long war, and every visitor feels sad.",
+          "vietnamese": "Bảo tàng trưng bày những bức ảnh về cuộc chiến tranh dài, và mọi du khách đều thấy buồn."
+        },
+        {
+          "english": "My grandfather often tells stories about the war in this area.",
+          "vietnamese": "Ông tôi thường kể những câu chuyện về cuộc chiến tranh ở khu vực này."
+        },
+        {
+          "english": "The old bridge was damaged during the war, but people rebuilt it.",
+          "vietnamese": "Cây cầu cổ bị hư hại trong chiến tranh, nhưng người ta đã xây lại nó."
+        },
+        {
+          "english": "Have you read about the wars that changed our hometown forever?",
+          "vietnamese": "Bạn đã đọc về những cuộc chiến tranh đã thay đổi quê hương chúng ta mãi mãi chưa?"
+        },
+        {
+          "english": "Nobody wants a war, because peaceful towns give people a better life.",
+          "vietnamese": "Không ai muốn chiến tranh, vì những thị trấn yên bình mang lại cho con người cuộc sống tốt hơn."
+        }
+      ]
+    },
+    {
+      "word": "touristy",
+      "sentences": [
+        {
+          "english": "This area is very touristy and always crowded.",
+          "vietnamese": "Khu này rất đông khách du lịch và lúc nào cũng đông đúc."
+        },
+        {
+          "english": "The beach became too touristy, so we looked for a quiet place.",
+          "vietnamese": "Bãi biển trở nên quá đông khách du lịch, nên chúng tôi đã tìm một nơi yên tĩnh."
+        },
+        {
+          "english": "I do not like touristy restaurants because the food is pricey.",
+          "vietnamese": "Tôi không thích những nhà hàng đông khách du lịch vì đồ ăn đắt đỏ."
+        },
+        {
+          "english": "Is this square touristy during the summer holidays?",
+          "vietnamese": "Quảng trường này có đông khách du lịch trong kỳ nghỉ hè không?"
+        },
+        {
+          "english": "The old district has become touristy since the new hotels opened.",
+          "vietnamese": "Khu phố cổ đã trở nên đông khách du lịch kể từ khi các khách sạn mới mở cửa."
+        }
+      ]
+    },
+    {
+      "word": "hidden",
+      "sentences": [
+        {
+          "english": "We discovered a hidden beach behind the rocks during our morning walk.",
+          "vietnamese": "Chúng tôi phát hiện một bãi biển ẩn giấu phía sau những tảng đá trong chuyến đi bộ buổi sáng."
+        },
+        {
+          "english": "A hidden path leads to a peaceful lake behind the pagoda.",
+          "vietnamese": "Một lối đi khuất dẫn đến một cái hồ yên bình phía sau ngôi chùa."
+        },
+        {
+          "english": "Our guide is showing us the hidden corners of this old neighbourhood.",
+          "vietnamese": "Hướng dẫn viên đang chỉ cho chúng tôi những góc khuất của khu phố cổ này."
+        },
+        {
+          "english": "Have you found the hidden garden inside the temple area yet?",
+          "vietnamese": "Bạn đã tìm thấy khu vườn ẩn giấu bên trong khuôn viên ngôi đền chưa?"
+        },
+        {
+          "english": "Keep your money hidden when you walk through a crowded market.",
+          "vietnamese": "Hãy giấu kỹ tiền của bạn khi bạn đi qua một khu chợ đông đúc."
+        }
+      ]
+    },
+    {
+      "word": "lovely",
+      "sentences": [
+        {
+          "english": "It was a lovely afternoon, and the view from the boat was amazing.",
+          "vietnamese": "Đó là một buổi chiều dễ chịu, và khung cảnh từ trên thuyền thật tuyệt vời."
+        },
+        {
+          "english": "What a lovely view we have from this small balcony!",
+          "vietnamese": "Chúng ta có một tầm nhìn thật dễ chịu từ ban công nhỏ này!"
+        },
+        {
+          "english": "We had a lovely stay with a friendly family in the countryside.",
+          "vietnamese": "Chúng tôi đã có một kỳ nghỉ dễ chịu với một gia đình thân thiện ở vùng quê."
+        },
+        {
+          "english": "The weather is lovely today, so let us walk around the square.",
+          "vietnamese": "Thời tiết hôm nay dễ chịu, nên chúng ta hãy đi dạo quanh quảng trường."
+        },
+        {
+          "english": "She sent me a lovely postcard from her journey to the north.",
+          "vietnamese": "Cô ấy đã gửi cho tôi một tấm bưu thiếp đáng yêu từ chuyến hành trình lên phía bắc của cô ấy."
+        }
+      ]
+    },
+    {
+      "word": "lover",
+      "sentences": [
+        {
+          "english": "The young lover sent a postcard to his girlfriend every week during his trip.",
+          "vietnamese": "Chàng người yêu trẻ tuổi gửi một tấm bưu thiếp cho bạn gái mỗi tuần trong chuyến đi của anh ấy."
+        },
+        {
+          "english": "The two lovers walked slowly along the quiet pavement.",
+          "vietnamese": "Hai người yêu nhau đi bộ chậm rãi dọc vỉa hè yên tĩnh."
+        },
+        {
+          "english": "Her lover works as an architect in the capital.",
+          "vietnamese": "Người yêu của cô ấy làm kiến trúc sư ở thủ đô."
+        },
+        {
+          "english": "Did your lover send you a postcard from that famous beach?",
+          "vietnamese": "Người yêu của bạn có gửi cho bạn một tấm bưu thiếp từ bãi biển nổi tiếng đó không?"
+        },
+        {
+          "english": "Young lovers often meet near the lake when the lights come on.",
+          "vietnamese": "Những đôi tình nhân trẻ thường gặp nhau gần hồ khi đèn bật lên."
+        }
+      ]
+    },
+    {
+      "word": "recommend",
+      "sentences": [
+        {
+          "english": "Our guide recommends this small hotel because the reception staff are friendly.",
+          "vietnamese": "Hướng dẫn viên của chúng tôi gợi ý khách sạn nhỏ này vì nhân viên tiếp tân rất thân thiện."
+        },
+        {
+          "english": "Can you recommend a safe area for a family with children?",
+          "vietnamese": "Bạn có thể gợi ý một khu vực an toàn cho một gia đình có trẻ nhỏ không?"
+        },
+        {
+          "english": "My teacher recommended this museum because its collection is amazing.",
+          "vietnamese": "Giáo viên của tôi đã gợi ý bảo tàng này vì bộ sưu tập của nó thật tuyệt vời."
+        },
+        {
+          "english": "I recommend booking your flight early to get a reasonable price.",
+          "vietnamese": "Tôi khuyên bạn nên đặt chuyến bay sớm để có được mức giá hợp lý."
+        },
+        {
+          "english": "Nobody recommends that noisy hotel beside the highway.",
+          "vietnamese": "Không ai gợi ý khách sạn ồn ào bên cạnh đường cao tốc đó cả."
+        }
+      ]
+    },
+    {
+      "word": "market",
+      "sentences": [
+        {
+          "english": "The night market near the river is lively and full of excited tourists.",
+          "vietnamese": "Khu chợ đêm gần sông rất sôi nổi và đầy những khách du lịch hào hứng."
+        },
+        {
+          "english": "The market opens at five, and the sellers are always busy.",
+          "vietnamese": "Chợ mở cửa lúc năm giờ, và những người bán hàng luôn bận rộn."
+        },
+        {
+          "english": "We bought cheap fruit at the market near our hotel yesterday.",
+          "vietnamese": "Chúng tôi đã mua trái cây rẻ ở khu chợ gần khách sạn của chúng tôi hôm qua."
+        },
+        {
+          "english": "Are the night markets in this city safe for tourists?",
+          "vietnamese": "Các khu chợ đêm ở thành phố này có an toàn cho khách du lịch không?"
+        },
+        {
+          "english": "My mother is walking to the market to save money on vegetables.",
+          "vietnamese": "Mẹ tôi đang đi bộ ra chợ để tiết kiệm tiền mua rau."
+        }
+      ]
+    },
+    {
+      "word": "try",
+      "sentences": [
+        {
+          "english": "You should try the local noodles before your flight home tomorrow morning.",
+          "vietnamese": "Bạn nên thử món mì địa phương trước chuyến bay về nhà vào sáng mai."
+        },
+        {
+          "english": "Try this soup, because the taste is really special.",
+          "vietnamese": "Hãy thử món súp này, vì hương vị thực sự đặc biệt."
+        },
+        {
+          "english": "We tried three restaurants near the square, but all of them were expensive.",
+          "vietnamese": "Chúng tôi đã thử ba nhà hàng gần quảng trường, nhưng tất cả đều đắt."
+        },
+        {
+          "english": "She is trying to learn the local language before her journey.",
+          "vietnamese": "Cô ấy đang cố học ngôn ngữ địa phương trước chuyến hành trình của mình."
+        },
+        {
+          "english": "Have you ever tried travelling alone in a foreign country?",
+          "vietnamese": "Bạn đã bao giờ thử đi du lịch một mình ở một đất nước xa lạ chưa?"
+        }
+      ]
+    },
+    {
+      "word": "taste",
+      "sentences": [
+        {
+          "english": "We wanted to taste every dish at the festival, but we had no chance.",
+          "vietnamese": "Chúng tôi muốn nếm thử mọi món ăn ở lễ hội, nhưng chúng tôi không có cơ hội."
+        },
+        {
+          "english": "Taste this sauce before you order the expensive set menu.",
+          "vietnamese": "Hãy nếm thử loại nước sốt này trước khi bạn gọi phần ăn đắt tiền."
+        },
+        {
+          "english": "I tasted a strange fruit during our tour of the village.",
+          "vietnamese": "Tôi đã nếm thử một loại trái cây lạ trong chuyến tham quan ngôi làng."
+        },
+        {
+          "english": "Are you tasting the tea that our friendly host prepared?",
+          "vietnamese": "Bạn đang nếm thử loại trà mà người chủ nhà thân thiện của chúng ta đã pha phải không?"
+        },
+        {
+          "english": "Tourists always taste the street food before they leave this city.",
+          "vietnamese": "Khách du lịch luôn nếm thử đồ ăn đường phố trước khi họ rời thành phố này."
+        }
+      ]
+    },
+    {
+      "word": "option",
+      "sentences": [
+        {
+          "english": "Taking the night train is a cheaper option than booking an expensive flight.",
+          "vietnamese": "Đi tàu đêm là một lựa chọn rẻ hơn so với việc đặt một chuyến bay đắt tiền."
+        },
+        {
+          "english": "Camping is a cheap option for students who love nature.",
+          "vietnamese": "Cắm trại là một lựa chọn rẻ cho những sinh viên yêu thiên nhiên."
+        },
+        {
+          "english": "We have two options: stay here or drive to the coast.",
+          "vietnamese": "Chúng ta có hai lựa chọn: ở lại đây hoặc lái xe ra bờ biển."
+        },
+        {
+          "english": "Which option is more convenient for a short holiday?",
+          "vietnamese": "Lựa chọn nào thuận tiện hơn cho một kỳ nghỉ ngắn?"
+        },
+        {
+          "english": "The travel agency offered us an affordable option near the beach.",
+          "vietnamese": "Công ty du lịch đã đưa cho chúng tôi một lựa chọn giá phải chăng gần bãi biển."
+        }
+      ]
+    },
+    {
+      "word": "resort",
+      "sentences": [
+        {
+          "english": "The beach resort was pricey, but our stay there was really comfortable.",
+          "vietnamese": "Khu nghỉ dưỡng bên bãi biển khá đắt, nhưng thời gian ở đó của chúng tôi thực sự thoải mái."
+        },
+        {
+          "english": "The new resort has a big pool and a quiet playground for children.",
+          "vietnamese": "Khu nghỉ dưỡng mới có một hồ bơi lớn và một sân chơi yên tĩnh cho trẻ em."
+        },
+        {
+          "english": "We are staying at a small resort to escape the crowded capital.",
+          "vietnamese": "Chúng tôi đang ở một khu nghỉ dưỡng nhỏ để thoát khỏi thủ đô đông đúc."
+        },
+        {
+          "english": "Is that resort affordable for a family of four?",
+          "vietnamese": "Khu nghỉ dưỡng đó có giá phải chăng cho một gia đình bốn người không?"
+        },
+        {
+          "english": "Many resorts along the coast appeared after the area developed quickly.",
+          "vietnamese": "Nhiều khu nghỉ dưỡng dọc bờ biển đã xuất hiện sau khi khu vực này phát triển nhanh chóng."
+        }
+      ]
+    },
+    {
+      "word": "campsite",
+      "sentences": [
+        {
+          "english": "We put up our tent at a quiet campsite near the huge lake.",
+          "vietnamese": "Chúng tôi dựng lều ở một khu cắm trại yên tĩnh gần cái hồ khổng lồ."
+        },
+        {
+          "english": "The campsite near the river is safe and very comfortable.",
+          "vietnamese": "Khu cắm trại gần sông thì an toàn và rất thoải mái."
+        },
+        {
+          "english": "We will drive to the campsite before the sun goes down.",
+          "vietnamese": "Chúng tôi sẽ lái xe đến khu cắm trại trước khi mặt trời lặn."
+        },
+        {
+          "english": "Are there any campsites in this peaceful area?",
+          "vietnamese": "Có khu cắm trại nào trong khu vực yên bình này không?"
+        },
+        {
+          "english": "Do not throw rubbish around the campsite, please.",
+          "vietnamese": "Xin đừng vứt rác quanh khu cắm trại."
+        }
+      ]
+    },
+    {
+      "word": "homestay",
+      "sentences": [
+        {
+          "english": "Staying at a homestay helped us meet local families.",
+          "vietnamese": "Ở homestay giúp chúng tôi gặp gỡ các gia đình địa phương."
+        },
+        {
+          "english": "Our homestay was cheap, and the owner cooked breakfast for us.",
+          "vietnamese": "Homestay của chúng tôi rẻ, và người chủ đã nấu bữa sáng cho chúng tôi."
+        },
+        {
+          "english": "I am booking a homestay near the old town for three nights.",
+          "vietnamese": "Tôi đang đặt một homestay gần phố cổ cho ba đêm."
+        },
+        {
+          "english": "Have you ever tried a homestay instead of an expensive hotel?",
+          "vietnamese": "Bạn đã bao giờ thử ở homestay thay vì một khách sạn đắt tiền chưa?"
+        },
+        {
+          "english": "Homestays give travellers a real experience of daily village life.",
+          "vietnamese": "Các homestay mang lại cho khách du lịch một trải nghiệm thực sự về cuộc sống làng quê hằng ngày."
+        }
+      ]
+    },
+    {
+      "word": "hike",
+      "sentences": [
+        {
+          "english": "Every weekend we hike in the mountains to escape the busy city.",
+          "vietnamese": "Mỗi cuối tuần chúng tôi đi bộ đường dài trên núi để thoát khỏi thành phố bận rộn."
+        },
+        {
+          "english": "They hiked for six hours and discovered a small waterfall.",
+          "vietnamese": "Họ đã đi bộ đường dài sáu tiếng và phát hiện ra một thác nước nhỏ."
+        },
+        {
+          "english": "Are you hiking with your housemates this weekend?",
+          "vietnamese": "Bạn có đi bộ đường dài với những người bạn cùng nhà vào cuối tuần này không?"
+        },
+        {
+          "english": "We hike every Sunday to escape the polluted streets of the capital.",
+          "vietnamese": "Chúng tôi đi bộ đường dài mỗi Chủ nhật để thoát khỏi những con phố ô nhiễm của thủ đô."
+        },
+        {
+          "english": "Do not hike alone; always go with a friendly local guide.",
+          "vietnamese": "Đừng đi bộ đường dài một mình; hãy luôn đi cùng một hướng dẫn viên địa phương thân thiện."
+        }
+      ]
+    }
+  ]
+}
