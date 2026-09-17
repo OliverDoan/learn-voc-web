@@ -34,6 +34,8 @@ interface StoryRendererProps {
   /** Tập từ được đánh dấu sao (viết thường) — tô màu khác để nổi bật. */
   favoriteWords?: ReadonlySet<string>;
   className?: string;
+  /** Ghi đè style gốc — dùng cho cỡ chữ tuỳ chỉnh ở chế độ đọc toàn màn hình. */
+  style?: React.CSSProperties;
 }
 
 export function StoryRenderer({
@@ -42,6 +44,7 @@ export function StoryRenderer({
   hideWords = false,
   favoriteWords,
   className,
+  style,
 }: StoryRendererProps) {
   const tokens = parseStory(content);
   const [opened, setOpened] = useState<number | null>(null);
@@ -76,6 +79,7 @@ export function StoryRenderer({
         "font-serif whitespace-pre-wrap text-[19px] leading-[2] text-[#252525] dark:text-foreground",
         className,
       )}
+      style={style}
     >
       {tokens.map((tok, i) => {
         if (tok.type === "text") {

@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import {
   BookOpenText,
   ChevronLeft,
   ChevronRight,
+  Expand,
   Eye,
   EyeOff,
   Plus,
@@ -17,12 +18,11 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ImageLightbox } from "@/components/ui/image-lightbox";
 import { StoryRenderer } from "@/components/story/story-renderer";
+import { StoryFullscreenReader } from "@/components/story/story-fullscreen-reader";
 import { ReadingSpeedControl } from "@/components/story/reading-speed-control";
 import { useStories } from "@/hooks/use-stories";
 import { useFavorites } from "@/hooks/use-cards";
-import { useReadingRate } from "@/hooks/use-reading-rate";
-import { firstMeaning, parseStory } from "@/lib/story-parser";
-import { isSpeakable, speakAsync, stopSpeaking } from "@/lib/tts";
+import { useStoryReader } from "@/hooks/use-story-reader";
 
 interface DeckStoryPanelProps {
   deckId: string;
@@ -38,20 +38,14 @@ interface DeckStoryPanelProps {
 export function DeckStoryPanel({ deckId, compact = false }: DeckStoryPanelProps) {
   const { data: stories, isLoading } = useStories(deckId);
   const { data: favorites } = useFavorites();
-  const { rate, setRate } = useReadingRate();
+  const { readMode, toggleRead, stopReading, rate, setRate } = useStoryReader();
 
   // Truyện đang xem trong panel (index trong danh sách của deck).
   const [index, setIndex] = useState(0);
   const [showMeanings, setShowMeanings] = useState(false);
   const [hideWords, setHideWords] = useState(false);
-  // Chế độ đọc: "mixed" (văn Việt + từ chêm tiếng Anh) | "vi" | null
-  const [readMode, setReadMode] = useState<"mixed" | "vi" | null>(null);
-  // Mỗi lần bắt đầu/huỷ đọc tăng generation để vòng đọc cũ tự dừng.
-  const readGenRef = useRef(0);
-  const rateRef = useRef(rate);
-  useEffect(() => {
-    rateRef.current = rate;
-  }, [rate]);
+  // Mở trình đọc toàn màn hình (tiện cho điện thoại).
+  const [fullscreen, setFullscreen] = useState(false);
 
   const favoriteWords = useMemo(
     () => new Set((favorites ?? []).map((c) => c.word.trim().toLowerCase())),
@@ -63,21 +57,6 @@ export function DeckStoryPanel({ deckId, compact = false }: DeckStoryPanelProps)
   const safeIndex = total > 0 ? Math.min(index, total - 1) : 0;
   const story = stories?.[safeIndex];
 
-  // Dừng đọc: huỷ vòng đọc + dừng phát âm + tắt trạng thái nút.
-  const stopReading = () => {
-    readGenRef.current++;
-    stopSpeaking();
-    setReadMode(null);
-  };
-  // Dừng phát âm khi rời panel (không đụng React state vì component đang unmount).
-  useEffect(
-    () => () => {
-      readGenRef.current++;
-      stopSpeaking();
-    },
-    [],
-  );
-
   const goPrev = () => {
     stopReading();
     setIndex((i) => (i - 1 + total) % total);
@@ -85,31 +64,6 @@ export function DeckStoryPanel({ deckId, compact = false }: DeckStoryPanelProps)
   const goNext = () => {
     stopReading();
     setIndex((i) => (i + 1) % total);
-  };
-
-  // Đọc truyện: "mixed" = văn tiếng Việt + từ chêm tiếng Anh; "vi" = đọc toàn bộ tiếng Việt.
-  const startReading = async (mode: "mixed" | "vi") => {
-    if (!story) return;
-    if (readMode === mode) {
-      stopReading();
-      return;
-    }
-    const gen = ++readGenRef.current;
-    stopSpeaking();
-    setReadMode(mode);
-    const tokens = parseStory(story.content);
-    for (const tok of tokens) {
-      if (readGenRef.current !== gen) return;
-      if (tok.type === "text") {
-        const text = tok.text.trim();
-        if (isSpeakable(text)) await speakAsync(text, "vi-VN", rateRef.current);
-      } else if (mode === "vi") {
-        await speakAsync(firstMeaning(tok.meaning), "vi-VN", rateRef.current);
-      } else {
-        await speakAsync(tok.word, "en-US", rateRef.current);
-      }
-    }
-    if (readGenRef.current === gen) setReadMode(null);
   };
 
   if (isLoading) {
@@ -167,7 +121,19 @@ export function DeckStoryPanel({ deckId, compact = false }: DeckStoryPanelProps)
         <div className="flex shrink-0 items-center gap-1">
           <button
             type="button"
-            onClick={() => startReading("mixed")}
+            onClick={() => {
+              stopReading();
+              setFullscreen(true);
+            }}
+            className="flex h-8 w-8 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+            aria-label="Đọc toàn màn hình"
+            title="Đọc toàn màn hình"
+          >
+            <Expand className="h-4 w-4" />
+          </button>
+          <button
+            type="button"
+            onClick={() => toggleRead(story.content, "mixed")}
             className={cn(
               "flex h-8 w-8 items-center justify-center rounded-full transition-colors",
               readMode === "mixed"
@@ -243,6 +209,16 @@ export function DeckStoryPanel({ deckId, compact = false }: DeckStoryPanelProps)
           className="text-[15px] leading-8"
         />
       </div>
+
+      {fullscreen ? (
+        <StoryFullscreenReader
+          stories={stories ?? []}
+          index={safeIndex}
+          onNavigate={setIndex}
+          onClose={() => setFullscreen(false)}
+          favoriteWords={favoriteWords}
+        />
+      ) : null}
     </div>
   );
 }
