@@ -1,11 +1,11 @@
 "use client";
 
-import Link from "next/link";
 import { Flame } from "lucide-react";
 import { useStreakState } from "@/hooks/use-streak";
 import { useDueCount } from "@/hooks/use-due-count";
 import { streakMessage } from "@/lib/streak";
 import { cn } from "@/lib/utils";
+import { useSettingsDialog } from "@/components/settings/settings-dialog";
 
 interface StreakChipProps {
   /** Sidebar đang thu gọn → chỉ hiện icon + số. */
@@ -16,6 +16,7 @@ interface StreakChipProps {
 export function StreakChip({ collapsed = false }: StreakChipProps) {
   const streak = useStreakState();
   const { due } = useDueCount();
+  const settings = useSettingsDialog();
 
   if (!streak) return null;
 
@@ -23,9 +24,9 @@ export function StreakChip({ collapsed = false }: StreakChipProps) {
   const urgent = streak.status === "urgent";
 
   return (
-    <Link
-      href="/settings"
-      prefetch={false}
+    <button
+      type="button"
+      onClick={() => settings?.openSettings("study")}
       title={streakMessage(streak)}
       className={cn(
         "mt-3 flex items-center rounded-[10px] border transition-colors",
@@ -65,6 +66,6 @@ export function StreakChip({ collapsed = false }: StreakChipProps) {
           </p>
         </div>
       )}
-    </Link>
+    </button>
   );
 }

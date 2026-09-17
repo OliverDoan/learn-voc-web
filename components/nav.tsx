@@ -10,6 +10,7 @@ import { useProgress } from "@/hooks/use-progress";
 import { useHiddenNavItems } from "@/hooks/use-sidebar-prefs";
 import { StreakChip } from "@/components/dashboard/streak-chip";
 import { NAV_ITEMS } from "@/lib/nav-items";
+import { useSettingsDialog } from "@/components/settings/settings-dialog";
 
 // Store nhỏ cho trạng thái thu gọn sidebar, lưu ở localStorage.
 // Dùng useSyncExternalStore để SSR luôn trả về false (khớp server) rồi
@@ -42,6 +43,7 @@ function setCollapsedStore(next: boolean) {
 export function Nav() {
   const pathname = usePathname();
   const { data: progress } = useProgress();
+  const settings = useSettingsDialog();
   // Thu gọn sidebar (chỉ hiện icon khi thu gọn).
   const collapsed = useSyncExternalStore(
     subscribeCollapsed,
@@ -93,19 +95,35 @@ export function Nav() {
         {visibleItems.map((item) => {
           const active =
             item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+          const itemClass = cn(
+            "flex items-center rounded-[10px] text-sm font-medium transition-colors",
+            collapsed ? "justify-center px-0 py-2.5" : "gap-3 px-3 py-2.5",
+            active
+              ? "bg-primary/10 text-primary"
+              : "text-muted-foreground hover:bg-accent hover:text-foreground",
+          );
+          // Cài đặt mở dưới dạng popup thay vì điều hướng sang trang riêng.
+          if (item.href === "/settings" && settings) {
+            return (
+              <button
+                key={item.href}
+                type="button"
+                onClick={() => settings.openSettings()}
+                title={collapsed ? item.label : undefined}
+                className={cn(itemClass, "w-full text-left")}
+              >
+                <item.icon className="h-[18px] w-[18px] shrink-0" />
+                {!collapsed ? item.label : null}
+              </button>
+            );
+          }
           return (
             <Link
               key={item.href}
               href={item.href}
               prefetch={item.prefetch ?? false}
               title={collapsed ? item.label : undefined}
-              className={cn(
-                "flex items-center rounded-[10px] text-sm font-medium transition-colors",
-                collapsed ? "justify-center px-0 py-2.5" : "gap-3 px-3 py-2.5",
-                active
-                  ? "bg-primary/10 text-primary"
-                  : "text-muted-foreground hover:bg-accent hover:text-foreground",
-              )}
+              className={itemClass}
             >
               <item.icon className="h-[18px] w-[18px] shrink-0" />
               {!collapsed ? item.label : null}
@@ -116,12 +134,12 @@ export function Nav() {
 
       <StreakChip collapsed={collapsed} />
 
-      <Link
-        href="/settings"
-        prefetch={false}
+      <button
+        type="button"
+        onClick={() => settings?.openSettings("profile")}
         title={collapsed ? progress?.displayName?.trim() || "Hồ sơ của bạn" : undefined}
         className={cn(
-          "mt-auto flex items-center rounded-[10px] border transition-colors",
+          "mt-auto flex items-center rounded-[10px] border text-left transition-colors",
           collapsed ? "justify-center p-1.5" : "gap-3 p-2.5",
           pathname.startsWith("/settings")
             ? "border-primary/40 bg-primary/5"
@@ -142,13 +160,14 @@ export function Nav() {
             <p className="truncate text-xs text-muted-foreground">Xem hồ sơ &amp; cài đặt</p>
           </div>
         ) : null}
-      </Link>
+      </button>
     </aside>
   );
 }
 
 export function MobileNav() {
   const pathname = usePathname();
+  const settings = useSettingsDialog();
   const [moreOpen, setMoreOpen] = useState(false);
   const hidden = useHiddenNavItems();
   const visibleItems = NAV_ITEMS.filter((i) => i.pinned || !hidden.has(i.href));
@@ -172,18 +191,34 @@ export function MobileNav() {
             <div className="grid grid-cols-4 gap-2">
               {visibleItems.map((item) => {
                 const active = isActive(item.href);
+                const sheetClass = cn(
+                  "flex flex-col items-center gap-1.5 rounded-xl p-3 text-center text-xs font-medium transition-colors",
+                  active ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-accent",
+                );
+                // Cài đặt mở popup thay vì điều hướng sang trang riêng.
+                if (item.href === "/settings" && settings) {
+                  return (
+                    <button
+                      key={item.href}
+                      type="button"
+                      onClick={() => {
+                        setMoreOpen(false);
+                        settings.openSettings();
+                      }}
+                      className={sheetClass}
+                    >
+                      <item.icon className="h-5 w-5" />
+                      <span className="leading-tight">{item.label}</span>
+                    </button>
+                  );
+                }
                 return (
                   <Link
                     key={item.href}
                     href={item.href}
                     prefetch={item.prefetch ?? false}
                     onClick={() => setMoreOpen(false)}
-                    className={cn(
-                      "flex flex-col items-center gap-1.5 rounded-xl p-3 text-center text-xs font-medium transition-colors",
-                      active
-                        ? "bg-primary/10 text-primary"
-                        : "text-muted-foreground hover:bg-accent",
-                    )}
+                    className={sheetClass}
                   >
                     <item.icon className="h-5 w-5" />
                     <span className="leading-tight">{item.label}</span>
@@ -203,19 +238,31 @@ export function MobileNav() {
         >
           {primary.map((item) => {
             const active = isActive(item.href);
+            const barClass = cn(
+              "flex w-full flex-col items-center gap-1 py-2 text-xs",
+              active ? "text-primary" : "text-muted-foreground",
+            );
             return (
               <li key={item.href}>
-                <Link
-                  href={item.href}
-                  prefetch={item.prefetch ?? false}
-                  className={cn(
-                    "flex flex-col items-center gap-1 py-2 text-xs",
-                    active ? "text-primary" : "text-muted-foreground",
-                  )}
-                >
-                  <item.icon className="h-5 w-5" />
-                  <span>{item.label}</span>
-                </Link>
+                {item.href === "/settings" && settings ? (
+                  <button
+                    type="button"
+                    onClick={() => settings.openSettings()}
+                    className={barClass}
+                  >
+                    <item.icon className="h-5 w-5" />
+                    <span>{item.label}</span>
+                  </button>
+                ) : (
+                  <Link
+                    href={item.href}
+                    prefetch={item.prefetch ?? false}
+                    className={barClass}
+                  >
+                    <item.icon className="h-5 w-5" />
+                    <span>{item.label}</span>
+                  </Link>
+                )}
               </li>
             );
           })}

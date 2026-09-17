@@ -8,9 +8,11 @@ interface DialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   children: React.ReactNode;
+  /** Ghi đè bề rộng tối đa của hộp thoại (mặc định `max-w-lg`). */
+  className?: string;
 }
 
-export function Dialog({ open, onOpenChange, children }: DialogProps) {
+export function Dialog({ open, onOpenChange, children, className }: DialogProps) {
   React.useEffect(() => {
     if (!open) return;
     const onEsc = (e: KeyboardEvent) => {
@@ -32,7 +34,7 @@ export function Dialog({ open, onOpenChange, children }: DialogProps) {
         onClick={() => onOpenChange(false)}
         aria-hidden="true"
       />
-      <div className="relative z-10 w-full max-w-lg">{children}</div>
+      <div className={cn("relative z-10 w-full max-w-lg", className)}>{children}</div>
     </div>
   );
 }

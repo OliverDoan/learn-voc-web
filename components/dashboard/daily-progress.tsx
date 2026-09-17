@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { Settings2 } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
+import { useSettingsDialog } from "@/components/settings/settings-dialog";
 
 interface DailyProgressProps {
   reviewed: number;
@@ -10,6 +10,7 @@ interface DailyProgressProps {
 }
 
 export function DailyProgress({ reviewed, goal }: DailyProgressProps) {
+  const settings = useSettingsDialog();
   const pct = goal === 0 ? 0 : Math.min(100, Math.round((reviewed / goal) * 100));
   return (
     <div className="rounded-2xl border bg-card p-5">
@@ -24,13 +25,14 @@ export function DailyProgress({ reviewed, goal }: DailyProgressProps) {
         <p className="text-xs text-muted-foreground">
           {pct >= 100 ? "🎉 Hoàn thành! Quá tuyệt." : `${pct}% — cố lên!`}
         </p>
-        <Link
-          href="/settings"
+        <button
+          type="button"
+          onClick={() => settings?.openSettings("study")}
           className="flex items-center gap-1 text-xs text-muted-foreground transition-colors hover:text-primary"
         >
           <Settings2 className="h-3 w-3" />
           Đổi mục tiêu
-        </Link>
+        </button>
       </div>
     </div>
   );
