@@ -23,7 +23,7 @@ const FAMILIES: string[][] = [
   ["engineering", "engineer"],
   ["live", "lively"],
   ["peaceful", "peace"],
-  ["beautiful", "beautifully"],
+  ["beautiful", "beautifully", "beauty"],
   ["meaning", "mean"],
   ["tell", "bank teller"],
   ["receptionist", "reception"],
@@ -43,7 +43,7 @@ const FAMILIES: string[][] = [
   ["taste", "tasty"],
   ["lover", "lovely", "loved one"],
   ["season", "seasoning"],
-  ["useless", "useful"],
+  ["useless", "useful", "user"],
   ["hometown", "homestay"],
   ["housewife", "housemate"],
   ["room", "roommate"],
@@ -53,11 +53,23 @@ const FAMILIES: string[][] = [
   ["pain", "painful", "painkiller"],
   ["forest", "rainforest"],
   ["bicycle", "tricycle", "cyclist"],
+  ["luck", "lucky"],
+  ["celebration", "celebrity"],
+  ["film", "film maker"],
+  ["quiet", "quietly"],
+  ["sing", "singer"],
+  ["art", "artist", "artistic", "artwork"],
+  ["photography", "photographer"],
+  ["personal", "personally"],
+  ["attention", "attend"],
+  ["reliable", "rely"],
+  ["unfriend", "friendly"],
 ];
 
 // Từ liên quan (đồng nghĩa / cùng trường nghĩa). Mỗi nhóm cần >= 2 deck mới ghi.
 const RELATED: string[][] = [
   ["chance", "opportunity"], // cơ hội
+  ["chat", "communicate"], // trò chuyện / giao tiếp
   ["expensive", "pricey"], // đắt đỏ
   ["cheap", "affordable", "reasonable"], // rẻ / phải chăng / hợp lý
   ["cook", "chef"], // đầu bếp
@@ -104,6 +116,23 @@ const RELATED: string[][] = [
   ["exercise", "practice", "train"], // tập luyện / rèn luyện
   ["vehicle", "motorbike", "truck"], // phương tiện
   ["exhausted", "tiring"], // mệt / kiệt sức
+  ["fan", "supporter"], // người hâm mộ / người ủng hộ
+  ["paparazzi", "photographer"], // thợ săn ảnh / thợ chụp ảnh
+  ["fancy", "luxury"], // sang chảnh / xa xỉ
+  ["shiny", "sparkling"], // bóng loáng / lấp lánh
+  ["loud", "noisy"], // to tiếng / ồn ào
+  ["catchy", "popular"], // bắt tai / được ưa chuộng
+  ["upbeat", "cheerful"], // sôi động / vui vẻ
+  ["encourage", "support"], // khích lệ / ủng hộ
+  ["perform", "show"], // biểu diễn / buổi diễn
+  ["instrument", "guitar", "flute", "drum"], // nhạc cụ
+  ["shout", "scream"], // hét / thét
+  ["well-known", "popular"], // nổi tiếng / phổ biến
+  ["frequently", "regularly"], // thường xuyên
+  ["fantastic", "amazing", "extraordinary"], // tuyệt vời / phi thường
+  ["theatre", "drama"], // nhà hát / tác phẩm kịch
+  ["concert", "musician"], // buổi hoà nhạc / nhạc sĩ
+  ["remember", "memorise"], // nhớ / ghi nhớ
 ];
 
 // Biến thể Anh–Anh (BrE) ↔ Anh–Mỹ (AmE): từ khác hẳn (flat↔apartment) hoặc khác chính tả.

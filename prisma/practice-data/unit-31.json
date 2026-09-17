@@ -1,0 +1,607 @@
+{
+  "unit": 31,
+  "deck": "Unit 31: Âm nhạc và biểu diễn",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "musician",
+      "sentences": [
+        {
+          "english": "The young musician needs daily practice to improve his skill.",
+          "vietnamese": "Người nhạc công trẻ cần luyện tập hàng ngày để cải thiện kỹ năng của mình."
+        },
+        {
+          "english": "My uncle became a famous musician after years of hard practice.",
+          "vietnamese": "Chú tôi đã trở thành một nhạc sĩ nổi tiếng sau nhiều năm luyện tập vất vả."
+        },
+        {
+          "english": "Are there any musicians playing at the festival this weekend?",
+          "vietnamese": "Có nhạc công nào chơi nhạc ở lễ hội vào cuối tuần này không?"
+        },
+        {
+          "english": "The musicians arrived late because the traffic was very heavy.",
+          "vietnamese": "Các nhạc công đến muộn vì giao thông rất đông đúc."
+        },
+        {
+          "english": "A good musician can play many instruments beautifully.",
+          "vietnamese": "Một nhạc công giỏi có thể chơi nhiều nhạc cụ một cách đẹp đẽ."
+        }
+      ]
+    },
+    {
+      "word": "style",
+      "sentences": [
+        {
+          "english": "Her singing style is very popular with young listeners in my hometown.",
+          "vietnamese": "Phong cách hát của cô ấy rất được người nghe trẻ ở quê tôi yêu thích."
+        },
+        {
+          "english": "I love the modern style of this young singer.",
+          "vietnamese": "Tôi thích phong cách hiện đại của ca sĩ trẻ này."
+        },
+        {
+          "english": "His cooking style is quite different from my mother.",
+          "vietnamese": "Phong cách nấu ăn của anh ấy khá khác so với mẹ tôi."
+        },
+        {
+          "english": "Which style of music do you listen to at the gym?",
+          "vietnamese": "Bạn nghe thể loại nhạc phong cách nào khi ở phòng tập?"
+        },
+        {
+          "english": "The band changed its style after the long tour last year.",
+          "vietnamese": "Ban nhạc đã thay đổi phong cách của họ sau chuyến lưu diễn dài năm ngoái."
+        }
+      ]
+    },
+    {
+      "word": "flute",
+      "sentences": [
+        {
+          "english": "My cousin plays the flute at every village festival.",
+          "vietnamese": "Anh họ tôi thổi sáo ở mọi lễ hội trong làng."
+        },
+        {
+          "english": "She has played the flute since she was in primary school.",
+          "vietnamese": "Cô ấy đã thổi sáo từ khi còn học tiểu học."
+        },
+        {
+          "english": "The sound of the flute made the old temple feel peaceful.",
+          "vietnamese": "Tiếng sáo làm cho ngôi chùa cổ trở nên yên bình."
+        },
+        {
+          "english": "Can you teach me to play the flute next term?",
+          "vietnamese": "Bạn có thể dạy tôi thổi sáo vào học kỳ tới không?"
+        },
+        {
+          "english": "He carried his flute carefully onto the small boat.",
+          "vietnamese": "Anh ấy cẩn thận mang cây sáo của mình lên chiếc thuyền nhỏ."
+        }
+      ]
+    },
+    {
+      "word": "guitar",
+      "sentences": [
+        {
+          "english": "He bought a cheap guitar and learned three songs last term.",
+          "vietnamese": "Anh ấy mua một cây đàn ghi ta rẻ và học được ba bài hát vào học kỳ trước."
+        },
+        {
+          "english": "My neighbour plays the guitar on his balcony every evening.",
+          "vietnamese": "Người hàng xóm của tôi chơi đàn ghi ta trên ban công mỗi tối."
+        },
+        {
+          "english": "Do you know where I can repair this old guitar?",
+          "vietnamese": "Bạn có biết tôi có thể sửa cây đàn ghi ta cũ này ở đâu không?"
+        },
+        {
+          "english": "He is carrying two guitars to the school celebration.",
+          "vietnamese": "Anh ấy đang mang hai cây đàn ghi ta tới buổi lễ kỷ niệm của trường."
+        },
+        {
+          "english": "That guitar was expensive, but its quality is excellent.",
+          "vietnamese": "Cây đàn ghi ta đó đắt, nhưng chất lượng của nó thì tuyệt vời."
+        }
+      ]
+    },
+    {
+      "word": "perform",
+      "sentences": [
+        {
+          "english": "The band will perform in the town centre on Saturday evening.",
+          "vietnamese": "Ban nhạc sẽ biểu diễn ở trung tâm thị trấn vào tối thứ Bảy."
+        },
+        {
+          "english": "Our team will perform three songs at the contest tomorrow.",
+          "vietnamese": "Đội của chúng tôi sẽ biểu diễn ba bài hát ở cuộc thi vào ngày mai."
+        },
+        {
+          "english": "She performed beautifully although she felt very nervous.",
+          "vietnamese": "Cô ấy đã biểu diễn rất hay mặc dù cô ấy cảm thấy rất hồi hộp."
+        },
+        {
+          "english": "Do you enjoy performing in front of a crowded hall?",
+          "vietnamese": "Bạn có thích biểu diễn trước một khán phòng đông người không?"
+        },
+        {
+          "english": "The children performed a traditional dance at the temple.",
+          "vietnamese": "Bọn trẻ đã biểu diễn một điệu múa truyền thống ở ngôi chùa."
+        }
+      ]
+    },
+    {
+      "word": "live",
+      "sentences": [
+        {
+          "english": "We watched a live show at the crowded market last night.",
+          "vietnamese": "Chúng tôi đã xem một buổi diễn trực tiếp ở khu chợ đông đúc tối qua."
+        },
+        {
+          "english": "I prefer live music to a recording in a quiet room.",
+          "vietnamese": "Tôi thích nhạc trực tiếp hơn là bản thu trong một căn phòng yên tĩnh."
+        },
+        {
+          "english": "The band plays live at the pub every Friday night.",
+          "vietnamese": "Ban nhạc chơi trực tiếp ở quán rượu vào mỗi tối thứ Sáu."
+        },
+        {
+          "english": "Tickets for the live concert were quite expensive.",
+          "vietnamese": "Vé cho buổi hòa nhạc trực tiếp khá đắt."
+        },
+        {
+          "english": "Have you ever seen your favourite singer live on stage?",
+          "vietnamese": "Bạn đã bao giờ xem ca sĩ yêu thích của mình diễn trực tiếp trên sân khấu chưa?"
+        }
+      ]
+    },
+    {
+      "word": "catchy",
+      "sentences": [
+        {
+          "english": "This catchy song helps me memorise new vocabulary quickly.",
+          "vietnamese": "Bài hát bắt tai này giúp tôi ghi nhớ từ vựng mới một cách nhanh chóng."
+        },
+        {
+          "english": "The chorus is so catchy that my roommate keeps singing it.",
+          "vietnamese": "Đoạn điệp khúc bắt tai đến mức bạn cùng phòng tôi cứ hát nó mãi."
+        },
+        {
+          "english": "Shops use catchy music to attract more customers.",
+          "vietnamese": "Các cửa hàng dùng nhạc bắt tai để thu hút thêm nhiều khách hàng."
+        },
+        {
+          "english": "This catchy melody reminds me of my primary school days.",
+          "vietnamese": "Giai điệu bắt tai này gợi cho tôi nhớ về những ngày học tiểu học."
+        },
+        {
+          "english": "Do you think this catchy song will be popular at the festival?",
+          "vietnamese": "Bạn có nghĩ bài hát bắt tai này sẽ được yêu thích ở lễ hội không?"
+        }
+      ]
+    },
+    {
+      "word": "upbeat",
+      "sentences": [
+        {
+          "english": "Upbeat music makes my morning jogging feel much easier.",
+          "vietnamese": "Nhạc sôi động làm cho buổi chạy bộ buổi sáng của tôi thấy dễ dàng hơn nhiều."
+        },
+        {
+          "english": "The coach played upbeat songs to wake the tired team up.",
+          "vietnamese": "Huấn luyện viên đã mở những bài hát sôi động để đánh thức cả đội đang mệt."
+        },
+        {
+          "english": "Her upbeat style always makes the whole room feel lively.",
+          "vietnamese": "Phong cách vui tươi của cô ấy luôn làm cho cả căn phòng trở nên sống động."
+        },
+        {
+          "english": "We need an upbeat song for the wedding party next month.",
+          "vietnamese": "Chúng tôi cần một bài hát sôi động cho bữa tiệc cưới vào tháng tới."
+        },
+        {
+          "english": "The film ended with an upbeat song about peace.",
+          "vietnamese": "Bộ phim kết thúc bằng một bài hát vui tươi về hòa bình."
+        }
+      ]
+    },
+    {
+      "word": "play",
+      "sentences": [
+        {
+          "english": "She plays the piano whenever her family has a special celebration.",
+          "vietnamese": "Cô ấy chơi đàn piano mỗi khi gia đình có một dịp kỷ niệm đặc biệt."
+        },
+        {
+          "english": "My father played the guitar in a small pub for many years.",
+          "vietnamese": "Bố tôi đã chơi đàn ghi ta ở một quán rượu nhỏ trong nhiều năm."
+        },
+        {
+          "english": "Can you play any traditional instrument from your hometown?",
+          "vietnamese": "Bạn có chơi được nhạc cụ truyền thống nào của quê bạn không?"
+        },
+        {
+          "english": "The children are playing music together in the school playground.",
+          "vietnamese": "Bọn trẻ đang cùng nhau chơi nhạc ở sân chơi của trường."
+        },
+        {
+          "english": "He never plays music after ten because his neighbour complains.",
+          "vietnamese": "Anh ấy không bao giờ chơi nhạc sau mười giờ vì người hàng xóm phàn nàn."
+        }
+      ]
+    },
+    {
+      "word": "instrument",
+      "sentences": [
+        {
+          "english": "A guitar is the first instrument that most beginners choose.",
+          "vietnamese": "Đàn ghi ta là nhạc cụ đầu tiên mà hầu hết người mới bắt đầu chọn."
+        },
+        {
+          "english": "This traditional instrument comes from a village in the north.",
+          "vietnamese": "Nhạc cụ truyền thống này đến từ một ngôi làng ở miền bắc."
+        },
+        {
+          "english": "She keeps her instruments in a dry room upstairs.",
+          "vietnamese": "Cô ấy cất các nhạc cụ của mình trong một căn phòng khô ráo ở trên lầu."
+        },
+        {
+          "english": "How much does a good instrument cost these days?",
+          "vietnamese": "Một nhạc cụ tốt có giá bao nhiêu vào thời buổi này?"
+        },
+        {
+          "english": "My uncle repaired the old instrument in one afternoon.",
+          "vietnamese": "Chú tôi đã sửa cây nhạc cụ cũ chỉ trong một buổi chiều."
+        }
+      ]
+    },
+    {
+      "word": "loud",
+      "sentences": [
+        {
+          "english": "The music was too loud, so my father became annoyed.",
+          "vietnamese": "Nhạc quá to, nên bố tôi đã thấy khó chịu."
+        },
+        {
+          "english": "The loud drums at the festival scared my little sister.",
+          "vietnamese": "Tiếng trống to ở lễ hội đã làm em gái nhỏ của tôi sợ."
+        },
+        {
+          "english": "Please do not be so loud because our guest is sleeping.",
+          "vietnamese": "Làm ơn đừng ồn ào như vậy vì khách của chúng ta đang ngủ."
+        },
+        {
+          "english": "His loud voice can reach the back row without a speaker.",
+          "vietnamese": "Giọng to của anh ấy có thể tới được hàng ghế cuối mà không cần loa."
+        },
+        {
+          "english": "Loud music at midnight makes the whole neighbourhood noisy.",
+          "vietnamese": "Nhạc to lúc nửa đêm làm cả khu phố trở nên ồn ào."
+        }
+      ]
+    },
+    {
+      "word": "remind",
+      "sentences": [
+        {
+          "english": "This old song reminds me of my peaceful hometown.",
+          "vietnamese": "Bài hát cũ này gợi cho tôi nhớ về quê hương yên bình của mình."
+        },
+        {
+          "english": "Please remind me to book a ticket before the festival starts.",
+          "vietnamese": "Làm ơn nhắc tôi đặt vé trước khi lễ hội bắt đầu."
+        },
+        {
+          "english": "The soft music reminded her of a rainy afternoon at home.",
+          "vietnamese": "Bản nhạc nhẹ nhàng đã gợi cho cô ấy nhớ về một buổi chiều mưa ở nhà."
+        },
+        {
+          "english": "My trainer reminds us to breathe slowly during every exercise.",
+          "vietnamese": "Huấn luyện viên của tôi nhắc chúng tôi thở chậm trong mỗi bài tập."
+        },
+        {
+          "english": "Does this melody remind you of your favourite childhood film?",
+          "vietnamese": "Giai điệu này có gợi cho bạn nhớ về bộ phim tuổi thơ yêu thích không?"
+        }
+      ]
+    },
+    {
+      "word": "cry",
+      "sentences": [
+        {
+          "english": "Many guests cry at a beautiful wedding song.",
+          "vietnamese": "Nhiều vị khách khóc khi nghe một bài hát đám cưới đẹp."
+        },
+        {
+          "english": "She cried quietly when the singer finished the last song.",
+          "vietnamese": "Cô ấy đã khóc khe khẽ khi ca sĩ hát xong bài cuối cùng."
+        },
+        {
+          "english": "Do not cry; the show will continue after a short break.",
+          "vietnamese": "Đừng khóc; buổi diễn sẽ tiếp tục sau một quãng nghỉ ngắn."
+        },
+        {
+          "english": "The baby cries whenever the music at the party is too noisy.",
+          "vietnamese": "Em bé khóc mỗi khi nhạc ở bữa tiệc quá ồn."
+        },
+        {
+          "english": "Many people were crying at the end of the film.",
+          "vietnamese": "Nhiều người đã khóc vào lúc kết thúc bộ phim."
+        }
+      ]
+    },
+    {
+      "word": "volume",
+      "sentences": [
+        {
+          "english": "Please turn down the volume because my sister wants to sleep.",
+          "vietnamese": "Làm ơn vặn nhỏ âm lượng vì em gái tôi muốn ngủ."
+        },
+        {
+          "english": "The volume was so high that my ears started to hurt.",
+          "vietnamese": "Âm lượng lớn đến mức tai tôi bắt đầu đau."
+        },
+        {
+          "english": "He raised the volume when his favourite song came on.",
+          "vietnamese": "Anh ấy đã tăng âm lượng khi bài hát yêu thích của mình vang lên."
+        },
+        {
+          "english": "Could you check the volume before the live show begins?",
+          "vietnamese": "Bạn kiểm tra âm lượng trước khi buổi diễn trực tiếp bắt đầu được không?"
+        },
+        {
+          "english": "A low volume is better for a quiet classical evening.",
+          "vietnamese": "Âm lượng nhỏ thì hợp hơn cho một buổi tối nhạc cổ điển yên tĩnh."
+        }
+      ]
+    },
+    {
+      "word": "quietly",
+      "sentences": [
+        {
+          "english": "He plays the drum quietly so his roommate can rest.",
+          "vietnamese": "Anh ấy đánh trống khe khẽ để bạn cùng phòng có thể nghỉ ngơi."
+        },
+        {
+          "english": "The guests waited quietly for the famous musician to appear.",
+          "vietnamese": "Các vị khách lặng lẽ chờ người nhạc công nổi tiếng xuất hiện."
+        },
+        {
+          "english": "She closed the door quietly and left the party early.",
+          "vietnamese": "Cô ấy đóng cửa khe khẽ và rời bữa tiệc sớm."
+        },
+        {
+          "english": "Please speak quietly because my grandmother is sleeping upstairs.",
+          "vietnamese": "Làm ơn nói khẽ thôi vì bà tôi đang ngủ ở trên lầu."
+        },
+        {
+          "english": "He plays the flute quietly in the garage every morning.",
+          "vietnamese": "Anh ấy thổi sáo khe khẽ trong ga ra vào mỗi buổi sáng."
+        }
+      ]
+    },
+    {
+      "word": "record",
+      "sentences": [
+        {
+          "english": "The band recorded their first album in a small garage.",
+          "vietnamese": "Ban nhạc đã thu âm album đầu tiên của họ trong một ga ra nhỏ."
+        },
+        {
+          "english": "We will record the new song after the tour ends.",
+          "vietnamese": "Chúng tôi sẽ thu âm bài hát mới sau khi chuyến lưu diễn kết thúc."
+        },
+        {
+          "english": "She is recording her lesson so she can revise it later.",
+          "vietnamese": "Cô ấy đang ghi âm bài học để có thể ôn lại sau."
+        },
+        {
+          "english": "Do you want to record this song at a cheap studio in town?",
+          "vietnamese": "Bạn có muốn thu âm bài hát này ở một phòng thu rẻ trong thị trấn không?"
+        },
+        {
+          "english": "They recorded the whole concert and shared it with their fans.",
+          "vietnamese": "Họ đã thu lại toàn bộ buổi hòa nhạc và chia sẻ nó với người hâm mộ."
+        }
+      ]
+    },
+    {
+      "word": "clap",
+      "sentences": [
+        {
+          "english": "The whole team clapped after the final song.",
+          "vietnamese": "Cả đội đã vỗ tay sau bài hát cuối cùng."
+        },
+        {
+          "english": "The excited guests clapped when the band appeared.",
+          "vietnamese": "Các vị khách phấn khích đã vỗ tay khi ban nhạc xuất hiện."
+        },
+        {
+          "english": "Please clap along with the drums during this upbeat part.",
+          "vietnamese": "Hãy vỗ tay theo tiếng trống trong đoạn sôi động này."
+        },
+        {
+          "english": "Everyone was clapping at the end of the wedding ceremony.",
+          "vietnamese": "Mọi người đã vỗ tay vào lúc kết thúc buổi lễ cưới."
+        },
+        {
+          "english": "Children clap and sing together at every village festival.",
+          "vietnamese": "Trẻ em vỗ tay và hát cùng nhau ở mọi lễ hội trong làng."
+        }
+      ]
+    },
+    {
+      "word": "tune",
+      "sentences": [
+        {
+          "english": "I cannot forget this tune; it stays in my mind all day.",
+          "vietnamese": "Tôi không thể quên giai điệu này; nó ở trong tâm trí tôi cả ngày."
+        },
+        {
+          "english": "She hummed a soft tune while cooking dinner for her family.",
+          "vietnamese": "Cô ấy ngân nga một giai điệu nhẹ nhàng trong khi nấu bữa tối cho gia đình."
+        },
+        {
+          "english": "That tune is popular with tourists visiting our town.",
+          "vietnamese": "Giai điệu đó được du khách tới thị trấn của chúng tôi yêu thích."
+        },
+        {
+          "english": "Do you remember the tune of our national song?",
+          "vietnamese": "Bạn có nhớ giai điệu của bài hát quốc gia của chúng ta không?"
+        },
+        {
+          "english": "The old tune reminded my grandfather of the war years.",
+          "vietnamese": "Giai điệu xưa đã gợi cho ông tôi nhớ về những năm chiến tranh."
+        }
+      ]
+    },
+    {
+      "word": "classical",
+      "sentences": [
+        {
+          "english": "Classical music helps me feel calm before a hard exam.",
+          "vietnamese": "Nhạc cổ điển giúp tôi thấy bình tĩnh trước một kỳ thi khó."
+        },
+        {
+          "english": "My teacher says classical songs improve our memory.",
+          "vietnamese": "Cô giáo tôi nói rằng nhạc cổ điển cải thiện trí nhớ của chúng tôi."
+        },
+        {
+          "english": "We listened to classical music during the long train journey.",
+          "vietnamese": "Chúng tôi đã nghe nhạc cổ điển trong suốt chuyến tàu dài."
+        },
+        {
+          "english": "Do you prefer classical music or modern songs?",
+          "vietnamese": "Bạn thích nhạc cổ điển hơn hay nhạc hiện đại hơn?"
+        },
+        {
+          "english": "A classical concert at the temple attracted many foreign visitors.",
+          "vietnamese": "Một buổi hòa nhạc cổ điển ở ngôi chùa đã thu hút nhiều du khách nước ngoài."
+        }
+      ]
+    },
+    {
+      "word": "electronic",
+      "sentences": [
+        {
+          "english": "Electronic music is popular at parties in the city centre.",
+          "vietnamese": "Nhạc điện tử được ưa chuộng ở các bữa tiệc trong trung tâm thành phố."
+        },
+        {
+          "english": "He bought an electronic drum because his flat is small.",
+          "vietnamese": "Anh ấy đã mua một bộ trống điện tử vì căn hộ của anh ấy nhỏ."
+        },
+        {
+          "english": "Electronic sounds can be quite strange for older listeners.",
+          "vietnamese": "Âm thanh điện tử có thể khá lạ lẫm với người nghe lớn tuổi."
+        },
+        {
+          "english": "The nightclub plays electronic music until three in the morning.",
+          "vietnamese": "Hộp đêm mở nhạc điện tử cho tới ba giờ sáng."
+        },
+        {
+          "english": "She designed an electronic instrument for her final project.",
+          "vietnamese": "Cô ấy đã thiết kế một nhạc cụ điện tử cho đồ án cuối kỳ của mình."
+        }
+      ]
+    },
+    {
+      "word": "drum",
+      "sentences": [
+        {
+          "english": "My brother keeps his drum in the garage at the weekend.",
+          "vietnamese": "Anh trai tôi để cái trống của mình trong ga ra vào cuối tuần."
+        },
+        {
+          "english": "The drums at the festival were extremely loud last night.",
+          "vietnamese": "Tiếng trống ở lễ hội đã cực kỳ to vào tối qua."
+        },
+        {
+          "english": "He is learning to play the drum at a local music centre.",
+          "vietnamese": "Anh ấy đang học đánh trống ở một trung tâm âm nhạc địa phương."
+        },
+        {
+          "english": "Those old drums came from a village near the mountain.",
+          "vietnamese": "Những cái trống cũ đó đến từ một ngôi làng gần ngọn núi."
+        },
+        {
+          "english": "Do you think a drum is difficult for a beginner?",
+          "vietnamese": "Bạn có nghĩ cái trống là khó với người mới bắt đầu không?"
+        }
+      ]
+    },
+    {
+      "word": "lyrics",
+      "sentences": [
+        {
+          "english": "These lyrics are simple, so beginners can understand them easily.",
+          "vietnamese": "Lời bài hát này đơn giản, nên người mới học có thể hiểu chúng dễ dàng."
+        },
+        {
+          "english": "The lyrics of this song describe a quiet fishing village.",
+          "vietnamese": "Lời của bài hát này miêu tả một làng chài yên bình."
+        },
+        {
+          "english": "I memorise English lyrics to improve my vocabulary.",
+          "vietnamese": "Tôi học thuộc lời bài hát tiếng Anh để cải thiện vốn từ vựng của mình."
+        },
+        {
+          "english": "Who wrote the lyrics for that famous wedding song?",
+          "vietnamese": "Ai đã viết lời cho bài hát đám cưới nổi tiếng đó?"
+        },
+        {
+          "english": "Some lyrics are hard to understand without a translation.",
+          "vietnamese": "Một số lời bài hát khó hiểu nếu không có bản dịch."
+        }
+      ]
+    },
+    {
+      "word": "encourage",
+      "sentences": [
+        {
+          "english": "My mother encouraged me to join the singing contest.",
+          "vietnamese": "Mẹ tôi đã động viên tôi tham gia cuộc thi hát."
+        },
+        {
+          "english": "Good teachers encourage shy students to sing in public.",
+          "vietnamese": "Giáo viên giỏi khích lệ những học sinh nhút nhát hát trước đám đông."
+        },
+        {
+          "english": "Her coach encourages her to sing for twenty minutes daily.",
+          "vietnamese": "Huấn luyện viên của cô ấy khích lệ cô ấy hát hai mươi phút mỗi ngày."
+        },
+        {
+          "english": "The warm crowd encouraged the nervous singer to continue.",
+          "vietnamese": "Đám đông ấm áp đã khích lệ ca sĩ đang hồi hộp tiếp tục."
+        },
+        {
+          "english": "Will the excited guests encourage the band to sing one more song?",
+          "vietnamese": "Các vị khách phấn khích có khích lệ ban nhạc hát thêm một bài nữa không?"
+        }
+      ]
+    },
+    {
+      "word": "singer",
+      "sentences": [
+        {
+          "english": "That young singer became popular after a show in our town.",
+          "vietnamese": "Ca sĩ trẻ đó trở nên nổi tiếng sau một buổi diễn ở thị trấn của chúng tôi."
+        },
+        {
+          "english": "The singer looked nervous before the big contest.",
+          "vietnamese": "Ca sĩ trông hồi hộp trước cuộc thi lớn."
+        },
+        {
+          "english": "Many singers perform for free at the charity festival.",
+          "vietnamese": "Nhiều ca sĩ biểu diễn miễn phí ở lễ hội từ thiện."
+        },
+        {
+          "english": "She wants to be a singer, but her parents prefer a safe career.",
+          "vietnamese": "Cô ấy muốn làm ca sĩ, nhưng bố mẹ cô ấy thích một nghề nghiệp an toàn hơn."
+        },
+        {
+          "english": "Which singer do you follow on social media?",
+          "vietnamese": "Bạn theo dõi ca sĩ nào trên mạng xã hội?"
+        }
+      ]
+    }
+  ]
+}
