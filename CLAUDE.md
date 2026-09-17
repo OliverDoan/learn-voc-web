@@ -42,21 +42,20 @@ pnpm vitest run -t "tên test"         # Chạy 1 test theo tên
 pnpm db:seed          # Seed deck + truyện mẫu
 pnpm add:deck         # Thêm deck từ script
 pnpm import:vocab     # Import bộ từ vựng
-pnpm gen:examples     # Sinh câu ví dụ (AI)
-pnpm gen:review-examples # Viết lại câu ví dụ các Unit sau sao cho chêm từ Unit trước (AI, validate + retry)
-pnpm gen:synonyms     # Sinh đồng nghĩa (AI)
-pnpm gen:root-meanings# Sinh nghĩa từ gốc (AI)
-pnpm gen:stories      # Sinh thêm truyện chêm đủ từ cho mỗi deck (AI, có validate + retry)
 pnpm stories:load     # Kiểm tra (--check) & nạp truyện chêm từ prisma/story-data/*.json
 pnpm examples:load    # Kiểm tra (--check) & nạp câu ví dụ viết tay từ prisma/example-data/*.json
+pnpm gen:practice     # Sinh BỘ CÂU LUYỆN VIẾT (2-3 câu/từ) ra prisma/practice-data/*.json (AI)
+pnpm practice:load    # Kiểm tra (--check) & nạp bộ câu luyện viết vào bảng PracticeSentence
 pnpm data:export      # Xuất toàn bộ data ra file
 pnpm data:load        # Nạp lại data từ file
 pnpm sync:card-order  # Đồng bộ thứ tự thẻ
 ```
 
-> Các script AI (`gen:*`) gọi Claude API — cần key trong `.env`. Đọc script tương ứng trong `scripts/` trước khi chạy.
+> Dự án KHÔNG gọi Claude API nữa: các script `gen:*` sinh nội dung bằng AI đã bị gỡ, cùng với biến `ANTHROPIC_API_KEY`/`ANTHROPIC_MODEL` và dependency `@anthropic-ai/sdk`. Nội dung (câu ví dụ, truyện chêm) soạn tay dưới dạng JSON trong `prisma/` rồi nạp bằng các script `*:load` có validate. `pnpm gen:examples:dict` vẫn còn nhưng dùng Free Dictionary API, không phải AI.
 >
 > **Câu ví dụ chêm từ cũ**: mọi câu ví dụ (720/720 thẻ) đều chứa từ của chính thẻ VÀ ít nhất 1 từ đã học ở Unit trước — dùng cho bài "Viết lại câu" và "Điền từ vào câu". Nguồn viết tay ở `prisma/example-data/unit-NN.json`, nạp bằng `pnpm examples:load` (validate bằng `lib/sentence-review.ts`, không đạt thì KHÔNG ghi DB). Bản sao lưu câu cũ ở `prisma/example-data/backup/`.
+>
+> **Bộ câu luyện viết** (`PracticeSentence`): nhiều câu/từ cho dạng quiz "Luyện viết câu" (`sentence-practice`, dạng TUỲ CHỌN nên không ảnh hưởng điều kiện mở khoá deck). Mỗi câu chứa từ của thẻ VÀ ít nhất 1 từ đã học ở BẤT KỲ Unit cũ hơn nào. Nguồn viết tay ở `prisma/practice-data/unit-NN.json`, nạp bằng `pnpm practice:load` (validate bằng `lib/sentence-review.ts`, không đạt thì KHÔNG ghi DB). Sinh tự động bằng `pnpm gen:practice`. Logic thuần ở `lib/practice-sentence.ts`, API `/api/practice-sentences?deckId=`.
 >
 > **Truyện chêm**: `scripts/seed-stories.ts` giữ 1 truyện gốc/deck; các truyện bổ sung (5 truyện/deck, mỗi truyện chứa ĐỦ từ của deck) nằm ở `prisma/story-data/unit-NN.json` và nạp bằng `pnpm stories:load`. Độ phủ từ kiểm tra bằng `lib/story-coverage.ts` (`checkStoryCoverage`).
 
@@ -177,8 +176,8 @@ Render: word token = `<button class="font-bold text-primary underline-dotted">ap
   - ✅ 6.1 Foundation: trang `/ielts` overview + 4 sub-page guide (Listening / Reading / Writing / Speaking) + `lib/ielts-content.ts`
   - ⏳ 6.2 Reading practice: schema `ReadingPassage` + `ReadingQuestion`, MCQ / T-F-NG / Matching
   - ⏳ 6.3 Listening practice: schema `ListeningTest` + audio storage, fill-in-blank + MCQ
-  - ⏳ 6.4 Writing practice: `WritingPrompt` + `WritingSubmission`, AI chấm (Claude API)
-  - ⏳ 6.5 Speaking practice: `SpeakingPrompt` + `SpeakingRecording`, MediaRecorder + AI chấm
+  - ⏳ 6.4 Writing practice: `WritingPrompt` + `WritingSubmission` (chấm thủ công — dự án không còn gọi Claude API)
+  - ⏳ 6.5 Speaking practice: `SpeakingPrompt` + `SpeakingRecording`, MediaRecorder
 
 ## Quick start
 
@@ -192,7 +191,6 @@ pnpm test              # unit tests (11 file trong lib/__tests__)
 
 ## Còn thiếu (nice-to-have, chưa làm)
 
-- AI generate story (Claude API)
 - DALL-E / image gen
 - Reverse cards
 
