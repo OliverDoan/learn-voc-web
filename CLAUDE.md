@@ -44,7 +44,6 @@ pnpm add:deck         # Thêm deck từ script
 pnpm import:vocab     # Import bộ từ vựng
 pnpm stories:load     # Kiểm tra (--check) & nạp truyện chêm từ prisma/story-data/*.json
 pnpm examples:load    # Kiểm tra (--check) & nạp câu ví dụ viết tay từ prisma/example-data/*.json
-pnpm gen:practice     # Sinh BỘ CÂU LUYỆN VIẾT (2-3 câu/từ) ra prisma/practice-data/*.json (AI)
 pnpm practice:load    # Kiểm tra (--check) & nạp bộ câu luyện viết vào bảng PracticeSentence
 pnpm data:export      # Xuất toàn bộ data ra file
 pnpm data:load        # Nạp lại data từ file
@@ -55,7 +54,7 @@ pnpm sync:card-order  # Đồng bộ thứ tự thẻ
 >
 > **Câu ví dụ chêm từ cũ**: mọi câu ví dụ (720/720 thẻ) đều chứa từ của chính thẻ VÀ ít nhất 1 từ đã học ở Unit trước — dùng cho bài "Viết lại câu" và "Điền từ vào câu". Nguồn viết tay ở `prisma/example-data/unit-NN.json`, nạp bằng `pnpm examples:load` (validate bằng `lib/sentence-review.ts`, không đạt thì KHÔNG ghi DB). Bản sao lưu câu cũ ở `prisma/example-data/backup/`.
 >
-> **Bộ câu luyện viết** (`PracticeSentence`): nhiều câu/từ cho dạng quiz "Luyện viết câu" (`sentence-practice`, dạng TUỲ CHỌN nên không ảnh hưởng điều kiện mở khoá deck). Mỗi câu chứa từ của thẻ VÀ ít nhất 1 từ đã học ở BẤT KỲ Unit cũ hơn nào. Nguồn viết tay ở `prisma/practice-data/unit-NN.json`, nạp bằng `pnpm practice:load` (validate bằng `lib/sentence-review.ts`, không đạt thì KHÔNG ghi DB). Sinh tự động bằng `pnpm gen:practice`. Logic thuần ở `lib/practice-sentence.ts`, API `/api/practice-sentences?deckId=`.
+> **Bộ câu luyện viết** (`PracticeSentence`): nhiều câu/từ cho dạng quiz "Luyện viết câu" (`sentence-practice`, dạng TUỲ CHỌN nên không ảnh hưởng điều kiện mở khoá deck). Mỗi câu chứa từ của thẻ VÀ ít nhất 1 từ đã học ở BẤT KỲ Unit cũ hơn nào. Nguồn viết tay ở `prisma/practice-data/unit-NN.json`, nạp bằng `pnpm practice:load` (validate bằng `lib/sentence-review.ts`, không đạt thì KHÔNG ghi DB). Viết thêm câu = thêm file JSON rồi chạy `pnpm practice:load --check` để validate. Mỗi thẻ hiện có ĐÚNG 5 câu (720 thẻ / 3600 câu) và cả 5 hiện trong hộp thoại chi tiết từ (`components/deck/card-examples.tsx`). Logic thuần ở `lib/practice-sentence.ts`, API `/api/practice-sentences?deckId=` (cả deck) hoặc `?cardId=` (một thẻ).
 >
 > **Truyện chêm**: `scripts/seed-stories.ts` giữ 1 truyện gốc/deck; các truyện bổ sung (5 truyện/deck, mỗi truyện chứa ĐỦ từ của deck) nằm ở `prisma/story-data/unit-NN.json` và nạp bằng `pnpm stories:load`. Độ phủ từ kiểm tra bằng `lib/story-coverage.ts` (`checkStoryCoverage`).
 

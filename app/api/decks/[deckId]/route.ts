@@ -41,8 +41,13 @@ export async function GET(_req: NextRequest, { params }: RouteParams) {
       prisma.story.findMany({ where: { deckId }, select: { content: true } }),
     ]);
     const hasStoryWithWords = stories.some((s) => countWordTokens(s.content) > 0);
+    // Deck đã có câu luyện viết chưa (mở dạng "Luyện viết câu").
+    const practiceCount = await prisma.practiceSentence.count({
+      where: { card: { deckId, deletedAt: null } },
+    });
     const { exercises, allDone } = buildExerciseStatus(cards as unknown as Card[], activityRows, {
       hasStoryWithWords,
+      hasPracticeSentences: practiceCount > 0,
     });
     return ok({
       ...deck,

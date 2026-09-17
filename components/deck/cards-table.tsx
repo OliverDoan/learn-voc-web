@@ -1,7 +1,16 @@
 "use client";
 
 import { useRef, useState, useSyncExternalStore, type ReactNode } from "react";
-import { ClipboardCheck, Columns3, History, Plus, Table2, Trash2 } from "lucide-react";
+import {
+  ClipboardCheck,
+  Columns3,
+  History,
+  PenSquare,
+  Plus,
+  Table2,
+  Trash2,
+  type LucideIcon,
+} from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { useUpdateDeck } from "@/hooks/use-decks";
@@ -17,6 +26,7 @@ import { cn } from "@/lib/utils";
 import { hasTestHistory, TEST_HISTORY_EVENT } from "@/lib/test-history";
 import { DialectBadge } from "@/components/deck/dialect-badge";
 import { CardsTest } from "@/components/deck/cards-test";
+import { CardsSentenceTest } from "@/components/deck/cards-sentence-test";
 
 interface CardsTableProps {
   cards: Card[];
@@ -24,6 +34,30 @@ interface CardsTableProps {
   /** Mở hộp thoại lịch sử các từ làm sai (đặt trong toolbar của bảng). */
   onOpenHistory?: () => void;
 }
+
+/** Chế độ hiển thị trong tab Bảng. */
+type TableMode = "table" | "test" | "sentence";
+
+const TABLE_MODES: Array<{
+  id: TableMode;
+  label: string;
+  icon: LucideIcon;
+  title: string;
+}> = [
+  { id: "table", label: "Bảng", icon: Table2, title: "Xem & sửa bảng từ vựng" },
+  {
+    id: "test",
+    label: "Kiểm tra",
+    icon: ClipboardCheck,
+    title: "Hiện nghĩa tiếng Việt, gõ từ tiếng Anh + từ loại",
+  },
+  {
+    id: "sentence",
+    label: "Viết câu",
+    icon: PenSquare,
+    title: "Hiện câu ví dụ tiếng Việt, gõ lại câu tiếng Anh",
+  },
+];
 
 // Cột built-in (chỉ xem) — STT luôn hiện, các cột còn lại có thể ẩn.
 // `className` (tuỳ chọn) áp cho cả header lẫn ô để chỉnh độ rộng từng cột.
@@ -204,8 +238,9 @@ export function CardsTable({ cards, deck, onOpenHistory }: CardsTableProps) {
   };
 
   const [menuOpen, setMenuOpen] = useState(false);
-  // Chế độ trong tab Bảng: xem/sửa bảng hoặc kiểm tra (gộp chức năng Kiểm tra).
-  const [testMode, setTestMode] = useState(false);
+  // Chế độ trong tab Bảng: xem/sửa bảng, kiểm tra từ vựng, hoặc viết lại câu.
+  const [tableMode, setTableMode] = useState<TableMode>("table");
+  const testMode = tableMode !== "table";
   const historyExists = useHasTestHistory(deck.id);
   const visibleBuiltin = BUILTIN.filter((b) => !hidden.has(b.key));
   const visibleColumns = columns.filter((c) => !hidden.has(c.id));
@@ -216,30 +251,22 @@ export function CardsTable({ cards, deck, onOpenHistory }: CardsTableProps) {
       <div className="mb-3 flex flex-wrap items-center gap-2">
         {/* Chuyển giữa xem bảng và kiểm tra */}
         <div className="inline-flex rounded-lg border bg-card p-0.5">
-          <button
-            type="button"
-            onClick={() => setTestMode(false)}
-            className={cn(
-              "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
-              !testMode
-                ? "bg-primary text-primary-foreground"
-                : "text-muted-foreground hover:text-foreground",
-            )}
-          >
-            <Table2 className="h-4 w-4" /> Bảng
-          </button>
-          <button
-            type="button"
-            onClick={() => setTestMode(true)}
-            className={cn(
-              "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
-              testMode
-                ? "bg-primary text-primary-foreground"
-                : "text-muted-foreground hover:text-foreground",
-            )}
-          >
-            <ClipboardCheck className="h-4 w-4" /> Kiểm tra
-          </button>
+          {TABLE_MODES.map((m) => (
+            <button
+              key={m.id}
+              type="button"
+              onClick={() => setTableMode(m.id)}
+              title={m.title}
+              className={cn(
+                "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
+                tableMode === m.id
+                  ? "bg-primary text-primary-foreground"
+                  : "text-muted-foreground hover:text-foreground",
+              )}
+            >
+              <m.icon className="h-4 w-4" /> {m.label}
+            </button>
+          ))}
         </div>
         {!testMode ? (
           <>
@@ -306,8 +333,10 @@ export function CardsTable({ cards, deck, onOpenHistory }: CardsTableProps) {
         ) : null}
       </div>
 
-      {testMode ? (
+      {tableMode === "test" ? (
         <CardsTest cards={cards} deckId={deck.id} />
+      ) : tableMode === "sentence" ? (
+        <CardsSentenceTest cards={cards} />
       ) : (
       <div className="overflow-x-auto rounded-xl border bg-card">
         <table className="w-full border-collapse text-sm">

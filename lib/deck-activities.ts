@@ -29,6 +29,7 @@ export type DeckActivityKey =
   | "story-fill"
   | "word-formation"
   | "sentence-writing"
+  | "sentence-practice"
   | "test"
   | "flashcards"
   | "pronounce";
@@ -53,6 +54,8 @@ export const DECK_ACTIVITIES: readonly ActivityDef[] = [
   { key: "story-fill", label: "Điền truyện chêm", scored: true },
   { key: "word-formation", label: "Biến đổi từ", scored: true },
   { key: "sentence-writing", label: "Viết lại câu", scored: true },
+  // Luyện viết câu: TUỲ CHỌN — bộ câu luyện riêng, không bắt buộc để mở khóa deck.
+  { key: "sentence-practice", label: "Luyện viết câu", scored: true, optional: true },
   { key: "test", label: "Làm bài", scored: false },
   // Phát âm: TUỲ CHỌN — không bắt buộc để mở khóa deck.
   { key: "pronounce", label: "Phát âm", scored: true, optional: true },
@@ -104,6 +107,8 @@ export const DECK_ACTIVITY_KEYS = DECK_ACTIVITIES.map((a) => a.key);
 export interface ActivityContext {
   /** Deck có ít nhất 1 truyện chêm chứa từ chêm → mở "Điền truyện chêm". */
   hasStoryWithWords?: boolean;
+  /** Deck có ít nhất 1 câu luyện viết → mở "Luyện viết câu". */
+  hasPracticeSentences?: boolean;
 }
 
 /**
@@ -125,6 +130,8 @@ export function eligibleActivities(
   if (sentenceWritingEligibleCards(cards).length >= 1) result.push("sentence-writing");
   // Điền truyện chêm: cần truyện có từ chêm, không phụ thuộc số thẻ.
   if (ctx.hasStoryWithWords) result.push("story-fill");
+  // Luyện viết câu: cần bộ câu luyện đã nạp cho deck.
+  if (ctx.hasPracticeSentences) result.push("sentence-practice");
   // "Học (SRS)" (study) và "Biến đổi từ" (word-formation) KHÔNG tính vào tiến độ /
   // điều kiện mở khóa (vẫn học/chơi được bình thường ở trang tương ứng).
 

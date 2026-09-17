@@ -48,6 +48,13 @@ export async function GET() {
     for (const s of allStories) {
       if (countWordTokens(s.content) > 0) hasStoryWordsByDeck.set(s.deckId, true);
     }
+    // Deck nào đã có câu luyện viết (mở dạng "Luyện viết câu").
+    const practiceRows = await prisma.practiceSentence.findMany({
+      where: { card: { deletedAt: null } },
+      select: { card: { select: { deckId: true } } },
+      distinct: ["cardId"],
+    });
+    const hasPracticeByDeck = new Set(practiceRows.map((r) => r.card.deckId));
 
     const enriched = await Promise.all(
       decks.map(async (d) => {
@@ -66,7 +73,10 @@ export async function GET() {
         const exercisesDone = allExercisesDone(
           cardsByDeck.get(d.id) ?? [],
           activitiesByDeck.get(d.id) ?? [],
-          { hasStoryWithWords: hasStoryWordsByDeck.get(d.id) ?? false },
+          {
+            hasStoryWithWords: hasStoryWordsByDeck.get(d.id) ?? false,
+            hasPracticeSentences: hasPracticeByDeck.has(d.id),
+          },
         );
         return {
           ...d,

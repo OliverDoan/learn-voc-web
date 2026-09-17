@@ -3,6 +3,7 @@ import {
   allExercisesDone,
   buildExerciseStatus,
   eligibleActivities,
+  mandatoryActivities,
   isActivityDone,
   requiredExerciseCount,
   type ActivityRecord,
@@ -103,6 +104,24 @@ describe("eligibleActivities", () => {
     expect(eligibleActivities([makeCard()], { hasStoryWithWords: false })).not.toContain(
       "story-fill",
     );
+  });
+
+  it("deck có câu luyện viết → mở dạng luyện viết câu", () => {
+    expect(eligibleActivities([makeCard()], { hasPracticeSentences: true })).toContain(
+      "sentence-practice",
+    );
+  });
+
+  it("deck chưa có câu luyện viết → không có dạng luyện viết câu", () => {
+    expect(eligibleActivities([makeCard()])).not.toContain("sentence-practice");
+    expect(eligibleActivities([makeCard()], { hasPracticeSentences: false })).not.toContain(
+      "sentence-practice",
+    );
+  });
+
+  it("luyện viết câu là dạng TUỲ CHỌN — không làm tăng số dạng bắt buộc mở khoá", () => {
+    const keys = eligibleActivities([makeCard()], { hasPracticeSentences: true });
+    expect(mandatoryActivities(keys)).not.toContain("sentence-practice");
   });
 });
 

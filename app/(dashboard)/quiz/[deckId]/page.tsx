@@ -13,6 +13,7 @@ import {
   ListChecks,
   Loader2,
   PenLine,
+  NotebookPen,
   PenSquare,
   Repeat,
   Sparkles,
@@ -30,6 +31,7 @@ import { GapFillQuiz } from "@/components/quiz/gap-fill-quiz";
 import { WordFormationQuiz } from "@/components/quiz/word-formation-quiz";
 import { SentenceWritingQuiz } from "@/components/quiz/sentence-writing-quiz";
 import { TestModeQuiz } from "@/components/quiz/test-mode-quiz";
+import { SentencePracticeRunner } from "@/components/quiz/sentence-practice-runner";
 import { PrevWrongBadge } from "@/components/quiz/prev-wrong-badge";
 import { DeckLockedScreen } from "@/components/deck/deck-locked-screen";
 import { useCards } from "@/hooks/use-cards";
@@ -49,6 +51,7 @@ type QuizMode =
   | "gap-fill"
   | "word-formation"
   | "sentence-writing"
+  | "sentence-practice"
   | "test";
 type QuizDirection = "word-to-meaning" | "meaning-to-word";
 
@@ -63,6 +66,7 @@ const MODES: { id: QuizMode; label: string; icon: LucideIcon; desc: string; minC
   { id: "gap-fill", label: "Điền từ vào câu", icon: PenLine, desc: "Điền từ còn thiếu vào câu ví dụ", minCards: 1 },
   { id: "word-formation", label: "Biến đổi từ", icon: Repeat, desc: "Biến đổi từ gốc sang đúng dạng từ loại", minCards: 1 },
   { id: "sentence-writing", label: "Viết lại câu", icon: PenSquare, desc: "Dịch câu tiếng Việt sang câu tiếng Anh", minCards: 1 },
+  { id: "sentence-practice", label: "Luyện viết câu", icon: NotebookPen, desc: "Bộ câu luyện riêng, nhiều câu mỗi từ, có chêm từ Unit cũ", minCards: 1 },
   { id: "test", label: "Làm bài", icon: LayoutGrid, desc: "Lưới câu hỏi, nhảy tự do giữa các câu", minCards: 4 },
 ];
 
@@ -134,6 +138,8 @@ export default function QuizPage({ params }: PageProps) {
   );
 
   const poolForMode = (m: QuizMode): Card[] => {
+    // Luyện viết câu dùng bộ câu luyện (API riêng), không phụ thuộc pool thẻ.
+    if (m === "sentence-practice") return sourceCards;
     if (m === "gap-fill") return gapFillPool;
     if (m === "word-formation") return wordFormPool;
     if (m === "sentence-writing") return sentenceWritingPool;
@@ -270,6 +276,16 @@ export default function QuizPage({ params }: PageProps) {
 
   // ID các thẻ làm sai ở lần gần nhất của ĐÚNG dạng này — để đánh dấu khi làm lại.
   const prevWrongIds = deck?.exercises?.find((e) => e.key === mode)?.wrongCardIds ?? [];
+
+  if (mode === "sentence-practice") {
+    return (
+      <SentencePracticeRunner
+        deckId={deckId}
+        prevWrongIds={prevWrongIds}
+        onExit={() => setMode(null)}
+      />
+    );
+  }
 
   if (mode === "test") {
     return (
