@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import {
   ArrowLeft,
   ArrowLeftRight,
+  ArrowRight,
   CheckCircle2,
   Headphones,
   Keyboard,
@@ -354,6 +355,8 @@ function QuizRunner({
   const [index, setIndex] = useState(0);
   const [correct, setCorrect] = useState(0);
   const [done, setDone] = useState(false);
+  // Trả lời SAI thì dừng lại ở câu đó: người học đọc đáp án đúng rồi tự bấm tiếp.
+  const [awaitingNext, setAwaitingNext] = useState(false);
   const submit = useSubmitReview();
   const recordActivity = useRecordDeckActivity(deckId);
   const recordedRef = useRef(false);
@@ -381,6 +384,7 @@ function QuizRunner({
   }, [current, frozenAllCards]);
 
   const goNext = () => {
+    setAwaitingNext(false);
     if (index + 1 >= total) setDone(true);
     else setIndex(index + 1);
   };
@@ -397,8 +401,13 @@ function QuizRunner({
     }
     if (isCorrect) setCorrect((c) => c + 1);
     else wrongIdsRef.current.add(current.id);
-    // Dạng bài tự nhảy câu: chờ một nhịp cho người học kịp nhìn phản hồi.
+    // Dạng tự lo nút "Câu tiếp theo" (bài viết câu) — không đụng vào.
     if (MANUAL_NEXT_MODES.includes(mode)) return;
+    // Sai thì dừng để đọc đáp án đúng; đúng thì chờ một nhịp rồi tự sang câu sau.
+    if (!isCorrect) {
+      setAwaitingNext(true);
+      return;
+    }
     setTimeout(goNext, 900);
   };
 
@@ -406,9 +415,24 @@ function QuizRunner({
     setDone(false);
     setIndex(0);
     setCorrect(0);
+    setAwaitingNext(false);
     recordedRef.current = false;
     wrongIdsRef.current = new Set();
   }, [mode]);
+
+  // Đang chờ bấm tiếp thì Enter = sang câu sau. Listener chỉ gắn sau khi render
+  // nên chính phím Enter vừa dùng để nộp câu trả lời không kích hoạt nhầm.
+  useEffect(() => {
+    if (!awaitingNext) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key !== "Enter") return;
+      e.preventDefault();
+      goNext();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [awaitingNext, index, total]);
 
   // Ghi nhận hoàn thành dạng quiz (kèm độ chính xác + danh sách câu sai) khi kết thúc phiên — chỉ cho deck thật.
   useEffect(() => {
@@ -520,6 +544,18 @@ function QuizRunner({
           <ListeningQuiz key={current.id} question={current} onAnswer={handleAnswer} />
         )}
       </div>
+
+      {awaitingNext ? (
+        <div className="w-full max-w-xl">
+          <Button className="w-full" size="lg" onClick={goNext}>
+            {index + 1 >= total ? "Xem kết quả" : "Làm tiếp"}
+            <ArrowRight className="h-4 w-4" />
+          </Button>
+          <p className="mt-2 text-center text-xs text-muted-foreground">
+            Xem kỹ đáp án đúng rồi bấm tiếp (hoặc nhấn Enter)
+          </p>
+        </div>
+      ) : null}
     </div>
   );
 }
