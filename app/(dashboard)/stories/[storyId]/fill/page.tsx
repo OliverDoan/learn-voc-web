@@ -2,7 +2,7 @@
 
 import { use, useMemo, useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, Check, CheckCircle2, Loader2, X } from "lucide-react";
+import { ArrowLeft, Check, CheckCircle2, Lightbulb, Loader2, X } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { useRecordDeckActivity } from "@/hooks/use-decks";
@@ -42,6 +42,8 @@ export default function FillBlankPage({ params }: PageProps) {
 
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [submitted, setSubmitted] = useState(false);
+  /** Hiện nghĩa tiếng Việt trong ô trống làm gợi ý (tắt đi để tự thử thách). */
+  const [showMeaning, setShowMeaning] = useState(true);
 
   if (isLoading) {
     return (
@@ -105,9 +107,23 @@ export default function FillBlankPage({ params }: PageProps) {
         <ArrowLeft className="h-4 w-4" /> Về truyện
       </Link>
 
-      <h1 className="mb-2 text-2xl font-bold">Điền từ chêm</h1>
+      <div className="mb-2 flex items-start justify-between gap-3">
+        <h1 className="text-2xl font-bold">Điền từ chêm</h1>
+        <Button
+          variant="outline"
+          size="icon"
+          onClick={() => setShowMeaning((prev) => !prev)}
+          aria-pressed={showMeaning}
+          aria-label={showMeaning ? "Ẩn nghĩa tiếng Việt" : "Hiện nghĩa tiếng Việt"}
+          title={showMeaning ? "Ẩn nghĩa tiếng Việt" : "Hiện nghĩa tiếng Việt"}
+          className={cn("shrink-0", showMeaning && "border-amber-500 text-amber-500")}
+        >
+          <Lightbulb className="h-4 w-4" />
+        </Button>
+      </div>
       <p className="mb-6 text-sm text-muted-foreground">
         Điền lại các từ tiếng Anh đã chêm vào nội dung truyện.
+        {showMeaning ? "" : " (Đang ẩn nghĩa tiếng Việt)"}
       </p>
 
       <article className="mb-6 rounded-xl border bg-card p-6 text-lg leading-loose whitespace-pre-wrap">
@@ -125,7 +141,7 @@ export default function FillBlankPage({ params }: PageProps) {
                 onChange={(e) =>
                   setAnswers((prev) => ({ ...prev, [i]: e.target.value }))
                 }
-                placeholder={tok.meaning}
+                placeholder={showMeaning ? tok.meaning : "?"}
                 className={cn(
                   "mx-1 w-32 rounded-md border bg-background px-2 py-0.5 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-ring",
                   correct && "border-green-500 bg-green-500/10 text-green-500",
