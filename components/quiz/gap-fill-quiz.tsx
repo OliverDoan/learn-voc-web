@@ -29,8 +29,11 @@ export function GapFillQuiz({ question, onAnswer }: GapFillQuizProps) {
   // Kiểm tra chính tả: phải gõ ĐÚNG HOÀN TOÀN (không tha sai ký tự nào).
   const tolerance = 0;
 
-  // Gợi ý theo bậc: bản dịch câu trước, rồi mới lộ dần ký tự đầu của đáp án.
-  const hint = buildHintState(target, hintLevel, Boolean(gap.translation));
+  // Gợi ý theo bậc: nghĩa của từ → bản dịch câu → lộ dần ký tự đầu của đáp án.
+  const hint = buildHintState(target, hintLevel, {
+    hasMeaning: Boolean(question.meaning),
+    hasTranslation: Boolean(gap.translation),
+  });
 
   const revealHint = () => {
     if (submitted || hint.exhausted) return;
@@ -62,15 +65,17 @@ export function GapFillQuiz({ question, onAnswer }: GapFillQuizProps) {
           </span>
           {after}
         </p>
-        <p className="mt-4 text-center text-sm text-muted-foreground">
-          Nghĩa từ cần điền: <strong className="text-foreground">{question.meaning}</strong>
-          {question.partOfSpeech ? (
-            <Badge variant="secondary" className="ml-2 text-[10px]">
-              {question.partOfSpeech}
-            </Badge>
-          ) : null}
-        </p>
-        {hint.showTranslation ? (
+        {submitted || hint.showMeaning ? (
+          <p className="mt-4 text-center text-sm text-muted-foreground">
+            Nghĩa từ cần điền: <strong className="text-foreground">{question.meaning}</strong>
+            {question.partOfSpeech ? (
+              <Badge variant="secondary" className="ml-2 text-[10px]">
+                {question.partOfSpeech}
+              </Badge>
+            ) : null}
+          </p>
+        ) : null}
+        {submitted || hint.showTranslation ? (
           <p className="mt-1 text-center text-xs italic text-muted-foreground">
             {gap.translation}
           </p>

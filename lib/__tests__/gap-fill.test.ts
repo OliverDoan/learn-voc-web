@@ -97,52 +97,75 @@ describe("gapFillEligibleCards", () => {
 });
 
 describe("buildHintState — bậc gợi ý của bài điền từ", () => {
+  // Bậc gợi ý tăng dần: nghĩa của từ → bản dịch câu → lộ dần ký tự đầu.
+  const full = { hasMeaning: true, hasTranslation: true };
+
   it("chưa nhấn gợi ý: không lộ gì cả", () => {
-    const s = buildHintState("beginner", 0, true);
+    const s = buildHintState("beginner", 0, full);
+    expect(s.showMeaning).toBe(false);
     expect(s.showTranslation).toBe(false);
     expect(s.maskedAnswer).toBeNull();
     expect(s.used).toBe(false);
   });
 
-  it("có bản dịch: bậc 1 chỉ hiện bản dịch, chưa lộ ký tự nào", () => {
-    const s = buildHintState("beginner", 1, true);
-    expect(s.showTranslation).toBe(true);
+  it("bậc 1 chỉ hiện nghĩa của từ cần điền", () => {
+    const s = buildHintState("beginner", 1, full);
+    expect(s.showMeaning).toBe(true);
+    expect(s.showTranslation).toBe(false);
     expect(s.maskedAnswer).toBeNull();
     expect(s.used).toBe(true);
   });
 
-  it("có bản dịch: bậc 2 trở đi mới hiện dần ký tự đầu", () => {
-    expect(buildHintState("beginner", 2, true).maskedAnswer).toBe("b_______");
-    expect(buildHintState("beginner", 4, true).maskedAnswer).toBe("beg_____");
+  it("bậc 2 hiện thêm bản dịch câu, vẫn chưa lộ ký tự", () => {
+    const s = buildHintState("beginner", 2, full);
+    expect(s.showMeaning).toBe(true);
+    expect(s.showTranslation).toBe(true);
+    expect(s.maskedAnswer).toBeNull();
   });
 
-  it("không có bản dịch: bậc 1 đã hiện ký tự đầu", () => {
-    const s = buildHintState("beginner", 1, false);
+  it("bậc 3 trở đi mới lộ dần ký tự đầu", () => {
+    expect(buildHintState("beginner", 3, full).maskedAnswer).toBe("b_______");
+    expect(buildHintState("beginner", 5, full).maskedAnswer).toBe("beg_____");
+  });
+
+  it("thiếu bản dịch câu: bậc 2 đã lộ ký tự đầu", () => {
+    const s = buildHintState("beginner", 2, { hasMeaning: true, hasTranslation: false });
+    expect(s.showMeaning).toBe(true);
     expect(s.showTranslation).toBe(false);
     expect(s.maskedAnswer).toBe("b_______");
   });
 
-  it("giữ nguyên khoảng trắng của cụm từ", () => {
-    expect(buildHintState("give up", 1, false).maskedAnswer).toBe("g___ __");
+  it("không có gợi ý nghĩa nào: bậc 1 đã lộ ký tự đầu", () => {
+    const s = buildHintState("beginner", 1, { hasMeaning: false, hasTranslation: false });
+    expect(s.showMeaning).toBe(false);
+    expect(s.maskedAnswer).toBe("b_______");
   });
 
-  it("maxHints = số ký tự lộ dần được, cộng 1 nếu có bản dịch", () => {
-    expect(buildHintState("beginner", 0, true).maxHints).toBe(8);
-    expect(buildHintState("beginner", 0, false).maxHints).toBe(7);
+  it("giữ nguyên khoảng trắng của cụm từ", () => {
+    expect(
+      buildHintState("give up", 1, { hasMeaning: false, hasTranslation: false }).maskedAnswer,
+    ).toBe("g___ __");
+  });
+
+  it("maxHints = số ký tự lộ dần được, cộng các bậc gợi ý nghĩa", () => {
+    expect(buildHintState("beginner", 0, full).maxHints).toBe(9);
+    expect(buildHintState("beginner", 0, { hasMeaning: true, hasTranslation: false }).maxHints).toBe(8);
+    expect(buildHintState("beginner", 0, { hasMeaning: false, hasTranslation: false }).maxHints).toBe(7);
     // Từ 1 ký tự: vẫn còn ít nhất 1 bậc để dùng
-    expect(buildHintState("a", 0, false).maxHints).toBe(1);
+    expect(buildHintState("a", 0, { hasMeaning: false, hasTranslation: false }).maxHints).toBe(1);
   });
 
   it("không lộ quá số bậc tối đa", () => {
-    const s = buildHintState("beginner", 99, true);
+    const s = buildHintState("beginner", 99, full);
     expect(s.maskedAnswer).toBe("beginne_");
     expect(s.exhausted).toBe(true);
   });
 
   it("nextHintLabel mô tả bậc gợi ý kế tiếp", () => {
-    expect(buildHintState("beginner", 0, true).nextHintLabel).toBe("Hiện nghĩa tiếng Việt của câu");
-    expect(buildHintState("beginner", 1, true).nextHintLabel).toBe("Hiện 1 ký tự đầu");
-    expect(buildHintState("beginner", 2, true).nextHintLabel).toBe("Hiện 2 ký tự đầu");
-    expect(buildHintState("beginner", 99, true).nextHintLabel).toBe("Đã dùng hết gợi ý");
+    expect(buildHintState("beginner", 0, full).nextHintLabel).toBe("Hiện nghĩa của từ cần điền");
+    expect(buildHintState("beginner", 1, full).nextHintLabel).toBe("Hiện nghĩa tiếng Việt của câu");
+    expect(buildHintState("beginner", 2, full).nextHintLabel).toBe("Hiện 1 ký tự đầu");
+    expect(buildHintState("beginner", 3, full).nextHintLabel).toBe("Hiện 2 ký tự đầu");
+    expect(buildHintState("beginner", 99, full).nextHintLabel).toBe("Đã dùng hết gợi ý");
   });
 });

@@ -45,7 +45,9 @@ export function gapFillEligibleCards(cards: readonly Card[]): Card[] {
 export interface GapFillHintState {
   /** Đã dùng gợi ý nào chưa (để gắn nhãn "có gợi ý" khi trả lời đúng). */
   used: boolean;
-  /** Có hiện bản dịch tiếng Việt của câu không (bậc gợi ý đầu tiên). */
+  /** Có hiện nghĩa tiếng Việt của từ cần điền không (bậc gợi ý đầu tiên). */
+  showMeaning: boolean;
+  /** Có hiện bản dịch tiếng Việt của cả câu không (bậc gợi ý thứ hai). */
   showTranslation: boolean;
   /** Đáp án lộ dần ký tự đầu (vd "beg_____"); `null` khi chưa tới bậc lộ chữ. */
   maskedAnswer: string | null;
@@ -57,25 +59,37 @@ export interface GapFillHintState {
   nextHintLabel: string;
 }
 
+/** Những gợi ý nghĩa mà thẻ hiện có (thiếu cái nào thì bỏ qua bậc đó). */
+export interface GapFillHintSources {
+  /** Thẻ có nghĩa tiếng Việt của từ cần điền. */
+  hasMeaning: boolean;
+  /** Thẻ có bản dịch tiếng Việt của câu ví dụ. */
+  hasTranslation: boolean;
+}
+
 /**
  * Tính trạng thái gợi ý theo từng bậc cho bài điền từ.
  *
- * Bậc gợi ý tăng dần từ rẻ đến đắt:
- *   1. Bản dịch tiếng Việt của câu (chỉ khi card có `exampleTranslation`).
- *   2+. Lộ dần từng ký tự đầu của đáp án, tối đa `answer.length - 1` ký tự
+ * Mặc định câu hỏi KHÔNG lộ gì ngoài câu khoét trống — muốn gợi ý phải bấm
+ * nút bóng đèn, và mỗi lần bấm chỉ mở thêm một bậc, từ rẻ đến đắt:
+ *   1. Nghĩa tiếng Việt của từ cần điền.
+ *   2. Bản dịch tiếng Việt của cả câu.
+ *   3+. Lộ dần từng ký tự đầu của đáp án, tối đa `answer.length - 1` ký tự
  *       (luôn chừa lại ít nhất 1 ký tự để không lộ trọn đáp án).
  */
 export function buildHintState(
   answer: string,
   hintLevel: number,
-  hasTranslation: boolean,
+  sources: GapFillHintSources,
 ): GapFillHintState {
+  const meaningHints = sources.hasMeaning ? 1 : 0;
+  const translationHints = sources.hasTranslation ? 1 : 0;
+  const wordHints = meaningHints + translationHints;
   const letterHints = Math.max(1, answer.length - 1);
-  const translationHints = hasTranslation ? 1 : 0;
-  const maxHints = letterHints + translationHints;
+  const maxHints = wordHints + letterHints;
   const level = Math.min(Math.max(hintLevel, 0), maxHints);
 
-  const revealed = Math.max(0, level - translationHints);
+  const revealed = Math.max(0, level - wordHints);
   const maskedAnswer =
     revealed > 0
       ? answer
@@ -87,13 +101,16 @@ export function buildHintState(
   const exhausted = level >= maxHints;
   const nextHintLabel = exhausted
     ? "Đã dùng hết gợi ý"
-    : level === 0 && hasTranslation
-      ? "Hiện nghĩa tiếng Việt của câu"
-      : `Hiện ${revealed + 1} ký tự đầu`;
+    : level === 0 && sources.hasMeaning
+      ? "Hiện nghĩa của từ cần điền"
+      : level < wordHints
+        ? "Hiện nghĩa tiếng Việt của câu"
+        : `Hiện ${revealed + 1} ký tự đầu`;
 
   return {
     used: level > 0,
-    showTranslation: hasTranslation && level > 0,
+    showMeaning: sources.hasMeaning && level >= 1,
+    showTranslation: sources.hasTranslation && level >= wordHints,
     maskedAnswer,
     maxHints,
     exhausted,
