@@ -1,0 +1,247 @@
+{
+  "unit": 40,
+  "deck": "Unit 40: Giải trí và đi chơi",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "pop",
+      "sentences": [
+        { "english": "She saves money to buy a ticket for the pop concert.", "vietnamese": "Cô ấy để dành tiền mua vé xem buổi hoà nhạc pop." },
+        { "english": "Pop music is popular with teenagers everywhere.", "vietnamese": "Nhạc pop được giới trẻ ở khắp nơi yêu thích." },
+        { "english": "The pop singer sang three songs at the festival.", "vietnamese": "Ca sĩ nhạc pop đã hát ba bài ở lễ hội." },
+        { "english": "He downloaded a new pop album last night.", "vietnamese": "Anh ấy tải một album nhạc pop mới tối qua." },
+        { "english": "Our neighbour plays pop songs too loud every evening.", "vietnamese": "Hàng xóm của chúng tôi tối nào cũng mở nhạc pop quá to." }
+      ]
+    },
+    {
+      "word": "leave",
+      "sentences": [
+        { "english": "We had to leave the party before midnight.", "vietnamese": "Chúng tôi phải rời bữa tiệc trước nửa đêm." },
+        { "english": "Please turn off the stove before you leave the house.", "vietnamese": "Hãy tắt bếp trước khi bạn rời khỏi nhà." },
+        { "english": "Don't leave your bag on the pavement.", "vietnamese": "Đừng để túi của bạn trên vỉa hè." },
+        { "english": "The last train leaves the station at eleven.", "vietnamese": "Chuyến tàu cuối rời ga lúc mười một giờ." },
+        { "english": "He never leaves the gym before an hour of exercise.", "vietnamese": "Anh ấy không bao giờ rời phòng gym trước một tiếng tập luyện." }
+      ]
+    },
+    {
+      "word": "excellent",
+      "sentences": [
+        { "english": "The chef cooked an excellent dinner for our guests.", "vietnamese": "Đầu bếp đã nấu một bữa tối xuất sắc cho khách của chúng tôi." },
+        { "english": "Her exam grade was excellent this term.", "vietnamese": "Điểm thi của cô ấy học kỳ này rất xuất sắc." },
+        { "english": "The hotel service was excellent and the room was comfy.", "vietnamese": "Dịch vụ khách sạn tuyệt vời và căn phòng rất thoải mái." },
+        { "english": "He is an excellent guide who knows every temple in the city.", "vietnamese": "Anh ấy là một hướng dẫn viên xuất sắc, biết mọi ngôi chùa trong thành phố." },
+        { "english": "The team played an excellent match on Sunday.", "vietnamese": "Đội đã chơi một trận xuất sắc vào Chủ nhật." }
+      ]
+    },
+    {
+      "word": "party",
+      "sentences": [
+        { "english": "We had a party to celebrate our anniversary.", "vietnamese": "Chúng tôi tổ chức một bữa tiệc để kỷ niệm ngày cưới." },
+        { "english": "They hired a band to play at the wedding party.", "vietnamese": "Họ thuê một ban nhạc chơi ở tiệc cưới." },
+        { "english": "The party was noisy, so our neighbour complained.", "vietnamese": "Bữa tiệc ồn ào nên hàng xóm của chúng tôi phàn nàn." },
+        { "english": "She wore a lovely dress to the office party.", "vietnamese": "Cô ấy mặc một chiếc váy đáng yêu đến bữa tiệc công ty." },
+        { "english": "We cooked hotpot for the party at home.", "vietnamese": "Chúng tôi nấu lẩu cho bữa tiệc ở nhà." }
+      ]
+    },
+    {
+      "word": "dance",
+      "sentences": [
+        { "english": "She loves to dance at every wedding.", "vietnamese": "Cô ấy thích nhảy ở mọi đám cưới." },
+        { "english": "They danced until the lanterns went out.", "vietnamese": "Họ nhảy cho đến khi những chiếc lồng đèn tắt." },
+        { "english": "My grandmother still dances at the village festival.", "vietnamese": "Bà tôi vẫn nhảy múa ở lễ hội làng." },
+        { "english": "He is shy and refuses to dance in public.", "vietnamese": "Anh ấy nhút nhát và từ chối nhảy ở nơi công cộng." },
+        { "english": "Dancing is a cheap way to exercise every day.", "vietnamese": "Nhảy múa là một cách tập luyện rẻ tiền mỗi ngày." }
+      ]
+    },
+    {
+      "word": "bar",
+      "sentences": [
+        { "english": "We met our old housemate at a quiet bar near the station.", "vietnamese": "Chúng tôi gặp lại người bạn cùng nhà cũ ở một quán bar yên tĩnh gần nhà ga." },
+        { "english": "The bar near the coast serves cold beer and seafood.", "vietnamese": "Quán bar gần bờ biển phục vụ bia lạnh và hải sản." },
+        { "english": "We waited at the bar until the show started.", "vietnamese": "Chúng tôi đợi ở quầy bar cho đến khi buổi diễn bắt đầu." },
+        { "english": "That bar is always crowded on Friday nights.", "vietnamese": "Quán bar đó luôn đông nghịt vào tối thứ Sáu." },
+        { "english": "He works in a bar to pay for his course.", "vietnamese": "Anh ấy làm ở một quán bar để trả tiền khoá học." }
+      ]
+    },
+    {
+      "word": "series",
+      "sentences": [
+        { "english": "I watched the whole series in one rainy weekend.", "vietnamese": "Tôi xem hết cả bộ phim trong một cuối tuần mưa." },
+        { "english": "This series has five seasons and every part is exciting.", "vietnamese": "Bộ phim này có năm mùa và phần nào cũng hấp dẫn." },
+        { "english": "My housemate recommended a Korean series about a chef.", "vietnamese": "Bạn cùng nhà giới thiệu cho tôi một bộ phim Hàn về một đầu bếp." },
+        { "english": "The new series is available on that website.", "vietnamese": "Bộ phim mới có sẵn trên trang web đó." },
+        { "english": "The series was boring, so I went to sleep early.", "vietnamese": "Bộ phim chán nên tôi đi ngủ sớm." }
+      ]
+    },
+    {
+      "word": "silly",
+      "sentences": [
+        { "english": "His silly mistake made the whole team laugh.", "vietnamese": "Lỗi ngớ ngẩn của anh ấy khiến cả đội bật cười." },
+        { "english": "It was silly to go hiking without water.", "vietnamese": "Thật ngốc khi đi leo núi mà không mang nước." },
+        { "english": "Children love silly cartoons on Sunday morning.", "vietnamese": "Bọn trẻ thích những bộ phim hoạt hình ngớ ngẩn vào sáng Chủ nhật." },
+        { "english": "Don't be silly; that ticket price is a scam.", "vietnamese": "Đừng ngốc thế; cái giá vé đó là lừa đảo." },
+        { "english": "He made a silly face to cheer up his lonely grandmother.", "vietnamese": "Cậu ấy làm mặt hề để chọc cười người bà cô đơn của mình." }
+      ]
+    },
+    {
+      "word": "show",
+      "sentences": [
+        { "english": "The evening show at the theatre was sold out.", "vietnamese": "Buổi diễn tối ở nhà hát đã bán hết vé." },
+        { "english": "The magic show starts after the fireworks.", "vietnamese": "Màn ảo thuật bắt đầu sau màn pháo hoa." },
+        { "english": "We booked two seats for the comedy show.", "vietnamese": "Chúng tôi đặt hai chỗ cho buổi diễn hài." },
+        { "english": "The show was so popular that tickets sold out in a day.", "vietnamese": "Buổi diễn nổi tiếng đến mức vé bán hết trong một ngày." },
+        { "english": "A well-known singer will host the show tonight.", "vietnamese": "Một ca sĩ nổi tiếng sẽ dẫn dắt buổi diễn tối nay." }
+      ]
+    },
+    {
+      "word": "review",
+      "sentences": [
+        { "english": "Her review of the film was honest but kind.", "vietnamese": "Bài đánh giá phim của cô ấy thẳng thắn nhưng tử tế." },
+        { "english": "I read a review before booking the homestay.", "vietnamese": "Tôi đọc một bài đánh giá trước khi đặt homestay." },
+        { "english": "His review of the new coffee shop was fair.", "vietnamese": "Bài nhận xét của anh ấy về quán cà phê mới rất công bằng." },
+        { "english": "Customers write a review after every delivery.", "vietnamese": "Khách hàng viết đánh giá sau mỗi lần giao hàng." },
+        { "english": "The film got a terrible review in the newspaper.", "vietnamese": "Bộ phim nhận một bài đánh giá tệ hại trên báo." }
+      ]
+    },
+    {
+      "word": "engaging",
+      "sentences": [
+        { "english": "The book was so engaging that I missed my station.", "vietnamese": "Cuốn sách cuốn hút đến mức tôi lỡ cả bến xuống." },
+        { "english": "An engaging speaker keeps the whole room awake.", "vietnamese": "Một diễn giả cuốn hút giữ cho cả phòng tỉnh táo." },
+        { "english": "The trainer used an engaging game to explain the rule.", "vietnamese": "Người dạy dùng một trò chơi cuốn hút để giải thích quy tắc." },
+        { "english": "Her daily blog is engaging because she writes about real life.", "vietnamese": "Nhật ký hằng ngày của cô ấy cuốn hút vì cô viết về đời thật." },
+        { "english": "This drama is engaging from the very first minute.", "vietnamese": "Bộ phim này cuốn hút ngay từ phút đầu tiên." }
+      ]
+    },
+    {
+      "word": "drink",
+      "sentences": [
+        { "english": "We ordered a cold drink after the long hike.", "vietnamese": "Chúng tôi gọi một ly nước lạnh sau chuyến đi bộ đường dài." },
+        { "english": "He ordered a sparkling drink with lemon.", "vietnamese": "Anh ấy gọi một ly nước có ga với chanh." },
+        { "english": "Don't drink too much coffee before an interview.", "vietnamese": "Đừng uống quá nhiều cà phê trước buổi phỏng vấn." },
+        { "english": "A cold drink is perfect after a humid afternoon.", "vietnamese": "Một ly nước lạnh thật tuyệt sau một buổi chiều oi ẩm." },
+        { "english": "The guest asked for a drink without sugar.", "vietnamese": "Vị khách xin một ly đồ uống không đường." }
+      ]
+    },
+    {
+      "word": "character",
+      "sentences": [
+        { "english": "My favourite character in the drama is a shy dentist.", "vietnamese": "Nhân vật tôi thích nhất trong bộ phim là một nha sĩ nhút nhát." },
+        { "english": "The main character in the story is a jobless engineer.", "vietnamese": "Nhân vật chính trong câu chuyện là một kỹ sư thất nghiệp." },
+        { "english": "Every character in that story has a secret.", "vietnamese": "Mỗi nhân vật trong câu chuyện đó đều có một bí mật." },
+        { "english": "Children love the funny character with a blue hat.", "vietnamese": "Bọn trẻ thích nhân vật hài hước đội chiếc mũ xanh." },
+        { "english": "The actress played a brave character in the war film.", "vietnamese": "Nữ diễn viên đóng một nhân vật dũng cảm trong bộ phim chiến tranh." }
+      ]
+    },
+    {
+      "word": "scene",
+      "sentences": [
+        { "english": "The last scene of the film made my sister cry.", "vietnamese": "Cảnh cuối của bộ phim khiến chị tôi bật khóc." },
+        { "english": "The opening scene shows a busy market.", "vietnamese": "Cảnh mở đầu cho thấy một khu chợ tấp nập." },
+        { "english": "That scene was filmed near a waterfall.", "vietnamese": "Cảnh đó được quay gần một thác nước." },
+        { "english": "The final scene surprised every viewer.", "vietnamese": "Cảnh cuối cùng làm mọi người xem bất ngờ." },
+        { "english": "My favourite scene happens in a small pagoda.", "vietnamese": "Cảnh tôi thích nhất diễn ra trong một ngôi chùa nhỏ." }
+      ]
+    },
+    {
+      "word": "barman",
+      "sentences": [
+        { "english": "The barman remembered my order from last summer.", "vietnamese": "Anh pha chế vẫn nhớ món tôi gọi từ mùa hè năm ngoái." },
+        { "english": "The barman is friendly and remembers every customer.", "vietnamese": "Anh pha chế thân thiện và nhớ mặt từng khách hàng." },
+        { "english": "A good barman can make a smoothie in a minute.", "vietnamese": "Một người pha chế giỏi có thể làm một ly sinh tố trong một phút." },
+        { "english": "The barman refused to serve alcohol to teenagers.", "vietnamese": "Người pha chế từ chối phục vụ rượu cho thanh thiếu niên." },
+        { "english": "He worked as a barman before he became a chef.", "vietnamese": "Anh ấy làm pha chế trước khi trở thành đầu bếp." }
+      ]
+    },
+    {
+      "word": "snack",
+      "sentences": [
+        { "english": "We bought some snacks before the concert.", "vietnamese": "Chúng tôi mua ít đồ ăn vặt trước buổi hoà nhạc." },
+        { "english": "She packed a healthy snack for the hike.", "vietnamese": "Cô ấy chuẩn bị một món ăn vặt lành mạnh cho chuyến leo núi." },
+        { "english": "Peanuts are my favourite snack at the cinema.", "vietnamese": "Đậu phộng là món ăn vặt yêu thích của tôi ở rạp phim." },
+        { "english": "Too many sweet snacks are unhealthy for children.", "vietnamese": "Quá nhiều đồ ăn vặt ngọt thì không tốt cho trẻ em." },
+        { "english": "We shared a snack on the balcony after dinner.", "vietnamese": "Chúng tôi chia nhau món ăn vặt trên ban công sau bữa tối." }
+      ]
+    },
+    {
+      "word": "magic",
+      "sentences": [
+        { "english": "The magic show at the festival delighted the children.", "vietnamese": "Màn ảo thuật ở lễ hội làm bọn trẻ thích mê." },
+        { "english": "The children believe in magic and old fairy tales.", "vietnamese": "Bọn trẻ tin vào phép thuật và những chuyện cổ tích xưa." },
+        { "english": "He learned a magic trick from his uncle last summer.", "vietnamese": "Cậu ấy học được một trò ảo thuật từ chú mình mùa hè năm ngoái." },
+        { "english": "The performer used a hidden pocket for the magic coin.", "vietnamese": "Người biểu diễn dùng một cái túi giấu kín cho đồng xu ảo thuật." },
+        { "english": "That evening at the lake felt like magic.", "vietnamese": "Buổi tối hôm đó bên hồ cứ như có phép màu." }
+      ]
+    },
+    {
+      "word": "punish",
+      "sentences": [
+        { "english": "Our trainer never punishes anyone for one late assignment.", "vietnamese": "Thầy của chúng tôi không bao giờ phạt ai chỉ vì một bài nộp muộn." },
+        { "english": "The referee punished the player for a rude tackle.", "vietnamese": "Trọng tài phạt cầu thủ vì một pha vào bóng thô lỗ." },
+        { "english": "My parents never punished me for a low grade.", "vietnamese": "Bố mẹ tôi chưa bao giờ phạt tôi vì điểm thấp." },
+        { "english": "The company punishes anyone who is regularly late.", "vietnamese": "Công ty phạt bất kỳ ai thường xuyên đi trễ." },
+        { "english": "It is unfair to punish the whole team for one mistake.", "vietnamese": "Thật bất công khi phạt cả đội vì một lỗi sai." }
+      ]
+    },
+    {
+      "word": "particularly",
+      "sentences": [
+        { "english": "I like comedy films, particularly the old ones.", "vietnamese": "Tôi thích phim hài, đặc biệt là những phim cũ." },
+        { "english": "I love seafood, particularly grilled squid.", "vietnamese": "Tôi thích hải sản, đặc biệt là mực nướng." },
+        { "english": "The traffic is particularly bad on rainy mornings.", "vietnamese": "Giao thông đặc biệt tệ vào những buổi sáng mưa." },
+        { "english": "She is particularly good at badminton.", "vietnamese": "Cô ấy đặc biệt giỏi môn cầu lông." },
+        { "english": "This district is particularly touristy in summer.", "vietnamese": "Quận này đặc biệt đông khách du lịch vào mùa hè." }
+      ]
+    },
+    {
+      "word": "circus",
+      "sentences": [
+        { "english": "The circus came to our town every summer.", "vietnamese": "Gánh xiếc về thị trấn chúng tôi vào mỗi mùa hè." },
+        { "english": "The circus tent was crowded with excited children.", "vietnamese": "Lều xiếc chật kín những đứa trẻ háo hức." },
+        { "english": "A performer at the circus juggled five bottles.", "vietnamese": "Một nghệ sĩ ở rạp xiếc tung hứng năm cái chai." },
+        { "english": "We bought circus tickets at a reasonable price.", "vietnamese": "Chúng tôi mua vé xiếc với giá hợp lý." },
+        { "english": "The circus animals looked weak and hungry.", "vietnamese": "Những con vật trong rạp xiếc trông yếu ớt và đói." }
+      ]
+    },
+    {
+      "word": "enjoyable",
+      "sentences": [
+        { "english": "The trip was enjoyable even though the air was humid.", "vietnamese": "Chuyến đi vẫn thú vị dù không khí oi ẩm." },
+        { "english": "The homestay was cosy and the whole stay was enjoyable.", "vietnamese": "Homestay ấm cúng và cả kỳ nghỉ đều thú vị." },
+        { "english": "Cooking with friends is more enjoyable than eating alone.", "vietnamese": "Nấu ăn cùng bạn bè thì thú vị hơn ăn một mình." },
+        { "english": "It was an enjoyable journey despite the delay.", "vietnamese": "Đó là một hành trình thú vị dù bị hoãn." },
+        { "english": "Learning vocabulary becomes enjoyable with a good game.", "vietnamese": "Học từ vựng trở nên thú vị với một trò chơi hay." }
+      ]
+    },
+    {
+      "word": "comic",
+      "sentences": [
+        { "english": "He collects old comic books about a brave pilot.", "vietnamese": "Anh ấy sưu tầm những cuốn truyện tranh cũ về một phi công dũng cảm." },
+        { "english": "He reads a comic during every long flight.", "vietnamese": "Anh ấy đọc truyện tranh trong mỗi chuyến bay dài." },
+        { "english": "The comic actress made the whole theatre laugh.", "vietnamese": "Nữ diễn viên hài khiến cả nhà hát cười vang." },
+        { "english": "Her comic style reminds me of an old cartoon.", "vietnamese": "Phong cách hài của cô ấy làm tôi nhớ đến một phim hoạt hình cũ." },
+        { "english": "This comic is about a detective in the capital.", "vietnamese": "Cuốn truyện tranh này kể về một thám tử ở thủ đô." }
+      ]
+    },
+    {
+      "word": "hero",
+      "sentences": [
+        { "english": "The hero of the story saves his neighbourhood from a flood.", "vietnamese": "Người hùng của câu chuyện cứu khu phố của mình khỏi trận lụt." },
+        { "english": "The young officer became a hero after the accident.", "vietnamese": "Người sĩ quan trẻ trở thành anh hùng sau vụ tai nạn." },
+        { "english": "My father is my hero because he is always patient.", "vietnamese": "Bố tôi là người hùng của tôi vì ông luôn kiên nhẫn." },
+        { "english": "The hero of the film is a young pilot.", "vietnamese": "Nhân vật chính của bộ phim là một phi công trẻ." },
+        { "english": "Children need a hero who is kind, not cruel.", "vietnamese": "Trẻ con cần một người hùng tử tế, chứ không tàn nhẫn." }
+      ]
+    },
+    {
+      "word": "entertain",
+      "sentences": [
+        { "english": "The clown entertained the crowded hall for an hour.", "vietnamese": "Chú hề đã mua vui cho cả khán phòng đông nghịt suốt một tiếng." },
+        { "english": "The musician entertained the guests at the wedding.", "vietnamese": "Người nhạc sĩ đã giúp khách khứa vui vẻ trong đám cưới." },
+        { "english": "Cartoons entertain children on a rainy afternoon.", "vietnamese": "Phim hoạt hình giúp bọn trẻ giải trí vào một buổi chiều mưa." },
+        { "english": "He entertained us with funny stories about his hometown.", "vietnamese": "Anh ấy mua vui cho chúng tôi bằng những câu chuyện hài về quê mình." },
+        { "english": "A good guide knows how to entertain every visitor.", "vietnamese": "Một hướng dẫn viên giỏi biết cách làm vui lòng mọi du khách." }
+      ]
+    }
+  ]
+}

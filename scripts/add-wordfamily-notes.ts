@@ -78,6 +78,9 @@ const FAMILIES: string[][] = [
   ["sociable", "socially"],
   ["type", "typical"],
   ["serious", "seriously"],
+  ["comic", "comedy"],
+  ["drink", "drinking"],
+  ["scenery", "scene"],
 ];
 
 // Từ liên quan (đồng nghĩa / cùng trường nghĩa). Mỗi nhóm cần >= 2 deck mới ghi.
@@ -111,7 +114,7 @@ const RELATED: string[][] = [
   ["modern", "traditional"], // hiện đại <-> truyền thống
   ["religion", "Buddhist", "believe", "pray", "priest"], // tôn giáo
   ["holiday", "leisure"], // nghỉ ngơi / thời gian rảnh
-  ["view", "sightseeing"], // khung cảnh / ngắm cảnh
+  ["view", "sightseeing", "scene"], // khung cảnh / ngắm cảnh / cảnh phim
   ["boil", "grill", "stir-fry", "roast"], // cách nấu
   ["stir", "pour", "add", "mix"], // thao tác bếp
   ["groceries", "ingredient"], // nguyên liệu / thực phẩm
@@ -138,12 +141,12 @@ const RELATED: string[][] = [
   ["catchy", "popular"], // bắt tai / được ưa chuộng
   ["upbeat", "cheerful", "joyful"], // sôi động / vui vẻ / hân hoan
   ["encourage", "support"], // khích lệ / ủng hộ
-  ["perform", "show"], // biểu diễn / buổi diễn
+  ["perform", "show", "entertain"], // biểu diễn / buổi diễn / mua vui
   ["instrument", "guitar", "flute", "drum"], // nhạc cụ
   ["shout", "scream"], // hét / thét
   ["well-known", "popular"], // nổi tiếng / phổ biến
   ["frequently", "regularly"], // thường xuyên
-  ["fantastic", "amazing", "extraordinary"], // tuyệt vời / phi thường
+  ["fantastic", "amazing", "extraordinary", "excellent"], // tuyệt vời / phi thường / xuất sắc
   ["theatre", "drama"], // nhà hát / tác phẩm kịch
   ["concert", "musician"], // buổi hoà nhạc / nhạc sĩ
   ["remember", "memorise"], // nhớ / ghi nhớ
@@ -161,7 +164,7 @@ const RELATED: string[][] = [
   ["trust", "reliable"], // tin tưởng / đáng tin cậy
   ["easy-going", "calm"], // dễ tính / điềm tĩnh
   ["hyper", "active"], // tăng động / năng động
-  ["judge", "consider"], // đánh giá / cân nhắc
+  ["judge", "consider", "review"], // đánh giá / cân nhắc / nhận xét
   ["result", "effect"], // kết quả / tác động
   ["attitude", "opinion"], // thái độ / quan điểm
   ["depressed", "disappointed"], // chán nản / thất vọng
@@ -175,6 +178,13 @@ const RELATED: string[][] = [
   ["laugh", "cry"], // cười <-> khóc
   ["homesick", "lonely"], // nhớ nhà / cô đơn
   ["mood", "vibe", "atmosphere"], // tâm trạng / không khí
+  ["silly", "crazy"], // ngớ ngẩn / điên rồ
+  ["hero", "brave"], // anh hùng / dũng cảm
+  ["drink", "alcohol", "beer", "wine"], // đồ uống / rượu bia
+  ["party", "celebration"], // bữa tiệc / lễ kỷ niệm
+  ["pop", "classical"], // nhạc pop / nhạc cổ điển
+  ["engaging", "appealing"], // cuốn hút / hấp dẫn
+  ["series", "film"], // phim dài tập / phim
 ];
 
 // Biến thể Anh–Anh (BrE) ↔ Anh–Mỹ (AmE): từ khác hẳn (flat↔apartment) hoặc khác chính tả.
