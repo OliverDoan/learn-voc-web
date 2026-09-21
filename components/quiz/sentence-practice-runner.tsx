@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { SentencePracticeQuiz } from "@/components/quiz/sentence-practice-quiz";
 import { PrevWrongBadge } from "@/components/quiz/prev-wrong-badge";
+import { PrevWrongPanel } from "@/components/quiz/prev-wrong-panel";
 import { usePracticeSentences } from "@/hooks/use-practice-sentences";
 import { useRecordDeckActivity } from "@/hooks/use-decks";
 import { useSubmitReview } from "@/hooks/use-study";
@@ -50,6 +51,16 @@ export function SentencePracticeRunner({
   );
   const total = items.length;
   const current = items[index];
+  // Mỗi thẻ có nhiều câu luyện — gom về 1 dòng/thẻ cho bảng "Lần trước bạn sai".
+  const practiceCards = useMemo(() => {
+    const byCard = new Map<string, { id: string; word: string; meaning: string }>();
+    for (const item of items) {
+      if (!byCard.has(item.cardId)) {
+        byCard.set(item.cardId, { id: item.cardId, word: item.word, meaning: item.meaning });
+      }
+    }
+    return [...byCard.values()];
+  }, [items]);
 
   const handleAnswer = async (isCorrect: boolean) => {
     if (!current) return;
@@ -153,6 +164,13 @@ export function SentencePracticeRunner({
         </div>
         <Progress value={index + 1} max={total} />
       </div>
+
+      <PrevWrongPanel
+        wrongIds={prevWrongIds}
+        cards={practiceCards}
+        currentCardId={current.cardId}
+        className="mb-3"
+      />
 
       {prevWrongSet.has(current.cardId) ? (
         <div className="mb-1 flex w-full justify-center">

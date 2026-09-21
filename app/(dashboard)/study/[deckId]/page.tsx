@@ -18,6 +18,7 @@ import { SegmentedProgress } from "@/components/ui/segmented-progress";
 import { Flashcard } from "@/components/flashcard/flashcard";
 import { RatingButtons } from "@/components/flashcard/rating-buttons";
 import { PrevWrongBadge } from "@/components/quiz/prev-wrong-badge";
+import { PrevWrongPanel } from "@/components/quiz/prev-wrong-panel";
 import { DeckLockedScreen } from "@/components/deck/deck-locked-screen";
 import { useDeck, useRecordDeckActivity } from "@/hooks/use-decks";
 import { useStudyQueue, useSubmitReview } from "@/hooks/use-study";
@@ -82,10 +83,11 @@ export default function StudyPage({ params }: PageProps) {
   }, []);
 
   // Câu sai lần gần nhất (ổn định suốt phiên — chỉ đổi sau khi nộp, lúc đã ở màn kết quả).
-  const prevWrongSet = useMemo(
-    () => new Set(deck?.exercises?.find((e) => e.key === "study")?.wrongCardIds ?? []),
+  const prevWrongIds = useMemo(
+    () => deck?.exercises?.find((e) => e.key === "study")?.wrongCardIds ?? [],
     [deck],
   );
+  const prevWrongSet = useMemo(() => new Set(prevWrongIds), [prevWrongIds]);
 
   useEffect(() => {
     setStartedAt(Date.now());
@@ -268,6 +270,13 @@ export default function StudyPage({ params }: PageProps) {
         </div>
         <SegmentedProgress value={index} total={total} />
       </div>
+
+      <PrevWrongPanel
+        wrongIds={prevWrongIds}
+        cards={queue ?? []}
+        currentCardId={current.id}
+        className="mb-3"
+      />
 
       {prevWrongSet.has(current.id) ? (
         <div className="flex w-full justify-center">

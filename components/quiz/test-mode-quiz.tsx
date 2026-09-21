@@ -8,6 +8,7 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { PrevWrongBadge } from "@/components/quiz/prev-wrong-badge";
+import { PrevWrongPanel } from "@/components/quiz/prev-wrong-panel";
 import { useRecordDeckActivity } from "@/hooks/use-decks";
 import { useSubmitReview } from "@/hooks/use-study";
 import { haptic } from "@/lib/haptic";
@@ -224,6 +225,12 @@ export function TestModeQuiz({
 
         {/* Cột phải: câu hỏi hiện tại */}
         <div className="min-w-0 flex-1">
+          <PrevWrongPanel
+            wrongIds={prevWrongIds}
+            cards={allCards}
+            currentCardId={current.id}
+            className="mb-3"
+          />
           <div className="mb-2 flex items-center justify-between gap-2">
             <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Câu {index + 1}

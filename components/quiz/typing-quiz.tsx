@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { cn, levenshtein } from "@/lib/utils";
+import { matchesMeaning, meaningVariants } from "@/lib/meaning-match";
 import type { Card } from "@/lib/types";
 
 type QuizDirection = "word-to-meaning" | "meaning-to-word";
@@ -36,8 +37,11 @@ export function TypingQuiz({
 
   const maxHints = Math.max(1, target.length - 1);
   // Gõ từ tiếng Anh: phải đúng chính tả hoàn toàn (tolerance 0).
-  // Gõ nghĩa tiếng Việt: nới lỏng vì cách diễn đạt có thể khác đôi chút.
-  const tolerance = isReverse ? Math.max(2, Math.floor(target.length * 0.25)) : 0;
+  // Gõ nghĩa tiếng Việt: so khớp bằng lib/meaning-match (nới lỗi gõ + chấp nhận
+  // MỘT trong nhiều nghĩa, vd "tức giận; điên rồ" gõ "điên rồ" vẫn đúng).
+  const tolerance = 0;
+  // Thẻ có nhiều nghĩa/cách diễn đạt → nhắc lại nghĩa đầy đủ sau khi trả lời đúng.
+  const hasMultipleMeanings = isReverse && meaningVariants(target).length > 1;
 
   const showHint = hintLevel > 0;
   const hintText = showHint
@@ -55,8 +59,10 @@ export function TypingQuiz({
 
   const handleSubmit = () => {
     if (!value.trim() || submitted) return;
-    const distance = levenshtein(value.trim().toLowerCase(), target.toLowerCase());
-    const correct = distance <= tolerance;
+    const answer = value.trim();
+    const correct = isReverse
+      ? matchesMeaning(answer, target)
+      : levenshtein(answer.toLowerCase(), target.toLowerCase()) <= tolerance;
     setIsCorrect(correct);
     setSubmitted(true);
     onAnswer(correct, value.trim());
@@ -100,8 +106,13 @@ export function TypingQuiz({
       {submitted ? (
         <div className="mt-3 flex items-center justify-between rounded-md border bg-muted/30 p-3 text-sm">
           {isCorrect ? (
-            <span className="flex items-center gap-2 text-green-500">
+            <span className="flex flex-wrap items-center gap-2 text-green-500">
               <Check className="h-4 w-4" /> Chính xác!
+              {hasMultipleMeanings ? (
+                <span className="text-muted-foreground">
+                  Nghĩa đầy đủ: <strong className="text-foreground">{target}</strong>
+                </span>
+              ) : null}
               {showHint ? (
                 <Badge variant="warning" className="ml-1 text-[10px]">
                   có gợi ý

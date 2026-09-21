@@ -18,6 +18,7 @@ import { Progress } from "@/components/ui/progress";
 import { useCards } from "@/hooks/use-cards";
 import { useDeck, useRecordDeckActivity } from "@/hooks/use-decks";
 import { PrevWrongBadge } from "@/components/quiz/prev-wrong-badge";
+import { PrevWrongPanel } from "@/components/quiz/prev-wrong-panel";
 import { DeckLockedScreen } from "@/components/deck/deck-locked-screen";
 import { useSpeechRecognition, type SpeechResult } from "@/hooks/use-speech-recognition";
 import { matchPronunciation } from "@/lib/speech-recognition";
@@ -72,6 +73,7 @@ export default function PronouncePage({ params }: PageProps) {
   const recordedRef = useRef(false);
   // Tập thẻ sai của lần gần nhất (từ deck) để đánh dấu "lần trước bạn sai từ này".
   // Dữ liệu ổn định suốt phiên (chỉ đổi sau khi nộp, lúc đó đã ở màn kết quả).
+  const prevWrongIds = deck?.exercises?.find((e) => e.key === "pronounce")?.wrongCardIds ?? [];
   const prevWrongSet = useMemo(
     () => new Set(deck?.exercises?.find((e) => e.key === "pronounce")?.wrongCardIds ?? []),
     [deck],
@@ -307,6 +309,13 @@ export default function PronouncePage({ params }: PageProps) {
         {prevWrongSet.has(current.id) ? (
           <PrevWrongBadge show className="mt-3" />
         ) : null}
+
+        <PrevWrongPanel
+          wrongIds={prevWrongIds}
+          cards={allCards ?? []}
+          currentCardId={current.id}
+          className="mt-4 text-left"
+        />
 
         {/* Khu vực phản hồi */}
         <div className="mt-6 min-h-[64px] w-full">

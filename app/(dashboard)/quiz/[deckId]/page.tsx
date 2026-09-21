@@ -33,6 +33,7 @@ import { SentenceWritingQuiz } from "@/components/quiz/sentence-writing-quiz";
 import { TestModeQuiz } from "@/components/quiz/test-mode-quiz";
 import { SentencePracticeRunner } from "@/components/quiz/sentence-practice-runner";
 import { PrevWrongBadge } from "@/components/quiz/prev-wrong-badge";
+import { PrevWrongPanel } from "@/components/quiz/prev-wrong-panel";
 import { DeckLockedScreen } from "@/components/deck/deck-locked-screen";
 import { useCards } from "@/hooks/use-cards";
 import { useDeck, useRecordDeckActivity } from "@/hooks/use-decks";
@@ -240,6 +241,9 @@ export default function QuizPage({ params }: PageProps) {
           {MODES.map((m) => {
             const available = poolForMode(m.id).length;
             const disabled = available < m.minCards;
+            // Số từ sai ở lượt gần nhất của chính dạng này (xem chi tiết khi vào bài).
+            const prevWrongCount =
+              deck?.exercises?.find((e) => e.key === m.id)?.wrongCardIds.length ?? 0;
             return (
               <button
                 key={m.id}
@@ -252,6 +256,11 @@ export default function QuizPage({ params }: PageProps) {
                 </span>
                 <div className="text-[17px] font-bold tracking-tight">{m.label}</div>
                 <div className="mt-1.5 text-[13px] leading-snug text-muted-foreground">{m.desc}</div>
+                {!disabled && prevWrongCount > 0 ? (
+                  <div className="mt-2 text-[11px] font-medium text-amber-600 dark:text-amber-400">
+                    Lần trước sai {prevWrongCount} từ
+                  </div>
+                ) : null}
                 {disabled ? (
                   <div className="mt-2 text-[10px] text-destructive">
                     {m.id === "gap-fill"
@@ -452,6 +461,13 @@ function QuizRunner({
         </div>
         <Progress value={index + 1} max={total} />
       </div>
+
+      <PrevWrongPanel
+        wrongIds={prevWrongIds}
+        cards={frozenAllCards}
+        currentCardId={current?.id}
+        className="mb-3"
+      />
 
       {current && prevWrongSet.has(current.id) ? (
         <div className="mb-1 flex w-full justify-center">
