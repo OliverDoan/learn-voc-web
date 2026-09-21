@@ -1,0 +1,607 @@
+{
+  "unit": 37,
+  "deck": "Unit 37: Ngoại hình",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "ordinary",
+      "sentences": [
+        {
+          "english": "He is just an ordinary man with a friendly face.",
+          "vietnamese": "Anh ấy chỉ là một người đàn ông bình thường với gương mặt thân thiện."
+        },
+        {
+          "english": "The singer wore ordinary clothes at the market.",
+          "vietnamese": "Nam ca sĩ mặc đồ bình thường khi đi chợ."
+        },
+        {
+          "english": "It was an ordinary holiday, but we were totally happy.",
+          "vietnamese": "Đó là một kỳ nghỉ bình thường, nhưng chúng tôi hoàn toàn hạnh phúc."
+        },
+        {
+          "english": "My hometown looks ordinary, yet the food there is lovely.",
+          "vietnamese": "Quê tôi trông bình thường, nhưng đồ ăn ở đó rất tuyệt."
+        },
+        {
+          "english": "She is not a celebrity; she has an ordinary job at a company.",
+          "vietnamese": "Cô ấy không phải người nổi tiếng; cô ấy có một công việc bình thường ở một công ty."
+        }
+      ]
+    },
+    {
+      "word": "attractive",
+      "sentences": [
+        {
+          "english": "Her confident smile makes her very attractive.",
+          "vietnamese": "Nụ cười tự tin khiến cô ấy rất thu hút."
+        },
+        {
+          "english": "The model is attractive and extremely polite.",
+          "vietnamese": "Người mẫu ấy hấp dẫn và cực kỳ lịch sự."
+        },
+        {
+          "english": "This modern building is quite attractive at night.",
+          "vietnamese": "Toà nhà hiện đại này khá hấp dẫn vào ban đêm."
+        },
+        {
+          "english": "He became more attractive after he started to exercise regularly.",
+          "vietnamese": "Anh ấy trở nên hấp dẫn hơn sau khi bắt đầu tập thể dục đều đặn."
+        },
+        {
+          "english": "An attractive photo can quickly become viral.",
+          "vietnamese": "Một bức ảnh hấp dẫn có thể nhanh chóng lan truyền."
+        }
+      ]
+    },
+    {
+      "word": "slim",
+      "sentences": [
+        {
+          "english": "She stays slim because she follows a careful diet.",
+          "vietnamese": "Cô ấy giữ dáng thon gọn vì tuân theo chế độ ăn cẩn thận."
+        },
+        {
+          "english": "The actress looks slim and gorgeous in that film.",
+          "vietnamese": "Nữ diễn viên trông thon gọn và lộng lẫy trong bộ phim đó."
+        },
+        {
+          "english": "He lost weight and now he is quite slim.",
+          "vietnamese": "Anh ấy đã giảm cân và giờ khá thon gọn."
+        },
+        {
+          "english": "My neighbour is slim because she goes swimming every morning.",
+          "vietnamese": "Cô hàng xóm của tôi thon gọn vì sáng nào cũng đi bơi."
+        },
+        {
+          "english": "A slim body is not always a sign of good health.",
+          "vietnamese": "Một thân hình thon gọn không phải lúc nào cũng là dấu hiệu của sức khoẻ tốt."
+        }
+      ]
+    },
+    {
+      "word": "chubby",
+      "sentences": [
+        {
+          "english": "The chubby baby has a lovely face.",
+          "vietnamese": "Em bé mũm mĩm có gương mặt đáng yêu."
+        },
+        {
+          "english": "He was chubby at secondary school, but now he trains at the gym.",
+          "vietnamese": "Anh ấy mũm mĩm hồi cấp hai, nhưng giờ tập ở phòng gym."
+        },
+        {
+          "english": "My chubby cousin is extremely friendly.",
+          "vietnamese": "Đứa em họ mũm mĩm của tôi cực kỳ thân thiện."
+        },
+        {
+          "english": "The chubby cat of my neighbour sleeps all day.",
+          "vietnamese": "Con mèo mũm mĩm của nhà hàng xóm ngủ cả ngày."
+        },
+        {
+          "english": "She was chubby as a child and totally confident about it.",
+          "vietnamese": "Cô ấy mũm mĩm hồi bé và hoàn toàn tự tin về điều đó."
+        }
+      ]
+    },
+    {
+      "word": "politely",
+      "sentences": [
+        {
+          "english": "The receptionist politely welcomed every customer.",
+          "vietnamese": "Cô lễ tân lịch sự chào đón từng khách hàng."
+        },
+        {
+          "english": "He politely refused the expensive gift.",
+          "vietnamese": "Anh ấy lịch sự từ chối món quà đắt tiền."
+        },
+        {
+          "english": "She politely asked the manager for a day off.",
+          "vietnamese": "Cô ấy lịch sự xin quản lý nghỉ một ngày."
+        },
+        {
+          "english": "The guide politely explained the rules of the temple.",
+          "vietnamese": "Hướng dẫn viên lịch sự giải thích các quy định của ngôi chùa."
+        },
+        {
+          "english": "My neighbour always says hello politely.",
+          "vietnamese": "Người hàng xóm của tôi luôn chào hỏi một cách lịch sự."
+        }
+      ]
+    },
+    {
+      "word": "show",
+      "sentences": [
+        {
+          "english": "Let me show you the photos of my hometown.",
+          "vietnamese": "Để tôi cho bạn xem những bức ảnh quê tôi."
+        },
+        {
+          "english": "The singer will show her new style at the festival.",
+          "vietnamese": "Nữ ca sĩ sẽ thể hiện phong cách mới tại lễ hội."
+        },
+        {
+          "english": "He showed his certificate to the manager.",
+          "vietnamese": "Anh ấy đưa chứng chỉ cho quản lý xem."
+        },
+        {
+          "english": "The guide showed us a beautiful temple.",
+          "vietnamese": "Hướng dẫn viên cho chúng tôi xem một ngôi chùa đẹp."
+        },
+        {
+          "english": "Please show your ticket at the gate.",
+          "vietnamese": "Vui lòng xuất trình vé ở cổng."
+        }
+      ]
+    },
+    {
+      "word": "especially",
+      "sentences": [
+        {
+          "english": "I love street food, especially the hotpot in my hometown.",
+          "vietnamese": "Tôi thích đồ ăn đường phố, đặc biệt là món lẩu ở quê tôi."
+        },
+        {
+          "english": "She likes traditional clothes, especially at a wedding.",
+          "vietnamese": "Cô ấy thích trang phục truyền thống, đặc biệt là trong đám cưới."
+        },
+        {
+          "english": "The gym is crowded, especially in the evening.",
+          "vietnamese": "Phòng tập rất đông, đặc biệt là vào buổi tối."
+        },
+        {
+          "english": "He is shy, especially when he meets a celebrity.",
+          "vietnamese": "Anh ấy nhút nhát, đặc biệt là khi gặp người nổi tiếng."
+        },
+        {
+          "english": "Tickets are expensive, especially during the festival.",
+          "vietnamese": "Vé rất đắt, đặc biệt là trong dịp lễ hội."
+        }
+      ]
+    },
+    {
+      "word": "classy",
+      "sentences": [
+        {
+          "english": "She looked classy at the wedding party.",
+          "vietnamese": "Cô ấy trông sang trọng trong tiệc cưới."
+        },
+        {
+          "english": "That classy hotel is too expensive for students.",
+          "vietnamese": "Khách sạn sang trọng đó quá đắt với sinh viên."
+        },
+        {
+          "english": "The manager always wears a classy suit.",
+          "vietnamese": "Vị quản lý luôn mặc bộ vest sang trọng."
+        },
+        {
+          "english": "His classy style makes him popular at the company.",
+          "vietnamese": "Phong cách sang trọng khiến anh ấy được yêu thích ở công ty."
+        },
+        {
+          "english": "A classy resort near the coast costs a lot.",
+          "vietnamese": "Một khu nghỉ dưỡng sang trọng gần biển tốn rất nhiều tiền."
+        }
+      ]
+    },
+    {
+      "word": "tattoo",
+      "sentences": [
+        {
+          "english": "The artist has a small tattoo on his arm.",
+          "vietnamese": "Người nghệ sĩ có một hình xăm nhỏ trên cánh tay."
+        },
+        {
+          "english": "Many young people think a tattoo is modern.",
+          "vietnamese": "Nhiều bạn trẻ cho rằng hình xăm là hiện đại."
+        },
+        {
+          "english": "She got a tattoo after her holiday at the coast.",
+          "vietnamese": "Cô ấy xăm hình sau kỳ nghỉ ở vùng biển."
+        },
+        {
+          "english": "Some companies do not like a visible tattoo.",
+          "vietnamese": "Một số công ty không thích hình xăm lộ ra ngoài."
+        },
+        {
+          "english": "His tattoo shows the name of his hometown.",
+          "vietnamese": "Hình xăm của anh ấy khắc tên quê hương mình."
+        }
+      ]
+    },
+    {
+      "word": "figure",
+      "sentences": [
+        {
+          "english": "She goes to the gym to keep a good figure.",
+          "vietnamese": "Cô ấy đến phòng tập để giữ vóc dáng đẹp."
+        },
+        {
+          "english": "The model has a lovely figure.",
+          "vietnamese": "Người mẫu ấy có vóc dáng đáng yêu."
+        },
+        {
+          "english": "He is proud of his figure after months of exercise.",
+          "vietnamese": "Anh ấy tự hào về vóc dáng sau nhiều tháng tập luyện."
+        },
+        {
+          "english": "A careful diet helps you keep a nice figure.",
+          "vietnamese": "Chế độ ăn cẩn thận giúp bạn giữ vóc dáng đẹp."
+        },
+        {
+          "english": "Her figure looks gorgeous in that traditional ao dai.",
+          "vietnamese": "Vóc dáng cô ấy trông thật lộng lẫy trong tà áo dài truyền thống."
+        }
+      ]
+    },
+    {
+      "word": "tanned",
+      "sentences": [
+        {
+          "english": "His face got tanned after the holiday at the coast.",
+          "vietnamese": "Mặt anh ấy rám nắng sau kỳ nghỉ ở vùng biển."
+        },
+        {
+          "english": "She looks tanned because she sunbathes regularly.",
+          "vietnamese": "Cô ấy trông rám nắng vì thường xuyên tắm nắng."
+        },
+        {
+          "english": "The footballer is tanned and very strong.",
+          "vietnamese": "Cầu thủ ấy rám nắng và rất khoẻ."
+        },
+        {
+          "english": "My brother came back tanned from his fishing trip.",
+          "vietnamese": "Anh trai tôi trở về rám nắng sau chuyến câu cá."
+        },
+        {
+          "english": "Tanned skin is popular in western countries.",
+          "vietnamese": "Làn da rám nắng được ưa chuộng ở các nước phương Tây."
+        }
+      ]
+    },
+    {
+      "word": "skin",
+      "sentences": [
+        {
+          "english": "My skin is allergic to cheap soap.",
+          "vietnamese": "Da tôi bị dị ứng với xà phòng rẻ tiền."
+        },
+        {
+          "english": "She uses a cream to protect her skin.",
+          "vietnamese": "Cô ấy dùng kem để bảo vệ làn da."
+        },
+        {
+          "english": "His skin became dry in the cold season.",
+          "vietnamese": "Da anh ấy trở nên khô trong mùa lạnh."
+        },
+        {
+          "english": "The doctor said my skin problem is curable.",
+          "vietnamese": "Bác sĩ nói vấn đề về da của tôi có thể chữa được."
+        },
+        {
+          "english": "Beautiful skin needs water and enough sleep.",
+          "vietnamese": "Làn da đẹp cần nước và ngủ đủ giấc."
+        }
+      ]
+    },
+    {
+      "word": "good-looking",
+      "sentences": [
+        {
+          "english": "The actress is good-looking and friendly.",
+          "vietnamese": "Nữ diễn viên ấy ưa nhìn và thân thiện."
+        },
+        {
+          "english": "He is good-looking, but he is extremely shy.",
+          "vietnamese": "Anh ấy ưa nhìn, nhưng cực kỳ nhút nhát."
+        },
+        {
+          "english": "A good-looking model appeared on the screen.",
+          "vietnamese": "Một người mẫu ưa nhìn xuất hiện trên màn hình."
+        },
+        {
+          "english": "My manager is good-looking and always punctual.",
+          "vietnamese": "Quản lý của tôi ưa nhìn và luôn đúng giờ."
+        },
+        {
+          "english": "That good-looking singer is very popular nowadays.",
+          "vietnamese": "Nam ca sĩ ưa nhìn đó rất nổi tiếng hiện nay."
+        }
+      ]
+    },
+    {
+      "word": "curvy",
+      "sentences": [
+        {
+          "english": "The model is curvy and confident.",
+          "vietnamese": "Người mẫu ấy đầy đặn và tự tin."
+        },
+        {
+          "english": "Her curvy body looks gorgeous in the red dress.",
+          "vietnamese": "Thân hình đầy đặn của cô ấy trông lộng lẫy trong chiếc váy đỏ."
+        },
+        {
+          "english": "Many famous actresses are curvy nowadays.",
+          "vietnamese": "Nhiều nữ diễn viên nổi tiếng ngày nay có thân hình đầy đặn."
+        },
+        {
+          "english": "A curvy shape is popular in some countries.",
+          "vietnamese": "Dáng người đầy đặn được ưa chuộng ở một số quốc gia."
+        },
+        {
+          "english": "She was shy about her curvy body, but now she is proud.",
+          "vietnamese": "Cô ấy từng ngại về thân hình đầy đặn, nhưng giờ thì tự hào."
+        }
+      ]
+    },
+    {
+      "word": "dress",
+      "sentences": [
+        {
+          "english": "She dressed carefully for the party.",
+          "vietnamese": "Cô ấy ăn mặc cẩn thận để đi dự tiệc."
+        },
+        {
+          "english": "He dresses in a traditional style.",
+          "vietnamese": "Anh ấy ăn mặc theo phong cách truyền thống."
+        },
+        {
+          "english": "That red dress is too expensive for me.",
+          "vietnamese": "Chiếc váy đỏ đó quá đắt với tôi."
+        },
+        {
+          "english": "The bride wore a beautiful dress at the wedding.",
+          "vietnamese": "Cô dâu mặc một chiếc váy đẹp trong đám cưới."
+        },
+        {
+          "english": "Students dress in a uniform at secondary school.",
+          "vietnamese": "Học sinh mặc đồng phục ở trường cấp hai."
+        }
+      ]
+    },
+    {
+      "word": "tidy",
+      "sentences": [
+        {
+          "english": "He keeps his room tidy before every interview.",
+          "vietnamese": "Anh ấy giữ phòng gọn gàng trước mỗi buổi phỏng vấn."
+        },
+        {
+          "english": "Her desk is always tidy and clean.",
+          "vietnamese": "Bàn làm việc của cô ấy luôn gọn gàng và sạch sẽ."
+        },
+        {
+          "english": "Please tidy the kitchen before the guests arrive.",
+          "vietnamese": "Hãy dọn gọn bếp trước khi khách đến."
+        },
+        {
+          "english": "A tidy style makes a good impression at a company.",
+          "vietnamese": "Phong cách gọn gàng tạo ấn tượng tốt ở công ty."
+        },
+        {
+          "english": "My roommate is tidy and quiet.",
+          "vietnamese": "Bạn cùng phòng của tôi gọn gàng và trầm tính."
+        }
+      ]
+    },
+    {
+      "word": "messy",
+      "sentences": [
+        {
+          "english": "His hair looked messy after the long journey.",
+          "vietnamese": "Tóc anh ấy trông bù xù sau chuyến đi dài."
+        },
+        {
+          "english": "The room was messy after the party.",
+          "vietnamese": "Căn phòng bừa bộn sau bữa tiệc."
+        },
+        {
+          "english": "Her messy desk annoyed the manager.",
+          "vietnamese": "Cái bàn bừa bộn của cô ấy khiến quản lý khó chịu."
+        },
+        {
+          "english": "Do not go to an interview in messy clothes.",
+          "vietnamese": "Đừng đi phỏng vấn với bộ đồ luộm thuộm."
+        },
+        {
+          "english": "The market looked messy but the food was delicious.",
+          "vietnamese": "Khu chợ trông bừa bộn nhưng đồ ăn thì ngon."
+        }
+      ]
+    },
+    {
+      "word": "wear",
+      "sentences": [
+        {
+          "english": "Students must wear a uniform at secondary school.",
+          "vietnamese": "Học sinh phải mặc đồng phục ở trường cấp hai."
+        },
+        {
+          "english": "She wears a beautiful ao dai at the festival.",
+          "vietnamese": "Cô ấy mặc áo dài đẹp trong lễ hội."
+        },
+        {
+          "english": "He wears an expensive watch at every wedding.",
+          "vietnamese": "Anh ấy đeo một chiếc đồng hồ đắt tiền trong mỗi đám cưới."
+        },
+        {
+          "english": "You should wear comfortable shoes for the hike.",
+          "vietnamese": "Bạn nên đi giày thoải mái cho chuyến leo núi."
+        },
+        {
+          "english": "The nurse wears a white uniform every day.",
+          "vietnamese": "Cô y tá mặc đồng phục trắng mỗi ngày."
+        }
+      ]
+    },
+    {
+      "word": "dirty",
+      "sentences": [
+        {
+          "english": "His shoes were dirty after the long hike.",
+          "vietnamese": "Giày anh ấy lấm bẩn sau chuyến đi bộ đường dài."
+        },
+        {
+          "english": "The lake became dirty because of pollution.",
+          "vietnamese": "Cái hồ trở nên bẩn vì ô nhiễm."
+        },
+        {
+          "english": "Please do not wear that dirty shirt to the interview.",
+          "vietnamese": "Đừng mặc chiếc áo bẩn đó đi phỏng vấn."
+        },
+        {
+          "english": "The kitchen was dirty after cooking.",
+          "vietnamese": "Căn bếp bẩn sau khi nấu nướng."
+        },
+        {
+          "english": "Dirty air is dangerous for our health.",
+          "vietnamese": "Không khí bẩn nguy hiểm cho sức khoẻ của chúng ta."
+        }
+      ]
+    },
+    {
+      "word": "outside",
+      "sentences": [
+        {
+          "english": "Do not judge people only by the outside, because beauty can change.",
+          "vietnamese": "Đừng đánh giá người khác chỉ qua vẻ bề ngoài, vì nhan sắc có thể thay đổi."
+        },
+        {
+          "english": "The outside of the building looks modern.",
+          "vietnamese": "Bề ngoài của toà nhà trông hiện đại."
+        },
+        {
+          "english": "We waited outside the theatre for an hour.",
+          "vietnamese": "Chúng tôi đợi bên ngoài nhà hát suốt một tiếng."
+        },
+        {
+          "english": "Her outside looks calm, but she is very nervous.",
+          "vietnamese": "Bề ngoài cô ấy trông bình thản, nhưng thật ra rất lo lắng."
+        },
+        {
+          "english": "The outside of the old temple was repaired last year.",
+          "vietnamese": "Bên ngoài ngôi chùa cổ đã được sửa chữa năm ngoái."
+        }
+      ]
+    },
+    {
+      "word": "skinny",
+      "sentences": [
+        {
+          "english": "He was too skinny, so he started to exercise.",
+          "vietnamese": "Anh ấy quá gầy nên đã bắt đầu tập thể dục."
+        },
+        {
+          "english": "The skinny boy wants to gain weight.",
+          "vietnamese": "Cậu bé gầy nhom muốn tăng cân."
+        },
+        {
+          "english": "She looks skinny in that uniform.",
+          "vietnamese": "Cô ấy trông gầy nhom trong bộ đồng phục đó."
+        },
+        {
+          "english": "Being skinny does not always mean good health.",
+          "vietnamese": "Gầy nhom không phải lúc nào cũng nghĩa là khoẻ mạnh."
+        },
+        {
+          "english": "My skinny cousin eats a lot but never gains weight.",
+          "vietnamese": "Đứa em họ gầy nhom của tôi ăn nhiều mà chẳng bao giờ tăng cân."
+        }
+      ]
+    },
+    {
+      "word": "piercing",
+      "sentences": [
+        {
+          "english": "She has a piercing in her nose and looks modern.",
+          "vietnamese": "Cô ấy đeo khuyên mũi và trông hiện đại."
+        },
+        {
+          "english": "A piercing is not allowed at some companies.",
+          "vietnamese": "Một số công ty không cho phép đeo khuyên."
+        },
+        {
+          "english": "He removed his piercing before the interview.",
+          "vietnamese": "Anh ấy tháo khuyên ra trước buổi phỏng vấn."
+        },
+        {
+          "english": "Many young singers wear a piercing nowadays.",
+          "vietnamese": "Nhiều ca sĩ trẻ ngày nay đeo khuyên."
+        },
+        {
+          "english": "Her ear piercing was a gift from her lovely sister.",
+          "vietnamese": "Chiếc khuyên tai của cô ấy là quà từ người chị đáng yêu."
+        }
+      ]
+    },
+    {
+      "word": "curly",
+      "sentences": [
+        {
+          "english": "My sister has long curly hair and a lovely face.",
+          "vietnamese": "Chị tôi có mái tóc xoăn dài và gương mặt đáng yêu."
+        },
+        {
+          "english": "The hairdresser made her hair curly for the wedding.",
+          "vietnamese": "Thợ làm tóc uốn xoăn cho cô ấy để đi đám cưới."
+        },
+        {
+          "english": "His curly hair looks gorgeous on the screen.",
+          "vietnamese": "Mái tóc xoăn của anh ấy trông lộng lẫy trên màn hình."
+        },
+        {
+          "english": "She was born with curly hair, just like her beautiful mother.",
+          "vietnamese": "Cô ấy sinh ra đã có tóc xoăn, giống hệt người mẹ xinh đẹp."
+        },
+        {
+          "english": "Curly hair is quite popular among young people.",
+          "vietnamese": "Tóc xoăn khá được ưa chuộng trong giới trẻ."
+        }
+      ]
+    },
+    {
+      "word": "shave",
+      "sentences": [
+        {
+          "english": "He shaves before every important interview.",
+          "vietnamese": "Anh ấy cạo râu trước mỗi buổi phỏng vấn quan trọng."
+        },
+        {
+          "english": "My father shaves quickly every morning.",
+          "vietnamese": "Bố tôi cạo râu thật nhanh mỗi sáng."
+        },
+        {
+          "english": "The hairdresser shaved him carefully.",
+          "vietnamese": "Người thợ cạo râu cho anh ấy rất cẩn thận."
+        },
+        {
+          "english": "He decided to shave his beard for the wedding.",
+          "vietnamese": "Anh ấy quyết định cạo râu để đi đám cưới."
+        },
+        {
+          "english": "Soldiers must shave and wear a clean uniform.",
+          "vietnamese": "Người lính phải cạo râu và mặc quân phục sạch sẽ."
+        }
+      ]
+    }
+  ]
+}

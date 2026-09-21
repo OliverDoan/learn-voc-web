@@ -1,0 +1,247 @@
+{
+  "unit": 36,
+  "deck": "Unit 36: Tính cách và cách nhìn người",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "judge",
+      "sentences": [
+        { "english": "Don't judge a new neighbour before you talk to them.", "vietnamese": "Đừng phán xét một người hàng xóm mới trước khi bạn nói chuyện với họ." },
+        { "english": "People often judge a book by its cover, which is unfair to a shy writer.", "vietnamese": "Người ta hay đánh giá qua vẻ bề ngoài, điều đó thật bất công với một người viết nhút nhát." },
+        { "english": "The judges at the singing contest were strict but fair.", "vietnamese": "Ban giám khảo ở cuộc thi hát thì nghiêm khắc nhưng công bằng." },
+        { "english": "It is easy to judge someone when you are angry.", "vietnamese": "Rất dễ phán xét ai đó khi bạn đang tức giận." },
+        { "english": "My manager never judges an employee by one mistake.", "vietnamese": "Quản lý của tôi không bao giờ đánh giá một nhân viên chỉ qua một lỗi sai." }
+      ]
+    },
+    {
+      "word": "type",
+      "sentences": [
+        { "english": "He is the type of person who stays calm in an emergency.", "vietnamese": "Anh ấy là kiểu người luôn bình tĩnh trong trường hợp khẩn cấp." },
+        { "english": "She is not the type to complain about small problems.", "vietnamese": "Cô ấy không phải kiểu người hay than phiền về những chuyện nhỏ." },
+        { "english": "What type of exercise do you like after a long day at work?", "vietnamese": "Bạn thích kiểu tập luyện nào sau một ngày dài làm việc?" },
+        { "english": "My housemate is the quiet type, but he is very reliable.", "vietnamese": "Bạn cùng nhà của tôi thuộc kiểu ít nói, nhưng rất đáng tin cậy." },
+        { "english": "Both types of customers deserve a friendly welcome.", "vietnamese": "Cả hai kiểu khách hàng đều xứng đáng được chào đón thân thiện." }
+      ]
+    },
+    {
+      "word": "result",
+      "sentences": [
+        { "english": "As a result of her patience, everyone in the neighbourhood respects her.", "vietnamese": "Nhờ sự kiên nhẫn của cô ấy, ai trong khu phố cũng tôn trọng cô." },
+        { "english": "The result of the match surprised even the coach.", "vietnamese": "Kết quả trận đấu làm ngay cả huấn luyện viên cũng bất ngờ." },
+        { "english": "As a result, our team decided to change the training plan.", "vietnamese": "Kết quả là đội chúng tôi quyết định thay đổi kế hoạch tập luyện." },
+        { "english": "Her exam result was excellent because she revised every evening.", "vietnamese": "Kết quả thi của cô ấy rất tốt vì tối nào cô cũng ôn bài." },
+        { "english": "Shouting at a customer always results in a bad day for everyone.", "vietnamese": "Quát khách hàng luôn dẫn đến một ngày tệ cho tất cả mọi người." }
+      ]
+    },
+    {
+      "word": "funny",
+      "sentences": [
+        { "english": "My housemate is so funny that we laugh at every dinner.", "vietnamese": "Bạn cùng nhà của tôi hài hước đến mức bữa tối nào chúng tôi cũng cười." },
+        { "english": "His funny stories made the whole party laugh.", "vietnamese": "Những câu chuyện hài hước của anh ấy khiến cả bữa tiệc cười nghiêng ngả." },
+        { "english": "The comedy was so funny that my stomach hurt.", "vietnamese": "Bộ phim hài buồn cười đến mức tôi đau cả bụng." },
+        { "english": "She has a funny nickname that her neighbours gave her.", "vietnamese": "Cô ấy có một biệt danh buồn cười do hàng xóm đặt cho." },
+        { "english": "A funny coach keeps the team calm before a big tournament.", "vietnamese": "Một huấn luyện viên hài hước giúp cả đội bình tĩnh trước giải đấu lớn." }
+      ]
+    },
+    {
+      "word": "sociable",
+      "sentences": [
+        { "english": "She is sociable and makes new friends at every party.", "vietnamese": "Cô ấy hoà đồng và kết bạn mới ở mọi bữa tiệc." },
+        { "english": "Sociable people usually enjoy a crowded festival.", "vietnamese": "Người hoà đồng thường thích một lễ hội đông đúc." },
+        { "english": "He became more sociable after he joined a badminton club.", "vietnamese": "Anh ấy trở nên hoà đồng hơn sau khi tham gia câu lạc bộ cầu lông." },
+        { "english": "My grandmother is sociable and knows every neighbour on the street.", "vietnamese": "Bà tôi rất hoà đồng và biết mặt mọi người hàng xóm trong phố." },
+        { "english": "A sociable receptionist makes every guest feel welcome.", "vietnamese": "Một lễ tân hoà đồng khiến mọi vị khách đều thấy được chào đón." }
+      ]
+    },
+    {
+      "word": "attitude",
+      "sentences": [
+        { "english": "His positive attitude helped the whole team win the match.", "vietnamese": "Thái độ tích cực của anh ấy đã giúp cả đội thắng trận." },
+        { "english": "Her calm attitude helped the nervous beginner relax.", "vietnamese": "Thái độ điềm tĩnh của cô ấy giúp người mới lo lắng thấy thoải mái hơn." },
+        { "english": "A lazy attitude will not help you pass the exam.", "vietnamese": "Thái độ lười biếng sẽ không giúp bạn qua kỳ thi." },
+        { "english": "The manager praised his polite attitude towards every customer.", "vietnamese": "Quản lý khen thái độ lịch sự của anh ấy với mọi khách hàng." },
+        { "english": "You need a strong attitude to recover from a long injury.", "vietnamese": "Bạn cần một thái độ mạnh mẽ để hồi phục sau một chấn thương dài." }
+      ]
+    },
+    {
+      "word": "cruel",
+      "sentences": [
+        { "english": "Making fun of a shy student is a cruel habit.", "vietnamese": "Trêu chọc một học sinh nhút nhát là một thói quen tàn nhẫn." },
+        { "english": "It is cruel to leave a small dog outside in the cold.", "vietnamese": "Thật tàn nhẫn khi để một chú chó nhỏ ngoài trời lạnh." },
+        { "english": "Some people are cruel to animals, and that makes me angry.", "vietnamese": "Một số người tàn nhẫn với động vật, và điều đó khiến tôi tức giận." },
+        { "english": "The war was cruel to everyone in that small town.", "vietnamese": "Chiến tranh thật tàn khốc với tất cả mọi người ở thị trấn nhỏ đó." },
+        { "english": "Cruel words can hurt more than a painful fall.", "vietnamese": "Lời nói tàn nhẫn có thể đau hơn cả một cú ngã đau điếng." }
+      ]
+    },
+    {
+      "word": "warm-hearted",
+      "sentences": [
+        { "english": "Our warm-hearted neighbour often brings us home-cooked soup.", "vietnamese": "Người hàng xóm ấm áp của chúng tôi hay mang sang súp nhà nấu." },
+        { "english": "A warm-hearted nurse can make a patient feel safe.", "vietnamese": "Một cô y tá ấm áp có thể khiến bệnh nhân thấy an tâm." },
+        { "english": "She is warm-hearted and shares her leftovers with the beggar nearby.", "vietnamese": "Cô ấy tốt bụng và chia phần thức ăn thừa cho người ăn xin gần đó." },
+        { "english": "Our warm-hearted coach never shouts at a loser.", "vietnamese": "Huấn luyện viên ấm áp của chúng tôi chẳng bao giờ quát người thua cuộc." },
+        { "english": "Warm-hearted people often join a charity to help others.", "vietnamese": "Những người ấm áp thường tham gia hội từ thiện để giúp đỡ người khác." }
+      ]
+    },
+    {
+      "word": "kind",
+      "sentences": [
+        { "english": "The nurse was so kind that I almost forgot my pain.", "vietnamese": "Cô y tá tử tế đến mức tôi gần như quên cả cơn đau." },
+        { "english": "It was kind of you to lend me your bicycle.", "vietnamese": "Bạn thật tử tế khi cho tôi mượn xe đạp." },
+        { "english": "A kind word from a stranger can change a bad day.", "vietnamese": "Một lời tử tế từ người lạ có thể thay đổi cả một ngày tồi tệ." },
+        { "english": "My kind neighbour looked after my cat during the holiday.", "vietnamese": "Người hàng xóm tốt bụng đã trông mèo giúp tôi trong kỳ nghỉ." },
+        { "english": "Be kind to the new employee on his first day.", "vietnamese": "Hãy tử tế với nhân viên mới trong ngày đầu tiên của cậu ấy." }
+      ]
+    },
+    {
+      "word": "pushover",
+      "sentences": [
+        { "english": "Don't think he is a pushover just because he is quiet.", "vietnamese": "Đừng nghĩ anh ấy dễ bị bắt nạt chỉ vì anh ấy ít nói." },
+        { "english": "The new manager is no pushover; she is strict about every deadline.", "vietnamese": "Quản lý mới không hề dễ bắt nạt; cô ấy rất nghiêm về mọi hạn chót." },
+        { "english": "People think a shy man is a pushover, but that is wrong.", "vietnamese": "Người ta nghĩ một người đàn ông nhút nhát là dễ bị bắt nạt, nhưng điều đó sai." },
+        { "english": "Our coach is friendly but he is not a pushover.", "vietnamese": "Huấn luyện viên của chúng tôi thân thiện nhưng không hề dễ bị lấn lướt." },
+        { "english": "Don't be a pushover when a friend borrows and never pays you back.", "vietnamese": "Đừng quá dễ dãi khi một người bạn cứ mượn tiền mà không trả." }
+      ]
+    },
+    {
+      "word": "develop",
+      "sentences": [
+        { "english": "Over the years they developed a strong friendship.", "vietnamese": "Qua nhiều năm họ đã phát triển một tình bạn bền chặt." },
+        { "english": "Children develop good habits when parents are patient.", "vietnamese": "Trẻ em hình thành thói quen tốt khi cha mẹ kiên nhẫn." },
+        { "english": "She developed a strong interest in photography last year.", "vietnamese": "Cô ấy phát triển niềm yêu thích mạnh mẽ với nhiếp ảnh vào năm ngoái." },
+        { "english": "Our friendship developed slowly, like a plant in spring.", "vietnamese": "Tình bạn của chúng tôi lớn dần chầm chậm, như một cái cây vào mùa xuân." },
+        { "english": "A good trainer helps every athlete develop step by step.", "vietnamese": "Một huấn luyện viên giỏi giúp mỗi vận động viên tiến bộ từng bước." }
+      ]
+    },
+    {
+      "word": "trust",
+      "sentences": [
+        { "english": "I trust my old neighbour more than any stranger on the internet.", "vietnamese": "Tôi tin người hàng xóm cũ của mình hơn bất kỳ người lạ nào trên mạng." },
+        { "english": "It takes years to build trust and one lie to lose it.", "vietnamese": "Phải mất nhiều năm để xây dựng niềm tin và chỉ một lời nói dối để đánh mất nó." },
+        { "english": "I trust my dentist because she explains every step.", "vietnamese": "Tôi tin nha sĩ của mình vì cô ấy giải thích từng bước một." },
+        { "english": "Never trust a website that asks for your password.", "vietnamese": "Đừng bao giờ tin một trang web hỏi mật khẩu của bạn." },
+        { "english": "Customers trust a shop that is honest about the price.", "vietnamese": "Khách hàng tin một cửa hàng trung thực về giá cả." }
+      ]
+    },
+    {
+      "word": "distance",
+      "sentences": [
+        { "english": "She keeps her distance from selfish people at work.", "vietnamese": "Cô ấy giữ khoảng cách với những người ích kỷ ở công ty." },
+        { "english": "He kept a polite distance from the noisy group.", "vietnamese": "Anh ấy giữ một khoảng cách lịch sự với nhóm ồn ào." },
+        { "english": "A long distance between two cities makes every journey tiring.", "vietnamese": "Khoảng cách xa giữa hai thành phố khiến mọi chuyến đi đều mệt mỏi." },
+        { "english": "She kept her distance for a week after he shouted at her.", "vietnamese": "Cô ấy giữ khoảng cách suốt một tuần sau khi anh ta quát cô." },
+        { "english": "Keep a safe distance when you ride a motorbike in heavy traffic.", "vietnamese": "Hãy giữ khoảng cách an toàn khi bạn chạy xe máy trong dòng xe đông đúc." }
+      ]
+    },
+    {
+      "word": "rude",
+      "sentences": [
+        { "english": "It is rude to shout at a waiter in a restaurant.", "vietnamese": "Thật thô lỗ khi quát một người phục vụ trong nhà hàng." },
+        { "english": "It is rude to check your phone while a guest is talking.", "vietnamese": "Thật bất lịch sự khi xem điện thoại lúc khách đang nói chuyện." },
+        { "english": "The rude customer complained about everything in the shop.", "vietnamese": "Vị khách thô lỗ than phiền về mọi thứ trong cửa hàng." },
+        { "english": "He apologised for his rude joke at the party.", "vietnamese": "Anh ấy xin lỗi vì câu đùa thô lỗ ở bữa tiệc." },
+        { "english": "Being rude to a nurse will not help you recover faster.", "vietnamese": "Thô lỗ với y tá sẽ không giúp bạn hồi phục nhanh hơn." }
+      ]
+    },
+    {
+      "word": "short-tempered",
+      "sentences": [
+        { "english": "My uncle is short-tempered when the traffic is bad.", "vietnamese": "Chú tôi rất nóng tính khi giao thông tệ." },
+        { "english": "A short-tempered coach can make the whole team nervous.", "vietnamese": "Một huấn luyện viên nóng tính có thể khiến cả đội căng thẳng." },
+        { "english": "She gets short-tempered when she is exhausted after work.", "vietnamese": "Cô ấy trở nên nóng tính khi kiệt sức sau giờ làm." },
+        { "english": "My short-tempered housemate shouts at the printer every morning.", "vietnamese": "Bạn cùng nhà nóng tính của tôi sáng nào cũng quát cái máy in." },
+        { "english": "Stay calm, because a short-tempered driver causes accidents.", "vietnamese": "Hãy bình tĩnh, vì một tài xế nóng tính sẽ gây tai nạn." }
+      ]
+    },
+    {
+      "word": "neat",
+      "sentences": [
+        { "english": "Her room is always neat and even her bookshelf is tidy.", "vietnamese": "Phòng cô ấy lúc nào cũng gọn gàng, đến giá sách cũng ngăn nắp." },
+        { "english": "He keeps his desk neat, with every document in one file.", "vietnamese": "Anh ấy giữ bàn làm việc gọn gàng, mọi giấy tờ đều nằm trong một tập hồ sơ." },
+        { "english": "Her handwriting is neat and easy to memorise.", "vietnamese": "Chữ viết của cô ấy gọn gàng và dễ ghi nhớ." },
+        { "english": "A neat flat always looks bigger than a messy one.", "vietnamese": "Một căn hộ gọn gàng luôn trông rộng hơn một căn bừa bộn." },
+        { "english": "The hairdresser gave him a neat haircut before the interview.", "vietnamese": "Thợ cắt tóc cắt cho anh ấy một kiểu tóc gọn gàng trước buổi phỏng vấn." }
+      ]
+    },
+    {
+      "word": "girly",
+      "sentences": [
+        { "english": "She loves girly things like pink curtains and tiny bottles.", "vietnamese": "Cô ấy thích những thứ điệu đà như rèm hồng và mấy chai lọ nhỏ xinh." },
+        { "english": "She decorated her room in a girly style with a pink carpet.", "vietnamese": "Cô ấy trang trí phòng theo phong cách nữ tính với một tấm thảm hồng." },
+        { "english": "My sister loves girly films about a big wedding.", "vietnamese": "Chị tôi thích những bộ phim nữ tính về một đám cưới lớn." },
+        { "english": "He bought a girly cup as a gift for his housemate.", "vietnamese": "Anh ấy mua một chiếc cốc điệu đà làm quà cho bạn cùng nhà." },
+        { "english": "Some girly clothes are too expensive for a small budget.", "vietnamese": "Vài món đồ điệu đà thì quá đắt so với một khoản tiền eo hẹp." }
+      ]
+    },
+    {
+      "word": "enthusiast",
+      "sentences": [
+        { "english": "He is a football enthusiast who never misses a match.", "vietnamese": "Anh ấy là một người mê bóng đá, chẳng bỏ lỡ trận nào." },
+        { "english": "As a coffee enthusiast, he visits every new shop in the district.", "vietnamese": "Là một người mê cà phê, anh ấy ghé mọi quán mới trong quận." },
+        { "english": "The music enthusiast collected every record of that singer.", "vietnamese": "Người đam mê âm nhạc ấy sưu tầm mọi bản thu của ca sĩ đó." },
+        { "english": "A cooking enthusiast will talk about fresh herbs for hours.", "vietnamese": "Một người mê nấu ăn có thể nói về rau thơm tươi hàng giờ." },
+        { "english": "Cycling enthusiasts meet at the lake every Sunday morning.", "vietnamese": "Những người mê đạp xe gặp nhau ở hồ vào mỗi sáng Chủ nhật." }
+      ]
+    },
+    {
+      "word": "playful",
+      "sentences": [
+        { "english": "Our playful puppy runs around the playground all afternoon.", "vietnamese": "Chú cún tinh nghịch của chúng tôi chạy quanh sân chơi cả buổi chiều." },
+        { "english": "My playful nephew hides my chopsticks before every meal.", "vietnamese": "Thằng cháu tinh nghịch của tôi giấu đũa trước mỗi bữa ăn." },
+        { "english": "She has a playful way of talking that makes the room lively.", "vietnamese": "Cô ấy có cách nói chuyện tinh nghịch khiến cả căn phòng sôi động." },
+        { "english": "The playful kitten broke a glass on the balcony.", "vietnamese": "Chú mèo con nghịch ngợm làm vỡ một cái ly trên ban công." },
+        { "english": "A playful trainer makes a boring subject exciting.", "vietnamese": "Một người dạy vui tính khiến môn học chán ngắt trở nên thú vị." }
+      ]
+    },
+    {
+      "word": "joyful",
+      "sentences": [
+        { "english": "The wedding was a joyful celebration for the whole family.", "vietnamese": "Đám cưới là một buổi lễ hân hoan của cả gia đình." },
+        { "english": "The festival was joyful, with fireworks above the lake.", "vietnamese": "Lễ hội thật hân hoan, với pháo hoa trên mặt hồ." },
+        { "english": "Her joyful laugh made the whole team feel lighter.", "vietnamese": "Tiếng cười hân hoan của cô ấy khiến cả đội thấy nhẹ nhõm hơn." },
+        { "english": "It was a joyful moment when he won the tournament.", "vietnamese": "Đó là một khoảnh khắc hân hoan khi anh ấy thắng giải đấu." },
+        { "english": "Children are joyful when they receive a lantern at the festival.", "vietnamese": "Bọn trẻ vui sướng khi được nhận một chiếc lồng đèn ở lễ hội." }
+      ]
+    },
+    {
+      "word": "lonely",
+      "sentences": [
+        { "english": "He felt lonely in the crowded capital during his first month.", "vietnamese": "Anh ấy thấy cô đơn giữa thủ đô đông đúc trong tháng đầu tiên." },
+        { "english": "Living abroad can be lonely without family nearby.", "vietnamese": "Sống ở nước ngoài có thể rất cô đơn khi không có gia đình bên cạnh." },
+        { "english": "He felt lonely after his roommate moved to another town.", "vietnamese": "Anh ấy thấy cô đơn sau khi bạn cùng phòng chuyển đến thị trấn khác." },
+        { "english": "A lonely evening is easier with a good film and hot tea.", "vietnamese": "Một buổi tối cô đơn sẽ dễ chịu hơn với một bộ phim hay và trà nóng." },
+        { "english": "Some elderly neighbours are lonely and need someone to chat with.", "vietnamese": "Vài người hàng xóm lớn tuổi rất cô đơn và cần người trò chuyện." }
+      ]
+    },
+    {
+      "word": "hyper",
+      "sentences": [
+        { "english": "The children get hyper after eating too much sugar.", "vietnamese": "Lũ trẻ trở nên tăng động sau khi ăn quá nhiều đường." },
+        { "english": "My puppy becomes hyper whenever a guest arrives.", "vietnamese": "Cún của tôi trở nên tăng động mỗi khi có khách đến." },
+        { "english": "He was hyper before the interview and could not sit still.", "vietnamese": "Anh ấy hiếu động quá mức trước buổi phỏng vấn và không ngồi yên được." },
+        { "english": "Too much coffee makes me hyper and anxious.", "vietnamese": "Quá nhiều cà phê khiến tôi tăng động và lo lắng." },
+        { "english": "The hyper fans screamed when the singer appeared.", "vietnamese": "Những người hâm mộ cuồng nhiệt hét lên khi ca sĩ xuất hiện." }
+      ]
+    },
+    {
+      "word": "easy-going",
+      "sentences": [
+        { "english": "My easy-going coach never gets angry when we lose.", "vietnamese": "Huấn luyện viên dễ tính của tôi chẳng bao giờ cáu khi chúng tôi thua." },
+        { "english": "My easy-going housemate does not mind if I cook late.", "vietnamese": "Bạn cùng nhà dễ tính của tôi không phiền nếu tôi nấu ăn muộn." },
+        { "english": "An easy-going manager listens before he says anything.", "vietnamese": "Một quản lý dễ tính sẽ lắng nghe trước khi nói điều gì." },
+        { "english": "She is easy-going about food and eats anything tasty.", "vietnamese": "Cô ấy dễ tính về đồ ăn và ăn được bất cứ món gì ngon." },
+        { "english": "Easy-going tourists enjoy a trip even when the flight is delayed.", "vietnamese": "Những du khách dễ tính vẫn tận hưởng chuyến đi ngay cả khi chuyến bay bị hoãn." }
+      ]
+    },
+    {
+      "word": "mad",
+      "sentences": [
+        { "english": "She was mad when someone broke her favourite cup.", "vietnamese": "Cô ấy nổi giận khi có người làm vỡ chiếc cốc yêu thích." },
+        { "english": "He was mad at the noisy neighbours all night.", "vietnamese": "Anh ấy bực mình với đám hàng xóm ồn ào suốt đêm." },
+        { "english": "Don't be mad; the delay was not the driver's fault.", "vietnamese": "Đừng giận; việc trễ giờ không phải lỗi của tài xế." },
+        { "english": "She went mad with joy when her team won the final.", "vietnamese": "Cô ấy sướng phát điên khi đội của mình thắng trận chung kết." },
+        { "english": "My manager gets mad when someone is late for a meeting.", "vietnamese": "Quản lý của tôi nổi giận khi ai đó đi họp muộn." }
+      ]
+    }
+  ]
+}

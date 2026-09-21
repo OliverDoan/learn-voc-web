@@ -1,0 +1,607 @@
+{
+  "unit": 39,
+  "deck": "Unit 39: Cảm xúc và tâm trạng",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "human",
+      "sentences": [
+        {
+          "english": "Every human needs friendly neighbours to feel safe.",
+          "vietnamese": "Mỗi con người đều cần những người hàng xóm thân thiện để thấy an toàn."
+        },
+        {
+          "english": "Every human makes small mistakes, so be patient with your team.",
+          "vietnamese": "Con người ai cũng mắc lỗi nhỏ, nên hãy kiên nhẫn với đồng đội của bạn."
+        },
+        {
+          "english": "Human health depends on fresh food and daily exercise.",
+          "vietnamese": "Sức khoẻ con người phụ thuộc vào thức ăn tươi và việc tập thể dục hằng ngày."
+        },
+        {
+          "english": "The human body needs a lot of rest after a long journey.",
+          "vietnamese": "Cơ thể con người cần nghỉ ngơi nhiều sau một hành trình dài."
+        },
+        {
+          "english": "Human culture changes slowly, but it never stops.",
+          "vietnamese": "Văn hoá của con người thay đổi chậm rãi, nhưng không bao giờ ngừng lại."
+        }
+      ]
+    },
+    {
+      "word": "feeling",
+      "sentences": [
+        {
+          "english": "I had a strange feeling before the interview.",
+          "vietnamese": "Tôi có một cảm giác lạ trước buổi phỏng vấn."
+        },
+        {
+          "english": "She could not describe the feeling of standing on top of the mountain.",
+          "vietnamese": "Cô ấy không thể diễn tả cảm giác khi đứng trên đỉnh núi."
+        },
+        {
+          "english": "The feeling of coming back to my hometown is always lovely.",
+          "vietnamese": "Cảm giác trở về quê nhà lúc nào cũng thật dễ chịu."
+        },
+        {
+          "english": "He hid his feeling and continued the conversation politely.",
+          "vietnamese": "Anh ấy giấu cảm xúc của mình và tiếp tục cuộc trò chuyện một cách lịch sự."
+        },
+        {
+          "english": "A warm cup of soup gives me a comfortable feeling on cold days.",
+          "vietnamese": "Một bát súp ấm cho tôi cảm giác dễ chịu vào những ngày lạnh."
+        }
+      ]
+    },
+    {
+      "word": "laugh",
+      "sentences": [
+        {
+          "english": "His funny story made the whole team laugh.",
+          "vietnamese": "Câu chuyện hài hước của anh ấy làm cả đội cười."
+        },
+        {
+          "english": "We could not stop laughing at the comedy on television.",
+          "vietnamese": "Chúng tôi không nhịn được cười trước bộ phim hài trên tivi."
+        },
+        {
+          "english": "My grandmother loves to laugh with her old neighbours.",
+          "vietnamese": "Bà tôi thích cười đùa với những người hàng xóm cũ."
+        },
+        {
+          "english": "Do not laugh at a beginner who is still learning a new skill.",
+          "vietnamese": "Đừng cười người mới bắt đầu khi họ còn đang học một kỹ năng mới."
+        },
+        {
+          "english": "The children laughed a lot on the playground after class.",
+          "vietnamese": "Bọn trẻ cười rất nhiều ở sân chơi sau giờ học."
+        }
+      ]
+    },
+    {
+      "word": "sadness",
+      "sentences": [
+        {
+          "english": "Rainy days fill her heart with sadness.",
+          "vietnamese": "Những ngày mưa khiến lòng cô ấy tràn ngập nỗi buồn."
+        },
+        {
+          "english": "There was deep sadness in his eyes when he lost the match.",
+          "vietnamese": "Có một nỗi buồn sâu thẳm trong mắt anh ấy khi thua trận đấu."
+        },
+        {
+          "english": "Music helps me forget my sadness for a moment.",
+          "vietnamese": "Âm nhạc giúp tôi quên đi nỗi buồn trong chốc lát."
+        },
+        {
+          "english": "She hid her sadness behind a lovely smile.",
+          "vietnamese": "Cô ấy giấu nỗi buồn sau một nụ cười đáng yêu."
+        },
+        {
+          "english": "The sadness of leaving my hometown lasted for weeks.",
+          "vietnamese": "Nỗi buồn khi rời quê nhà kéo dài hàng tuần liền."
+        }
+      ]
+    },
+    {
+      "word": "feed",
+      "sentences": [
+        {
+          "english": "She wakes up early to feed the buffalo before school.",
+          "vietnamese": "Cô ấy dậy sớm cho trâu ăn trước khi đi học."
+        },
+        {
+          "english": "My neighbour asked me to feed her cat during the holiday.",
+          "vietnamese": "Người hàng xóm nhờ tôi cho mèo của cô ấy ăn trong kỳ nghỉ."
+        },
+        {
+          "english": "Farmers grow rice and feed their animals every morning.",
+          "vietnamese": "Nông dân trồng lúa và cho vật nuôi ăn mỗi buổi sáng."
+        },
+        {
+          "english": "We feed the fish in the lake when we visit the temple.",
+          "vietnamese": "Chúng tôi cho cá trong hồ ăn mỗi khi đi lễ chùa."
+        },
+        {
+          "english": "It is hard to feed a big family with such a small income.",
+          "vietnamese": "Thật khó nuôi một gia đình đông người với khoản thu nhập nhỏ như vậy."
+        }
+      ]
+    },
+    {
+      "word": "jealous",
+      "sentences": [
+        {
+          "english": "He was jealous of his neighbour's expensive car.",
+          "vietnamese": "Anh ấy ghen tị với chiếc xe đắt tiền của người hàng xóm."
+        },
+        {
+          "english": "Do not be jealous of a celebrity's luxury life.",
+          "vietnamese": "Đừng ganh tị với cuộc sống xa hoa của người nổi tiếng."
+        },
+        {
+          "english": "She felt jealous when her best friend won the contest.",
+          "vietnamese": "Cô ấy thấy ghen tị khi bạn thân thắng cuộc thi."
+        },
+        {
+          "english": "My little brother becomes jealous when I get a better grade.",
+          "vietnamese": "Em trai tôi trở nên ganh tị khi tôi được điểm cao hơn."
+        },
+        {
+          "english": "A jealous person can hardly enjoy another's luck.",
+          "vietnamese": "Người hay ganh tị khó mà vui được trước may mắn của người khác."
+        }
+      ]
+    },
+    {
+      "word": "confused",
+      "sentences": [
+        {
+          "english": "The complicated map made the tourist confused.",
+          "vietnamese": "Tấm bản đồ phức tạp khiến vị khách du lịch bối rối."
+        },
+        {
+          "english": "I was confused by the timetable at the new station.",
+          "vietnamese": "Tôi bối rối trước bảng giờ tàu ở nhà ga mới."
+        },
+        {
+          "english": "The learners looked confused after the hard exercise.",
+          "vietnamese": "Người học trông bối rối sau bài tập khó."
+        },
+        {
+          "english": "Her confused answer showed that she did not understand.",
+          "vietnamese": "Câu trả lời lúng túng cho thấy cô ấy chưa hiểu."
+        },
+        {
+          "english": "Do not feel confused; the guide will explain the route again.",
+          "vietnamese": "Đừng bối rối; hướng dẫn viên sẽ giải thích lại lộ trình."
+        }
+      ]
+    },
+    {
+      "word": "pamper",
+      "sentences": [
+        {
+          "english": "My grandmother likes to pamper us with home-cooked meals.",
+          "vietnamese": "Bà tôi thích chiều chuộng chúng tôi bằng những bữa cơm nhà."
+        },
+        {
+          "english": "On holiday, I pamper myself with a long, comfortable bath.",
+          "vietnamese": "Vào kỳ nghỉ, tôi tự nuông chiều mình bằng một lần tắm bồn thật lâu và dễ chịu."
+        },
+        {
+          "english": "Rich parents sometimes pamper their children too much.",
+          "vietnamese": "Cha mẹ giàu có đôi khi nuông chiều con cái quá mức."
+        },
+        {
+          "english": "The resort promises to pamper every guest with excellent service.",
+          "vietnamese": "Khu nghỉ dưỡng hứa chiều chuộng mọi vị khách bằng dịch vụ tuyệt vời."
+        },
+        {
+          "english": "She pampers her lovely cat with expensive food.",
+          "vietnamese": "Cô ấy chiều chú mèo đáng yêu của mình bằng đồ ăn đắt tiền."
+        }
+      ]
+    },
+    {
+      "word": "homesick",
+      "sentences": [
+        {
+          "english": "Students living abroad often feel homesick during festivals.",
+          "vietnamese": "Sinh viên sống ở nước ngoài thường thấy nhớ nhà vào các dịp lễ hội."
+        },
+        {
+          "english": "I felt homesick on my first night in the homestay.",
+          "vietnamese": "Tôi thấy nhớ nhà trong đêm đầu tiên ở homestay."
+        },
+        {
+          "english": "A bowl of hot soup always helps a homesick traveller.",
+          "vietnamese": "Một bát súp nóng luôn giúp người xa nhà đỡ nhớ quê."
+        },
+        {
+          "english": "He was homesick, so he called his family every evening.",
+          "vietnamese": "Anh ấy nhớ nhà nên gọi điện cho gia đình mỗi tối."
+        },
+        {
+          "english": "Homesick workers return to their hometown at Tet.",
+          "vietnamese": "Những người lao động nhớ nhà trở về quê vào dịp Tết."
+        }
+      ]
+    },
+    {
+      "word": "dull",
+      "sentences": [
+        {
+          "english": "The film was so dull that we left the theatre early.",
+          "vietnamese": "Bộ phim buồn tẻ đến mức chúng tôi rời rạp sớm."
+        },
+        {
+          "english": "Life in a quiet town can feel dull to a young tourist.",
+          "vietnamese": "Cuộc sống ở một thị trấn yên tĩnh có thể khá nhàm chán với một du khách trẻ."
+        },
+        {
+          "english": "The dull talk made half of the room sleep.",
+          "vietnamese": "Bài nói chuyện nhàm chán khiến nửa căn phòng ngủ gật."
+        },
+        {
+          "english": "Grey clouds made the afternoon look dull and cold.",
+          "vietnamese": "Những đám mây xám khiến buổi chiều trông ảm đạm và lạnh lẽo."
+        },
+        {
+          "english": "A dull knife cannot slice the beef well.",
+          "vietnamese": "Con dao cùn không thái thịt bò được ngon."
+        }
+      ]
+    },
+    {
+      "word": "moody",
+      "sentences": [
+        {
+          "english": "My brother becomes moody when he is exhausted after work.",
+          "vietnamese": "Em trai tôi trở nên ẩm ương khi kiệt sức sau giờ làm."
+        },
+        {
+          "english": "She is moody in the morning until she drinks her coffee.",
+          "vietnamese": "Cô ấy hay cáu buổi sáng cho tới khi uống cà phê."
+        },
+        {
+          "english": "A moody manager makes the whole team nervous.",
+          "vietnamese": "Một người quản lý thất thường làm cả đội lo lắng."
+        },
+        {
+          "english": "Do not be moody with your customers at the market.",
+          "vietnamese": "Đừng cáu bẳn với khách hàng của bạn ở chợ."
+        },
+        {
+          "english": "He gets moody when the air stays humid for days.",
+          "vietnamese": "Anh ấy trở nên khó chịu khi trời cứ ẩm ướt nhiều ngày liền."
+        }
+      ]
+    },
+    {
+      "word": "serious",
+      "sentences": [
+        {
+          "english": "The doctor said her disease was not serious.",
+          "vietnamese": "Bác sĩ nói bệnh của cô ấy không nghiêm trọng."
+        },
+        {
+          "english": "The accident caused serious damage to the truck.",
+          "vietnamese": "Vụ tai nạn gây hư hỏng nghiêm trọng cho chiếc xe tải."
+        },
+        {
+          "english": "He is serious about his career and works hard every day.",
+          "vietnamese": "Anh ấy nghiêm túc với sự nghiệp và làm việc chăm chỉ mỗi ngày."
+        },
+        {
+          "english": "Air pollution is a serious issue in the capital.",
+          "vietnamese": "Ô nhiễm không khí là một vấn đề nghiêm trọng ở thủ đô."
+        },
+        {
+          "english": "Please be serious during the job interview.",
+          "vietnamese": "Hãy nghiêm túc trong buổi phỏng vấn xin việc."
+        }
+      ]
+    },
+    {
+      "word": "grateful",
+      "sentences": [
+        {
+          "english": "I am grateful to my teacher for her patient support.",
+          "vietnamese": "Tôi biết ơn cô giáo vì sự hỗ trợ kiên nhẫn của cô."
+        },
+        {
+          "english": "We are grateful for the kind help of our neighbours.",
+          "vietnamese": "Chúng tôi biết ơn sự giúp đỡ tử tế của những người hàng xóm."
+        },
+        {
+          "english": "She was grateful when the nurse explained the prescription.",
+          "vietnamese": "Cô ấy biết ơn khi y tá giải thích đơn thuốc."
+        },
+        {
+          "english": "I feel grateful for good health and a peaceful home.",
+          "vietnamese": "Tôi thấy biết ơn vì có sức khoẻ tốt và một mái nhà yên bình."
+        },
+        {
+          "english": "The guests were grateful for such a delicious dinner.",
+          "vietnamese": "Các vị khách rất biết ơn vì bữa tối ngon đến vậy."
+        }
+      ]
+    },
+    {
+      "word": "mood",
+      "sentences": [
+        {
+          "english": "A cup of coffee always improves my mood.",
+          "vietnamese": "Một tách cà phê luôn cải thiện tâm trạng của tôi."
+        },
+        {
+          "english": "Rainy afternoons put me in a lonely mood.",
+          "vietnamese": "Những buổi chiều mưa khiến tâm trạng tôi cô đơn."
+        },
+        {
+          "english": "Her mood changed when she heard the catchy song.",
+          "vietnamese": "Tâm trạng cô ấy thay đổi khi nghe bài hát bắt tai đó."
+        },
+        {
+          "english": "Exercise in the gym is good for both body and mood.",
+          "vietnamese": "Tập luyện ở phòng gym tốt cho cả cơ thể lẫn tâm trạng."
+        },
+        {
+          "english": "He was in a bad mood after the long delay at the station.",
+          "vietnamese": "Anh ấy có tâm trạng tệ sau khi bị hoãn lâu ở nhà ga."
+        }
+      ]
+    },
+    {
+      "word": "depressed",
+      "sentences": [
+        {
+          "english": "He felt depressed after losing his part-time job.",
+          "vietnamese": "Anh ấy thấy chán nản sau khi mất công việc bán thời gian."
+        },
+        {
+          "english": "Many patients feel depressed during a long stay in the clinic.",
+          "vietnamese": "Nhiều bệnh nhân thấy chán nản trong thời gian nằm viện dài ngày."
+        },
+        {
+          "english": "She became depressed when her small company closed.",
+          "vietnamese": "Cô ấy trở nên trầm cảm khi công ty nhỏ của mình đóng cửa."
+        },
+        {
+          "english": "Do not stay alone if you feel depressed; talk to a relative.",
+          "vietnamese": "Đừng ở một mình nếu bạn thấy chán nản; hãy nói chuyện với người thân."
+        },
+        {
+          "english": "Cold and rainy days can make anyone depressed.",
+          "vietnamese": "Những ngày lạnh và mưa có thể khiến bất cứ ai chán nản."
+        }
+      ]
+    },
+    {
+      "word": "enough",
+      "sentences": [
+        {
+          "english": "We did not save enough money for the holiday.",
+          "vietnamese": "Chúng tôi đã không tiết kiệm đủ tiền cho kỳ nghỉ."
+        },
+        {
+          "english": "There is not enough space in this cramped flat.",
+          "vietnamese": "Căn hộ chật chội này không đủ chỗ."
+        },
+        {
+          "english": "He is strong enough to carry the heavy bucket.",
+          "vietnamese": "Anh ấy đủ khoẻ để xách cái xô nặng."
+        },
+        {
+          "english": "Do you have enough ingredients for the recipe?",
+          "vietnamese": "Bạn có đủ nguyên liệu cho công thức này chưa?"
+        },
+        {
+          "english": "I did not sleep enough last night, so I feel exhausted.",
+          "vietnamese": "Đêm qua tôi ngủ không đủ nên giờ thấy kiệt sức."
+        }
+      ]
+    },
+    {
+      "word": "happiness",
+      "sentences": [
+        {
+          "english": "A peaceful neighbourhood brings real happiness.",
+          "vietnamese": "Một khu phố yên bình mang lại hạnh phúc thật sự."
+        },
+        {
+          "english": "Money cannot buy happiness, but good health can help.",
+          "vietnamese": "Tiền không mua được hạnh phúc, nhưng sức khoẻ tốt thì có thể giúp."
+        },
+        {
+          "english": "Their wedding was a day full of happiness.",
+          "vietnamese": "Đám cưới của họ là một ngày tràn đầy hạnh phúc."
+        },
+        {
+          "english": "She finds happiness in cooking for her family.",
+          "vietnamese": "Cô ấy tìm thấy hạnh phúc trong việc nấu ăn cho gia đình."
+        },
+        {
+          "english": "Simple things like a sunny morning bring happiness.",
+          "vietnamese": "Những điều giản dị như một buổi sáng nắng đẹp cũng mang lại hạnh phúc."
+        }
+      ]
+    },
+    {
+      "word": "helpful",
+      "sentences": [
+        {
+          "english": "The receptionist was very helpful to every guest.",
+          "vietnamese": "Cô lễ tân rất nhiệt tình giúp đỡ mọi vị khách."
+        },
+        {
+          "english": "This website is helpful for beginners learning English.",
+          "vietnamese": "Trang web này hữu ích cho người mới học tiếng Anh."
+        },
+        {
+          "english": "My housemate is always helpful when I am ill.",
+          "vietnamese": "Người ở cùng nhà tôi luôn giúp đỡ mỗi khi tôi ốm."
+        },
+        {
+          "english": "The guide gave us helpful information about the temple.",
+          "vietnamese": "Hướng dẫn viên cho chúng tôi những thông tin hữu ích về ngôi chùa."
+        },
+        {
+          "english": "Regular exercise is helpful for both body and mind.",
+          "vietnamese": "Tập thể dục đều đặn có ích cho cả cơ thể lẫn tinh thần."
+        }
+      ]
+    },
+    {
+      "word": "lie",
+      "sentences": [
+        {
+          "english": "A small lie can damage a person's trust.",
+          "vietnamese": "Một lời nói dối nhỏ có thể phá hỏng lòng tin của một người."
+        },
+        {
+          "english": "Do not lie to the officer at immigration.",
+          "vietnamese": "Đừng nói dối viên chức ở cửa khẩu nhập cảnh."
+        },
+        {
+          "english": "He told a lie to avoid an argument at home.",
+          "vietnamese": "Anh ấy nói dối để tránh một cuộc cãi vã ở nhà."
+        },
+        {
+          "english": "Her lie was discovered when the manager checked the document.",
+          "vietnamese": "Lời nói dối của cô ấy bị phát hiện khi quản lý kiểm tra tài liệu."
+        },
+        {
+          "english": "Telling a lie is never a brave choice.",
+          "vietnamese": "Nói dối không bao giờ là một lựa chọn dũng cảm."
+        }
+      ]
+    },
+    {
+      "word": "willing",
+      "sentences": [
+        {
+          "english": "She is always willing to help her housemate.",
+          "vietnamese": "Cô ấy luôn sẵn lòng giúp người ở cùng nhà."
+        },
+        {
+          "english": "Are you willing to attend the meeting on Sunday?",
+          "vietnamese": "Bạn có sẵn sàng dự cuộc họp vào Chủ nhật không?"
+        },
+        {
+          "english": "He was willing to lend me his motorbike.",
+          "vietnamese": "Anh ấy sẵn lòng cho tôi mượn xe máy."
+        },
+        {
+          "english": "Few people are willing to work in such a stressful place.",
+          "vietnamese": "Ít người sẵn sàng làm việc ở một nơi căng thẳng như vậy."
+        },
+        {
+          "english": "I am willing to try any new technique in the kitchen.",
+          "vietnamese": "Tôi sẵn sàng thử bất kỳ kỹ thuật mới nào trong bếp."
+        }
+      ]
+    },
+    {
+      "word": "fault",
+      "sentences": [
+        {
+          "english": "The accident was not the young driver's fault.",
+          "vietnamese": "Vụ tai nạn không phải lỗi của người tài xế trẻ."
+        },
+        {
+          "english": "It is my fault that we missed the flight.",
+          "vietnamese": "Lỗi của tôi mà chúng ta lỡ chuyến bay."
+        },
+        {
+          "english": "The mechanic found a fault in the engine.",
+          "vietnamese": "Người thợ máy tìm ra một lỗi trong động cơ."
+        },
+        {
+          "english": "Do not blame your team for every small fault.",
+          "vietnamese": "Đừng trách cả đội vì mỗi sai sót nhỏ."
+        },
+        {
+          "english": "Admitting a fault shows a strong character.",
+          "vietnamese": "Thừa nhận lỗi cho thấy một tính cách mạnh mẽ."
+        }
+      ]
+    },
+    {
+      "word": "gloomy",
+      "sentences": [
+        {
+          "english": "The sky was gloomy with heavy cloud all afternoon.",
+          "vietnamese": "Bầu trời u ám với mây dày suốt cả buổi chiều."
+        },
+        {
+          "english": "The old building looked gloomy and cold inside.",
+          "vietnamese": "Toà nhà cũ trông ảm đạm và lạnh lẽo bên trong."
+        },
+        {
+          "english": "A gloomy alley is not a safe shortcut at night.",
+          "vietnamese": "Một con hẻm tối tăm không phải là lối tắt an toàn vào ban đêm."
+        },
+        {
+          "english": "The forecast for the holiday is gloomy and rainy.",
+          "vietnamese": "Dự báo cho kỳ nghỉ là trời u ám và mưa."
+        },
+        {
+          "english": "His gloomy face told us the result was bad.",
+          "vietnamese": "Gương mặt ảm đạm của anh ấy cho chúng tôi biết kết quả không tốt."
+        }
+      ]
+    },
+    {
+      "word": "delighted",
+      "sentences": [
+        {
+          "english": "My parents were delighted with my final score.",
+          "vietnamese": "Bố mẹ tôi rất vui sướng với điểm số cuối kỳ của tôi."
+        },
+        {
+          "english": "We were delighted to be invited to their wedding.",
+          "vietnamese": "Chúng tôi rất vui khi được mời đến đám cưới của họ."
+        },
+        {
+          "english": "The customers were delighted with the tasty hotpot.",
+          "vietnamese": "Thực khách rất hài lòng với món lẩu ngon."
+        },
+        {
+          "english": "She was delighted when her favourite singer came on stage.",
+          "vietnamese": "Cô ấy vui sướng khi ca sĩ yêu thích bước lên sân khấu."
+        },
+        {
+          "english": "I am delighted that you can attend our celebration.",
+          "vietnamese": "Tôi rất vui vì bạn có thể dự buổi lễ mừng của chúng tôi."
+        }
+      ]
+    },
+    {
+      "word": "ashamed",
+      "sentences": [
+        {
+          "english": "He felt ashamed of his rude words at the party.",
+          "vietnamese": "Anh ấy thấy xấu hổ vì những lời thô lỗ của mình ở bữa tiệc."
+        },
+        {
+          "english": "I was ashamed that I missed my friend's anniversary.",
+          "vietnamese": "Tôi xấu hổ vì đã quên mất ngày kỷ niệm của bạn mình."
+        },
+        {
+          "english": "She felt ashamed of her lazy habit of sleeping until noon.",
+          "vietnamese": "Cô ấy thấy xấu hổ vì thói quen lười biếng ngủ đến trưa."
+        },
+        {
+          "english": "There is nothing to be ashamed of when a beginner makes errors.",
+          "vietnamese": "Chẳng có gì phải xấu hổ khi một người mới mắc lỗi."
+        },
+        {
+          "english": "He was ashamed to admit that the mistake was his.",
+          "vietnamese": "Anh ấy xấu hổ khi phải thừa nhận sai lầm đó là của mình."
+        }
+      ]
+    }
+  ]
+}
