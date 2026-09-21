@@ -44,7 +44,7 @@ const FAMILIES: string[][] = [
   ["lover", "lovely", "loved one"],
   ["season", "seasoning"],
   ["useless", "useful", "user"],
-  ["hometown", "homestay"],
+  ["hometown", "homestay", "homesick"],
   ["housewife", "housemate"],
   ["room", "roommate"],
   ["stir-fry", "stir"],
@@ -63,10 +63,21 @@ const FAMILIES: string[][] = [
   ["personal", "personally"],
   ["attention", "attend"],
   ["reliable", "rely"],
-  ["unfriend", "friendly"],
+  ["unfriend", "friendly", "friendship"],
   ["information", "inform"],
   ["support", "supporter"],
   ["change", "exchange"],
+  ["marriage", "married"],
+  ["argue", "argument"],
+  ["interested", "interest"],
+  ["strange", "stranger"],
+  ["attract", "attractive"],
+  ["ordinary", "extraordinary"],
+  ["special", "especially"],
+  ["play", "playful"],
+  ["sociable", "socially"],
+  ["type", "typical"],
+  ["serious", "seriously"],
 ];
 
 // Từ liên quan (đồng nghĩa / cùng trường nghĩa). Mỗi nhóm cần >= 2 deck mới ghi.
@@ -90,7 +101,7 @@ const RELATED: string[][] = [
   ["understand", "know"], // hiểu / biết
   ["announce", "inform", "tell"], // thông báo
   ["improve", "develop"], // cải thiện / phát triển
-  ["common", "popular", "normal", "familiar", "typical"], // phổ biến / bình thường
+  ["common", "popular", "normal", "familiar", "typical", "ordinary"], // phổ biến / bình thường
   ["difficulty", "challenging", "complicated"], // khó / thử thách / phức tạp
   ["comfortable", "cosy", "chilled", "pleasant"], // thoải mái / dễ chịu
   ["safe", "security"], // an toàn / an ninh
@@ -113,19 +124,19 @@ const RELATED: string[][] = [
   ["fast", "quickly", "speedy"], // nhanh
   ["fix", "repair"], // sửa chữa
   ["prevent", "protect"], // ngăn ngừa / bảo vệ
-  ["beautiful", "gorgeous"], // đẹp
+  ["beautiful", "gorgeous", "attractive", "good-looking"], // đẹp / ưa nhìn
   ["mindful", "meditate"], // chú tâm / thiền
   ["damage", "injure", "hurt"], // gây hại / làm bị thương
   ["exercise", "practice", "train"], // tập luyện / rèn luyện
   ["vehicle", "motorbike", "truck"], // phương tiện
   ["exhausted", "tiring"], // mệt / kiệt sức
-  ["fan", "supporter"], // người hâm mộ / người ủng hộ
+  ["fan", "supporter", "enthusiast"], // người hâm mộ / người ủng hộ / người đam mê
   ["paparazzi", "photographer"], // thợ săn ảnh / thợ chụp ảnh
-  ["fancy", "luxury"], // sang chảnh / xa xỉ
+  ["fancy", "luxury", "classy"], // sang chảnh / xa xỉ / sang trọng
   ["shiny", "sparkling"], // bóng loáng / lấp lánh
   ["loud", "noisy"], // to tiếng / ồn ào
   ["catchy", "popular"], // bắt tai / được ưa chuộng
-  ["upbeat", "cheerful"], // sôi động / vui vẻ
+  ["upbeat", "cheerful", "joyful"], // sôi động / vui vẻ / hân hoan
   ["encourage", "support"], // khích lệ / ủng hộ
   ["perform", "show"], // biểu diễn / buổi diễn
   ["instrument", "guitar", "flute", "drum"], // nhạc cụ
@@ -139,6 +150,31 @@ const RELATED: string[][] = [
   ["delete", "remove"], // xoá / loại bỏ
   ["outdated", "modern"], // lỗi thời <-> hiện đại
   ["power", "energy"], // nguồn điện, sức mạnh / năng lượng
+  ["marriage", "divorce"], // hôn nhân <-> ly hôn
+  ["romance", "lover"], // chuyện tình / người yêu
+  ["stranger", "foreigner"], // người lạ / người nước ngoài
+  ["figure", "body"], // vóc dáng / cơ thể
+  ["kind", "generous", "friendly"], // tử tế / hào phóng / thân thiện
+  ["neat", "tidy"], // gọn gàng / ngăn nắp
+  ["mad", "angry", "annoyed"], // tức giận / bực bội
+  ["funny", "comedy"], // hài hước / phim hài
+  ["trust", "reliable"], // tin tưởng / đáng tin cậy
+  ["easy-going", "calm"], // dễ tính / điềm tĩnh
+  ["hyper", "active"], // tăng động / năng động
+  ["judge", "consider"], // đánh giá / cân nhắc
+  ["result", "effect"], // kết quả / tác động
+  ["attitude", "opinion"], // thái độ / quan điểm
+  ["depressed", "disappointed"], // chán nản / thất vọng
+  ["ashamed", "embarrassed"], // xấu hổ / ngượng ngùng
+  ["delighted", "excited", "joyful"], // vui sướng / phấn khích / hân hoan
+  ["happiness", "satisfied", "joyful"], // hạnh phúc / hài lòng / hân hoan
+  ["moody", "short-tempered"], // thất thường / nóng tính
+  ["serious", "strict"], // nghiêm túc / nghiêm khắc
+  ["pamper", "spoil"], // chiều chuộng / làm hư
+  ["helpful", "useful"], // hữu ích
+  ["laugh", "cry"], // cười <-> khóc
+  ["homesick", "lonely"], // nhớ nhà / cô đơn
+  ["mood", "vibe", "atmosphere"], // tâm trạng / không khí
 ];
 
 // Biến thể Anh–Anh (BrE) ↔ Anh–Mỹ (AmE): từ khác hẳn (flat↔apartment) hoặc khác chính tả.

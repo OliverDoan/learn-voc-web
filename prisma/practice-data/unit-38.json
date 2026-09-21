@@ -1,0 +1,247 @@
+{
+  "unit": 38,
+  "deck": "Unit 38: Tình bạn và tình yêu",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "bestie",
+      "sentences": [
+        { "english": "I have known my bestie since secondary school.", "vietnamese": "Tôi quen bạn thân nhất của mình từ hồi cấp hai." },
+        { "english": "My bestie always tells me the truth, even when it hurts.", "vietnamese": "Bạn thân nhất của tôi luôn nói thật, kể cả khi điều đó làm tôi đau." },
+        { "english": "We invite my bestie to every family party.", "vietnamese": "Chúng tôi mời bạn thân nhất của tôi đến mọi bữa tiệc gia đình." },
+        { "english": "My bestie and I share a small flat near the market.", "vietnamese": "Tôi và bạn thân nhất ở chung một căn hộ nhỏ gần chợ." },
+        { "english": "I called my bestie when I felt sad last night.", "vietnamese": "Tôi đã gọi cho bạn thân nhất khi tôi thấy buồn tối qua." }
+      ]
+    },
+    {
+      "word": "boyfriend",
+      "sentences": [
+        { "english": "Her boyfriend cooks dinner for her every Sunday.", "vietnamese": "Bạn trai cô ấy nấu bữa tối cho cô ấy vào mỗi Chủ nhật." },
+        { "english": "My boyfriend is very patient when the traffic is heavy.", "vietnamese": "Bạn trai tôi rất kiên nhẫn khi giao thông đông đúc." },
+        { "english": "She posted a photo of her boyfriend on her page.", "vietnamese": "Cô ấy đăng một bức ảnh của bạn trai lên trang cá nhân." },
+        { "english": "Her boyfriend works as an engineer in a big company.", "vietnamese": "Bạn trai cô ấy làm kỹ sư ở một công ty lớn." },
+        { "english": "My boyfriend always reminds me to rest after a stressful day.", "vietnamese": "Bạn trai tôi luôn nhắc tôi nghỉ ngơi sau một ngày căng thẳng." }
+      ]
+    },
+    {
+      "word": "date",
+      "sentences": [
+        { "english": "We had our first date at a quiet coffee shop.", "vietnamese": "Chúng tôi có buổi hẹn hò đầu tiên ở một quán cà phê yên tĩnh." },
+        { "english": "He was nervous before the date with his classmate.", "vietnamese": "Anh ấy hồi hộp trước buổi hẹn với người bạn cùng lớp." },
+        { "english": "They have been dating for three years and still enjoy every journey together.", "vietnamese": "Họ đã hẹn hò ba năm và vẫn tận hưởng mọi chuyến đi cùng nhau." },
+        { "english": "She cancelled the date because she felt ill.", "vietnamese": "Cô ấy huỷ buổi hẹn vì thấy không khoẻ." },
+        { "english": "Our date ended with a lovely walk along the lake.", "vietnamese": "Buổi hẹn của chúng tôi kết thúc bằng một cuộc dạo bộ dễ thương bên hồ." }
+      ]
+    },
+    {
+      "word": "soulmate",
+      "sentences": [
+        { "english": "He believes his wife is his soulmate.", "vietnamese": "Anh ấy tin rằng vợ mình là tri kỷ của mình." },
+        { "english": "A soulmate understands you without many words.", "vietnamese": "Một người tri kỷ hiểu bạn mà không cần nhiều lời." },
+        { "english": "Finding a soulmate takes luck and a lot of time.", "vietnamese": "Tìm được một người tri kỷ cần may mắn và rất nhiều thời gian." },
+        { "english": "My grandmother still keeps old postcards from her soulmate.", "vietnamese": "Bà tôi vẫn giữ những tấm bưu thiếp cũ từ người tri kỷ của bà." },
+        { "english": "They met at a wedding and became soulmates that evening.", "vietnamese": "Họ gặp nhau ở một đám cưới và trở thành tri kỷ ngay tối hôm đó." }
+      ]
+    },
+    {
+      "word": "girlfriend",
+      "sentences": [
+        { "english": "His girlfriend loves travelling to new destinations.", "vietnamese": "Bạn gái anh ấy thích đi du lịch đến những điểm đến mới." },
+        { "english": "My girlfriend is a talented musician who plays the guitar.", "vietnamese": "Bạn gái tôi là một nhạc sĩ tài năng biết chơi ghi ta." },
+        { "english": "He bought his girlfriend a beautiful lantern for the festival.", "vietnamese": "Anh ấy mua cho bạn gái một chiếc đèn lồng đẹp để đi lễ hội." },
+        { "english": "His girlfriend complains that he checks his phone too often.", "vietnamese": "Bạn gái anh ấy phàn nàn rằng anh ấy xem điện thoại quá nhiều." },
+        { "english": "My girlfriend and I exercise at the gym every morning.", "vietnamese": "Tôi và bạn gái tập thể dục ở phòng gym mỗi sáng." }
+      ]
+    },
+    {
+      "word": "clingy",
+      "sentences": [
+        { "english": "He became clingy and called her twenty times a day.", "vietnamese": "Anh ấy trở nên bám dính và gọi cho cô ấy hai mươi lần một ngày." },
+        { "english": "Nobody likes a clingy partner who controls everything.", "vietnamese": "Không ai thích một người yêu bám dính và kiểm soát mọi thứ." },
+        { "english": "She felt annoyed because her boyfriend was too clingy.", "vietnamese": "Cô ấy thấy khó chịu vì bạn trai quá bám dính." },
+        { "english": "My little brother is clingy whenever we invite guests home.", "vietnamese": "Em trai tôi hay bám dính mỗi khi nhà có khách." },
+        { "english": "Being clingy can damage a good friendship.", "vietnamese": "Bám dính quá mức có thể làm hỏng một tình bạn tốt đẹp." }
+      ]
+    },
+    {
+      "word": "cuddle",
+      "sentences": [
+        { "english": "They cuddled on the sofa and watched a comedy.", "vietnamese": "Họ ôm nhau trên ghế sofa và xem một bộ phim hài." },
+        { "english": "A warm cuddle can calm you after a stressful day.", "vietnamese": "Một cái ôm ấm áp có thể giúp bạn bình tĩnh sau một ngày căng thẳng." },
+        { "english": "The little girl cuddles her teddy bear before sleeping.", "vietnamese": "Cô bé ôm chú gấu bông trước khi ngủ." },
+        { "english": "He cuddled his dog quietly in the small room.", "vietnamese": "Anh ấy lặng lẽ ôm chú chó trong căn phòng nhỏ." },
+        { "english": "We cuddled under a thick blanket because the weather was rainy.", "vietnamese": "Chúng tôi ôm nhau dưới tấm chăn dày vì trời mưa." }
+      ]
+    },
+    {
+      "word": "friendship",
+      "sentences": [
+        { "english": "Our friendship started in kindergarten.", "vietnamese": "Tình bạn của chúng tôi bắt đầu từ hồi mẫu giáo." },
+        { "english": "A true friendship needs an open conversation.", "vietnamese": "Một tình bạn thật sự cần những cuộc trò chuyện cởi mở." },
+        { "english": "Money problems can destroy a long friendship between housemates.", "vietnamese": "Vấn đề tiền bạc có thể phá huỷ tình bạn lâu năm giữa những người ở chung nhà." },
+        { "english": "Their friendship survived the war and many hard years.", "vietnamese": "Tình bạn của họ đã vượt qua chiến tranh và nhiều năm khó khăn." },
+        { "english": "We mark our friendship with a small party on the same occasion every year.", "vietnamese": "Chúng tôi kỷ niệm tình bạn bằng một bữa tiệc nhỏ vào cùng dịp mỗi năm." }
+      ]
+    },
+    {
+      "word": "honest",
+      "sentences": [
+        { "english": "Please be honest and tell me the truth.", "vietnamese": "Hãy thành thật và nói cho tôi sự thật." },
+        { "english": "An honest employee never steals from the company.", "vietnamese": "Một nhân viên trung thực không bao giờ lấy cắp của công ty." },
+        { "english": "She gave an honest opinion about my artwork.", "vietnamese": "Cô ấy đưa ra nhận xét thật lòng về tác phẩm của tôi." },
+        { "english": "Honest people usually keep their promises and stay calm.", "vietnamese": "Người trung thực thường giữ lời hứa và giữ được bình tĩnh." },
+        { "english": "The journalist wrote an honest report about the accident.", "vietnamese": "Nhà báo đã viết một bài tường thuật trung thực về vụ tai nạn." }
+      ]
+    },
+    {
+      "word": "understand",
+      "sentences": [
+        { "english": "I cannot understand why he refuses to talk to me.", "vietnamese": "Tôi không thể hiểu tại sao anh ấy từ chối nói chuyện với tôi." },
+        { "english": "A good coach must understand every athlete on the team.", "vietnamese": "Một huấn luyện viên giỏi phải thấu hiểu từng vận động viên trong đội." },
+        { "english": "She understands my language even when I speak quickly.", "vietnamese": "Cô ấy hiểu ngôn ngữ của tôi ngay cả khi tôi nói nhanh." },
+        { "english": "Parents rarely understand the culture of young bloggers.", "vietnamese": "Bố mẹ hiếm khi hiểu được văn hoá của những blogger trẻ." },
+        { "english": "Nobody could understand the meaning of her silent look.", "vietnamese": "Không ai hiểu được ý nghĩa của ánh nhìn im lặng ấy." }
+      ]
+    },
+    {
+      "word": "romantic",
+      "sentences": [
+        { "english": "He planned a romantic dinner on their anniversary.", "vietnamese": "Anh ấy chuẩn bị một bữa tối lãng mạn vào ngày kỷ niệm của họ." },
+        { "english": "The film was too romantic for my taste.", "vietnamese": "Bộ phim quá lãng mạn so với gu của tôi." },
+        { "english": "A romantic walk along the bay is always lovely.", "vietnamese": "Một cuộc dạo bộ lãng mạn dọc vịnh lúc nào cũng dễ thương." },
+        { "english": "She recommends this romantic homestay to every couple.", "vietnamese": "Cô ấy giới thiệu homestay lãng mạn này cho mọi cặp đôi." },
+        { "english": "Romantic music reminds me of my first holiday abroad.", "vietnamese": "Nhạc lãng mạn làm tôi nhớ đến kỳ nghỉ đầu tiên ở nước ngoài." }
+      ]
+    },
+    {
+      "word": "relationship",
+      "sentences": [
+        { "english": "Their relationship became strong after many difficulties.", "vietnamese": "Mối quan hệ của họ trở nên bền chặt sau nhiều khó khăn." },
+        { "english": "A good relationship needs trust and respect.", "vietnamese": "Một mối quan hệ tốt cần sự tin tưởng và tôn trọng." },
+        { "english": "He ended the relationship because of her selfish habits.", "vietnamese": "Anh ấy kết thúc mối quan hệ vì những thói quen ích kỷ của cô ấy." },
+        { "english": "Their relationship survived the distance between two cities.", "vietnamese": "Mối quan hệ của họ vượt qua được khoảng cách giữa hai thành phố." },
+        { "english": "Social media can damage a young relationship.", "vietnamese": "Mạng xã hội có thể làm tổn hại một mối quan hệ còn non trẻ." }
+      ]
+    },
+    {
+      "word": "single",
+      "sentences": [
+        { "english": "She has been single since she moved to the capital.", "vietnamese": "Cô ấy độc thân từ khi chuyển lên thủ đô." },
+        { "english": "Being single gives him more free time for hiking.", "vietnamese": "Độc thân cho anh ấy nhiều thời gian rảnh hơn để đi bộ đường dài." },
+        { "english": "My single neighbour adopted two lovely cats.", "vietnamese": "Người hàng xóm độc thân của tôi nhận nuôi hai chú mèo dễ thương." },
+        { "english": "He stayed single and focused on his career.", "vietnamese": "Anh ấy ở vậy và tập trung cho sự nghiệp." },
+        { "english": "Many single people share a flat to save money.", "vietnamese": "Nhiều người độc thân ở ghép căn hộ để tiết kiệm tiền." }
+      ]
+    },
+    {
+      "word": "stranger",
+      "sentences": [
+        { "english": "Never give your address to a stranger online.", "vietnamese": "Đừng bao giờ đưa địa chỉ của bạn cho người lạ trên mạng." },
+        { "english": "A kind stranger helped me when I got lost downtown.", "vietnamese": "Một người lạ tốt bụng đã giúp tôi khi tôi bị lạc ở trung tâm." },
+        { "english": "She felt scared when a stranger followed her home.", "vietnamese": "Cô ấy thấy sợ khi một người lạ đi theo cô về nhà." },
+        { "english": "A stranger on the train asked about my hometown.", "vietnamese": "Một người lạ trên tàu hỏi về quê tôi." },
+        { "english": "Do not accept food from a stranger at the station.", "vietnamese": "Đừng nhận đồ ăn từ người lạ ở nhà ga." }
+      ]
+    },
+    {
+      "word": "married",
+      "sentences": [
+        { "english": "They got married after a lovely wedding in the countryside.", "vietnamese": "Họ kết hôn sau một đám cưới dễ thương ở vùng quê." },
+        { "english": "My married sister lives in a quiet neighbourhood.", "vietnamese": "Chị gái đã lập gia đình của tôi sống ở một khu phố yên tĩnh." },
+        { "english": "Married couples often argue about money and housework.", "vietnamese": "Các cặp vợ chồng thường cãi nhau về tiền bạc và việc nhà." },
+        { "english": "He is married to a famous photographer.", "vietnamese": "Anh ấy kết hôn với một nhiếp ảnh gia nổi tiếng." },
+        { "english": "Married life taught them to respect each other.", "vietnamese": "Cuộc sống hôn nhân dạy họ biết tôn trọng nhau." }
+      ]
+    },
+    {
+      "word": "flirt",
+      "sentences": [
+        { "english": "He tried to flirt with her at the party.", "vietnamese": "Anh ấy cố tán tỉnh cô ấy ở bữa tiệc." },
+        { "english": "She flirts with everybody, which makes her boyfriend angry.", "vietnamese": "Cô ấy thả thính với tất cả mọi người, khiến bạn trai cô ấy tức giận." },
+        { "english": "Flirting online can be dangerous with a stranger.", "vietnamese": "Tán tỉnh trên mạng với người lạ có thể nguy hiểm." },
+        { "english": "He flirted with the receptionist and she laughed.", "vietnamese": "Anh ấy tán tỉnh cô lễ tân và cô ấy bật cười." },
+        { "english": "Do not flirt with anyone during practice.", "vietnamese": "Đừng tán tỉnh ai trong lúc tập luyện." }
+      ]
+    },
+    {
+      "word": "argument",
+      "sentences": [
+        { "english": "They had a loud argument about the rent.", "vietnamese": "Họ có một cuộc cãi vã ầm ĩ về tiền thuê nhà." },
+        { "english": "The argument started over a small bill at the restaurant.", "vietnamese": "Cuộc cãi vã bắt đầu từ một hoá đơn nhỏ ở nhà hàng." },
+        { "english": "After the argument, she stayed silent for two days.", "vietnamese": "Sau cuộc cãi vã, cô ấy im lặng suốt hai ngày." },
+        { "english": "A calm conversation is better than a long argument.", "vietnamese": "Một cuộc trò chuyện bình tĩnh tốt hơn một cuộc cãi vã dài." },
+        { "english": "Their argument about the timetable happens every weekend.", "vietnamese": "Cuộc cãi vã của họ về thời gian biểu xảy ra mỗi cuối tuần." }
+      ]
+    },
+    {
+      "word": "partner",
+      "sentences": [
+        { "english": "My partner supports me in every difficult moment.", "vietnamese": "Bạn đời của tôi ủng hộ tôi trong mọi thời khắc khó khăn." },
+        { "english": "She dances with her partner at the local club.", "vietnamese": "Cô ấy nhảy cùng bạn nhảy của mình ở câu lạc bộ địa phương." },
+        { "english": "A good business partner must be punctual.", "vietnamese": "Một đối tác kinh doanh tốt phải đúng giờ." },
+        { "english": "His partner works as a nurse in a small clinic.", "vietnamese": "Bạn đời của anh ấy làm y tá ở một phòng khám nhỏ." },
+        { "english": "My partner and I decorate our flat every spring.", "vietnamese": "Tôi và bạn đời trang trí căn hộ vào mỗi mùa xuân." }
+      ]
+    },
+    {
+      "word": "needy",
+      "sentences": [
+        { "english": "He becomes needy whenever he feels exhausted.", "vietnamese": "Anh ấy trở nên đòi hỏi quan tâm mỗi khi thấy kiệt sức." },
+        { "english": "A needy friend can be quite tiring.", "vietnamese": "Một người bạn đòi hỏi quan tâm có thể khá mệt mỏi." },
+        { "english": "Nobody wants a needy partner who calls all night.", "vietnamese": "Không ai muốn một người yêu đòi hỏi quan tâm và gọi điện cả đêm." },
+        { "english": "She was needy after her painful divorce.", "vietnamese": "Cô ấy trở nên cần được quan tâm sau cuộc ly hôn đau đớn." },
+        { "english": "Being needy is not the same as being caring.", "vietnamese": "Đòi hỏi được quan tâm không giống với việc biết quan tâm người khác." }
+      ]
+    },
+    {
+      "word": "romance",
+      "sentences": [
+        { "english": "Their romance started during a summer holiday.", "vietnamese": "Chuyện tình của họ bắt đầu trong một kỳ nghỉ hè." },
+        { "english": "She loves reading romance novels before sleeping.", "vietnamese": "Cô ấy thích đọc tiểu thuyết lãng mạn trước khi ngủ." },
+        { "english": "The romance between the two singers became viral.", "vietnamese": "Chuyện tình giữa hai ca sĩ trở nên viral." },
+        { "english": "A little romance can improve any marriage.", "vietnamese": "Một chút lãng mạn có thể cải thiện bất kỳ cuộc hôn nhân nào." },
+        { "english": "Their romance ended after a difficult year.", "vietnamese": "Chuyện tình của họ kết thúc sau một năm khó khăn." }
+      ]
+    },
+    {
+      "word": "mistake",
+      "sentences": [
+        { "english": "Forgetting her birthday was a serious mistake.", "vietnamese": "Quên sinh nhật cô ấy là một sai lầm nghiêm trọng." },
+        { "english": "He admitted his mistake and apologised quietly.", "vietnamese": "Anh ấy thừa nhận sai lầm và lặng lẽ xin lỗi." },
+        { "english": "Everybody makes a mistake when learning a new language.", "vietnamese": "Ai cũng mắc sai lầm khi học một ngôn ngữ mới." },
+        { "english": "The mistake cost him his job and his marriage.", "vietnamese": "Sai lầm đó khiến anh ta mất cả công việc lẫn cuộc hôn nhân." },
+        { "english": "She corrected the mistake in my assignment.", "vietnamese": "Cô ấy sửa lỗi sai trong bài tập của tôi." }
+      ]
+    },
+    {
+      "word": "buddy",
+      "sentences": [
+        { "english": "My buddy from the gym invited me to a match.", "vietnamese": "Người bạn ở phòng gym rủ tôi đi xem một trận đấu." },
+        { "english": "He is my drinking buddy every Friday evening.", "vietnamese": "Anh ấy là bạn nhậu của tôi vào mỗi tối thứ Sáu." },
+        { "english": "A buddy at work makes a stressful day easier.", "vietnamese": "Một người bạn ở chỗ làm khiến ngày căng thẳng trở nên dễ thở hơn." },
+        { "english": "My old buddy became a famous footballer.", "vietnamese": "Người bạn cũ của tôi đã trở thành một cầu thủ nổi tiếng." },
+        { "english": "Hey buddy, can you lend me your racquet?", "vietnamese": "Này bạn, cho tớ mượn cây vợt được không?" }
+      ]
+    },
+    {
+      "word": "interest",
+      "sentences": [
+        { "english": "We share the same interest in photography.", "vietnamese": "Chúng tôi có chung sở thích về nhiếp ảnh." },
+        { "english": "He lost interest in the relationship after a year.", "vietnamese": "Anh ấy mất hứng thú với mối quan hệ sau một năm." },
+        { "english": "Her main interest is classical music.", "vietnamese": "Sở thích chính của cô ấy là nhạc cổ điển." },
+        { "english": "Reading about history is a common interest in our family.", "vietnamese": "Đọc về lịch sử là sở thích chung trong gia đình tôi." },
+        { "english": "He showed no interest in her opinion.", "vietnamese": "Anh ấy không tỏ ra quan tâm gì đến ý kiến của cô ấy." }
+      ]
+    },
+    {
+      "word": "divorce",
+      "sentences": [
+        { "english": "Their divorce surprised all their relatives.", "vietnamese": "Cuộc ly hôn của họ khiến tất cả họ hàng bất ngờ." },
+        { "english": "After the divorce, she moved to another district.", "vietnamese": "Sau khi ly hôn, cô ấy chuyển sang một quận khác." },
+        { "english": "Divorce is still a taboo in some traditional families.", "vietnamese": "Ly hôn vẫn là điều cấm kỵ trong một số gia đình truyền thống." },
+        { "english": "The lawyer explained the divorce documents carefully.", "vietnamese": "Luật sư giải thích các giấy tờ ly hôn một cách cẩn thận." },
+        { "english": "They decided to divorce after many years of silent pain.", "vietnamese": "Họ quyết định ly hôn sau nhiều năm chịu đựng trong im lặng." }
+      ]
+    }
+  ]
+}
