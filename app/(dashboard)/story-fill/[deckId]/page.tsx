@@ -39,7 +39,7 @@ export default function StoryFillPickerPage({ params }: PageProps) {
   // Đúng 1 truyện → vào thẳng bài điền từ, khỏi phải chọn.
   useEffect(() => {
     if (!locked && !isLoading && fillable.length === 1) {
-      router.replace(`/stories/${fillable[0].id}/fill`);
+      router.replace(`/stories/${fillable[0].id}/fill?from=deck`);
     }
   }, [locked, isLoading, fillable, router]);
 
@@ -85,7 +85,7 @@ export default function StoryFillPickerPage({ params }: PageProps) {
             {fillable.map((story) => (
               <li key={story.id}>
                 <Link
-                  href={`/stories/${story.id}/fill`}
+                  href={`/stories/${story.id}/fill?from=deck`}
                   className="flex items-center gap-3 rounded-xl border bg-card p-4 transition-colors hover:border-primary"
                 >
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">

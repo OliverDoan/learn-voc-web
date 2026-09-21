@@ -2,6 +2,7 @@
 
 import { use, useMemo, useState } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { ArrowLeft, Check, CheckCircle2, Lightbulb, Loader2, X } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -10,7 +11,8 @@ import { useStory, isStoryLockedError } from "@/hooks/use-stories";
 import { DeckLockedScreen } from "@/components/deck/deck-locked-screen";
 import { EXERCISE_PASS_ACCURACY } from "@/lib/deck-activities";
 import { parseStory, type StoryToken } from "@/lib/story-parser";
-import { levenshtein, cn } from "@/lib/utils";
+import { cn } from "@/lib/utils";
+import { countFilled, fillSlotState, isFillAnswerCorrect } from "@/lib/story-fill";
 
 interface PageProps {
   params: Promise<{ storyId: string }>;
@@ -24,8 +26,13 @@ interface Slot {
 
 export default function FillBlankPage({ params }: PageProps) {
   const { storyId } = use(params);
+  const searchParams = useSearchParams();
   const { data: story, isLoading, error } = useStory(storyId);
   const recordActivity = useRecordDeckActivity(story?.deckId ?? "");
+
+  // Vào bài từ mục bài tập của deck (`?from=deck`) → làm xong quay lại deck để
+  // làm dạng bài khác. Vào từ trang truyện thì vẫn quay về chính truyện đó.
+  const fromDeck = searchParams.get("from") === "deck";
 
   const tokens: StoryToken[] = useMemo(
     () => (story ? parseStory(story.content) : []),
@@ -63,11 +70,9 @@ export default function FillBlankPage({ params }: PageProps) {
   }
   if (!story) return <div className="p-6">Không tìm thấy truyện</div>;
 
-  const allFilled = slots.every((s) => (answers[s.index] ?? "").trim().length > 0);
-  const isSlotCorrect = (s: Slot) => {
-    const ans = (answers[s.index] ?? "").trim().toLowerCase();
-    return levenshtein(ans, s.word.toLowerCase()) <= 1;
-  };
+  const filledCount = countFilled(slots.map((s) => answers[s.index] ?? ""));
+  const allFilled = filledCount === slots.length;
+  const isSlotCorrect = (s: Slot) => isFillAnswerCorrect(answers[s.index] ?? "", s.word);
   const correctCount = slots.filter(isSlotCorrect).length;
 
   const handleSubmit = () => {
@@ -98,13 +103,16 @@ export default function FillBlankPage({ params }: PageProps) {
     setSubmitted(false);
   };
 
+  const backHref = fromDeck ? `/decks/${story.deckId}` : `/stories/${storyId}`;
+  const backLabel = fromDeck ? "Quay lại deck" : "Về truyện";
+
   return (
     <div className="container mx-auto max-w-3xl p-6 pb-24">
       <Link
-        href={`/stories/${storyId}`}
+        href={backHref}
         className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
-        <ArrowLeft className="h-4 w-4" /> Về truyện
+        <ArrowLeft className="h-4 w-4" /> {backLabel}
       </Link>
 
       <div className="mb-2 flex items-start justify-between gap-3">
@@ -130,9 +138,8 @@ export default function FillBlankPage({ params }: PageProps) {
         {tokens.map((tok, i) => {
           if (tok.type === "text") return <span key={i}>{tok.text}</span>;
           const value = answers[i] ?? "";
-          const correct =
-            submitted && levenshtein(value.trim().toLowerCase(), tok.word.toLowerCase()) <= 1;
-          const wrong = submitted && !correct;
+          const state = fillSlotState({ value, word: tok.word, submitted });
+          const wrong = state === "wrong";
           return (
             <span key={i} className="inline-flex flex-col">
               <input
@@ -142,10 +149,14 @@ export default function FillBlankPage({ params }: PageProps) {
                   setAnswers((prev) => ({ ...prev, [i]: e.target.value }))
                 }
                 placeholder={showMeaning ? tok.meaning : "?"}
+                aria-label={`Ô trống${state === "empty" ? " (chưa điền)" : ""}`}
                 className={cn(
-                  "mx-1 w-32 rounded-md border bg-background px-2 py-0.5 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-ring",
-                  correct && "border-green-500 bg-green-500/10 text-green-500",
-                  wrong && "border-red-500 bg-red-500/10",
+                  "mx-1 w-32 rounded-md border px-2 py-0.5 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring",
+                  // Chưa nộp: nền vàng nhạt + viền đứt = còn trống, nền xanh = đã điền.
+                  state === "empty" && "border-dashed border-amber-500/60 bg-amber-500/10",
+                  state === "filled" && "border-primary/50 bg-primary/10",
+                  state === "correct" && "border-green-500 bg-green-500/10 text-green-500",
+                  state === "wrong" && "border-red-500 bg-red-500/10",
                 )}
               />
               {wrong ? (
@@ -161,12 +172,22 @@ export default function FillBlankPage({ params }: PageProps) {
           correct={correctCount}
           total={slots.length}
           onReset={handleReset}
-          storyId={storyId}
+          doneHref={backHref}
+          doneLabel={fromDeck ? "Về deck" : "Về truyện"}
         />
       ) : (
-        <Button onClick={handleSubmit} className="w-full" size="lg">
-          Kiểm tra
-        </Button>
+        <div className="space-y-2">
+          <p className="text-center text-sm text-muted-foreground">
+            Đã điền{" "}
+            <strong className={cn(allFilled ? "text-primary" : "text-amber-500")}>
+              {filledCount}/{slots.length}
+            </strong>{" "}
+            ô{allFilled ? "" : " — ô còn trống có nền vàng"}
+          </p>
+          <Button onClick={handleSubmit} className="w-full" size="lg">
+            Kiểm tra
+          </Button>
+        </div>
       )}
     </div>
   );
@@ -176,12 +197,14 @@ function ResultPanel({
   correct,
   total,
   onReset,
-  storyId,
+  doneHref,
+  doneLabel,
 }: {
   correct: number;
   total: number;
   onReset: () => void;
-  storyId: string;
+  doneHref: string;
+  doneLabel: string;
 }) {
   const pct = total === 0 ? 0 : Math.round((correct / total) * 100);
   const passed = pct >= EXERCISE_PASS_ACCURACY;
@@ -204,9 +227,9 @@ function ResultPanel({
         <Button variant="outline" onClick={onReset}>
           Làm lại
         </Button>
-        <Link href={`/stories/${storyId}`}>
+        <Link href={doneHref}>
           <Button>
-            <Check className="h-4 w-4" /> Về truyện
+            <Check className="h-4 w-4" /> {doneLabel}
           </Button>
         </Link>
       </div>
