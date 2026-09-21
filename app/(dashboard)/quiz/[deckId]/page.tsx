@@ -73,6 +73,12 @@ const MODES: { id: QuizMode; label: string; icon: LucideIcon; desc: string; minC
 
 const REVERSE_MODES: QuizMode[] = ["multiple-choice", "typing", "test"];
 
+/**
+ * Dạng bài KHÔNG tự nhảy câu sau khi trả lời: bảng kết quả (câu đáp án, chỗ sai)
+ * cần đọc kỹ nên để người học tự bấm "Câu tiếp theo".
+ */
+const MANUAL_NEXT_MODES: QuizMode[] = ["sentence-writing"];
+
 /** Parse ?mode= từ URL thành QuizMode hợp lệ (deep-link từ thanh tiến độ bài tập). */
 function parseModeParam(raw: string | null): QuizMode | null {
   const found = MODES.find((m) => m.id === raw);
@@ -374,6 +380,11 @@ function QuizRunner({
     return [current, ...distractors];
   }, [current, frozenAllCards]);
 
+  const goNext = () => {
+    if (index + 1 >= total) setDone(true);
+    else setIndex(index + 1);
+  };
+
   const handleAnswer = async (isCorrect: boolean) => {
     if (!current) return;
     haptic(isCorrect ? "success" : "fail");
@@ -386,10 +397,9 @@ function QuizRunner({
     }
     if (isCorrect) setCorrect((c) => c + 1);
     else wrongIdsRef.current.add(current.id);
-    setTimeout(() => {
-      if (index + 1 >= total) setDone(true);
-      else setIndex(index + 1);
-    }, 900);
+    // Dạng bài tự nhảy câu: chờ một nhịp cho người học kịp nhìn phản hồi.
+    if (MANUAL_NEXT_MODES.includes(mode)) return;
+    setTimeout(goNext, 900);
   };
 
   useEffect(() => {
@@ -504,6 +514,7 @@ function QuizRunner({
             key={current.id}
             question={current}
             onAnswer={(c) => handleAnswer(c)}
+            onNext={goNext}
           />
         ) : (
           <ListeningQuiz key={current.id} question={current} onAnswer={handleAnswer} />

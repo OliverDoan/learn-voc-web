@@ -62,6 +62,11 @@ export function SentencePracticeRunner({
     return [...byCard.values()];
   }, [items]);
 
+  const goNext = () => {
+    if (index + 1 >= total) setDone(true);
+    else setIndex(index + 1);
+  };
+
   const handleAnswer = async (isCorrect: boolean) => {
     if (!current) return;
     haptic(isCorrect ? "success" : "fail");
@@ -77,10 +82,7 @@ export function SentencePracticeRunner({
     }
     if (isCorrect) setCorrect((c) => c + 1);
     else wrongIdsRef.current.add(current.cardId);
-    setTimeout(() => {
-      if (index + 1 >= total) setDone(true);
-      else setIndex(index + 1);
-    }, 900);
+    // Không tự nhảy câu: người học tự bấm "Câu tiếp theo" sau khi xem kết quả.
   };
 
   // Ghi nhận hoàn thành dạng bài khi kết thúc phiên — chỉ cho deck thật.
@@ -183,6 +185,7 @@ export function SentencePracticeRunner({
           key={current.id}
           item={current}
           onAnswer={(c) => handleAnswer(c)}
+          onNext={goNext}
         />
       </div>
     </div>

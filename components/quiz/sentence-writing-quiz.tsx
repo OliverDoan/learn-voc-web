@@ -1,7 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { Check, Lightbulb, Volume2, X } from "lucide-react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { ArrowRight, Check, Lightbulb, Volume2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
@@ -18,17 +18,43 @@ import type { Card } from "@/lib/types";
 interface SentenceWritingQuizProps {
   question: Card;
   onAnswer: (correct: boolean, attempt: string) => void;
+  /**
+   * Có hàm này thì bài KHÔNG tự nhảy câu: người học xem kết quả đúng/sai và câu
+   * đáp án bao lâu tuỳ ý, rồi tự bấm "Câu tiếp theo" (hoặc nhấn Enter).
+   */
+  onNext?: () => void;
 }
 
 /** Số cấp gợi ý: 1 = từ khoá, 2 = khung chữ cái đầu mỗi từ. */
 const MAX_HINTS = 2;
 
-export function SentenceWritingQuiz({ question, onAnswer }: SentenceWritingQuizProps) {
+export function SentenceWritingQuiz({ question, onAnswer, onNext }: SentenceWritingQuizProps) {
   const task = useMemo(() => buildSentenceWriting(question), [question]);
   const [value, setValue] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [grade, setGrade] = useState<"correct" | "close" | "wrong">("wrong");
   const [hintLevel, setHintLevel] = useState(0);
+  // Chặn chuyển câu hai lần (bấm nút trong lúc phím Enter cũng đang được xử lý).
+  const nextFiredRef = useRef(false);
+
+  const goNext = useCallback(() => {
+    if (!onNext || nextFiredRef.current) return;
+    nextFiredRef.current = true;
+    onNext();
+  }, [onNext]);
+
+  // Đã nộp rồi thì Enter = sang câu tiếp theo. Listener chỉ gắn sau khi render
+  // nên chính phím Enter dùng để nộp không kích hoạt nhầm.
+  useEffect(() => {
+    if (!submitted || !onNext) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key !== "Enter") return;
+      e.preventDefault();
+      goNext();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [submitted, onNext, goNext]);
 
   // Thẻ không hợp lệ (trang quiz đã lọc nên hiếm khi xảy ra)
   if (!task) return null;
@@ -163,6 +189,13 @@ export function SentenceWritingQuiz({ question, onAnswer }: SentenceWritingQuizP
                 <span className="text-red-500">đỏ gạch</span> = từ gõ thừa/sai.
               </p>
             </div>
+          ) : null}
+
+          {onNext ? (
+            <Button className="w-full" onClick={goNext}>
+              Câu tiếp theo
+              <ArrowRight className="h-4 w-4" />
+            </Button>
           ) : null}
         </div>
       ) : (
