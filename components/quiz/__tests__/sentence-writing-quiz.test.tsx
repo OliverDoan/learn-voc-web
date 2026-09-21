@@ -53,13 +53,26 @@ describe("SentenceWritingQuiz", () => {
     expect(screen.queryByRole("button", { name: /Câu tiếp theo/ })).toBeNull();
   });
 
-  it("nhấn Enter sau khi đã nộp thì sang câu tiếp theo", () => {
+  it("nhả rồi nhấn Enter sau khi đã nộp thì sang câu tiếp theo", () => {
     const onNext = vi.fn();
     render(<SentenceWritingQuiz question={card} onAnswer={vi.fn()} onNext={onNext} />);
     answer("I like tea.");
 
+    // Nhả phím Enter vừa dùng để nộp, rồi mới nhấn lần mới.
+    fireEvent.keyUp(window, { key: "Enter" });
     fireEvent.keyDown(window, { key: "Enter" });
     expect(onNext).toHaveBeenCalledTimes(1);
+  });
+
+  it("giữ Enter lúc nộp thì KHÔNG nhảy luôn câu sau", () => {
+    const onNext = vi.fn();
+    render(<SentenceWritingQuiz question={card} onAnswer={vi.fn()} onNext={onNext} />);
+    answer("I like tea.");
+
+    // Phím Enter vẫn đang được giữ → bàn phím tự lặp keydown.
+    fireEvent.keyDown(window, { key: "Enter", repeat: true });
+    fireEvent.keyDown(window, { key: "Enter", repeat: true });
+    expect(onNext).not.toHaveBeenCalled();
   });
 
   it("không có onNext (chế độ cũ) thì không hiện nút chuyển câu", () => {

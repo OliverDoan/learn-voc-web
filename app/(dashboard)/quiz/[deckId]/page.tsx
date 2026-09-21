@@ -41,6 +41,7 @@ import { useDeck, useRecordDeckActivity } from "@/hooks/use-decks";
 import { useSubmitReview } from "@/hooks/use-study";
 import { haptic } from "@/lib/haptic";
 import { playSound, isSoundMuted, toggleSoundMuted } from "@/lib/sound";
+import { createEnterGate } from "@/lib/enter-gate";
 import { gapFillEligibleCards } from "@/lib/gap-fill";
 import { wordFormEligibleCards } from "@/lib/word-forms";
 import { sentenceWritingEligibleCards } from "@/lib/sentence-writing";
@@ -420,17 +421,20 @@ function QuizRunner({
     wrongIdsRef.current = new Set();
   }, [mode]);
 
-  // Đang chờ bấm tiếp thì Enter = sang câu sau. Listener chỉ gắn sau khi render
-  // nên chính phím Enter vừa dùng để nộp câu trả lời không kích hoạt nhầm.
+  // Đang chờ bấm tiếp thì Enter = sang câu sau, nhưng phải là một lần nhấn MỚI:
+  // cổng chỉ mở sau khi người học nhả phím Enter vừa dùng để trả lời, nếu không
+  // phím tự lặp sẽ nhảy câu ngay khi đáp án vừa hiện ra.
   useEffect(() => {
     if (!awaitingNext) return;
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key !== "Enter") return;
-      e.preventDefault();
-      goNext();
-    };
+    const gate = createEnterGate(goNext);
+    const handleKeyDown = (e: KeyboardEvent) => gate.handleKeyDown(e);
+    const handleKeyUp = (e: KeyboardEvent) => gate.handleKeyUp(e);
     window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
+    window.addEventListener("keyup", handleKeyUp);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("keyup", handleKeyUp);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [awaitingNext, index, total]);
 

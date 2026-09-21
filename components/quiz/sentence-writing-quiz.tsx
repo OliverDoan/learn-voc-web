@@ -11,6 +11,7 @@ import {
   gradeSentence,
   sentenceHint,
 } from "@/lib/sentence-writing";
+import { createEnterGate } from "@/lib/enter-gate";
 import { speak } from "@/lib/tts";
 import { cn } from "@/lib/utils";
 import type { Card } from "@/lib/types";
@@ -43,17 +44,20 @@ export function SentenceWritingQuiz({ question, onAnswer, onNext }: SentenceWrit
     onNext();
   }, [onNext]);
 
-  // Đã nộp rồi thì Enter = sang câu tiếp theo. Listener chỉ gắn sau khi render
-  // nên chính phím Enter dùng để nộp không kích hoạt nhầm.
+  // Đã nộp rồi thì Enter = sang câu tiếp theo, nhưng phải là một lần nhấn MỚI:
+  // cổng chỉ mở sau khi người học nhả phím Enter vừa dùng để nộp bài, nếu không
+  // phím tự lặp sẽ nhảy câu ngay khi kết quả vừa hiện ra.
   useEffect(() => {
     if (!submitted || !onNext) return;
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key !== "Enter") return;
-      e.preventDefault();
-      goNext();
-    };
+    const gate = createEnterGate(goNext);
+    const handleKeyDown = (e: KeyboardEvent) => gate.handleKeyDown(e);
+    const handleKeyUp = (e: KeyboardEvent) => gate.handleKeyUp(e);
     window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
+    window.addEventListener("keyup", handleKeyUp);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("keyup", handleKeyUp);
+    };
   }, [submitted, onNext, goNext]);
 
   // Thẻ không hợp lệ (trang quiz đã lọc nên hiếm khi xảy ra)
