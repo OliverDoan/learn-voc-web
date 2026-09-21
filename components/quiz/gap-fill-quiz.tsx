@@ -5,7 +5,7 @@ import { Check, Lightbulb, Volume2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { buildGapFill, GAP_PLACEHOLDER } from "@/lib/gap-fill";
+import { buildGapFill, buildHintState, GAP_PLACEHOLDER } from "@/lib/gap-fill";
 import { speak } from "@/lib/tts";
 import { cn, levenshtein } from "@/lib/utils";
 import type { Card } from "@/lib/types";
@@ -26,20 +26,14 @@ export function GapFillQuiz({ question, onAnswer }: GapFillQuizProps) {
   if (!gap) return null;
 
   const target = gap.answer;
-  const maxHints = Math.max(1, target.length - 1);
   // Kiểm tra chính tả: phải gõ ĐÚNG HOÀN TOÀN (không tha sai ký tự nào).
   const tolerance = 0;
 
-  const showHint = hintLevel > 0;
-  const hintText = showHint
-    ? target
-        .split("")
-        .map((ch, i) => (i < hintLevel || ch === " " ? ch : "_"))
-        .join("")
-    : "";
+  // Gợi ý theo bậc: bản dịch câu trước, rồi mới lộ dần ký tự đầu của đáp án.
+  const hint = buildHintState(target, hintLevel, Boolean(gap.translation));
 
   const revealHint = () => {
-    if (submitted || hintLevel >= maxHints) return;
+    if (submitted || hint.exhausted) return;
     setHintLevel((h) => h + 1);
   };
 
@@ -76,14 +70,14 @@ export function GapFillQuiz({ question, onAnswer }: GapFillQuizProps) {
             </Badge>
           ) : null}
         </p>
-        {gap.translation ? (
+        {hint.showTranslation ? (
           <p className="mt-1 text-center text-xs italic text-muted-foreground">
             {gap.translation}
           </p>
         ) : null}
-        {showHint ? (
+        {hint.maskedAnswer ? (
           <p className="font-phonetic mt-3 text-center text-xl tracking-[0.3em] text-primary">
-            {hintText}
+            {hint.maskedAnswer}
           </p>
         ) : null}
       </div>
@@ -109,7 +103,7 @@ export function GapFillQuiz({ question, onAnswer }: GapFillQuizProps) {
           {isCorrect ? (
             <span className="flex items-center gap-2 text-green-500">
               <Check className="h-4 w-4" /> Chính xác!
-              {showHint ? (
+              {hint.used ? (
                 <Badge variant="warning" className="ml-1 text-[10px]">
                   có gợi ý
                 </Badge>
@@ -136,11 +130,12 @@ export function GapFillQuiz({ question, onAnswer }: GapFillQuizProps) {
             type="button"
             variant="outline"
             onClick={revealHint}
-            disabled={hintLevel >= maxHints}
-            title={hintLevel >= maxHints ? "Đã dùng hết gợi ý" : `Hiện ${hintLevel + 1} ký tự đầu`}
+            disabled={hint.exhausted}
+            title={hint.nextHintLabel}
+            aria-label={hint.nextHintLabel}
           >
             <Lightbulb className="h-4 w-4" />
-            Gợi ý {hintLevel > 0 ? `(${hintLevel}/${maxHints})` : ""}
+            Gợi ý {hintLevel > 0 ? `(${hintLevel}/${hint.maxHints})` : ""}
           </Button>
           <Button className="flex-1" onClick={handleSubmit}>
             Kiểm tra
