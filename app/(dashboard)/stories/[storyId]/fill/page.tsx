@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { ArrowLeft, Check, CheckCircle2, Lightbulb, Loader2, X } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
+import { useCards } from "@/hooks/use-cards";
 import { useRecordDeckActivity } from "@/hooks/use-decks";
 import { useStory, isStoryLockedError } from "@/hooks/use-stories";
 import { DeckLockedScreen } from "@/components/deck/deck-locked-screen";
@@ -34,10 +35,7 @@ export default function FillBlankPage({ params }: PageProps) {
   // làm dạng bài khác. Vào từ trang truyện thì vẫn quay về chính truyện đó.
   const fromDeck = searchParams.get("from") === "deck";
 
-  const tokens: StoryToken[] = useMemo(
-    () => (story ? parseStory(story.content) : []),
-    [story],
-  );
+  const tokens: StoryToken[] = useMemo(() => (story ? parseStory(story.content) : []), [story]);
 
   const slots = useMemo<Slot[]>(
     () =>
@@ -107,7 +105,7 @@ export default function FillBlankPage({ params }: PageProps) {
   const backLabel = fromDeck ? "Quay lại deck" : "Về truyện";
 
   return (
-    <div className="container mx-auto max-w-3xl p-6 pb-24">
+    <div className="container mx-auto max-w-6xl p-6 pb-24">
       <Link
         href={backHref}
         className="mb-4 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
@@ -134,62 +132,97 @@ export default function FillBlankPage({ params }: PageProps) {
         {showMeaning ? "" : " (Đang ẩn nghĩa tiếng Việt)"}
       </p>
 
-      <article className="mb-6 rounded-xl border bg-card p-6 text-lg leading-loose whitespace-pre-wrap">
-        {tokens.map((tok, i) => {
-          if (tok.type === "text") return <span key={i}>{tok.text}</span>;
-          const value = answers[i] ?? "";
-          const state = fillSlotState({ value, word: tok.word, submitted });
-          const wrong = state === "wrong";
-          return (
-            <span key={i} className="inline-flex flex-col">
-              <input
-                value={value}
-                disabled={submitted}
-                onChange={(e) =>
-                  setAnswers((prev) => ({ ...prev, [i]: e.target.value }))
-                }
-                placeholder={showMeaning ? tok.meaning : "?"}
-                aria-label={`Ô trống${state === "empty" ? " (chưa điền)" : ""}`}
-                className={cn(
-                  "mx-1 w-32 rounded-md border px-2 py-0.5 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring",
-                  // Chưa nộp: nền vàng nhạt + viền đứt = còn trống, nền xanh = đã điền.
-                  state === "empty" && "border-dashed border-amber-500/60 bg-amber-500/10",
-                  state === "filled" && "border-primary/50 bg-primary/10",
-                  state === "correct" && "border-green-500 bg-green-500/10 text-green-500",
-                  state === "wrong" && "border-red-500 bg-red-500/10",
-                )}
-              />
-              {wrong ? (
-                <span className="ml-1 text-xs text-red-500">→ {tok.word}</span>
-              ) : null}
-            </span>
-          );
-        })}
-      </article>
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_16rem] lg:items-start">
+        <div className="min-w-0">
+          <article className="mb-6 rounded-xl border bg-card p-6 text-lg leading-loose whitespace-pre-wrap">
+            {tokens.map((tok, i) => {
+              if (tok.type === "text") return <span key={i}>{tok.text}</span>;
+              const value = answers[i] ?? "";
+              const state = fillSlotState({ value, word: tok.word, submitted });
+              const wrong = state === "wrong";
+              return (
+                <span key={i} className="inline-flex flex-col">
+                  <input
+                    value={value}
+                    disabled={submitted}
+                    onChange={(e) => setAnswers((prev) => ({ ...prev, [i]: e.target.value }))}
+                    placeholder={showMeaning ? tok.meaning : "?"}
+                    aria-label={`Ô trống${state === "empty" ? " (chưa điền)" : ""}`}
+                    className={cn(
+                      "mx-1 w-32 rounded-md border px-2 py-0.5 text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring",
+                      // Chưa nộp: nền vàng nhạt + viền đứt = còn trống, nền xanh = đã điền.
+                      state === "empty" && "border-dashed border-amber-500/60 bg-amber-500/10",
+                      state === "filled" && "border-primary/50 bg-primary/10",
+                      state === "correct" && "border-green-500 bg-green-500/10 text-green-500",
+                      state === "wrong" && "border-red-500 bg-red-500/10",
+                    )}
+                  />
+                  {wrong ? <span className="ml-1 text-xs text-red-500">→ {tok.word}</span> : null}
+                </span>
+              );
+            })}
+          </article>
 
-      {submitted ? (
-        <ResultPanel
-          correct={correctCount}
-          total={slots.length}
-          onReset={handleReset}
-          doneHref={backHref}
-          doneLabel={fromDeck ? "Về deck" : "Về truyện"}
-        />
-      ) : (
-        <div className="space-y-2">
-          <p className="text-center text-sm text-muted-foreground">
-            Đã điền{" "}
-            <strong className={cn(allFilled ? "text-primary" : "text-amber-500")}>
-              {filledCount}/{slots.length}
-            </strong>{" "}
-            ô{allFilled ? "" : " — ô còn trống có nền vàng"}
-          </p>
-          <Button onClick={handleSubmit} className="w-full" size="lg">
-            Kiểm tra
-          </Button>
+          {submitted ? (
+            <ResultPanel
+              correct={correctCount}
+              total={slots.length}
+              onReset={handleReset}
+              doneHref={backHref}
+              doneLabel={fromDeck ? "Về deck" : "Về truyện"}
+            />
+          ) : (
+            <div className="space-y-2">
+              <p className="text-center text-sm text-muted-foreground">
+                Đã điền{" "}
+                <strong className={cn(allFilled ? "text-primary" : "text-amber-500")}>
+                  {filledCount}/{slots.length}
+                </strong>{" "}
+                ô{allFilled ? "" : " — ô còn trống có nền vàng"}
+              </p>
+              <Button onClick={handleSubmit} className="w-full" size="lg">
+                Kiểm tra
+              </Button>
+            </div>
+          )}
         </div>
-      )}
+
+        <DeckWordBank deckId={story.deckId} />
+      </div>
     </div>
+  );
+}
+
+/**
+ * Danh sách TOÀN BỘ từ tiếng Anh của deck, đặt cạnh bài làm để tra khi bí.
+ * Hiện hết, không cắt bớt — màn hình hẹp thì rơi xuống dưới bài làm.
+ */
+function DeckWordBank({ deckId }: { deckId: string }) {
+  const { data: cards, isLoading } = useCards({ deckId });
+
+  return (
+    <aside className="rounded-xl border bg-card p-4 lg:sticky lg:top-6">
+      <p className="mb-3 text-sm font-semibold">
+        Từ trong deck
+        {cards ? <span className="ml-1 text-muted-foreground">({cards.length})</span> : null}
+      </p>
+      {isLoading ? (
+        <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />
+      ) : cards && cards.length > 0 ? (
+        <ul className="flex flex-wrap gap-1.5">
+          {cards.map((card) => (
+            <li
+              key={card.id}
+              className="rounded-md border bg-muted/40 px-2 py-0.5 text-xs font-medium"
+            >
+              {card.word}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="text-xs text-muted-foreground">Deck này chưa có từ nào.</p>
+      )}
+    </aside>
   );
 }
 
