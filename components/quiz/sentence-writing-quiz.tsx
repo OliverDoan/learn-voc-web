@@ -1,10 +1,9 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { ArrowRight, Check, Lightbulb, Volume2, X } from "lucide-react";
+import { ArrowRight, Check, Volume2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { Badge } from "@/components/ui/badge";
 import {
   buildSentenceWriting,
   diffSentence,
@@ -26,15 +25,14 @@ interface SentenceWritingQuizProps {
   onNext?: () => void;
 }
 
-/** Số cấp gợi ý: 1 = từ khoá, 2 = khung chữ cái đầu mỗi từ. */
-const MAX_HINTS = 2;
+/** Khung chữ cái đầu mỗi từ luôn hiện sẵn — không cần bấm mở gợi ý. */
+const HINT_LEVEL = 2;
 
 export function SentenceWritingQuiz({ question, onAnswer, onNext }: SentenceWritingQuizProps) {
   const task = useMemo(() => buildSentenceWriting(question), [question]);
   const [value, setValue] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [grade, setGrade] = useState<"correct" | "close" | "wrong">("wrong");
-  const [hintLevel, setHintLevel] = useState(0);
   // Chặn chuyển câu hai lần (bấm nút trong lúc phím Enter cũng đang được xử lý).
   const nextFiredRef = useRef(false);
 
@@ -82,23 +80,9 @@ export function SentenceWritingQuiz({ question, onAnswer, onNext }: SentenceWrit
         </p>
         <p className="text-center text-xl font-medium leading-relaxed">{task.prompt}</p>
 
-        {hintLevel >= 1 ? (
-          <p className="mt-4 text-center text-sm text-muted-foreground">
-            Từ khoá: <strong className="text-foreground">{task.keyword}</strong>
-            {question.partOfSpeech ? (
-              <Badge variant="secondary" className="ml-2 text-[10px]">
-                {question.partOfSpeech}
-              </Badge>
-            ) : null}
-            <span className="ml-2 italic">({task.meaning})</span>
-          </p>
-        ) : null}
-
-        {hintLevel >= 2 ? (
-          <p className="font-phonetic mt-3 text-center text-lg tracking-widest text-primary">
-            {sentenceHint(task.answer, hintLevel)}
-          </p>
-        ) : null}
+        <p className="font-phonetic mt-4 text-center text-lg tracking-widest text-primary">
+          {sentenceHint(task.answer, HINT_LEVEL)}
+        </p>
       </div>
 
       <Textarea
@@ -128,11 +112,6 @@ export function SentenceWritingQuiz({ question, onAnswer, onNext }: SentenceWrit
             {grade === "correct" ? (
               <span className="flex items-center gap-2 text-green-500">
                 <Check className="h-4 w-4 shrink-0" /> Chính xác!
-                {hintLevel > 0 ? (
-                  <Badge variant="warning" className="ml-1 text-[10px]">
-                    có gợi ý
-                  </Badge>
-                ) : null}
               </span>
             ) : grade === "close" ? (
               <span className="flex items-center gap-2 text-green-500">
@@ -204,22 +183,6 @@ export function SentenceWritingQuiz({ question, onAnswer, onNext }: SentenceWrit
         </div>
       ) : (
         <div className="mt-3 flex gap-2">
-          <Button
-            type="button"
-            variant="outline"
-            onClick={() => setHintLevel((h) => Math.min(MAX_HINTS, h + 1))}
-            disabled={hintLevel >= MAX_HINTS}
-            title={
-              hintLevel >= MAX_HINTS
-                ? "Đã dùng hết gợi ý"
-                : hintLevel === 0
-                  ? "Hiện từ khoá của câu"
-                  : "Hiện chữ cái đầu mỗi từ"
-            }
-          >
-            <Lightbulb className="h-4 w-4" />
-            Gợi ý {hintLevel > 0 ? `(${hintLevel}/${MAX_HINTS})` : ""}
-          </Button>
           <Button className="flex-1" onClick={handleSubmit}>
             Kiểm tra
           </Button>

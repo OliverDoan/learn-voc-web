@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { cn, levenshtein } from "@/lib/utils";
 import { matchesMeaning, meaningVariants } from "@/lib/meaning-match";
+import { speak } from "@/lib/tts";
 import type { Card } from "@/lib/types";
 
 type QuizDirection = "word-to-meaning" | "meaning-to-word";
@@ -65,6 +66,8 @@ export function TypingQuiz({
       : levenshtein(answer.toLowerCase(), target.toLowerCase()) <= tolerance;
     setIsCorrect(correct);
     setSubmitted(true);
+    // Gõ đúng thì đọc to từ tiếng Anh để nghe lại cách phát âm.
+    if (correct) speak(question.word);
     onAnswer(correct, value.trim());
   };
 
