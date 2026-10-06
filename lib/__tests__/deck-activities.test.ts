@@ -219,6 +219,12 @@ describe("Phát âm là dạng tuỳ chọn (không bắt buộc mở khóa)", (
     expect(exercises.find((e) => e.key === "flashcards")?.optional).toBe(false);
   });
 
+  it("Viết lại câu cũng là dạng tuỳ chọn", () => {
+    const card = makeCard({ word: "idea", example: "I have a good idea for the project.", exampleTranslation: "Tôi có một ý tưởng hay cho dự án." });
+    const { exercises } = buildExerciseStatus([card], []);
+    expect(exercises.find((e) => e.key === "sentence-writing")?.optional).toBe(true);
+  });
+
   it("bỏ qua Phát âm + thiếu 1 dạng bắt buộc → vẫn mở khóa (Phát âm không tính)", () => {
     const cards = [makeCard()]; // bắt buộc: flashcards, typing, listening → cần 2/3
     const records: ActivityRecord[] = [

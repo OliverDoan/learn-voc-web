@@ -125,7 +125,7 @@ export function DeckExerciseProgress({ deckId, exercises }: DeckExerciseProgress
               Nhấn vào từng ô để làm ngay dạng đó. Chỉ cần làm {required}/{mandatoryBase.length} dạng
               bắt buộc (dạng có chấm điểm cần đạt ≥ {EXERCISE_PASS_ACCURACY}%) để mở khóa nút
               &ldquo;Đánh dấu học xong&rdquo; — còn thiếu {remaining} dạng. Dạng
-              &ldquo;tuỳ chọn&rdquo; như Phát âm không bắt buộc.
+              &ldquo;tuỳ chọn&rdquo; (Viết lại câu, Luyện viết câu, Phát âm) không bắt buộc.
             </p>
           ) : null}
         </div>

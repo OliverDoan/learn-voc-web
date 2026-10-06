@@ -53,7 +53,8 @@ export const DECK_ACTIVITIES: readonly ActivityDef[] = [
   { key: "gap-fill", label: "Điền từ vào câu", scored: true },
   { key: "story-fill", label: "Điền truyện chêm", scored: true },
   { key: "word-formation", label: "Biến đổi từ", scored: true },
-  { key: "sentence-writing", label: "Viết lại câu", scored: true },
+  // Viết lại câu: TUỲ CHỌN — không bắt buộc để mở khóa deck.
+  { key: "sentence-writing", label: "Viết lại câu", scored: true, optional: true },
   // Luyện viết câu: TUỲ CHỌN — bộ câu luyện riêng, không bắt buộc để mở khóa deck.
   { key: "sentence-practice", label: "Luyện viết câu", scored: true, optional: true },
   { key: "test", label: "Làm bài", scored: false },
