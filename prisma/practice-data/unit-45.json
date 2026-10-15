@@ -1,0 +1,247 @@
+{
+  "unit": 45,
+  "deck": "Unit 45: Sở thích và thời gian rảnh",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "confide",
+      "sentences": [
+        { "english": "She confided her secret to her best buddy.", "vietnamese": "Cô ấy thổ lộ bí mật với người bạn thân nhất." },
+        { "english": "I only confide in people I really trust.", "vietnamese": "Tôi chỉ tâm sự với những người tôi thật sự tin tưởng." },
+        { "english": "He confided that he felt lonely after the move.", "vietnamese": "Anh ấy tâm sự rằng mình thấy cô đơn sau khi chuyển nhà." },
+        { "english": "My roommate often confides her worries to me late at night.", "vietnamese": "Bạn cùng phòng thường tâm sự những lo lắng với tôi vào đêm khuya." },
+        { "english": "It took courage to confide my mistake to my manager.", "vietnamese": "Phải can đảm lắm tôi mới thổ lộ lỗi sai của mình với quản lý." }
+      ]
+    },
+    {
+      "word": "pleasure",
+      "sentences": [
+        { "english": "Cooking for my family gives me real pleasure.", "vietnamese": "Nấu ăn cho gia đình mang lại cho tôi niềm vui thật sự." },
+        { "english": "Reading on a quiet balcony is a simple pleasure.", "vietnamese": "Đọc sách trên ban công yên tĩnh là một niềm vui giản dị." },
+        { "english": "It was a pleasure to meet such a friendly guest.", "vietnamese": "Thật vui khi được gặp một vị khách thân thiện như vậy." },
+        { "english": "She paints for pleasure, not to become rich.", "vietnamese": "Cô ấy vẽ tranh vì niềm vui chứ không phải để làm giàu." },
+        { "english": "My grandfather takes great pleasure in his peaceful garden.", "vietnamese": "Ông tôi rất thích thú với khu vườn yên bình của mình." }
+      ]
+    },
+    {
+      "word": "hobby",
+      "sentences": [
+        { "english": "His new hobby is hiking in the mountains.", "vietnamese": "Sở thích mới của anh ấy là leo núi đường dài." },
+        { "english": "Photography became my favourite hobby last year.", "vietnamese": "Nhiếp ảnh trở thành sở thích yêu thích của tôi từ năm ngoái." },
+        { "english": "A cheap hobby can still bring a lot of joy.", "vietnamese": "Một sở thích rẻ tiền vẫn có thể mang lại nhiều niềm vui." },
+        { "english": "We share the same hobby of collecting old postcards.", "vietnamese": "Chúng tôi có chung sở thích sưu tầm bưu thiếp cũ." },
+        { "english": "Doctors say a relaxing hobby is good for your health.", "vietnamese": "Bác sĩ nói một sở thích thư giãn rất tốt cho sức khoẻ." }
+      ]
+    },
+    {
+      "word": "musical",
+      "sentences": [
+        { "english": "Our musical neighbour plays the guitar every night.", "vietnamese": "Người hàng xóm có năng khiếu âm nhạc của chúng tôi tối nào cũng chơi guitar." },
+        { "english": "She comes from a very musical family in her hometown.", "vietnamese": "Cô ấy xuất thân từ một gia đình rất có năng khiếu âm nhạc ở quê nhà." },
+        { "english": "The flute is my favourite musical instrument.", "vietnamese": "Sáo là nhạc cụ tôi yêu thích nhất." },
+        { "english": "We went to a musical show at the theatre.", "vietnamese": "Chúng tôi đi xem một buổi diễn âm nhạc ở nhà hát." },
+        { "english": "Even as a beginner, he showed real musical talent.", "vietnamese": "Dù mới bắt đầu, anh ấy đã thể hiện năng khiếu âm nhạc thực sự." }
+      ]
+    },
+    {
+      "word": "chess",
+      "sentences": [
+        { "english": "My grandfather taught me to play chess.", "vietnamese": "Ông tôi đã dạy tôi chơi cờ vua." },
+        { "english": "Chess is a quiet game that trains your brain.", "vietnamese": "Cờ vua là trò chơi yên tĩnh giúp rèn luyện trí não." },
+        { "english": "They play chess in the park every Sunday morning.", "vietnamese": "Họ chơi cờ vua trong công viên vào mỗi sáng Chủ nhật." },
+        { "english": "I lost three chess games in a row to my brother.", "vietnamese": "Tôi thua em trai ba ván cờ vua liên tiếp." },
+        { "english": "The chess club welcomes players of every age.", "vietnamese": "Câu lạc bộ cờ vua chào đón người chơi ở mọi lứa tuổi." }
+      ]
+    },
+    {
+      "word": "champion",
+      "sentences": [
+        { "english": "The young champion was proud of her cup.", "vietnamese": "Nhà vô địch trẻ tự hào về chiếc cúp của mình." },
+        { "english": "He became the city swimming champion at sixteen.", "vietnamese": "Anh ấy trở thành nhà vô địch bơi lội của thành phố năm mười sáu tuổi." },
+        { "english": "Every champion was once a nervous beginner.", "vietnamese": "Nhà vô địch nào cũng từng là người mới bắt đầu đầy lo lắng." },
+        { "english": "The supporters cheered loudly for the new champion.", "vietnamese": "Các cổ động viên reo hò vang dội cho nhà vô địch mới." },
+        { "english": "Our coach was a badminton champion in his youth.", "vietnamese": "Huấn luyện viên của chúng tôi từng là nhà vô địch cầu lông thời trẻ." }
+      ]
+    },
+    {
+      "word": "indoor",
+      "sentences": [
+        { "english": "We chose an indoor pool for rainy days.", "vietnamese": "Chúng tôi chọn bể bơi trong nhà cho những ngày mưa." },
+        { "english": "Board games are great indoor fun during a typhoon.", "vietnamese": "Trò chơi cờ bàn là thú vui trong nhà tuyệt vời khi có bão." },
+        { "english": "The new gym has an indoor running track.", "vietnamese": "Phòng tập mới có đường chạy trong nhà." },
+        { "english": "Kids need indoor activities when the weather is awful.", "vietnamese": "Trẻ con cần hoạt động trong nhà khi thời tiết xấu." },
+        { "english": "She keeps a few indoor plants on her bookshelf.", "vietnamese": "Cô ấy đặt vài chậu cây trong nhà trên giá sách." }
+      ]
+    },
+    {
+      "word": "getaway",
+      "sentences": [
+        { "english": "We booked a weekend getaway at a quiet resort.", "vietnamese": "Chúng tôi đặt một chuyến nghỉ ngắn cuối tuần ở một khu nghỉ dưỡng yên tĩnh." },
+        { "english": "A short getaway to the coast helped me relax.", "vietnamese": "Một chuyến đi ngắn ra biển đã giúp tôi thư giãn." },
+        { "english": "They planned a romantic getaway for their anniversary.", "vietnamese": "Họ lên kế hoạch cho một chuyến đi lãng mạn nhân ngày kỷ niệm." },
+        { "english": "Da Lat is a popular getaway for tired city workers.", "vietnamese": "Đà Lạt là điểm nghỉ ngắn được ưa chuộng của dân văn phòng mệt mỏi." },
+        { "english": "Our getaway was cheap because we stayed in a homestay.", "vietnamese": "Chuyến đi ngắn của chúng tôi rẻ vì ở homestay." }
+      ]
+    },
+    {
+      "word": "connect",
+      "sentences": [
+        { "english": "Online games help shy people connect with others.", "vietnamese": "Trò chơi trực tuyến giúp người nhút nhát kết nối với người khác." },
+        { "english": "Music connects people from different cultures.", "vietnamese": "Âm nhạc kết nối những người đến từ các nền văn hoá khác nhau." },
+        { "english": "I could not connect my printer to the laptop.", "vietnamese": "Tôi không kết nối được máy in với máy tính xách tay." },
+        { "english": "Volunteering helped her connect with her neighbours.", "vietnamese": "Làm tình nguyện giúp cô ấy gắn kết với hàng xóm." },
+        { "english": "The new bridge connects the island to the coast.", "vietnamese": "Cây cầu mới nối hòn đảo với bờ biển." }
+      ]
+    },
+    {
+      "word": "camping",
+      "sentences": [
+        { "english": "We went camping near a beautiful waterfall.", "vietnamese": "Chúng tôi đi cắm trại gần một thác nước đẹp." },
+        { "english": "Camping in the forest was a real adventure.", "vietnamese": "Cắm trại trong rừng là một cuộc phiêu lưu thực sự." },
+        { "english": "Bring a lighter and a map for the camping trip.", "vietnamese": "Mang theo bật lửa và bản đồ cho chuyến cắm trại." },
+        { "english": "The campsite was full, so camping was impossible.", "vietnamese": "Khu cắm trại đã kín chỗ nên không thể cắm trại được." },
+        { "english": "My first camping experience was cold but fun.", "vietnamese": "Lần cắm trại đầu tiên của tôi lạnh nhưng vui." }
+      ]
+    },
+    {
+      "word": "enjoy",
+      "sentences": [
+        { "english": "I really enjoy fishing at the lake.", "vietnamese": "Tôi rất thích câu cá ở hồ." },
+        { "english": "We enjoyed a delicious dinner by the sea.", "vietnamese": "Chúng tôi đã thưởng thức một bữa tối ngon bên bờ biển." },
+        { "english": "She enjoys listening to classical music after work.", "vietnamese": "Cô ấy thích nghe nhạc cổ điển sau giờ làm." },
+        { "english": "Did you enjoy the festival last night?", "vietnamese": "Tối qua bạn có thấy lễ hội vui không?" },
+        { "english": "Retired people can finally enjoy their free time.", "vietnamese": "Người về hưu cuối cùng cũng được tận hưởng thời gian rảnh." }
+      ]
+    },
+    {
+      "word": "bake",
+      "sentences": [
+        { "english": "Mum likes to bake cakes for every celebration.", "vietnamese": "Mẹ thích nướng bánh cho mỗi dịp ăn mừng." },
+        { "english": "I baked bread using my grandmother's old recipe.", "vietnamese": "Tôi nướng bánh mì theo công thức cũ của bà." },
+        { "english": "Baking at home is cheap and good for your health.", "vietnamese": "Tự nướng bánh ở nhà vừa rẻ vừa tốt cho sức khoẻ." },
+        { "english": "He bakes cookies with less sugar for his diet.", "vietnamese": "Anh ấy nướng bánh quy ít đường cho chế độ ăn kiêng của mình." },
+        { "english": "We baked a birthday cake for our housemate.", "vietnamese": "Chúng tôi nướng bánh sinh nhật cho bạn cùng nhà." }
+      ]
+    },
+    {
+      "word": "social",
+      "sentences": [
+        { "english": "He is very social and loves big parties.", "vietnamese": "Anh ấy rất thích giao lưu và mê những bữa tiệc lớn." },
+        { "english": "Social media can make some people feel lonely.", "vietnamese": "Mạng xã hội có thể khiến một số người thấy cô đơn." },
+        { "english": "The club organises social evenings to welcome new members.", "vietnamese": "Câu lạc bộ tổ chức các buổi tối giao lưu để chào đón thành viên mới." },
+        { "english": "Team sports are good for building social skills.", "vietnamese": "Các môn thể thao đồng đội rất tốt để rèn kỹ năng xã hội." },
+        { "english": "Poverty is a serious social problem in big cities.", "vietnamese": "Nghèo đói là một vấn đề xã hội nghiêm trọng ở các thành phố lớn." }
+      ]
+    },
+    {
+      "word": "event",
+      "sentences": [
+        { "english": "The festival is the biggest event in town.", "vietnamese": "Lễ hội là sự kiện lớn nhất trong thị trấn." },
+        { "english": "We invited many guests to the charity event.", "vietnamese": "Chúng tôi mời nhiều khách đến sự kiện từ thiện." },
+        { "english": "The event was cancelled because of the typhoon.", "vietnamese": "Sự kiện bị huỷ vì cơn bão." },
+        { "english": "Her wedding was the event of the year.", "vietnamese": "Đám cưới của cô ấy là sự kiện của năm." },
+        { "english": "Tickets for the music event sold out quickly.", "vietnamese": "Vé cho sự kiện âm nhạc bán hết rất nhanh." }
+      ]
+    },
+    {
+      "word": "get-together",
+      "sentences": [
+        { "english": "We have a family get-together every holiday.", "vietnamese": "Gia đình tôi họp mặt vào mỗi kỳ nghỉ lễ." },
+        { "english": "Our old class had a get-together at a local restaurant.", "vietnamese": "Lớp cũ của chúng tôi họp mặt ở một nhà hàng địa phương." },
+        { "english": "The get-together was lively and full of laughter.", "vietnamese": "Buổi họp mặt sôi nổi và đầy tiếng cười." },
+        { "english": "She cooked hotpot for the weekend get-together.", "vietnamese": "Cô ấy nấu lẩu cho buổi họp mặt cuối tuần." },
+        { "english": "Let's arrange a get-together before you go abroad.", "vietnamese": "Mình tổ chức một buổi họp mặt trước khi bạn đi nước ngoài nhé." }
+      ]
+    },
+    {
+      "word": "stuff",
+      "sentences": [
+        { "english": "Please put your camping stuff in the garage.", "vietnamese": "Hãy cất đồ cắm trại của bạn vào nhà để xe." },
+        { "english": "My wardrobe is full of old stuff I never wear.", "vietnamese": "Tủ quần áo của tôi đầy đồ cũ tôi chẳng bao giờ mặc." },
+        { "english": "We sold some useless stuff at the weekend market.", "vietnamese": "Chúng tôi bán vài món đồ vô dụng ở chợ cuối tuần." },
+        { "english": "There is too much stuff on my small balcony.", "vietnamese": "Có quá nhiều đồ đạc trên ban công nhỏ của tôi." },
+        { "english": "He packed his diving stuff into one big bag.", "vietnamese": "Anh ấy xếp đồ lặn vào một chiếc túi lớn." }
+      ]
+    },
+    {
+      "word": "news",
+      "sentences": [
+        { "english": "She shared the good news with her roommate.", "vietnamese": "Cô ấy chia sẻ tin vui với bạn cùng phòng." },
+        { "english": "I read the news on a website every morning.", "vietnamese": "Sáng nào tôi cũng đọc tin tức trên một trang web." },
+        { "english": "The news about the flood made everyone anxious.", "vietnamese": "Tin về trận lũ khiến ai cũng lo lắng." },
+        { "english": "That news went viral within an hour.", "vietnamese": "Tin đó lan truyền khắp mạng chỉ trong một giờ." },
+        { "english": "My parents always watch the news after dinner.", "vietnamese": "Bố mẹ tôi luôn xem thời sự sau bữa tối." }
+      ]
+    },
+    {
+      "word": "championship",
+      "sentences": [
+        { "english": "Our team won the national chess championship.", "vietnamese": "Đội chúng tôi đã thắng giải vô địch cờ vua quốc gia." },
+        { "english": "She is training hard for the swimming championship.", "vietnamese": "Cô ấy đang tập luyện chăm chỉ cho giải vô địch bơi lội." },
+        { "english": "Thousands of supporters came to watch the championship final.", "vietnamese": "Hàng nghìn cổ động viên đến xem trận chung kết giải vô địch." },
+        { "english": "He hurt his knee just before the championship.", "vietnamese": "Anh ấy bị đau đầu gối ngay trước giải vô địch." },
+        { "english": "The badminton championship takes place in the capital.", "vietnamese": "Giải vô địch cầu lông diễn ra ở thủ đô." }
+      ]
+    },
+    {
+      "word": "destroy",
+      "sentences": [
+        { "english": "The heavy flood destroyed our little garden.", "vietnamese": "Trận lũ lớn đã phá huỷ khu vườn nhỏ của chúng tôi." },
+        { "english": "Pollution is slowly destroying the rainforest.", "vietnamese": "Ô nhiễm đang dần phá huỷ rừng mưa nhiệt đới." },
+        { "english": "One silly argument almost destroyed their friendship.", "vietnamese": "Một cuộc cãi vã ngớ ngẩn suýt phá huỷ tình bạn của họ." },
+        { "english": "The typhoon destroyed many houses along the coast.", "vietnamese": "Cơn bão đã phá huỷ nhiều ngôi nhà dọc bờ biển." },
+        { "english": "My puppy destroyed my favourite pair of sandals.", "vietnamese": "Chú cún của tôi đã cắn nát đôi xăng-đan yêu thích của tôi." }
+      ]
+    },
+    {
+      "word": "ace",
+      "sentences": [
+        { "english": "He is an ace at badminton and tennis.", "vietnamese": "Anh ấy là tay cừ khôi về cầu lông và quần vợt." },
+        { "english": "She is an ace photographer with a great eye.", "vietnamese": "Cô ấy là một nhiếp ảnh gia cừ khôi với con mắt tinh tường." },
+        { "english": "My brother is an ace at racing games.", "vietnamese": "Anh trai tôi là cao thủ trò chơi đua xe." },
+        { "english": "The ace pilot landed safely in the storm.", "vietnamese": "Viên phi công cừ khôi đã hạ cánh an toàn trong cơn bão." },
+        { "english": "Our team needs an ace to win the final.", "vietnamese": "Đội chúng tôi cần một tay cừ khôi để thắng trận chung kết." }
+      ]
+    },
+    {
+      "word": "manicure",
+      "sentences": [
+        { "english": "She gets a manicure before every wedding.", "vietnamese": "Cô ấy đi làm móng tay trước mỗi đám cưới." },
+        { "english": "A manicure at that salon is quite pricey.", "vietnamese": "Làm móng ở tiệm đó khá đắt." },
+        { "english": "Her manicure was ruined after washing the dishes.", "vietnamese": "Bộ móng của cô ấy hỏng sau khi rửa bát." },
+        { "english": "My sister booked a manicure for the festival.", "vietnamese": "Chị tôi đã đặt lịch làm móng cho dịp lễ hội." },
+        { "english": "A simple manicure makes her feel confident at work.", "vietnamese": "Một bộ móng đơn giản khiến cô ấy tự tin khi đi làm." }
+      ]
+    },
+    {
+      "word": "afford",
+      "sentences": [
+        { "english": "We can't afford such an expensive hobby.", "vietnamese": "Chúng tôi không đủ tiền theo một sở thích đắt đỏ như vậy." },
+        { "english": "Students often can't afford to live in the centre.", "vietnamese": "Sinh viên thường không đủ tiền sống ở trung tâm." },
+        { "english": "After paying the rent, I can barely afford food.", "vietnamese": "Sau khi trả tiền thuê nhà, tôi gần như không đủ tiền ăn." },
+        { "english": "They finally saved enough to afford a new motorbike.", "vietnamese": "Cuối cùng họ cũng tiết kiệm đủ để mua một chiếc xe máy mới." },
+        { "english": "I can't afford to waste time before the deadline.", "vietnamese": "Tôi không thể phí thời gian trước hạn chót." }
+      ]
+    },
+    {
+      "word": "sew",
+      "sentences": [
+        { "english": "My grandmother likes to sew traditional dresses.", "vietnamese": "Bà tôi thích may những chiếc váy truyền thống." },
+        { "english": "Can you sew a button back on my jacket?", "vietnamese": "Bạn khâu lại giúp mình cái cúc trên áo khoác được không?" },
+        { "english": "She learnt to sew from a local tailor.", "vietnamese": "Cô ấy học may từ một thợ may địa phương." },
+        { "english": "He sewed a small pocket inside his bag.", "vietnamese": "Anh ấy khâu một chiếc túi nhỏ bên trong ba lô." },
+        { "english": "Sewing your own outfit takes patience and skill.", "vietnamese": "Tự may trang phục cần sự kiên nhẫn và kỹ năng." }
+      ]
+    },
+    {
+      "word": "knit",
+      "sentences": [
+        { "english": "She knits warm scarves for her relatives.", "vietnamese": "Cô ấy đan khăn quàng ấm cho họ hàng." },
+        { "english": "My mother knitted me a hat for the cold season.", "vietnamese": "Mẹ đan cho tôi một chiếc mũ cho mùa lạnh." },
+        { "english": "Knitting helps him stay calm after a stressful day.", "vietnamese": "Đan len giúp anh ấy bình tĩnh sau một ngày căng thẳng." },
+        { "english": "I want to knit a sweater with a colourful pattern.", "vietnamese": "Tôi muốn đan một chiếc áo len có hoạ tiết sặc sỡ." },
+        { "english": "Grandma can knit while watching her favourite drama.", "vietnamese": "Bà có thể vừa đan len vừa xem bộ phim truyền hình yêu thích." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "deck": {
+    "name": "Unit 45: Sở thích và thời gian rảnh",
+    "description": "24 từ vựng về sở thích, hoạt động giải trí và thời gian rảnh",
+    "color": "#84cc16",
+    "icon": "🎨"
+  },
+  "cards": [
+    {
+      "word": "confide",
+      "meaning": "tâm sự, thổ lộ",
+      "partOfSpeech": "verb",
+      "phonetic": "/kənˈfaɪd/",
+      "example": "I'm sorry, but can I confide something in you?",
+      "exampleTranslation": "Xin lỗi, mình có thể tâm sự với bạn một chuyện được không?",
+      "tags": [
+        "hobbies"
+      ]
+    },
+    {
+      "word": "pleasure",
+      "meaning": "niềm vui thích",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈpleʒə(r)/",
+      "example": "Reading gives me great pleasure.",
+      "exampleTranslation": "Đọc sách mang lại cho tôi niềm vui lớn.",
+      "tags": [
+        "hobbies"
+      ]
+    },
+    {
+      "word": "hobby",
+      "meaning": "sở thích",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈhɒbi/",
+      "example": "Her hobby is taking photos of the sea.",
+      "exampleTranslation": "Sở thích của cô ấy là chụp ảnh biển.",
+      "tags": [
+        "hobbies"
+      ]
+    },
+    {
+      "word": "musical",
+      "meaning": "(thuộc) âm nhạc, có năng khiếu nhạc",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˈmjuːzɪkl/",
+      "example": "He comes from a very musical family.",
+      "exampleTranslation": "Anh ấy xuất thân từ một gia đình rất có năng khiếu âm nhạc.",
+      "tags": [
+        "hobbies"
+      ]
+    },
+    {
+      "word": "chess",
+      "meaning": "cờ vua",
+      "partOfSpeech": "noun",
+      "phonetic": "/tʃes/",
+      "example": "My grandfather taught me to play chess.",
+      "exampleTranslation": "Ông tôi đã dạy tôi chơi cờ vua.",
+      "tags": [
+        "hobbies"
+      ]
+    },
+    {
+      "word": "champion",
+      "meaning": "nhà vô địch",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈtʃæmpiən/",
+      "example": "She became the national chess champion at fifteen.",
+      "exampleTranslation": "Cô ấy trở thành nhà vô địch cờ vua quốc gia năm mười lăm tuổi.",
+      "tags": [
+        "hobbies"
+      ]
+    },
+    {
+      "word": "indoor",
+      "meaning": "trong nhà",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˈɪndɔː(r)/",
+      "example": "Board games are great indoor activities on rainy days.",
+      "exampleTranslation": "Trò chơi cờ bàn là hoạt động trong nhà tuyệt vời vào những ngày mưa.",
+      "tags": [
+        "hobbies"
+      ]
+    },
+    {
+      "word": "getaway",
+      "meaning": "chuyến đi nghỉ ngắn",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈɡetəweɪ/",
+      "example": "We planned a weekend getaway to Da Lat.",
+      "exampleTranslation": "Chúng tôi đã lên kế hoạch cho một chuyến đi chơi cuối tuần ở Đà Lạt.",
+      "tags": [
+        "hobbies"
+      ]
+    },
+    {
+      "word": "connect",
+      "meaning": "kết nối",
+      "partOfSpeech": "verb",
+      "phonetic": "/kəˈnekt/",
+      "example": "Hobbies help people connect with each other.",
+      "exampleTranslation": "Sở thích giúp mọi người kết nối với nhau.",
+      "tags": [
+        "hobbies"
+      ]
+    },
+    {
+      "word": "camping",
+      "meaning": "cắm trại",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈkæmpɪŋ/",
+      "example": "We went camping by the lake last summer.",
+      "exampleTranslation": "Mùa hè năm ngoái chúng tôi đã đi cắm trại bên hồ.",
+      "tags": [
+        "hobbies"
+      ]
+    },
+    {
+      "word": "enjoy",
+      "meaning": "thích, tận hưởng",
+      "partOfSpeech": "verb",
+      "phonetic": "/ɪnˈdʒɔɪ/",
+      "example": "I really enjoy cooking for my friends.",
+      "exampleTranslation": "Tôi thật sự thích nấu ăn cho bạn bè.",
+      "tags": [
+        "hobbies"
+      ]
+    },
+    {
+      "word": "bake",
+      "meaning": "nướng (bánh)",
+      "partOfSpeech": "verb",
+      "phonetic": "/beɪk/",
+      "example": "Mum baked a chocolate cake for my birthday.",
+      "exampleTranslation": "Mẹ đã nướng một chiếc bánh sô-cô-la cho sinh nhật tôi.",
+      "tags": [
+        "hobbies"
+      ]
+    },
+    {
+      "word": "social",
+      "meaning": "(thuộc) xã hội, giao lưu",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˈsəʊʃl/",
+      "example": "Dancing classes are a good social activity.",
+      "exampleTranslation": "Các lớp học nhảy là một hoạt động giao lưu xã hội tốt.",
+      "tags": [
+        "hobbies"
+      ]
+    },
+    {
+      "word": "event",
+      "meaning": "sự kiện",
+      "partOfSpeech": "noun",
+      "phonetic": "/ɪˈvent/",
+      "example": "The music festival is the biggest event of the year.",
+      "exampleTranslation": "Lễ hội âm nhạc là sự kiện lớn nhất trong năm.",
+      "tags": [
+        "hobbies"
+      ]
+    },
+    {
+      "word": "get-together",
+      "meaning": "buổi họp mặt",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈɡet təɡeðə(r)/",
+      "example": "We have a family get-together every Tet.",
+      "exampleTranslation": "Gia đình tôi họp mặt vào mỗi dịp Tết.",
+      "tags": [
+        "hobbies"
+      ]
+    },
+    {
+      "word": "stuff",
+      "meaning": "đồ đạc, thứ",
+      "partOfSpeech": "noun",
+      "phonetic": "/stʌf/",
+      "example": "Put your camping stuff in the car.",
+      "exampleTranslation": "Để đồ cắm trại của bạn vào xe đi.",
+      "tags": [
+        "hobbies"
+      ]
+    },
+    {
+      "word": "news",
+      "meaning": "tin tức",
+      "partOfSpeech": "noun",
+      "phonetic": "/njuːz/",
+      "example": "Have you heard the news about the match?",
+      "exampleTranslation": "Bạn đã nghe tin về trận đấu chưa?",
+      "tags": [
+        "hobbies"
+      ]
+    },
+    {
+      "word": "championship",
+      "meaning": "giải vô địch",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈtʃæmpiənʃɪp/",
+      "example": "Our team won the football championship.",
+      "exampleTranslation": "Đội của chúng tôi đã vô địch giải bóng đá.",
+      "tags": [
+        "hobbies"
+      ]
+    },
+    {
+      "word": "destroy",
+      "meaning": "phá huỷ",
+      "partOfSpeech": "verb",
+      "phonetic": "/dɪˈstrɔɪ/",
+      "example": "The storm destroyed our tents.",
+      "exampleTranslation": "Cơn bão đã phá hủy lều của chúng tôi.",
+      "tags": [
+        "hobbies"
+      ]
+    },
+    {
+      "word": "ace",
+      "meaning": "cừ khôi; người giỏi nhất",
+      "partOfSpeech": "adjective / noun",
+      "phonetic": "/eɪs/",
+      "example": "He's an ace tennis player.",
+      "exampleTranslation": "Anh ấy là một tay vợt cừ khôi.",
+      "tags": [
+        "hobbies"
+      ]
+    },
+    {
+      "word": "manicure",
+      "meaning": "làm móng tay",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈmænɪkjʊə(r)/",
+      "example": "She treats herself to a manicure every month.",
+      "exampleTranslation": "Cô ấy tự thưởng cho mình một lần làm móng tay mỗi tháng.",
+      "tags": [
+        "hobbies"
+      ]
+    },
+    {
+      "word": "afford",
+      "meaning": "có đủ tiền, đủ khả năng",
+      "partOfSpeech": "verb",
+      "phonetic": "/əˈfɔːd/",
+      "example": "I can't afford such an expensive hobby.",
+      "exampleTranslation": "Tôi không đủ tiền theo một sở thích đắt đỏ như vậy.",
+      "tags": [
+        "hobbies"
+      ]
+    },
+    {
+      "word": "sew",
+      "meaning": "may, khâu",
+      "partOfSpeech": "verb",
+      "phonetic": "/səʊ/",
+      "example": "Grandma sewed a dress for my doll.",
+      "exampleTranslation": "Bà đã may một chiếc váy cho búp bê của tôi.",
+      "tags": [
+        "hobbies"
+      ]
+    },
+    {
+      "word": "knit",
+      "meaning": "đan (len)",
+      "partOfSpeech": "verb",
+      "phonetic": "/nɪt/",
+      "example": "She is knitting a scarf for winter.",
+      "exampleTranslation": "Cô ấy đang đan một chiếc khăn quàng cho mùa đông.",
+      "tags": [
+        "hobbies"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "unit": 45,
+  "deck": "Unit 45: Sở thích và thời gian rảnh",
+  "note": "Câu ví dụ rút gọn 6–10 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
+  "items": [
+    { "word": "confide", "example": "She confided her secret to her best buddy.", "exampleTranslation": "Cô ấy thổ lộ bí mật với người bạn thân nhất." },
+    { "word": "pleasure", "example": "Cooking for my family gives me real pleasure.", "exampleTranslation": "Nấu ăn cho gia đình mang lại cho tôi niềm vui thật sự." },
+    { "word": "hobby", "example": "His new hobby is hiking in the mountains.", "exampleTranslation": "Sở thích mới của anh ấy là leo núi đường dài." },
+    { "word": "musical", "example": "Our musical neighbour plays the guitar every night.", "exampleTranslation": "Người hàng xóm có năng khiếu âm nhạc của chúng tôi tối nào cũng chơi guitar." },
+    { "word": "chess", "example": "My grandfather taught me to play chess.", "exampleTranslation": "Ông tôi đã dạy tôi chơi cờ vua." },
+    { "word": "champion", "example": "The young champion was proud of her cup.", "exampleTranslation": "Nhà vô địch trẻ tự hào về chiếc cúp của mình." },
+    { "word": "indoor", "example": "We chose an indoor pool for rainy days.", "exampleTranslation": "Chúng tôi chọn bể bơi trong nhà cho những ngày mưa." },
+    { "word": "getaway", "example": "We booked a weekend getaway at a quiet resort.", "exampleTranslation": "Chúng tôi đặt một chuyến nghỉ ngắn cuối tuần ở một khu nghỉ dưỡng yên tĩnh." },
+    { "word": "connect", "example": "Online games help shy people connect with others.", "exampleTranslation": "Trò chơi trực tuyến giúp người nhút nhát kết nối với người khác." },
+    { "word": "camping", "example": "We went camping near a beautiful waterfall.", "exampleTranslation": "Chúng tôi đi cắm trại gần một thác nước đẹp." },
+    { "word": "enjoy", "example": "I really enjoy fishing at the lake.", "exampleTranslation": "Tôi rất thích câu cá ở hồ." },
+    { "word": "bake", "example": "Mum likes to bake cakes for every celebration.", "exampleTranslation": "Mẹ thích nướng bánh cho mỗi dịp ăn mừng." },
+    { "word": "social", "example": "He is very social and loves big parties.", "exampleTranslation": "Anh ấy rất thích giao lưu và mê những bữa tiệc lớn." },
+    { "word": "event", "example": "The festival is the biggest event in town.", "exampleTranslation": "Lễ hội là sự kiện lớn nhất trong thị trấn." },
+    { "word": "get-together", "example": "We have a family get-together every holiday.", "exampleTranslation": "Gia đình tôi họp mặt vào mỗi kỳ nghỉ lễ." },
+    { "word": "stuff", "example": "Please put your camping stuff in the garage.", "exampleTranslation": "Hãy cất đồ cắm trại của bạn vào nhà để xe." },
+    { "word": "news", "example": "She shared the good news with her roommate.", "exampleTranslation": "Cô ấy chia sẻ tin vui với bạn cùng phòng." },
+    { "word": "championship", "example": "Our team won the national chess championship.", "exampleTranslation": "Đội chúng tôi đã thắng giải vô địch cờ vua quốc gia." },
+    { "word": "destroy", "example": "The heavy flood destroyed our little garden.", "exampleTranslation": "Trận lũ lớn đã phá huỷ khu vườn nhỏ của chúng tôi." },
+    { "word": "ace", "example": "He is an ace at badminton and tennis.", "exampleTranslation": "Anh ấy là tay cừ khôi về cầu lông và quần vợt." },
+    { "word": "manicure", "example": "She gets a manicure before every wedding.", "exampleTranslation": "Cô ấy đi làm móng tay trước mỗi đám cưới." },
+    { "word": "afford", "example": "We can't afford such an expensive hobby.", "exampleTranslation": "Chúng tôi không đủ tiền theo một sở thích đắt đỏ như vậy." },
+    { "word": "sew", "example": "My grandmother likes to sew traditional dresses.", "exampleTranslation": "Bà tôi thích may những chiếc váy truyền thống." },
+    { "word": "knit", "example": "She knits warm scarves for her relatives.", "exampleTranslation": "Cô ấy đan khăn quàng ấm cho họ hàng." }
+  ]
+}

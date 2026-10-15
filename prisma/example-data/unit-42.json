@@ -1,0 +1,127 @@
+{
+  "unit": 42,
+  "deck": "Unit 42: Phụ kiện thời trang",
+  "note": "Câu ví dụ rút gọn 6–10 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
+  "items": [
+    {
+      "word": "well",
+      "example": "She dresses well for every job interview.",
+      "exampleTranslation": "Cô ấy ăn mặc chỉn chu cho mọi buổi phỏng vấn xin việc."
+    },
+    {
+      "word": "stylish",
+      "example": "My boyfriend bought me a stylish watch.",
+      "exampleTranslation": "Bạn trai mua tặng tôi một chiếc đồng hồ sành điệu."
+    },
+    {
+      "word": "handbag",
+      "example": "She keeps every receipt in her handbag.",
+      "exampleTranslation": "Cô ấy giữ mọi hóa đơn trong túi xách tay."
+    },
+    {
+      "word": "notice",
+      "example": "Did you notice her new haircut at the party?",
+      "exampleTranslation": "Bạn có để ý kiểu tóc mới của cô ấy ở bữa tiệc không?"
+    },
+    {
+      "word": "trainer",
+      "example": "These trainers are comfortable for jogging.",
+      "exampleTranslation": "Đôi giày thể thao này đi chạy bộ rất êm."
+    },
+    {
+      "word": "colourful",
+      "example": "The festival was full of colourful lanterns.",
+      "exampleTranslation": "Lễ hội rực rỡ những chiếc đèn lồng nhiều màu sắc."
+    },
+    {
+      "word": "flip-flop",
+      "example": "He wore flip-flops to the beach resort.",
+      "exampleTranslation": "Anh ấy đi dép tông đến khu nghỉ dưỡng ven biển."
+    },
+    {
+      "word": "sandal",
+      "example": "These leather sandals were a real bargain.",
+      "exampleTranslation": "Đôi xăng-đan da này đúng là một món hời."
+    },
+    {
+      "word": "sunglasses",
+      "example": "Always wear sunglasses on sunny days.",
+      "exampleTranslation": "Luôn đeo kính râm vào những ngày nắng."
+    },
+    {
+      "word": "metal",
+      "example": "The metal gate was hot in the sun.",
+      "exampleTranslation": "Cánh cổng kim loại nóng ran dưới nắng."
+    },
+    {
+      "word": "bracelet",
+      "example": "Her bracelet was a gift from her grandmother.",
+      "exampleTranslation": "Chiếc vòng tay của cô ấy là quà bà tặng."
+    },
+    {
+      "word": "hairband",
+      "example": "She bought a pink hairband at the mall.",
+      "exampleTranslation": "Cô ấy mua một chiếc băng đô hồng ở trung tâm thương mại."
+    },
+    {
+      "word": "lipstick",
+      "example": "This red lipstick is on sale today.",
+      "exampleTranslation": "Thỏi son đỏ này hôm nay đang giảm giá."
+    },
+    {
+      "word": "necklace",
+      "example": "The necklace was damaged during delivery.",
+      "exampleTranslation": "Chiếc vòng cổ bị hỏng trong lúc giao hàng."
+    },
+    {
+      "word": "fur",
+      "example": "Real fur coats are extremely expensive.",
+      "exampleTranslation": "Áo khoác lông thú thật cực kỳ đắt."
+    },
+    {
+      "word": "basket",
+      "example": "She carried a basket of fresh vegetables.",
+      "exampleTranslation": "Cô ấy xách một giỏ rau tươi."
+    },
+    {
+      "word": "silver",
+      "example": "He gave her a silver ring for their anniversary.",
+      "exampleTranslation": "Anh ấy tặng cô một chiếc nhẫn bạc nhân ngày kỷ niệm."
+    },
+    {
+      "word": "ring",
+      "example": "Her wedding ring is simple but beautiful.",
+      "exampleTranslation": "Nhẫn cưới của cô ấy đơn giản nhưng đẹp."
+    },
+    {
+      "word": "hair dryer",
+      "example": "The hotel room has a hair dryer.",
+      "exampleTranslation": "Phòng khách sạn có máy sấy tóc."
+    },
+    {
+      "word": "fasten",
+      "example": "Please fasten your seat belt during the flight.",
+      "exampleTranslation": "Vui lòng thắt dây an toàn trong suốt chuyến bay."
+    },
+    {
+      "word": "belt",
+      "example": "This leather belt was very inexpensive.",
+      "exampleTranslation": "Chiếc thắt lưng da này rất rẻ."
+    },
+    {
+      "word": "cap",
+      "example": "The tourist wore a cap to avoid sunburn.",
+      "exampleTranslation": "Du khách đội mũ lưỡi trai để tránh bị cháy nắng."
+    },
+    {
+      "word": "tie",
+      "example": "He wore a silk tie to the interview.",
+      "exampleTranslation": "Anh ấy thắt cà vạt lụa đi phỏng vấn."
+    },
+    {
+      "word": "sock",
+      "example": "Your socks do not match your shoes.",
+      "exampleTranslation": "Tất của bạn không hợp với giày."
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "deck": {
+    "name": "Unit 44: Thói quen hằng ngày",
+    "description": "24 từ vựng về thói quen hằng ngày, việc nhà và sắp xếp thời gian",
+    "color": "#14b8a6",
+    "icon": "⏰"
+  },
+  "cards": [
+    {
+      "word": "comb",
+      "meaning": "chải (tóc)",
+      "partOfSpeech": "verb",
+      "phonetic": "/kəʊm/",
+      "example": "He combs his hair several times a day to look good.",
+      "exampleTranslation": "Anh ấy chải tóc vài lần một ngày để trông bảnh bao.",
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "word": "workload",
+      "meaning": "khối lượng công việc",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈwɜːkləʊd/",
+      "example": "My workload doubles at the end of the year.",
+      "exampleTranslation": "Khối lượng công việc của tôi tăng gấp đôi vào cuối năm.",
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "word": "reschedule",
+      "meaning": "dời lịch, đổi lịch",
+      "partOfSpeech": "verb",
+      "phonetic": "/ˌriːˈʃedjuːl/",
+      "example": "Can we reschedule the meeting to Friday?",
+      "exampleTranslation": "Chúng ta có thể dời cuộc họp sang thứ Sáu không?",
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "word": "housework",
+      "meaning": "việc nhà",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈhaʊswɜːk/",
+      "example": "We share the housework equally.",
+      "exampleTranslation": "Chúng tôi chia đều việc nhà cho nhau.",
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "word": "mess",
+      "meaning": "sự bừa bộn",
+      "partOfSpeech": "noun",
+      "phonetic": "/mes/",
+      "example": "Your room is a mess!",
+      "exampleTranslation": "Phòng của con bừa bộn quá!",
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "word": "return",
+      "meaning": "trở về",
+      "partOfSpeech": "verb",
+      "phonetic": "/rɪˈtɜːn/",
+      "example": "She returns home at six every evening.",
+      "exampleTranslation": "Cô ấy trở về nhà lúc sáu giờ mỗi tối.",
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "word": "become",
+      "meaning": "trở nên, trở thành",
+      "partOfSpeech": "verb",
+      "phonetic": "/bɪˈkʌm/",
+      "example": "Getting up early has become a habit.",
+      "exampleTranslation": "Dậy sớm đã trở thành một thói quen.",
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "word": "dirty",
+      "meaning": "bẩn",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˈdɜːti/",
+      "example": "Put your dirty clothes in the basket.",
+      "exampleTranslation": "Bỏ quần áo bẩn của con vào giỏ đi.",
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "word": "midday",
+      "meaning": "buổi trưa",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˌmɪdˈdeɪ/",
+      "example": "I usually have lunch at midday.",
+      "exampleTranslation": "Tôi thường ăn trưa vào giữa trưa.",
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "word": "same",
+      "meaning": "giống nhau, như nhau",
+      "partOfSpeech": "adjective",
+      "phonetic": "/seɪm/",
+      "example": "I eat the same breakfast every day.",
+      "exampleTranslation": "Ngày nào tôi cũng ăn cùng một món bữa sáng.",
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "word": "perfectly",
+      "meaning": "một cách hoàn hảo",
+      "partOfSpeech": "adverb",
+      "phonetic": "/ˈpɜːfɪktli/",
+      "example": "She folded the clothes perfectly.",
+      "exampleTranslation": "Cô ấy gấp quần áo rất gọn gàng.",
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "word": "float",
+      "meaning": "nổi, trôi",
+      "partOfSpeech": "verb",
+      "phonetic": "/fləʊt/",
+      "example": "Leaves were floating in the sink.",
+      "exampleTranslation": "Lá cây đang nổi lềnh bềnh trong bồn rửa.",
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "word": "broom",
+      "meaning": "cái chổi",
+      "partOfSpeech": "noun",
+      "phonetic": "/bruːm/",
+      "example": "Use the broom to sweep the floor.",
+      "exampleTranslation": "Dùng chổi để quét nhà đi.",
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "word": "order",
+      "meaning": "sự ngăn nắp, trật tự",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈɔːdə(r)/",
+      "example": "She keeps her desk in good order.",
+      "exampleTranslation": "Cô ấy luôn giữ bàn làm việc ngăn nắp.",
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "word": "dish",
+      "meaning": "bát đĩa",
+      "partOfSpeech": "noun",
+      "phonetic": "/dɪʃ/",
+      "example": "It's your turn to wash the dishes.",
+      "exampleTranslation": "Đến lượt bạn rửa bát rồi đấy.",
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "word": "alarm",
+      "meaning": "(đồng hồ) báo thức",
+      "partOfSpeech": "noun",
+      "phonetic": "/əˈlɑːm/",
+      "example": "My alarm goes off at 6 a.m.",
+      "exampleTranslation": "Chuông báo thức của tôi reo lúc 6 giờ sáng.",
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "word": "routine",
+      "meaning": "thói quen hằng ngày",
+      "partOfSpeech": "noun",
+      "phonetic": "/ruːˈtiːn/",
+      "example": "Exercise is part of my morning routine.",
+      "exampleTranslation": "Tập thể dục là một phần trong thói quen buổi sáng của tôi.",
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "word": "boredom",
+      "meaning": "sự buồn chán",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈbɔːdəm/",
+      "example": "He plays games out of boredom.",
+      "exampleTranslation": "Anh ấy chơi game vì buồn chán.",
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "word": "weekly",
+      "meaning": "hằng tuần",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˈwiːkli/",
+      "example": "We do a weekly clean every Sunday.",
+      "exampleTranslation": "Chúng tôi dọn dẹp hằng tuần vào mỗi Chủ nhật.",
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "word": "wash",
+      "meaning": "rửa, giặt",
+      "partOfSpeech": "verb",
+      "phonetic": "/wɒʃ/",
+      "example": "Wash your hands before eating.",
+      "exampleTranslation": "Rửa tay trước khi ăn nhé.",
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "word": "reduce",
+      "meaning": "giảm bớt",
+      "partOfSpeech": "verb",
+      "phonetic": "/rɪˈdjuːs/",
+      "example": "A dishwasher reduces housework a lot.",
+      "exampleTranslation": "Máy rửa bát giúp giảm việc nhà rất nhiều.",
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "word": "oversleep",
+      "meaning": "ngủ quên",
+      "partOfSpeech": "verb",
+      "phonetic": "/ˌəʊvəˈsliːp/",
+      "example": "I overslept and missed the bus.",
+      "exampleTranslation": "Tôi ngủ quên và bị lỡ xe buýt.",
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "word": "dust",
+      "meaning": "bụi",
+      "partOfSpeech": "noun",
+      "phonetic": "/dʌst/",
+      "example": "The shelves are covered in dust.",
+      "exampleTranslation": "Các kệ phủ đầy bụi.",
+      "tags": [
+        "routine"
+      ]
+    },
+    {
+      "word": "repeat",
+      "meaning": "lặp lại",
+      "partOfSpeech": "verb",
+      "phonetic": "/rɪˈpiːt/",
+      "example": "The same tasks repeat every day.",
+      "exampleTranslation": "Những công việc giống nhau lặp đi lặp lại mỗi ngày.",
+      "tags": [
+        "routine"
+      ]
+    }
+  ]
+}

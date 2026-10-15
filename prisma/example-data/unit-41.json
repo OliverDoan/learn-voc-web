@@ -1,0 +1,127 @@
+{
+  "unit": 41,
+  "deck": "Unit 41: Mua sắm",
+  "note": "Câu ví dụ rút gọn 6–10 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
+  "items": [
+    {
+      "word": "shopaholic",
+      "example": "My bestie is a shopaholic with no savings.",
+      "exampleTranslation": "Bạn thân của tôi là người nghiện mua sắm, chẳng để dành được đồng nào."
+    },
+    {
+      "word": "shopping",
+      "example": "We went shopping at the local market.",
+      "exampleTranslation": "Chúng tôi đi mua sắm ở chợ địa phương."
+    },
+    {
+      "word": "mall",
+      "example": "The new mall is always crowded at weekends.",
+      "exampleTranslation": "Trung tâm thương mại mới lúc nào cũng đông vào cuối tuần."
+    },
+    {
+      "word": "sale",
+      "example": "These shoes were cheap during the summer sale.",
+      "exampleTranslation": "Đôi giày này rẻ trong đợt giảm giá mùa hè."
+    },
+    {
+      "word": "clearance",
+      "example": "The clearance sale offers very affordable prices.",
+      "exampleTranslation": "Đợt xả hàng có giá rất phải chăng."
+    },
+    {
+      "word": "delivery",
+      "example": "Delivery to our district takes two days.",
+      "exampleTranslation": "Giao hàng tới quận của chúng tôi mất hai ngày."
+    },
+    {
+      "word": "rare",
+      "example": "He found a rare antique at the market.",
+      "exampleTranslation": "Anh ấy tìm được một món đồ cổ hiếm ở chợ."
+    },
+    {
+      "word": "unusual",
+      "example": "She bought an unusual lamp for her balcony.",
+      "exampleTranslation": "Cô ấy mua một chiếc đèn lạ mắt cho ban công."
+    },
+    {
+      "word": "order",
+      "example": "I ordered a new carpet for the living room.",
+      "exampleTranslation": "Tôi đã đặt một tấm thảm mới cho phòng khách."
+    },
+    {
+      "word": "seller",
+      "example": "The seller gave me a friendly smile.",
+      "exampleTranslation": "Người bán nở với tôi một nụ cười thân thiện."
+    },
+    {
+      "word": "bargain",
+      "example": "This luxury bag was a real bargain.",
+      "exampleTranslation": "Chiếc túi hàng hiệu này đúng là một món hời."
+    },
+    {
+      "word": "damaged",
+      "example": "The furniture arrived damaged and badly scratched.",
+      "exampleTranslation": "Đồ nội thất được giao tới bị hư hỏng và trầy xước nặng."
+    },
+    {
+      "word": "ancient",
+      "example": "The shop sells ancient coins and antique vases.",
+      "exampleTranslation": "Cửa hàng bán tiền xu cổ xưa và bình cổ."
+    },
+    {
+      "word": "receipt",
+      "example": "Always keep the receipt after paying the bill.",
+      "exampleTranslation": "Luôn giữ lại hóa đơn sau khi thanh toán."
+    },
+    {
+      "word": "return",
+      "example": "You can return the dress within seven days.",
+      "exampleTranslation": "Bạn có thể trả lại chiếc váy trong vòng bảy ngày."
+    },
+    {
+      "word": "shelf",
+      "example": "The bottom shelf has the most affordable products.",
+      "exampleTranslation": "Kệ dưới cùng có những sản phẩm rẻ nhất."
+    },
+    {
+      "word": "cash",
+      "example": "This local market only accepts cash.",
+      "exampleTranslation": "Khu chợ địa phương này chỉ nhận tiền mặt."
+    },
+    {
+      "word": "inexpensive",
+      "example": "We found an inexpensive homestay near the beach.",
+      "exampleTranslation": "Chúng tôi tìm được một homestay không đắt gần biển."
+    },
+    {
+      "word": "overspend",
+      "example": "I always overspend when I go shopping.",
+      "exampleTranslation": "Lần nào đi mua sắm tôi cũng tiêu quá tay."
+    },
+    {
+      "word": "exchange",
+      "example": "The customer wanted to exchange the shirt for another size.",
+      "exampleTranslation": "Vị khách muốn đổi chiếc áo sang cỡ khác."
+    },
+    {
+      "word": "wholesale",
+      "example": "We buy rice at wholesale prices.",
+      "exampleTranslation": "Chúng tôi mua gạo với giá bán sỉ."
+    },
+    {
+      "word": "cancel",
+      "example": "I cancelled my order because of the delay.",
+      "exampleTranslation": "Tôi đã hủy đơn hàng vì giao chậm."
+    },
+    {
+      "word": "discount",
+      "example": "Our loyal customers get a special discount.",
+      "exampleTranslation": "Khách hàng thân thiết của chúng tôi được giảm giá đặc biệt."
+    },
+    {
+      "word": "gift",
+      "example": "She bought a small gift for her housemate.",
+      "exampleTranslation": "Cô ấy mua một món quà nhỏ cho bạn cùng nhà."
+    }
+  ]
+}

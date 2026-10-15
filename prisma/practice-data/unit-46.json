@@ -1,0 +1,247 @@
+{
+  "unit": 46,
+  "deck": "Unit 46: Đại học và thi cử",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "professor",
+      "sentences": [
+        { "english": "The professor gave us a difficult assignment.", "vietnamese": "Giáo sư giao cho chúng tôi một bài tập khó." },
+        { "english": "Our history professor tells funny stories in class.", "vietnamese": "Giáo sư lịch sử của chúng tôi kể chuyện hài hước trong lớp." },
+        { "english": "I was nervous before meeting the professor about my project.", "vietnamese": "Tôi hồi hộp trước khi gặp giáo sư để bàn về dự án của mình." },
+        { "english": "The professor is an expert in modern architecture.", "vietnamese": "Vị giáo sư là chuyên gia về kiến trúc hiện đại." },
+        { "english": "Every student respects the old professor for his kindness.", "vietnamese": "Sinh viên nào cũng kính trọng vị giáo sư già vì sự tử tế của ông." }
+      ]
+    },
+    {
+      "word": "warn",
+      "sentences": [
+        { "english": "The tutor warned us about the strict deadline.", "vietnamese": "Gia sư cảnh báo chúng tôi về hạn nộp nghiêm ngặt." },
+        { "english": "My mother warned me not to stay up too late.", "vietnamese": "Mẹ cảnh báo tôi đừng thức quá khuya." },
+        { "english": "The forecast warns of heavy rain this weekend.", "vietnamese": "Dự báo thời tiết cảnh báo có mưa lớn cuối tuần này." },
+        { "english": "Signs warn tourists not to swim near the cliff.", "vietnamese": "Biển báo cảnh báo du khách không bơi gần vách đá." },
+        { "english": "I warned him that the exam would be challenging.", "vietnamese": "Tôi đã cảnh báo anh ấy rằng kỳ thi sẽ rất khó." }
+      ]
+    },
+    {
+      "word": "complete",
+      "sentences": [
+        { "english": "I must complete my assignment before Friday.", "vietnamese": "Tôi phải hoàn thành bài tập trước thứ Sáu." },
+        { "english": "She completed the course with excellent results.", "vietnamese": "Cô ấy hoàn thành khoá học với kết quả xuất sắc." },
+        { "english": "Please complete the form and return it to reception.", "vietnamese": "Vui lòng điền đầy đủ mẫu đơn và gửi lại quầy lễ tân." },
+        { "english": "Completing a degree abroad takes courage and money.", "vietnamese": "Hoàn thành một tấm bằng ở nước ngoài cần cả can đảm lẫn tiền bạc." },
+        { "english": "The new library will be completed next term.", "vietnamese": "Thư viện mới sẽ được hoàn thành vào học kỳ tới." }
+      ]
+    },
+    {
+      "word": "provide",
+      "sentences": [
+        { "english": "The university provides cheap accommodation for students.", "vietnamese": "Trường đại học cung cấp chỗ ở giá rẻ cho sinh viên." },
+        { "english": "The school provides free lunch for every pupil.", "vietnamese": "Trường cung cấp bữa trưa miễn phí cho mọi học sinh." },
+        { "english": "Our teacher provided useful tips for the speaking test.", "vietnamese": "Giáo viên đã đưa ra những mẹo hữu ích cho bài thi nói." },
+        { "english": "This website provides reliable information about scholarships.", "vietnamese": "Trang web này cung cấp thông tin đáng tin cậy về học bổng." },
+        { "english": "The hotel provides a free shuttle bus to the airport.", "vietnamese": "Khách sạn cung cấp xe đưa đón miễn phí ra sân bay." }
+      ]
+    },
+    {
+      "word": "application",
+      "sentences": [
+        { "english": "She filled in the application form carefully.", "vietnamese": "Cô ấy điền đơn đăng ký rất cẩn thận." },
+        { "english": "My scholarship application was refused last year.", "vietnamese": "Đơn xin học bổng của tôi bị từ chối năm ngoái." },
+        { "english": "Send your application before the end of the month.", "vietnamese": "Hãy gửi đơn đăng ký trước cuối tháng." },
+        { "english": "He attached his certificate to the application.", "vietnamese": "Anh ấy đính kèm chứng chỉ vào đơn đăng ký." },
+        { "english": "Writing a good application letter is a useful skill.", "vietnamese": "Viết một lá đơn đăng ký tốt là một kỹ năng hữu ích." }
+      ]
+    },
+    {
+      "word": "degree",
+      "sentences": [
+        { "english": "He earned a degree in mechanical engineering.", "vietnamese": "Anh ấy lấy bằng kỹ sư cơ khí." },
+        { "english": "A degree alone does not guarantee a good career.", "vietnamese": "Chỉ một tấm bằng thì không đảm bảo sự nghiệp tốt." },
+        { "english": "She is studying for a degree in literature.", "vietnamese": "Cô ấy đang học lấy bằng văn học." },
+        { "english": "My parents were proud when I got my degree.", "vietnamese": "Bố mẹ tôi rất tự hào khi tôi nhận bằng." },
+        { "english": "Many employers want a degree and real experience.", "vietnamese": "Nhiều nhà tuyển dụng muốn cả bằng cấp lẫn kinh nghiệm thực tế." }
+      ]
+    },
+    {
+      "word": "advanced",
+      "sentences": [
+        { "english": "This advanced course is too hard for beginners.", "vietnamese": "Khoá học nâng cao này quá khó với người mới bắt đầu." },
+        { "english": "She joined the advanced English class after one term.", "vietnamese": "Cô ấy vào lớp tiếng Anh nâng cao chỉ sau một học kỳ." },
+        { "english": "The lab uses very advanced technology.", "vietnamese": "Phòng thí nghiệm dùng công nghệ rất tiên tiến." },
+        { "english": "Advanced students can help the weak ones.", "vietnamese": "Những học sinh khá giỏi có thể giúp những bạn yếu hơn." },
+        { "english": "He passed the advanced level with a high score.", "vietnamese": "Anh ấy vượt qua trình độ nâng cao với điểm số cao." }
+      ]
+    },
+    {
+      "word": "stress",
+      "sentences": [
+        { "english": "Exam stress made her lose her appetite.", "vietnamese": "Căng thẳng thi cử khiến cô ấy chán ăn." },
+        { "english": "Exercise is a good way to reduce stress.", "vietnamese": "Tập thể dục là cách tốt để giảm căng thẳng." },
+        { "english": "Too much stress can cause headaches and poor sleep.", "vietnamese": "Quá nhiều căng thẳng có thể gây đau đầu và mất ngủ." },
+        { "english": "He hides his stress behind a calm face.", "vietnamese": "Anh ấy giấu sự căng thẳng sau gương mặt bình thản." },
+        { "english": "I meditate every morning to deal with stress.", "vietnamese": "Tôi thiền mỗi sáng để đối phó với căng thẳng." }
+      ]
+    },
+    {
+      "word": "poetry",
+      "sentences": [
+        { "english": "She enjoys reading poetry on quiet evenings.", "vietnamese": "Cô ấy thích đọc thơ vào những buổi tối yên tĩnh." },
+        { "english": "My grandfather wrote poetry about his hometown.", "vietnamese": "Ông tôi làm thơ về quê hương mình." },
+        { "english": "Vietnamese poetry is part of our national culture.", "vietnamese": "Thơ ca Việt Nam là một phần của văn hoá dân tộc." },
+        { "english": "The poetry club meets every Friday in a cosy café.", "vietnamese": "Câu lạc bộ thơ họp vào mỗi thứ Sáu ở một quán cà phê ấm cúng." },
+        { "english": "I find modern poetry quite confusing at first.", "vietnamese": "Lúc đầu tôi thấy thơ hiện đại khá khó hiểu." }
+      ]
+    },
+    {
+      "word": "lecture",
+      "sentences": [
+        { "english": "I fell asleep during the long history lecture.", "vietnamese": "Tôi ngủ gật trong bài giảng lịch sử dài lê thê." },
+        { "english": "The lecture hall was crowded with first-year students.", "vietnamese": "Giảng đường chật kín sinh viên năm nhất." },
+        { "english": "He records every lecture so he can revise later.", "vietnamese": "Anh ấy ghi âm mọi bài giảng để ôn lại sau." },
+        { "english": "The guest speaker gave an engaging lecture on art.", "vietnamese": "Diễn giả khách mời đã có một bài giảng cuốn hút về nghệ thuật." },
+        { "english": "Please be punctual for the morning lecture.", "vietnamese": "Hãy đến đúng giờ bài giảng buổi sáng nhé." }
+      ]
+    },
+    {
+      "word": "further",
+      "sentences": [
+        { "english": "Please contact us for further information.", "vietnamese": "Vui lòng liên hệ với chúng tôi để biết thêm thông tin." },
+        { "english": "She wants to continue her further studies abroad.", "vietnamese": "Cô ấy muốn tiếp tục học cao hơn ở nước ngoài." },
+        { "english": "We need further practice before the final.", "vietnamese": "Chúng ta cần luyện tập thêm trước trận chung kết." },
+        { "english": "The meeting was delayed until further notice.", "vietnamese": "Cuộc họp bị hoãn cho đến khi có thông báo mới." },
+        { "english": "Any further questions can be sent by email to the manager.", "vietnamese": "Mọi câu hỏi thêm có thể gửi email cho người quản lý." }
+      ]
+    },
+    {
+      "word": "qualification",
+      "sentences": [
+        { "english": "You need a teaching qualification for this career.", "vietnamese": "Bạn cần bằng sư phạm cho nghề nghiệp này." },
+        { "english": "Her qualifications impressed the employer at the interview.", "vietnamese": "Bằng cấp của cô ấy gây ấn tượng với nhà tuyển dụng trong buổi phỏng vấn." },
+        { "english": "Nurses must have a proper qualification to work here.", "vietnamese": "Y tá phải có trình độ chuyên môn phù hợp để làm việc ở đây." },
+        { "english": "He got a cooking qualification from a famous school.", "vietnamese": "Anh ấy có bằng nấu ăn từ một trường nổi tiếng." },
+        { "english": "Experience is sometimes more useful than any qualification.", "vietnamese": "Đôi khi kinh nghiệm hữu ích hơn bất kỳ bằng cấp nào." }
+      ]
+    },
+    {
+      "word": "instructor",
+      "sentences": [
+        { "english": "Our driving instructor is very patient.", "vietnamese": "Thầy dạy lái xe của chúng tôi rất kiên nhẫn." },
+        { "english": "The diving instructor checked our equipment carefully.", "vietnamese": "Người hướng dẫn lặn kiểm tra thiết bị của chúng tôi rất kỹ." },
+        { "english": "My yoga instructor taught me how to breathe properly.", "vietnamese": "Cô hướng dẫn yoga dạy tôi cách thở đúng." },
+        { "english": "The swimming instructor encouraged the scared children.", "vietnamese": "Người dạy bơi động viên những đứa trẻ đang sợ hãi." },
+        { "english": "He works as a part-time gym instructor.", "vietnamese": "Anh ấy làm huấn luyện viên phòng tập bán thời gian." }
+      ]
+    },
+    {
+      "word": "session",
+      "sentences": [
+        { "english": "We attended a revision session at noon.", "vietnamese": "Chúng tôi tham gia một buổi ôn tập vào buổi trưa." },
+        { "english": "The training session lasted two hours.", "vietnamese": "Buổi tập kéo dài hai tiếng." },
+        { "english": "Each study session ends with a short quiz on vocabulary.", "vietnamese": "Mỗi buổi học kết thúc bằng một bài kiểm tra từ vựng ngắn." },
+        { "english": "The photography session took place in the park at sunrise.", "vietnamese": "Buổi chụp ảnh diễn ra trong công viên lúc bình minh." },
+        { "english": "I booked a session with a career adviser.", "vietnamese": "Tôi đặt một buổi tư vấn với chuyên viên hướng nghiệp." }
+      ]
+    },
+    {
+      "word": "plan",
+      "sentences": [
+        { "english": "We planned our study timetable for the term.", "vietnamese": "Chúng tôi lên thời gian biểu học tập cho học kỳ." },
+        { "english": "They are planning a trip to the coast.", "vietnamese": "Họ đang lên kế hoạch cho một chuyến đi ra biển." },
+        { "english": "She plans to save money for a new laptop.", "vietnamese": "Cô ấy dự định tiết kiệm tiền mua máy tính mới." },
+        { "english": "I always plan my meals to avoid wasting food.", "vietnamese": "Tôi luôn lên kế hoạch bữa ăn để tránh lãng phí thức ăn." },
+        { "english": "We planned the wedding for almost a year.", "vietnamese": "Chúng tôi chuẩn bị đám cưới gần một năm." }
+      ]
+    },
+    {
+      "word": "achieve",
+      "sentences": [
+        { "english": "Hard work helped her achieve her dream.", "vietnamese": "Sự chăm chỉ giúp cô ấy đạt được ước mơ." },
+        { "english": "He achieved a high grade in every subject.", "vietnamese": "Anh ấy đạt điểm cao ở mọi môn học." },
+        { "english": "Our team achieved its goal before the deadline.", "vietnamese": "Đội chúng tôi đạt mục tiêu trước hạn chót." },
+        { "english": "You can achieve a lot with a positive attitude.", "vietnamese": "Bạn có thể đạt được nhiều điều với thái độ tích cực." },
+        { "english": "Achieving fluency in a language takes years of practice.", "vietnamese": "Để nói trôi chảy một ngôn ngữ cần nhiều năm luyện tập." }
+      ]
+    },
+    {
+      "word": "term",
+      "sentences": [
+        { "english": "The new term begins after the national holiday.", "vietnamese": "Học kỳ mới bắt đầu sau kỳ nghỉ lễ quốc gia." },
+        { "english": "I have four exams at the end of this term.", "vietnamese": "Tôi có bốn bài thi vào cuối học kỳ này." },
+        { "english": "She made great progress during the spring term.", "vietnamese": "Cô ấy tiến bộ vượt bậc trong học kỳ mùa xuân." },
+        { "english": "Tuition fees must be paid before each term.", "vietnamese": "Học phí phải được đóng trước mỗi học kỳ." },
+        { "english": "We moved into a new flat in the middle of the term.", "vietnamese": "Chúng tôi chuyển vào căn hộ mới giữa học kỳ." }
+      ]
+    },
+    {
+      "word": "presentation",
+      "sentences": [
+        { "english": "Her presentation about climate change was impressive.", "vietnamese": "Bài thuyết trình của cô ấy về biến đổi khí hậu rất ấn tượng." },
+        { "english": "I felt shy during my first presentation in English.", "vietnamese": "Tôi thấy ngại ngùng trong bài thuyết trình đầu tiên bằng tiếng Anh." },
+        { "english": "We prepared the group presentation in the library.", "vietnamese": "Chúng tôi chuẩn bị bài thuyết trình nhóm ở thư viện." },
+        { "english": "His presentation was short, clear and funny.", "vietnamese": "Bài thuyết trình của anh ấy ngắn gọn, rõ ràng và hài hước." },
+        { "english": "The laptop stopped working in the middle of my presentation.", "vietnamese": "Máy tính bị hỏng ngay giữa bài thuyết trình của tôi." }
+      ]
+    },
+    {
+      "word": "major",
+      "sentences": [
+        { "english": "My major at college is computer science.", "vietnamese": "Chuyên ngành của tôi ở đại học là khoa học máy tính." },
+        { "english": "She changed her major from law to design.", "vietnamese": "Cô ấy đổi chuyên ngành từ luật sang thiết kế." },
+        { "english": "Choosing a major made me anxious for months.", "vietnamese": "Việc chọn chuyên ngành khiến tôi lo lắng hàng tháng trời." },
+        { "english": "His major is tourism, so he loves travelling.", "vietnamese": "Chuyên ngành của anh ấy là du lịch nên anh ấy rất thích đi đây đi đó." },
+        { "english": "Engineering is the most popular major at this university.", "vietnamese": "Kỹ thuật là chuyên ngành phổ biến nhất ở trường đại học này." }
+      ]
+    },
+    {
+      "word": "university",
+      "sentences": [
+        { "english": "He was nervous on his first university day.", "vietnamese": "Anh ấy hồi hộp trong ngày đầu tiên ở trường đại học." },
+        { "english": "The university is in the centre of the capital.", "vietnamese": "Trường đại học nằm ở trung tâm thủ đô." },
+        { "english": "She found her soulmate at university.", "vietnamese": "Cô ấy tìm thấy tri kỷ ở trường đại học." },
+        { "english": "University fees are getting more expensive every year.", "vietnamese": "Học phí đại học ngày càng đắt đỏ mỗi năm." },
+        { "english": "My cousin dropped out of university after one year.", "vietnamese": "Anh họ tôi bỏ học đại học sau một năm." }
+      ]
+    },
+    {
+      "word": "exam",
+      "sentences": [
+        { "english": "I revised all night for the final exam.", "vietnamese": "Tôi ôn bài cả đêm cho kỳ thi cuối kỳ." },
+        { "english": "She was so nervous that she forgot everything in the exam.", "vietnamese": "Cô ấy hồi hộp đến mức quên sạch mọi thứ trong phòng thi." },
+        { "english": "The exam results will be announced next Monday.", "vietnamese": "Kết quả thi sẽ được công bố vào thứ Hai tới." },
+        { "english": "Memorising answers won't help you pass this exam.", "vietnamese": "Học thuộc đáp án sẽ không giúp bạn qua kỳ thi này." },
+        { "english": "We celebrated with a party after the last exam.", "vietnamese": "Chúng tôi mở tiệc ăn mừng sau bài thi cuối cùng." }
+      ]
+    },
+    {
+      "word": "fail",
+      "sentences": [
+        { "english": "He failed his maths exam and felt ashamed.", "vietnamese": "Anh ấy trượt bài thi toán và cảm thấy xấu hổ." },
+        { "english": "Don't be afraid to fail when you try something new.", "vietnamese": "Đừng sợ thất bại khi bạn thử điều gì đó mới." },
+        { "english": "Our first business idea failed after six months.", "vietnamese": "Ý tưởng kinh doanh đầu tiên của chúng tôi thất bại sau sáu tháng." },
+        { "english": "If you fail the test, you can repeat it in June.", "vietnamese": "Nếu trượt bài kiểm tra, bạn có thể thi lại vào tháng Sáu." },
+        { "english": "The engine failed in the middle of the highway.", "vietnamese": "Động cơ hỏng ngay giữa đường cao tốc." }
+      ]
+    },
+    {
+      "word": "score",
+      "sentences": [
+        { "english": "She got a perfect score in the vocabulary test.", "vietnamese": "Cô ấy đạt điểm tuyệt đối trong bài kiểm tra từ vựng." },
+        { "english": "My IELTS score was high enough for the scholarship.", "vietnamese": "Điểm IELTS của tôi đủ cao để nhận học bổng." },
+        { "english": "He was disappointed with his low score in physics.", "vietnamese": "Anh ấy thất vọng với điểm vật lý thấp." },
+        { "english": "A good score in the interview will help your application.", "vietnamese": "Điểm phỏng vấn tốt sẽ giúp ích cho hồ sơ của bạn." },
+        { "english": "Students compare their scores right after the results come out.", "vietnamese": "Sinh viên so điểm với nhau ngay khi có kết quả." }
+      ]
+    },
+    {
+      "word": "focused",
+      "sentences": [
+        { "english": "Stay focused and turn off your phone.", "vietnamese": "Hãy tập trung và tắt điện thoại đi." },
+        { "english": "It's hard to stay focused in a noisy café.", "vietnamese": "Thật khó tập trung trong một quán cà phê ồn ào." },
+        { "english": "She remained focused on her goal despite many difficulties.", "vietnamese": "Cô ấy vẫn tập trung vào mục tiêu dù gặp nhiều khó khăn." },
+        { "english": "A short break helps me feel more focused afterwards.", "vietnamese": "Nghỉ ngắn một chút giúp tôi tập trung hơn sau đó." },
+        { "english": "The athlete looked calm and focused before the race.", "vietnamese": "Vận động viên trông bình tĩnh và tập trung trước cuộc đua." }
+      ]
+    }
+  ]
+}

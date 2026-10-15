@@ -1,0 +1,31 @@
+{
+  "unit": 47,
+  "deck": "Unit 47: Tội phạm và pháp luật",
+  "note": "Câu ví dụ rút gọn 6–10 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
+  "items": [
+    { "word": "criminal", "example": "The police finally caught the dangerous criminal.", "exampleTranslation": "Cảnh sát cuối cùng đã bắt được tên tội phạm nguy hiểm." },
+    { "word": "murder", "example": "He was accused of murdering his business partner.", "exampleTranslation": "Hắn bị buộc tội giết người cộng sự làm ăn." },
+    { "word": "steal", "example": "Someone tried to steal my motorbike last night.", "exampleTranslation": "Tối qua có kẻ định trộm xe máy của tôi." },
+    { "word": "gun", "example": "The security guard always carries a gun.", "exampleTranslation": "Nhân viên bảo vệ luôn mang theo súng." },
+    { "word": "arrest", "example": "The officer arrested the pickpocket at the market.", "exampleTranslation": "Viên cảnh sát bắt giữ tên móc túi ở chợ." },
+    { "word": "jail", "example": "The scam leader spent five years in jail.", "exampleTranslation": "Kẻ cầm đầu vụ lừa đảo ngồi tù năm năm." },
+    { "word": "guard", "example": "Two guards protect the museum at night.", "exampleTranslation": "Hai người bảo vệ canh giữ bảo tàng vào ban đêm." },
+    { "word": "thief", "example": "The thief escaped through the back window.", "exampleTranslation": "Tên trộm trốn thoát qua cửa sổ phía sau." },
+    { "word": "attack", "example": "A dog attacked the cyclist near the park.", "exampleTranslation": "Một con chó tấn công người đi xe đạp gần công viên." },
+    { "word": "policeman", "example": "The policeman helped the lost tourist find his hotel.", "exampleTranslation": "Anh cảnh sát giúp du khách bị lạc tìm khách sạn." },
+    { "word": "stop", "example": "The officer stopped the truck for speeding.", "exampleTranslation": "Viên cảnh sát chặn chiếc xe tải vì chạy quá tốc độ." },
+    { "word": "tax", "example": "Rich people should pay more tax.", "exampleTranslation": "Người giàu nên đóng thuế nhiều hơn." },
+    { "word": "prove", "example": "The lawyer proved that her client was honest.", "exampleTranslation": "Luật sư đã chứng minh thân chủ của cô ấy trung thực." },
+    { "word": "guilty", "example": "He felt guilty after telling a lie.", "exampleTranslation": "Anh ấy thấy có lỗi sau khi nói dối." },
+    { "word": "prisoner", "example": "The prisoner tried to escape at midnight.", "exampleTranslation": "Tù nhân cố vượt ngục lúc nửa đêm." },
+    { "word": "prison", "example": "Life in prison is lonely and dull.", "exampleTranslation": "Cuộc sống trong tù cô đơn và tẻ nhạt." },
+    { "word": "outlaw", "example": "The outlaw hid in the forest for years.", "exampleTranslation": "Kẻ ngoài vòng pháp luật trốn trong rừng nhiều năm." },
+    { "word": "handcuffs", "example": "The officer put handcuffs on the angry man.", "exampleTranslation": "Viên cảnh sát còng tay người đàn ông đang giận dữ." },
+    { "word": "defence", "example": "The lawyer prepared a strong defence for him.", "exampleTranslation": "Luật sư chuẩn bị một bản bào chữa vững chắc cho anh ta." },
+    { "word": "law", "example": "Everyone in the country must respect the law.", "exampleTranslation": "Mọi người trong đất nước đều phải tôn trọng pháp luật." },
+    { "word": "serious", "example": "Drink driving is a serious crime.", "exampleTranslation": "Lái xe khi say rượu là một tội nghiêm trọng." },
+    { "word": "trick", "example": "A fake seller tricked customers into paying twice.", "exampleTranslation": "Một người bán hàng giả mạo đã lừa khách hàng trả tiền hai lần." },
+    { "word": "blame", "example": "Don't blame others for your own mistakes.", "exampleTranslation": "Đừng đổ lỗi cho người khác vì sai lầm của chính mình." },
+    { "word": "spy", "example": "The spy used a fake passport to enter.", "exampleTranslation": "Tên gián điệp dùng hộ chiếu giả để nhập cảnh." }
+  ]
+}

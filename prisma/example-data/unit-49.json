@@ -1,0 +1,31 @@
+{
+  "unit": 49,
+  "deck": "Unit 49: Khởi nghiệp và tài chính",
+  "note": "Câu ví dụ rút gọn 6–10 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
+  "items": [
+    { "word": "start-up", "example": "Her tech start-up became popular very quickly.", "exampleTranslation": "Công ty khởi nghiệp công nghệ của cô ấy nổi tiếng rất nhanh." },
+    { "word": "loan", "example": "We borrowed a bank loan to buy a flat.", "exampleTranslation": "Chúng tôi vay ngân hàng để mua một căn hộ." },
+    { "word": "research", "example": "Our research shows that customers prefer cheap products.", "exampleTranslation": "Nghiên cứu của chúng tôi cho thấy khách hàng thích sản phẩm rẻ." },
+    { "word": "customer", "example": "The customer complained about the slow delivery.", "exampleTranslation": "Vị khách phàn nàn về việc giao hàng chậm." },
+    { "word": "business", "example": "Running a small business is hard work.", "exampleTranslation": "Điều hành một doanh nghiệp nhỏ là việc vất vả." },
+    { "word": "discussion", "example": "We had a long discussion about the new plan.", "exampleTranslation": "Chúng tôi đã thảo luận rất lâu về kế hoạch mới." },
+    { "word": "situation", "example": "The financial situation of the company is getting worse.", "exampleTranslation": "Tình hình tài chính của công ty đang ngày càng tệ." },
+    { "word": "hopeless", "example": "After losing his job, he felt completely hopeless.", "exampleTranslation": "Sau khi mất việc, anh ấy thấy hoàn toàn tuyệt vọng." },
+    { "word": "unemployment", "example": "Unemployment is a big issue for young graduates.", "exampleTranslation": "Thất nghiệp là vấn đề lớn với sinh viên mới ra trường." },
+    { "word": "trade", "example": "The two countries agreed to trade more goods.", "exampleTranslation": "Hai nước đã đồng ý trao đổi thêm hàng hoá." },
+    { "word": "abroad", "example": "She wants to study abroad after university.", "exampleTranslation": "Cô ấy muốn đi du học sau khi học xong đại học." },
+    { "word": "recover", "example": "The local economy slowly recovered after the typhoon.", "exampleTranslation": "Kinh tế địa phương dần phục hồi sau cơn bão." },
+    { "word": "possible", "example": "Is it possible to pay in cash here?", "exampleTranslation": "Ở đây có thể trả bằng tiền mặt không?" },
+    { "word": "average", "example": "The average price of a flat has doubled.", "exampleTranslation": "Giá trung bình của một căn hộ đã tăng gấp đôi." },
+    { "word": "professional", "example": "You need professional help before signing the contract.", "exampleTranslation": "Bạn cần sự trợ giúp chuyên nghiệp trước khi ký hợp đồng." },
+    { "word": "advice", "example": "My manager gave me useful advice about saving.", "exampleTranslation": "Quản lý của tôi đã cho tôi lời khuyên hữu ích về việc tiết kiệm." },
+    { "word": "percent", "example": "Prices rose by ten percent last year.", "exampleTranslation": "Giá cả đã tăng mười phần trăm vào năm ngoái." },
+    { "word": "financial", "example": "The company is facing serious financial problems.", "exampleTranslation": "Công ty đang gặp những vấn đề tài chính nghiêm trọng." },
+    { "word": "cheque", "example": "He paid the rent by cheque every month.", "exampleTranslation": "Tháng nào anh ấy cũng trả tiền thuê nhà bằng séc." },
+    { "word": "manage", "example": "She manages a small team of designers.", "exampleTranslation": "Cô ấy quản lý một nhóm nhỏ các nhà thiết kế." },
+    { "word": "transfer", "example": "I transferred the fee to the school yesterday.", "exampleTranslation": "Hôm qua tôi đã chuyển khoản học phí cho nhà trường." },
+    { "word": "goods", "example": "The shop sells cheap goods from China.", "exampleTranslation": "Cửa hàng bán hàng hoá giá rẻ từ Trung Quốc." },
+    { "word": "currency", "example": "You can exchange currency at the airport.", "exampleTranslation": "Bạn có thể đổi tiền ở sân bay." },
+    { "word": "product", "example": "This new product is popular with teenagers.", "exampleTranslation": "Sản phẩm mới này được thanh thiếu niên ưa chuộng." }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "unit": 41,
+  "deck": "Unit 41: Mua sắm",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "shopaholic",
+      "sentences": [
+        { "english": "My sister is a shopaholic and spends her whole salary on clothes.", "vietnamese": "Chị tôi là người nghiện mua sắm, tiêu sạch lương vào quần áo." },
+        { "english": "The shopaholic hid her expensive new bags from her husband.", "vietnamese": "Cô nàng nghiện mua sắm giấu mấy chiếc túi mới đắt tiền khỏi chồng." },
+        { "english": "Being a shopaholic can leave you broke at the end of the month.", "vietnamese": "Nghiện mua sắm có thể khiến bạn cháy túi vào cuối tháng." },
+        { "english": "He admits he becomes a shopaholic whenever there is a festival.", "vietnamese": "Anh ấy thừa nhận cứ có lễ hội là mình thành kẻ nghiện mua sắm." },
+        { "english": "Every advertisement on social media tempts a shopaholic like me.", "vietnamese": "Mọi quảng cáo trên mạng xã hội đều cám dỗ một người nghiện mua sắm như tôi." }
+      ]
+    },
+    {
+      "word": "shopping",
+      "sentences": [
+        { "english": "We go shopping at the local market every Sunday.", "vietnamese": "Chủ nhật nào chúng tôi cũng đi chợ địa phương mua sắm." },
+        { "english": "Online shopping is popular with busy office workers.", "vietnamese": "Mua sắm trực tuyến được dân văn phòng bận rộn ưa chuộng." },
+        { "english": "She hates shopping in crowded places.", "vietnamese": "Cô ấy ghét đi mua sắm ở những nơi đông người." },
+        { "english": "Shopping for groceries takes me about an hour.", "vietnamese": "Đi mua thực phẩm mất của tôi khoảng một tiếng." },
+        { "english": "My mother loves shopping for traditional clothes before the festival.", "vietnamese": "Mẹ tôi thích mua sắm quần áo truyền thống trước lễ hội." }
+      ]
+    },
+    {
+      "word": "mall",
+      "sentences": [
+        { "english": "The new mall has a cinema and a huge food court.", "vietnamese": "Trung tâm thương mại mới có rạp chiếu phim và một khu ăn uống rất lớn." },
+        { "english": "Teenagers often meet their buddies at the mall after school.", "vietnamese": "Bọn trẻ tuổi teen hay gặp bạn bè ở trung tâm thương mại sau giờ học." },
+        { "english": "The mall is always crowded on public holidays.", "vietnamese": "Trung tâm thương mại lúc nào cũng đông vào các ngày lễ." },
+        { "english": "There is a pharmacy on the ground floor of the mall.", "vietnamese": "Có một hiệu thuốc ở tầng trệt của trung tâm thương mại." },
+        { "english": "We parked the motorbike in the basement of the mall.", "vietnamese": "Chúng tôi gửi xe máy dưới tầng hầm trung tâm thương mại." }
+      ]
+    },
+    {
+      "word": "sale",
+      "sentences": [
+        { "english": "I got these shoes in a sale for half the price.", "vietnamese": "Tôi mua đôi giày này trong đợt giảm giá với nửa giá tiền." },
+        { "english": "The big summer sale attracts thousands of customers.", "vietnamese": "Đợt giảm giá mùa hè lớn thu hút hàng nghìn khách hàng." },
+        { "english": "This old house is for sale at a reasonable price.", "vietnamese": "Căn nhà cũ này đang được bán với giá hợp lý." },
+        { "english": "She waits for the sale at the end of the season to buy a coat.", "vietnamese": "Cô ấy chờ đợt giảm giá cuối mùa mới mua áo khoác." },
+        { "english": "Sales of umbrellas rise sharply in the rainy season.", "vietnamese": "Doanh số bán ô tăng vọt vào mùa mưa." }
+      ]
+    },
+    {
+      "word": "clearance",
+      "sentences": [
+        { "english": "The store is having a clearance, so everything is cheap.", "vietnamese": "Cửa hàng đang xả hàng nên cái gì cũng rẻ." },
+        { "english": "I found a pricey watch in the clearance section for a tiny price.", "vietnamese": "Tôi tìm được một chiếc đồng hồ đắt tiền ở khu thanh lý với giá rất rẻ." },
+        { "english": "Clearance items usually cannot be exchanged.", "vietnamese": "Hàng xả kho thường không được đổi." },
+        { "english": "The furniture shop held a clearance before moving to another district.", "vietnamese": "Cửa hàng nội thất tổ chức thanh lý trước khi chuyển sang quận khác." },
+        { "english": "My housemate bought three lamps at the clearance event.", "vietnamese": "Bạn cùng nhà tôi mua ba chiếc đèn trong đợt xả hàng." }
+      ]
+    },
+    {
+      "word": "delivery",
+      "sentences": [
+        { "english": "Delivery is free for orders over two hundred thousand dong.", "vietnamese": "Miễn phí giao hàng cho đơn trên hai trăm nghìn đồng." },
+        { "english": "The delivery man called me from the gate.", "vietnamese": "Anh giao hàng gọi cho tôi từ ngoài cổng." },
+        { "english": "Our pizza delivery was late because of heavy traffic.", "vietnamese": "Pizza giao tới muộn vì kẹt xe." },
+        { "english": "Express delivery costs extra, but it is very fast.", "vietnamese": "Giao hàng hỏa tốc tốn thêm tiền nhưng rất nhanh." },
+        { "english": "Please check the parcel carefully when the delivery arrives.", "vietnamese": "Hãy kiểm tra kỹ gói hàng khi hàng được giao tới." }
+      ]
+    },
+    {
+      "word": "rare",
+      "sentences": [
+        { "english": "This rare stamp is extremely valuable to collectors.", "vietnamese": "Con tem hiếm này cực kỳ giá trị với giới sưu tầm." },
+        { "english": "It is rare to find such a cheap flat in the centre.", "vietnamese": "Hiếm khi tìm được căn hộ rẻ như vậy ở trung tâm." },
+        { "english": "He sells rare plants at the weekend market.", "vietnamese": "Anh ấy bán cây hiếm ở phiên chợ cuối tuần." },
+        { "english": "Good customer service is rare in this area.", "vietnamese": "Dịch vụ khách hàng tốt rất hiếm ở khu này." },
+        { "english": "My grandfather owns a rare antique clock.", "vietnamese": "Ông tôi có một chiếc đồng hồ cổ hiếm." }
+      ]
+    },
+    {
+      "word": "unusual",
+      "sentences": [
+        { "english": "She always wears unusual earrings to parties.", "vietnamese": "Cô ấy luôn đeo những đôi khuyên tai lạ mắt khi đi tiệc." },
+        { "english": "The shop sells unusual gifts from various countries.", "vietnamese": "Cửa hàng bán những món quà lạ từ nhiều quốc gia." },
+        { "english": "It is unusual for him to spend so much money.", "vietnamese": "Anh ấy tiêu nhiều tiền như vậy là chuyện khác thường." },
+        { "english": "There was an unusual smell coming from the stove.", "vietnamese": "Có một mùi lạ bốc ra từ cái bếp." },
+        { "english": "The seller made an unusual offer to the customer.", "vietnamese": "Người bán đưa ra cho khách một lời đề nghị khác thường." }
+      ]
+    },
+    {
+      "word": "order",
+      "sentences": [
+        { "english": "I ordered a new rug online last week.", "vietnamese": "Tuần trước tôi đặt mua một tấm thảm mới trên mạng." },
+        { "english": "You can order food from this website at any time.", "vietnamese": "Bạn có thể đặt đồ ăn trên trang web này bất cứ lúc nào." },
+        { "english": "She ordered a printer, but it arrived broken.", "vietnamese": "Cô ấy đặt một cái máy in nhưng giao tới thì đã hỏng." },
+        { "english": "We ordered takeaway because nobody wanted to cook.", "vietnamese": "Chúng tôi gọi đồ mang về vì chẳng ai muốn nấu." },
+        { "english": "My bestie orders coffee from the same café every morning.", "vietnamese": "Bạn thân tôi sáng nào cũng đặt cà phê ở cùng một quán." }
+      ]
+    },
+    {
+      "word": "seller",
+      "sentences": [
+        { "english": "The seller promised a full refund if I was not satisfied.", "vietnamese": "Người bán hứa hoàn toàn bộ tiền nếu tôi không hài lòng." },
+        { "english": "That seller has thousands of positive reviews.", "vietnamese": "Người bán đó có hàng nghìn lượt đánh giá tốt." },
+        { "english": "The street seller shouted the price of her mangoes.", "vietnamese": "Cô bán hàng rong rao giá xoài của mình." },
+        { "english": "A good seller always listens to the customer.", "vietnamese": "Người bán giỏi luôn lắng nghe khách hàng." },
+        { "english": "The seller wrapped the antique vase carefully.", "vietnamese": "Người bán gói chiếc bình cổ rất cẩn thận." }
+      ]
+    },
+    {
+      "word": "bargain",
+      "sentences": [
+        { "english": "This comfortable second-hand sofa was a real bargain.", "vietnamese": "Chiếc sofa cũ êm ái này đúng là một món hời." },
+        { "english": "Tourists often hunt for a bargain at the night market.", "vietnamese": "Khách du lịch hay săn món hời ở chợ đêm." },
+        { "english": "The flight tickets were a bargain at that price.", "vietnamese": "Với giá đó thì vé máy bay đúng là món hời." },
+        { "english": "My mother loves looking for bargains at the local market.", "vietnamese": "Mẹ tôi thích tìm hàng hời ở chợ địa phương." },
+        { "english": "Those headphones look cheap, but they are no bargain.", "vietnamese": "Mấy cái tai nghe đó trông rẻ nhưng chẳng phải món hời gì." }
+      ]
+    },
+    {
+      "word": "damaged",
+      "sentences": [
+        { "english": "The vase was damaged during the long journey.", "vietnamese": "Chiếc bình bị hư hỏng trong chuyến đi dài." },
+        { "english": "Damaged goods can be replaced free of charge.", "vietnamese": "Hàng bị hỏng có thể được đổi miễn phí." },
+        { "english": "The storm left many damaged houses in our neighbourhood.", "vietnamese": "Cơn bão để lại nhiều ngôi nhà bị hư hại trong khu phố tôi." },
+        { "english": "I complained about the damaged screen on my new phone.", "vietnamese": "Tôi đã khiếu nại về màn hình bị hỏng trên chiếc điện thoại mới." },
+        { "english": "The seller sold the damaged boxes at a lower price.", "vietnamese": "Người bán bán những thùng hàng bị móp với giá thấp hơn." }
+      ]
+    },
+    {
+      "word": "ancient",
+      "sentences": [
+        { "english": "We visited an ancient temple in Hue.", "vietnamese": "Chúng tôi đã thăm một ngôi đền cổ ở Huế." },
+        { "english": "The exhibition displays ancient coins from many dynasties.", "vietnamese": "Triển lãm trưng bày tiền xu cổ của nhiều triều đại." },
+        { "english": "He wasted a fortune on an ancient vase.", "vietnamese": "Anh ta phung phí cả gia tài vào một chiếc bình cổ." },
+        { "english": "This ancient pagoda attracts many tourists every year.", "vietnamese": "Ngôi chùa cổ này thu hút nhiều du khách mỗi năm." },
+        { "english": "The shop is full of ancient maps and old books.", "vietnamese": "Cửa hàng đầy những tấm bản đồ cổ và sách cũ." }
+      ]
+    },
+    {
+      "word": "receipt",
+      "sentences": [
+        { "english": "Please keep the receipt and check the bill carefully.", "vietnamese": "Hãy giữ hóa đơn và kiểm tra kỹ số tiền thanh toán." },
+        { "english": "The shop assistant forgot to give me a receipt.", "vietnamese": "Nhân viên cửa hàng quên đưa hóa đơn cho tôi." },
+        { "english": "I lost the receipt, so I could not exchange the shoes.", "vietnamese": "Tôi làm mất hóa đơn nên không đổi được đôi giày." },
+        { "english": "Accountants need every receipt for the company expenses.", "vietnamese": "Kế toán cần mọi hóa đơn cho các khoản chi của công ty." },
+        { "english": "Most shops now send an electronic receipt by email.", "vietnamese": "Hầu hết cửa hàng giờ gửi hóa đơn điện tử qua email." }
+      ]
+    },
+    {
+      "word": "return",
+      "sentences": [
+        { "english": "I returned the shoes because they hurt my feet.", "vietnamese": "Tôi trả lại đôi giày vì chúng làm đau chân." },
+        { "english": "Customers can return items within seven days.", "vietnamese": "Khách hàng có thể trả lại hàng trong vòng bảy ngày." },
+        { "english": "She returned the expensive dress the next day.", "vietnamese": "Hôm sau cô ấy trả lại chiếc váy đắt tiền." },
+        { "english": "Can I return this if my girlfriend does not like it?", "vietnamese": "Tôi có thể trả lại món này nếu bạn gái tôi không thích không?" },
+        { "english": "Online stores rarely charge a fee to return a product.", "vietnamese": "Các cửa hàng trực tuyến hiếm khi thu phí trả hàng." }
+      ]
+    },
+    {
+      "word": "shelf",
+      "sentences": [
+        { "english": "The fresh milk is on the top shelf.", "vietnamese": "Sữa tươi ở trên kệ trên cùng." },
+        { "english": "She arranged her favourite books on the shelf.", "vietnamese": "Cô ấy xếp những cuốn sách yêu thích lên giá." },
+        { "english": "The cheap biscuits are on the bottom shelf.", "vietnamese": "Bánh quy rẻ nằm ở kệ dưới cùng." },
+        { "english": "The shop assistant filled the empty shelf with snacks.", "vietnamese": "Nhân viên cửa hàng xếp đồ ăn vặt đầy chiếc kệ trống." },
+        { "english": "A wooden shelf hangs above the sofa in my flat.", "vietnamese": "Một chiếc kệ gỗ treo phía trên ghế sofa trong căn hộ của tôi." }
+      ]
+    },
+    {
+      "word": "cash",
+      "sentences": [
+        { "english": "Do you pay the bill by card or in cash?", "vietnamese": "Bạn thanh toán bằng thẻ hay tiền mặt?" },
+        { "english": "The local market only accepts cash.", "vietnamese": "Chợ địa phương chỉ nhận tiền mặt." },
+        { "english": "I always carry some cash when travelling.", "vietnamese": "Tôi luôn mang theo ít tiền mặt khi đi du lịch." },
+        { "english": "He paid for the motorbike in cash.", "vietnamese": "Anh ấy trả tiền mua xe máy bằng tiền mặt." },
+        { "english": "There is a cash machine next to the pharmacy.", "vietnamese": "Có một cây rút tiền ngay cạnh hiệu thuốc." }
+      ]
+    },
+    {
+      "word": "inexpensive",
+      "sentences": [
+        { "english": "We found an inexpensive homestay near the beach.", "vietnamese": "Chúng tôi tìm được một homestay không đắt gần biển." },
+        { "english": "This restaurant serves tasty but inexpensive meals.", "vietnamese": "Nhà hàng này phục vụ những bữa ăn ngon mà không đắt." },
+        { "english": "Plastic chairs are inexpensive but not very comfortable.", "vietnamese": "Ghế nhựa rẻ nhưng không thoải mái lắm." },
+        { "english": "She chose an inexpensive but lovely gift for her relative.", "vietnamese": "Cô ấy chọn một món quà không đắt nhưng xinh xắn cho người thân." },
+        { "english": "Learning a language online can be inexpensive.", "vietnamese": "Học ngoại ngữ trực tuyến có thể không tốn kém." }
+      ]
+    },
+    {
+      "word": "overspend",
+      "sentences": [
+        { "english": "I always overspend when I go shopping with my bestie.", "vietnamese": "Đi mua sắm với bạn thân là lần nào tôi cũng tiêu quá tay." },
+        { "english": "Try not to overspend during the festival season.", "vietnamese": "Cố đừng tiêu quá tay trong mùa lễ hội." },
+        { "english": "Many young people overspend on luxury items.", "vietnamese": "Nhiều người trẻ tiêu quá tay vào đồ xa xỉ." },
+        { "english": "She overspends every month and is often broke.", "vietnamese": "Tháng nào cô ấy cũng tiêu quá tay và thường cháy túi." },
+        { "english": "A shopping list helps you avoid overspending at the market.", "vietnamese": "Danh sách mua sắm giúp bạn tránh tiêu quá tay ở chợ." }
+      ]
+    },
+    {
+      "word": "exchange",
+      "sentences": [
+        { "english": "Can I exchange this shirt for a larger size, please?", "vietnamese": "Cho tôi đổi chiếc áo này lấy cỡ lớn hơn được không?" },
+        { "english": "The customer exchanged the blue cup for a red one.", "vietnamese": "Vị khách đổi chiếc cốc xanh lấy chiếc màu đỏ." },
+        { "english": "You need the original receipt to exchange any product.", "vietnamese": "Bạn cần hóa đơn gốc để đổi bất kỳ sản phẩm nào." },
+        { "english": "We exchanged gifts at the end of the party.", "vietnamese": "Chúng tôi trao đổi quà vào cuối bữa tiệc." },
+        { "english": "Tourists can exchange money at the airport.", "vietnamese": "Du khách có thể đổi tiền ở sân bay." }
+      ]
+    },
+    {
+      "word": "wholesale",
+      "sentences": [
+        { "english": "We buy rice at wholesale prices for the restaurant.", "vietnamese": "Chúng tôi mua gạo giá sỉ cho nhà hàng." },
+        { "english": "The wholesale market opens at three in the morning.", "vietnamese": "Chợ đầu mối mở cửa lúc ba giờ sáng." },
+        { "english": "Shop owners buy clothes from a wholesale supplier.", "vietnamese": "Các chủ cửa hàng lấy quần áo từ nhà cung cấp bán buôn." },
+        { "english": "Wholesale prices are much lower than retail prices.", "vietnamese": "Giá sỉ thấp hơn nhiều so với giá lẻ." },
+        { "english": "My aunt runs a wholesale business selling fresh fruit.", "vietnamese": "Dì tôi kinh doanh bán buôn trái cây tươi." }
+      ]
+    },
+    {
+      "word": "cancel",
+      "sentences": [
+        { "english": "I cancelled my order because of the long delay.", "vietnamese": "Tôi đã hủy đơn vì giao hàng chậm quá lâu." },
+        { "english": "The concert was cancelled due to the typhoon.", "vietnamese": "Buổi hòa nhạc bị hủy vì bão." },
+        { "english": "You can cancel the booking free of charge.", "vietnamese": "Bạn có thể hủy đặt chỗ miễn phí." },
+        { "english": "She cancelled her gym membership last month.", "vietnamese": "Tháng trước cô ấy đã hủy thẻ tập gym." },
+        { "english": "Please cancel my reservation for Friday night.", "vietnamese": "Vui lòng hủy đặt chỗ của tôi vào tối thứ Sáu." }
+      ]
+    },
+    {
+      "word": "discount",
+      "sentences": [
+        { "english": "Loyal customers get a special discount on their birthday.", "vietnamese": "Khách quen được giảm giá đặc biệt vào ngày sinh nhật." },
+        { "english": "Students get a discount if they show their student card.", "vietnamese": "Sinh viên được giảm giá nếu xuất trình thẻ sinh viên." },
+        { "english": "The shop offers a twenty percent discount this weekend.", "vietnamese": "Cuối tuần này cửa hàng giảm giá hai mươi phần trăm." },
+        { "english": "I politely asked the seller for a discount.", "vietnamese": "Tôi lịch sự hỏi người bán xin bớt giá." },
+        { "english": "The discount made the expensive phone quite affordable.", "vietnamese": "Nhờ giảm giá mà chiếc điện thoại đắt tiền trở nên khá vừa túi." }
+      ]
+    },
+    {
+      "word": "gift",
+      "sentences": [
+        { "english": "She bought a small gift for her housemate.", "vietnamese": "Cô ấy mua một món quà nhỏ cho bạn cùng nhà." },
+        { "english": "This scarf was a birthday gift from my boyfriend.", "vietnamese": "Chiếc khăn này là quà sinh nhật bạn trai tặng tôi." },
+        { "english": "We need to buy a wedding gift for Lan.", "vietnamese": "Chúng ta cần mua quà cưới cho Lan." },
+        { "english": "The gift shop near the pagoda sells postcards.", "vietnamese": "Cửa hàng quà tặng gần chùa có bán bưu thiếp." },
+        { "english": "He wrapped the gift in shiny red paper.", "vietnamese": "Anh ấy gói món quà bằng giấy đỏ bóng." }
+      ]
+    }
+  ]
+}

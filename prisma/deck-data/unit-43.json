@@ -1,0 +1,274 @@
+{
+  "deck": {
+    "name": "Unit 43: Tủ quần áo",
+    "description": "24 từ vựng về quần áo, chất liệu vải và phong cách ăn mặc",
+    "color": "#6366f1",
+    "icon": "👕"
+  },
+  "cards": [
+    {
+      "word": "wardrobe",
+      "meaning": "tủ quần áo",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈwɔː.drəʊb/",
+      "example": "Her wardrobe wasn't large enough to fit all her clothes.",
+      "exampleTranslation": "Tủ quần áo của cô ấy không đủ rộng để chứa hết quần áo.",
+      "tags": [
+        "clothes"
+      ]
+    },
+    {
+      "word": "raincoat",
+      "meaning": "áo mưa",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈreɪnkəʊt/",
+      "example": "Take your raincoat, it's going to rain.",
+      "exampleTranslation": "Mang theo áo mưa đi, trời sắp mưa đấy.",
+      "tags": [
+        "clothes"
+      ]
+    },
+    {
+      "word": "loose",
+      "meaning": "rộng, lỏng",
+      "partOfSpeech": "adjective",
+      "phonetic": "/luːs/",
+      "example": "I prefer loose clothes in summer.",
+      "exampleTranslation": "Tôi thích mặc quần áo rộng vào mùa hè.",
+      "tags": [
+        "clothes"
+      ]
+    },
+    {
+      "word": "pocket",
+      "meaning": "túi (quần áo)",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈpɒkɪt/",
+      "example": "He put his keys in his pocket.",
+      "exampleTranslation": "Anh ấy bỏ chìa khóa vào túi.",
+      "tags": [
+        "clothes"
+      ]
+    },
+    {
+      "word": "pattern",
+      "meaning": "họa tiết, hoa văn",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈpætn/",
+      "example": "I like the flower pattern on this dress.",
+      "exampleTranslation": "Tôi thích họa tiết hoa trên chiếc váy này.",
+      "tags": [
+        "clothes"
+      ]
+    },
+    {
+      "word": "match",
+      "meaning": "hợp, ăn nhập",
+      "partOfSpeech": "verb",
+      "phonetic": "/mætʃ/",
+      "example": "Your shoes match your bag perfectly.",
+      "exampleTranslation": "Đôi giày của bạn rất hợp với chiếc túi.",
+      "tags": [
+        "clothes"
+      ]
+    },
+    {
+      "word": "leather",
+      "meaning": "da (thuộc)",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈleðə(r)/",
+      "example": "This bag is made of real leather.",
+      "exampleTranslation": "Chiếc túi này được làm bằng da thật.",
+      "tags": [
+        "clothes"
+      ]
+    },
+    {
+      "word": "eye-catching",
+      "meaning": "bắt mắt",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˈaɪ kætʃɪŋ/",
+      "example": "She wore an eye-catching red dress.",
+      "exampleTranslation": "Cô ấy mặc một chiếc váy đỏ nổi bật.",
+      "tags": [
+        "clothes"
+      ]
+    },
+    {
+      "word": "jacket",
+      "meaning": "áo khoác",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈdʒækɪt/",
+      "example": "Put on a jacket, it's cold outside.",
+      "exampleTranslation": "Mặc áo khoác vào đi, ngoài trời lạnh lắm.",
+      "tags": [
+        "clothes"
+      ]
+    },
+    {
+      "word": "outfit",
+      "meaning": "bộ trang phục",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈaʊtfɪt/",
+      "example": "I need a new outfit for the party.",
+      "exampleTranslation": "Tôi cần một bộ trang phục mới cho bữa tiệc.",
+      "tags": [
+        "clothes"
+      ]
+    },
+    {
+      "word": "unzip",
+      "meaning": "kéo khóa ra",
+      "partOfSpeech": "verb",
+      "phonetic": "/ʌnˈzɪp/",
+      "example": "He unzipped his bag and took out a book.",
+      "exampleTranslation": "Anh ấy kéo khóa túi ra và lấy một cuốn sách.",
+      "tags": [
+        "clothes"
+      ]
+    },
+    {
+      "word": "fashion",
+      "meaning": "thời trang",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈfæʃn/",
+      "example": "She's really into fashion.",
+      "exampleTranslation": "Cô ấy rất mê thời trang.",
+      "tags": [
+        "clothes"
+      ]
+    },
+    {
+      "word": "jeans",
+      "meaning": "quần bò, quần jeans",
+      "partOfSpeech": "noun",
+      "phonetic": "/dʒiːnz/",
+      "example": "These jeans are too tight.",
+      "exampleTranslation": "Chiếc quần bò này chật quá.",
+      "tags": [
+        "clothes"
+      ]
+    },
+    {
+      "word": "hoodie",
+      "meaning": "áo nỉ có mũ",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈhʊdi/",
+      "example": "He always wears a grey hoodie.",
+      "exampleTranslation": "Anh ấy lúc nào cũng mặc một chiếc áo hoodie màu xám.",
+      "tags": [
+        "clothes"
+      ]
+    },
+    {
+      "word": "silk",
+      "meaning": "lụa",
+      "partOfSpeech": "noun",
+      "phonetic": "/sɪlk/",
+      "example": "Her ao dai is made of silk.",
+      "exampleTranslation": "Chiếc áo dài của cô ấy được may bằng lụa.",
+      "tags": [
+        "clothes"
+      ]
+    },
+    {
+      "word": "cotton",
+      "meaning": "vải bông, cotton",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈkɒtn/",
+      "example": "Cotton shirts are cool in hot weather.",
+      "exampleTranslation": "Áo sơ mi cotton mặc rất mát khi trời nóng.",
+      "tags": [
+        "clothes"
+      ]
+    },
+    {
+      "word": "underwear",
+      "meaning": "đồ lót",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈʌndəweə(r)/",
+      "example": "Pack enough underwear for the trip.",
+      "exampleTranslation": "Hãy mang đủ đồ lót cho chuyến đi.",
+      "tags": [
+        "clothes"
+      ]
+    },
+    {
+      "word": "tailor-made",
+      "meaning": "may đo",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˌteɪlə ˈmeɪd/",
+      "example": "He wore a tailor-made suit to the wedding.",
+      "exampleTranslation": "Anh ấy mặc một bộ vest may đo đến dự đám cưới.",
+      "tags": [
+        "clothes"
+      ]
+    },
+    {
+      "word": "old-fashioned",
+      "meaning": "lỗi thời, cổ lỗ",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˌəʊld ˈfæʃnd/",
+      "example": "That hat looks a bit old-fashioned.",
+      "exampleTranslation": "Chiếc mũ đó trông hơi lỗi thời.",
+      "tags": [
+        "clothes"
+      ]
+    },
+    {
+      "word": "mend",
+      "meaning": "vá, sửa",
+      "partOfSpeech": "verb",
+      "phonetic": "/mend/",
+      "example": "My grandma mended the hole in my shirt.",
+      "exampleTranslation": "Bà tôi đã vá lỗ thủng trên áo sơ mi của tôi.",
+      "tags": [
+        "clothes"
+      ]
+    },
+    {
+      "word": "undress",
+      "meaning": "cởi quần áo",
+      "partOfSpeech": "verb",
+      "phonetic": "/ʌnˈdres/",
+      "example": "The baby undressed quickly before the bath.",
+      "exampleTranslation": "Em bé cởi đồ thật nhanh trước khi tắm.",
+      "tags": [
+        "clothes"
+      ]
+    },
+    {
+      "word": "sleeve",
+      "meaning": "tay áo",
+      "partOfSpeech": "noun",
+      "phonetic": "/sliːv/",
+      "example": "Roll up your sleeves before washing up.",
+      "exampleTranslation": "Xắn tay áo lên trước khi rửa bát nhé.",
+      "tags": [
+        "clothes"
+      ]
+    },
+    {
+      "word": "collar",
+      "meaning": "cổ áo",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈkɒlə(r)/",
+      "example": "There's a stain on your collar.",
+      "exampleTranslation": "Có một vết bẩn trên cổ áo của bạn.",
+      "tags": [
+        "clothes"
+      ]
+    },
+    {
+      "word": "shorts",
+      "meaning": "quần soóc, quần đùi",
+      "partOfSpeech": "noun",
+      "phonetic": "/ʃɔːts/",
+      "example": "He wears shorts at home.",
+      "exampleTranslation": "Anh ấy mặc quần đùi ở nhà.",
+      "tags": [
+        "clothes"
+      ]
+    }
+  ]
+}

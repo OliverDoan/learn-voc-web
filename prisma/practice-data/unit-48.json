@@ -1,0 +1,607 @@
+{
+  "unit": 48,
+  "deck": "Unit 48: Chính trị và quyền lực",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "power",
+      "sentences": [
+        {
+          "english": "The new law gives the police more power.",
+          "vietnamese": "Luật mới trao thêm quyền lực cho cảnh sát."
+        },
+        {
+          "english": "Some politicians care only about money and power.",
+          "vietnamese": "Một số chính trị gia chỉ quan tâm đến tiền bạc và quyền lực."
+        },
+        {
+          "english": "Real power comes from the trust of ordinary people.",
+          "vietnamese": "Quyền lực thật sự đến từ lòng tin của người dân bình thường."
+        },
+        {
+          "english": "The king had no power left after the war.",
+          "vietnamese": "Nhà vua chẳng còn chút quyền lực nào sau cuộc chiến."
+        },
+        {
+          "english": "She used her power to help poor families in the village.",
+          "vietnamese": "Bà ấy dùng quyền hạn của mình để giúp các gia đình nghèo trong làng."
+        }
+      ]
+    },
+    {
+      "word": "request",
+      "sentences": [
+        {
+          "english": "The manager accepted my request for a day off.",
+          "vietnamese": "Quản lý đã chấp nhận đề nghị xin nghỉ một ngày của tôi."
+        },
+        {
+          "english": "We sent a request to the city council for a new playground.",
+          "vietnamese": "Chúng tôi gửi kiến nghị lên hội đồng thành phố xin một sân chơi mới."
+        },
+        {
+          "english": "The hotel ignored our request for a quiet room.",
+          "vietnamese": "Khách sạn phớt lờ yêu cầu được ở phòng yên tĩnh của chúng tôi."
+        },
+        {
+          "english": "His request for a visa was refused again.",
+          "vietnamese": "Đơn xin thị thực của anh ấy lại bị từ chối."
+        },
+        {
+          "english": "Please send your request through the website before Friday.",
+          "vietnamese": "Vui lòng gửi yêu cầu qua trang web trước thứ Sáu."
+        }
+      ]
+    },
+    {
+      "word": "issue",
+      "sentences": [
+        {
+          "english": "Climate change is the biggest issue of our time.",
+          "vietnamese": "Biến đổi khí hậu là vấn đề lớn nhất của thời đại chúng ta."
+        },
+        {
+          "english": "Traffic is a daily issue for people in Hanoi.",
+          "vietnamese": "Giao thông là vấn đề hằng ngày của người dân Hà Nội."
+        },
+        {
+          "english": "The issue of rubbish on the streets is getting worse.",
+          "vietnamese": "Vấn đề rác trên đường phố ngày càng tệ hơn."
+        },
+        {
+          "english": "Health care is an important issue for older voters.",
+          "vietnamese": "Chăm sóc sức khoẻ là vấn đề quan trọng với cử tri lớn tuổi."
+        },
+        {
+          "english": "We need to solve this issue before the end of the year.",
+          "vietnamese": "Chúng ta cần giải quyết vấn đề này trước cuối năm."
+        }
+      ]
+    },
+    {
+      "word": "allow",
+      "sentences": [
+        {
+          "english": "My parents don't allow me to stay out late.",
+          "vietnamese": "Bố mẹ không cho phép tôi ở ngoài về muộn."
+        },
+        {
+          "english": "Smoking is not allowed inside the building.",
+          "vietnamese": "Không được phép hút thuốc trong toà nhà."
+        },
+        {
+          "english": "The teacher allowed us to use a dictionary in the exam.",
+          "vietnamese": "Thầy giáo cho phép chúng tôi dùng từ điển trong bài thi."
+        },
+        {
+          "english": "Guests are not allowed to bring pets to the hotel.",
+          "vietnamese": "Khách không được phép mang thú cưng vào khách sạn."
+        },
+        {
+          "english": "The new rule allows workers to work from home on Fridays.",
+          "vietnamese": "Quy định mới cho phép nhân viên làm việc ở nhà vào thứ Sáu."
+        }
+      ]
+    },
+    {
+      "word": "decision",
+      "sentences": [
+        {
+          "english": "Moving abroad was the biggest decision of my life.",
+          "vietnamese": "Ra nước ngoài sống là quyết định lớn nhất đời tôi."
+        },
+        {
+          "english": "The judge will announce his decision tomorrow morning.",
+          "vietnamese": "Thẩm phán sẽ công bố quyết định vào sáng mai."
+        },
+        {
+          "english": "Don't make an important decision when you are angry.",
+          "vietnamese": "Đừng đưa ra quyết định quan trọng khi bạn đang tức giận."
+        },
+        {
+          "english": "We need to make a decision before the price goes up.",
+          "vietnamese": "Chúng ta cần quyết định trước khi giá tăng."
+        },
+        {
+          "english": "Her decision to quit the job surprised everyone.",
+          "vietnamese": "Quyết định nghỉ việc của cô ấy làm mọi người bất ngờ."
+        }
+      ]
+    },
+    {
+      "word": "agree",
+      "sentences": [
+        {
+          "english": "I agree with your opinion about the new plan.",
+          "vietnamese": "Tôi đồng ý với ý kiến của bạn về kế hoạch mới."
+        },
+        {
+          "english": "Both sides finally agreed to sign the contract.",
+          "vietnamese": "Hai bên cuối cùng đã đồng ý ký hợp đồng."
+        },
+        {
+          "english": "My brother and I never agree on which film to watch.",
+          "vietnamese": "Anh trai tôi và tôi chẳng bao giờ thống nhất được nên xem phim nào."
+        },
+        {
+          "english": "Do you agree that social media can be harmful?",
+          "vietnamese": "Bạn có đồng ý rằng mạng xã hội có thể gây hại không?"
+        },
+        {
+          "english": "The landlord agreed to lower the rent next month.",
+          "vietnamese": "Chủ nhà đã đồng ý giảm tiền thuê từ tháng sau."
+        }
+      ]
+    },
+    {
+      "word": "case",
+      "sentences": [
+        {
+          "english": "The detective solved the case in just two days.",
+          "vietnamese": "Thám tử đã phá vụ án chỉ trong hai ngày."
+        },
+        {
+          "english": "In case of fire, use the stairs, not the lift.",
+          "vietnamese": "Trong trường hợp có cháy, hãy đi cầu thang bộ, đừng đi thang máy."
+        },
+        {
+          "english": "The number of flu cases rose sharply this winter.",
+          "vietnamese": "Số ca cúm tăng mạnh trong mùa đông này."
+        },
+        {
+          "english": "The lawyer took on the case for free.",
+          "vietnamese": "Luật sư nhận vụ việc mà không lấy tiền."
+        },
+        {
+          "english": "In that case, we should cancel the trip.",
+          "vietnamese": "Trong trường hợp đó, chúng ta nên huỷ chuyến đi."
+        }
+      ]
+    },
+    {
+      "word": "uninterested",
+      "sentences": [
+        {
+          "english": "He looked uninterested during the whole lecture.",
+          "vietnamese": "Cậu ấy trông thờ ơ suốt cả bài giảng."
+        },
+        {
+          "english": "My son is completely uninterested in mathematics.",
+          "vietnamese": "Con trai tôi hoàn toàn không quan tâm đến môn toán."
+        },
+        {
+          "english": "Most students seemed uninterested in the history lesson.",
+          "vietnamese": "Hầu hết học sinh có vẻ không hứng thú với tiết lịch sử."
+        },
+        {
+          "english": "She seemed uninterested in the expensive gift.",
+          "vietnamese": "Cô ấy có vẻ chẳng mấy quan tâm đến món quà đắt tiền."
+        },
+        {
+          "english": "The fans looked uninterested in the long concert.",
+          "vietnamese": "Khán giả trông thờ ơ với buổi hoà nhạc dài lê thê."
+        }
+      ]
+    },
+    {
+      "word": "goal",
+      "sentences": [
+        {
+          "english": "My goal this year is to improve my English.",
+          "vietnamese": "Mục tiêu năm nay của tôi là cải thiện tiếng Anh."
+        },
+        {
+          "english": "The team scored the winning goal in the final minute.",
+          "vietnamese": "Đội bóng ghi bàn thắng quyết định ở phút cuối cùng."
+        },
+        {
+          "english": "Saving money for a house is our main goal.",
+          "vietnamese": "Tiết kiệm tiền mua nhà là mục tiêu chính của chúng tôi."
+        },
+        {
+          "english": "You should set small goals to make progress.",
+          "vietnamese": "Bạn nên đặt những mục tiêu nhỏ để tiến bộ."
+        },
+        {
+          "english": "The government's goal is to reduce pollution by half.",
+          "vietnamese": "Mục tiêu của chính phủ là giảm một nửa ô nhiễm."
+        }
+      ]
+    },
+    {
+      "word": "leader",
+      "sentences": [
+        {
+          "english": "A good leader listens to every member of the team.",
+          "vietnamese": "Một người lãnh đạo giỏi lắng nghe mọi thành viên trong nhóm."
+        },
+        {
+          "english": "The leader of the group was very confident.",
+          "vietnamese": "Trưởng nhóm rất tự tin."
+        },
+        {
+          "english": "World leaders met to discuss climate change.",
+          "vietnamese": "Các nhà lãnh đạo thế giới đã gặp nhau để bàn về biến đổi khí hậu."
+        },
+        {
+          "english": "She is the first female leader of the company.",
+          "vietnamese": "Bà ấy là nữ lãnh đạo đầu tiên của công ty."
+        },
+        {
+          "english": "The leader of the gang was arrested last night.",
+          "vietnamese": "Kẻ cầm đầu băng nhóm đã bị bắt tối qua."
+        }
+      ]
+    },
+    {
+      "word": "government",
+      "sentences": [
+        {
+          "english": "The government has raised taxes on cigarettes.",
+          "vietnamese": "Chính phủ đã tăng thuế thuốc lá."
+        },
+        {
+          "english": "Many people complain about the government online.",
+          "vietnamese": "Nhiều người phàn nàn về chính phủ trên mạng."
+        },
+        {
+          "english": "The local government opened a new hospital.",
+          "vietnamese": "Chính quyền địa phương đã khánh thành một bệnh viện mới."
+        },
+        {
+          "english": "The government should provide free healthcare for children.",
+          "vietnamese": "Chính phủ nên cung cấp dịch vụ y tế miễn phí cho trẻ em."
+        },
+        {
+          "english": "The government warned people about the coming typhoon.",
+          "vietnamese": "Chính phủ đã cảnh báo người dân về cơn bão sắp tới."
+        }
+      ]
+    },
+    {
+      "word": "president",
+      "sentences": [
+        {
+          "english": "The president will visit our hometown next week.",
+          "vietnamese": "Tổng thống sẽ đến thăm quê tôi vào tuần tới."
+        },
+        {
+          "english": "She was elected president of the university club.",
+          "vietnamese": "Cô ấy được bầu làm chủ tịch câu lạc bộ của trường đại học."
+        },
+        {
+          "english": "The president shook hands with the foreign guests.",
+          "vietnamese": "Tổng thống bắt tay các vị khách nước ngoài."
+        },
+        {
+          "english": "Thousands of fans waited to see the president.",
+          "vietnamese": "Hàng nghìn người hâm mộ đã chờ để được gặp tổng thống."
+        },
+        {
+          "english": "The president of the company announced a new plan.",
+          "vietnamese": "Chủ tịch công ty đã công bố một kế hoạch mới."
+        }
+      ]
+    },
+    {
+      "word": "politician",
+      "sentences": [
+        {
+          "english": "The politician tried to explain his mistake.",
+          "vietnamese": "Chính trị gia đó cố giải thích sai lầm của mình."
+        },
+        {
+          "english": "Many politicians are good at avoiding difficult questions.",
+          "vietnamese": "Nhiều chính trị gia rất giỏi né những câu hỏi khó."
+        },
+        {
+          "english": "The young politician is very popular with students.",
+          "vietnamese": "Chính trị gia trẻ ấy rất được sinh viên yêu thích."
+        },
+        {
+          "english": "A famous politician was arrested for taking bribes.",
+          "vietnamese": "Một chính trị gia nổi tiếng bị bắt vì nhận hối lộ."
+        },
+        {
+          "english": "Politicians often visit markets before an election.",
+          "vietnamese": "Các chính trị gia thường đi thăm chợ trước kỳ bầu cử."
+        }
+      ]
+    },
+    {
+      "word": "soldier",
+      "sentences": [
+        {
+          "english": "The soldiers guarded the border day and night.",
+          "vietnamese": "Những người lính canh giữ biên giới ngày đêm."
+        },
+        {
+          "english": "My grandfather was a soldier during the war.",
+          "vietnamese": "Ông tôi là một người lính trong thời chiến."
+        },
+        {
+          "english": "The soldier returned home after five years.",
+          "vietnamese": "Người lính trở về nhà sau năm năm."
+        },
+        {
+          "english": "Brave soldiers protected the village from the enemy.",
+          "vietnamese": "Những người lính dũng cảm đã bảo vệ ngôi làng khỏi quân thù."
+        },
+        {
+          "english": "The soldier wore a heavy uniform in the summer heat.",
+          "vietnamese": "Người lính mặc bộ quân phục nặng trong cái nóng mùa hè."
+        }
+      ]
+    },
+    {
+      "word": "independence",
+      "sentences": [
+        {
+          "english": "Vietnam announced its independence on 2 September 1945.",
+          "vietnamese": "Việt Nam tuyên bố độc lập vào ngày 2 tháng 9 năm 1945."
+        },
+        {
+          "english": "Many young people value their independence.",
+          "vietnamese": "Nhiều người trẻ coi trọng sự độc lập của mình."
+        },
+        {
+          "english": "Living alone gave her a sense of independence.",
+          "vietnamese": "Sống một mình cho cô ấy cảm giác tự lập."
+        },
+        {
+          "english": "The country fought hard for its independence.",
+          "vietnamese": "Đất nước đã chiến đấu gian khổ để giành độc lập."
+        },
+        {
+          "english": "Financial independence is the dream of many young workers.",
+          "vietnamese": "Độc lập tài chính là ước mơ của nhiều người lao động trẻ."
+        }
+      ]
+    },
+    {
+      "word": "vote",
+      "sentences": [
+        {
+          "english": "Who did you vote for in the last election?",
+          "vietnamese": "Bạn đã bỏ phiếu cho ai ở cuộc bầu cử vừa rồi?"
+        },
+        {
+          "english": "The class voted to go camping at the weekend.",
+          "vietnamese": "Cả lớp biểu quyết đi cắm trại vào cuối tuần."
+        },
+        {
+          "english": "Citizens over eighteen can vote in national elections.",
+          "vietnamese": "Công dân trên mười tám tuổi được bỏ phiếu trong các cuộc bầu cử quốc gia."
+        },
+        {
+          "english": "We voted for the most popular song of the year.",
+          "vietnamese": "Chúng tôi bình chọn cho bài hát được yêu thích nhất năm."
+        },
+        {
+          "english": "Each member can vote only once, so choose carefully.",
+          "vietnamese": "Mỗi thành viên chỉ được bầu một lần, nên hãy chọn cẩn thận."
+        }
+      ]
+    },
+    {
+      "word": "demand",
+      "sentences": [
+        {
+          "english": "The workers demanded a raise in their daily wages.",
+          "vietnamese": "Công nhân đòi tăng tiền công hằng ngày."
+        },
+        {
+          "english": "The customer demanded to speak to the manager.",
+          "vietnamese": "Vị khách đòi nói chuyện với quản lý."
+        },
+        {
+          "english": "Parents demand better quality schools for their children.",
+          "vietnamese": "Phụ huynh đòi hỏi trường học chất lượng hơn cho con cái."
+        },
+        {
+          "english": "The protesters demanded the release of the prisoners.",
+          "vietnamese": "Người biểu tình yêu cầu thả các tù nhân."
+        },
+        {
+          "english": "This job demands a lot of patience and skill.",
+          "vietnamese": "Công việc này đòi hỏi nhiều kiên nhẫn và kỹ năng."
+        }
+      ]
+    },
+    {
+      "word": "suitable",
+      "sentences": [
+        {
+          "english": "This film is not suitable for young children.",
+          "vietnamese": "Bộ phim này không phù hợp với trẻ nhỏ."
+        },
+        {
+          "english": "Is this dress suitable for a wedding?",
+          "vietnamese": "Chiếc váy này có hợp để đi đám cưới không?"
+        },
+        {
+          "english": "We are looking for a suitable place to live.",
+          "vietnamese": "Chúng tôi đang tìm một nơi phù hợp để sống."
+        },
+        {
+          "english": "Jeans are not suitable for a job interview.",
+          "vietnamese": "Quần jean không phù hợp để đi phỏng vấn xin việc."
+        },
+        {
+          "english": "The coach chose a suitable time for training.",
+          "vietnamese": "Huấn luyện viên đã chọn thời gian phù hợp để tập luyện."
+        }
+      ]
+    },
+    {
+      "word": "nationality",
+      "sentences": [
+        {
+          "english": "What nationality is your new roommate?",
+          "vietnamese": "Bạn cùng phòng mới của bạn mang quốc tịch nào?"
+        },
+        {
+          "english": "People of many nationalities live in this neighbourhood.",
+          "vietnamese": "Người thuộc nhiều quốc tịch sống trong khu phố này."
+        },
+        {
+          "english": "Your nationality is printed on your visa.",
+          "vietnamese": "Quốc tịch của bạn được in trên thị thực."
+        },
+        {
+          "english": "Players of different nationalities joined the team.",
+          "vietnamese": "Cầu thủ thuộc nhiều quốc tịch khác nhau đã gia nhập đội."
+        },
+        {
+          "english": "My cousin changed her nationality after her marriage.",
+          "vietnamese": "Chị họ tôi đổi quốc tịch sau khi kết hôn."
+        }
+      ]
+    },
+    {
+      "word": "party",
+      "sentences": [
+        {
+          "english": "Which political party won the last election?",
+          "vietnamese": "Đảng chính trị nào đã thắng cuộc bầu cử vừa rồi?"
+        },
+        {
+          "english": "She joined the party when she was at university.",
+          "vietnamese": "Bà ấy gia nhập đảng khi còn học đại học."
+        },
+        {
+          "english": "The two parties could not agree on the new tax.",
+          "vietnamese": "Hai đảng không thể thống nhất về loại thuế mới."
+        },
+        {
+          "english": "The party leader gave a speech at the national conference.",
+          "vietnamese": "Lãnh đạo đảng đã phát biểu tại hội nghị toàn quốc."
+        },
+        {
+          "english": "Members of the party support the new law.",
+          "vietnamese": "Các đảng viên ủng hộ luật mới."
+        }
+      ]
+    },
+    {
+      "word": "change",
+      "sentences": [
+        {
+          "english": "Moving to the capital was a big change for us.",
+          "vietnamese": "Chuyển lên thủ đô là một thay đổi lớn với chúng tôi."
+        },
+        {
+          "english": "There has been a change in the timetable.",
+          "vietnamese": "Thời gian biểu đã có sự thay đổi."
+        },
+        {
+          "english": "The new manager brought positive change to the office.",
+          "vietnamese": "Người quản lý mới đã mang lại thay đổi tích cực cho văn phòng."
+        },
+        {
+          "english": "Climate change affects every country in the world.",
+          "vietnamese": "Biến đổi khí hậu ảnh hưởng tới mọi quốc gia trên thế giới."
+        },
+        {
+          "english": "I need a change, so I'm going on holiday.",
+          "vietnamese": "Tôi cần đổi gió nên tôi sẽ đi nghỉ."
+        }
+      ]
+    },
+    {
+      "word": "patriot",
+      "sentences": [
+        {
+          "english": "He was a true patriot who fought bravely in the war.",
+          "vietnamese": "Ông là một người yêu nước thực sự đã chiến đấu dũng cảm trong chiến tranh."
+        },
+        {
+          "english": "The temple honours the patriots of our national history.",
+          "vietnamese": "Ngôi đền thờ những người yêu nước trong lịch sử dân tộc."
+        },
+        {
+          "english": "Every patriot wants peace for his country.",
+          "vietnamese": "Người yêu nước nào cũng mong hoà bình cho đất nước mình."
+        },
+        {
+          "english": "My grandmother tells stories about famous patriots.",
+          "vietnamese": "Bà tôi kể chuyện về những người yêu nước nổi tiếng."
+        },
+        {
+          "english": "Being a patriot means respecting your country's history.",
+          "vietnamese": "Là người yêu nước nghĩa là tôn trọng lịch sử của đất nước mình."
+        }
+      ]
+    },
+    {
+      "word": "state",
+      "sentences": [
+        {
+          "english": "Education is free in this state.",
+          "vietnamese": "Giáo dục được miễn phí ở bang này."
+        },
+        {
+          "english": "Texas is a huge state in the south of America.",
+          "vietnamese": "Texas là một bang rộng lớn ở miền nam nước Mỹ."
+        },
+        {
+          "english": "The state provides free medicine for the poor.",
+          "vietnamese": "Nhà nước cấp thuốc miễn phí cho người nghèo."
+        },
+        {
+          "english": "The company is controlled by the state.",
+          "vietnamese": "Công ty này do nhà nước kiểm soát."
+        },
+        {
+          "english": "Many state schools lack modern equipment.",
+          "vietnamese": "Nhiều trường công thiếu thiết bị hiện đại."
+        }
+      ]
+    },
+    {
+      "word": "conference",
+      "sentences": [
+        {
+          "english": "She gave a presentation at an international conference.",
+          "vietnamese": "Cô ấy thuyết trình tại một hội nghị quốc tế."
+        },
+        {
+          "english": "The conference will take place in Da Nang next month.",
+          "vietnamese": "Hội nghị sẽ diễn ra ở Đà Nẵng vào tháng tới."
+        },
+        {
+          "english": "More than five hundred experts attended the conference.",
+          "vietnamese": "Hơn năm trăm chuyên gia đã tham dự hội nghị."
+        },
+        {
+          "english": "Journalists asked many questions at the press conference.",
+          "vietnamese": "Các nhà báo đặt nhiều câu hỏi tại buổi họp báo."
+        },
+        {
+          "english": "The conference room is on the tenth floor of the building.",
+          "vietnamese": "Phòng hội nghị nằm ở tầng mười của toà nhà."
+        }
+      ]
+    }
+  ]
+}

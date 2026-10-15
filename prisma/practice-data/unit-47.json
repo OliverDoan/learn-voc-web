@@ -1,0 +1,247 @@
+{
+  "unit": 47,
+  "deck": "Unit 47: Tội phạm và pháp luật",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "criminal",
+      "sentences": [
+        { "english": "The police finally caught the dangerous criminal.", "vietnamese": "Cảnh sát cuối cùng đã bắt được tên tội phạm nguy hiểm." },
+        { "english": "The criminal hid his face from the photographers.", "vietnamese": "Tên tội phạm che mặt trước các nhiếp ảnh gia." },
+        { "english": "Many criminals use social media to find victims.", "vietnamese": "Nhiều tội phạm dùng mạng xã hội để tìm nạn nhân." },
+        { "english": "The detective studied the criminal's habits for months.", "vietnamese": "Thám tử nghiên cứu thói quen của tên tội phạm suốt nhiều tháng." },
+        { "english": "Nobody expected the quiet neighbour to be a criminal.", "vietnamese": "Không ai ngờ người hàng xóm trầm lặng lại là tội phạm." }
+      ]
+    },
+    {
+      "word": "murder",
+      "sentences": [
+        { "english": "He was accused of murdering his business partner.", "vietnamese": "Hắn bị buộc tội giết người cộng sự làm ăn." },
+        { "english": "The murder shocked the whole peaceful town.", "vietnamese": "Vụ giết người khiến cả thị trấn yên bình bàng hoàng." },
+        { "english": "The detective solved the murder in just three days.", "vietnamese": "Thám tử phá vụ án mạng chỉ trong ba ngày." },
+        { "english": "She enjoys reading murder stories before going to sleep.", "vietnamese": "Cô ấy thích đọc truyện án mạng trước khi đi ngủ." },
+        { "english": "The film is about a journalist who saw a murder.", "vietnamese": "Bộ phim kể về một nhà báo chứng kiến một vụ giết người." }
+      ]
+    },
+    {
+      "word": "steal",
+      "sentences": [
+        { "english": "Someone tried to steal my motorbike last night.", "vietnamese": "Tối qua có kẻ định trộm xe máy của tôi." },
+        { "english": "Pickpockets often steal wallets in crowded markets.", "vietnamese": "Bọn móc túi thường trộm ví ở những khu chợ đông đúc." },
+        { "english": "He was caught stealing snacks from a convenience store.", "vietnamese": "Anh ta bị bắt quả tang trộm đồ ăn vặt ở cửa hàng tiện lợi." },
+        { "english": "It is wrong to steal ideas from other designers.", "vietnamese": "Đánh cắp ý tưởng của nhà thiết kế khác là sai." },
+        { "english": "Hackers can steal your personal information online.", "vietnamese": "Tin tặc có thể đánh cắp thông tin cá nhân của bạn trên mạng." }
+      ]
+    },
+    {
+      "word": "gun",
+      "sentences": [
+        { "english": "The security guard always carries a gun.", "vietnamese": "Nhân viên bảo vệ luôn mang theo súng." },
+        { "english": "Guns are not allowed in this building.", "vietnamese": "Không được mang súng vào toà nhà này." },
+        { "english": "The robber pointed a toy gun at the scared cashier.", "vietnamese": "Tên cướp chĩa súng đồ chơi vào cô thu ngân đang sợ hãi." },
+        { "english": "My nephew got a water gun for his birthday party.", "vietnamese": "Cháu tôi được tặng một khẩu súng nước trong tiệc sinh nhật." },
+        { "english": "The sound of a gun made everyone scream.", "vietnamese": "Tiếng súng khiến mọi người hét lên." }
+      ]
+    },
+    {
+      "word": "arrest",
+      "sentences": [
+        { "english": "The officer arrested the pickpocket at the market.", "vietnamese": "Viên cảnh sát bắt giữ tên móc túi ở chợ." },
+        { "english": "Three men were arrested for running an online scam.", "vietnamese": "Ba người đàn ông bị bắt vì điều hành một vụ lừa đảo trực tuyến." },
+        { "english": "The famous singer was arrested at the airport.", "vietnamese": "Nữ ca sĩ nổi tiếng bị bắt ở sân bay." },
+        { "english": "Police arrest drunk drivers every weekend on this highway.", "vietnamese": "Cuối tuần nào cảnh sát cũng bắt tài xế say rượu trên đường cao tốc này." },
+        { "english": "He was arrested before he could escape abroad.", "vietnamese": "Hắn bị bắt trước khi kịp trốn ra nước ngoài." }
+      ]
+    },
+    {
+      "word": "jail",
+      "sentences": [
+        { "english": "The scam leader spent five years in jail.", "vietnamese": "Kẻ cầm đầu vụ lừa đảo ngồi tù năm năm." },
+        { "english": "He went to jail for stealing from his employer.", "vietnamese": "Anh ta vào tù vì trộm tiền của chủ." },
+        { "english": "The old jail is now a popular museum.", "vietnamese": "Nhà tù cũ giờ là một bảo tàng nổi tiếng." },
+        { "english": "Being in jail made him realise his mistakes.", "vietnamese": "Ở trong tù khiến anh ta nhận ra những sai lầm của mình." },
+        { "english": "The judge sent the driver to jail for six months.", "vietnamese": "Thẩm phán tuyên người tài xế sáu tháng tù." }
+      ]
+    },
+    {
+      "word": "guard",
+      "sentences": [
+        { "english": "Two guards protect the museum at night.", "vietnamese": "Hai người bảo vệ canh giữ bảo tàng vào ban đêm." },
+        { "english": "The guard checked every visitor's bag at the gate.", "vietnamese": "Người bảo vệ kiểm tra túi của mọi khách tham quan ở cổng." },
+        { "english": "A friendly guard showed us the way to the lift.", "vietnamese": "Một anh bảo vệ thân thiện chỉ đường cho chúng tôi đến thang máy." },
+        { "english": "The prison guards work long and stressful shifts.", "vietnamese": "Các quản giáo làm những ca dài và căng thẳng." },
+        { "english": "Our dog guards the house better than any alarm.", "vietnamese": "Con chó nhà tôi canh nhà tốt hơn bất kỳ chuông báo động nào." }
+      ]
+    },
+    {
+      "word": "thief",
+      "sentences": [
+        { "english": "The thief escaped through the back window.", "vietnamese": "Tên trộm trốn thoát qua cửa sổ phía sau." },
+        { "english": "A thief took my phone at the crowded bus stop.", "vietnamese": "Một tên trộm lấy điện thoại của tôi ở trạm xe buýt đông người." },
+        { "english": "The camera caught the thief's face clearly.", "vietnamese": "Camera ghi lại rõ mặt tên trộm." },
+        { "english": "The thief was hiding in the garage all night.", "vietnamese": "Tên trộm trốn trong nhà để xe suốt đêm." },
+        { "english": "The shop owner chased the thief down the alley.", "vietnamese": "Chủ cửa hàng đuổi theo tên trộm xuống con hẻm." }
+      ]
+    },
+    {
+      "word": "attack",
+      "sentences": [
+        { "english": "A dog attacked the cyclist near the park.", "vietnamese": "Một con chó tấn công người đi xe đạp gần công viên." },
+        { "english": "Hackers attacked the bank's website last week.", "vietnamese": "Tin tặc đã tấn công trang web của ngân hàng tuần trước." },
+        { "english": "The players attacked hard in the second half of the match.", "vietnamese": "Các cầu thủ tấn công mạnh trong hiệp hai của trận đấu." },
+        { "english": "He was attacked by a stranger on his way home.", "vietnamese": "Anh ấy bị một người lạ tấn công trên đường về nhà." },
+        { "english": "Sharks rarely attack people who are snorkelling.", "vietnamese": "Cá mập hiếm khi tấn công người đang lặn với ống thở." }
+      ]
+    },
+    {
+      "word": "policeman",
+      "sentences": [
+        { "english": "The policeman helped the lost tourist find his hotel.", "vietnamese": "Anh cảnh sát giúp du khách bị lạc tìm khách sạn." },
+        { "english": "A policeman was directing the heavy traffic at the crossroads.", "vietnamese": "Một cảnh sát đang điều khiển dòng xe đông đúc ở ngã tư." },
+        { "english": "My uncle was a proud policeman for twenty years.", "vietnamese": "Chú tôi là một cảnh sát đầy tự hào suốt hai mươi năm." },
+        { "english": "The policeman asked the driver to show his licence and pay a fine.", "vietnamese": "Anh cảnh sát yêu cầu tài xế xuất trình bằng lái và nộp phạt." },
+        { "english": "The little boy wants to become a policeman.", "vietnamese": "Cậu bé muốn trở thành cảnh sát." }
+      ]
+    },
+    {
+      "word": "stop",
+      "sentences": [
+        { "english": "The officer stopped the truck for speeding.", "vietnamese": "Viên cảnh sát chặn chiếc xe tải vì chạy quá tốc độ." },
+        { "english": "We stopped at a pagoda on the way home.", "vietnamese": "Chúng tôi dừng lại ở một ngôi chùa trên đường về." },
+        { "english": "Please stop making so much noise in the flat.", "vietnamese": "Làm ơn đừng gây ồn ào trong căn hộ nữa." },
+        { "english": "Nobody could stop the thief from running away.", "vietnamese": "Không ai có thể chặn được tên trộm bỏ chạy." },
+        { "english": "She stopped drinking coffee to sleep better.", "vietnamese": "Cô ấy bỏ uống cà phê để ngủ ngon hơn." }
+      ]
+    },
+    {
+      "word": "tax",
+      "sentences": [
+        { "english": "Rich people should pay more tax.", "vietnamese": "Người giàu nên đóng thuế nhiều hơn." },
+        { "english": "The price on the menu does not include tax.", "vietnamese": "Giá trên thực đơn chưa bao gồm thuế." },
+        { "english": "Freelancers must calculate their own income tax.", "vietnamese": "Người làm tự do phải tự tính thuế thu nhập của mình." },
+        { "english": "The new tax on alcohol made beer more expensive.", "vietnamese": "Thuế mới đánh vào rượu bia khiến bia đắt hơn." },
+        { "english": "The company was fined for not paying tax.", "vietnamese": "Công ty bị phạt vì trốn thuế." }
+      ]
+    },
+    {
+      "word": "prove",
+      "sentences": [
+        { "english": "The lawyer proved that her client was honest.", "vietnamese": "Luật sư đã chứng minh thân chủ của cô ấy trung thực." },
+        { "english": "Can you prove where you were last night?", "vietnamese": "Anh có chứng minh được tối qua anh ở đâu không?" },
+        { "english": "She wanted to prove that girls can be great engineers.", "vietnamese": "Cô ấy muốn chứng minh con gái cũng có thể là kỹ sư giỏi." },
+        { "english": "The test results proved the new medicine works.", "vietnamese": "Kết quả thử nghiệm chứng minh loại thuốc mới có hiệu quả." },
+        { "english": "He worked hard to prove his ability to the manager.", "vietnamese": "Anh ấy làm việc chăm chỉ để chứng minh năng lực với quản lý." }
+      ]
+    },
+    {
+      "word": "guilty",
+      "sentences": [
+        { "english": "He felt guilty after telling a lie.", "vietnamese": "Anh ấy thấy có lỗi sau khi nói dối." },
+        { "english": "The court found the driver guilty of dangerous driving.", "vietnamese": "Toà tuyên người tài xế có tội lái xe nguy hiểm." },
+        { "english": "I feel guilty when I waste food.", "vietnamese": "Tôi thấy áy náy mỗi khi lãng phí thức ăn." },
+        { "english": "She looked guilty when her mother noticed the broken vase.", "vietnamese": "Cô bé trông có lỗi khi mẹ phát hiện chiếc bình vỡ." },
+        { "english": "Nobody believed he was guilty because he seemed so kind.", "vietnamese": "Không ai tin anh ta có tội vì trông anh ta rất tử tế." }
+      ]
+    },
+    {
+      "word": "prisoner",
+      "sentences": [
+        { "english": "The prisoner tried to escape at midnight.", "vietnamese": "Tù nhân cố vượt ngục lúc nửa đêm." },
+        { "english": "Prisoners can learn a useful skill like cooking.", "vietnamese": "Tù nhân có thể học một kỹ năng hữu ích như nấu ăn." },
+        { "english": "The prisoner wrote letters to his relatives every week.", "vietnamese": "Người tù viết thư cho họ hàng mỗi tuần." },
+        { "english": "Some prisoners are released early because of their good attitude.", "vietnamese": "Một số tù nhân được ra tù sớm nhờ thái độ cải tạo tốt." },
+        { "english": "The old prisoner looked tired and lonely.", "vietnamese": "Người tù già trông mệt mỏi và cô đơn." }
+      ]
+    },
+    {
+      "word": "prison",
+      "sentences": [
+        { "english": "Life in prison is lonely and dull.", "vietnamese": "Cuộc sống trong tù cô đơn và tẻ nhạt." },
+        { "english": "He was sent to prison for running a scam.", "vietnamese": "Anh ta bị đi tù vì điều hành một vụ lừa đảo." },
+        { "english": "The prison is on a small island far from the coast.", "vietnamese": "Nhà tù nằm trên một hòn đảo nhỏ xa bờ biển." },
+        { "english": "Hoa Lo Prison is now a famous place for tourists.", "vietnamese": "Nhà tù Hoả Lò giờ là địa điểm nổi tiếng với du khách." },
+        { "english": "After prison, he found it hard to get a job.", "vietnamese": "Sau khi ra tù, anh ta thấy khó tìm được việc làm." }
+      ]
+    },
+    {
+      "word": "outlaw",
+      "sentences": [
+        { "english": "The outlaw hid in the forest for years.", "vietnamese": "Kẻ ngoài vòng pháp luật trốn trong rừng nhiều năm." },
+        { "english": "The film tells the story of a brave outlaw.", "vietnamese": "Bộ phim kể câu chuyện về một kẻ ngoài vòng pháp luật dũng cảm." },
+        { "english": "Some people saw the outlaw as a hero.", "vietnamese": "Một số người coi kẻ ngoài vòng pháp luật ấy là người hùng." },
+        { "english": "The outlaw stole from the rich and gave to the poor.", "vietnamese": "Kẻ ngoài vòng pháp luật cướp của người giàu chia cho người nghèo." },
+        { "english": "The police offered a huge reward for the outlaw's capture.", "vietnamese": "Cảnh sát treo thưởng lớn cho việc bắt kẻ ngoài vòng pháp luật." }
+      ]
+    },
+    {
+      "word": "handcuffs",
+      "sentences": [
+        { "english": "The officer put handcuffs on the angry man.", "vietnamese": "Viên cảnh sát còng tay người đàn ông đang giận dữ." },
+        { "english": "The thief was led out of the building in handcuffs.", "vietnamese": "Tên trộm bị còng tay dẫn ra khỏi toà nhà." },
+        { "english": "The policeman took the handcuffs from his belt.", "vietnamese": "Anh cảnh sát lấy chiếc còng tay từ thắt lưng." },
+        { "english": "He looked embarrassed in handcuffs in front of the cameras.", "vietnamese": "Hắn trông xấu hổ khi bị còng tay trước ống kính." },
+        { "english": "My son plays cops and robbers with plastic handcuffs.", "vietnamese": "Con trai tôi chơi trò cảnh sát bắt cướp với chiếc còng tay nhựa." }
+      ]
+    },
+    {
+      "word": "defence",
+      "sentences": [
+        { "english": "The lawyer prepared a strong defence for him.", "vietnamese": "Luật sư chuẩn bị một bản bào chữa vững chắc cho anh ta." },
+        { "english": "Our team needs a better defence to win the cup.", "vietnamese": "Đội chúng tôi cần hàng phòng ngự tốt hơn để giành cúp." },
+        { "english": "She took a self-defence course at the gym.", "vietnamese": "Cô ấy học một khoá tự vệ ở phòng tập." },
+        { "english": "In his defence, he was only trying to help.", "vietnamese": "Nói để bênh anh ấy, anh ấy chỉ đang cố giúp thôi." },
+        { "english": "Washing your hands is the first defence against disease.", "vietnamese": "Rửa tay là hàng rào bảo vệ đầu tiên chống lại bệnh tật." }
+      ]
+    },
+    {
+      "word": "law",
+      "sentences": [
+        { "english": "Everyone in the country must respect the law.", "vietnamese": "Mọi người trong đất nước đều phải tôn trọng pháp luật." },
+        { "english": "She is studying law to become a lawyer.", "vietnamese": "Cô ấy đang học luật để trở thành luật sư." },
+        { "english": "The new law bans smoking in public places.", "vietnamese": "Luật mới cấm hút thuốc ở nơi công cộng." },
+        { "english": "Breaking the law can lead to a heavy fine.", "vietnamese": "Vi phạm pháp luật có thể dẫn đến một khoản phạt nặng." },
+        { "english": "Traffic laws are different in every country, so drive carefully.", "vietnamese": "Luật giao thông mỗi nước một khác, nên hãy lái xe cẩn thận." }
+      ]
+    },
+    {
+      "word": "serious",
+      "sentences": [
+        { "english": "Drink driving is a serious crime.", "vietnamese": "Lái xe khi say rượu là một tội nghiêm trọng." },
+        { "english": "The accident caused serious damage to the bridge.", "vietnamese": "Vụ tai nạn gây thiệt hại nghiêm trọng cho cây cầu." },
+        { "english": "Pollution is a serious problem in big cities.", "vietnamese": "Ô nhiễm là vấn đề nghiêm trọng ở các thành phố lớn." },
+        { "english": "Don't joke about it; this is a serious matter.", "vietnamese": "Đừng đùa chuyện đó, đây là vấn đề nghiêm trọng." },
+        { "english": "He has a serious illness and needs to rest.", "vietnamese": "Anh ấy mắc bệnh nặng và cần nghỉ ngơi." }
+      ]
+    },
+    {
+      "word": "trick",
+      "sentences": [
+        { "english": "A fake seller tricked customers into paying twice.", "vietnamese": "Một người bán hàng giả mạo đã lừa khách hàng trả tiền hai lần." },
+        { "english": "Scammers trick old people with fake phone calls.", "vietnamese": "Kẻ lừa đảo lừa người già bằng những cuộc gọi giả." },
+        { "english": "Don't let anyone trick you into sharing your password.", "vietnamese": "Đừng để ai lừa bạn chia sẻ mật khẩu." },
+        { "english": "He tricked his friends with a silly joke.", "vietnamese": "Anh ấy lừa bạn bè bằng một trò đùa ngớ ngẩn." },
+        { "english": "The website tricked users into clicking a fake button.", "vietnamese": "Trang web lừa người dùng bấm vào một nút giả." }
+      ]
+    },
+    {
+      "word": "blame",
+      "sentences": [
+        { "english": "Don't blame others for your own mistakes.", "vietnamese": "Đừng đổ lỗi cho người khác vì sai lầm của chính mình." },
+        { "english": "The driver blamed the rain for the accident.", "vietnamese": "Người tài xế đổ lỗi cho cơn mưa gây ra tai nạn." },
+        { "english": "She always blames her brother for the mess.", "vietnamese": "Cô bé lúc nào cũng đổ lỗi cho anh trai vì bày bừa." },
+        { "english": "Nobody blamed him because it wasn't his fault.", "vietnamese": "Không ai trách anh ấy vì đó không phải lỗi của anh ấy." },
+        { "english": "The manager blamed the team for the delay.", "vietnamese": "Người quản lý đổ lỗi cho cả nhóm vì sự chậm trễ." }
+      ]
+    },
+    {
+      "word": "spy",
+      "sentences": [
+        { "english": "The spy used a fake passport to enter.", "vietnamese": "Tên gián điệp dùng hộ chiếu giả để nhập cảnh." },
+        { "english": "My favourite film is about a female spy.", "vietnamese": "Bộ phim yêu thích của tôi kể về một nữ gián điệp." },
+        { "english": "The spy sent secret messages to his country.", "vietnamese": "Tên gián điệp gửi những tin nhắn bí mật về nước." },
+        { "english": "During the war, many spies lived in the capital.", "vietnamese": "Trong chiến tranh, nhiều gián điệp sống ở thủ đô." },
+        { "english": "Kids love playing spy games in the playground.", "vietnamese": "Trẻ con rất thích chơi trò gián điệp ở sân chơi." }
+      ]
+    }
+  ]
+}

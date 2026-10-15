@@ -1,0 +1,274 @@
+{
+  "deck": {
+    "name": "Unit 48: Chính trị và quyền lực",
+    "description": "24 từ vựng về chính trị, chính phủ, bầu cử và quyền lực",
+    "color": "#f97316",
+    "icon": "🏛️"
+  },
+  "cards": [
+    {
+      "word": "power",
+      "meaning": "quyền lực, quyền hạn",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈpaʊə(r)/",
+      "example": "In ancient China, ordinary citizens had no power.",
+      "exampleTranslation": "Ở Trung Quốc thời cổ đại, dân thường không có quyền lực gì.",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "word": "request",
+      "meaning": "lời yêu cầu, đề nghị",
+      "partOfSpeech": "noun",
+      "phonetic": "/rɪˈkwest/",
+      "example": "The mayor agreed to their request for a new park.",
+      "exampleTranslation": "Thị trưởng đã đồng ý với đề nghị xây công viên mới của họ.",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "word": "issue",
+      "meaning": "vấn đề",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈɪʃuː/",
+      "example": "Climate change is a big political issue.",
+      "exampleTranslation": "Biến đổi khí hậu là một vấn đề chính trị lớn.",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "word": "allow",
+      "meaning": "cho phép",
+      "partOfSpeech": "verb",
+      "phonetic": "/əˈlaʊ/",
+      "example": "Students are not allowed to vote until they are 18.",
+      "exampleTranslation": "Học sinh không được phép bầu cử cho đến khi đủ 18 tuổi.",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "word": "decision",
+      "meaning": "quyết định",
+      "partOfSpeech": "noun",
+      "phonetic": "/dɪˈsɪʒn/",
+      "example": "The government made a difficult decision.",
+      "exampleTranslation": "Chính phủ đã đưa ra một quyết định khó khăn.",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "word": "agree",
+      "meaning": "đồng ý",
+      "partOfSpeech": "verb",
+      "phonetic": "/əˈɡriː/",
+      "example": "Both parties agreed to work together.",
+      "exampleTranslation": "Cả hai đảng đã đồng ý hợp tác với nhau.",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "word": "case",
+      "meaning": "trường hợp, vụ việc",
+      "partOfSpeech": "noun",
+      "phonetic": "/keɪs/",
+      "example": "In this case, the court will decide.",
+      "exampleTranslation": "Trong trường hợp này, tòa án sẽ quyết định.",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "word": "uninterested",
+      "meaning": "không quan tâm, thờ ơ",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ʌnˈɪntrəstɪd/",
+      "example": "Many young people are uninterested in politics.",
+      "exampleTranslation": "Nhiều người trẻ không quan tâm đến chính trị.",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "word": "goal",
+      "meaning": "mục tiêu",
+      "partOfSpeech": "noun",
+      "phonetic": "/ɡəʊl/",
+      "example": "Our main goal is to reduce poverty.",
+      "exampleTranslation": "Mục tiêu chính của chúng tôi là giảm nghèo.",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "word": "leader",
+      "meaning": "người lãnh đạo",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈliːdə(r)/",
+      "example": "A good leader listens to the people.",
+      "exampleTranslation": "Một nhà lãnh đạo giỏi biết lắng nghe người dân.",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "word": "government",
+      "meaning": "chính phủ",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈɡʌvənmənt/",
+      "example": "The government announced a new tax policy.",
+      "exampleTranslation": "Chính phủ đã công bố một chính sách thuế mới.",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "word": "president",
+      "meaning": "tổng thống, chủ tịch",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈprezɪdənt/",
+      "example": "The president gave a speech on TV last night.",
+      "exampleTranslation": "Tổng thống đã có bài phát biểu trên TV tối qua.",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "word": "politician",
+      "meaning": "chính trị gia",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˌpɒləˈtɪʃn/",
+      "example": "Few people trust politicians these days.",
+      "exampleTranslation": "Ngày nay ít người tin tưởng các chính trị gia.",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "word": "soldier",
+      "meaning": "người lính",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈsəʊldʒə(r)/",
+      "example": "The soldiers protected the border.",
+      "exampleTranslation": "Những người lính đã bảo vệ biên giới.",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "word": "independence",
+      "meaning": "sự độc lập",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˌɪndɪˈpendəns/",
+      "example": "Vietnam declared independence in 1945.",
+      "exampleTranslation": "Việt Nam tuyên bố độc lập vào năm 1945.",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "word": "vote",
+      "meaning": "bỏ phiếu, bầu",
+      "partOfSpeech": "verb",
+      "phonetic": "/vəʊt/",
+      "example": "Did you vote in the last election?",
+      "exampleTranslation": "Bạn có đi bầu cử trong cuộc bầu cử vừa rồi không?",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "word": "demand",
+      "meaning": "đòi hỏi, yêu cầu",
+      "partOfSpeech": "verb",
+      "phonetic": "/dɪˈmɑːnd/",
+      "example": "Workers demanded higher wages.",
+      "exampleTranslation": "Công nhân đòi tăng lương.",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "word": "suitable",
+      "meaning": "phù hợp",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˈsuːtəbl/",
+      "example": "He isn't suitable for such an important job.",
+      "exampleTranslation": "Anh ta không phù hợp với một công việc quan trọng như vậy.",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "word": "nationality",
+      "meaning": "quốc tịch",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˌnæʃəˈnæləti/",
+      "example": "What is your nationality?",
+      "exampleTranslation": "Bạn mang quốc tịch gì?",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "word": "party",
+      "meaning": "đảng (chính trị)",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈpɑːti/",
+      "example": "Which party won the election?",
+      "exampleTranslation": "Đảng nào đã thắng cuộc bầu cử?",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "word": "change",
+      "meaning": "sự thay đổi",
+      "partOfSpeech": "noun",
+      "phonetic": "/tʃeɪndʒ/",
+      "example": "People voted for change.",
+      "exampleTranslation": "Người dân đã bỏ phiếu cho sự thay đổi.",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "word": "patriot",
+      "meaning": "người yêu nước",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈpætriət/",
+      "example": "He was a true patriot who loved his country.",
+      "exampleTranslation": "Ông ấy là một người yêu nước thực sự, hết lòng yêu đất nước mình.",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "word": "state",
+      "meaning": "nhà nước, bang",
+      "partOfSpeech": "noun",
+      "phonetic": "/steɪt/",
+      "example": "The state provides free education for children.",
+      "exampleTranslation": "Nhà nước cung cấp giáo dục miễn phí cho trẻ em.",
+      "tags": [
+        "politics"
+      ]
+    },
+    {
+      "word": "conference",
+      "meaning": "hội nghị",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈkɒnfərəns/",
+      "example": "World leaders met at a climate conference.",
+      "exampleTranslation": "Các nhà lãnh đạo thế giới đã gặp nhau tại một hội nghị về khí hậu.",
+      "tags": [
+        "politics"
+      ]
+    }
+  ]
+}

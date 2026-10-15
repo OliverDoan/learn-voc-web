@@ -1,0 +1,274 @@
+{
+  "deck": {
+    "name": "Unit 42: Phụ kiện thời trang",
+    "description": "24 từ vựng về phụ kiện thời trang, giày dép và trang sức",
+    "color": "#ec4899",
+    "icon": "👜"
+  },
+  "cards": [
+    {
+      "word": "well",
+      "meaning": "tốt, giỏi",
+      "partOfSpeech": "adverb",
+      "phonetic": "/wel/",
+      "example": "I don't speak French well.",
+      "exampleTranslation": "Tôi nói tiếng Pháp không giỏi.",
+      "tags": [
+        "accessories"
+      ]
+    },
+    {
+      "word": "stylish",
+      "meaning": "sành điệu, hợp thời trang",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˈstaɪlɪʃ/",
+      "example": "She always looks stylish in simple clothes.",
+      "exampleTranslation": "Cô ấy lúc nào trông cũng sành điệu dù mặc đồ đơn giản.",
+      "tags": [
+        "accessories"
+      ]
+    },
+    {
+      "word": "handbag",
+      "meaning": "túi xách tay",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈhændbæɡ/",
+      "example": "She left her handbag on the bus.",
+      "exampleTranslation": "Cô ấy để quên túi xách trên xe buýt.",
+      "tags": [
+        "accessories"
+      ]
+    },
+    {
+      "word": "notice",
+      "meaning": "chú ý, để ý thấy",
+      "partOfSpeech": "verb",
+      "phonetic": "/ˈnəʊtɪs/",
+      "example": "Did you notice her new earrings?",
+      "exampleTranslation": "Bạn có để ý đôi bông tai mới của cô ấy không?",
+      "tags": [
+        "accessories"
+      ]
+    },
+    {
+      "word": "trainer",
+      "meaning": "giày thể thao",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈtreɪnə(r)/",
+      "example": "He wears white trainers to school.",
+      "exampleTranslation": "Anh ấy đi giày thể thao trắng đến trường.",
+      "tags": [
+        "accessories"
+      ]
+    },
+    {
+      "word": "colourful",
+      "meaning": "nhiều màu sắc",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˈkʌləfl/",
+      "example": "Kids love colourful T-shirts.",
+      "exampleTranslation": "Trẻ con rất thích những chiếc áo phông nhiều màu sắc.",
+      "tags": [
+        "accessories"
+      ]
+    },
+    {
+      "word": "flip-flop",
+      "meaning": "dép xỏ ngón, dép tông",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈflɪp flɒp/",
+      "example": "Don't forget your flip-flops for the beach.",
+      "exampleTranslation": "Đừng quên mang dép xỏ ngón khi đi biển nhé.",
+      "tags": [
+        "accessories"
+      ]
+    },
+    {
+      "word": "sandal",
+      "meaning": "dép quai hậu, xăng-đan",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈsændl/",
+      "example": "These leather sandals are very comfortable.",
+      "exampleTranslation": "Đôi dép quai hậu bằng da này rất thoải mái.",
+      "tags": [
+        "accessories"
+      ]
+    },
+    {
+      "word": "sunglasses",
+      "meaning": "kính râm",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈsʌnɡlɑːsɪz/",
+      "example": "Wear sunglasses to protect your eyes.",
+      "exampleTranslation": "Hãy đeo kính râm để bảo vệ mắt.",
+      "tags": [
+        "accessories"
+      ]
+    },
+    {
+      "word": "metal",
+      "meaning": "kim loại",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈmetl/",
+      "example": "The watch has a metal strap.",
+      "exampleTranslation": "Chiếc đồng hồ có dây đeo bằng kim loại.",
+      "tags": [
+        "accessories"
+      ]
+    },
+    {
+      "word": "bracelet",
+      "meaning": "vòng tay",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈbreɪslət/",
+      "example": "He gave her a gold bracelet.",
+      "exampleTranslation": "Anh ấy đã tặng cô ấy một chiếc vòng tay bằng vàng.",
+      "tags": [
+        "accessories"
+      ]
+    },
+    {
+      "word": "hairband",
+      "meaning": "băng đô, bờm tóc",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈheəbænd/",
+      "example": "She pushed her hair back with a hairband.",
+      "exampleTranslation": "Cô ấy vén tóc ra sau bằng một chiếc băng đô.",
+      "tags": [
+        "accessories"
+      ]
+    },
+    {
+      "word": "lipstick",
+      "meaning": "son môi",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈlɪpstɪk/",
+      "example": "Red lipstick suits you.",
+      "exampleTranslation": "Son môi đỏ hợp với bạn đấy.",
+      "tags": [
+        "accessories"
+      ]
+    },
+    {
+      "word": "necklace",
+      "meaning": "vòng cổ, dây chuyền",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈnekləs/",
+      "example": "Her necklace was a gift from her grandma.",
+      "exampleTranslation": "Chiếc vòng cổ của cô ấy là quà của bà.",
+      "tags": [
+        "accessories"
+      ]
+    },
+    {
+      "word": "fur",
+      "meaning": "lông thú",
+      "partOfSpeech": "noun",
+      "phonetic": "/fɜː(r)/",
+      "example": "Many brands no longer use real fur.",
+      "exampleTranslation": "Nhiều thương hiệu không còn dùng lông thú thật nữa.",
+      "tags": [
+        "accessories"
+      ]
+    },
+    {
+      "word": "basket",
+      "meaning": "giỏ, rổ",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈbɑːskɪt/",
+      "example": "She carries a straw basket to the market.",
+      "exampleTranslation": "Cô ấy xách một chiếc giỏ cói ra chợ.",
+      "tags": [
+        "accessories"
+      ]
+    },
+    {
+      "word": "silver",
+      "meaning": "(bằng) bạc",
+      "partOfSpeech": "adjective / noun",
+      "phonetic": "/ˈsɪlvə(r)/",
+      "example": "I bought a silver ring for my sister.",
+      "exampleTranslation": "Tôi đã mua một chiếc nhẫn bạc cho em gái.",
+      "tags": [
+        "accessories"
+      ]
+    },
+    {
+      "word": "ring",
+      "meaning": "nhẫn",
+      "partOfSpeech": "noun",
+      "phonetic": "/rɪŋ/",
+      "example": "He put the ring on her finger.",
+      "exampleTranslation": "Anh ấy đeo chiếc nhẫn vào ngón tay cô ấy.",
+      "tags": [
+        "accessories"
+      ]
+    },
+    {
+      "word": "hair dryer",
+      "meaning": "máy sấy tóc",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈheə draɪə(r)/",
+      "example": "Can I borrow your hair dryer?",
+      "exampleTranslation": "Mình mượn máy sấy tóc của bạn được không?",
+      "tags": [
+        "accessories"
+      ]
+    },
+    {
+      "word": "fasten",
+      "meaning": "cài, thắt chặt",
+      "partOfSpeech": "verb",
+      "phonetic": "/ˈfɑːsn/",
+      "example": "Please fasten your seat belt.",
+      "exampleTranslation": "Vui lòng thắt dây an toàn.",
+      "tags": [
+        "accessories"
+      ]
+    },
+    {
+      "word": "belt",
+      "meaning": "thắt lưng",
+      "partOfSpeech": "noun",
+      "phonetic": "/belt/",
+      "example": "These trousers are too big, so I need a belt.",
+      "exampleTranslation": "Chiếc quần này rộng quá nên tôi cần một cái thắt lưng.",
+      "tags": [
+        "accessories"
+      ]
+    },
+    {
+      "word": "cap",
+      "meaning": "mũ lưỡi trai",
+      "partOfSpeech": "noun",
+      "phonetic": "/kæp/",
+      "example": "He wore his cap backwards.",
+      "exampleTranslation": "Anh ấy đội mũ lưỡi trai ngược ra sau.",
+      "tags": [
+        "accessories"
+      ]
+    },
+    {
+      "word": "tie",
+      "meaning": "cà vạt",
+      "partOfSpeech": "noun",
+      "phonetic": "/taɪ/",
+      "example": "You must wear a tie to the interview.",
+      "exampleTranslation": "Bạn phải đeo cà vạt khi đi phỏng vấn.",
+      "tags": [
+        "accessories"
+      ]
+    },
+    {
+      "word": "sock",
+      "meaning": "tất, vớ",
+      "partOfSpeech": "noun",
+      "phonetic": "/sɒk/",
+      "example": "I can't find the other sock.",
+      "exampleTranslation": "Tôi không tìm thấy chiếc tất còn lại.",
+      "tags": [
+        "accessories"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "unit": 43,
+  "deck": "Unit 43: Tủ quần áo",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "wardrobe",
+      "sentences": [
+        { "english": "My wardrobe is full of clothes I never wear.", "vietnamese": "Tủ quần áo của tôi đầy những bộ đồ tôi chẳng bao giờ mặc." },
+        { "english": "We bought a wooden wardrobe for the new flat.", "vietnamese": "Chúng tôi mua một chiếc tủ quần áo gỗ cho căn hộ mới." },
+        { "english": "She tidied her wardrobe before the new term.", "vietnamese": "Cô ấy dọn tủ quần áo trước học kỳ mới." },
+        { "english": "His wardrobe is mostly black and grey.", "vietnamese": "Tủ đồ của anh ấy chủ yếu là màu đen và xám." },
+        { "english": "There is no space in my wardrobe after all that shopping.", "vietnamese": "Sau đợt mua sắm ấy, tủ quần áo của tôi chẳng còn chỗ trống." }
+      ]
+    },
+    {
+      "word": "raincoat",
+      "sentences": [
+        { "english": "Always bring a raincoat in the rainy season.", "vietnamese": "Luôn mang theo áo mưa vào mùa mưa." },
+        { "english": "He forgot his raincoat and got soaked in the shower.", "vietnamese": "Anh ấy quên áo mưa và bị ướt sũng trong cơn mưa rào." },
+        { "english": "Cheap plastic raincoats are sold everywhere in Hanoi.", "vietnamese": "Áo mưa nilon rẻ tiền được bán khắp nơi ở Hà Nội." },
+        { "english": "She wore a yellow raincoat on the motorbike.", "vietnamese": "Cô ấy mặc áo mưa vàng khi đi xe máy." },
+        { "english": "My raincoat could not protect me from the typhoon.", "vietnamese": "Áo mưa không thể che chắn cho tôi trước cơn bão." }
+      ]
+    },
+    {
+      "word": "loose",
+      "sentences": [
+        { "english": "These loose trousers are comfortable for travelling.", "vietnamese": "Chiếc quần rộng này mặc đi du lịch rất thoải mái." },
+        { "english": "His shirt is too loose since he lost weight.", "vietnamese": "Từ khi giảm cân, áo của anh ấy rộng thùng thình." },
+        { "english": "Loose clothes are perfect for humid weather.", "vietnamese": "Quần áo rộng rất hợp với thời tiết ẩm." },
+        { "english": "One of the buttons on my coat is loose.", "vietnamese": "Một chiếc cúc trên áo khoác của tôi bị lỏng." },
+        { "english": "She prefers loose dresses to tight ones.", "vietnamese": "Cô ấy thích váy rộng hơn váy bó." }
+      ]
+    },
+    {
+      "word": "pocket",
+      "sentences": [
+        { "english": "He keeps his cash in his back pocket.", "vietnamese": "Anh ấy để tiền mặt trong túi quần sau." },
+        { "english": "I found an old receipt in my pocket.", "vietnamese": "Tôi tìm thấy một tờ hóa đơn cũ trong túi." },
+        { "english": "This jacket has a secret pocket inside.", "vietnamese": "Chiếc áo khoác này có một túi bí mật bên trong." },
+        { "english": "A pickpocket took the wallet from his pocket.", "vietnamese": "Một tên móc túi đã lấy chiếc ví trong túi anh ấy." },
+        { "english": "My little brother's shorts have colourful pockets.", "vietnamese": "Quần soóc của em trai tôi có những chiếc túi nhiều màu." }
+      ]
+    },
+    {
+      "word": "pattern",
+      "sentences": [
+        { "english": "I love the flower pattern on this dress.", "vietnamese": "Tôi thích họa tiết hoa trên chiếc váy này." },
+        { "english": "The traditional pattern on her scarf is beautiful.", "vietnamese": "Hoa văn truyền thống trên chiếc khăn của cô ấy rất đẹp." },
+        { "english": "This carpet has an unusual pattern.", "vietnamese": "Tấm thảm này có hoa văn khác lạ." },
+        { "english": "She sews tiny patterns onto cloth handbags.", "vietnamese": "Cô ấy thêu những họa tiết nhỏ lên túi xách vải." },
+        { "english": "Striped patterns are popular this summer.", "vietnamese": "Họa tiết kẻ sọc đang thịnh hành mùa hè này." }
+      ]
+    },
+    {
+      "word": "match",
+      "sentences": [
+        { "english": "Her handbag matches her shoes perfectly.", "vietnamese": "Túi xách của cô ấy rất hợp với đôi giày." },
+        { "english": "Does this tie match my blue shirt?", "vietnamese": "Chiếc cà vạt này có hợp với áo sơ mi xanh của tôi không?" },
+        { "english": "The colour of the curtains matches the carpet.", "vietnamese": "Màu rèm cửa hợp với tấm thảm." },
+        { "english": "These two socks do not match at all.", "vietnamese": "Hai chiếc tất này chẳng hợp nhau chút nào." },
+        { "english": "She bought earrings to match her new necklace.", "vietnamese": "Cô ấy mua khuyên tai cho hợp với chiếc vòng cổ mới." }
+      ]
+    },
+    {
+      "word": "leather",
+      "sentences": [
+        { "english": "He bought a leather belt at the mall.", "vietnamese": "Anh ấy mua một chiếc thắt lưng da ở trung tâm thương mại." },
+        { "english": "Leather jackets are expensive but last for years.", "vietnamese": "Áo khoác da đắt nhưng dùng được nhiều năm." },
+        { "english": "My grandfather's leather sofa is very comfortable.", "vietnamese": "Chiếc sofa da của ông tôi ngồi rất êm." },
+        { "english": "This leather handbag was a gift from my husband.", "vietnamese": "Chiếc túi da này là quà chồng tôi tặng." },
+        { "english": "Clean real leather shoes carefully with a soft cloth.", "vietnamese": "Hãy lau giày da thật cẩn thận bằng khăn mềm." }
+      ]
+    },
+    {
+      "word": "eye-catching",
+      "sentences": [
+        { "english": "She wore an eye-catching red dress to the party.", "vietnamese": "Cô ấy mặc chiếc váy đỏ bắt mắt đến bữa tiệc." },
+        { "english": "The mall has an eye-catching window display.", "vietnamese": "Trung tâm thương mại có khu trưng bày cửa kính rất bắt mắt." },
+        { "english": "His eye-catching hoodie attracted a lot of attention.", "vietnamese": "Chiếc áo nỉ có mũ bắt mắt của anh ấy thu hút nhiều sự chú ý." },
+        { "english": "Colourful posters are eye-catching for customers.", "vietnamese": "Áp phích nhiều màu sắc rất bắt mắt với khách hàng." },
+        { "english": "The singer wore an eye-catching silver jacket.", "vietnamese": "Ca sĩ mặc chiếc áo khoác bạc bắt mắt." }
+      ]
+    },
+    {
+      "word": "jacket",
+      "sentences": [
+        { "english": "Take a warm jacket because it is cold outside.", "vietnamese": "Mang theo áo khoác ấm vì bên ngoài trời lạnh." },
+        { "english": "His leather jacket was a bargain in the sale.", "vietnamese": "Chiếc áo khoác da của anh ấy là món hời trong đợt giảm giá." },
+        { "english": "She forgot her jacket at the homestay.", "vietnamese": "Cô ấy để quên áo khoác ở homestay." },
+        { "english": "This jacket keeps me warm in the icy wind.", "vietnamese": "Chiếc áo khoác này giữ ấm cho tôi trong gió rét." },
+        { "english": "He zipped up his jacket before riding the motorbike.", "vietnamese": "Anh ấy kéo khóa áo khoác trước khi lái xe máy." }
+      ]
+    },
+    {
+      "word": "outfit",
+      "sentences": [
+        { "english": "She chose a stylish outfit for the wedding.", "vietnamese": "Cô ấy chọn một bộ trang phục sành điệu cho đám cưới." },
+        { "english": "My outfit for the interview was simple and neat.", "vietnamese": "Trang phục đi phỏng vấn của tôi đơn giản và gọn gàng." },
+        { "english": "Her festival outfit was bright and colourful.", "vietnamese": "Bộ đồ đi lễ hội của cô ấy tươi tắn và nhiều màu sắc." },
+        { "english": "The actress changed her outfit five times during the show.", "vietnamese": "Nữ diễn viên thay trang phục năm lần trong buổi diễn." },
+        { "english": "This whole outfit cost me less than two hundred thousand dong.", "vietnamese": "Cả bộ trang phục này tốn chưa đến hai trăm nghìn đồng." }
+      ]
+    },
+    {
+      "word": "unzip",
+      "sentences": [
+        { "english": "He unzipped his bag to find the receipt.", "vietnamese": "Anh ấy kéo khóa túi ra để tìm hóa đơn." },
+        { "english": "She unzipped her handbag and took out a lipstick.", "vietnamese": "Cô ấy mở khóa túi xách và lấy ra thỏi son." },
+        { "english": "Please unzip the suitcase for the security check.", "vietnamese": "Vui lòng mở khóa vali để kiểm tra an ninh." },
+        { "english": "The nervous child could not unzip his jacket.", "vietnamese": "Đứa trẻ lúng túng không kéo khóa áo khoác ra được." },
+        { "english": "I unzipped the tent and saw a beautiful sunrise.", "vietnamese": "Tôi kéo khóa lều ra và thấy cảnh bình minh tuyệt đẹp." }
+      ]
+    },
+    {
+      "word": "fashion",
+      "sentences": [
+        { "english": "My bestie follows every new fashion trend.", "vietnamese": "Bạn thân tôi chạy theo mọi xu hướng thời trang mới." },
+        { "english": "Fashion magazines are popular with teenagers.", "vietnamese": "Tạp chí thời trang được giới trẻ ưa chuộng." },
+        { "english": "She wants to become a fashion designer.", "vietnamese": "Cô ấy muốn trở thành nhà thiết kế thời trang." },
+        { "english": "Bright colours are in fashion this season.", "vietnamese": "Màu sắc tươi sáng đang là mốt mùa này." },
+        { "english": "Fast fashion creates a lot of rubbish.", "vietnamese": "Thời trang nhanh tạo ra rất nhiều rác thải." }
+      ]
+    },
+    {
+      "word": "jeans",
+      "sentences": [
+        { "english": "These jeans were a bargain in the sale.", "vietnamese": "Chiếc quần bò này là món hời trong đợt giảm giá." },
+        { "english": "He always wears jeans and a T-shirt.", "vietnamese": "Anh ấy lúc nào cũng mặc quần bò và áo phông." },
+        { "english": "My old jeans have a hole in the knee.", "vietnamese": "Chiếc quần bò cũ của tôi bị thủng ở đầu gối." },
+        { "english": "Blue jeans go with almost any colourful top.", "vietnamese": "Quần bò xanh hợp với gần như mọi chiếc áo nhiều màu." },
+        { "english": "She washed her new jeans in cold water.", "vietnamese": "Cô ấy giặt chiếc quần bò mới bằng nước lạnh." }
+      ]
+    },
+    {
+      "word": "hoodie",
+      "sentences": [
+        { "english": "He wears a hoodie and trainers every day.", "vietnamese": "Ngày nào anh ấy cũng mặc áo nỉ có mũ và đi giày thể thao." },
+        { "english": "This grey hoodie is very comfortable.", "vietnamese": "Chiếc áo nỉ có mũ màu xám này mặc rất dễ chịu." },
+        { "english": "I bought a university hoodie as a gift.", "vietnamese": "Tôi mua một chiếc áo nỉ có mũ in logo trường đại học làm quà." },
+        { "english": "Teenagers love big hoodies with funny prints.", "vietnamese": "Bọn trẻ tuổi teen mê những chiếc áo hoodie rộng in hình ngộ nghĩnh." },
+        { "english": "She put on a hoodie because the room was cold.", "vietnamese": "Cô ấy mặc áo nỉ có mũ vì phòng lạnh." }
+      ]
+    },
+    {
+      "word": "silk",
+      "sentences": [
+        { "english": "This silk scarf was a gift from Hue.", "vietnamese": "Chiếc khăn lụa này là quà từ Huế." },
+        { "english": "Silk dresses are elegant but expensive.", "vietnamese": "Váy lụa thanh lịch nhưng đắt." },
+        { "english": "Hoi An is famous for its traditional silk.", "vietnamese": "Hội An nổi tiếng với lụa truyền thống." },
+        { "english": "Wash silk carefully by hand in cold water.", "vietnamese": "Hãy giặt lụa cẩn thận bằng tay trong nước lạnh." },
+        { "english": "He wore a silk tie to the interview.", "vietnamese": "Anh ấy thắt cà vạt lụa đi phỏng vấn." }
+      ]
+    },
+    {
+      "word": "cotton",
+      "sentences": [
+        { "english": "Cotton shirts are comfortable in hot weather.", "vietnamese": "Áo sơ mi cotton mặc rất thoải mái khi trời nóng." },
+        { "english": "These cotton socks are soft and cheap.", "vietnamese": "Đôi tất cotton này mềm và rẻ." },
+        { "english": "Babies should wear soft cotton clothes.", "vietnamese": "Em bé nên mặc quần áo vải bông mềm." },
+        { "english": "This cotton towel dries quickly in the sun.", "vietnamese": "Chiếc khăn cotton này phơi nắng mau khô." },
+        { "english": "Cotton is a popular material for summer clothes.", "vietnamese": "Vải bông là chất liệu phổ biến cho quần áo mùa hè." }
+      ]
+    },
+    {
+      "word": "underwear",
+      "sentences": [
+        { "english": "Pack enough underwear for the whole journey.", "vietnamese": "Hãy mang đủ đồ lót cho cả chuyến đi." },
+        { "english": "He bought new underwear in the sale.", "vietnamese": "Anh ấy mua đồ lót mới trong đợt giảm giá." },
+        { "english": "Cotton underwear is healthy and comfortable.", "vietnamese": "Đồ lót cotton tốt cho sức khỏe và thoải mái." },
+        { "english": "Always wash new underwear before wearing it.", "vietnamese": "Luôn giặt đồ lót mới trước khi mặc." },
+        { "english": "The airline lost my bag with all my underwear.", "vietnamese": "Hãng bay làm thất lạc chiếc túi đựng toàn bộ đồ lót của tôi." }
+      ]
+    },
+    {
+      "word": "tailor-made",
+      "sentences": [
+        { "english": "He ordered a tailor-made suit for his wedding.", "vietnamese": "Anh ấy đặt may một bộ vest cho đám cưới của mình." },
+        { "english": "Tailor-made clothes are more expensive than ready-made ones.", "vietnamese": "Quần áo may đo đắt hơn đồ may sẵn." },
+        { "english": "Hoi An is famous for tailor-made dresses.", "vietnamese": "Hội An nổi tiếng với những chiếc váy may đo." },
+        { "english": "Her tailor-made jacket fits perfectly.", "vietnamese": "Chiếc áo khoác may đo của cô ấy vừa như in." },
+        { "english": "Our tour included a visit to a tailor-made clothing shop.", "vietnamese": "Chuyến tham quan của chúng tôi có ghé một tiệm may đo." }
+      ]
+    },
+    {
+      "word": "old-fashioned",
+      "sentences": [
+        { "english": "Grandpa still wears old-fashioned ties to parties.", "vietnamese": "Ông vẫn đeo những chiếc cà vạt lỗi thời đi dự tiệc." },
+        { "english": "Her parents have old-fashioned ideas about marriage.", "vietnamese": "Bố mẹ cô ấy có quan niệm cổ hủ về hôn nhân." },
+        { "english": "This old-fashioned radio still works well.", "vietnamese": "Chiếc radio kiểu cũ này vẫn chạy tốt." },
+        { "english": "That old-fashioned jacket looks surprisingly stylish now.", "vietnamese": "Chiếc áo khoác lỗi thời ấy giờ trông sành điệu đến bất ngờ." },
+        { "english": "We stayed in an old-fashioned homestay in the mountains.", "vietnamese": "Chúng tôi ở một homestay kiểu xưa trên núi." }
+      ]
+    },
+    {
+      "word": "mend",
+      "sentences": [
+        { "english": "My grandmother mended the hole in my sock.", "vietnamese": "Bà đã vá lỗ thủng trên chiếc tất của tôi." },
+        { "english": "The tailor mended my torn sleeve for free.", "vietnamese": "Bác thợ may vá miễn phí ống tay áo bị rách cho tôi." },
+        { "english": "Can you mend the pocket on my favourite jacket?", "vietnamese": "Bạn vá giúp tôi chiếc túi trên áo khoác yêu thích được không?" },
+        { "english": "Mending old clothes helps you save money.", "vietnamese": "Vá lại quần áo cũ giúp bạn tiết kiệm tiền." },
+        { "english": "She learned to mend clothes during the war.", "vietnamese": "Bà ấy học vá quần áo trong thời chiến." }
+      ]
+    },
+    {
+      "word": "undress",
+      "sentences": [
+        { "english": "The baby cried when we tried to undress her.", "vietnamese": "Em bé khóc khi chúng tôi cởi quần áo cho bé." },
+        { "english": "He undressed quickly and jumped into the pool.", "vietnamese": "Anh ấy cởi đồ thật nhanh rồi nhảy xuống bể bơi." },
+        { "english": "Please undress behind the curtain for the check-up.", "vietnamese": "Vui lòng cởi quần áo sau tấm rèm để khám bệnh." },
+        { "english": "The nurse helped the old patient undress.", "vietnamese": "Cô y tá giúp bệnh nhân lớn tuổi cởi quần áo." },
+        { "english": "She was too exhausted to undress before sleeping.", "vietnamese": "Cô ấy mệt đến mức không thay đồ trước khi ngủ." }
+      ]
+    },
+    {
+      "word": "sleeve",
+      "sentences": [
+        { "english": "The sleeves of this cheap shirt are too long.", "vietnamese": "Tay áo của chiếc sơ mi rẻ tiền này quá dài." },
+        { "english": "He rolled up his sleeves and started to cook.", "vietnamese": "Anh ấy xắn tay áo lên và bắt đầu nấu ăn." },
+        { "english": "Short sleeves are better in humid weather.", "vietnamese": "Áo cộc tay mặc hợp hơn khi trời ẩm." },
+        { "english": "She spilled coffee on her white sleeve.", "vietnamese": "Cô ấy làm đổ cà phê lên ống tay áo trắng." },
+        { "english": "The tailor shortened the sleeves for a small fee.", "vietnamese": "Thợ may cắt ngắn tay áo với giá rẻ." }
+      ]
+    },
+    {
+      "word": "collar",
+      "sentences": [
+        { "english": "His shirt collar was dirty after work.", "vietnamese": "Cổ áo sơ mi của anh ấy bị bẩn sau giờ làm." },
+        { "english": "This dress has a lovely lace collar.", "vietnamese": "Chiếc váy này có cổ áo ren rất xinh." },
+        { "english": "He loosened his collar after the long interview.", "vietnamese": "Anh ấy nới cổ áo sau buổi phỏng vấn dài." },
+        { "english": "My dog wears a red collar with his name on it.", "vietnamese": "Con chó của tôi đeo vòng cổ đỏ có khắc tên nó." },
+        { "english": "The jacket has a fur collar for the winter.", "vietnamese": "Chiếc áo khoác có cổ lông cho mùa đông." }
+      ]
+    },
+    {
+      "word": "shorts",
+      "sentences": [
+        { "english": "Tourists wear shorts and flip-flops in summer.", "vietnamese": "Du khách mặc quần soóc và đi dép tông vào mùa hè." },
+        { "english": "You cannot wear shorts inside the temple.", "vietnamese": "Bạn không được mặc quần soóc vào trong đền." },
+        { "english": "He bought three pairs of shorts in the sale.", "vietnamese": "Anh ấy mua ba chiếc quần soóc trong đợt giảm giá." },
+        { "english": "My brother plays badminton in shorts and a cap.", "vietnamese": "Anh tôi chơi cầu lông với quần soóc và mũ lưỡi trai." },
+        { "english": "These cotton shorts are perfect for a beach holiday.", "vietnamese": "Chiếc quần soóc cotton này rất hợp cho kỳ nghỉ biển." }
+      ]
+    }
+  ]
+}

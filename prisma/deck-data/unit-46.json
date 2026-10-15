@@ -1,0 +1,274 @@
+{
+  "deck": {
+    "name": "Unit 46: Đại học và thi cử",
+    "description": "24 từ vựng về đại học, học tập và thi cử",
+    "color": "#3b82f6",
+    "icon": "🎓"
+  },
+  "cards": [
+    {
+      "word": "professor",
+      "meaning": "giáo sư",
+      "partOfSpeech": "noun",
+      "phonetic": "/prəˈfesə(r)/",
+      "example": "The professor assigned lots of homework.",
+      "exampleTranslation": "Giáo sư giao rất nhiều bài tập về nhà.",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "word": "warn",
+      "meaning": "cảnh báo",
+      "partOfSpeech": "verb",
+      "phonetic": "/wɔːn/",
+      "example": "The teacher warned us not to be late.",
+      "exampleTranslation": "Giáo viên đã cảnh báo chúng tôi không được đến muộn.",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "word": "complete",
+      "meaning": "hoàn thành",
+      "partOfSpeech": "verb",
+      "phonetic": "/kəmˈpliːt/",
+      "example": "You must complete the form before Friday.",
+      "exampleTranslation": "Bạn phải hoàn thành mẫu đơn trước thứ Sáu.",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "word": "provide",
+      "meaning": "cung cấp",
+      "partOfSpeech": "verb",
+      "phonetic": "/prəˈvaɪd/",
+      "example": "The library provides free internet for students.",
+      "exampleTranslation": "Thư viện cung cấp internet miễn phí cho sinh viên.",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "word": "application",
+      "meaning": "đơn đăng ký",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˌæplɪˈkeɪʃn/",
+      "example": "I sent my application to three universities.",
+      "exampleTranslation": "Tôi đã gửi hồ sơ xin học đến ba trường đại học.",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "word": "degree",
+      "meaning": "bằng cấp (đại học)",
+      "partOfSpeech": "noun",
+      "phonetic": "/dɪˈɡriː/",
+      "example": "She has a degree in economics.",
+      "exampleTranslation": "Cô ấy có bằng cử nhân kinh tế.",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "word": "advanced",
+      "meaning": "nâng cao",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ədˈvɑːnst/",
+      "example": "This is an advanced English course.",
+      "exampleTranslation": "Đây là một khóa học tiếng Anh nâng cao.",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "word": "stress",
+      "meaning": "căng thẳng",
+      "partOfSpeech": "noun",
+      "phonetic": "/stres/",
+      "example": "Exams cause a lot of stress for students.",
+      "exampleTranslation": "Các kỳ thi gây ra rất nhiều căng thẳng cho học sinh.",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "word": "poetry",
+      "meaning": "thơ ca",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈpəʊətri/",
+      "example": "We studied modern poetry this semester.",
+      "exampleTranslation": "Học kỳ này chúng tôi học thơ hiện đại.",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "word": "lecture",
+      "meaning": "bài giảng",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈlektʃə(r)/",
+      "example": "The lecture starts at eight o'clock.",
+      "exampleTranslation": "Bài giảng bắt đầu lúc tám giờ.",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "word": "further",
+      "meaning": "thêm, xa hơn",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˈfɜːðə(r)/",
+      "example": "Contact us for further information.",
+      "exampleTranslation": "Hãy liên hệ với chúng tôi để biết thêm thông tin.",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "word": "qualification",
+      "meaning": "bằng cấp, trình độ chuyên môn",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˌkwɒlɪfɪˈkeɪʃn/",
+      "example": "You need the right qualifications for this job.",
+      "exampleTranslation": "Bạn cần có bằng cấp phù hợp cho công việc này.",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "word": "instructor",
+      "meaning": "người hướng dẫn",
+      "partOfSpeech": "noun",
+      "phonetic": "/ɪnˈstrʌktə(r)/",
+      "example": "Our yoga instructor is very patient.",
+      "exampleTranslation": "Huấn luyện viên yoga của chúng tôi rất kiên nhẫn.",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "word": "session",
+      "meaning": "buổi, phiên",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈseʃn/",
+      "example": "The training session lasts two hours.",
+      "exampleTranslation": "Buổi đào tạo kéo dài hai tiếng.",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "word": "plan",
+      "meaning": "lên kế hoạch",
+      "partOfSpeech": "verb",
+      "phonetic": "/plæn/",
+      "example": "I plan to study abroad next year.",
+      "exampleTranslation": "Tôi dự định đi du học vào năm sau.",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "word": "achieve",
+      "meaning": "đạt được",
+      "partOfSpeech": "verb",
+      "phonetic": "/əˈtʃiːv/",
+      "example": "She achieved the highest score in her class.",
+      "exampleTranslation": "Cô ấy đạt điểm cao nhất lớp.",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "word": "term",
+      "meaning": "học kỳ",
+      "partOfSpeech": "noun",
+      "phonetic": "/tɜːm/",
+      "example": "The new term begins in September.",
+      "exampleTranslation": "Học kỳ mới bắt đầu vào tháng Chín.",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "word": "presentation",
+      "meaning": "bài thuyết trình",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˌpreznˈteɪʃn/",
+      "example": "I have to give a presentation tomorrow.",
+      "exampleTranslation": "Ngày mai tôi phải thuyết trình.",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "word": "major",
+      "meaning": "chuyên ngành",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈmeɪdʒə(r)/",
+      "example": "My major is computer science.",
+      "exampleTranslation": "Chuyên ngành của tôi là khoa học máy tính.",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "word": "university",
+      "meaning": "trường đại học",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˌjuːnɪˈvɜːsəti/",
+      "example": "He got into a top university.",
+      "exampleTranslation": "Anh ấy đã đỗ vào một trường đại học hàng đầu.",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "word": "exam",
+      "meaning": "kỳ thi",
+      "partOfSpeech": "noun",
+      "phonetic": "/ɪɡˈzæm/",
+      "example": "The final exam is next Monday.",
+      "exampleTranslation": "Kỳ thi cuối kỳ là vào thứ Hai tới.",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "word": "fail",
+      "meaning": "trượt, thất bại",
+      "partOfSpeech": "verb",
+      "phonetic": "/feɪl/",
+      "example": "He failed his driving test twice.",
+      "exampleTranslation": "Anh ấy đã trượt kỳ thi lái xe hai lần.",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "word": "score",
+      "meaning": "điểm số",
+      "partOfSpeech": "noun",
+      "phonetic": "/skɔː(r)/",
+      "example": "What was your score on the test?",
+      "exampleTranslation": "Bạn được bao nhiêu điểm trong bài kiểm tra?",
+      "tags": [
+        "education"
+      ]
+    },
+    {
+      "word": "focused",
+      "meaning": "tập trung",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˈfəʊkəst/",
+      "example": "Stay focused during the exam.",
+      "exampleTranslation": "Hãy giữ tập trung trong lúc làm bài thi.",
+      "tags": [
+        "education"
+      ]
+    }
+  ]
+}

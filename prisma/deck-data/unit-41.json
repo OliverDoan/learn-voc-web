@@ -1,0 +1,274 @@
+{
+  "deck": {
+    "name": "Unit 41: Mua sắm",
+    "description": "24 từ vựng về mua sắm, giảm giá, đổi trả và thanh toán",
+    "color": "#f59e0b",
+    "icon": "🛍️"
+  },
+  "cards": [
+    {
+      "word": "shopaholic",
+      "meaning": "người nghiện mua sắm",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˌʃɒp.əˈhɒl.ɪk/",
+      "example": "She's an absolute shopaholic and usually spends so much money.",
+      "exampleTranslation": "Cô ấy là một người nghiện mua sắm thực thụ và thường tiêu rất nhiều tiền.",
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "word": "shopping",
+      "meaning": "việc mua sắm",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈʃɒpɪŋ/",
+      "example": "We go shopping every Saturday.",
+      "exampleTranslation": "Chúng tôi đi mua sắm vào mỗi thứ Bảy.",
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "word": "mall",
+      "meaning": "trung tâm thương mại",
+      "partOfSpeech": "noun",
+      "phonetic": "/mɔːl/",
+      "example": "The new mall is always crowded at weekends.",
+      "exampleTranslation": "Trung tâm thương mại mới lúc nào cũng đông đúc vào cuối tuần.",
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "word": "sale",
+      "meaning": "đợt giảm giá; sự bán",
+      "partOfSpeech": "noun",
+      "phonetic": "/seɪl/",
+      "example": "These shoes are on sale this week.",
+      "exampleTranslation": "Đôi giày này đang được giảm giá trong tuần này.",
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "word": "clearance",
+      "meaning": "xả hàng, thanh lý",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈklɪərəns/",
+      "example": "Everything in the clearance section is half price.",
+      "exampleTranslation": "Mọi thứ ở khu xả hàng đều được giảm nửa giá.",
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "word": "delivery",
+      "meaning": "việc giao hàng",
+      "partOfSpeech": "noun",
+      "phonetic": "/dɪˈlɪvəri/",
+      "example": "Delivery is free for orders over 500,000 dong.",
+      "exampleTranslation": "Miễn phí giao hàng cho đơn từ 500.000 đồng trở lên.",
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "word": "rare",
+      "meaning": "hiếm",
+      "partOfSpeech": "adjective",
+      "phonetic": "/reə(r)/",
+      "example": "This is a rare stamp, so it's very expensive.",
+      "exampleTranslation": "Đây là một con tem hiếm nên nó rất đắt.",
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "word": "unusual",
+      "meaning": "khác thường, lạ",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ʌnˈjuːʒuəl/",
+      "example": "She bought an unusual lamp shaped like a cat.",
+      "exampleTranslation": "Cô ấy đã mua một chiếc đèn lạ mắt có hình con mèo.",
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "word": "order",
+      "meaning": "đặt hàng",
+      "partOfSpeech": "verb",
+      "phonetic": "/ˈɔːdə(r)/",
+      "example": "I ordered a new phone case online.",
+      "exampleTranslation": "Tôi đã đặt mua một chiếc ốp điện thoại mới trên mạng.",
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "word": "seller",
+      "meaning": "người bán",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈselə(r)/",
+      "example": "The seller gave me a small discount.",
+      "exampleTranslation": "Người bán đã giảm giá cho tôi một chút.",
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "word": "bargain",
+      "meaning": "món hời",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈbɑːɡɪn/",
+      "example": "At only 50,000 dong, this shirt is a real bargain.",
+      "exampleTranslation": "Chỉ với 50.000 đồng, chiếc áo này thật sự là một món hời.",
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "word": "damaged",
+      "meaning": "bị hư hỏng",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˈdæmɪdʒd/",
+      "example": "The box arrived damaged.",
+      "exampleTranslation": "Chiếc hộp được giao đến trong tình trạng bị hư hỏng.",
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "word": "ancient",
+      "meaning": "cổ xưa",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˈeɪnʃənt/",
+      "example": "He collects ancient coins.",
+      "exampleTranslation": "Anh ấy sưu tầm tiền xu cổ.",
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "word": "receipt",
+      "meaning": "hóa đơn, biên lai",
+      "partOfSpeech": "noun",
+      "phonetic": "/rɪˈsiːt/",
+      "example": "Keep the receipt in case you want to return it.",
+      "exampleTranslation": "Hãy giữ hóa đơn phòng khi bạn muốn trả lại hàng.",
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "word": "return",
+      "meaning": "trả lại (hàng)",
+      "partOfSpeech": "verb",
+      "phonetic": "/rɪˈtɜːn/",
+      "example": "I returned the jacket because it was too small.",
+      "exampleTranslation": "Tôi đã trả lại chiếc áo khoác vì nó quá nhỏ.",
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "word": "shelf",
+      "meaning": "kệ, giá",
+      "partOfSpeech": "noun",
+      "phonetic": "/ʃelf/",
+      "example": "The milk is on the bottom shelf.",
+      "exampleTranslation": "Sữa ở trên kệ dưới cùng.",
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "word": "cash",
+      "meaning": "tiền mặt",
+      "partOfSpeech": "noun",
+      "phonetic": "/kæʃ/",
+      "example": "Do you pay by card or in cash?",
+      "exampleTranslation": "Bạn thanh toán bằng thẻ hay tiền mặt?",
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "word": "inexpensive",
+      "meaning": "không đắt, rẻ",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˌɪnɪkˈspensɪv/",
+      "example": "This market sells inexpensive clothes.",
+      "exampleTranslation": "Chợ này bán quần áo giá rẻ.",
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "word": "overspend",
+      "meaning": "tiêu quá tay",
+      "partOfSpeech": "verb",
+      "phonetic": "/ˌəʊvəˈspend/",
+      "example": "I always overspend during the holidays.",
+      "exampleTranslation": "Tôi luôn tiêu quá tay vào những dịp lễ.",
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "word": "exchange",
+      "meaning": "đổi (hàng)",
+      "partOfSpeech": "verb",
+      "phonetic": "/ɪksˈtʃeɪndʒ/",
+      "example": "Can I exchange this for a bigger size?",
+      "exampleTranslation": "Tôi có thể đổi cái này lấy cỡ lớn hơn không?",
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "word": "wholesale",
+      "meaning": "(bán) sỉ, bán buôn",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˈhəʊlseɪl/",
+      "example": "Shop owners buy goods at wholesale prices.",
+      "exampleTranslation": "Các chủ cửa hàng mua hàng với giá bán sỉ.",
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "word": "cancel",
+      "meaning": "hủy",
+      "partOfSpeech": "verb",
+      "phonetic": "/ˈkænsl/",
+      "example": "She cancelled the order before it was shipped.",
+      "exampleTranslation": "Cô ấy đã hủy đơn hàng trước khi nó được gửi đi.",
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "word": "discount",
+      "meaning": "sự giảm giá",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈdɪskaʊnt/",
+      "example": "Students get a 10% discount.",
+      "exampleTranslation": "Sinh viên được giảm giá 10%.",
+      "tags": [
+        "shopping"
+      ]
+    },
+    {
+      "word": "gift",
+      "meaning": "quà tặng",
+      "partOfSpeech": "noun",
+      "phonetic": "/ɡɪft/",
+      "example": "I bought a gift for my mum's birthday.",
+      "exampleTranslation": "Tôi đã mua một món quà cho sinh nhật mẹ.",
+      "tags": [
+        "shopping"
+      ]
+    }
+  ]
+}

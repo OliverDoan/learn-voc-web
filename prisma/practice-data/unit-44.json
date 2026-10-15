@@ -1,0 +1,247 @@
+{
+  "unit": 44,
+  "deck": "Unit 44: Thói quen hằng ngày",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "comb",
+      "sentences": [
+        { "english": "She combs her hair before every interview.", "vietnamese": "Cô ấy chải tóc trước mỗi buổi phỏng vấn." },
+        { "english": "My little brother never combs his messy hair.", "vietnamese": "Em trai tôi chẳng bao giờ chải mái tóc rối bù." },
+        { "english": "I bought a wooden comb at the local market.", "vietnamese": "Tôi mua một chiếc lược gỗ ở chợ địa phương." },
+        { "english": "Grandma combs her long hair with a silver comb.", "vietnamese": "Bà chải mái tóc dài bằng chiếc lược bạc." },
+        { "english": "He combed his hair carefully for the wedding.", "vietnamese": "Anh ấy chải tóc thật cẩn thận để đi đám cưới." }
+      ]
+    },
+    {
+      "word": "workload",
+      "sentences": [
+        { "english": "My workload is heavy before the holiday.", "vietnamese": "Khối lượng công việc của tôi rất nặng trước kỳ nghỉ." },
+        { "english": "The manager tried to reduce our workload.", "vietnamese": "Quản lý đã cố giảm bớt khối lượng công việc cho chúng tôi." },
+        { "english": "A huge workload makes every week stressful.", "vietnamese": "Khối lượng công việc khổng lồ khiến tuần nào cũng căng thẳng." },
+        { "english": "Students have a bigger workload during exam season.", "vietnamese": "Sinh viên có nhiều việc hơn vào mùa thi." },
+        { "english": "She shares the workload with her assistant.", "vietnamese": "Cô ấy chia sẻ khối lượng công việc với trợ lý." }
+      ]
+    },
+    {
+      "word": "reschedule",
+      "sentences": [
+        { "english": "We had to reschedule the meeting because of the typhoon.", "vietnamese": "Chúng tôi phải dời cuộc họp vì cơn bão." },
+        { "english": "The dentist rescheduled my appointment to Friday.", "vietnamese": "Nha sĩ đã dời lịch hẹn của tôi sang thứ Sáu." },
+        { "english": "Can we reschedule the interview for next week?", "vietnamese": "Chúng ta có thể dời buổi phỏng vấn sang tuần sau không?" },
+        { "english": "The concert was rescheduled due to heavy rain.", "vietnamese": "Buổi hòa nhạc bị dời lịch vì mưa lớn." },
+        { "english": "I rescheduled my flight because of a family emergency.", "vietnamese": "Tôi đổi lịch bay vì nhà có việc khẩn cấp." }
+      ]
+    },
+    {
+      "word": "housework",
+      "sentences": [
+        { "english": "My housemate never helps with the housework.", "vietnamese": "Bạn cùng nhà của tôi chẳng bao giờ phụ việc nhà." },
+        { "english": "Housework is less tiring when everyone helps.", "vietnamese": "Việc nhà đỡ mệt hơn khi mọi người cùng giúp." },
+        { "english": "We share the housework equally at home.", "vietnamese": "Ở nhà chúng tôi chia đều việc nhà." },
+        { "english": "He listens to pop songs while doing housework.", "vietnamese": "Anh ấy nghe nhạc pop trong lúc làm việc nhà." },
+        { "english": "Robots can do some housework nowadays.", "vietnamese": "Ngày nay rô-bốt có thể làm một số việc nhà." }
+      ]
+    },
+    {
+      "word": "mess",
+      "sentences": [
+        { "english": "The party left a terrible mess in the kitchen.", "vietnamese": "Bữa tiệc để lại một đống bừa bộn kinh khủng trong bếp." },
+        { "english": "My room is a mess after the exam week.", "vietnamese": "Phòng tôi bừa bộn sau tuần thi." },
+        { "english": "Who made this mess on the carpet?", "vietnamese": "Ai bày bừa ra tấm thảm thế này?" },
+        { "english": "The kids made a mess with their colourful paints.", "vietnamese": "Bọn trẻ bày bừa với đống màu vẽ sặc sỡ." },
+        { "english": "Clean up the mess before your parents return.", "vietnamese": "Dọn đống bừa bộn trước khi bố mẹ về đi." }
+      ]
+    },
+    {
+      "word": "return",
+      "sentences": [
+        { "english": "My father returns home exhausted every evening.", "vietnamese": "Tối nào bố tôi cũng trở về nhà trong tình trạng kiệt sức." },
+        { "english": "She returned from her journey abroad yesterday.", "vietnamese": "Hôm qua cô ấy đã trở về sau chuyến đi nước ngoài." },
+        { "english": "Birds return to the valley every spring.", "vietnamese": "Chim trở về thung lũng mỗi mùa xuân." },
+        { "english": "When I returned, the flat was a complete mess.", "vietnamese": "Khi tôi trở về, căn hộ bừa bộn hết cả." },
+        { "english": "He returned to his hometown after ten years.", "vietnamese": "Anh ấy trở về quê sau mười năm." }
+      ]
+    },
+    {
+      "word": "become",
+      "sentences": [
+        { "english": "Jogging has become part of my daily life.", "vietnamese": "Chạy bộ đã trở thành một phần cuộc sống hằng ngày của tôi." },
+        { "english": "She wants to become a famous chef.", "vietnamese": "Cô ấy muốn trở thành một đầu bếp nổi tiếng." },
+        { "english": "The weather becomes very humid in summer.", "vietnamese": "Thời tiết trở nên rất ẩm vào mùa hè." },
+        { "english": "Our small town is becoming more crowded.", "vietnamese": "Thị trấn nhỏ của chúng tôi đang ngày càng đông đúc." },
+        { "english": "Cooking becomes fun when you follow a good recipe.", "vietnamese": "Nấu ăn trở nên thú vị khi bạn làm theo một công thức hay." }
+      ]
+    },
+    {
+      "word": "dirty",
+      "sentences": [
+        { "english": "Put your dirty socks in the basket.", "vietnamese": "Bỏ đôi tất bẩn của con vào giỏ đi." },
+        { "english": "The kitchen floor gets dirty after cooking.", "vietnamese": "Sàn bếp bị bẩn sau khi nấu ăn." },
+        { "english": "Never eat snacks with dirty hands.", "vietnamese": "Đừng bao giờ ăn vặt khi tay còn bẩn." },
+        { "english": "His jeans were dirty after the football match.", "vietnamese": "Quần bò của anh ấy bẩn sau trận bóng." },
+        { "english": "The dirty dishes are still in the sink.", "vietnamese": "Bát đĩa bẩn vẫn còn trong bồn rửa." }
+      ]
+    },
+    {
+      "word": "midday",
+      "sentences": [
+        { "english": "The sun is extremely hot at midday.", "vietnamese": "Mặt trời cực kỳ gay gắt vào buổi trưa." },
+        { "english": "We had a quick snack at midday.", "vietnamese": "Chúng tôi ăn vặt nhanh vào buổi trưa." },
+        { "english": "The market is busy until midday.", "vietnamese": "Chợ đông đúc đến tận trưa." },
+        { "english": "He usually takes a short rest at midday.", "vietnamese": "Anh ấy thường nghỉ ngơi một chút vào buổi trưa." },
+        { "english": "The midday heat makes me feel lazy.", "vietnamese": "Cái nóng buổi trưa khiến tôi thấy uể oải." }
+      ]
+    },
+    {
+      "word": "same",
+      "sentences": [
+        { "english": "She wears the same jacket every day.", "vietnamese": "Ngày nào cô ấy cũng mặc cùng một chiếc áo khoác." },
+        { "english": "We live in the same neighbourhood.", "vietnamese": "Chúng tôi sống cùng một khu phố." },
+        { "english": "My twin and I have the same nickname.", "vietnamese": "Tôi và anh em sinh đôi có cùng một biệt danh." },
+        { "english": "He orders the same coffee every morning.", "vietnamese": "Sáng nào anh ấy cũng gọi cùng một loại cà phê." },
+        { "english": "These two shirts are the same price.", "vietnamese": "Hai chiếc áo này có giá như nhau." }
+      ]
+    },
+    {
+      "word": "perfectly",
+      "sentences": [
+        { "english": "The new shirt fits him perfectly.", "vietnamese": "Chiếc áo sơ mi mới vừa khít với anh ấy." },
+        { "english": "The cake was perfectly baked by the chef.", "vietnamese": "Chiếc bánh được đầu bếp nướng hoàn hảo." },
+        { "english": "Her outfit suited the occasion perfectly.", "vietnamese": "Trang phục của cô ấy hoàn toàn phù hợp với dịp này." },
+        { "english": "Everything went perfectly at the wedding.", "vietnamese": "Mọi thứ ở đám cưới đều diễn ra hoàn hảo." },
+        { "english": "He speaks the language perfectly now.", "vietnamese": "Giờ anh ấy nói ngôn ngữ đó một cách hoàn hảo." }
+      ]
+    },
+    {
+      "word": "float",
+      "sentences": [
+        { "english": "Yellow flowers float on the quiet lake.", "vietnamese": "Những bông hoa vàng nổi trên mặt hồ yên ả." },
+        { "english": "Lanterns float on the river during the festival.", "vietnamese": "Đèn hoa đăng trôi trên sông trong dịp lễ hội." },
+        { "english": "The children watched their paper boats float away.", "vietnamese": "Bọn trẻ nhìn những chiếc thuyền giấy trôi đi xa." },
+        { "english": "Oil floats on water because it is lighter.", "vietnamese": "Dầu nổi trên nước vì nó nhẹ hơn." },
+        { "english": "We floated in the calm sea for an hour.", "vietnamese": "Chúng tôi thả mình nổi trên mặt biển lặng suốt một tiếng." }
+      ]
+    },
+    {
+      "word": "broom",
+      "sentences": [
+        { "english": "Grandma sweeps the yard with a bamboo broom.", "vietnamese": "Bà quét sân bằng một cái chổi tre." },
+        { "english": "I bought a new broom at the local market.", "vietnamese": "Tôi mua một cái chổi mới ở chợ địa phương." },
+        { "english": "Use a broom to sweep the dust off the balcony.", "vietnamese": "Dùng chổi quét sạch bụi ngoài ban công." },
+        { "english": "Our old broom has lost most of its bristles.", "vietnamese": "Cái chổi cũ nhà tôi đã rụng gần hết sợi." },
+        { "english": "My brother pretends his broom is a guitar.", "vietnamese": "Em trai tôi giả vờ cây chổi là cây đàn ghi-ta." }
+      ]
+    },
+    {
+      "word": "order",
+      "sentences": [
+        { "english": "My neat roommate keeps everything in order.", "vietnamese": "Bạn cùng phòng ngăn nắp của tôi giữ mọi thứ gọn gàng." },
+        { "english": "Put your books in order on the shelf.", "vietnamese": "Xếp sách của con ngay ngắn lên giá đi." },
+        { "english": "Her life is in order after years of difficulty.", "vietnamese": "Cuộc sống của cô ấy đã đâu vào đấy sau nhiều năm khó khăn." },
+        { "english": "A tidy room helps keep your mind in order.", "vietnamese": "Căn phòng gọn gàng giúp đầu óc bạn ngăn nắp." },
+        { "english": "The files are arranged in alphabetical order.", "vietnamese": "Các tập hồ sơ được sắp xếp theo thứ tự bảng chữ cái." }
+      ]
+    },
+    {
+      "word": "dish",
+      "sentences": [
+        { "english": "It is my turn to do the dishes tonight.", "vietnamese": "Tối nay đến lượt tôi rửa bát đĩa." },
+        { "english": "Do not leave dirty dishes in the sink.", "vietnamese": "Đừng để bát đĩa bẩn trong bồn rửa." },
+        { "english": "She dropped a dish and it broke.", "vietnamese": "Cô ấy làm rơi một chiếc đĩa và nó vỡ tan." },
+        { "english": "The dishes are dry, so put them away.", "vietnamese": "Bát đĩa khô rồi, cất đi nhé." },
+        { "english": "My housemate washes the dishes after dinner.", "vietnamese": "Bạn cùng nhà tôi rửa bát sau bữa tối." }
+      ]
+    },
+    {
+      "word": "alarm",
+      "sentences": [
+        { "english": "I always set my alarm before sleeping.", "vietnamese": "Tôi luôn đặt báo thức trước khi ngủ." },
+        { "english": "My alarm did not ring, so I missed the flight.", "vietnamese": "Báo thức không reo nên tôi lỡ chuyến bay." },
+        { "english": "He turns off the alarm and goes back to sleep.", "vietnamese": "Anh ấy tắt báo thức rồi ngủ tiếp." },
+        { "english": "The alarm on my phone is too loud.", "vietnamese": "Chuông báo thức trên điện thoại của tôi quá to." },
+        { "english": "Set two alarms if you have an important interview.", "vietnamese": "Hãy đặt hai báo thức nếu bạn có buổi phỏng vấn quan trọng." }
+      ]
+    },
+    {
+      "word": "routine",
+      "sentences": [
+        { "english": "Exercise is part of my morning routine.", "vietnamese": "Tập thể dục là một phần thói quen buổi sáng của tôi." },
+        { "english": "A daily routine helps me stay calm.", "vietnamese": "Nếp sinh hoạt hằng ngày giúp tôi giữ bình tĩnh." },
+        { "english": "Her routine changed after the baby was born.", "vietnamese": "Thói quen hằng ngày của cô ấy thay đổi sau khi em bé chào đời." },
+        { "english": "He meditates as part of his evening routine.", "vietnamese": "Anh ấy thiền như một phần thói quen buổi tối." },
+        { "english": "Breaking a bad routine is hard.", "vietnamese": "Bỏ một thói quen xấu thật khó." }
+      ]
+    },
+    {
+      "word": "boredom",
+      "sentences": [
+        { "english": "He plays games online out of boredom.", "vietnamese": "Anh ấy chơi game trực tuyến vì buồn chán." },
+        { "english": "Boredom made her eat too many snacks.", "vietnamese": "Buồn chán khiến cô ấy ăn quá nhiều đồ ăn vặt." },
+        { "english": "Reading helps me fight boredom on long journeys.", "vietnamese": "Đọc sách giúp tôi chống lại sự buồn chán trên những chuyến đi dài." },
+        { "english": "The children cried from boredom during the long flight.", "vietnamese": "Bọn trẻ khóc vì buồn chán trong chuyến bay dài." },
+        { "english": "Some people overspend because of boredom.", "vietnamese": "Có người tiêu quá tay chỉ vì buồn chán." }
+      ]
+    },
+    {
+      "word": "weekly",
+      "sentences": [
+        { "english": "We do the weekly shopping on Saturday.", "vietnamese": "Chúng tôi đi mua sắm hằng tuần vào thứ Bảy." },
+        { "english": "She writes a weekly blog about cooking.", "vietnamese": "Cô ấy viết blog hằng tuần về nấu ăn." },
+        { "english": "Our team has a weekly meeting every Monday.", "vietnamese": "Nhóm chúng tôi có cuộc họp hằng tuần vào thứ Hai." },
+        { "english": "My weekly budget for food is quite small.", "vietnamese": "Ngân sách ăn uống hằng tuần của tôi khá ít." },
+        { "english": "They have a weekly football match on Sunday.", "vietnamese": "Họ có trận bóng hằng tuần vào Chủ nhật." }
+      ]
+    },
+    {
+      "word": "wash",
+      "sentences": [
+        { "english": "Always wash your hands before cooking.", "vietnamese": "Luôn rửa tay trước khi nấu ăn." },
+        { "english": "He washes his motorbike every Sunday.", "vietnamese": "Chủ nhật nào anh ấy cũng rửa xe máy." },
+        { "english": "My jeans became too tight after I washed them.", "vietnamese": "Chiếc quần bò bị chật sau khi tôi giặt." },
+        { "english": "Wash the vegetables carefully before cooking.", "vietnamese": "Rửa rau thật kỹ trước khi nấu." },
+        { "english": "She washes her face with cold water.", "vietnamese": "Cô ấy rửa mặt bằng nước lạnh." }
+      ]
+    },
+    {
+      "word": "reduce",
+      "sentences": [
+        { "english": "Regular exercise can reduce stress.", "vietnamese": "Tập thể dục đều đặn có thể giảm căng thẳng." },
+        { "english": "The shop reduced its prices for the clearance.", "vietnamese": "Cửa hàng giảm giá để xả hàng." },
+        { "english": "We should reduce the amount of sugar we eat.", "vietnamese": "Chúng ta nên giảm lượng đường ăn vào." },
+        { "english": "Cycling to work reduces air pollution.", "vietnamese": "Đạp xe đi làm giúp giảm ô nhiễm không khí." },
+        { "english": "A good plan can reduce stressful moments.", "vietnamese": "Một kế hoạch tốt có thể giảm bớt những lúc căng thẳng." }
+      ]
+    },
+    {
+      "word": "oversleep",
+      "sentences": [
+        { "english": "Do not oversleep, or you will miss the flight.", "vietnamese": "Đừng ngủ quên, kẻo lỡ chuyến bay." },
+        { "english": "I often oversleep on rainy mornings.", "vietnamese": "Tôi hay ngủ quên vào những buổi sáng mưa." },
+        { "english": "She oversleeps when she stays up late.", "vietnamese": "Cô ấy ngủ quên mỗi khi thức khuya." },
+        { "english": "Oversleeping made him late for the interview.", "vietnamese": "Ngủ quên khiến anh ấy đến muộn buổi phỏng vấn." },
+        { "english": "Oversleeping at the weekend makes me feel lazy.", "vietnamese": "Ngủ nướng cuối tuần khiến tôi thấy uể oải." }
+      ]
+    },
+    {
+      "word": "dust",
+      "sentences": [
+        { "english": "The old bookshelf is covered in dust.", "vietnamese": "Chiếc giá sách cũ phủ đầy bụi." },
+        { "english": "She dusts the furniture every Saturday.", "vietnamese": "Thứ Bảy nào cô ấy cũng lau bụi đồ đạc." },
+        { "english": "Dust from the highway gets into our flat.", "vietnamese": "Bụi từ đường cao tốc bay vào căn hộ của chúng tôi." },
+        { "english": "Dust can make a cough worse.", "vietnamese": "Bụi có thể làm cơn ho nặng hơn." },
+        { "english": "There was thick dust on the antique clock.", "vietnamese": "Chiếc đồng hồ cổ phủ một lớp bụi dày." }
+      ]
+    },
+    {
+      "word": "repeat",
+      "sentences": [
+        { "english": "Please repeat the address slowly.", "vietnamese": "Vui lòng nhắc lại địa chỉ thật chậm." },
+        { "english": "The teacher repeated the new vocabulary three times.", "vietnamese": "Giáo viên nhắc lại từ vựng mới ba lần." },
+        { "english": "I do not want to repeat the same mistake.", "vietnamese": "Tôi không muốn lặp lại sai lầm cũ." },
+        { "english": "Repeating new words helps me memorise them.", "vietnamese": "Lặp lại từ mới giúp tôi ghi nhớ chúng." },
+        { "english": "The radio repeats the weather forecast every hour.", "vietnamese": "Đài phát thanh phát lại bản tin dự báo thời tiết mỗi giờ." }
+      ]
+    }
+  ]
+}

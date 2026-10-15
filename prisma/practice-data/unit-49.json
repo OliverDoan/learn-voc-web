@@ -1,0 +1,607 @@
+{
+  "unit": 49,
+  "deck": "Unit 49: Khởi nghiệp và tài chính",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "start-up",
+      "sentences": [
+        {
+          "english": "He gave up a safe office job to join a start-up.",
+          "vietnamese": "Anh ấy bỏ một công việc văn phòng ổn định để về làm cho một công ty khởi nghiệp."
+        },
+        {
+          "english": "Many start-ups fail in their first year.",
+          "vietnamese": "Nhiều công ty khởi nghiệp thất bại ngay trong năm đầu tiên."
+        },
+        {
+          "english": "Her start-up develops apps for language learners.",
+          "vietnamese": "Công ty khởi nghiệp của cô ấy phát triển ứng dụng cho người học ngoại ngữ."
+        },
+        {
+          "english": "The start-up received a huge investment last month.",
+          "vietnamese": "Công ty khởi nghiệp ấy nhận được một khoản đầu tư lớn vào tháng trước."
+        },
+        {
+          "english": "Working at a start-up is exciting but stressful.",
+          "vietnamese": "Làm việc ở một công ty khởi nghiệp thú vị nhưng đầy áp lực."
+        }
+      ]
+    },
+    {
+      "word": "loan",
+      "sentences": [
+        {
+          "english": "We need a loan to open a small café.",
+          "vietnamese": "Chúng tôi cần một khoản vay để mở một quán cà phê nhỏ."
+        },
+        {
+          "english": "The bank refused his loan application.",
+          "vietnamese": "Ngân hàng đã từ chối đơn xin vay của anh ấy."
+        },
+        {
+          "english": "They paid back the loan earlier than expected.",
+          "vietnamese": "Họ đã trả hết khoản vay sớm hơn dự kiến."
+        },
+        {
+          "english": "Students can get a loan to cover university fees.",
+          "vietnamese": "Sinh viên có thể vay tiền để trả học phí đại học."
+        },
+        {
+          "english": "She is worried about the high interest on her loan.",
+          "vietnamese": "Cô ấy lo lắng về tiền lãi cao của khoản vay."
+        }
+      ]
+    },
+    {
+      "word": "research",
+      "sentences": [
+        {
+          "english": "Scientists are doing research on a new medicine.",
+          "vietnamese": "Các nhà khoa học đang nghiên cứu một loại thuốc mới."
+        },
+        {
+          "english": "Our research shows that teenagers sleep less than before.",
+          "vietnamese": "Nghiên cứu của chúng tôi cho thấy thanh thiếu niên ngủ ít hơn trước."
+        },
+        {
+          "english": "Do some research before you choose a university.",
+          "vietnamese": "Hãy tìm hiểu kỹ trước khi chọn trường đại học."
+        },
+        {
+          "english": "The research was published in a famous science journal.",
+          "vietnamese": "Nghiên cứu được đăng trên một tạp chí khoa học nổi tiếng."
+        },
+        {
+          "english": "We did market research before opening the shop.",
+          "vietnamese": "Chúng tôi đã nghiên cứu thị trường trước khi mở cửa hàng."
+        }
+      ]
+    },
+    {
+      "word": "customer",
+      "sentences": [
+        {
+          "english": "The customer asked for a discount.",
+          "vietnamese": "Vị khách đã xin giảm giá."
+        },
+        {
+          "english": "Our customers expect fast and friendly service.",
+          "vietnamese": "Khách hàng của chúng tôi mong đợi dịch vụ nhanh và thân thiện."
+        },
+        {
+          "english": "Loyal customers often receive a small gift.",
+          "vietnamese": "Khách hàng thân thiết thường được nhận một món quà nhỏ."
+        },
+        {
+          "english": "Please treat every customer politely.",
+          "vietnamese": "Hãy đối xử lịch sự với mọi khách hàng."
+        },
+        {
+          "english": "The shop lost many customers after the price increase.",
+          "vietnamese": "Cửa hàng mất nhiều khách sau khi tăng giá."
+        }
+      ]
+    },
+    {
+      "word": "business",
+      "sentences": [
+        {
+          "english": "My parents own a small business in the market.",
+          "vietnamese": "Bố mẹ tôi có một cơ sở kinh doanh nhỏ ở chợ."
+        },
+        {
+          "english": "Business is slow during the rainy season.",
+          "vietnamese": "Việc buôn bán chậm hẳn vào mùa mưa."
+        },
+        {
+          "english": "He travels abroad on business twice a month.",
+          "vietnamese": "Anh ấy đi công tác nước ngoài hai lần một tháng."
+        },
+        {
+          "english": "She started her business with very little experience.",
+          "vietnamese": "Cô ấy bắt đầu kinh doanh khi còn rất ít kinh nghiệm."
+        },
+        {
+          "english": "Online business has grown fast in recent years.",
+          "vietnamese": "Kinh doanh trực tuyến phát triển nhanh trong những năm gần đây."
+        }
+      ]
+    },
+    {
+      "word": "discussion",
+      "sentences": [
+        {
+          "english": "The discussion about the new rule lasted two hours.",
+          "vietnamese": "Cuộc thảo luận về quy định mới kéo dài hai tiếng."
+        },
+        {
+          "english": "We had an interesting discussion about climate change.",
+          "vietnamese": "Chúng tôi đã có một cuộc thảo luận thú vị về biến đổi khí hậu."
+        },
+        {
+          "english": "Everyone joined the discussion except Nam, who was too shy.",
+          "vietnamese": "Mọi người đều tham gia thảo luận, trừ Nam vì cậu ấy quá nhút nhát."
+        },
+        {
+          "english": "After a long discussion, the team agreed on a plan.",
+          "vietnamese": "Sau một hồi thảo luận, cả nhóm thống nhất một kế hoạch."
+        },
+        {
+          "english": "The teacher led a discussion on the history lesson.",
+          "vietnamese": "Cô giáo dẫn dắt buổi thảo luận về bài học lịch sử."
+        }
+      ]
+    },
+    {
+      "word": "situation",
+      "sentences": [
+        {
+          "english": "The situation in the city is getting worse.",
+          "vietnamese": "Tình hình trong thành phố đang ngày càng tồi tệ."
+        },
+        {
+          "english": "Stay calm in a difficult situation.",
+          "vietnamese": "Hãy bình tĩnh trong hoàn cảnh khó khăn."
+        },
+        {
+          "english": "She explained the situation to her manager.",
+          "vietnamese": "Cô ấy giải thích tình hình với quản lý của mình."
+        },
+        {
+          "english": "The financial situation of our family has improved.",
+          "vietnamese": "Tình hình tài chính của gia đình tôi đã khá hơn."
+        },
+        {
+          "english": "Nobody knew how to handle such a strange situation.",
+          "vietnamese": "Không ai biết xử lý một tình huống kỳ lạ như vậy."
+        }
+      ]
+    },
+    {
+      "word": "hopeless",
+      "sentences": [
+        {
+          "english": "After failing the exam again, he felt hopeless.",
+          "vietnamese": "Sau khi trượt kỳ thi lần nữa, cậu ấy thấy tuyệt vọng."
+        },
+        {
+          "english": "The doctor told the patient that his case was not hopeless.",
+          "vietnamese": "Bác sĩ bảo bệnh nhân rằng trường hợp của ông không phải vô vọng."
+        },
+        {
+          "english": "I'm hopeless at cooking, so I order takeaway.",
+          "vietnamese": "Tôi nấu ăn dở tệ nên toàn gọi đồ mang về."
+        },
+        {
+          "english": "The team played so badly that the match looked hopeless.",
+          "vietnamese": "Đội chơi tệ đến mức trận đấu trông như vô vọng."
+        },
+        {
+          "english": "Don't feel hopeless; you can try again next year.",
+          "vietnamese": "Đừng tuyệt vọng, sang năm bạn có thể thử lại."
+        }
+      ]
+    },
+    {
+      "word": "unemployment",
+      "sentences": [
+        {
+          "english": "Unemployment rose sharply in the capital last year.",
+          "vietnamese": "Tỷ lệ thất nghiệp ở thủ đô tăng mạnh vào năm ngoái."
+        },
+        {
+          "english": "The government promised to reduce unemployment.",
+          "vietnamese": "Chính phủ hứa sẽ giảm thất nghiệp."
+        },
+        {
+          "english": "High unemployment causes many social problems.",
+          "vietnamese": "Thất nghiệp cao gây ra nhiều vấn đề xã hội."
+        },
+        {
+          "english": "He received unemployment benefits for six months.",
+          "vietnamese": "Anh ấy nhận trợ cấp thất nghiệp trong sáu tháng."
+        },
+        {
+          "english": "Youth unemployment is a serious issue in many countries.",
+          "vietnamese": "Thất nghiệp ở giới trẻ là vấn đề nghiêm trọng ở nhiều nước."
+        }
+      ]
+    },
+    {
+      "word": "trade",
+      "sentences": [
+        {
+          "english": "Vietnam trades coffee and rice with many countries.",
+          "vietnamese": "Việt Nam buôn bán cà phê và gạo với nhiều quốc gia."
+        },
+        {
+          "english": "The two countries agreed to trade more goods.",
+          "vietnamese": "Hai nước đồng ý giao thương thêm nhiều hàng hoá."
+        },
+        {
+          "english": "Merchants used to trade silk along this route.",
+          "vietnamese": "Thương nhân ngày xưa buôn bán lụa dọc con đường này."
+        },
+        {
+          "english": "The village traded handicrafts for salt and fish.",
+          "vietnamese": "Ngôi làng đổi hàng thủ công lấy muối và cá."
+        },
+        {
+          "english": "They trade online and deliver to every customer within two days.",
+          "vietnamese": "Họ buôn bán trực tuyến và giao hàng cho mọi khách trong vòng hai ngày."
+        }
+      ]
+    },
+    {
+      "word": "abroad",
+      "sentences": [
+        {
+          "english": "She dreams of studying abroad one day.",
+          "vietnamese": "Cô ấy mơ một ngày được đi du học."
+        },
+        {
+          "english": "My uncle works abroad and feels homesick at Tet.",
+          "vietnamese": "Chú tôi làm việc ở nước ngoài và thấy nhớ nhà mỗi dịp Tết."
+        },
+        {
+          "english": "Travelling abroad helps you understand other cultures.",
+          "vietnamese": "Đi nước ngoài giúp bạn hiểu các nền văn hoá khác."
+        },
+        {
+          "english": "Many families send their children abroad for a better future.",
+          "vietnamese": "Nhiều gia đình cho con ra nước ngoài để có tương lai tốt hơn."
+        },
+        {
+          "english": "He moved abroad to find a better career.",
+          "vietnamese": "Anh ấy chuyển ra nước ngoài để tìm một sự nghiệp tốt hơn."
+        }
+      ]
+    },
+    {
+      "word": "recover",
+      "sentences": [
+        {
+          "english": "She recovered quickly after the operation.",
+          "vietnamese": "Cô ấy hồi phục nhanh sau ca phẫu thuật."
+        },
+        {
+          "english": "The economy slowly recovered after the war.",
+          "vietnamese": "Nền kinh tế dần phục hồi sau chiến tranh."
+        },
+        {
+          "english": "The officer recovered the stolen bicycle.",
+          "vietnamese": "Viên cảnh sát đã tìm lại được chiếc xe đạp bị trộm."
+        },
+        {
+          "english": "The company needs time to recover from its losses.",
+          "vietnamese": "Công ty cần thời gian để gượng dậy sau thua lỗ."
+        },
+        {
+          "english": "I'm still recovering from a bad cold.",
+          "vietnamese": "Tôi vẫn đang hồi phục sau một trận cảm nặng."
+        }
+      ]
+    },
+    {
+      "word": "possible",
+      "sentences": [
+        {
+          "english": "Is it possible to pay in cash?",
+          "vietnamese": "Có thể trả bằng tiền mặt không?"
+        },
+        {
+          "english": "Please contact me as soon as possible.",
+          "vietnamese": "Vui lòng liên hệ với tôi càng sớm càng tốt."
+        },
+        {
+          "english": "It is possible that prices will rise next year.",
+          "vietnamese": "Có thể giá cả sẽ tăng vào năm sau."
+        },
+        {
+          "english": "With hard work, anything is possible.",
+          "vietnamese": "Chỉ cần chăm chỉ, việc gì cũng có thể làm được."
+        },
+        {
+          "english": "We tried every possible way to fix the engine.",
+          "vietnamese": "Chúng tôi đã thử mọi cách có thể để sửa động cơ."
+        }
+      ]
+    },
+    {
+      "word": "average",
+      "sentences": [
+        {
+          "english": "The average price of a flat in Hanoi has risen.",
+          "vietnamese": "Giá trung bình một căn hộ ở Hà Nội đã tăng."
+        },
+        {
+          "english": "He is an average student but a great footballer.",
+          "vietnamese": "Cậu ấy là học sinh trung bình nhưng là một cầu thủ xuất sắc."
+        },
+        {
+          "english": "On average, I sleep seven hours a night.",
+          "vietnamese": "Trung bình mỗi đêm tôi ngủ bảy tiếng."
+        },
+        {
+          "english": "The average age of our employees is thirty.",
+          "vietnamese": "Độ tuổi trung bình của nhân viên chúng tôi là ba mươi."
+        },
+        {
+          "english": "Her exam score was above average.",
+          "vietnamese": "Điểm thi của cô ấy trên mức trung bình."
+        }
+      ]
+    },
+    {
+      "word": "professional",
+      "sentences": [
+        {
+          "english": "He became a professional footballer at eighteen.",
+          "vietnamese": "Anh ấy trở thành cầu thủ chuyên nghiệp năm mười tám tuổi."
+        },
+        {
+          "english": "We hired a professional photographer for the wedding.",
+          "vietnamese": "Chúng tôi thuê một nhiếp ảnh gia chuyên nghiệp cho đám cưới."
+        },
+        {
+          "english": "The staff here are friendly and professional.",
+          "vietnamese": "Nhân viên ở đây thân thiện và chuyên nghiệp."
+        },
+        {
+          "english": "She gave a very professional presentation.",
+          "vietnamese": "Cô ấy đã có một bài thuyết trình rất chuyên nghiệp."
+        },
+        {
+          "english": "You should get professional help to fix the roof.",
+          "vietnamese": "Bạn nên nhờ thợ chuyên nghiệp sửa mái nhà."
+        }
+      ]
+    },
+    {
+      "word": "advice",
+      "sentences": [
+        {
+          "english": "My manager gave me useful advice about my career.",
+          "vietnamese": "Quản lý đã cho tôi lời khuyên hữu ích về sự nghiệp."
+        },
+        {
+          "english": "Can you give me some advice on choosing a university?",
+          "vietnamese": "Bạn có thể cho tôi lời khuyên về việc chọn trường đại học không?"
+        },
+        {
+          "english": "She ignored her doctor's advice and kept smoking.",
+          "vietnamese": "Bà ấy phớt lờ lời khuyên của bác sĩ và vẫn hút thuốc."
+        },
+        {
+          "english": "Take my advice and save some money every month.",
+          "vietnamese": "Nghe tôi khuyên này, hãy để dành ít tiền mỗi tháng."
+        },
+        {
+          "english": "The coach's advice helped the team win the match.",
+          "vietnamese": "Lời khuyên của huấn luyện viên đã giúp đội thắng trận."
+        }
+      ]
+    },
+    {
+      "word": "percent",
+      "sentences": [
+        {
+          "english": "Prices have risen by ten percent this year.",
+          "vietnamese": "Giá cả đã tăng mười phần trăm trong năm nay."
+        },
+        {
+          "english": "Only twenty percent of students passed the exam.",
+          "vietnamese": "Chỉ hai mươi phần trăm học sinh vượt qua kỳ thi."
+        },
+        {
+          "english": "The shop offers a fifteen percent discount today.",
+          "vietnamese": "Hôm nay cửa hàng giảm giá mười lăm phần trăm."
+        },
+        {
+          "english": "Ninety percent of our customers are satisfied.",
+          "vietnamese": "Chín mươi phần trăm khách hàng của chúng tôi hài lòng."
+        },
+        {
+          "english": "The government raised the tax by five percent.",
+          "vietnamese": "Chính phủ đã tăng thuế thêm năm phần trăm."
+        }
+      ]
+    },
+    {
+      "word": "financial",
+      "sentences": [
+        {
+          "english": "The company is facing serious financial problems.",
+          "vietnamese": "Công ty đang gặp những khó khăn tài chính nghiêm trọng."
+        },
+        {
+          "english": "She works as a financial expert in a big company.",
+          "vietnamese": "Cô ấy làm chuyên gia tài chính ở một công ty lớn."
+        },
+        {
+          "english": "Students often need financial support from their parents.",
+          "vietnamese": "Sinh viên thường cần bố mẹ hỗ trợ tài chính."
+        },
+        {
+          "english": "The financial crisis destroyed many small businesses.",
+          "vietnamese": "Cuộc khủng hoảng tài chính đã phá huỷ nhiều doanh nghiệp nhỏ."
+        },
+        {
+          "english": "He kept all his financial documents in one file.",
+          "vietnamese": "Anh ấy cất mọi giấy tờ tài chính trong một tập hồ sơ."
+        }
+      ]
+    },
+    {
+      "word": "cheque",
+      "sentences": [
+        {
+          "english": "He paid the rent by cheque.",
+          "vietnamese": "Anh ấy trả tiền thuê nhà bằng séc."
+        },
+        {
+          "english": "Few people use cheques nowadays.",
+          "vietnamese": "Ngày nay ít người dùng séc."
+        },
+        {
+          "english": "Please sign the cheque at the bottom.",
+          "vietnamese": "Vui lòng ký vào cuối tấm séc."
+        },
+        {
+          "english": "My grandfather still pays his bills by cheque.",
+          "vietnamese": "Ông tôi vẫn thanh toán hoá đơn bằng séc."
+        },
+        {
+          "english": "The company sent me a cheque for the extra work.",
+          "vietnamese": "Công ty gửi cho tôi một tấm séc trả cho phần việc làm thêm."
+        }
+      ]
+    },
+    {
+      "word": "manage",
+      "sentences": [
+        {
+          "english": "She manages a team of ten designers.",
+          "vietnamese": "Cô ấy quản lý một nhóm mười nhà thiết kế."
+        },
+        {
+          "english": "I managed to finish the assignment on time.",
+          "vietnamese": "Tôi đã xoay xở hoàn thành bài tập đúng hạn."
+        },
+        {
+          "english": "It's hard to manage work and family.",
+          "vietnamese": "Thật khó để cân bằng công việc và gia đình."
+        },
+        {
+          "english": "He doesn't know how to manage his money.",
+          "vietnamese": "Anh ấy không biết cách quản lý tiền bạc."
+        },
+        {
+          "english": "They managed to win the final match.",
+          "vietnamese": "Họ đã giành chiến thắng ở trận chung kết."
+        }
+      ]
+    },
+    {
+      "word": "transfer",
+      "sentences": [
+        {
+          "english": "I transferred the fee to the school yesterday.",
+          "vietnamese": "Hôm qua tôi đã chuyển học phí cho nhà trường."
+        },
+        {
+          "english": "Can you transfer the rent to the owner today?",
+          "vietnamese": "Hôm nay bạn chuyển tiền thuê nhà cho chủ nhà được không?"
+        },
+        {
+          "english": "Transferring money abroad can be expensive.",
+          "vietnamese": "Chuyển tiền ra nước ngoài có thể rất tốn kém."
+        },
+        {
+          "english": "My salary is transferred on the last day of the month.",
+          "vietnamese": "Lương của tôi được chuyển vào ngày cuối tháng."
+        },
+        {
+          "english": "He transferred the deposit for our homestay.",
+          "vietnamese": "Anh ấy đã chuyển tiền đặt cọc cho homestay của chúng tôi."
+        }
+      ]
+    },
+    {
+      "word": "goods",
+      "sentences": [
+        {
+          "english": "The shop sells cheap goods from China.",
+          "vietnamese": "Cửa hàng bán hàng hoá giá rẻ từ Trung Quốc."
+        },
+        {
+          "english": "The truck was carrying goods to the market.",
+          "vietnamese": "Chiếc xe tải đang chở hàng ra chợ."
+        },
+        {
+          "english": "Damaged goods can be returned within a week.",
+          "vietnamese": "Hàng bị hỏng có thể đổi trả trong vòng một tuần."
+        },
+        {
+          "english": "Prices of most goods went up last month.",
+          "vietnamese": "Giá của hầu hết hàng hoá đã tăng vào tháng trước."
+        },
+        {
+          "english": "The company exports goods to many countries.",
+          "vietnamese": "Công ty xuất khẩu hàng hoá sang nhiều nước."
+        }
+      ]
+    },
+    {
+      "word": "currency",
+      "sentences": [
+        {
+          "english": "You can exchange currency at the airport.",
+          "vietnamese": "Bạn có thể đổi ngoại tệ ở sân bay."
+        },
+        {
+          "english": "The local currency is the dong.",
+          "vietnamese": "Đơn vị tiền tệ địa phương là đồng."
+        },
+        {
+          "english": "Some shops accept foreign currency, but the price is higher.",
+          "vietnamese": "Một số cửa hàng nhận ngoại tệ nhưng giá cao hơn."
+        },
+        {
+          "english": "The value of the currency fell sharply.",
+          "vietnamese": "Giá trị đồng tiền giảm mạnh."
+        },
+        {
+          "english": "Bitcoin is a digital currency that many people don't trust.",
+          "vietnamese": "Bitcoin là một loại tiền kỹ thuật số mà nhiều người không tin tưởng."
+        }
+      ]
+    },
+    {
+      "word": "product",
+      "sentences": [
+        {
+          "english": "This new product is popular with teenagers.",
+          "vietnamese": "Sản phẩm mới này được thanh thiếu niên ưa chuộng."
+        },
+        {
+          "english": "The company launched three new products this year.",
+          "vietnamese": "Năm nay công ty tung ra ba sản phẩm mới."
+        },
+        {
+          "english": "Read the label before you buy any beauty product.",
+          "vietnamese": "Hãy đọc nhãn trước khi mua bất kỳ sản phẩm làm đẹp nào."
+        },
+        {
+          "english": "Our products are made from natural ingredients.",
+          "vietnamese": "Sản phẩm của chúng tôi được làm từ nguyên liệu tự nhiên."
+        },
+        {
+          "english": "The customer returned the product because it was damaged.",
+          "vietnamese": "Khách hàng trả lại sản phẩm vì nó bị hỏng."
+        }
+      ]
+    }
+  ]
+}

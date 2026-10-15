@@ -1,0 +1,31 @@
+{
+  "unit": 46,
+  "deck": "Unit 46: Đại học và thi cử",
+  "note": "Câu ví dụ rút gọn 6–10 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
+  "items": [
+    { "word": "professor", "example": "The professor gave us a difficult assignment.", "exampleTranslation": "Giáo sư giao cho chúng tôi một bài tập khó." },
+    { "word": "warn", "example": "The tutor warned us about the strict deadline.", "exampleTranslation": "Gia sư cảnh báo chúng tôi về hạn nộp nghiêm ngặt." },
+    { "word": "complete", "example": "I must complete my assignment before Friday.", "exampleTranslation": "Tôi phải hoàn thành bài tập trước thứ Sáu." },
+    { "word": "provide", "example": "The university provides cheap accommodation for students.", "exampleTranslation": "Trường đại học cung cấp chỗ ở giá rẻ cho sinh viên." },
+    { "word": "application", "example": "She filled in the application form carefully.", "exampleTranslation": "Cô ấy điền đơn đăng ký rất cẩn thận." },
+    { "word": "degree", "example": "He earned a degree in mechanical engineering.", "exampleTranslation": "Anh ấy lấy bằng kỹ sư cơ khí." },
+    { "word": "advanced", "example": "This advanced course is too hard for beginners.", "exampleTranslation": "Khoá học nâng cao này quá khó với người mới bắt đầu." },
+    { "word": "stress", "example": "Exam stress made her lose her appetite.", "exampleTranslation": "Căng thẳng thi cử khiến cô ấy chán ăn." },
+    { "word": "poetry", "example": "She enjoys reading poetry on quiet evenings.", "exampleTranslation": "Cô ấy thích đọc thơ vào những buổi tối yên tĩnh." },
+    { "word": "lecture", "example": "I fell asleep during the long history lecture.", "exampleTranslation": "Tôi ngủ gật trong bài giảng lịch sử dài lê thê." },
+    { "word": "further", "example": "Please contact us for further information.", "exampleTranslation": "Vui lòng liên hệ với chúng tôi để biết thêm thông tin." },
+    { "word": "qualification", "example": "You need a teaching qualification for this career.", "exampleTranslation": "Bạn cần bằng sư phạm cho nghề nghiệp này." },
+    { "word": "instructor", "example": "Our driving instructor is very patient.", "exampleTranslation": "Thầy dạy lái xe của chúng tôi rất kiên nhẫn." },
+    { "word": "session", "example": "We attended a revision session at noon.", "exampleTranslation": "Chúng tôi tham gia một buổi ôn tập vào buổi trưa." },
+    { "word": "plan", "example": "We planned our study timetable for the term.", "exampleTranslation": "Chúng tôi lên thời gian biểu học tập cho học kỳ." },
+    { "word": "achieve", "example": "Hard work helped her achieve her dream.", "exampleTranslation": "Sự chăm chỉ giúp cô ấy đạt được ước mơ." },
+    { "word": "term", "example": "The new term begins after the national holiday.", "exampleTranslation": "Học kỳ mới bắt đầu sau kỳ nghỉ lễ quốc gia." },
+    { "word": "presentation", "example": "Her presentation about climate change was impressive.", "exampleTranslation": "Bài thuyết trình của cô ấy về biến đổi khí hậu rất ấn tượng." },
+    { "word": "major", "example": "My major at college is computer science.", "exampleTranslation": "Chuyên ngành của tôi ở đại học là khoa học máy tính." },
+    { "word": "university", "example": "He was nervous on his first university day.", "exampleTranslation": "Anh ấy hồi hộp trong ngày đầu tiên ở trường đại học." },
+    { "word": "exam", "example": "I revised all night for the final exam.", "exampleTranslation": "Tôi ôn bài cả đêm cho kỳ thi cuối kỳ." },
+    { "word": "fail", "example": "He failed his maths exam and felt ashamed.", "exampleTranslation": "Anh ấy trượt bài thi toán và cảm thấy xấu hổ." },
+    { "word": "score", "example": "She got a perfect score in the vocabulary test.", "exampleTranslation": "Cô ấy đạt điểm tuyệt đối trong bài kiểm tra từ vựng." },
+    { "word": "focused", "example": "Stay focused and turn off your phone.", "exampleTranslation": "Hãy tập trung và tắt điện thoại đi." }
+  ]
+}

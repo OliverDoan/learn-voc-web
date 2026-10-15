@@ -1,0 +1,31 @@
+{
+  "unit": 48,
+  "deck": "Unit 48: Chính trị và quyền lực",
+  "note": "Câu ví dụ rút gọn 6–10 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
+  "items": [
+    { "word": "power", "example": "The new law limits the power of the police.", "exampleTranslation": "Luật mới giới hạn quyền lực của cảnh sát." },
+    { "word": "request", "example": "The company refused our request for higher pay.", "exampleTranslation": "Công ty đã từ chối đề nghị tăng lương của chúng tôi." },
+    { "word": "issue", "example": "Pollution is a serious issue in big cities.", "exampleTranslation": "Ô nhiễm là một vấn đề nghiêm trọng ở các thành phố lớn." },
+    { "word": "allow", "example": "Visitors are not allowed to take photos here.", "exampleTranslation": "Khách tham quan không được phép chụp ảnh ở đây." },
+    { "word": "decision", "example": "It was a difficult decision for the whole team.", "exampleTranslation": "Đó là một quyết định khó khăn với cả đội." },
+    { "word": "agree", "example": "My parents finally agreed with my career choice.", "exampleTranslation": "Bố mẹ tôi cuối cùng đã đồng ý với lựa chọn nghề nghiệp của tôi." },
+    { "word": "case", "example": "The officer is working on a murder case.", "exampleTranslation": "Viên cảnh sát đang điều tra một vụ án giết người." },
+    { "word": "uninterested", "example": "Many young people seem uninterested in local politics.", "exampleTranslation": "Nhiều người trẻ có vẻ thờ ơ với chính trị địa phương." },
+    { "word": "goal", "example": "Her main goal is to win the election.", "exampleTranslation": "Mục tiêu chính của bà ấy là thắng cuộc bầu cử." },
+    { "word": "leader", "example": "A good leader always listens to the team.", "exampleTranslation": "Một người lãnh đạo giỏi luôn lắng nghe tập thể." },
+    { "word": "government", "example": "The government plans to build a new bridge.", "exampleTranslation": "Chính phủ dự định xây một cây cầu mới." },
+    { "word": "president", "example": "The president gave a speech on national television.", "exampleTranslation": "Tổng thống đã phát biểu trên truyền hình quốc gia." },
+    { "word": "politician", "example": "Few people trust what that politician says.", "exampleTranslation": "Ít ai tin những gì chính trị gia đó nói." },
+    { "word": "soldier", "example": "The young soldier wrote letters home during the war.", "exampleTranslation": "Người lính trẻ viết thư về nhà trong suốt cuộc chiến." },
+    { "word": "independence", "example": "We celebrate Independence Day with fireworks every year.", "exampleTranslation": "Năm nào chúng tôi cũng mừng ngày Quốc khánh bằng pháo hoa." },
+    { "word": "vote", "example": "Young people should vote to change their future.", "exampleTranslation": "Người trẻ nên đi bầu cử để thay đổi tương lai của mình." },
+    { "word": "demand", "example": "Workers demanded better pay and safer working conditions.", "exampleTranslation": "Công nhân đòi lương cao hơn và điều kiện làm việc an toàn hơn." },
+    { "word": "suitable", "example": "This flat is not suitable for a big family.", "exampleTranslation": "Căn hộ này không phù hợp với một gia đình đông người." },
+    { "word": "nationality", "example": "Please write your name and nationality on this form.", "exampleTranslation": "Vui lòng ghi tên và quốc tịch của bạn vào mẫu đơn này." },
+    { "word": "party", "example": "Which political party do you support?", "exampleTranslation": "Bạn ủng hộ đảng chính trị nào?" },
+    { "word": "change", "example": "The new manager made many changes to the office.", "exampleTranslation": "Người quản lý mới đã tạo ra nhiều thay đổi trong văn phòng." },
+    { "word": "patriot", "example": "My grandfather was a brave patriot during the war.", "exampleTranslation": "Ông tôi là một người yêu nước dũng cảm trong thời chiến." },
+    { "word": "state", "example": "In this state, education is free for every child.", "exampleTranslation": "Ở bang này, mọi trẻ em đều được học miễn phí." },
+    { "word": "conference", "example": "Leaders from ten countries attended the peace conference.", "exampleTranslation": "Lãnh đạo của mười quốc gia đã dự hội nghị hoà bình." }
+  ]
+}

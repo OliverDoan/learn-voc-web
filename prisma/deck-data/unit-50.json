@@ -1,0 +1,274 @@
+{
+  "deck": {
+    "name": "Unit 50: Trái Đất và vũ trụ",
+    "description": "24 từ vựng về Trái Đất, vũ trụ, các vì sao và hành tinh",
+    "color": "#a855f7",
+    "icon": "🪐"
+  },
+  "cards": [
+    {
+      "word": "earth",
+      "meaning": "Trái Đất",
+      "partOfSpeech": "noun",
+      "phonetic": "/ɜːθ/",
+      "example": "It doesn't matter where you're from, we're all from Earth.",
+      "exampleTranslation": "Dù bạn đến từ đâu thì tất cả chúng ta đều đến từ Trái Đất.",
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "word": "planet",
+      "meaning": "hành tinh",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈplænɪt/",
+      "example": "Mars is called the red planet.",
+      "exampleTranslation": "Sao Hỏa được gọi là hành tinh đỏ.",
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "word": "observatory",
+      "meaning": "đài thiên văn",
+      "partOfSpeech": "noun",
+      "phonetic": "/əbˈzɜːvətri/",
+      "example": "We watched the stars from the observatory.",
+      "exampleTranslation": "Chúng tôi ngắm sao từ đài quan sát.",
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "word": "star",
+      "meaning": "ngôi sao",
+      "partOfSpeech": "noun",
+      "phonetic": "/stɑː(r)/",
+      "example": "The sky was full of stars last night.",
+      "exampleTranslation": "Tối qua bầu trời đầy sao.",
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "word": "space",
+      "meaning": "vũ trụ, không gian",
+      "partOfSpeech": "noun",
+      "phonetic": "/speɪs/",
+      "example": "She dreams of travelling into space.",
+      "exampleTranslation": "Cô ấy mơ ước được bay vào vũ trụ.",
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "word": "galaxy",
+      "meaning": "thiên hà",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈɡæləksi/",
+      "example": "Our galaxy is called the Milky Way.",
+      "exampleTranslation": "Thiên hà của chúng ta được gọi là Dải Ngân Hà.",
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "word": "object",
+      "meaning": "vật thể",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈɒbdʒɪkt/",
+      "example": "Scientists saw a strange object in the sky.",
+      "exampleTranslation": "Các nhà khoa học đã nhìn thấy một vật thể lạ trên bầu trời.",
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "word": "moon",
+      "meaning": "Mặt Trăng",
+      "partOfSpeech": "noun",
+      "phonetic": "/muːn/",
+      "example": "The moon looks huge tonight.",
+      "exampleTranslation": "Đêm nay mặt trăng trông thật to.",
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "word": "dust",
+      "meaning": "bụi",
+      "partOfSpeech": "noun",
+      "phonetic": "/dʌst/",
+      "example": "Planets are formed from gas and dust.",
+      "exampleTranslation": "Các hành tinh được hình thành từ khí và bụi.",
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "word": "travel",
+      "meaning": "đi lại, du hành",
+      "partOfSpeech": "verb",
+      "phonetic": "/ˈtrævl/",
+      "example": "Light travels faster than sound.",
+      "exampleTranslation": "Ánh sáng truyền đi nhanh hơn âm thanh.",
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "word": "mind-blowing",
+      "meaning": "gây choáng ngợp, kinh ngạc",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˈmaɪnd bləʊɪŋ/",
+      "example": "The size of the universe is mind-blowing.",
+      "exampleTranslation": "Kích thước của vũ trụ thật đáng kinh ngạc.",
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "word": "life",
+      "meaning": "sự sống",
+      "partOfSpeech": "noun",
+      "phonetic": "/laɪf/",
+      "example": "Is there life on other planets?",
+      "exampleTranslation": "Có sự sống trên các hành tinh khác không?",
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "word": "freeze",
+      "meaning": "đóng băng",
+      "partOfSpeech": "verb",
+      "phonetic": "/friːz/",
+      "example": "Water freezes quickly in space.",
+      "exampleTranslation": "Nước đóng băng rất nhanh trong không gian.",
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "word": "alien",
+      "meaning": "người ngoài hành tinh",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈeɪliən/",
+      "example": "Do you believe in aliens?",
+      "exampleTranslation": "Bạn có tin vào người ngoài hành tinh không?",
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "word": "shine",
+      "meaning": "chiếu sáng, toả sáng",
+      "partOfSpeech": "verb",
+      "phonetic": "/ʃaɪn/",
+      "example": "The stars shine brightly in the desert.",
+      "exampleTranslation": "Các vì sao tỏa sáng rực rỡ trên sa mạc.",
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "word": "direction",
+      "meaning": "phương hướng",
+      "partOfSpeech": "noun",
+      "phonetic": "/dəˈrekʃn/",
+      "example": "Sailors used the stars to find direction.",
+      "exampleTranslation": "Các thủy thủ dùng các vì sao để xác định phương hướng.",
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "word": "spacecraft",
+      "meaning": "tàu vũ trụ",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈspeɪskrɑːft/",
+      "example": "The spacecraft landed on Mars safely.",
+      "exampleTranslation": "Tàu vũ trụ đã hạ cánh an toàn xuống sao Hỏa.",
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "word": "liveable",
+      "meaning": "có thể sống được",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˈlɪvəbl/",
+      "example": "Scientists are looking for a liveable planet.",
+      "exampleTranslation": "Các nhà khoa học đang tìm kiếm một hành tinh có thể sống được.",
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "word": "death",
+      "meaning": "cái chết",
+      "partOfSpeech": "noun",
+      "phonetic": "/deθ/",
+      "example": "The death of a star can create a black hole.",
+      "exampleTranslation": "Cái chết của một ngôi sao có thể tạo ra một lỗ đen.",
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "word": "amaze",
+      "meaning": "làm kinh ngạc",
+      "partOfSpeech": "verb",
+      "phonetic": "/əˈmeɪz/",
+      "example": "The photos of Jupiter amazed everyone.",
+      "exampleTranslation": "Những bức ảnh về sao Mộc khiến mọi người kinh ngạc.",
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "word": "explode",
+      "meaning": "nổ tung",
+      "partOfSpeech": "verb",
+      "phonetic": "/ɪkˈspləʊd/",
+      "example": "Some old stars explode at the end of their lives.",
+      "exampleTranslation": "Một số ngôi sao già phát nổ vào cuối đời.",
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "word": "stellar",
+      "meaning": "(thuộc) sao",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˈstelə(r)/",
+      "example": "Astronomers study stellar movement.",
+      "exampleTranslation": "Các nhà thiên văn học nghiên cứu chuyển động của các vì sao.",
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "word": "lunar",
+      "meaning": "(thuộc) Mặt Trăng",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˈluːnə(r)/",
+      "example": "A lunar eclipse will happen next month.",
+      "exampleTranslation": "Một lần nguyệt thực sẽ xảy ra vào tháng tới.",
+      "tags": [
+        "space"
+      ]
+    },
+    {
+      "word": "cluster",
+      "meaning": "cụm, đám",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈklʌstə(r)/",
+      "example": "A star cluster shone in the night sky.",
+      "exampleTranslation": "Một cụm sao tỏa sáng trên bầu trời đêm.",
+      "tags": [
+        "space"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "unit": 50,
+  "deck": "Unit 50: Trái Đất và vũ trụ",
+  "note": "Câu ví dụ rút gọn 6–10 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
+  "items": [
+    { "word": "earth", "example": "Pollution is slowly damaging the earth.", "exampleTranslation": "Ô nhiễm đang dần huỷ hoại Trái Đất." },
+    { "word": "planet", "example": "We must protect our planet for the future.", "exampleTranslation": "Chúng ta phải bảo vệ hành tinh của mình vì tương lai." },
+    { "word": "observatory", "example": "The observatory is on top of a steep hill.", "exampleTranslation": "Đài thiên văn nằm trên đỉnh một ngọn đồi dốc." },
+    { "word": "star", "example": "Millions of stars shine above the quiet desert.", "exampleTranslation": "Hàng triệu ngôi sao toả sáng trên sa mạc yên tĩnh." },
+    { "word": "space", "example": "Astronauts can see huge storms from space.", "exampleTranslation": "Phi hành gia có thể nhìn thấy những cơn bão khổng lồ từ vũ trụ." },
+    { "word": "galaxy", "example": "Our galaxy contains billions of stars.", "exampleTranslation": "Thiên hà của chúng ta chứa hàng tỷ ngôi sao." },
+    { "word": "object", "example": "A strange object appeared in the night sky.", "exampleTranslation": "Một vật thể lạ xuất hiện trên bầu trời đêm." },
+    { "word": "moon", "example": "The full moon looked huge over the lake.", "exampleTranslation": "Trăng tròn trông thật to trên mặt hồ." },
+    { "word": "dust", "example": "A huge cloud of dust surrounded the young star.", "exampleTranslation": "Một đám mây bụi khổng lồ bao quanh ngôi sao trẻ." },
+    { "word": "travel", "example": "Light travels faster than anything else.", "exampleTranslation": "Ánh sáng di chuyển nhanh hơn mọi thứ khác." },
+    { "word": "mind-blowing", "example": "The view from the mountain top was mind-blowing.", "exampleTranslation": "Quang cảnh từ đỉnh núi đẹp đến choáng ngợp." },
+    { "word": "life", "example": "Is there life on other planets? Nobody knows.", "exampleTranslation": "Có sự sống trên các hành tinh khác không? Không ai biết." },
+    { "word": "freeze", "example": "The lake freezes completely in winter.", "exampleTranslation": "Mặt hồ đóng băng hoàn toàn vào mùa đông." },
+    { "word": "alien", "example": "My little brother believes aliens live among us.", "exampleTranslation": "Em trai tôi tin rằng người ngoài hành tinh sống giữa chúng ta." },
+    { "word": "shine", "example": "The stars shine brightly on a clear night.", "exampleTranslation": "Các vì sao toả sáng rực rỡ vào đêm quang đãng." },
+    { "word": "direction", "example": "Sailors used the stars to find their direction.", "exampleTranslation": "Thuỷ thủ dùng các vì sao để định hướng." },
+    { "word": "spacecraft", "example": "The spacecraft landed safely on the moon.", "exampleTranslation": "Tàu vũ trụ đã hạ cánh an toàn xuống Mặt Trăng." },
+    { "word": "liveable", "example": "No other planet is liveable for humans yet.", "exampleTranslation": "Chưa có hành tinh nào khác mà con người có thể sống được." },
+    { "word": "death", "example": "The death of a star creates new elements.", "exampleTranslation": "Cái chết của một ngôi sao tạo ra những nguyên tố mới." },
+    { "word": "amaze", "example": "The beauty of the night sky amazed the tourists.", "exampleTranslation": "Vẻ đẹp của bầu trời đêm làm du khách kinh ngạc." },
+    { "word": "explode", "example": "The old star exploded millions of years ago.", "exampleTranslation": "Ngôi sao già đã nổ tung từ hàng triệu năm trước." },
+    { "word": "stellar", "example": "Stellar winds blow dust far into space.", "exampleTranslation": "Gió sao thổi bụi đi xa vào không gian." },
+    { "word": "lunar", "example": "We watched the lunar eclipse from the balcony.", "exampleTranslation": "Chúng tôi ngắm nguyệt thực từ ban công." },
+    { "word": "cluster", "example": "A cluster of bright stars appeared above the mountain.", "exampleTranslation": "Một cụm sao sáng hiện ra phía trên ngọn núi." }
+  ]
+}

@@ -1,0 +1,607 @@
+{
+  "unit": 50,
+  "deck": "Unit 50: Trái Đất và vũ trụ",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "earth",
+      "sentences": [
+        {
+          "english": "The earth is the only home we have, so protect it.",
+          "vietnamese": "Trái Đất là ngôi nhà duy nhất của chúng ta, nên hãy bảo vệ nó."
+        },
+        {
+          "english": "Pollution is slowly damaging the earth.",
+          "vietnamese": "Ô nhiễm đang dần huỷ hoại Trái Đất."
+        },
+        {
+          "english": "The earth turns once every twenty-four hours.",
+          "vietnamese": "Trái Đất tự quay một vòng sau mỗi hai mươi bốn giờ."
+        },
+        {
+          "english": "Seventy percent of the earth is covered by water.",
+          "vietnamese": "Bảy mươi phần trăm bề mặt Trái Đất được bao phủ bởi nước."
+        },
+        {
+          "english": "Astronauts say the earth looks beautiful from space.",
+          "vietnamese": "Các phi hành gia nói Trái Đất trông rất đẹp khi nhìn từ vũ trụ."
+        }
+      ]
+    },
+    {
+      "word": "planet",
+      "sentences": [
+        {
+          "english": "We must protect our planet for future generations.",
+          "vietnamese": "Chúng ta phải bảo vệ hành tinh này vì các thế hệ tương lai."
+        },
+        {
+          "english": "Jupiter is the largest planet in our system.",
+          "vietnamese": "Sao Mộc là hành tinh lớn nhất trong hệ của chúng ta."
+        },
+        {
+          "english": "Scientists discovered a new planet last year.",
+          "vietnamese": "Các nhà khoa học đã phát hiện một hành tinh mới vào năm ngoái."
+        },
+        {
+          "english": "Mars is often called the red planet.",
+          "vietnamese": "Sao Hoả thường được gọi là hành tinh đỏ."
+        },
+        {
+          "english": "Climate change is a threat to the whole planet.",
+          "vietnamese": "Biến đổi khí hậu là mối đe doạ với cả hành tinh."
+        }
+      ]
+    },
+    {
+      "word": "observatory",
+      "sentences": [
+        {
+          "english": "The observatory is on top of a steep hill.",
+          "vietnamese": "Đài thiên văn nằm trên đỉnh một ngọn đồi dốc."
+        },
+        {
+          "english": "Our class went to the observatory and saw Saturn's rings.",
+          "vietnamese": "Lớp chúng tôi đến đài thiên văn và được ngắm vành đai sao Thổ."
+        },
+        {
+          "english": "The observatory opens to the public on Saturday nights.",
+          "vietnamese": "Đài thiên văn mở cửa cho công chúng vào các tối thứ Bảy."
+        },
+        {
+          "english": "From the observatory, you can see the whole valley.",
+          "vietnamese": "Từ đài thiên văn, bạn có thể nhìn thấy cả thung lũng."
+        },
+        {
+          "english": "Scientists at the observatory work through the night.",
+          "vietnamese": "Các nhà khoa học ở đài thiên văn làm việc suốt đêm."
+        }
+      ]
+    },
+    {
+      "word": "star",
+      "sentences": [
+        {
+          "english": "Millions of stars shine above the quiet desert.",
+          "vietnamese": "Hàng triệu ngôi sao toả sáng trên sa mạc yên tĩnh."
+        },
+        {
+          "english": "The sun is a typical star of medium size.",
+          "vietnamese": "Mặt Trời là một ngôi sao điển hình có kích thước trung bình."
+        },
+        {
+          "english": "We lay on the ground and counted the stars.",
+          "vietnamese": "Chúng tôi nằm trên mặt đất và đếm sao."
+        },
+        {
+          "english": "Some stars are huge compared with the sun.",
+          "vietnamese": "Một số ngôi sao khổng lồ nếu so với Mặt Trời."
+        },
+        {
+          "english": "Sailors used to follow the stars at night.",
+          "vietnamese": "Thuỷ thủ ngày xưa đi theo các vì sao vào ban đêm."
+        }
+      ]
+    },
+    {
+      "word": "space",
+      "sentences": [
+        {
+          "english": "Astronauts can see huge storms from space.",
+          "vietnamese": "Phi hành gia có thể nhìn thấy những cơn bão khổng lồ từ vũ trụ."
+        },
+        {
+          "english": "My dream is to travel into space.",
+          "vietnamese": "Ước mơ của tôi là được du hành vào vũ trụ."
+        },
+        {
+          "english": "There is no air in space, so it is completely silent.",
+          "vietnamese": "Không có không khí trong vũ trụ nên ở đó hoàn toàn im lặng."
+        },
+        {
+          "english": "The country plans to send a woman into space.",
+          "vietnamese": "Quốc gia ấy dự định đưa một phụ nữ lên vũ trụ."
+        },
+        {
+          "english": "Space tourism is still extremely expensive.",
+          "vietnamese": "Du lịch vũ trụ vẫn còn cực kỳ đắt đỏ."
+        }
+      ]
+    },
+    {
+      "word": "galaxy",
+      "sentences": [
+        {
+          "english": "Our galaxy contains billions of stars.",
+          "vietnamese": "Thiên hà của chúng ta chứa hàng tỷ ngôi sao."
+        },
+        {
+          "english": "The Milky Way is a huge spiral galaxy.",
+          "vietnamese": "Dải Ngân Hà là một thiên hà xoắn ốc khổng lồ."
+        },
+        {
+          "english": "Scientists photographed a galaxy far away from ours.",
+          "vietnamese": "Các nhà khoa học đã chụp được một thiên hà ở rất xa thiên hà của chúng ta."
+        },
+        {
+          "english": "There are more galaxies in the universe than we can imagine.",
+          "vietnamese": "Vũ trụ có nhiều thiên hà hơn chúng ta có thể tưởng tượng."
+        },
+        {
+          "english": "This galaxy is moving away from us at high speed.",
+          "vietnamese": "Thiên hà này đang rời xa chúng ta với tốc độ cao."
+        }
+      ]
+    },
+    {
+      "word": "object",
+      "sentences": [
+        {
+          "english": "A strange object appeared in the night sky.",
+          "vietnamese": "Một vật thể lạ xuất hiện trên bầu trời đêm."
+        },
+        {
+          "english": "The telescope can see objects billions of kilometres away.",
+          "vietnamese": "Kính thiên văn có thể nhìn thấy những vật thể cách xa hàng tỷ ki-lô-mét."
+        },
+        {
+          "english": "Pluto is a small icy object at the edge of the solar system.",
+          "vietnamese": "Sao Diêm Vương là một vật thể nhỏ phủ băng ở rìa Hệ Mặt Trời."
+        },
+        {
+          "english": "Do not throw sharp objects into the rubbish bin.",
+          "vietnamese": "Đừng vứt vật sắc nhọn vào thùng rác."
+        },
+        {
+          "english": "Nobody could explain the bright flying object.",
+          "vietnamese": "Không ai giải thích được vật thể bay phát sáng ấy."
+        }
+      ]
+    },
+    {
+      "word": "moon",
+      "sentences": [
+        {
+          "english": "The full moon looked huge over the lake.",
+          "vietnamese": "Trăng tròn trông thật to trên mặt hồ."
+        },
+        {
+          "english": "Children eat mooncakes under the moon at the Mid-Autumn Festival.",
+          "vietnamese": "Trẻ em ăn bánh trung thu dưới ánh trăng vào dịp Tết Trung thu."
+        },
+        {
+          "english": "The moon controls the tides of the sea.",
+          "vietnamese": "Mặt Trăng chi phối thuỷ triều của biển."
+        },
+        {
+          "english": "The moon has no light of its own.",
+          "vietnamese": "Mặt Trăng không tự phát ra ánh sáng."
+        },
+        {
+          "english": "We watched the moon rise from the balcony.",
+          "vietnamese": "Chúng tôi ngắm trăng lên từ ban công."
+        }
+      ]
+    },
+    {
+      "word": "dust",
+      "sentences": [
+        {
+          "english": "A huge cloud of dust surrounded the young star.",
+          "vietnamese": "Một đám mây bụi khổng lồ bao quanh ngôi sao trẻ."
+        },
+        {
+          "english": "Tons of space dust fall on our planet daily.",
+          "vietnamese": "Hằng ngày có hàng tấn bụi vũ trụ rơi xuống hành tinh của chúng ta."
+        },
+        {
+          "english": "The antique telescope was covered in dust.",
+          "vietnamese": "Chiếc kính thiên văn cổ phủ đầy bụi."
+        },
+        {
+          "english": "The wind blew dust into my eyes during the hike.",
+          "vietnamese": "Gió thổi bụi vào mắt tôi trong lúc leo núi."
+        },
+        {
+          "english": "Clean the dust off the lens carefully.",
+          "vietnamese": "Hãy lau sạch bụi trên ống kính thật cẩn thận."
+        }
+      ]
+    },
+    {
+      "word": "travel",
+      "sentences": [
+        {
+          "english": "Light travels faster than anything else.",
+          "vietnamese": "Ánh sáng di chuyển nhanh hơn mọi thứ khác."
+        },
+        {
+          "english": "One day, ordinary people may travel to Mars.",
+          "vietnamese": "Một ngày nào đó, người bình thường có thể du hành tới sao Hoả."
+        },
+        {
+          "english": "It would take years to travel to the nearest star.",
+          "vietnamese": "Phải mất nhiều năm mới đi được tới ngôi sao gần nhất."
+        },
+        {
+          "english": "Sound cannot travel through empty space.",
+          "vietnamese": "Âm thanh không thể truyền qua không gian trống rỗng."
+        },
+        {
+          "english": "She loves travelling and dreams of seeing the Northern Lights.",
+          "vietnamese": "Cô ấy mê đi du lịch và mơ được ngắm cực quang."
+        }
+      ]
+    },
+    {
+      "word": "mind-blowing",
+      "sentences": [
+        {
+          "english": "The view from the mountain top was mind-blowing.",
+          "vietnamese": "Quang cảnh từ đỉnh núi đẹp đến choáng ngợp."
+        },
+        {
+          "english": "The size of the universe is mind-blowing to imagine.",
+          "vietnamese": "Kích thước của vũ trụ khiến người ta choáng ngợp khi tưởng tượng."
+        },
+        {
+          "english": "The new science museum has some mind-blowing exhibits.",
+          "vietnamese": "Bảo tàng khoa học mới có vài hiện vật gây kinh ngạc."
+        },
+        {
+          "english": "Her magic show was absolutely mind-blowing.",
+          "vietnamese": "Màn ảo thuật của cô ấy thực sự gây choáng ngợp."
+        },
+        {
+          "english": "The film had mind-blowing images of distant galaxies.",
+          "vietnamese": "Bộ phim có những hình ảnh choáng ngợp về các thiên hà xa xôi."
+        }
+      ]
+    },
+    {
+      "word": "life",
+      "sentences": [
+        {
+          "english": "Is there life on other planets? Nobody knows.",
+          "vietnamese": "Có sự sống trên các hành tinh khác không? Không ai biết."
+        },
+        {
+          "english": "Water is necessary for life as we know it.",
+          "vietnamese": "Nước là thứ cần thiết cho sự sống như chúng ta biết."
+        },
+        {
+          "english": "Scientists are searching for signs of life on Mars.",
+          "vietnamese": "Các nhà khoa học đang tìm dấu hiệu của sự sống trên sao Hoả."
+        },
+        {
+          "english": "Life on the space station is quite difficult.",
+          "vietnamese": "Cuộc sống trên trạm vũ trụ khá vất vả."
+        },
+        {
+          "english": "The forest is full of life after the rain.",
+          "vietnamese": "Khu rừng tràn đầy sức sống sau cơn mưa."
+        }
+      ]
+    },
+    {
+      "word": "freeze",
+      "sentences": [
+        {
+          "english": "The lake freezes completely in winter.",
+          "vietnamese": "Mặt hồ đóng băng hoàn toàn vào mùa đông."
+        },
+        {
+          "english": "Water freezes at zero degrees Celsius.",
+          "vietnamese": "Nước đóng băng ở không độ C."
+        },
+        {
+          "english": "If the sun disappeared, our planet would freeze quickly.",
+          "vietnamese": "Nếu Mặt Trời biến mất, hành tinh của chúng ta sẽ nhanh chóng đóng băng."
+        },
+        {
+          "english": "It's freezing outside, so wear a warm jacket.",
+          "vietnamese": "Ngoài trời lạnh cóng, nên hãy mặc áo khoác ấm."
+        },
+        {
+          "english": "The temperature on Mars can freeze your skin in seconds.",
+          "vietnamese": "Nhiệt độ trên sao Hoả có thể làm da bạn đóng băng trong vài giây."
+        }
+      ]
+    },
+    {
+      "word": "alien",
+      "sentences": [
+        {
+          "english": "My little brother believes aliens live among us.",
+          "vietnamese": "Em trai tôi tin rằng người ngoài hành tinh sống giữa chúng ta."
+        },
+        {
+          "english": "The film is about friendly aliens who visit the earth.",
+          "vietnamese": "Bộ phim kể về những người ngoài hành tinh thân thiện đến thăm Trái Đất."
+        },
+        {
+          "english": "Many people are curious about aliens.",
+          "vietnamese": "Nhiều người tò mò về người ngoài hành tinh."
+        },
+        {
+          "english": "The alien in the cartoon has three eyes.",
+          "vietnamese": "Người ngoài hành tinh trong phim hoạt hình có ba mắt."
+        },
+        {
+          "english": "In the story, a lonely alien makes friends with a boy.",
+          "vietnamese": "Trong truyện, một người ngoài hành tinh cô đơn kết bạn với một cậu bé."
+        }
+      ]
+    },
+    {
+      "word": "shine",
+      "sentences": [
+        {
+          "english": "The stars shine brightly on a clear night.",
+          "vietnamese": "Các vì sao toả sáng rực rỡ vào đêm quang đãng."
+        },
+        {
+          "english": "The sun was shining when we started the hike.",
+          "vietnamese": "Mặt Trời đang chiếu sáng khi chúng tôi bắt đầu chuyến leo núi."
+        },
+        {
+          "english": "Venus shines like a bright star after sunset.",
+          "vietnamese": "Sao Kim toả sáng như một ngôi sao rực rỡ sau hoàng hôn."
+        },
+        {
+          "english": "The moon shines because it reflects light from the sun.",
+          "vietnamese": "Mặt Trăng sáng vì nó phản chiếu ánh sáng từ Mặt Trời."
+        },
+        {
+          "english": "Polish the silver until it shines.",
+          "vietnamese": "Hãy đánh bóng đồ bạc cho đến khi nó sáng loáng."
+        }
+      ]
+    },
+    {
+      "word": "direction",
+      "sentences": [
+        {
+          "english": "Sailors used the stars to find their direction.",
+          "vietnamese": "Thuỷ thủ dùng các vì sao để định hướng."
+        },
+        {
+          "english": "We lost our direction in the forest.",
+          "vietnamese": "Chúng tôi bị lạc hướng trong rừng."
+        },
+        {
+          "english": "Can you give me directions to the station?",
+          "vietnamese": "Bạn có thể chỉ đường cho tôi tới nhà ga không?"
+        },
+        {
+          "english": "The wind suddenly changed direction.",
+          "vietnamese": "Gió đột ngột đổi hướng."
+        },
+        {
+          "english": "The comet is moving in the direction of the sun at high speed.",
+          "vietnamese": "Sao chổi đang lao về phía Mặt Trời với tốc độ cao."
+        }
+      ]
+    },
+    {
+      "word": "spacecraft",
+      "sentences": [
+        {
+          "english": "The spacecraft landed safely on the moon.",
+          "vietnamese": "Tàu vũ trụ đã hạ cánh an toàn xuống Mặt Trăng."
+        },
+        {
+          "english": "The spacecraft carried three astronauts and enough food.",
+          "vietnamese": "Tàu vũ trụ chở ba phi hành gia và đủ thức ăn."
+        },
+        {
+          "english": "Building a spacecraft costs billions of dollars.",
+          "vietnamese": "Chế tạo một con tàu vũ trụ tốn hàng tỷ đô la."
+        },
+        {
+          "english": "The spacecraft sent amazing photos back to the earth.",
+          "vietnamese": "Tàu vũ trụ gửi về Trái Đất những bức ảnh tuyệt đẹp."
+        },
+        {
+          "english": "Engineers designed a new spacecraft for the mission.",
+          "vietnamese": "Các kỹ sư đã thiết kế một con tàu vũ trụ mới cho sứ mệnh."
+        }
+      ]
+    },
+    {
+      "word": "liveable",
+      "sentences": [
+        {
+          "english": "No other planet is liveable for humans yet.",
+          "vietnamese": "Chưa có hành tinh nào khác mà con người có thể sống được."
+        },
+        {
+          "english": "Scientists hope to develop technology to make Mars liveable.",
+          "vietnamese": "Các nhà khoa học hy vọng phát triển công nghệ để biến sao Hoả thành nơi có thể sống được."
+        },
+        {
+          "english": "Is this tiny flat really liveable?",
+          "vietnamese": "Căn hộ bé xíu này có thực sự ở được không?"
+        },
+        {
+          "english": "The city became more liveable after they planted more trees.",
+          "vietnamese": "Thành phố trở nên đáng sống hơn sau khi họ trồng thêm cây."
+        },
+        {
+          "english": "Clean air and water make a place liveable.",
+          "vietnamese": "Không khí và nước sạch khiến một nơi trở nên đáng sống."
+        }
+      ]
+    },
+    {
+      "word": "death",
+      "sentences": [
+        {
+          "english": "The death of a star creates new elements.",
+          "vietnamese": "Cái chết của một ngôi sao tạo ra những nguyên tố mới."
+        },
+        {
+          "english": "Smoking is a major cause of death.",
+          "vietnamese": "Hút thuốc là một nguyên nhân gây tử vong hàng đầu."
+        },
+        {
+          "english": "The film tells the story of the death of a famous artist.",
+          "vietnamese": "Bộ phim kể về cái chết của một nghệ sĩ nổi tiếng."
+        },
+        {
+          "english": "The news of his death shocked everyone.",
+          "vietnamese": "Tin ông qua đời làm mọi người bàng hoàng."
+        },
+        {
+          "english": "The accident caused one death and many injuries.",
+          "vietnamese": "Vụ tai nạn làm một người chết và nhiều người bị thương."
+        }
+      ]
+    },
+    {
+      "word": "amaze",
+      "sentences": [
+        {
+          "english": "The beauty of the night sky amazed the tourists.",
+          "vietnamese": "Vẻ đẹp của bầu trời đêm làm du khách kinh ngạc."
+        },
+        {
+          "english": "It amazes me how far the stars are.",
+          "vietnamese": "Tôi kinh ngạc khi nghĩ các vì sao xa đến mức nào."
+        },
+        {
+          "english": "The magician amazed the children with his tricks.",
+          "vietnamese": "Nhà ảo thuật làm bọn trẻ kinh ngạc với những trò của mình."
+        },
+        {
+          "english": "We were amazed by the huge telescope.",
+          "vietnamese": "Chúng tôi sửng sốt trước chiếc kính thiên văn khổng lồ."
+        },
+        {
+          "english": "Her quick progress in English amazed her teacher.",
+          "vietnamese": "Sự tiến bộ nhanh chóng trong môn tiếng Anh của cô bé làm thầy giáo kinh ngạc."
+        }
+      ]
+    },
+    {
+      "word": "explode",
+      "sentences": [
+        {
+          "english": "The old star exploded millions of years ago.",
+          "vietnamese": "Ngôi sao già đã nổ tung từ hàng triệu năm trước."
+        },
+        {
+          "english": "The rocket exploded seconds after it left the ground.",
+          "vietnamese": "Tên lửa phát nổ vài giây sau khi rời mặt đất."
+        },
+        {
+          "english": "Fireworks exploded over the river at midnight.",
+          "vietnamese": "Pháo hoa nổ rộ trên sông lúc nửa đêm."
+        },
+        {
+          "english": "A gas bottle exploded in the kitchen.",
+          "vietnamese": "Một bình ga phát nổ trong bếp."
+        },
+        {
+          "english": "When a big star explodes, it shines brighter than a galaxy.",
+          "vietnamese": "Khi một ngôi sao lớn nổ tung, nó sáng hơn cả một thiên hà."
+        }
+      ]
+    },
+    {
+      "word": "stellar",
+      "sentences": [
+        {
+          "english": "Stellar winds blow dust far into space.",
+          "vietnamese": "Gió sao thổi bụi đi xa vào không gian."
+        },
+        {
+          "english": "This book explains stellar life cycles in simple language.",
+          "vietnamese": "Cuốn sách này giải thích vòng đời của các ngôi sao bằng ngôn ngữ đơn giản."
+        },
+        {
+          "english": "Our sun is a stellar object of average size.",
+          "vietnamese": "Mặt Trời là một thiên thể sao có kích thước trung bình."
+        },
+        {
+          "english": "The observatory records stellar data every night.",
+          "vietnamese": "Đài thiên văn ghi lại dữ liệu về các ngôi sao mỗi đêm."
+        },
+        {
+          "english": "Stellar light from distant stars takes years to reach us.",
+          "vietnamese": "Ánh sáng từ những ngôi sao xa xôi phải mất nhiều năm mới tới được chỗ chúng ta."
+        }
+      ]
+    },
+    {
+      "word": "lunar",
+      "sentences": [
+        {
+          "english": "We watched the lunar eclipse from the balcony.",
+          "vietnamese": "Chúng tôi ngắm nguyệt thực từ ban công."
+        },
+        {
+          "english": "Tet follows the lunar calendar.",
+          "vietnamese": "Tết được tính theo âm lịch."
+        },
+        {
+          "english": "The lunar surface is covered with grey dust.",
+          "vietnamese": "Bề mặt Mặt Trăng phủ đầy bụi xám."
+        },
+        {
+          "english": "The museum displays lunar rocks in a special glass case.",
+          "vietnamese": "Bảo tàng trưng bày đá Mặt Trăng trong một tủ kính đặc biệt."
+        },
+        {
+          "english": "The Mid-Autumn Festival takes place on the fifteenth day of the eighth lunar month.",
+          "vietnamese": "Tết Trung thu diễn ra vào ngày rằm tháng tám âm lịch."
+        }
+      ]
+    },
+    {
+      "word": "cluster",
+      "sentences": [
+        {
+          "english": "A cluster of bright stars appeared above the mountain.",
+          "vietnamese": "Một cụm sao sáng hiện ra phía trên ngọn núi."
+        },
+        {
+          "english": "Galaxies often form clusters in space.",
+          "vietnamese": "Các thiên hà thường tạo thành những cụm trong vũ trụ."
+        },
+        {
+          "english": "A cluster of houses stood at the foot of the hill.",
+          "vietnamese": "Một cụm nhà nằm dưới chân đồi."
+        },
+        {
+          "english": "Grapes grow in tight clusters.",
+          "vietnamese": "Nho mọc thành từng chùm dày."
+        },
+        {
+          "english": "The Pleiades is a famous star cluster you can see without a telescope.",
+          "vietnamese": "Tua Rua là một cụm sao nổi tiếng mà bạn có thể thấy bằng mắt thường."
+        }
+      ]
+    }
+  ]
+}

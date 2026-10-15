@@ -1,0 +1,274 @@
+{
+  "deck": {
+    "name": "Unit 49: Khởi nghiệp và tài chính",
+    "description": "24 từ vựng về khởi nghiệp, kinh doanh và tài chính",
+    "color": "#10b981",
+    "icon": "💰"
+  },
+  "cards": [
+    {
+      "word": "start-up",
+      "meaning": "công ty khởi nghiệp",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈstɑːt ʌp/",
+      "example": "Start-ups are trendy now in Vietnam.",
+      "exampleTranslation": "Khởi nghiệp hiện đang là xu hướng ở Việt Nam.",
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "word": "loan",
+      "meaning": "khoản vay",
+      "partOfSpeech": "noun",
+      "phonetic": "/ləʊn/",
+      "example": "She took out a bank loan to open a café.",
+      "exampleTranslation": "Cô ấy vay ngân hàng để mở một quán cà phê.",
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "word": "research",
+      "meaning": "sự nghiên cứu",
+      "partOfSpeech": "noun",
+      "phonetic": "/rɪˈsɜːtʃ/",
+      "example": "We did market research before launching.",
+      "exampleTranslation": "Chúng tôi đã nghiên cứu thị trường trước khi ra mắt.",
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "word": "customer",
+      "meaning": "khách hàng",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈkʌstəmə(r)/",
+      "example": "Happy customers will come back.",
+      "exampleTranslation": "Khách hàng hài lòng sẽ quay lại.",
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "word": "business",
+      "meaning": "việc kinh doanh, doanh nghiệp",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈbɪznəs/",
+      "example": "He runs a small business online.",
+      "exampleTranslation": "Anh ấy điều hành một doanh nghiệp nhỏ trên mạng.",
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "word": "discussion",
+      "meaning": "cuộc thảo luận",
+      "partOfSpeech": "noun",
+      "phonetic": "/dɪˈskʌʃn/",
+      "example": "We had a long discussion about the budget.",
+      "exampleTranslation": "Chúng tôi đã có một cuộc thảo luận dài về ngân sách.",
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "word": "situation",
+      "meaning": "tình hình, hoàn cảnh",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˌsɪtʃuˈeɪʃn/",
+      "example": "The company's financial situation is getting better.",
+      "exampleTranslation": "Tình hình tài chính của công ty đang tốt lên.",
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "word": "hopeless",
+      "meaning": "tuyệt vọng, vô vọng",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˈhəʊpləs/",
+      "example": "He felt hopeless after losing his job.",
+      "exampleTranslation": "Anh ấy cảm thấy tuyệt vọng sau khi mất việc.",
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "word": "unemployment",
+      "meaning": "sự thất nghiệp",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˌʌnɪmˈplɔɪmənt/",
+      "example": "Unemployment rose during the crisis.",
+      "exampleTranslation": "Tỷ lệ thất nghiệp tăng trong thời kỳ khủng hoảng.",
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "word": "trade",
+      "meaning": "buôn bán, giao thương",
+      "partOfSpeech": "verb",
+      "phonetic": "/treɪd/",
+      "example": "Vietnam trades with many countries.",
+      "exampleTranslation": "Việt Nam giao thương với nhiều quốc gia.",
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "word": "abroad",
+      "meaning": "ở nước ngoài",
+      "partOfSpeech": "adverb",
+      "phonetic": "/əˈbrɔːd/",
+      "example": "They sell their coffee abroad.",
+      "exampleTranslation": "Họ bán cà phê của mình ra nước ngoài.",
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "word": "recover",
+      "meaning": "phục hồi",
+      "partOfSpeech": "verb",
+      "phonetic": "/rɪˈkʌvə(r)/",
+      "example": "The economy is slowly recovering.",
+      "exampleTranslation": "Nền kinh tế đang dần phục hồi.",
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "word": "possible",
+      "meaning": "có thể",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˈpɒsəbl/",
+      "example": "Is it possible to pay later?",
+      "exampleTranslation": "Có thể trả tiền sau được không?",
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "word": "average",
+      "meaning": "trung bình",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˈævərɪdʒ/",
+      "example": "The average salary here is quite low.",
+      "exampleTranslation": "Mức lương trung bình ở đây khá thấp.",
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "word": "professional",
+      "meaning": "chuyên nghiệp",
+      "partOfSpeech": "adjective",
+      "phonetic": "/prəˈfeʃənl/",
+      "example": "You should get professional help with your taxes.",
+      "exampleTranslation": "Bạn nên nhờ chuyên gia giúp về các khoản thuế của mình.",
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "word": "advice",
+      "meaning": "lời khuyên",
+      "partOfSpeech": "noun",
+      "phonetic": "/ədˈvaɪs/",
+      "example": "My mentor gave me useful advice.",
+      "exampleTranslation": "Người hướng dẫn của tôi đã cho tôi lời khuyên hữu ích.",
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "word": "percent",
+      "meaning": "phần trăm",
+      "partOfSpeech": "noun",
+      "phonetic": "/pəˈsent/",
+      "example": "Sales went up by twenty percent.",
+      "exampleTranslation": "Doanh số tăng hai mươi phần trăm.",
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "word": "financial",
+      "meaning": "(thuộc) tài chính",
+      "partOfSpeech": "adjective",
+      "phonetic": "/faɪˈnænʃl/",
+      "example": "The start-up had serious financial problems.",
+      "exampleTranslation": "Công ty khởi nghiệp đã gặp vấn đề tài chính nghiêm trọng.",
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "word": "cheque",
+      "meaning": "tấm séc",
+      "partOfSpeech": "noun",
+      "phonetic": "/tʃek/",
+      "example": "He paid the supplier by cheque.",
+      "exampleTranslation": "Anh ấy thanh toán cho nhà cung cấp bằng séc.",
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "word": "manage",
+      "meaning": "quản lý",
+      "partOfSpeech": "verb",
+      "phonetic": "/ˈmænɪdʒ/",
+      "example": "She manages a team of ten people.",
+      "exampleTranslation": "Cô ấy quản lý một nhóm mười người.",
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "word": "transfer",
+      "meaning": "chuyển (tiền)",
+      "partOfSpeech": "verb",
+      "phonetic": "/trænsˈfɜː(r)/",
+      "example": "Please transfer the money to my account.",
+      "exampleTranslation": "Vui lòng chuyển tiền vào tài khoản của tôi.",
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "word": "goods",
+      "meaning": "hàng hoá",
+      "partOfSpeech": "noun",
+      "phonetic": "/ɡʊdz/",
+      "example": "The goods will arrive next week.",
+      "exampleTranslation": "Hàng hóa sẽ đến vào tuần tới.",
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "word": "currency",
+      "meaning": "tiền tệ",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈkʌrənsi/",
+      "example": "The dong is Vietnam's currency.",
+      "exampleTranslation": "Đồng là đơn vị tiền tệ của Việt Nam.",
+      "tags": [
+        "business"
+      ]
+    },
+    {
+      "word": "product",
+      "meaning": "sản phẩm",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈprɒdʌkt/",
+      "example": "Our new product sold out in a day.",
+      "exampleTranslation": "Sản phẩm mới của chúng tôi bán hết chỉ trong một ngày.",
+      "tags": [
+        "business"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "deck": {
+    "name": "Unit 47: Tội phạm và pháp luật",
+    "description": "24 từ vựng về tội phạm, cảnh sát, nhà tù và pháp luật",
+    "color": "#ef4444",
+    "icon": "🚔"
+  },
+  "cards": [
+    {
+      "word": "criminal",
+      "meaning": "tội phạm",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈkrɪmɪnl/",
+      "example": "The criminal broke into my flat in the middle of the day.",
+      "exampleTranslation": "Tên tội phạm đột nhập vào căn hộ của tôi giữa ban ngày.",
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "word": "murder",
+      "meaning": "giết người",
+      "partOfSpeech": "verb",
+      "phonetic": "/ˈmɜːdə(r)/",
+      "example": "He was accused of murdering his partner.",
+      "exampleTranslation": "Anh ta bị buộc tội giết người yêu của mình.",
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "word": "steal",
+      "meaning": "ăn trộm",
+      "partOfSpeech": "verb",
+      "phonetic": "/stiːl/",
+      "example": "Someone stole my bike last night.",
+      "exampleTranslation": "Ai đó đã lấy trộm xe đạp của tôi tối qua.",
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "word": "gun",
+      "meaning": "súng",
+      "partOfSpeech": "noun",
+      "phonetic": "/ɡʌn/",
+      "example": "The robber pointed a gun at the cashier.",
+      "exampleTranslation": "Tên cướp chĩa súng vào nhân viên thu ngân.",
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "word": "arrest",
+      "meaning": "bắt giữ",
+      "partOfSpeech": "verb",
+      "phonetic": "/əˈrest/",
+      "example": "The police arrested two men yesterday.",
+      "exampleTranslation": "Cảnh sát đã bắt giữ hai người đàn ông hôm qua.",
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "word": "jail",
+      "meaning": "nhà tù, trại giam",
+      "partOfSpeech": "noun",
+      "phonetic": "/dʒeɪl/",
+      "example": "He spent three years in jail.",
+      "exampleTranslation": "Anh ta đã ngồi tù ba năm.",
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "word": "guard",
+      "meaning": "bảo vệ, lính canh",
+      "partOfSpeech": "noun",
+      "phonetic": "/ɡɑːd/",
+      "example": "A guard stands outside the bank all day.",
+      "exampleTranslation": "Một người bảo vệ đứng bên ngoài ngân hàng cả ngày.",
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "word": "thief",
+      "meaning": "kẻ trộm",
+      "partOfSpeech": "noun",
+      "phonetic": "/θiːf/",
+      "example": "The thief ran away with her handbag.",
+      "exampleTranslation": "Tên trộm chạy mất cùng chiếc túi xách của cô ấy.",
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "word": "attack",
+      "meaning": "tấn công",
+      "partOfSpeech": "verb",
+      "phonetic": "/əˈtæk/",
+      "example": "A man was attacked on his way home.",
+      "exampleTranslation": "Một người đàn ông bị tấn công trên đường về nhà.",
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "word": "policeman",
+      "meaning": "cảnh sát",
+      "partOfSpeech": "noun",
+      "phonetic": "/pəˈliːsmən/",
+      "example": "The policeman helped the old lady cross the road.",
+      "exampleTranslation": "Viên cảnh sát giúp bà cụ qua đường.",
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "word": "stop",
+      "meaning": "chặn lại, dừng",
+      "partOfSpeech": "verb",
+      "phonetic": "/stɒp/",
+      "example": "The police stopped the car for speeding.",
+      "exampleTranslation": "Cảnh sát chặn chiếc xe lại vì chạy quá tốc độ.",
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "word": "tax",
+      "meaning": "thuế",
+      "partOfSpeech": "noun",
+      "phonetic": "/tæks/",
+      "example": "He went to prison for not paying tax.",
+      "exampleTranslation": "Anh ta phải vào tù vì không nộp thuế.",
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "word": "prove",
+      "meaning": "chứng minh",
+      "partOfSpeech": "verb",
+      "phonetic": "/pruːv/",
+      "example": "They couldn't prove that he was there.",
+      "exampleTranslation": "Họ không thể chứng minh rằng anh ta đã ở đó.",
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "word": "guilty",
+      "meaning": "có tội",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˈɡɪlti/",
+      "example": "The court found him guilty of theft.",
+      "exampleTranslation": "Tòa án tuyên anh ta phạm tội trộm cắp.",
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "word": "prisoner",
+      "meaning": "tù nhân",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈprɪznə(r)/",
+      "example": "The prisoner escaped at midnight.",
+      "exampleTranslation": "Tù nhân đã vượt ngục lúc nửa đêm.",
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "word": "prison",
+      "meaning": "nhà tù",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈprɪzn/",
+      "example": "He was sent to prison for ten years.",
+      "exampleTranslation": "Anh ta bị kết án mười năm tù.",
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "word": "outlaw",
+      "meaning": "kẻ ngoài vòng pháp luật",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈaʊtlɔː/",
+      "example": "The outlaw hid in the mountains.",
+      "exampleTranslation": "Kẻ ngoài vòng pháp luật trốn trong núi.",
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "word": "handcuffs",
+      "meaning": "còng tay",
+      "partOfSpeech": "noun",
+      "phonetic": "/ˈhændkʌfs/",
+      "example": "The police put handcuffs on the thief.",
+      "exampleTranslation": "Cảnh sát còng tay tên trộm.",
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "word": "defence",
+      "meaning": "sự bào chữa, phòng vệ",
+      "partOfSpeech": "noun",
+      "phonetic": "/dɪˈfens/",
+      "example": "His lawyer prepared a strong defence.",
+      "exampleTranslation": "Luật sư của anh ta đã chuẩn bị một lời bào chữa vững chắc.",
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "word": "law",
+      "meaning": "luật pháp",
+      "partOfSpeech": "noun",
+      "phonetic": "/lɔː/",
+      "example": "Everyone must obey the law.",
+      "exampleTranslation": "Mọi người đều phải tuân thủ pháp luật.",
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "word": "serious",
+      "meaning": "nghiêm trọng",
+      "partOfSpeech": "adjective",
+      "phonetic": "/ˈsɪəriəs/",
+      "example": "Murder is a very serious crime.",
+      "exampleTranslation": "Giết người là một tội rất nghiêm trọng.",
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "word": "trick",
+      "meaning": "lừa",
+      "partOfSpeech": "verb",
+      "phonetic": "/trɪk/",
+      "example": "The man tricked her into giving him money.",
+      "exampleTranslation": "Gã đàn ông lừa cô ấy đưa tiền cho hắn.",
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "word": "blame",
+      "meaning": "đổ lỗi",
+      "partOfSpeech": "verb",
+      "phonetic": "/bleɪm/",
+      "example": "Don't blame me for your mistake.",
+      "exampleTranslation": "Đừng đổ lỗi cho tôi vì sai lầm của bạn.",
+      "tags": [
+        "crime"
+      ]
+    },
+    {
+      "word": "spy",
+      "meaning": "gián điệp",
+      "partOfSpeech": "noun",
+      "phonetic": "/spaɪ/",
+      "example": "The spy was caught stealing secret files.",
+      "exampleTranslation": "Tên gián điệp bị bắt khi đang đánh cắp tài liệu mật.",
+      "tags": [
+        "crime"
+      ]
+    }
+  ]
+}

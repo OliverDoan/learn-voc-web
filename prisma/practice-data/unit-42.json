@@ -1,0 +1,247 @@
+{
+  "unit": 42,
+  "deck": "Unit 42: Phụ kiện thời trang",
+  "note": "Bộ câu ví dụ (viết tay): mỗi từ 5 câu, mỗi câu chứa từ của thẻ và ít nhất 1 từ đã học ở Unit cũ hơn.",
+  "items": [
+    {
+      "word": "well",
+      "sentences": [
+        { "english": "She speaks English well because she lived abroad.", "vietnamese": "Cô ấy nói tiếng Anh giỏi vì từng sống ở nước ngoài." },
+        { "english": "These shoes go well with your new dress.", "vietnamese": "Đôi giày này rất hợp với chiếc váy mới của bạn." },
+        { "english": "He dresses well for every important interview.", "vietnamese": "Anh ấy ăn mặc chỉn chu cho mọi buổi phỏng vấn quan trọng." },
+        { "english": "Our team played well in the final match.", "vietnamese": "Đội chúng tôi chơi tốt trong trận chung kết." },
+        { "english": "The seller treats her customers very well.", "vietnamese": "Người bán đối xử với khách hàng rất tốt." }
+      ]
+    },
+    {
+      "word": "stylish",
+      "sentences": [
+        { "english": "My bestie always looks stylish, even at the market.", "vietnamese": "Bạn thân tôi lúc nào cũng sành điệu, kể cả khi đi chợ." },
+        { "english": "She bought a stylish coat in the winter sale.", "vietnamese": "Cô ấy mua một chiếc áo khoác sành điệu trong đợt giảm giá mùa đông." },
+        { "english": "The new café has a stylish and modern design.", "vietnamese": "Quán cà phê mới có thiết kế hợp thời và hiện đại." },
+        { "english": "Stylish clothes do not have to be expensive.", "vietnamese": "Quần áo hợp thời trang không nhất thiết phải đắt." },
+        { "english": "He looked very stylish at his cousin's wedding.", "vietnamese": "Anh ấy trông rất bảnh bao ở đám cưới em họ." }
+      ]
+    },
+    {
+      "word": "handbag",
+      "sentences": [
+        { "english": "She keeps all her receipts in her handbag.", "vietnamese": "Cô ấy giữ hết hóa đơn trong túi xách tay." },
+        { "english": "A pickpocket stole her handbag at the bus station.", "vietnamese": "Một tên móc túi đã lấy trộm túi xách của cô ấy ở bến xe buýt." },
+        { "english": "This handbag was a birthday gift from her husband.", "vietnamese": "Chiếc túi xách này là quà sinh nhật chồng cô ấy tặng." },
+        { "english": "Her handbag is always full of lipsticks and keys.", "vietnamese": "Túi xách của cô ấy lúc nào cũng đầy son môi và chìa khóa." },
+        { "english": "The luxury handbag costs more than my monthly salary.", "vietnamese": "Chiếc túi xách hàng hiệu đó đắt hơn cả tháng lương của tôi." }
+      ]
+    },
+    {
+      "word": "notice",
+      "sentences": [
+        { "english": "Did you notice her new haircut at the party?", "vietnamese": "Bạn có để ý kiểu tóc mới của cô ấy ở bữa tiệc không?" },
+        { "english": "I noticed a small hole in my favourite shirt.", "vietnamese": "Tôi để ý thấy một lỗ nhỏ trên chiếc áo yêu thích." },
+        { "english": "Nobody noticed the stranger standing by the gate.", "vietnamese": "Không ai để ý người lạ đứng cạnh cổng." },
+        { "english": "She noticed that the price had changed.", "vietnamese": "Cô ấy để ý thấy giá đã thay đổi." },
+        { "english": "Customers rarely notice the small print on a receipt.", "vietnamese": "Khách hàng hiếm khi để ý dòng chữ nhỏ trên hóa đơn." }
+      ]
+    },
+    {
+      "word": "trainer",
+      "sentences": [
+        { "english": "These trainers are very comfortable for jogging.", "vietnamese": "Đôi giày thể thao này chạy bộ rất êm chân." },
+        { "english": "He bought new trainers in the summer sale.", "vietnamese": "Anh ấy mua giày thể thao mới trong đợt giảm giá mùa hè." },
+        { "english": "My trainers got dirty after the long hike.", "vietnamese": "Giày thể thao của tôi bẩn hết sau chuyến đi bộ đường dài." },
+        { "english": "She always wears white trainers to work.", "vietnamese": "Cô ấy luôn đi giày thể thao trắng đi làm." },
+        { "english": "Running in old trainers can hurt your feet.", "vietnamese": "Chạy bằng giày thể thao cũ có thể làm đau chân." }
+      ]
+    },
+    {
+      "word": "colourful",
+      "sentences": [
+        { "english": "The festival was full of colourful lanterns.", "vietnamese": "Lễ hội rực rỡ đèn lồng nhiều màu sắc." },
+        { "english": "Children love the colourful pictures in comic books.", "vietnamese": "Trẻ con thích những bức tranh sặc sỡ trong truyện tranh." },
+        { "english": "She decorated her room with colourful paper stars.", "vietnamese": "Cô ấy trang trí phòng bằng những ngôi sao giấy nhiều màu." },
+        { "english": "The market sells colourful fruit and flowers.", "vietnamese": "Khu chợ bán trái cây và hoa đủ màu sắc." },
+        { "english": "He wore a colourful shirt to the beach party.", "vietnamese": "Anh ấy mặc áo sơ mi sặc sỡ đến bữa tiệc trên biển." }
+      ]
+    },
+    {
+      "word": "flip-flop",
+      "sentences": [
+        { "english": "He wore flip-flops to the beach resort.", "vietnamese": "Anh ấy đi dép tông đến khu nghỉ dưỡng ven biển." },
+        { "english": "You cannot hike up a mountain in flip-flops.", "vietnamese": "Bạn không thể leo núi bằng dép tông được." },
+        { "english": "I bought cheap flip-flops at the local market.", "vietnamese": "Tôi mua dép tông rẻ ở chợ địa phương." },
+        { "english": "Her flip-flop broke in the middle of the street.", "vietnamese": "Chiếc dép tông của cô ấy đứt ngay giữa đường." },
+        { "english": "Flip-flops are popular in hot and humid weather.", "vietnamese": "Dép tông rất được ưa chuộng khi trời nóng ẩm." }
+      ]
+    },
+    {
+      "word": "sandal",
+      "sentences": [
+        { "english": "These leather sandals were a real bargain.", "vietnamese": "Đôi xăng-đan da này đúng là món hời." },
+        { "english": "He wears sandals with socks, which looks strange.", "vietnamese": "Anh ấy đi xăng-đan với tất, trông thật kỳ quặc." },
+        { "english": "My sandals got wet in the heavy rain.", "vietnamese": "Đôi dép quai hậu của tôi ướt sũng trong cơn mưa lớn." },
+        { "english": "Comfortable sandals are perfect for sightseeing.", "vietnamese": "Xăng-đan êm chân rất hợp để đi tham quan." },
+        { "english": "He forgot his sandals at the homestay.", "vietnamese": "Anh ấy để quên đôi dép quai hậu ở homestay." }
+      ]
+    },
+    {
+      "word": "sunglasses",
+      "sentences": [
+        { "english": "Always wear sunglasses on sunny days.", "vietnamese": "Luôn đeo kính râm vào những ngày nắng." },
+        { "english": "She lost her sunglasses on the beach.", "vietnamese": "Cô ấy làm mất kính râm trên bãi biển." },
+        { "english": "Good sunglasses protect your eyes from bright light.", "vietnamese": "Kính râm tốt bảo vệ mắt khỏi ánh sáng chói." },
+        { "english": "The celebrity hid behind a pair of dark sunglasses.", "vietnamese": "Người nổi tiếng nấp sau cặp kính râm tối màu." },
+        { "english": "I bought cheap sunglasses from a street seller.", "vietnamese": "Tôi mua một cặp kính râm rẻ của người bán hàng rong." }
+      ]
+    },
+    {
+      "word": "metal",
+      "sentences": [
+        { "english": "The metal gate was hot in the sun.", "vietnamese": "Cánh cổng kim loại nóng ran dưới nắng." },
+        { "english": "This bracelet is made of cheap metal.", "vietnamese": "Chiếc vòng tay này làm bằng kim loại rẻ tiền." },
+        { "english": "Metal chairs are not very comfortable in winter.", "vietnamese": "Ghế kim loại ngồi mùa đông không thoải mái lắm." },
+        { "english": "The artist made a sculpture from old metal.", "vietnamese": "Nghệ sĩ làm một bức tượng từ kim loại cũ." },
+        { "english": "Do not put metal bowls in the microwave.", "vietnamese": "Đừng cho bát kim loại vào lò vi sóng." }
+      ]
+    },
+    {
+      "word": "bracelet",
+      "sentences": [
+        { "english": "Her bracelet was a gift from her grandmother.", "vietnamese": "Chiếc vòng tay là quà bà tặng cô ấy." },
+        { "english": "He bought a silver bracelet for his girlfriend.", "vietnamese": "Anh ấy mua một chiếc vòng tay bạc cho bạn gái." },
+        { "english": "The bracelet broke, so I returned it.", "vietnamese": "Vòng tay bị đứt nên tôi đã trả lại." },
+        { "english": "She wears a lucky bracelet on her left wrist.", "vietnamese": "Cô ấy đeo một chiếc vòng tay may mắn ở cổ tay trái." },
+        { "english": "Handmade bracelets are popular with tourists.", "vietnamese": "Vòng tay thủ công được du khách ưa chuộng." }
+      ]
+    },
+    {
+      "word": "hairband",
+      "sentences": [
+        { "english": "She bought a pink hairband at the mall.", "vietnamese": "Cô ấy mua một chiếc băng đô hồng ở trung tâm thương mại." },
+        { "english": "A hairband keeps my hair tidy at the gym.", "vietnamese": "Băng đô giúp tóc tôi gọn gàng khi ở phòng tập." },
+        { "english": "My little sister lost her favourite hairband.", "vietnamese": "Em gái tôi làm mất chiếc băng đô yêu thích." },
+        { "english": "This colourful hairband was very inexpensive.", "vietnamese": "Chiếc băng đô nhiều màu này rất rẻ." },
+        { "english": "She wears a hairband when she does exercise.", "vietnamese": "Cô ấy đeo băng đô khi tập thể dục." }
+      ]
+    },
+    {
+      "word": "lipstick",
+      "sentences": [
+        { "english": "This red lipstick is on sale today.", "vietnamese": "Thỏi son đỏ này hôm nay đang giảm giá." },
+        { "english": "She always carries a lipstick in her bag.", "vietnamese": "Cô ấy luôn mang theo một thỏi son trong túi." },
+        { "english": "Her lipstick left a mark on the glass.", "vietnamese": "Son môi của cô ấy để lại vết trên ly." },
+        { "english": "Bright lipstick makes her look more confident.", "vietnamese": "Son màu tươi khiến cô ấy trông tự tin hơn." },
+        { "english": "I got a free lipstick with my order.", "vietnamese": "Tôi được tặng một thỏi son kèm đơn hàng." }
+      ]
+    },
+    {
+      "word": "necklace",
+      "sentences": [
+        { "english": "The necklace was damaged during delivery.", "vietnamese": "Chiếc vòng cổ bị hỏng trong lúc giao hàng." },
+        { "english": "Her pearl necklace is a family antique.", "vietnamese": "Chuỗi vòng ngọc trai của cô ấy là đồ cổ gia truyền." },
+        { "english": "He gave her a necklace for their anniversary.", "vietnamese": "Anh ấy tặng cô một sợi dây chuyền nhân ngày kỷ niệm." },
+        { "english": "This diamond necklace is too expensive for me.", "vietnamese": "Sợi dây chuyền kim cương này quá đắt với tôi." },
+        { "english": "She wore a simple necklace to the wedding.", "vietnamese": "Cô ấy đeo một chiếc vòng cổ giản dị đi đám cưới." }
+      ]
+    },
+    {
+      "word": "fur",
+      "sentences": [
+        { "english": "Real fur coats are extremely expensive.", "vietnamese": "Áo khoác lông thú thật cực kỳ đắt." },
+        { "english": "Many people refuse to wear real fur.", "vietnamese": "Nhiều người từ chối mặc đồ lông thú thật." },
+        { "english": "My cat's fur gets everywhere in the flat.", "vietnamese": "Lông mèo nhà tôi bay khắp căn hộ." },
+        { "english": "This fake fur jacket was a bargain.", "vietnamese": "Chiếc áo khoác lông thú giả này là một món hời." },
+        { "english": "Wild animals need thick fur to survive the icy winter.", "vietnamese": "Động vật hoang dã cần bộ lông dày để sống qua mùa đông băng giá." }
+      ]
+    },
+    {
+      "word": "basket",
+      "sentences": [
+        { "english": "She carried a basket of fresh vegetables.", "vietnamese": "Cô ấy xách một giỏ rau tươi." },
+        { "english": "We took a picnic basket to the lake.", "vietnamese": "Chúng tôi mang giỏ đồ dã ngoại ra hồ." },
+        { "english": "The shop sells handmade baskets made of bamboo.", "vietnamese": "Cửa hàng bán giỏ tre đan thủ công." },
+        { "english": "Put the dirty clothes in the basket, please.", "vietnamese": "Bỏ quần áo bẩn vào giỏ giúp mẹ nhé." },
+        { "english": "He filled his shopping basket with snacks.", "vietnamese": "Anh ấy chất đầy đồ ăn vặt vào giỏ mua hàng." }
+      ]
+    },
+    {
+      "word": "silver",
+      "sentences": [
+        { "english": "He gave her a silver ring for their anniversary.", "vietnamese": "Anh ấy tặng cô một chiếc nhẫn bạc nhân ngày kỷ niệm." },
+        { "english": "This silver necklace was a gift from my aunt.", "vietnamese": "Sợi dây chuyền bạc này là quà dì tặng tôi." },
+        { "english": "She won a silver medal in the swimming contest.", "vietnamese": "Cô ấy giành huy chương bạc ở cuộc thi bơi." },
+        { "english": "Silver jewellery is quite affordable in this market.", "vietnamese": "Trang sức bạc ở chợ này khá rẻ." },
+        { "english": "These ancient silver coins are very rare.", "vietnamese": "Những đồng xu bạc cổ này rất hiếm." }
+      ]
+    },
+    {
+      "word": "ring",
+      "sentences": [
+        { "english": "Her wedding ring is simple but beautiful.", "vietnamese": "Nhẫn cưới của cô ấy đơn giản nhưng đẹp." },
+        { "english": "He lost his ring while swimming in the lake.", "vietnamese": "Anh ấy làm mất nhẫn khi đang bơi ở hồ." },
+        { "english": "This diamond ring costs a fortune.", "vietnamese": "Chiếc nhẫn kim cương này đắt cả một gia tài." },
+        { "english": "The ring was too small, so she exchanged it.", "vietnamese": "Chiếc nhẫn quá nhỏ nên cô ấy đã đổi." },
+        { "english": "My grandmother gave me an antique ring.", "vietnamese": "Bà tặng tôi một chiếc nhẫn cổ." }
+      ]
+    },
+    {
+      "word": "hair dryer",
+      "sentences": [
+        { "english": "The hotel room has a hair dryer.", "vietnamese": "Phòng khách sạn có máy sấy tóc." },
+        { "english": "My hair dryer is too loud in the morning.", "vietnamese": "Máy sấy tóc của tôi kêu quá to vào buổi sáng." },
+        { "english": "She borrowed a hair dryer from her roommate.", "vietnamese": "Cô ấy mượn máy sấy tóc của bạn cùng phòng." },
+        { "english": "This hair dryer was on sale for half price.", "vietnamese": "Chiếc máy sấy tóc này được giảm nửa giá." },
+        { "english": "Using a hair dryer with wet hands is dangerous.", "vietnamese": "Dùng máy sấy tóc khi tay ướt rất nguy hiểm." }
+      ]
+    },
+    {
+      "word": "fasten",
+      "sentences": [
+        { "english": "Please fasten your seat belt during the flight.", "vietnamese": "Vui lòng thắt dây an toàn trong suốt chuyến bay." },
+        { "english": "She fastened her sandals before the hike.", "vietnamese": "Cô ấy cài quai dép trước khi đi bộ đường dài." },
+        { "english": "Fasten your helmet before you ride the motorbike.", "vietnamese": "Cài quai mũ bảo hiểm trước khi đi xe máy." },
+        { "english": "He fastened the gate with an old chain.", "vietnamese": "Anh ấy khóa cổng bằng một sợi xích cũ." },
+        { "english": "The passenger forgot to fasten her seat belt.", "vietnamese": "Hành khách quên thắt dây an toàn." }
+      ]
+    },
+    {
+      "word": "belt",
+      "sentences": [
+        { "english": "This leather belt was very inexpensive.", "vietnamese": "Chiếc thắt lưng da này rất rẻ." },
+        { "english": "He needs a bigger belt after the holiday.", "vietnamese": "Sau kỳ nghỉ anh ấy cần thắt lưng to hơn." },
+        { "english": "Always wear a seat belt in the car.", "vietnamese": "Luôn thắt dây an toàn khi ngồi ô tô." },
+        { "english": "Her belt matches her handbag perfectly.", "vietnamese": "Thắt lưng của cô ấy hợp với túi xách một cách hoàn hảo." },
+        { "english": "The seller gave me a discount on two belts.", "vietnamese": "Người bán giảm giá cho tôi khi mua hai chiếc thắt lưng." }
+      ]
+    },
+    {
+      "word": "cap",
+      "sentences": [
+        { "english": "The tourist wore a cap to avoid sunburn.", "vietnamese": "Du khách đội mũ lưỡi trai để tránh cháy nắng." },
+        { "english": "He always wears his cap backwards.", "vietnamese": "Anh ấy luôn đội mũ lưỡi trai ngược." },
+        { "english": "Our team got matching caps for the tournament.", "vietnamese": "Đội chúng tôi được phát mũ lưỡi trai giống nhau cho giải đấu." },
+        { "english": "I lost my cap on the crowded bus.", "vietnamese": "Tôi làm mất mũ lưỡi trai trên chiếc xe buýt đông người." },
+        { "english": "A cap protects your face from the sun.", "vietnamese": "Mũ lưỡi trai che mặt bạn khỏi nắng." }
+      ]
+    },
+    {
+      "word": "tie",
+      "sentences": [
+        { "english": "He wore a silk tie to the interview.", "vietnamese": "Anh ấy thắt cà vạt lụa đi phỏng vấn." },
+        { "english": "Every employee must wear a tie at this bank.", "vietnamese": "Mọi nhân viên ở ngân hàng này đều phải đeo cà vạt." },
+        { "english": "She bought a blue tie as a gift for her father.", "vietnamese": "Cô ấy mua một chiếc cà vạt xanh làm quà cho bố." },
+        { "english": "His tie does not match his shirt.", "vietnamese": "Cà vạt của anh ấy không hợp với áo sơ mi." },
+        { "english": "The groom took off his tie after the wedding.", "vietnamese": "Chú rể tháo cà vạt sau đám cưới." }
+      ]
+    },
+    {
+      "word": "sock",
+      "sentences": [
+        { "english": "Your socks do not match your shoes.", "vietnamese": "Tất của bạn không hợp với giày." },
+        { "english": "Where is my other sock? My room is so messy.", "vietnamese": "Chiếc tất còn lại của tôi đâu rồi? Phòng tôi bừa quá." },
+        { "english": "She wears warm socks in the cold season.", "vietnamese": "Cô ấy đi tất ấm vào mùa lạnh." },
+        { "english": "These cotton socks were cheap at the market.", "vietnamese": "Mấy đôi tất cotton này mua ở chợ rẻ lắm." },
+        { "english": "He washed his dirty socks by hand.", "vietnamese": "Anh ấy giặt tay đôi tất bẩn." }
+      ]
+    }
+  ]
+}
