@@ -1,9 +1,19 @@
 "use client";
 
-import { use, useState } from "react";
+import { use, useMemo, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { toast } from "sonner";
-import { ArrowLeft, Layers, List, Plus, Table2, type LucideIcon } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  BookOpenText,
+  Layers,
+  List,
+  Plus,
+  Table2,
+  type LucideIcon,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useConfirm } from "@/components/ui/confirm-dialog";
 import { ChineseCardFormDialog } from "@/components/chinese/chinese-card-form-dialog";
@@ -12,11 +22,17 @@ import type { Card } from "@/lib/types";
 import { ChineseWordRow } from "@/components/chinese/chinese-word-row";
 import { ChineseCardsTable } from "@/components/chinese/chinese-cards-table";
 import { WrongLanguageNotice } from "@/components/chinese/wrong-language-notice";
-import { isChineseDeck } from "@/lib/chinese";
+import {
+  CHINESE_DECK_LANGUAGE,
+  adjacentChineseDecks,
+  chineseLessonNumber,
+  isChineseDeck,
+} from "@/lib/chinese";
+import { getChineseReading } from "@/lib/chinese-readings";
 import { cn } from "@/lib/utils";
 import { ListSkeleton } from "@/components/ui/list-skeleton";
 import { useCards } from "@/hooks/use-cards";
-import { useDeck } from "@/hooks/use-decks";
+import { useDeck, useDecks } from "@/hooks/use-decks";
 
 type ViewMode = "list" | "table";
 
@@ -31,7 +47,14 @@ interface PageProps {
 
 export default function ChineseDeckPage({ params }: PageProps) {
   const { deckId } = use(params);
+  const router = useRouter();
   const { data: deck } = useDeck(deckId);
+  const { data: allDecks } = useDecks(CHINESE_DECK_LANGUAGE);
+  // Deck trước/sau theo đúng thứ tự trang Deck China (Bài 1 → 15), quay vòng ở hai đầu.
+  const { prev: prevDeck, next: nextDeck } = useMemo(
+    () => adjacentChineseDecks(allDecks ?? [], deckId),
+    [allDecks, deckId],
+  );
   const { data: cards, isLoading } = useCards({ deckId });
   const deleteCard = useDeleteCard();
   const { confirm, confirmDialog } = useConfirm();
@@ -41,6 +64,7 @@ export default function ChineseDeckPage({ params }: PageProps) {
   const [viewMode, setViewMode] = useState<ViewMode>("list");
 
   const liveCards = (cards ?? []).filter((c) => !c.deletedAt);
+  const hasReading = deck ? getChineseReading(chineseLessonNumber(deck.name)) !== null : false;
 
   const handleDelete = async (card: Card) => {
     const okToDelete = await confirm({
@@ -65,12 +89,35 @@ export default function ChineseDeckPage({ params }: PageProps) {
 
   return (
     <div className="container mx-auto max-w-4xl p-6">
-      <Link
-        href="/chinese"
-        className="mb-4 inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
-      >
-        <ArrowLeft className="h-4 w-4" /> Deck China
-      </Link>
+      <div className="mb-4 flex items-center justify-between gap-2">
+        <Link
+          href="/chinese"
+          className="inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+        >
+          <ArrowLeft className="h-4 w-4" /> Deck China
+        </Link>
+
+        {prevDeck && nextDeck ? (
+          <div className="flex items-center gap-1.5">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => router.push(`/chinese/${prevDeck.id}`)}
+              title={`Deck trước: ${prevDeck.name}`}
+            >
+              <ArrowLeft className="h-4 w-4" /> Trước
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => router.push(`/chinese/${nextDeck.id}`)}
+              title={`Deck tiếp theo: ${nextDeck.name}`}
+            >
+              Sau <ArrowRight className="h-4 w-4" />
+            </Button>
+          </div>
+        ) : null}
+      </div>
 
       <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-3">
@@ -102,6 +149,14 @@ export default function ChineseDeckPage({ params }: PageProps) {
               className="inline-flex h-9 items-center gap-2 rounded-full bg-primary px-4 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             >
               <Layers className="h-4 w-4" /> Lật thẻ
+            </Link>
+          ) : null}
+          {hasReading ? (
+            <Link
+              href={`/chinese/${deckId}/reading`}
+              className="inline-flex h-9 items-center gap-2 rounded-full border border-input bg-card px-4 text-sm font-medium transition-colors hover:bg-accent"
+            >
+              <BookOpenText className="h-4 w-4" /> Bài đọc
             </Link>
           ) : null}
         </div>

@@ -46,6 +46,21 @@ export function sortChineseDecks<T extends { name: string }>(decks: readonly T[]
   return [...decks].sort((a, b) => rank(a) - rank(b));
 }
 
+/**
+ * Deck liền trước / kế tiếp theo đúng thứ tự trang Deck China (số bài tăng dần),
+ * quay vòng ở đầu/cuối — giống nút Trước/Sau bên deck tiếng Anh.
+ */
+export function adjacentChineseDecks<T extends { id: string; name: string }>(
+  decks: readonly T[],
+  currentId: string,
+): { prev: T | null; next: T | null } {
+  const ordered = sortChineseDecks(decks);
+  const idx = ordered.findIndex((d) => d.id === currentId);
+  if (ordered.length < 2 || idx === -1) return { prev: null, next: null };
+  const len = ordered.length;
+  return { prev: ordered[(idx - 1 + len) % len], next: ordered[(idx + 1) % len] };
+}
+
 /** Điều kiện Prisma cho các trang tổng hợp tiếng Anh: chỉ deck `language = "en"`. */
 export const ENGLISH_DECK_FILTER = { language: DEFAULT_DECK_LANGUAGE } as const;
 

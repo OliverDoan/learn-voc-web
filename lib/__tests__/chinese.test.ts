@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   CHINESE_TTS_LANG,
+  adjacentChineseDecks,
   buildChineseQuiz,
   chineseLessonNumber,
   isChineseDeck,
@@ -251,5 +252,29 @@ describe("sortChineseDecks", () => {
       "Tự thêm B",
     ]);
     expect(decks[0].name).toBe("Bài 10: 他住哪儿");
+  });
+});
+
+describe("adjacentChineseDecks", () => {
+  const decks = [
+    { id: "b3", name: "Bài 3: 明天见" },
+    { id: "b1", name: "Bài 1: 你好" },
+    { id: "b2", name: "Bài 2: 汉语不太难" },
+  ];
+
+  it("lấy deck trước/sau theo số bài, không theo thứ tự API", () => {
+    const { prev, next } = adjacentChineseDecks(decks, "b2");
+    expect(prev?.id).toBe("b1");
+    expect(next?.id).toBe("b3");
+  });
+
+  it("quay vòng ở đầu và cuối danh sách", () => {
+    expect(adjacentChineseDecks(decks, "b1").prev?.id).toBe("b3");
+    expect(adjacentChineseDecks(decks, "b3").next?.id).toBe("b1");
+  });
+
+  it("chỉ có 1 deck hoặc không tìm thấy deck hiện tại → không có nút chuyển", () => {
+    expect(adjacentChineseDecks([decks[0]], "b3")).toEqual({ prev: null, next: null });
+    expect(adjacentChineseDecks(decks, "khac")).toEqual({ prev: null, next: null });
   });
 });

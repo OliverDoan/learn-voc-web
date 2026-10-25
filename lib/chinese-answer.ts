@@ -33,6 +33,40 @@ function normalizePinyin(s: string): string {
     .replace(/[^a-z]/g, "");
 }
 
+/** Ngoặc toàn khổ （） → ngoặc thường để `variants` nhận ra phần tuỳ chọn. */
+function asciiParens(s: string): string {
+  return s.replace(/（/g, "(").replace(/）/g, ")");
+}
+
+/** Câu Hán tự so sánh không tính dấu câu (cả toàn khổ, dấu …) và khoảng trắng; giữ chữ số. */
+function normalizeSentenceHanzi(s: string): string {
+  return s.replace(/[\p{P}\s]/gu, "");
+}
+
+/**
+ * Chấm một câu bài đọc (nghe chép / Việt → Trung): gõ Hán tự hoặc pinyin.
+ * Bỏ qua dấu câu, khoảng trắng, dấu thanh; phần trong ngoặc là tuỳ chọn.
+ */
+export function isChineseSentenceCorrect(
+  sentence: { hanzi: string; pinyin: string },
+  input: string,
+): boolean {
+  const answer = asciiParens(input.trim());
+  if (!answer) return false;
+
+  const hanzi = normalizeSentenceHanzi(answer.replace(/[()]/g, ""));
+  if (
+    hanzi &&
+    variants(asciiParens(sentence.hanzi)).some((h) => normalizeSentenceHanzi(h) === hanzi)
+  ) {
+    return true;
+  }
+
+  const pinyin = normalizePinyin(answer);
+  if (!pinyin) return false;
+  return variants(asciiParens(sentence.pinyin)).some((p) => normalizePinyin(p) === pinyin);
+}
+
 export function isChineseAnswerCorrect(
   card: { word: string; phonetic: string | null },
   input: string,
