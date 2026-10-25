@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { HanziAudioButton } from "@/components/chinese/hanzi-audio-button";
 import { HanziWritingPad } from "@/components/chinese/hanzi-writing-pad";
+import { shuffle } from "@/lib/chinese";
 import { TestHistory } from "@/components/deck/test-history";
 import { writableChars, writingScore, type CharWritingResult } from "@/lib/chinese-writing";
 import {
@@ -41,7 +42,8 @@ export function ChineseWritingPractice({ cards, historyKey }: ChineseWritingPrac
   // Chỉ luyện những từ có chữ Hán để viết.
   const allWords = useMemo(() => cards.filter((c) => writableChars(c.word).length > 0), [cards]);
 
-  const [words, setWords] = useState<Card[]>(allWords);
+  // Mỗi lượt luyện trộn ngẫu nhiên thứ tự từ để không học vẹt theo thứ tự deck.
+  const [words, setWords] = useState<Card[]>(() => shuffle(allWords));
   const [pos, setPos] = useState(0);
   const [charPos, setCharPos] = useState(0);
   const [results, setResults] = useState<WordResults>({});
@@ -96,7 +98,7 @@ export function ChineseWritingPractice({ cards, historyKey }: ChineseWritingPrac
   };
 
   const restart = (subset: Card[]) => {
-    setWords(subset);
+    setWords(shuffle(subset));
     setPos(0);
     setCharPos(0);
     setResults({});

@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { ChineseWritingPractice } from "./chinese-writing-practice";
 import type { Card } from "@/lib/types";
@@ -32,7 +32,32 @@ const cards = [makeCard("c1", "你好", "nǐ hǎo", "xin chào"), makeCard("c2",
 const click = (name: string | RegExp) => fireEvent.click(screen.getByRole("button", { name }));
 
 describe("ChineseWritingPractice", () => {
-  afterEach(() => localStorage.clear());
+  // rng ≈ 1 → Fisher-Yates không đổi chỗ phần tử nào: giữ thứ tự deck để các ca dưới xác định.
+  beforeEach(() => vi.spyOn(Math, "random").mockReturnValue(0.999));
+  afterEach(() => {
+    localStorage.clear();
+    vi.restoreAllMocks();
+  });
+
+  it("trộn ngẫu nhiên thứ tự từ mỗi lượt luyện", () => {
+    vi.spyOn(Math, "random").mockReturnValue(0);
+    render(<ChineseWritingPractice cards={cards} historyKey="d1-writing" />);
+    // rng = 0 → hoán đổi: từ cuối deck lên đầu.
+    expect(screen.getByText("đang viết 大")).toBeTruthy();
+  });
+
+  it("làm lại thì trộn lại thứ tự", () => {
+    render(<ChineseWritingPractice cards={[cards[1], cards[0]]} historyKey="d1-writing" />);
+    click("viết đúng");
+    click(/Từ tiếp theo/);
+    click("viết đúng");
+    click("viết đúng");
+    click(/Xem kết quả/);
+
+    vi.spyOn(Math, "random").mockReturnValue(0);
+    click(/Làm lại/);
+    expect(screen.getByText("đang viết 你")).toBeTruthy();
+  });
 
   it("viết lần lượt từng chữ của từ, xong từ mới cho sang từ tiếp", () => {
     render(<ChineseWritingPractice cards={cards} historyKey="d1-writing" />);
