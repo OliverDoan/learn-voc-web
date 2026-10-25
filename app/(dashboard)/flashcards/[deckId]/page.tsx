@@ -17,6 +17,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Flashcard } from "@/components/flashcard/flashcard";
+import { FavoriteToggleButton } from "@/components/flashcard/favorite-toggle-button";
 import { DeckLockedScreen } from "@/components/deck/deck-locked-screen";
 import { useCards } from "@/hooks/use-cards";
 import { useDeck, useRecordDeckActivity } from "@/hooks/use-decks";
@@ -70,7 +71,12 @@ export default function FlashcardsPage({ params }: PageProps) {
     return live.filter((c) => subsetIds.has(c.id));
   }, [allCards, subsetIds]);
 
-  const [order, setOrder] = useState<Card[]>([]);
+  // Thứ tự lưu theo id: bấm yêu thích làm refetch thẻ (object mới) nhưng không được
+  // reset vị trí đang xem — chỉ reset khi tập thẻ thật sự đổi.
+  const baseIdsKey = baseCards.map((c) => c.id).join(",");
+  const cardById = useMemo(() => new Map(baseCards.map((c) => [c.id, c])), [baseCards]);
+
+  const [order, setOrder] = useState<string[]>([]);
   const [pos, setPos] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [reverse, setReverse] = useState(false);
@@ -90,15 +96,17 @@ export default function FlashcardsPage({ params }: PageProps) {
 
   // Khởi tạo / cập nhật thứ tự thẻ khi data sẵn sàng.
   useEffect(() => {
-    setOrder(shuffled ? shuffleArray(baseCards) : baseCards);
+    const ids = baseIdsKey ? baseIdsKey.split(",") : [];
+    setOrder(shuffled ? shuffleArray(ids) : ids);
     setPos(0);
     setFlipped(false);
     viewedRef.current = new Set();
     fcRecordedRef.current = false;
-  }, [baseCards, shuffled]);
+  }, [baseIdsKey, shuffled]);
 
   const total = order.length;
-  const current = order[pos];
+  const current = cardById.get(order[pos]);
+  const currentWord = current?.word;
 
   // Đánh dấu vị trí đã xem; khi xem hết 1 lượt thì ghi nhận hoàn thành "Lật thẻ".
   useEffect(() => {
@@ -113,11 +121,11 @@ export default function FlashcardsPage({ params }: PageProps) {
 
   // Tự phát âm tiếng Anh khi sang thẻ mới (mặt từ).
   useEffect(() => {
-    if (autoSpeak && current && !flipped && !reverse) {
-      const t = setTimeout(() => speak(current.word), 200);
+    if (autoSpeak && currentWord && !flipped && !reverse) {
+      const t = setTimeout(() => speak(currentWord), 200);
       return () => clearTimeout(t);
     }
-  }, [current, flipped, reverse, autoSpeak]);
+  }, [currentWord, pos, flipped, reverse, autoSpeak]);
 
   const goNext = useCallback(() => {
     setFlipped(false);
@@ -149,7 +157,8 @@ export default function FlashcardsPage({ params }: PageProps) {
   const toggleShuffle = () => setShuffled((prev) => !prev);
 
   const restart = () => {
-    setOrder(shuffled ? shuffleArray(baseCards) : baseCards);
+    const ids = baseCards.map((c) => c.id);
+    setOrder(shuffled ? shuffleArray(ids) : ids);
     setPos(0);
     setFlipped(false);
   };
@@ -219,6 +228,7 @@ export default function FlashcardsPage({ params }: PageProps) {
             <ArrowLeft className="h-4 w-4" /> Thoát
           </Link>
           <div className="flex flex-wrap items-center justify-end gap-2">
+            <FavoriteToggleButton cardId={current.id} favorite={current.favorite} />
             <Button
               type="button"
               variant={shuffled ? "default" : "outline"}
