@@ -3,18 +3,27 @@
 import { use, useState } from "react";
 import Link from "next/link";
 import { toast } from "sonner";
-import { ArrowLeft, Layers, Plus } from "lucide-react";
+import { ArrowLeft, Layers, List, Plus, Table2, type LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useConfirm } from "@/components/ui/confirm-dialog";
 import { ChineseCardFormDialog } from "@/components/chinese/chinese-card-form-dialog";
 import { useDeleteCard } from "@/hooks/use-cards";
 import type { Card } from "@/lib/types";
 import { ChineseWordRow } from "@/components/chinese/chinese-word-row";
+import { ChineseCardsTable } from "@/components/chinese/chinese-cards-table";
 import { WrongLanguageNotice } from "@/components/chinese/wrong-language-notice";
 import { isChineseDeck } from "@/lib/chinese";
+import { cn } from "@/lib/utils";
 import { ListSkeleton } from "@/components/ui/list-skeleton";
 import { useCards } from "@/hooks/use-cards";
 import { useDeck } from "@/hooks/use-decks";
+
+type ViewMode = "list" | "table";
+
+const VIEW_MODES: Array<{ id: ViewMode; label: string; icon: LucideIcon }> = [
+  { id: "list", label: "Danh sách", icon: List },
+  { id: "table", label: "Bảng", icon: Table2 },
+];
 
 interface PageProps {
   params: Promise<{ deckId: string }>;
@@ -29,6 +38,7 @@ export default function ChineseDeckPage({ params }: PageProps) {
 
   // `undefined` = dialog đóng; `null` = thêm thẻ mới; có thẻ = sửa thẻ đó.
   const [editing, setEditing] = useState<Card | null | undefined>(undefined);
+  const [viewMode, setViewMode] = useState<ViewMode>("list");
 
   const liveCards = (cards ?? []).filter((c) => !c.deletedAt);
 
@@ -104,17 +114,42 @@ export default function ChineseDeckPage({ params }: PageProps) {
           Deck này chưa có từ nào — bấm “Thêm chữ” để bắt đầu.
         </div>
       ) : (
-        <div className="flex flex-col gap-2">
-          {liveCards.map((card, index) => (
-            <ChineseWordRow
-              key={card.id}
-              card={card}
-              index={index + 1}
-              onEdit={setEditing}
-              onDelete={handleDelete}
-            />
-          ))}
-        </div>
+        <>
+          <div className="mb-4 inline-flex rounded-lg border bg-card p-0.5">
+            {VIEW_MODES.map(({ id, label, icon: Icon }) => (
+              <button
+                key={id}
+                type="button"
+                onClick={() => setViewMode(id)}
+                aria-pressed={viewMode === id}
+                className={cn(
+                  "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
+                  viewMode === id
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:text-foreground",
+                )}
+              >
+                <Icon className="h-4 w-4" /> {label}
+              </button>
+            ))}
+          </div>
+
+          {viewMode === "table" ? (
+            <ChineseCardsTable cards={liveCards} deckId={deckId} />
+          ) : (
+            <div className="flex flex-col gap-2">
+              {liveCards.map((card, index) => (
+                <ChineseWordRow
+                  key={card.id}
+                  card={card}
+                  index={index + 1}
+                  onEdit={setEditing}
+                  onDelete={handleDelete}
+                />
+              ))}
+            </div>
+          )}
+        </>
       )}
 
       <ChineseCardFormDialog
