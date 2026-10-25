@@ -23,6 +23,7 @@ import { useCards } from "@/hooks/use-cards";
 import { useDeck, useRecordDeckActivity } from "@/hooks/use-decks";
 import { speak } from "@/lib/tts";
 import { parseTopicDeckId } from "@/lib/deck-topics";
+import { isEnglishFaceShown } from "@/lib/flashcard-face";
 import type { Card } from "@/lib/types";
 
 interface PageProps {
@@ -119,9 +120,9 @@ export default function FlashcardsPage({ params }: PageProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pos, total, deckId]);
 
-  // Tự phát âm tiếng Anh khi sang thẻ mới (mặt từ).
+  // Tự phát âm tiếng Anh mỗi khi mặt có từ tiếng Anh hiện ra (Việt→Anh: lúc lật thẻ).
   useEffect(() => {
-    if (autoSpeak && currentWord && !flipped && !reverse) {
+    if (autoSpeak && currentWord && isEnglishFaceShown({ reverse, flipped })) {
       const t = setTimeout(() => speak(currentWord), 200);
       return () => clearTimeout(t);
     }
