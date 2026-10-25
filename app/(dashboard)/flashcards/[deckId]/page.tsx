@@ -11,6 +11,7 @@ import {
   Loader2,
   RotateCcw,
   Shuffle,
+  Timer,
   Volume2,
   VolumeX,
 } from "lucide-react";
@@ -18,6 +19,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Flashcard } from "@/components/flashcard/flashcard";
 import { FavoriteToggleButton } from "@/components/flashcard/favorite-toggle-button";
+import { useAutoFlip } from "@/components/flashcard/use-auto-flip";
 import { DeckLockedScreen } from "@/components/deck/deck-locked-screen";
 import { useCards } from "@/hooks/use-cards";
 import { useDeck, useRecordDeckActivity } from "@/hooks/use-decks";
@@ -83,6 +85,7 @@ export default function FlashcardsPage({ params }: PageProps) {
   const [reverse, setReverse] = useState(false);
   const [shuffled, setShuffled] = useState(false);
   const [autoSpeak, setAutoSpeak] = useState(true);
+  const [autoFlip, setAutoFlip] = useState(false);
 
   // Theo dõi đã xem hết thẻ chưa để ghi nhận hoàn thành dạng "Lật thẻ" (không chấm điểm).
   const recordActivity = useRecordDeckActivity(deckId);
@@ -93,6 +96,7 @@ export default function FlashcardsPage({ params }: PageProps) {
   useEffect(() => {
     setReverse(localStorage.getItem("voca-fc-reverse") === "1");
     setAutoSpeak(localStorage.getItem("voca-fc-autospeak") !== "0");
+    setAutoFlip(localStorage.getItem("voca-fc-autoflip") === "1");
   }, []);
 
   // Khởi tạo / cập nhật thứ tự thẻ khi data sẵn sàng.
@@ -108,6 +112,15 @@ export default function FlashcardsPage({ params }: PageProps) {
   const total = order.length;
   const current = cardById.get(order[pos]);
   const currentWord = current?.word;
+
+  // Tự lật (rồi effect phát âm bên dưới đọc từ nếu mặt tiếng Anh lộ ra) — chỉ cần bấm Tiếp.
+  const flipToBack = useCallback(() => setFlipped(true), []);
+  useAutoFlip({
+    enabled: autoFlip,
+    cardKey: current ? `${pos}-${current.id}` : null,
+    flipped,
+    onFlip: flipToBack,
+  });
 
   // Đánh dấu vị trí đã xem; khi xem hết 1 lượt thì ghi nhận hoàn thành "Lật thẻ".
   useEffect(() => {
@@ -151,6 +164,14 @@ export default function FlashcardsPage({ params }: PageProps) {
     setAutoSpeak((prev) => {
       const next = !prev;
       localStorage.setItem("voca-fc-autospeak", next ? "1" : "0");
+      return next;
+    });
+  };
+
+  const toggleAutoFlip = () => {
+    setAutoFlip((prev) => {
+      const next = !prev;
+      localStorage.setItem("voca-fc-autoflip", next ? "1" : "0");
       return next;
     });
   };
@@ -239,6 +260,17 @@ export default function FlashcardsPage({ params }: PageProps) {
             >
               <Shuffle className="h-4 w-4" />
               <span className="hidden sm:inline">Xáo trộn</span>
+            </Button>
+            <Button
+              type="button"
+              variant={autoFlip ? "default" : "outline"}
+              size="sm"
+              onClick={toggleAutoFlip}
+              title="Tự lật thẻ sau 2 giây và đọc từ — chỉ cần bấm Tiếp"
+              aria-pressed={autoFlip}
+            >
+              <Timer className="h-4 w-4" />
+              <span className="hidden sm:inline">Tự lật</span>
             </Button>
             <Button
               type="button"
