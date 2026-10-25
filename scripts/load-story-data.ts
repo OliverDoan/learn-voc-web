@@ -4,7 +4,10 @@
  * từ của deck dạng [[word|nghĩa]] — kiểm tra bằng lib/story-coverage.ts trước khi ghi.
  *
  * Định dạng file (prisma/story-data/unit-01.json):
- *   { "deckName": "Unit 1:", "stories": [ { "title", "content", "contentEn"? } ] }
+ *   { "deckName": "Unit 1:", "exclusive"?: true, "stories": [ { "title", "content", "contentEn"? } ] }
+ *
+ * `exclusive: true` = file là TOÀN BỘ truyện của deck: truyện trùng tiêu đề được ghi đè nội dung,
+ * truyện khác của deck bị xoá. Chỉ ghi DB khi mọi truyện trong file hợp lệ.
  *
  * Chạy:  pnpm stories:load                 # kiểm tra + nạp mọi file (bỏ qua truyện đã có cùng tiêu đề)
  *        pnpm stories:load -- --check      # chỉ kiểm tra, không ghi DB
@@ -17,12 +20,14 @@ import path from "node:path";
 import { z } from "zod";
 import { extractWords } from "../lib/story-parser";
 import { checkStoryCoverage } from "../lib/story-coverage";
+import { planExclusiveSync } from "../lib/story-sync";
 
 const prisma = new PrismaClient();
 const DATA_DIR = path.resolve(process.cwd(), "prisma/story-data");
 
 const storyFileSchema = z.object({
   deckName: z.string().min(1),
+  exclusive: z.boolean().optional(),
   stories: z
     .array(
       z.object({
@@ -100,10 +105,11 @@ interface FileResult {
   invalid: number;
   created: number;
   skipped: number;
+  deleted: number;
 }
 
 async function processFile(file: string, data: StoryFile, checkOnly: boolean): Promise<FileResult> {
-  const result: FileResult = { file, deckName: data.deckName, valid: 0, invalid: 0, created: 0, skipped: 0 };
+  const result: FileResult = { file, deckName: data.deckName, valid: 0, invalid: 0, created: 0, skipped: 0, deleted: 0 };
   const deck = await findDeck(data.deckName);
   if (!deck) {
     console.error(`❌ ${file}: không tìm thấy deck "${data.deckName}"`);
@@ -116,12 +122,13 @@ async function processFile(file: string, data: StoryFile, checkOnly: boolean): P
   });
   const words = cards.map((c) => c.word.trim());
   const wordToCard = new Map(cards.map((c) => [c.word.trim().toLowerCase(), c.id]));
-  const existing = await prisma.story.findMany({ where: { deckId: deck.id }, select: { title: true } });
+  const existing = await prisma.story.findMany({ where: { deckId: deck.id }, select: { id: true, title: true } });
   const existingTitles = new Set(existing.map((s) => s.title.toLowerCase()));
 
   // Tiêu đề trùng trong cùng file cũng là lỗi (khó phân biệt khi chọn truyện).
   const seenTitles = new Set<string>();
   console.log(`\n📖 ${file} → ${deck.name} (${words.length} từ, ${existing.length} truyện đã có)`);
+  if (data.exclusive) return syncExclusive(data, deck.id, words, wordToCard, existing, checkOnly, result);
 
   for (const story of data.stories) {
     const cov = checkStoryCoverage(story.content, words);
@@ -148,11 +155,7 @@ async function processFile(file: string, data: StoryFile, checkOnly: boolean): P
       continue;
     }
 
-    const links = extractWords(story.content)
-      .map((t) => wordToCard.get(t.word.toLowerCase()))
-      .filter((id): id is string => !!id)
-      .filter((id, idx, arr) => arr.indexOf(id) === idx)
-      .map((cardId, order) => ({ cardId, order }));
+    const links = buildLinks(story.content, wordToCard);
     await prisma.story.create({
       data: {
         deckId: deck.id,
@@ -166,6 +169,74 @@ async function processFile(file: string, data: StoryFile, checkOnly: boolean): P
     console.log(`   ✅ "${story.title}" → link ${links.length}/${cards.length} thẻ${dup}`);
   }
   return result;
+}
+
+function buildLinks(content: string, wordToCard: Map<string, string>) {
+  return extractWords(content)
+    .map((t) => wordToCard.get(t.word.toLowerCase()))
+    .filter((id): id is string => !!id)
+    .filter((id, idx, arr) => arr.indexOf(id) === idx)
+    .map((cardId, order) => ({ cardId, order }));
+}
+
+/** File `exclusive`: kiểm tra hết trước, rồi ghi đè/xoá trong 1 transaction để deck không bị bỏ dở. */
+async function syncExclusive(
+  data: StoryFile,
+  deckId: string,
+  words: string[],
+  wordToCard: Map<string, string>,
+  existing: { id: string; title: string }[],
+  checkOnly: boolean,
+  result: FileResult,
+): Promise<FileResult> {
+  const errors = data.stories.flatMap((story) => {
+    const cov = checkStoryCoverage(story.content, words);
+    const problems = [
+      cov.missing.length ? `thiếu ${cov.missing.length} từ: ${cov.missing.join(", ")}` : "",
+      cov.unmatched.length ? `từ ngoài deck: ${cov.unmatched.join(", ")}` : "",
+    ].filter(Boolean);
+    if (problems.length) console.log(`   ✗ "${story.title}": ${problems.join(" | ")}`);
+    return problems.length ? [story.title] : [];
+  });
+  if (new Set(data.stories.map((s) => s.title.toLowerCase())).size !== data.stories.length) {
+    console.log("   ✗ tiêu đề trùng trong file");
+    errors.push("tiêu đề trùng");
+  }
+  if (errors.length) {
+    console.log("   ⛔ exclusive: có truyện lỗi nên KHÔNG ghi DB cho deck này");
+    return { ...result, invalid: errors.length, valid: data.stories.length - errors.length };
+  }
+
+  const plan = planExclusiveSync(existing, data.stories.map((s) => s.title));
+  const updated = data.stories.filter((s) => plan.updateIdByTitle.has(s.title.trim().toLowerCase())).length;
+  const summary = `ghi đè ${updated}, tạo mới ${data.stories.length - updated}, xoá ${plan.deleteIds.length} truyện khác`;
+  if (checkOnly) {
+    console.log(`   ✓ exclusive: sẽ ${summary}`);
+    return { ...result, valid: data.stories.length };
+  }
+
+  await prisma.$transaction([
+    prisma.story.deleteMany({ where: { id: { in: plan.deleteIds } } }),
+    ...data.stories.flatMap((story) => {
+      const fields = { title: story.title, content: story.content, contentEn: story.contentEn?.trim() || null };
+      const links = buildLinks(story.content, wordToCard);
+      const id = plan.updateIdByTitle.get(story.title.trim().toLowerCase());
+      return id
+        ? [
+            prisma.storyCard.deleteMany({ where: { storyId: id } }),
+            prisma.story.update({ where: { id }, data: { ...fields, storyCards: { create: links } } }),
+          ]
+        : [prisma.story.create({ data: { deckId, ...fields, storyCards: { create: links } } })];
+    }),
+  ]);
+  console.log(`   ✅ exclusive: đã ${summary}`);
+  return {
+    ...result,
+    valid: data.stories.length,
+    created: data.stories.length - updated,
+    skipped: 0,
+    deleted: plan.deleteIds.length,
+  };
 }
 
 async function main() {
@@ -188,7 +259,7 @@ async function main() {
     const mark = r.invalid ? "⚠️ " : "✅";
     console.log(
       `${mark} ${r.deckName} hợp lệ ${r.valid}, lỗi ${r.invalid}` +
-        (checkOnly ? "" : `, tạo mới ${r.created}, bỏ qua ${r.skipped}`),
+        (checkOnly ? "" : `, tạo mới ${r.created}, bỏ qua ${r.skipped}${r.deleted ? `, xoá ${r.deleted}` : ""}`),
     );
   }
   if (results.some((r) => r.invalid)) process.exitCode = 1;
