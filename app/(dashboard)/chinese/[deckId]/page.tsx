@@ -10,6 +10,7 @@ import {
   BookOpenText,
   Layers,
   List,
+  PenLine,
   Plus,
   Table2,
   type LucideIcon,
@@ -149,6 +150,14 @@ export default function ChineseDeckPage({ params }: PageProps) {
               className="inline-flex h-9 items-center gap-2 rounded-full bg-primary px-4 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             >
               <Layers className="h-4 w-4" /> Lật thẻ
+            </Link>
+          ) : null}
+          {liveCards.length > 0 ? (
+            <Link
+              href={`/chinese/${deckId}/writing`}
+              className="inline-flex h-9 items-center gap-2 rounded-full border border-input bg-card px-4 text-sm font-medium transition-colors hover:bg-accent"
+            >
+              <PenLine className="h-4 w-4" /> Luyện viết
             </Link>
           ) : null}
           {hasReading ? (

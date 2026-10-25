@@ -63,6 +63,8 @@ pnpm sync:card-order  # Đồng bộ thứ tự thẻ
 >
 > **Bài đọc tiếng Trung** (`/chinese/[deckId]/reading`): 课文 Bài 1–10 chép từ sách (Hán tự + pinyin, nghĩa Việt soạn tay) là dữ liệu tĩnh ở `lib/chinese-readings.ts` (KHÔNG dùng DB), gắn với deck theo số bài trong tên deck. Kiểm tra theo câu: Nghe chép (TTS) và Việt → Trung, chấm Hán tự hoặc pinyin bằng `isChineseSentenceCorrect` (`lib/chinese-answer.ts`); lịch sử sai lưu localStorage (`lib/test-history.ts`, khoá `${deckId}-reading-${mode}`). Bài 11–15 chưa có (PDF nguồn chỉ tới Bài 10).
 >
+> **Luyện viết chữ Hán** (`/chinese/[deckId]/writing`): viết từng nét bằng `hanzi-writer` (quiz mode, dữ liệu nét tải từ CDN jsDelivr `hanzi-writer-data` khi cần — cần mạng), import động trong `components/chinese/hanzi-writing-pad.tsx`. Điểm = tổng nét / (tổng nét + lần sai) (`lib/chinese-writing.ts`); từ có nét sai lưu lịch sử localStorage khoá `${deckId}-writing`.
+>
 > **Truyện chêm**: Unit 1–15 mỗi deck CHỈ 1 truyện (chép từ site docusaurus `english-vocab/chuyen-chem.md`), nguồn duy nhất là `prisma/story-data/unit-01..15.json` có `"exclusive": true` — `pnpm stories:load` ghi đè truyện trùng tiêu đề và XOÁ truyện khác của deck. Unit 16+: `scripts/seed-stories.ts` giữ 1 truyện gốc/deck; các truyện bổ sung (5 truyện/deck, mỗi truyện chứa ĐỦ từ của deck) nằm ở `prisma/story-data/unit-NN.json` và nạp bằng `pnpm stories:load`. Độ phủ từ kiểm tra bằng `lib/story-coverage.ts` (`checkStoryCoverage`).
 
 ## Single-user mode
