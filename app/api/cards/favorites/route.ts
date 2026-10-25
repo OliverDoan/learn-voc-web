@@ -10,7 +10,13 @@ export async function GET() {
   try {
     const lockedDeckIds = await getLockedDeckIds();
     const cards = await prisma.card.findMany({
-      where: { favorite: true, deletedAt: null, deckId: { notIn: lockedDeckIds } },
+      // Bỏ thẻ của deck đã vào thùng rác (thẻ không tự có deletedAt khi xoá deck).
+      where: {
+        favorite: true,
+        deletedAt: null,
+        deckId: { notIn: lockedDeckIds },
+        deck: { deletedAt: null },
+      },
       orderBy: { updatedAt: "desc" },
       include: {
         deck: { select: { id: true, name: true, color: true, icon: true } },

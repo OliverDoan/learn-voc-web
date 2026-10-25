@@ -32,7 +32,8 @@ export async function GET(req: NextRequest) {
     const cards = await prisma.card.findMany({
       where: {
         deletedAt: null,
-        ...(deckId ? {} : { deckId: { notIn: lockedDeckIds } }),
+        // Bỏ thẻ của deck đã vào thùng rác (thẻ không tự có deletedAt khi xoá deck).
+        ...(deckId ? {} : { deckId: { notIn: lockedDeckIds }, deck: { deletedAt: null } }),
         ...(topicDeckIds ? { deckId: { in: topicDeckIds } } : {}),
         ...(deckId ? { deckId } : {}),
         ...(stateFilter ? { state: stateFilter } : {}),
