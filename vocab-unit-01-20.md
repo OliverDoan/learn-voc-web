@@ -203,18 +203,18 @@
 10. unhealthy (adjective): không lành mạnh, có hại cho sức khỏe
 11. throw (verb): vứt, ném
 12. rubbish (noun): rác, rác rưởi
-13. lack (verb): thiếu, thiếu hụt
-14. facility (noun): cơ sở vật chất, tiện ích
-15. build (verb): xây dựng
-16. bridge (noun): cây cầu
-17. pickpocket (noun): kẻ móc túi
-18. scam (noun): trò lừa đảo
-19. crime (noun): tội phạm, tội ác
-20. security (noun): an ninh
-21. beggar (noun): người ăn xin
-22. poor (adjective): nghèo
-23. selfish (adjective): ích kỷ
-24. daily (adverb): hàng ngày
+13. daily (adverb): hàng ngày
+14. lack (verb): thiếu, thiếu hụt
+15. facility (noun): cơ sở vật chất, tiện ích
+16. build (verb): xây dựng
+17. bridge (noun): cây cầu
+18. pickpocket (noun): kẻ móc túi
+19. scam (noun): trò lừa đảo
+20. crime (noun): tội phạm, tội ác
+21. security (noun): an ninh
+22. beggar (noun): người ăn xin
+23. poor (adjective): nghèo
+24. selfish (adjective): ích kỷ
 
 ## Unit 9: Căn hộ mới của Hinata
 
@@ -236,12 +236,12 @@
 16. rug (noun): tấm thảm nhỏ
 17. housemate (noun): người ở chung nhà
 18. roommate (noun): người ở chung phòng
-19. decorate (verb): trang trí
-20. beautifully (adverb): một cách đẹp đẽ
-21. antique (noun): đồ cổ
-22. comfortable (adjective): thoải mái, tiện nghi
-23. cramped (adjective): chật chội
-24. share (verb): chia sẻ, dùng chung
+19. share (verb): chia sẻ, dùng chung
+20. decorate (verb): trang trí
+21. beautifully (adverb): một cách đẹp đẽ
+22. antique (noun): đồ cổ
+23. comfortable (adjective): thoải mái, tiện nghi
+24. cramped (adjective): chật chội
 
 ## Unit 10: Khu phố mới của Hinata
 
