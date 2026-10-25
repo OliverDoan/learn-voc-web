@@ -1,0 +1,189 @@
+{
+  "deck": {
+    "name": "Bài 8: 苹果一斤多少钱 (Nửa cân táo bao nhiêu tiền)",
+    "description": "Từ vựng Bài 8 — Giáo trình Hán ngữ 1 (bản 3) Quyển thượng",
+    "color": "#a855f7",
+    "icon": "🍎"
+  },
+  "cards": [
+    {
+      "word": "买",
+      "phonetic": "mǎi",
+      "meaning": "mua",
+      "sinoVietnamese": "mãi",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "水果",
+      "phonetic": "shuǐguǒ",
+      "meaning": "hoa quả",
+      "sinoVietnamese": "thủy quả",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "苹果",
+      "phonetic": "píngguǒ",
+      "meaning": "táo",
+      "sinoVietnamese": "bình quả",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "斤",
+      "phonetic": "jīn",
+      "meaning": "cân (TQ, = 0,5 kg)",
+      "sinoVietnamese": "cân",
+      "partOfSpeech": "lượng từ"
+    },
+    {
+      "word": "公斤",
+      "phonetic": "gōngjīn",
+      "meaning": "kg",
+      "sinoVietnamese": "công cân",
+      "partOfSpeech": "lượng từ"
+    },
+    {
+      "word": "多少",
+      "phonetic": "duōshao",
+      "meaning": "bao nhiêu",
+      "sinoVietnamese": "đa thiểu",
+      "partOfSpeech": "đại từ"
+    },
+    {
+      "word": "多",
+      "phonetic": "duō",
+      "meaning": "nhiều",
+      "sinoVietnamese": "đa",
+      "partOfSpeech": "tính từ"
+    },
+    {
+      "word": "少",
+      "phonetic": "shǎo",
+      "meaning": "ít",
+      "sinoVietnamese": "thiểu",
+      "partOfSpeech": "tính từ"
+    },
+    {
+      "word": "块(元)",
+      "phonetic": "kuài (yuán)",
+      "meaning": "đồng (đơn vị tiền TQ)",
+      "sinoVietnamese": "khối / nguyên",
+      "partOfSpeech": "lượng từ"
+    },
+    {
+      "word": "角(毛)",
+      "phonetic": "jiǎo (máo)",
+      "meaning": "hào (= 1/10 đồng)",
+      "sinoVietnamese": "giác / mao",
+      "partOfSpeech": "lượng từ"
+    },
+    {
+      "word": "分",
+      "phonetic": "fēn",
+      "meaning": "xu (= 1/100 đồng)",
+      "sinoVietnamese": "phân",
+      "partOfSpeech": "lượng từ"
+    },
+    {
+      "word": "贵",
+      "phonetic": "guì",
+      "meaning": "đắt",
+      "sinoVietnamese": "quý",
+      "partOfSpeech": "tính từ"
+    },
+    {
+      "word": "太…了",
+      "phonetic": "tài…le",
+      "meaning": "quá… rồi"
+    },
+    {
+      "word": "便宜",
+      "phonetic": "piányi",
+      "meaning": "rẻ",
+      "sinoVietnamese": "tiện nghi",
+      "partOfSpeech": "tính từ"
+    },
+    {
+      "word": "(一)点儿",
+      "phonetic": "(yì)diǎnr",
+      "meaning": "một chút",
+      "sinoVietnamese": "nhất điểm",
+      "partOfSpeech": "lượng từ"
+    },
+    {
+      "word": "来",
+      "phonetic": "lái",
+      "meaning": "lấy, mua (ở đây: “cho tôi”)",
+      "sinoVietnamese": "lai",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "吧",
+      "phonetic": "ba",
+      "meaning": "trợ từ cuối câu: gợi ý, đề nghị",
+      "sinoVietnamese": "ba",
+      "partOfSpeech": "trợ từ"
+    },
+    {
+      "word": "还",
+      "phonetic": "hái",
+      "meaning": "còn, vẫn còn",
+      "sinoVietnamese": "hoàn",
+      "partOfSpeech": "phó từ"
+    },
+    {
+      "word": "别的",
+      "phonetic": "bié de",
+      "meaning": "khác, cái khác",
+      "sinoVietnamese": "biệt đích"
+    },
+    {
+      "word": "橘子",
+      "phonetic": "júzi",
+      "meaning": "quýt",
+      "sinoVietnamese": "quất tử",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "怎么",
+      "phonetic": "zěnme",
+      "meaning": "thế nào",
+      "sinoVietnamese": "chẩm ma",
+      "partOfSpeech": "đại từ"
+    },
+    {
+      "word": "卖",
+      "phonetic": "mài",
+      "meaning": "bán",
+      "sinoVietnamese": "mại",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "两",
+      "phonetic": "liǎng",
+      "meaning": "hai",
+      "sinoVietnamese": "lưỡng",
+      "partOfSpeech": "số từ"
+    },
+    {
+      "word": "一共",
+      "phonetic": "yígòng",
+      "meaning": "tổng cộng",
+      "sinoVietnamese": "nhất cộng",
+      "partOfSpeech": "phó từ"
+    },
+    {
+      "word": "给",
+      "phonetic": "gěi",
+      "meaning": "đưa, cho",
+      "sinoVietnamese": "cấp",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "找",
+      "phonetic": "zhǎo",
+      "meaning": "trả lại (tiền thừa)",
+      "sinoVietnamese": "trảo",
+      "partOfSpeech": "động từ"
+    }
+  ]
+}

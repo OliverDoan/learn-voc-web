@@ -1,0 +1,159 @@
+{
+  "deck": {
+    "name": "Bài 11: 我们都是留学生 (Chúng tôi đều là lưu học sinh)",
+    "description": "Từ vựng Bài 11 — Giáo trình Hán ngữ 1 (bản 3) Quyển thượng",
+    "color": "#0ea5e9",
+    "icon": "🎓"
+  },
+  "cards": [
+    {
+      "word": "秘书",
+      "phonetic": "mìshū",
+      "meaning": "thư ký",
+      "sinoVietnamese": "bí thư",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "先",
+      "phonetic": "xiān",
+      "meaning": "trước, trước tiên",
+      "sinoVietnamese": "tiên",
+      "partOfSpeech": "phó từ"
+    },
+    {
+      "word": "介绍",
+      "phonetic": "jièshào",
+      "meaning": "giới thiệu",
+      "sinoVietnamese": "giới thiệu",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "一下儿",
+      "phonetic": "yíxiàr",
+      "meaning": "một chút, một tí (sau động từ)",
+      "sinoVietnamese": "nhất hạ nhi",
+      "partOfSpeech": "số lượng từ"
+    },
+    {
+      "word": "校长",
+      "phonetic": "xiàozhǎng",
+      "meaning": "hiệu trưởng",
+      "sinoVietnamese": "hiệu trưởng",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "位",
+      "phonetic": "wèi",
+      "meaning": "vị (lượng từ chỉ người, lịch sự)",
+      "sinoVietnamese": "vị",
+      "partOfSpeech": "lượng từ"
+    },
+    {
+      "word": "教授",
+      "phonetic": "jiàoshòu",
+      "meaning": "giáo sư",
+      "sinoVietnamese": "giáo thụ",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "欢迎",
+      "phonetic": "huānyíng",
+      "meaning": "hoan nghênh, chào đón",
+      "sinoVietnamese": "hoan nghênh",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "留学生",
+      "phonetic": "liúxuéshēng",
+      "meaning": "lưu học sinh, du học sinh",
+      "sinoVietnamese": "lưu học sinh",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "留学",
+      "phonetic": "liú xué",
+      "meaning": "du học",
+      "sinoVietnamese": "lưu học",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "我们",
+      "phonetic": "wǒmen",
+      "meaning": "chúng tôi",
+      "sinoVietnamese": "ngã môn",
+      "partOfSpeech": "đại từ"
+    },
+    {
+      "word": "你们",
+      "phonetic": "nǐmen",
+      "meaning": "các bạn, các anh, các chị",
+      "sinoVietnamese": "nhĩ môn",
+      "partOfSpeech": "đại từ"
+    },
+    {
+      "word": "他们",
+      "phonetic": "tāmen",
+      "meaning": "họ, bọn họ",
+      "sinoVietnamese": "tha môn",
+      "partOfSpeech": "đại từ"
+    },
+    {
+      "word": "都",
+      "phonetic": "dōu",
+      "meaning": "đều",
+      "sinoVietnamese": "đô",
+      "partOfSpeech": "phó từ"
+    },
+    {
+      "word": "和",
+      "phonetic": "hé",
+      "meaning": "và",
+      "sinoVietnamese": "hòa",
+      "partOfSpeech": "liên từ"
+    },
+    {
+      "word": "俩",
+      "phonetic": "liǎ",
+      "meaning": "hai (người)",
+      "sinoVietnamese": "lạng",
+      "partOfSpeech": "số từ"
+    },
+    {
+      "word": "学生",
+      "phonetic": "xuésheng",
+      "meaning": "học sinh",
+      "sinoVietnamese": "học sinh",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "没什么",
+      "phonetic": "méi shénme",
+      "meaning": "không có gì",
+      "sinoVietnamese": "một thậm ma"
+    },
+    {
+      "word": "马",
+      "phonetic": "Mǎ",
+      "meaning": "họ Mã",
+      "sinoVietnamese": "Mã"
+    },
+    {
+      "word": "田芳",
+      "phonetic": "Tián Fāng",
+      "meaning": "Điền Phương (tên người TQ)",
+      "sinoVietnamese": "Điền Phương"
+    },
+    {
+      "word": "罗兰",
+      "phonetic": "Luólán",
+      "meaning": "Roland",
+      "sinoVietnamese": "Lạc Lan"
+    },
+    {
+      "word": "爱德华",
+      "phonetic": "Àidéhuá",
+      "meaning": "Edward",
+      "sinoVietnamese": "Ái Đức Hoa"
+    }
+  ]
+}

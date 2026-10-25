@@ -1,5 +1,6 @@
 import { prisma } from "./db";
 import { SINGLETON_PROGRESS_ID } from "./constants";
+import { ENGLISH_DECK_FILTER } from "./chinese";
 
 /** Lấy số thứ tự Unit từ tên deck ("Unit 10: ..." → 10); không có → null. */
 export function getDeckUnitNumber(name: string): number | null {
@@ -87,9 +88,10 @@ export async function isUnlockAllDecksEnabled(): Promise<boolean> {
  * khỏi các trang tra cứu toàn cục (Tất cả từ, Yêu thích, Tìm kiếm, Truyện chêm).
  */
 export async function getLockedDeckIds(): Promise<string[]> {
+  // Chuỗi khóa tuần tự chỉ tồn tại ở phần tiếng Anh — deck tiếng Trung luôn mở.
   const [decks, unlockAll] = await Promise.all([
     prisma.deck.findMany({
-      where: { deletedAt: null },
+      where: { deletedAt: null, ...ENGLISH_DECK_FILTER },
       select: { id: true, name: true, learnedAt: true },
     }),
     isUnlockAllDecksEnabled(),
@@ -106,7 +108,7 @@ export async function getLockedDeckIds(): Promise<string[]> {
 export async function isDeckUnlocked(deckId: string): Promise<boolean> {
   const [decks, unlockAll] = await Promise.all([
     prisma.deck.findMany({
-      where: { deletedAt: null },
+      where: { deletedAt: null, ...ENGLISH_DECK_FILTER },
       select: { id: true, name: true, learnedAt: true },
     }),
     isUnlockAllDecksEnabled(),

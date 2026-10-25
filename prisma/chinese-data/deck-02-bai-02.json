@@ -1,0 +1,108 @@
+{
+  "deck": {
+    "name": "Bài 2: 汉语不太难 (Tiếng Hán không khó lắm)",
+    "description": "Từ vựng Bài 2 — Giáo trình Hán ngữ 1 (bản 3) Quyển thượng",
+    "color": "#f97316",
+    "icon": "🗣️"
+  },
+  "cards": [
+    {
+      "word": "忙",
+      "phonetic": "máng",
+      "meaning": "bận",
+      "sinoVietnamese": "mang",
+      "partOfSpeech": "tính từ"
+    },
+    {
+      "word": "吗",
+      "phonetic": "ma",
+      "meaning": "trợ từ nghi vấn",
+      "sinoVietnamese": "ma",
+      "partOfSpeech": "trợ từ"
+    },
+    {
+      "word": "很",
+      "phonetic": "hěn",
+      "meaning": "rất",
+      "sinoVietnamese": "ngận",
+      "partOfSpeech": "phó từ"
+    },
+    {
+      "word": "汉语",
+      "phonetic": "Hànyǔ",
+      "meaning": "tiếng Hán",
+      "sinoVietnamese": "Hán ngữ",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "难",
+      "phonetic": "nán",
+      "meaning": "khó",
+      "sinoVietnamese": "nan",
+      "partOfSpeech": "tính từ"
+    },
+    {
+      "word": "太",
+      "phonetic": "tài",
+      "meaning": "hơi, quá, lắm",
+      "sinoVietnamese": "thái",
+      "partOfSpeech": "phó từ"
+    },
+    {
+      "word": "爸爸",
+      "phonetic": "bàba",
+      "meaning": "bố, ba",
+      "sinoVietnamese": "bá bá",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "妈妈",
+      "phonetic": "māma",
+      "meaning": "mẹ, má",
+      "sinoVietnamese": "ma ma",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "他",
+      "phonetic": "tā",
+      "meaning": "anh ta, ông ấy",
+      "sinoVietnamese": "tha",
+      "partOfSpeech": "đại từ"
+    },
+    {
+      "word": "她",
+      "phonetic": "tā",
+      "meaning": "chị ta, bà ấy",
+      "sinoVietnamese": "tha",
+      "partOfSpeech": "đại từ"
+    },
+    {
+      "word": "男",
+      "phonetic": "nán",
+      "meaning": "nam giới, con trai",
+      "sinoVietnamese": "nam",
+      "partOfSpeech": "tính từ"
+    },
+    {
+      "word": "哥哥",
+      "phonetic": "gēge",
+      "meaning": "anh trai",
+      "sinoVietnamese": "ca ca",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "弟弟",
+      "phonetic": "dìdi",
+      "meaning": "em trai",
+      "sinoVietnamese": "đệ đệ",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "妹妹",
+      "phonetic": "mèimei",
+      "meaning": "em gái",
+      "sinoVietnamese": "muội muội",
+      "partOfSpeech": "danh từ"
+    }
+  ]
+}

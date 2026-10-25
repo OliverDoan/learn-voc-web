@@ -1,0 +1,134 @@
+{
+  "deck": {
+    "name": "Bài 5: 这是王老师 (Đây là thầy giáo Vương)",
+    "description": "Từ vựng Bài 5 — Giáo trình Hán ngữ 1 (bản 3) Quyển thượng",
+    "color": "#14b8a6",
+    "icon": "👩‍🏫"
+  },
+  "cards": [
+    {
+      "word": "这",
+      "phonetic": "zhè",
+      "meaning": "đây, này",
+      "sinoVietnamese": "giá",
+      "partOfSpeech": "đại từ"
+    },
+    {
+      "word": "是",
+      "phonetic": "shì",
+      "meaning": "là",
+      "sinoVietnamese": "thị",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "老师",
+      "phonetic": "lǎoshī",
+      "meaning": "thầy giáo, cô giáo",
+      "sinoVietnamese": "lão sư",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "您",
+      "phonetic": "nín",
+      "meaning": "ngài (kính trọng)",
+      "sinoVietnamese": "nhẫm",
+      "partOfSpeech": "đại từ"
+    },
+    {
+      "word": "请",
+      "phonetic": "qǐng",
+      "meaning": "mời",
+      "sinoVietnamese": "thỉnh",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "进",
+      "phonetic": "jìn",
+      "meaning": "vào",
+      "sinoVietnamese": "tiến",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "坐",
+      "phonetic": "zuò",
+      "meaning": "ngồi",
+      "sinoVietnamese": "tọa",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "喝",
+      "phonetic": "hē",
+      "meaning": "uống",
+      "sinoVietnamese": "hát",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "茶",
+      "phonetic": "chá",
+      "meaning": "trà, chè",
+      "sinoVietnamese": "trà",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "谢谢",
+      "phonetic": "xièxie",
+      "meaning": "cảm ơn",
+      "sinoVietnamese": "tạ tạ",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "不客气",
+      "phonetic": "bú kèqi",
+      "meaning": "không có gì",
+      "sinoVietnamese": "bất khách khí"
+    },
+    {
+      "word": "客气",
+      "phonetic": "kèqi",
+      "meaning": "khách khí, lịch sự",
+      "sinoVietnamese": "khách khí",
+      "partOfSpeech": "tính từ"
+    },
+    {
+      "word": "工作",
+      "phonetic": "gōngzuò",
+      "meaning": "công việc, làm việc",
+      "sinoVietnamese": "công tác",
+      "partOfSpeech": "danh từ, động từ"
+    },
+    {
+      "word": "身体",
+      "phonetic": "shēntǐ",
+      "meaning": "sức khỏe, thân thể",
+      "sinoVietnamese": "thân thể",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "身",
+      "phonetic": "shēn",
+      "meaning": "thân thể, thể xác",
+      "sinoVietnamese": "thân",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "十",
+      "phonetic": "shí",
+      "meaning": "mười",
+      "sinoVietnamese": "thập",
+      "partOfSpeech": "số từ"
+    },
+    {
+      "word": "日",
+      "phonetic": "rì",
+      "meaning": "ngày",
+      "sinoVietnamese": "nhật",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "王",
+      "phonetic": "Wáng",
+      "meaning": "họ Vương",
+      "sinoVietnamese": "Vương"
+    }
+  ]
+}

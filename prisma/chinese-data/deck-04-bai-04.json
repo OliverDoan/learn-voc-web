@@ -1,0 +1,169 @@
+{
+  "deck": {
+    "name": "Bài 4: 你去哪儿 (Bạn đi đâu đấy)",
+    "description": "Từ vựng Bài 4 — Giáo trình Hán ngữ 1 (bản 3) Quyển thượng",
+    "color": "#22c55e",
+    "icon": "🚶"
+  },
+  "cards": [
+    {
+      "word": "今天",
+      "phonetic": "jīntiān",
+      "meaning": "hôm nay",
+      "sinoVietnamese": "kim thiên",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "昨天",
+      "phonetic": "zuótiān",
+      "meaning": "hôm qua",
+      "sinoVietnamese": "tạc thiên",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "星期",
+      "phonetic": "xīngqī",
+      "meaning": "tuần",
+      "sinoVietnamese": "tinh kỳ",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "星期一",
+      "phonetic": "xīngqīyī",
+      "meaning": "thứ hai",
+      "sinoVietnamese": "tinh kỳ nhất",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "星期二",
+      "phonetic": "xīngqī'èr",
+      "meaning": "thứ ba",
+      "sinoVietnamese": "tinh kỳ nhị",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "星期三",
+      "phonetic": "xīngqīsān",
+      "meaning": "thứ tư",
+      "sinoVietnamese": "tinh kỳ tam",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "星期四",
+      "phonetic": "xīngqīsì",
+      "meaning": "thứ năm",
+      "sinoVietnamese": "tinh kỳ tứ",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "星期五",
+      "phonetic": "xīngqīwǔ",
+      "meaning": "thứ sáu",
+      "sinoVietnamese": "tinh kỳ ngũ",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "星期六",
+      "phonetic": "xīngqīliù",
+      "meaning": "thứ bảy",
+      "sinoVietnamese": "tinh kỳ lục",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "星期天",
+      "phonetic": "xīngqītiān",
+      "meaning": "chủ nhật",
+      "sinoVietnamese": "tinh kỳ thiên",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "几",
+      "phonetic": "jǐ",
+      "meaning": "mấy, vài",
+      "sinoVietnamese": "kỷ",
+      "partOfSpeech": "đại từ"
+    },
+    {
+      "word": "二",
+      "phonetic": "èr",
+      "meaning": "hai",
+      "sinoVietnamese": "nhị",
+      "partOfSpeech": "số từ"
+    },
+    {
+      "word": "三",
+      "phonetic": "sān",
+      "meaning": "ba",
+      "sinoVietnamese": "tam",
+      "partOfSpeech": "số từ"
+    },
+    {
+      "word": "四",
+      "phonetic": "sì",
+      "meaning": "bốn",
+      "sinoVietnamese": "tứ",
+      "partOfSpeech": "số từ"
+    },
+    {
+      "word": "哪儿",
+      "phonetic": "nǎr",
+      "meaning": "ở đâu",
+      "sinoVietnamese": "ná nhi",
+      "partOfSpeech": "đại từ"
+    },
+    {
+      "word": "那儿",
+      "phonetic": "nàr",
+      "meaning": "ở đó, chỗ kia",
+      "sinoVietnamese": "na nhi",
+      "partOfSpeech": "đại từ"
+    },
+    {
+      "word": "我",
+      "phonetic": "wǒ",
+      "meaning": "tôi",
+      "sinoVietnamese": "ngã",
+      "partOfSpeech": "đại từ"
+    },
+    {
+      "word": "回",
+      "phonetic": "huí",
+      "meaning": "về, trở về, quay về",
+      "sinoVietnamese": "hồi",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "学校",
+      "phonetic": "xuéxiào",
+      "meaning": "trường học",
+      "sinoVietnamese": "học hiệu",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "再见",
+      "phonetic": "zàijiàn",
+      "meaning": "tạm biệt",
+      "sinoVietnamese": "tái kiến",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "对不起",
+      "phonetic": "duìbuqǐ",
+      "meaning": "xin lỗi",
+      "sinoVietnamese": "đối bất khởi",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "没关系",
+      "phonetic": "méi guānxi",
+      "meaning": "không có gì, không sao",
+      "sinoVietnamese": "một quan hệ"
+    },
+    {
+      "word": "天安门",
+      "phonetic": "Tiān'ān Mén",
+      "meaning": "Thiên An Môn",
+      "sinoVietnamese": "Thiên An Môn"
+    }
+  ]
+}

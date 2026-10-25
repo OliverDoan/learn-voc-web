@@ -1,0 +1,158 @@
+{
+  "deck": {
+    "name": "Bài 1: 你好 (Xin chào)",
+    "description": "Từ vựng Bài 1 — Giáo trình Hán ngữ 1 (bản 3) Quyển thượng",
+    "color": "#ef4444",
+    "icon": "🀄"
+  },
+  "cards": [
+    {
+      "word": "你",
+      "phonetic": "nǐ",
+      "sinoVietnamese": "nhĩ",
+      "partOfSpeech": "đại từ",
+      "meaning": "anh, chị, bạn, ông, bà…",
+      "strokeCount": 7,
+      "radical": "亻",
+      "example": "你好！",
+      "examplePinyin": "Nǐ hǎo!",
+      "exampleTranslation": "Xin chào!"
+    },
+    {
+      "word": "你好",
+      "phonetic": "nǐ hǎo",
+      "sinoVietnamese": "nhĩ hảo",
+      "partOfSpeech": "cụm từ chào hỏi",
+      "meaning": "xin chào",
+      "example": "你好，我叫小明。",
+      "examplePinyin": "Nǐ hǎo, wǒ jiào Xiǎomíng.",
+      "exampleTranslation": "Xin chào, tôi tên là Tiểu Minh.",
+      "note": "Ghép từ 你 (bạn) + 好 (tốt) — câu chào thông dụng nhất."
+    },
+    {
+      "word": "好",
+      "phonetic": "hǎo",
+      "sinoVietnamese": "hảo",
+      "partOfSpeech": "tính từ",
+      "meaning": "tốt, đẹp, hay, ngon",
+      "strokeCount": 6,
+      "radical": "女",
+      "example": "她很好。",
+      "examplePinyin": "Tā hěn hǎo.",
+      "exampleTranslation": "Cô ấy rất khoẻ."
+    },
+    {
+      "word": "一",
+      "phonetic": "yī",
+      "sinoVietnamese": "nhất",
+      "partOfSpeech": "số từ",
+      "meaning": "một",
+      "hanziFormal": "壹",
+      "strokeCount": 1,
+      "radical": "一",
+      "example": "我有一匹马。",
+      "examplePinyin": "Wǒ yǒu yì pǐ mǎ.",
+      "exampleTranslation": "Tôi có một con ngựa.",
+      "note": "Đứng trước thanh 4 đọc yí, trước thanh 1/2/3 đọc yì."
+    },
+    {
+      "word": "五",
+      "phonetic": "wǔ",
+      "sinoVietnamese": "ngũ",
+      "partOfSpeech": "số từ",
+      "meaning": "năm",
+      "hanziFormal": "伍",
+      "strokeCount": 4,
+      "radical": "二",
+      "example": "我家有五口人。",
+      "examplePinyin": "Wǒ jiā yǒu wǔ kǒu rén.",
+      "exampleTranslation": "Nhà tôi có năm người."
+    },
+    {
+      "word": "八",
+      "phonetic": "bā",
+      "sinoVietnamese": "bát",
+      "partOfSpeech": "số từ",
+      "meaning": "tám",
+      "hanziFormal": "捌",
+      "strokeCount": 2,
+      "radical": "八",
+      "example": "他有八本书。",
+      "examplePinyin": "Tā yǒu bā běn shū.",
+      "exampleTranslation": "Anh ấy có tám quyển sách."
+    },
+    {
+      "word": "大",
+      "phonetic": "dà",
+      "sinoVietnamese": "đại",
+      "partOfSpeech": "tính từ",
+      "meaning": "to, lớn",
+      "strokeCount": 3,
+      "radical": "大",
+      "example": "这匹马很大。",
+      "examplePinyin": "Zhè pǐ mǎ hěn dà.",
+      "exampleTranslation": "Con ngựa này rất to."
+    },
+    {
+      "word": "不",
+      "phonetic": "bù",
+      "sinoVietnamese": "bất",
+      "partOfSpeech": "phó từ",
+      "meaning": "không, chẳng",
+      "strokeCount": 4,
+      "radical": "一",
+      "example": "这匹马不大。",
+      "examplePinyin": "Zhè pǐ mǎ bú dà.",
+      "exampleTranslation": "Con ngựa này không to.",
+      "note": "Đứng trước thanh 4 thì đọc thành bú, vd 不大 bú dà."
+    },
+    {
+      "word": "口",
+      "phonetic": "kǒu",
+      "sinoVietnamese": "khẩu",
+      "partOfSpeech": "danh từ, lượng từ",
+      "meaning": "miệng; nhân khẩu (lượng từ chỉ người trong gia đình)",
+      "strokeCount": 3,
+      "radical": "口",
+      "example": "你家有几口人？",
+      "examplePinyin": "Nǐ jiā yǒu jǐ kǒu rén?",
+      "exampleTranslation": "Nhà bạn có mấy người?"
+    },
+    {
+      "word": "白",
+      "phonetic": "bái",
+      "sinoVietnamese": "bạch",
+      "partOfSpeech": "tính từ",
+      "meaning": "trắng",
+      "strokeCount": 5,
+      "radical": "白",
+      "example": "那匹马是白的。",
+      "examplePinyin": "Nà pǐ mǎ shì bái de.",
+      "exampleTranslation": "Con ngựa kia màu trắng."
+    },
+    {
+      "word": "女",
+      "phonetic": "nǚ",
+      "sinoVietnamese": "nữ",
+      "partOfSpeech": "tính từ",
+      "meaning": "nữ, phụ nữ",
+      "strokeCount": 3,
+      "radical": "女",
+      "example": "她是女老师。",
+      "examplePinyin": "Tā shì nǚ lǎoshī.",
+      "exampleTranslation": "Cô ấy là giáo viên nữ."
+    },
+    {
+      "word": "马",
+      "phonetic": "mǎ",
+      "sinoVietnamese": "mã",
+      "partOfSpeech": "danh từ",
+      "meaning": "con ngựa",
+      "strokeCount": 3,
+      "radical": "马",
+      "example": "我喜欢白马。",
+      "examplePinyin": "Wǒ xǐhuan bái mǎ.",
+      "exampleTranslation": "Tôi thích ngựa trắng."
+    }
+  ]
+}

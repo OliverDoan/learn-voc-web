@@ -1,0 +1,156 @@
+{
+  "deck": {
+    "name": "Bài 14: 你的车是新的还是旧的 (Xe của bạn mới hay cũ)",
+    "description": "Từ vựng Bài 14 — Giáo trình Hán ngữ 1 (bản 3) Quyển thượng",
+    "color": "#f59e0b",
+    "icon": "🚲"
+  },
+  "cards": [
+    {
+      "word": "经理",
+      "phonetic": "jīnglǐ",
+      "meaning": "giám đốc",
+      "sinoVietnamese": "kinh lý",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "好久",
+      "phonetic": "hǎojiǔ",
+      "meaning": "đã lâu, rất lâu rồi",
+      "sinoVietnamese": "hảo cửu",
+      "partOfSpeech": "tính từ"
+    },
+    {
+      "word": "啊",
+      "phonetic": "à",
+      "meaning": "à (thán từ, chợt nhận ra)",
+      "sinoVietnamese": "a",
+      "partOfSpeech": "thán từ"
+    },
+    {
+      "word": "马马虎虎",
+      "phonetic": "mǎmǎhūhū",
+      "meaning": "tạm, bình thường",
+      "sinoVietnamese": "mã mã hổ hổ",
+      "partOfSpeech": "tính từ"
+    },
+    {
+      "word": "最近",
+      "phonetic": "zuìjìn",
+      "meaning": "gần đây",
+      "sinoVietnamese": "tối cận",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "刚",
+      "phonetic": "gāng",
+      "meaning": "vừa, mới",
+      "sinoVietnamese": "cương",
+      "partOfSpeech": "phó từ"
+    },
+    {
+      "word": "开学",
+      "phonetic": "kāi xué",
+      "meaning": "khai giảng",
+      "sinoVietnamese": "khai học",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "开",
+      "phonetic": "kāi",
+      "meaning": "mở, bắt đầu",
+      "sinoVietnamese": "khai",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "有(一)点儿",
+      "phonetic": "yǒu (yì)diǎnr",
+      "meaning": "hơi, một chút",
+      "sinoVietnamese": "hữu nhất điểm nhi",
+      "partOfSpeech": "phó từ"
+    },
+    {
+      "word": "还是",
+      "phonetic": "háishi",
+      "meaning": "hay là",
+      "sinoVietnamese": "hoàn thị",
+      "partOfSpeech": "liên từ"
+    },
+    {
+      "word": "咖啡",
+      "phonetic": "kāfēi",
+      "meaning": "cà phê",
+      "sinoVietnamese": "ca phê",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "杯",
+      "phonetic": "bēi",
+      "meaning": "cốc",
+      "sinoVietnamese": "bôi",
+      "partOfSpeech": "danh từ, lượng từ"
+    },
+    {
+      "word": "车",
+      "phonetic": "chē",
+      "meaning": "xe",
+      "sinoVietnamese": "xa",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "自行车",
+      "phonetic": "zìxíngchē",
+      "meaning": "xe đạp",
+      "sinoVietnamese": "tự hành xa",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "汽车",
+      "phonetic": "qìchē",
+      "meaning": "xe ô tô",
+      "sinoVietnamese": "khí xa",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "摩托车",
+      "phonetic": "mótuōchē",
+      "meaning": "xe máy",
+      "sinoVietnamese": "ma thác xa",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "出租车",
+      "phonetic": "chūzūchē",
+      "meaning": "xe taxi",
+      "sinoVietnamese": "xuất tô xa",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "颜色",
+      "phonetic": "yánsè",
+      "meaning": "màu sắc",
+      "sinoVietnamese": "nhan sắc",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "蓝",
+      "phonetic": "lán",
+      "meaning": "màu xanh lam",
+      "sinoVietnamese": "lam",
+      "partOfSpeech": "tính từ"
+    },
+    {
+      "word": "辆",
+      "phonetic": "liàng",
+      "meaning": "chiếc (lượng từ cho xe)",
+      "sinoVietnamese": "lượng",
+      "partOfSpeech": "lượng từ"
+    },
+    {
+      "word": "关",
+      "phonetic": "Guān",
+      "meaning": "họ Quan",
+      "sinoVietnamese": "Quan"
+    }
+  ]
+}

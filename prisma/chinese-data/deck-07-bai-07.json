@@ -1,0 +1,176 @@
+{
+  "deck": {
+    "name": "Bài 7: 你吃什么 (Bạn ăn gì)",
+    "description": "Từ vựng Bài 7 — Giáo trình Hán ngữ 1 (bản 3) Quyển thượng",
+    "color": "#6366f1",
+    "icon": "🥟"
+  },
+  "cards": [
+    {
+      "word": "中午",
+      "phonetic": "zhōngwǔ",
+      "meaning": "buổi trưa",
+      "sinoVietnamese": "trung ngọ",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "吃",
+      "phonetic": "chī",
+      "meaning": "ăn",
+      "sinoVietnamese": "ngật",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "饭",
+      "phonetic": "fàn",
+      "meaning": "cơm, bữa ăn",
+      "sinoVietnamese": "phạn",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "食堂",
+      "phonetic": "shítáng",
+      "meaning": "nhà ăn",
+      "sinoVietnamese": "thực đường",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "馒头",
+      "phonetic": "mántou",
+      "meaning": "bánh bao chay",
+      "sinoVietnamese": "màn đầu",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "要",
+      "phonetic": "yào",
+      "meaning": "muốn, cần",
+      "sinoVietnamese": "yếu",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "个",
+      "phonetic": "gè",
+      "meaning": "cái (lượng từ chung)",
+      "sinoVietnamese": "cá",
+      "partOfSpeech": "lượng từ"
+    },
+    {
+      "word": "米饭",
+      "phonetic": "mǐfàn",
+      "meaning": "cơm",
+      "sinoVietnamese": "mễ phạn",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "米",
+      "phonetic": "mǐ",
+      "meaning": "gạo",
+      "sinoVietnamese": "mễ",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "碗",
+      "phonetic": "wǎn",
+      "meaning": "bát, cái bát",
+      "sinoVietnamese": "uyển",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "鸡蛋",
+      "phonetic": "jīdàn",
+      "meaning": "trứng gà",
+      "sinoVietnamese": "kê đản",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "鸡",
+      "phonetic": "jī",
+      "meaning": "gà",
+      "sinoVietnamese": "kê",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "蛋",
+      "phonetic": "dàn",
+      "meaning": "trứng",
+      "sinoVietnamese": "đản",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "汤",
+      "phonetic": "tāng",
+      "meaning": "canh",
+      "sinoVietnamese": "thang",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "啤酒",
+      "phonetic": "píjiǔ",
+      "meaning": "bia",
+      "sinoVietnamese": "tì tửu",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "酒",
+      "phonetic": "jiǔ",
+      "meaning": "rượu",
+      "sinoVietnamese": "tửu",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "这些",
+      "phonetic": "zhèxiē",
+      "meaning": "những…này",
+      "sinoVietnamese": "giá tá",
+      "partOfSpeech": "đại từ"
+    },
+    {
+      "word": "些",
+      "phonetic": "xiē",
+      "meaning": "vài, những",
+      "sinoVietnamese": "tá",
+      "partOfSpeech": "lượng từ"
+    },
+    {
+      "word": "一些",
+      "phonetic": "yìxiē",
+      "meaning": "một số",
+      "sinoVietnamese": "nhất tá",
+      "partOfSpeech": "lượng từ"
+    },
+    {
+      "word": "那些",
+      "phonetic": "nàxiē",
+      "meaning": "những…kia",
+      "sinoVietnamese": "ná tá",
+      "partOfSpeech": "đại từ"
+    },
+    {
+      "word": "饺子",
+      "phonetic": "jiǎozi",
+      "meaning": "há cảo, bánh chẻo",
+      "sinoVietnamese": "giảo tử",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "包子",
+      "phonetic": "bāozi",
+      "meaning": "bánh bao",
+      "sinoVietnamese": "bao tử",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "面条儿",
+      "phonetic": "miàntiáor",
+      "meaning": "mì sợi",
+      "sinoVietnamese": "miến điều",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "玛丽",
+      "phonetic": "Mǎlì",
+      "meaning": "Mary"
+    }
+  ]
+}

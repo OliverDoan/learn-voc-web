@@ -6,6 +6,7 @@ import {
   CircleAlert,
   GraduationCap,
   History,
+  Languages,
   Layers,
   Library,
   type LucideIcon,
@@ -33,6 +34,13 @@ export interface NavItem {
 /** Danh sách mục điều hướng dùng chung cho sidebar + trang cấu hình. */
 export const NAV_ITEMS: NavItem[] = [
   { href: "/decks", label: "Decks", icon: Layers, mobile: true, prefetch: true, defaultVisible: true },
+  {
+    href: "/chinese",
+    label: "Deck China",
+    icon: Languages,
+    mobile: true,
+    defaultVisible: true,
+  },
   { href: "/search", label: "Tra từ", icon: Search, mobile: false },
   {
     href: "/stories",

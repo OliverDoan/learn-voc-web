@@ -4,6 +4,7 @@ import { fail, handleError, ok } from "@/lib/api-helpers";
 import { cardCreateSchema } from "@/lib/schemas";
 import { getTopicDeckIds } from "@/lib/daily-queue";
 import { getLockedDeckIds } from "@/lib/deck-progress";
+import { ENGLISH_DECK_FILTER } from "@/lib/chinese";
 import { stringifyTags } from "@/lib/utils";
 import { stringifyWordForms, stringifyWordFormMeanings } from "@/lib/word-forms";
 
@@ -32,8 +33,12 @@ export async function GET(req: NextRequest) {
     const cards = await prisma.card.findMany({
       where: {
         deletedAt: null,
-        // Bỏ thẻ của deck đã vào thùng rác (thẻ không tự có deletedAt khi xoá deck).
-        ...(deckId ? {} : { deckId: { notIn: lockedDeckIds }, deck: { deletedAt: null } }),
+        // Không có deckId = truy vấn tổng hợp → chỉ deck tiếng Anh (deck tiếng Trung
+        // có trang riêng ở /chinese và luôn được gọi kèm deckId).
+        // Bỏ cả thẻ của deck đã vào thùng rác.
+        ...(deckId
+          ? {}
+          : { deckId: { notIn: lockedDeckIds }, deck: { deletedAt: null, ...ENGLISH_DECK_FILTER } }),
         ...(topicDeckIds ? { deckId: { in: topicDeckIds } } : {}),
         ...(deckId ? { deckId } : {}),
         ...(stateFilter ? { state: stateFilter } : {}),

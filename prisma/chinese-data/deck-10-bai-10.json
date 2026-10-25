@@ -1,0 +1,149 @@
+{
+  "deck": {
+    "name": "Bài 10: 他住哪儿 (Ông ấy sống ở đâu)",
+    "description": "Từ vựng Bài 10 — Giáo trình Hán ngữ 1 (bản 3) Quyển thượng",
+    "color": "#f43f5e",
+    "icon": "🏠"
+  },
+  "cards": [
+    {
+      "word": "办公室",
+      "phonetic": "bàngōngshì",
+      "meaning": "văn phòng",
+      "sinoVietnamese": "biện công thất",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "办公",
+      "phonetic": "bàn gōng",
+      "meaning": "làm việc (tại cơ quan)",
+      "sinoVietnamese": "biện công",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "找",
+      "phonetic": "zhǎo",
+      "meaning": "tìm, kiếm",
+      "sinoVietnamese": "trảo",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "在",
+      "phonetic": "zài",
+      "meaning": "ở, có mặt ở",
+      "sinoVietnamese": "tại",
+      "partOfSpeech": "động từ, giới từ"
+    },
+    {
+      "word": "家",
+      "phonetic": "jiā",
+      "meaning": "nhà; lượng từ cho gia đình, công ty, cửa hàng",
+      "sinoVietnamese": "gia",
+      "partOfSpeech": "danh từ, lượng từ"
+    },
+    {
+      "word": "呢",
+      "phonetic": "ne",
+      "meaning": "trợ từ (hành động/tình huống đang tiếp diễn)",
+      "sinoVietnamese": "ni",
+      "partOfSpeech": "trợ từ"
+    },
+    {
+      "word": "住",
+      "phonetic": "zhù",
+      "meaning": "sống, cư trú",
+      "sinoVietnamese": "trú",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "号",
+      "phonetic": "hào",
+      "meaning": "số",
+      "sinoVietnamese": "hiệu",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "楼",
+      "phonetic": "lóu",
+      "meaning": "tòa nhà, nhà lầu",
+      "sinoVietnamese": "lâu",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "门",
+      "phonetic": "mén",
+      "meaning": "cửa, cổng",
+      "sinoVietnamese": "môn",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "零(0)",
+      "phonetic": "líng",
+      "meaning": "số không",
+      "sinoVietnamese": "linh",
+      "partOfSpeech": "số từ"
+    },
+    {
+      "word": "房间",
+      "phonetic": "fángjiān",
+      "meaning": "phòng",
+      "sinoVietnamese": "phòng gian",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "知道",
+      "phonetic": "zhīdào",
+      "meaning": "biết",
+      "sinoVietnamese": "tri đạo",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "电话",
+      "phonetic": "diànhuà",
+      "meaning": "điện thoại",
+      "sinoVietnamese": "điện thoại",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "电",
+      "phonetic": "diàn",
+      "meaning": "điện",
+      "sinoVietnamese": "điện",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "话",
+      "phonetic": "huà",
+      "meaning": "lời nói",
+      "sinoVietnamese": "thoại",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "号码",
+      "phonetic": "hàomǎ",
+      "meaning": "số, mã số",
+      "sinoVietnamese": "hiệu mã",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "手机",
+      "phonetic": "shǒujī",
+      "meaning": "điện thoại di động",
+      "sinoVietnamese": "thủ cơ",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "手",
+      "phonetic": "shǒu",
+      "meaning": "tay",
+      "sinoVietnamese": "thủ",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "李昌浩",
+      "phonetic": "Lǐ Chānghào",
+      "meaning": "Lee Changho (tên người Hàn Quốc)",
+      "sinoVietnamese": "Lý Xương Hạo"
+    }
+  ]
+}

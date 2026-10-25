@@ -45,6 +45,7 @@ pnpm import:vocab     # Import bộ từ vựng
 pnpm stories:load     # Kiểm tra (--check) & nạp truyện chêm từ prisma/story-data/*.json
 pnpm examples:load    # Kiểm tra (--check) & nạp câu ví dụ viết tay từ prisma/example-data/*.json
 pnpm practice:load    # Kiểm tra (--check) & nạp bộ câu luyện viết vào bảng PracticeSentence
+pnpm chinese:load     # Kiểm tra (--check) & nạp deck tiếng Trung từ prisma/chinese-data/*.json
 pnpm data:export      # Xuất toàn bộ data ra file
 pnpm data:load        # Nạp lại data từ file
 pnpm sync:card-order  # Đồng bộ thứ tự thẻ
@@ -56,7 +57,11 @@ pnpm sync:card-order  # Đồng bộ thứ tự thẻ
 >
 > **Bộ câu luyện viết** (`PracticeSentence`): nhiều câu/từ cho dạng quiz "Luyện viết câu" (`sentence-practice`, dạng TUỲ CHỌN nên không ảnh hưởng điều kiện mở khoá deck). Mỗi câu chứa từ của thẻ VÀ ít nhất 1 từ đã học ở BẤT KỲ Unit cũ hơn nào. Nguồn viết tay ở `prisma/practice-data/unit-NN.json`, nạp bằng `pnpm practice:load` (validate bằng `lib/sentence-review.ts`, không đạt thì KHÔNG ghi DB). Viết thêm câu = thêm file JSON rồi chạy `pnpm practice:load --check` để validate. Mỗi thẻ hiện có ĐÚNG 5 câu (720 thẻ / 3600 câu) và cả 5 hiện trong hộp thoại chi tiết từ (`components/deck/card-examples.tsx`). Logic thuần ở `lib/practice-sentence.ts`, API `/api/practice-sentences?deckId=` (cả deck) hoặc `?cardId=` (một thẻ).
 >
-> **Truyện chêm**: `scripts/seed-stories.ts` giữ 1 truyện gốc/deck; các truyện bổ sung (5 truyện/deck, mỗi truyện chứa ĐỦ từ của deck) nằm ở `prisma/story-data/unit-NN.json` và nạp bằng `pnpm stories:load`. Độ phủ từ kiểm tra bằng `lib/story-coverage.ts` (`checkStoryCoverage`).
+> **Tiếng Trung** (`/chinese`): module riêng, tách khỏi luồng tiếng Anh bằng `Deck.language` (`"en"` mặc định | `"zh"`). Deck tiếng Trung KHÔNG dùng SRS, KHÔNG tính vào chuỗi khoá Unit (`lib/deck-progress.ts` chỉ xét deck `en`) và không xuất hiện ở `/decks`, Tất cả từ, Yêu thích, Tra từ, Truyện chêm, Thống kê — các truy vấn tổng hợp lọc bằng `ENGLISH_DECK_FILTER` / `ENGLISH_DECK_RELATION_FILTER` (`lib/chinese.ts`). Ngoại lệ: Thùng rác dùng chung cho cả hai ngôn ngữ.
+>
+> Map dữ liệu vào `Card`: `word` = Hán tự, `phonetic` = pinyin, `meaning` = nghĩa Việt, `partOfSpeech` = loại từ tiếng Việt ("đại từ", "số từ"…), thêm `sinoVietnamese` (âm Hán Việt), `hanziFormal` (大写), `strokeCount`, `radical`, `examplePinyin`. Trang: `/chinese` (danh sách deck) → `/chinese/[deckId]` (bảng từ + thêm/sửa/xoá thẻ) → `.../flashcards`, `.../quiz`. Nguồn viết tay ở `prisma/chinese-data/deck-NN-*.json`, nạp bằng `pnpm chinese:load` (validate bằng `lib/chinese-deck-file.ts`, không đạt thì KHÔNG ghi DB; file JSON là nguồn sự thật nên chạy lại sẽ khôi phục thẻ đã xoá mềm). Logic thuần (sinh câu hỏi quiz, tóm tắt nét/bộ) ở `lib/chinese.ts`.
+>
+> **Truyện chêm**: Unit 1–15 mỗi deck CHỈ 1 truyện (chép từ site docusaurus `english-vocab/chuyen-chem.md`), nguồn duy nhất là `prisma/story-data/unit-01..15.json` có `"exclusive": true` — `pnpm stories:load` ghi đè truyện trùng tiêu đề và XOÁ truyện khác của deck. Unit 16+: `scripts/seed-stories.ts` giữ 1 truyện gốc/deck; các truyện bổ sung (5 truyện/deck, mỗi truyện chứa ĐỦ từ của deck) nằm ở `prisma/story-data/unit-NN.json` và nạp bằng `pnpm stories:load`. Độ phủ từ kiểm tra bằng `lib/story-coverage.ts` (`checkStoryCoverage`).
 
 ## Single-user mode
 
@@ -89,6 +94,7 @@ Luồng **nội dung tĩnh** (KHÔNG dùng DB) — pattern quan trọng, nhiều
 ## Folder Structure
 
 ```
+app/(dashboard)/chinese/  # Deck China: danh sách deck, chi tiết deck, lật thẻ (trang trắc nghiệm có nhưng đang ẩn nút)
 app/(dashboard)/    # Mọi trang (dashboard, decks, study, quiz, flashcards, pronounce,
                     # story-fill, stories, stats, grammar, ielts, word-formation, word-roots,
                     # confusing-words, mistakes, favorites, history, search, trash, settings)
@@ -103,6 +109,7 @@ lib/                # srs.ts, db.ts (Prisma singleton), api-client.ts, schemas.t
                     # tts.ts, dictionary.ts, story-parser.ts, achievements.ts + dữ liệu tĩnh (trên)
 prisma/schema.prisma
 prisma/story-data/  # Truyện chêm bổ sung theo deck (JSON) — nạp bằng pnpm stories:load
+prisma/chinese-data/# Deck tiếng Trung (JSON) — nạp bằng pnpm chinese:load
 scripts/            # Script tsx cho seed / import / gen bằng AI / export-load
 ```
 
@@ -110,10 +117,10 @@ scripts/            # Script tsx cho seed / import / gen bằng AI / export-load
 
 Xem `vocab-app-spec.md` section 2. Tóm tắt models:
 
-- `Deck` — danh mục từ (`learned`, `locked`, `exercisesDone` → khoá/mở deck & cổng bài tập)
+- `Deck` — danh mục từ (`learned`, `locked`, `exercisesDone` → khoá/mở deck & cổng bài tập); `language` = `"en"` | `"zh"`
 - `DeckActivity` — nhật ký hoạt động trong deck
 - `ExerciseAttempt` — lượt làm từng dạng bài tập của deck (gate cho "đánh dấu học xong")
-- `Card` — từng từ (SRS fields: easeFactor, interval, repetitions, nextReviewDate, state, lapses)
+- `Card` — từng từ (SRS fields: easeFactor, interval, repetitions, nextReviewDate, state, lapses); thẻ tiếng Trung dùng thêm `sinoVietnamese`, `hanziFormal`, `strokeCount`, `radical`, `examplePinyin`
 - `CardState` enum: `NEW | LEARNING | REVIEW | MATURE | SUSPENDED`
 - `ReviewLog` — lịch sử ôn
 - `DailyStat` — thống kê ngày

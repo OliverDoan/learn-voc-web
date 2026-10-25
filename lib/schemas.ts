@@ -1,18 +1,26 @@
 import { z } from "zod";
 
-export const deckCreateSchema = z.object({
+// Các trường của deck, KHÔNG kèm `.default()`. Dùng làm gốc cho schema update:
+// `.partial()` chỉ làm trường thành optional chứ không gỡ default, nên nếu update
+// kế thừa default thì mọi PATCH sẽ âm thầm ghi đè `color`/`language` về giá trị mặc định.
+const deckFieldsSchema = z.object({
   name: z.string().trim().min(1, "Tên không được trống").max(80),
   description: z.string().trim().max(300).optional().nullable(),
-  color: z
-    .string()
-    .regex(/^#[0-9a-fA-F]{6}$/, "Màu phải dạng hex #RRGGBB")
-    .default("#3b82f6"),
+  color: z.string().regex(/^#[0-9a-fA-F]{6}$/, "Màu phải dạng hex #RRGGBB"),
   icon: z.string().max(8).optional().nullable(),
+  // Ngôn ngữ deck — "zh" tách sang module tiếng Trung ở /chinese
+  language: z.enum(["en", "zh"]),
   // JSON cột tùy chỉnh dạng bảng — lưu dạng chuỗi, parse khi đọc
   customColumns: z.string().max(200_000).optional(),
 });
 
-export const deckUpdateSchema = deckCreateSchema.partial();
+export const deckCreateSchema = deckFieldsSchema.extend({
+  color: deckFieldsSchema.shape.color.default("#3b82f6"),
+  language: deckFieldsSchema.shape.language.default("en"),
+});
+
+// Chỉ cập nhật đúng những trường client gửi lên.
+export const deckUpdateSchema = deckFieldsSchema.partial();
 
 export type DeckCreateInput = z.infer<typeof deckCreateSchema>;
 export type DeckUpdateInput = z.infer<typeof deckUpdateSchema>;
@@ -49,6 +57,7 @@ export const cardCreateSchema = z.object({
   rootWordMeaning: z.string().trim().max(200).optional().nullable(),
   phonetic: z.string().trim().max(80).optional().nullable(),
   example: z.string().trim().max(500).optional().nullable(),
+  examplePinyin: z.string().trim().max(500).optional().nullable(),
   exampleTranslation: z.string().trim().max(500).optional().nullable(),
   note: z.string().trim().max(1000).optional().nullable(),
   imageUrl: z.string().url().optional().nullable().or(z.literal("")),
@@ -60,6 +69,11 @@ export const cardCreateSchema = z.object({
   antonyms: z.array(z.string().trim().min(1).max(60)).max(20).default([]),
   dialect: z.enum(["british", "american"]).optional().nullable(),
   variantWord: z.string().trim().max(120).optional().nullable(),
+  // Thẻ tiếng Trung: âm Hán Việt, chữ đại tả (大写), số nét, bộ thủ
+  sinoVietnamese: z.string().trim().max(60).optional().nullable(),
+  hanziFormal: z.string().trim().max(20).optional().nullable(),
+  strokeCount: z.number().int().min(1).max(64).optional().nullable(),
+  radical: z.string().trim().max(10).optional().nullable(),
 });
 
 export const cardUpdateSchema = cardCreateSchema
@@ -93,14 +107,20 @@ export const cardImportItemSchema = z.object({
 
 export const cardImportSchema = z.object({
   deckId: z.string().min(1),
-  cards: z.array(cardImportItemSchema).min(1, "Không có từ nào để import").max(1000),
+  cards: z
+    .array(cardImportItemSchema)
+    .min(1, "Không có từ nào để import")
+    .max(1000),
 });
 
 // Nạp nguyên deck mới (deck metadata + cards). Tính năng "Import deck" trên UI
 // đã bỏ; schema này giờ chỉ còn dùng cho script seed CLI `pnpm add:deck`.
 export const deckImportSchema = z.object({
   deck: deckCreateSchema,
-  cards: z.array(cardImportItemSchema).min(1, "Không có từ nào để import").max(1000),
+  cards: z
+    .array(cardImportItemSchema)
+    .min(1, "Không có từ nào để import")
+    .max(1000),
 });
 
 export type CardImportItemInput = z.infer<typeof cardImportItemSchema>;
@@ -113,7 +133,10 @@ export type CardUpdateInput = z.infer<typeof cardUpdateSchema>;
 // Thao tác trên thùng rác: khôi phục hoặc xoá vĩnh viễn
 export const trashActionSchema = z.object({
   action: z.enum(["restore", "purge"]),
-  ids: z.array(z.string().min(1)).min(1, "Không có thẻ nào được chọn").max(1000),
+  ids: z
+    .array(z.string().min(1))
+    .min(1, "Không có thẻ nào được chọn")
+    .max(1000),
 });
 
 export type TrashActionInput = z.infer<typeof trashActionSchema>;
@@ -121,7 +144,12 @@ export type TrashActionInput = z.infer<typeof trashActionSchema>;
 export const reviewSchema = z.object({
   cardId: z.string().min(1),
   rating: z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4)]),
-  timeTakenMs: z.number().int().nonnegative().max(60 * 60 * 1000).default(0),
+  timeTakenMs: z
+    .number()
+    .int()
+    .nonnegative()
+    .max(60 * 60 * 1000)
+    .default(0),
 });
 
 export type ReviewInput = z.infer<typeof reviewSchema>;
@@ -144,12 +172,20 @@ export const storyCreateSchema = z.object({
   deckId: z.string().min(1),
   title: z.string().trim().min(1).max(120),
   content: z.string().trim().min(1).max(5000),
-  contentEn: z.string().trim().max(5000).optional().nullable().or(z.literal("")),
+  contentEn: z
+    .string()
+    .trim()
+    .max(5000)
+    .optional()
+    .nullable()
+    .or(z.literal("")),
   imageUrl: storyImageSchema,
   audioUrl: z.string().url().optional().nullable().or(z.literal("")),
 });
 
-export const storyUpdateSchema = storyCreateSchema.partial().omit({ deckId: true });
+export const storyUpdateSchema = storyCreateSchema
+  .partial()
+  .omit({ deckId: true });
 
 export type StoryCreateInput = z.infer<typeof storyCreateSchema>;
 export type StoryUpdateInput = z.infer<typeof storyUpdateSchema>;
@@ -161,8 +197,18 @@ const AVATAR_MAX_LENGTH = 2_000_000;
 export const progressUpdateSchema = z.object({
   dailyGoal: z.number().int().min(1).max(200).optional(),
   freezeTokens: z.number().int().min(0).max(10).optional(),
-  displayName: z.string().trim().max(50, "Tên tối đa 50 ký tự").nullable().optional(),
-  bio: z.string().trim().max(280, "Giới thiệu tối đa 280 ký tự").nullable().optional(),
+  displayName: z
+    .string()
+    .trim()
+    .max(50, "Tên tối đa 50 ký tự")
+    .nullable()
+    .optional(),
+  bio: z
+    .string()
+    .trim()
+    .max(280, "Giới thiệu tối đa 280 ký tự")
+    .nullable()
+    .optional(),
   avatarUrl: z
     .string()
     .max(AVATAR_MAX_LENGTH, "Ảnh quá lớn")
@@ -179,7 +225,14 @@ export const progressUpdateSchema = z.object({
 export type ProgressUpdateInput = z.infer<typeof progressUpdateSchema>;
 
 export const bulkCardsSchema = z.object({
-  action: z.enum(["delete", "move", "suspend", "unsuspend", "tag", "unfavorite"]),
+  action: z.enum([
+    "delete",
+    "move",
+    "suspend",
+    "unsuspend",
+    "tag",
+    "unfavorite",
+  ]),
   ids: z.array(z.string().min(1)).min(1, "Phải chọn ít nhất 1 từ").max(500),
   targetDeckId: z.string().min(1).optional(),
   tags: z.array(z.string().trim().min(1).max(30)).max(10).optional(),

@@ -1,5 +1,6 @@
 import { NextRequest } from "next/server";
 import { prisma } from "@/lib/db";
+import { ENGLISH_DECK_FILTER } from "@/lib/chinese";
 import { handleError, ok } from "@/lib/api-helpers";
 
 const DAY_MS = 1000 * 60 * 60 * 24;
@@ -27,14 +28,20 @@ export async function GET(req: NextRequest) {
         where: { date: { gte: start, lte: new Date(end.getTime() + DAY_MS - 1) } },
         orderBy: { date: "asc" },
       }),
-      prisma.card.count({ where: { deletedAt: null, deck: { deletedAt: null } } }),
+      prisma.card.count({
+        where: { deletedAt: null, deck: { deletedAt: null, ...ENGLISH_DECK_FILTER } },
+      }),
       prisma.card.groupBy({
         by: ["state"],
-        where: { deletedAt: null, deck: { is: { deletedAt: null } } },
+        where: { deletedAt: null, deck: { is: { deletedAt: null, ...ENGLISH_DECK_FILTER } } },
         _count: { _all: true },
       }),
       prisma.card.findMany({
-        where: { lapses: { gt: 0 }, deletedAt: null, deck: { deletedAt: null } },
+        where: {
+          lapses: { gt: 0 },
+          deletedAt: null,
+          deck: { deletedAt: null, ...ENGLISH_DECK_FILTER },
+        },
         orderBy: [{ lapses: "desc" }, { updatedAt: "desc" }],
         take: 10,
         select: { id: true, word: true, meaning: true, lapses: true, state: true, deckId: true },

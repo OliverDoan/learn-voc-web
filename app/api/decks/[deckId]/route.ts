@@ -2,6 +2,7 @@ import { NextRequest } from "next/server";
 import { prisma } from "@/lib/db";
 import { fail, handleError, ok } from "@/lib/api-helpers";
 import { computeDeckLockStatus, isUnlockAllDecksEnabled } from "@/lib/deck-progress";
+import { ENGLISH_DECK_FILTER, isChineseDeck } from "@/lib/chinese";
 import { buildExerciseStatus } from "@/lib/deck-activities";
 import { countWordTokens } from "@/lib/story-parser";
 import { deckUpdateSchema } from "@/lib/schemas";
@@ -22,12 +23,15 @@ export async function GET(_req: NextRequest, { params }: RouteParams) {
     // Tính trạng thái khóa/mở dựa trên toàn bộ chuỗi Unit.
     const [allDecks, unlockAll] = await Promise.all([
       prisma.deck.findMany({
-        where: { deletedAt: null },
+        where: { deletedAt: null, ...ENGLISH_DECK_FILTER },
         select: { id: true, name: true, learnedAt: true },
       }),
       isUnlockAllDecksEnabled(),
     ]);
-    const status = computeDeckLockStatus(allDecks, { unlockAll }).get(deckId) ?? {
+    // Deck tiếng Trung nằm ngoài chuỗi Unit → không bao giờ bị khóa.
+    const status = computeDeckLockStatus(allDecks, {
+      unlockAll: unlockAll || isChineseDeck(deck),
+    }).get(deckId) ?? {
       learned: deck.learnedAt != null,
       locked: false,
     };

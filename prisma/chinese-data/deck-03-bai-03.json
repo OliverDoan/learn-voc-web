@@ -1,0 +1,177 @@
+{
+  "deck": {
+    "name": "Bài 3: 明天见 (Ngày mai gặp lại)",
+    "description": "Từ vựng Bài 3 — Giáo trình Hán ngữ 1 (bản 3) Quyển thượng",
+    "color": "#eab308",
+    "icon": "👋"
+  },
+  "cards": [
+    {
+      "word": "学",
+      "phonetic": "xué",
+      "meaning": "học",
+      "sinoVietnamese": "học",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "英语",
+      "phonetic": "Yīngyǔ",
+      "meaning": "tiếng Anh",
+      "sinoVietnamese": "Anh ngữ",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "阿拉伯语",
+      "phonetic": "Ālābóyǔ",
+      "meaning": "tiếng Ả Rập",
+      "sinoVietnamese": "A Lạp Bá ngữ",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "德语",
+      "phonetic": "Déyǔ",
+      "meaning": "tiếng Đức",
+      "sinoVietnamese": "Đức ngữ",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "俄语",
+      "phonetic": "Éyǔ",
+      "meaning": "tiếng Nga",
+      "sinoVietnamese": "Nga ngữ",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "法语",
+      "phonetic": "Fǎyǔ",
+      "meaning": "tiếng Pháp",
+      "sinoVietnamese": "Pháp ngữ",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "韩国语",
+      "phonetic": "Hánguóyǔ",
+      "meaning": "tiếng Hàn Quốc",
+      "sinoVietnamese": "Hàn Quốc ngữ",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "日语",
+      "phonetic": "Rìyǔ",
+      "meaning": "tiếng Nhật",
+      "sinoVietnamese": "Nhật ngữ",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "西班牙语",
+      "phonetic": "Xībānyáyǔ",
+      "meaning": "tiếng Tây Ban Nha",
+      "sinoVietnamese": "Tây Ban Nha ngữ",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "去",
+      "phonetic": "qù",
+      "meaning": "đi, đến",
+      "sinoVietnamese": "khứ",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "对",
+      "phonetic": "duì",
+      "meaning": "đúng, được, chắc rồi",
+      "sinoVietnamese": "đối",
+      "partOfSpeech": "tính từ"
+    },
+    {
+      "word": "邮局",
+      "phonetic": "yóujú",
+      "meaning": "bưu điện",
+      "sinoVietnamese": "bưu cục",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "寄",
+      "phonetic": "jì",
+      "meaning": "gửi",
+      "sinoVietnamese": "ký",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "信",
+      "phonetic": "xìn",
+      "meaning": "thư",
+      "sinoVietnamese": "tín",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "银行",
+      "phonetic": "yínháng",
+      "meaning": "ngân hàng",
+      "sinoVietnamese": "ngân hàng",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "取",
+      "phonetic": "qǔ",
+      "meaning": "rút, cử, nhấc",
+      "sinoVietnamese": "thủ",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "钱",
+      "phonetic": "qián",
+      "meaning": "tiền",
+      "sinoVietnamese": "tiền",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "明天",
+      "phonetic": "míngtiān",
+      "meaning": "ngày mai",
+      "sinoVietnamese": "minh thiên",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "天",
+      "phonetic": "tiān",
+      "meaning": "ngày",
+      "sinoVietnamese": "thiên",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "见",
+      "phonetic": "jiàn",
+      "meaning": "gặp, thấy",
+      "sinoVietnamese": "kiến",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "六",
+      "phonetic": "liù",
+      "meaning": "sáu",
+      "sinoVietnamese": "lục",
+      "partOfSpeech": "số từ"
+    },
+    {
+      "word": "七",
+      "phonetic": "qī",
+      "meaning": "bảy",
+      "sinoVietnamese": "thất",
+      "partOfSpeech": "số từ"
+    },
+    {
+      "word": "九",
+      "phonetic": "jiǔ",
+      "meaning": "chín",
+      "sinoVietnamese": "cửu",
+      "partOfSpeech": "số từ"
+    },
+    {
+      "word": "北京",
+      "phonetic": "Běijīng",
+      "meaning": "Bắc Kinh, thủ đô Trung Quốc",
+      "sinoVietnamese": "Bắc Kinh"
+    }
+  ]
+}

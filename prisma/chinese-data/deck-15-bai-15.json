@@ -1,0 +1,136 @@
+{
+  "deck": {
+    "name": "Bài 15: 你家有几口人 (Nhà bạn có mấy người)",
+    "description": "Từ vựng Bài 15 — Giáo trình Hán ngữ 1 (bản 3) Quyển thượng",
+    "color": "#10b981",
+    "icon": "👨‍👩‍👧"
+  },
+  "cards": [
+    {
+      "word": "全",
+      "phonetic": "quán",
+      "meaning": "toàn bộ, tất cả, hoàn toàn",
+      "sinoVietnamese": "toàn",
+      "partOfSpeech": "tính từ, phó từ"
+    },
+    {
+      "word": "照片",
+      "phonetic": "zhàopiàn",
+      "meaning": "ảnh",
+      "sinoVietnamese": "chiếu phiến",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "张",
+      "phonetic": "zhāng",
+      "meaning": "bức, tấm (lượng từ cho giấy, tranh ảnh)",
+      "sinoVietnamese": "trương",
+      "partOfSpeech": "lượng từ"
+    },
+    {
+      "word": "看",
+      "phonetic": "kàn",
+      "meaning": "nhìn, xem",
+      "sinoVietnamese": "khán",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "姐姐",
+      "phonetic": "jiějie",
+      "meaning": "chị gái",
+      "sinoVietnamese": "tỉ tỉ",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "只",
+      "phonetic": "zhǐ",
+      "meaning": "chỉ",
+      "sinoVietnamese": "chỉ",
+      "partOfSpeech": "phó từ"
+    },
+    {
+      "word": "做",
+      "phonetic": "zuò",
+      "meaning": "làm",
+      "sinoVietnamese": "tác",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "大夫",
+      "phonetic": "dàifu",
+      "meaning": "bác sĩ",
+      "sinoVietnamese": "đại phu",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "医院",
+      "phonetic": "yīyuàn",
+      "meaning": "bệnh viện",
+      "sinoVietnamese": "y viện",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "公司",
+      "phonetic": "gōngsī",
+      "meaning": "công ty",
+      "sinoVietnamese": "công ty",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "商店",
+      "phonetic": "shāngdiàn",
+      "meaning": "cửa hàng",
+      "sinoVietnamese": "thương điếm",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "律师",
+      "phonetic": "lǜshī",
+      "meaning": "luật sư",
+      "sinoVietnamese": "luật sư",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "外贸",
+      "phonetic": "wàimào",
+      "meaning": "ngoại thương",
+      "sinoVietnamese": "ngoại mậu",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "小",
+      "phonetic": "xiǎo",
+      "meaning": "nhỏ, bé",
+      "sinoVietnamese": "tiểu",
+      "partOfSpeech": "tính từ"
+    },
+    {
+      "word": "员工",
+      "phonetic": "yuángōng",
+      "meaning": "nhân viên",
+      "sinoVietnamese": "viên công",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "大概",
+      "phonetic": "dàgài",
+      "meaning": "khoảng",
+      "sinoVietnamese": "đại khái",
+      "partOfSpeech": "phó từ"
+    },
+    {
+      "word": "多",
+      "phonetic": "duō",
+      "meaning": "hơn, nhiều (sau số từ)",
+      "sinoVietnamese": "đa",
+      "partOfSpeech": "số từ"
+    },
+    {
+      "word": "外国",
+      "phonetic": "wàiguó",
+      "meaning": "nước ngoài",
+      "sinoVietnamese": "ngoại quốc",
+      "partOfSpeech": "danh từ"
+    }
+  ]
+}

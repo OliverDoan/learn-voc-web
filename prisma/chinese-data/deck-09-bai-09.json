@@ -1,0 +1,143 @@
+{
+  "deck": {
+    "name": "Bài 9: 我换人民币 (Tôi đổi tiền Nhân dân tệ)",
+    "description": "Từ vựng Bài 9 — Giáo trình Hán ngữ 1 (bản 3) Quyển thượng",
+    "color": "#ec4899",
+    "icon": "💴"
+  },
+  "cards": [
+    {
+      "word": "下午",
+      "phonetic": "xiàwǔ",
+      "meaning": "buổi chiều",
+      "sinoVietnamese": "hạ ngọ",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "上午",
+      "phonetic": "shàngwǔ",
+      "meaning": "buổi sáng",
+      "sinoVietnamese": "thượng ngọ",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "图书馆",
+      "phonetic": "túshūguǎn",
+      "meaning": "thư viện",
+      "sinoVietnamese": "đồ thư quán",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "换",
+      "phonetic": "huàn",
+      "meaning": "đổi, thay",
+      "sinoVietnamese": "hoán",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "小姐",
+      "phonetic": "xiǎojiě",
+      "meaning": "cô (gái)",
+      "sinoVietnamese": "tiểu thư",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "营业员",
+      "phonetic": "yíngyèyuán",
+      "meaning": "nhân viên giao dịch / cửa hàng",
+      "sinoVietnamese": "doanh nghiệp viên",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "人民币",
+      "phonetic": "rénmínbì",
+      "meaning": "đồng Nhân dân tệ",
+      "sinoVietnamese": "nhân dân tệ",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "百",
+      "phonetic": "bǎi",
+      "meaning": "trăm",
+      "sinoVietnamese": "bách",
+      "partOfSpeech": "số từ"
+    },
+    {
+      "word": "千",
+      "phonetic": "qiān",
+      "meaning": "nghìn",
+      "sinoVietnamese": "thiên",
+      "partOfSpeech": "số từ"
+    },
+    {
+      "word": "万",
+      "phonetic": "wàn",
+      "meaning": "mười nghìn, vạn",
+      "sinoVietnamese": "vạn",
+      "partOfSpeech": "số từ"
+    },
+    {
+      "word": "美元",
+      "phonetic": "měiyuán",
+      "meaning": "đô la Mỹ",
+      "sinoVietnamese": "Mỹ nguyên",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "港币",
+      "phonetic": "gǎngbì",
+      "meaning": "đô la Hồng Kông",
+      "sinoVietnamese": "Cảng tệ",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "日元",
+      "phonetic": "rìyuán",
+      "meaning": "đồng Yên Nhật",
+      "sinoVietnamese": "Nhật nguyên",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "韩元",
+      "phonetic": "hányuán",
+      "meaning": "đồng Won Hàn",
+      "sinoVietnamese": "Hàn nguyên",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "欧元",
+      "phonetic": "ōuyuán",
+      "meaning": "đồng Euro",
+      "sinoVietnamese": "Âu nguyên",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "等",
+      "phonetic": "děng",
+      "meaning": "đợi, chờ",
+      "sinoVietnamese": "đẳng",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "一会儿",
+      "phonetic": "yíhuìr",
+      "meaning": "một lúc, một lát",
+      "sinoVietnamese": "nhất hội nhi",
+      "partOfSpeech": "số lượng từ"
+    },
+    {
+      "word": "先生",
+      "phonetic": "xiānsheng",
+      "meaning": "ông, ngài",
+      "sinoVietnamese": "tiên sinh",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "数",
+      "phonetic": "shǔ",
+      "meaning": "đếm",
+      "sinoVietnamese": "số",
+      "partOfSpeech": "động từ"
+    }
+  ]
+}

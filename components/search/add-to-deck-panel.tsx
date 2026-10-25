@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { SelectMenu, type SelectOption } from "@/components/ui/select-menu";
 import { useCreateDeck, useDecks } from "@/hooks/use-decks";
+import { DEFAULT_DECK_LANGUAGE } from "@/lib/chinese";
 import { useCreateCard } from "@/hooks/use-cards";
 import type { DictionaryResult } from "@/lib/dictionary";
 
@@ -70,6 +71,7 @@ export function AddToDeckPanel({ result }: AddToDeckPanelProps) {
       const deck = await createDeck.mutateAsync({
         name,
         color: DEFAULT_DECK_COLOR,
+        language: DEFAULT_DECK_LANGUAGE,
       });
       setDeckId(deck.id); // tự chọn deck vừa tạo
       setCreatingDeck(false);

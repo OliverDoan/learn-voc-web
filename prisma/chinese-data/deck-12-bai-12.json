@@ -1,0 +1,141 @@
+{
+  "deck": {
+    "name": "Bài 12: 你在哪儿学习汉语 (Bạn học tiếng Hán ở đâu)",
+    "description": "Từ vựng Bài 12 — Giáo trình Hán ngữ 1 (bản 3) Quyển thượng",
+    "color": "#84cc16",
+    "icon": "🏫"
+  },
+  "cards": [
+    {
+      "word": "语言",
+      "phonetic": "yǔyán",
+      "meaning": "ngôn ngữ",
+      "sinoVietnamese": "ngữ ngôn",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "大学",
+      "phonetic": "dàxué",
+      "meaning": "đại học",
+      "sinoVietnamese": "đại học",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "怎么样",
+      "phonetic": "zěnmeyàng",
+      "meaning": "như thế nào",
+      "sinoVietnamese": "chẩm ma dạng",
+      "partOfSpeech": "đại từ"
+    },
+    {
+      "word": "觉得",
+      "phonetic": "juéde",
+      "meaning": "cảm thấy, cho rằng",
+      "sinoVietnamese": "giác đắc",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "语法",
+      "phonetic": "yǔfǎ",
+      "meaning": "ngữ pháp",
+      "sinoVietnamese": "ngữ pháp",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "听",
+      "phonetic": "tīng",
+      "meaning": "nghe",
+      "sinoVietnamese": "thính",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "说",
+      "phonetic": "shuō",
+      "meaning": "nói, kể",
+      "sinoVietnamese": "thuyết",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "比较",
+      "phonetic": "bǐjiào",
+      "meaning": "tương đối; so sánh",
+      "sinoVietnamese": "tỉ giảo",
+      "partOfSpeech": "phó từ, động từ"
+    },
+    {
+      "word": "容易",
+      "phonetic": "róngyì",
+      "meaning": "dễ, dễ dàng",
+      "sinoVietnamese": "dung dị",
+      "partOfSpeech": "tính từ"
+    },
+    {
+      "word": "但是",
+      "phonetic": "dànshì",
+      "meaning": "nhưng",
+      "sinoVietnamese": "đãn thị",
+      "partOfSpeech": "liên từ"
+    },
+    {
+      "word": "读",
+      "phonetic": "dú",
+      "meaning": "đọc",
+      "sinoVietnamese": "độc",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "写",
+      "phonetic": "xiě",
+      "meaning": "viết",
+      "sinoVietnamese": "tả",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "给",
+      "phonetic": "gěi",
+      "meaning": "tới, cho",
+      "sinoVietnamese": "cấp",
+      "partOfSpeech": "giới từ"
+    },
+    {
+      "word": "新",
+      "phonetic": "xīn",
+      "meaning": "mới",
+      "sinoVietnamese": "tân",
+      "partOfSpeech": "tính từ"
+    },
+    {
+      "word": "同学",
+      "phonetic": "tóngxué",
+      "meaning": "bạn học, bạn cùng lớp",
+      "sinoVietnamese": "đồng học",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "同屋",
+      "phonetic": "tóngwū",
+      "meaning": "bạn cùng phòng",
+      "sinoVietnamese": "đồng ốc",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "班",
+      "phonetic": "bān",
+      "meaning": "lớp",
+      "sinoVietnamese": "ban",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "北京语言大学",
+      "phonetic": "Běijīng Yǔyán Dàxué",
+      "meaning": "Trường Đại học Ngôn ngữ Bắc Kinh",
+      "sinoVietnamese": "Bắc Kinh Ngữ ngôn Đại học"
+    },
+    {
+      "word": "林",
+      "phonetic": "Lín",
+      "meaning": "họ Lâm",
+      "sinoVietnamese": "Lâm"
+    }
+  ]
+}

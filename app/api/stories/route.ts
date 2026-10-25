@@ -4,6 +4,7 @@ import { fail, handleError, ok } from "@/lib/api-helpers";
 import { storyCreateSchema } from "@/lib/schemas";
 import { extractWords } from "@/lib/story-parser";
 import { getLockedDeckIds } from "@/lib/deck-progress";
+import { ENGLISH_DECK_RELATION_FILTER } from "@/lib/chinese";
 
 export async function GET(req: NextRequest) {
   try {
@@ -11,7 +12,9 @@ export async function GET(req: NextRequest) {
     // Truyện của Unit ĐANG KHÓA không được liệt kê (đọc truyện = lộ nội dung Unit).
     const lockedDeckIds = await getLockedDeckIds();
     if (deckId && lockedDeckIds.includes(deckId)) return ok([]);
-    const where = deckId ? { deckId } : { deckId: { notIn: lockedDeckIds } };
+    const where = deckId
+      ? { deckId }
+      : { deckId: { notIn: lockedDeckIds }, ...ENGLISH_DECK_RELATION_FILTER };
 
     // KHÔNG select `imageUrl` (ảnh base64 ~700KB/truyện): nếu nhồi cả ảnh vào danh
     // sách, payload phình lên hàng chục MB khiến API rất chậm. Ảnh phục vụ riêng qua

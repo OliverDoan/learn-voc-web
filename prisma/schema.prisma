@@ -15,6 +15,9 @@ model Deck {
   id          String   @id @default(cuid())
   name        String
   description String?
+  // Ngôn ngữ của deck: "en" (tiếng Anh, mặc định) | "zh" (tiếng Trung).
+  // Deck "zh" đi theo luồng riêng ở /chinese, không lẫn vào danh sách tiếng Anh.
+  language    String   @default("en")
   color       String   @default("#3b82f6")
   icon        String?
   // Cột tùy chỉnh dạng bảng (Excel-like): JSON [{id,name,values:{cardId:value}}]
@@ -31,6 +34,7 @@ model Deck {
   attempts    ExerciseAttempt[]
 
   @@index([deletedAt])
+  @@index([language])
 }
 
 // Theo dõi hoàn thành từng dạng bài tập của một deck (để biết "đã làm hết bài tập chưa").
@@ -86,6 +90,8 @@ model Card {
   rootWordMeaning    String?
   phonetic           String?
   example            String?
+  // Pinyin của câu ví dụ (chỉ dùng cho thẻ tiếng Trung)
+  examplePinyin      String?
   exampleTranslation String?
   note               String?
   imageUrl           String?
@@ -101,6 +107,16 @@ model Card {
   antonyms           String?
   // Đánh dấu từ yêu thích — bật/tắt bằng icon ngôi sao
   favorite           Boolean  @default(false)
+
+  // --- Thẻ tiếng Trung (deck language = "zh") ---
+  // Âm Hán Việt, vd 你 → "nhĩ", 好 → "hảo"
+  sinoVietnamese     String?
+  // Chữ số đại tả dùng trong tài chính, vd 一 → 壹
+  hanziFormal        String?
+  // Số nét viết của chữ
+  strokeCount        Int?
+  // Bộ thủ, vd 四 → 囗
+  radical            String?
 
   // Biến thể tiếng Anh của từ trong thẻ: "british" | "american" | null (dùng chung)
   dialect            String?

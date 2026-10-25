@@ -3,6 +3,7 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { apiDelete, apiFetch, apiPatch, apiPost } from "@/lib/api-client";
 import type { Deck, DeckWithCounts } from "@/lib/types";
+import { DEFAULT_DECK_LANGUAGE, type DeckLanguage } from "@/lib/chinese";
 import type {
   DeckCreateInput,
   DeckUpdateInput,
@@ -10,16 +11,23 @@ import type {
 } from "@/lib/schemas";
 
 export const DECKS_KEY = ["decks"] as const;
+
+/** Key danh sách deck theo ngôn ngữ — nằm dưới prefix DECKS_KEY nên mọi
+ *  `invalidateQueries({ queryKey: DECKS_KEY })` sẵn có vẫn làm mới cả hai. */
+export const decksKey = (language: DeckLanguage) =>
+  ["decks", { language }] as const;
 export const DECK_TRASH_KEY = ["decks", "trash"] as const;
 
 export interface TrashDeck extends Deck {
   _count: { cards: number; stories: number };
 }
 
-export function useDecks() {
+/** Danh sách deck theo ngôn ngữ (mặc định tiếng Anh). */
+export function useDecks(language: DeckLanguage = DEFAULT_DECK_LANGUAGE) {
   return useQuery({
-    queryKey: DECKS_KEY,
-    queryFn: () => apiFetch<DeckWithCounts[]>("/api/decks"),
+    queryKey: decksKey(language),
+    queryFn: () =>
+      apiFetch<DeckWithCounts[]>(`/api/decks?language=${language}`),
   });
 }
 
@@ -42,7 +50,8 @@ export function useCreateDeck() {
 export function useUpdateDeck(deckId: string) {
   const qc = useQueryClient();
   return useMutation({
-    mutationFn: (input: DeckUpdateInput) => apiPatch<Deck>(`/api/decks/${deckId}`, input),
+    mutationFn: (input: DeckUpdateInput) =>
+      apiPatch<Deck>(`/api/decks/${deckId}`, input),
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: DECKS_KEY });
       qc.invalidateQueries({ queryKey: ["decks", deckId] });
@@ -92,7 +101,8 @@ export function useRecordDeckActivity(deckId: string) {
 export function useDeleteDeck() {
   const qc = useQueryClient();
   return useMutation({
-    mutationFn: (deckId: string) => apiDelete<{ id: string }>(`/api/decks/${deckId}`),
+    mutationFn: (deckId: string) =>
+      apiDelete<{ id: string }>(`/api/decks/${deckId}`),
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: DECKS_KEY });
       qc.invalidateQueries({ queryKey: DECK_TRASH_KEY });

@@ -1,4 +1,5 @@
 import { prisma } from "./db";
+import { ENGLISH_DECK_FILTER } from "./chinese";
 import { DEFAULT_DAILY_GOAL, SINGLETON_PROGRESS_ID } from "./constants";
 import { computeDeckLockStatus, getDeckUnitNumber, isUnlockAllDecksEnabled } from "./deck-progress";
 import { topicUnitRange } from "./deck-topics";
@@ -131,7 +132,11 @@ export async function getGlobalReviewQueue(limit?: number): Promise<QueueCard[]>
   const dailyGoal = limit ?? progress?.dailyGoal ?? DEFAULT_DAILY_GOAL;
 
   // Ôn gộp chỉ lấy thẻ từ deck ĐÃ HỌC XONG (learnedAt != null).
-  const learnedDeckFilter = { deletedAt: null, learnedAt: { not: null } } as const;
+  const learnedDeckFilter = {
+    deletedAt: null,
+    learnedAt: { not: null },
+    ...ENGLISH_DECK_FILTER,
+  } as const;
 
   const reviewCards = await prisma.card.findMany({
     where: {

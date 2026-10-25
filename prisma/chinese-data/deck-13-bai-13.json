@@ -1,0 +1,199 @@
+{
+  "deck": {
+    "name": "Bài 13: 这是不是中药 (Đây có phải là thuốc Đông y không)",
+    "description": "Từ vựng Bài 13 — Giáo trình Hán ngữ 1 (bản 3) Quyển thượng",
+    "color": "#d946ef",
+    "icon": "💊"
+  },
+  "cards": [
+    {
+      "word": "没(有)",
+      "phonetic": "méi(yǒu)",
+      "meaning": "không có, chưa có",
+      "sinoVietnamese": "một (hữu)",
+      "partOfSpeech": "động từ, phó từ"
+    },
+    {
+      "word": "箱子",
+      "phonetic": "xiāngzi",
+      "meaning": "cái hòm, vali, rương",
+      "sinoVietnamese": "tương tử",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "有",
+      "phonetic": "yǒu",
+      "meaning": "có",
+      "sinoVietnamese": "hữu",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "这儿",
+      "phonetic": "zhèr",
+      "meaning": "đây, ở đây",
+      "sinoVietnamese": "giá nhi",
+      "partOfSpeech": "đại từ"
+    },
+    {
+      "word": "重",
+      "phonetic": "zhòng",
+      "meaning": "nặng",
+      "sinoVietnamese": "trọng",
+      "partOfSpeech": "tính từ"
+    },
+    {
+      "word": "黑",
+      "phonetic": "hēi",
+      "meaning": "đen",
+      "sinoVietnamese": "hắc",
+      "partOfSpeech": "tính từ"
+    },
+    {
+      "word": "红",
+      "phonetic": "hóng",
+      "meaning": "đỏ",
+      "sinoVietnamese": "hồng",
+      "partOfSpeech": "tính từ"
+    },
+    {
+      "word": "轻",
+      "phonetic": "qīng",
+      "meaning": "nhẹ",
+      "sinoVietnamese": "khinh",
+      "partOfSpeech": "tính từ"
+    },
+    {
+      "word": "旧",
+      "phonetic": "jiù",
+      "meaning": "cũ",
+      "sinoVietnamese": "cựu",
+      "partOfSpeech": "tính từ"
+    },
+    {
+      "word": "药",
+      "phonetic": "yào",
+      "meaning": "thuốc",
+      "sinoVietnamese": "dược",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "中药",
+      "phonetic": "zhōngyào",
+      "meaning": "thuốc bắc, thuốc Đông y",
+      "sinoVietnamese": "trung dược",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "西药",
+      "phonetic": "xīyào",
+      "meaning": "thuốc tây",
+      "sinoVietnamese": "tây dược",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "茶叶",
+      "phonetic": "cháyè",
+      "meaning": "lá chè",
+      "sinoVietnamese": "trà diệp",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "里",
+      "phonetic": "li",
+      "meaning": "trong, bên trong",
+      "sinoVietnamese": "lí",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "日用品",
+      "phonetic": "rìyòngpǐn",
+      "meaning": "đồ dùng hằng ngày",
+      "sinoVietnamese": "nhật dụng phẩm",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "件",
+      "phonetic": "jiàn",
+      "meaning": "cái, chiếc (lượng từ cho quần áo)",
+      "sinoVietnamese": "kiện",
+      "partOfSpeech": "lượng từ"
+    },
+    {
+      "word": "衣服",
+      "phonetic": "yīfu",
+      "meaning": "quần áo",
+      "sinoVietnamese": "y phục",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "把",
+      "phonetic": "bǎ",
+      "meaning": "chiếc, cái (lượng từ cho đồ có tay cầm: ô, ghế…)",
+      "sinoVietnamese": "bả",
+      "partOfSpeech": "lượng từ"
+    },
+    {
+      "word": "雨伞",
+      "phonetic": "yǔsǎn",
+      "meaning": "cái ô, dù",
+      "sinoVietnamese": "vũ tản",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "雨",
+      "phonetic": "yǔ",
+      "meaning": "mưa",
+      "sinoVietnamese": "vũ",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "平板电脑",
+      "phonetic": "píngbǎn diànnǎo",
+      "meaning": "máy tính bảng",
+      "sinoVietnamese": "bình bản điện não",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "本",
+      "phonetic": "běn",
+      "meaning": "quyển, cuốn (lượng từ cho sách)",
+      "sinoVietnamese": "bản",
+      "partOfSpeech": "lượng từ"
+    },
+    {
+      "word": "词典",
+      "phonetic": "cídiǎn",
+      "meaning": "từ điển",
+      "sinoVietnamese": "từ điển",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "优盘",
+      "phonetic": "yōupán",
+      "meaning": "USB",
+      "sinoVietnamese": "ưu bàn",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "支",
+      "phonetic": "zhī",
+      "meaning": "cái, cây (lượng từ cho bút)",
+      "sinoVietnamese": "chi",
+      "partOfSpeech": "lượng từ"
+    },
+    {
+      "word": "毛笔",
+      "phonetic": "máobǐ",
+      "meaning": "bút lông",
+      "sinoVietnamese": "mao bút",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "笔",
+      "phonetic": "bǐ",
+      "meaning": "bút",
+      "sinoVietnamese": "bút",
+      "partOfSpeech": "danh từ"
+    }
+  ]
+}

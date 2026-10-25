@@ -2,6 +2,8 @@ export interface Deck {
   id: string;
   name: string;
   description: string | null;
+  /** Ngôn ngữ deck: "en" (tiếng Anh) | "zh" (tiếng Trung) */
+  language: string;
   color: string;
   icon: string | null;
   // JSON string các cột tùy chỉnh dạng bảng (parse bằng lib/custom-columns)
@@ -92,6 +94,8 @@ export interface Card {
   rootWordMeaning: string | null;
   phonetic: string | null;
   example: string | null;
+  /** Pinyin của câu ví dụ (thẻ tiếng Trung) */
+  examplePinyin?: string | null;
   exampleTranslation: string | null;
   note: string | null;
   imageUrl: string | null;
@@ -105,6 +109,15 @@ export interface Card {
   synonyms: string | null;
   antonyms: string | null;
   favorite: boolean;
+  // --- Thẻ tiếng Trung ---
+  /** Âm Hán Việt, vd 你 → "nhĩ" */
+  sinoVietnamese?: string | null;
+  /** Chữ số đại tả (大写), vd 一 → 壹 */
+  hanziFormal?: string | null;
+  /** Số nét viết của chữ */
+  strokeCount?: number | null;
+  /** Bộ thủ, vd 四 → 囗 */
+  radical?: string | null;
   // Biến thể tiếng Anh: "british" | "american" | null (dùng chung)
   dialect: string | null;
   // Từ tương đương ở biến thể còn lại, vd centre ↔ center

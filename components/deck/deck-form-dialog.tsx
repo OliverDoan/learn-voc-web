@@ -16,22 +16,34 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { DECK_COLORS } from "@/lib/constants";
 import { useCreateDeck, useUpdateDeck } from "@/hooks/use-decks";
+import { DEFAULT_DECK_LANGUAGE, type DeckLanguage } from "@/lib/chinese";
 import type { Deck } from "@/lib/types";
 
 interface DeckFormDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   deck?: Pick<Deck, "id" | "name" | "description" | "color" | "icon">;
+  /** Ngôn ngữ của deck sẽ tạo (deck tiếng Trung nằm ở /chinese) */
+  language?: DeckLanguage;
+  /** Bộ biểu tượng gợi ý — mặc định dùng bộ chung */
+  iconOptions?: readonly string[];
 }
 
 const ICON_OPTIONS = ["📘", "📚", "🌍", "💼", "🎓", "🍔", "🎬", "🎮", "💪", "🏥"];
 
-export function DeckFormDialog({ open, onOpenChange, deck }: DeckFormDialogProps) {
+export function DeckFormDialog({
+  open,
+  onOpenChange,
+  deck,
+  language = DEFAULT_DECK_LANGUAGE,
+  iconOptions = ICON_OPTIONS,
+}: DeckFormDialogProps) {
   const isEdit = !!deck;
   const [name, setName] = useState(deck?.name ?? "");
   const [description, setDescription] = useState(deck?.description ?? "");
   const [color, setColor] = useState<string>(deck?.color ?? DECK_COLORS[0]);
-  const [icon, setIcon] = useState<string>(deck?.icon ?? ICON_OPTIONS[0]);
+  const defaultIcon = iconOptions[0];
+  const [icon, setIcon] = useState<string>(deck?.icon ?? defaultIcon);
 
   const createMut = useCreateDeck();
   const updateMut = useUpdateDeck(deck?.id ?? "");
@@ -41,9 +53,11 @@ export function DeckFormDialog({ open, onOpenChange, deck }: DeckFormDialogProps
       setName(deck?.name ?? "");
       setDescription(deck?.description ?? "");
       setColor(deck?.color ?? DECK_COLORS[0]);
-      setIcon(deck?.icon ?? ICON_OPTIONS[0]);
+      setIcon(deck?.icon ?? defaultIcon);
     }
-  }, [open, deck]);
+    // Chỉ phụ thuộc icon mặc định (không phải cả mảng) để mảng inline từ caller
+    // không làm effect chạy lại và xoá nội dung đang gõ.
+  }, [open, deck, defaultIcon]);
 
   const isPending = createMut.isPending || updateMut.isPending;
 
@@ -57,7 +71,7 @@ export function DeckFormDialog({ open, onOpenChange, deck }: DeckFormDialogProps
         await updateMut.mutateAsync({ name: name.trim(), description, color, icon });
         toast.success("Cập nhật deck thành công");
       } else {
-        await createMut.mutateAsync({ name: name.trim(), description, color, icon });
+        await createMut.mutateAsync({ name: name.trim(), description, color, icon, language });
         toast.success("Đã tạo deck mới");
       }
       onOpenChange(false);
@@ -120,7 +134,7 @@ export function DeckFormDialog({ open, onOpenChange, deck }: DeckFormDialogProps
           <div className="space-y-2">
             <Label>Biểu tượng</Label>
             <div className="flex flex-wrap gap-2">
-              {ICON_OPTIONS.map((emoji) => (
+              {iconOptions.map((emoji) => (
                 <button
                   key={emoji}
                   type="button"

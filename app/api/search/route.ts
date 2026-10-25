@@ -2,6 +2,7 @@ import { NextRequest } from "next/server";
 import { prisma } from "@/lib/db";
 import { handleError, ok } from "@/lib/api-helpers";
 import { getLockedDeckIds } from "@/lib/deck-progress";
+import { ENGLISH_DECK_FILTER } from "@/lib/chinese";
 
 const LIMIT_PER_GROUP = 6;
 
@@ -34,6 +35,7 @@ export async function GET(req: NextRequest) {
       prisma.deck.findMany({
         where: {
           deletedAt: null,
+          ...ENGLISH_DECK_FILTER,
           id: { notIn: lockedDeckIds },
           OR: [
             { name: { contains: q } },
@@ -48,7 +50,7 @@ export async function GET(req: NextRequest) {
         where: {
           deletedAt: null,
           deckId: { notIn: lockedDeckIds },
-          deck: { deletedAt: null },
+          deck: { deletedAt: null, ...ENGLISH_DECK_FILTER },
           OR: [
             { word: { contains: q } },
             { meaning: { contains: q } },
@@ -67,7 +69,7 @@ export async function GET(req: NextRequest) {
       prisma.story.findMany({
         where: {
           deckId: { notIn: lockedDeckIds },
-          deck: { deletedAt: null },
+          deck: { deletedAt: null, ...ENGLISH_DECK_FILTER },
           OR: [
             { title: { contains: q } },
             { content: { contains: q } },

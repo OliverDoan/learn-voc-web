@@ -1,0 +1,298 @@
+{
+  "deck": {
+    "name": "Bài 6: 我学习汉语 (Tôi học tiếng Hán)",
+    "description": "Từ vựng Bài 6 — Giáo trình Hán ngữ 1 (bản 3) Quyển thượng",
+    "color": "#3b82f6",
+    "icon": "📚"
+  },
+  "cards": [
+    {
+      "word": "请问",
+      "phonetic": "qǐngwèn",
+      "meaning": "xin hỏi",
+      "sinoVietnamese": "thỉnh vấn",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "问",
+      "phonetic": "wèn",
+      "meaning": "hỏi",
+      "sinoVietnamese": "vấn",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "贵姓",
+      "phonetic": "guìxìng",
+      "meaning": "quý danh (họ của ngài)",
+      "sinoVietnamese": "quý tính",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "姓",
+      "phonetic": "xìng",
+      "meaning": "họ; mang họ",
+      "sinoVietnamese": "tính",
+      "partOfSpeech": "động từ, danh từ"
+    },
+    {
+      "word": "叫",
+      "phonetic": "jiào",
+      "meaning": "gọi, tên là",
+      "sinoVietnamese": "khiếu",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "名字",
+      "phonetic": "míngzi",
+      "meaning": "tên",
+      "sinoVietnamese": "danh tự",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "哪",
+      "phonetic": "nǎ",
+      "meaning": "nào",
+      "sinoVietnamese": "ná",
+      "partOfSpeech": "đại từ"
+    },
+    {
+      "word": "国",
+      "phonetic": "guó",
+      "meaning": "quốc gia, nước",
+      "sinoVietnamese": "quốc",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "人",
+      "phonetic": "rén",
+      "meaning": "người",
+      "sinoVietnamese": "nhân",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "认识",
+      "phonetic": "rènshi",
+      "meaning": "biết, quen",
+      "sinoVietnamese": "nhận thức",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "高兴",
+      "phonetic": "gāoxìng",
+      "meaning": "vui vẻ, vui mừng",
+      "sinoVietnamese": "cao hứng",
+      "partOfSpeech": "tính từ"
+    },
+    {
+      "word": "也",
+      "phonetic": "yě",
+      "meaning": "cũng",
+      "sinoVietnamese": "dã",
+      "partOfSpeech": "phó từ"
+    },
+    {
+      "word": "学习",
+      "phonetic": "xuéxí",
+      "meaning": "học tập",
+      "sinoVietnamese": "học tập",
+      "partOfSpeech": "động từ"
+    },
+    {
+      "word": "什么",
+      "phonetic": "shénme",
+      "meaning": "cái gì",
+      "sinoVietnamese": "thậm ma",
+      "partOfSpeech": "đại từ"
+    },
+    {
+      "word": "发音",
+      "phonetic": "fāyīn",
+      "meaning": "phát âm",
+      "sinoVietnamese": "phát âm",
+      "partOfSpeech": "danh từ, động từ"
+    },
+    {
+      "word": "汉字",
+      "phonetic": "Hànzì",
+      "meaning": "chữ Hán",
+      "sinoVietnamese": "Hán tự",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "书",
+      "phonetic": "shū",
+      "meaning": "sách",
+      "sinoVietnamese": "thư",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "谁",
+      "phonetic": "shéi/shuí",
+      "meaning": "ai",
+      "sinoVietnamese": "thùy",
+      "partOfSpeech": "đại từ"
+    },
+    {
+      "word": "的",
+      "phonetic": "de",
+      "meaning": "của (trợ từ sở hữu)",
+      "sinoVietnamese": "đích",
+      "partOfSpeech": "trợ từ"
+    },
+    {
+      "word": "那",
+      "phonetic": "nà",
+      "meaning": "đó, đấy, kia",
+      "sinoVietnamese": "ná",
+      "partOfSpeech": "đại từ"
+    },
+    {
+      "word": "杂志",
+      "phonetic": "zázhì",
+      "meaning": "tạp chí",
+      "sinoVietnamese": "tạp chí",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "…文",
+      "phonetic": "…wén",
+      "meaning": "ngôn ngữ (viết)",
+      "sinoVietnamese": "văn"
+    },
+    {
+      "word": "中文",
+      "phonetic": "Zhōngwén",
+      "meaning": "tiếng Trung",
+      "sinoVietnamese": "Trung văn",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "阿拉伯文",
+      "phonetic": "Ālābówén",
+      "meaning": "tiếng Ả Rập",
+      "sinoVietnamese": "A Lạp Bá văn",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "德文",
+      "phonetic": "Déwén",
+      "meaning": "tiếng Đức",
+      "sinoVietnamese": "Đức văn",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "俄文",
+      "phonetic": "Éwén",
+      "meaning": "tiếng Nga",
+      "sinoVietnamese": "Nga văn",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "法文",
+      "phonetic": "Fǎwén",
+      "meaning": "tiếng Pháp",
+      "sinoVietnamese": "Pháp văn",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "韩文",
+      "phonetic": "Hánwén",
+      "meaning": "tiếng Hàn",
+      "sinoVietnamese": "Hàn văn",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "日文",
+      "phonetic": "Rìwén",
+      "meaning": "tiếng Nhật",
+      "sinoVietnamese": "Nhật văn",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "西班牙文",
+      "phonetic": "Xībānyáwén",
+      "meaning": "tiếng Tây Ban Nha",
+      "sinoVietnamese": "Tây Ban Nha văn",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "英文",
+      "phonetic": "Yīngwén",
+      "meaning": "tiếng Anh",
+      "sinoVietnamese": "Anh văn",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "朋友",
+      "phonetic": "péngyou",
+      "meaning": "bạn bè",
+      "sinoVietnamese": "bằng hữu",
+      "partOfSpeech": "danh từ"
+    },
+    {
+      "word": "麦克",
+      "phonetic": "Màikè",
+      "meaning": "Mike"
+    },
+    {
+      "word": "张东",
+      "phonetic": "Zhāng Dōng",
+      "meaning": "Trương Đông (tên người TQ)",
+      "sinoVietnamese": "Trương Đông"
+    },
+    {
+      "word": "张",
+      "phonetic": "Zhāng",
+      "meaning": "họ Trương",
+      "sinoVietnamese": "Trương"
+    },
+    {
+      "word": "中国",
+      "phonetic": "Zhōngguó",
+      "meaning": "Trung Quốc",
+      "sinoVietnamese": "Trung Quốc"
+    },
+    {
+      "word": "德国",
+      "phonetic": "Déguó",
+      "meaning": "nước Đức",
+      "sinoVietnamese": "Đức quốc"
+    },
+    {
+      "word": "俄国",
+      "phonetic": "Éguó",
+      "meaning": "nước Nga",
+      "sinoVietnamese": "Nga quốc"
+    },
+    {
+      "word": "法国",
+      "phonetic": "Fǎguó",
+      "meaning": "nước Pháp",
+      "sinoVietnamese": "Pháp quốc"
+    },
+    {
+      "word": "韩国",
+      "phonetic": "Hánguó",
+      "meaning": "Hàn Quốc",
+      "sinoVietnamese": "Hàn quốc"
+    },
+    {
+      "word": "美国",
+      "phonetic": "Měiguó",
+      "meaning": "nước Mỹ",
+      "sinoVietnamese": "Mỹ quốc"
+    },
+    {
+      "word": "日本(国)",
+      "phonetic": "Rìběn(guó)",
+      "meaning": "Nhật Bản",
+      "sinoVietnamese": "Nhật Bản"
+    },
+    {
+      "word": "英国",
+      "phonetic": "Yīngguó",
+      "meaning": "nước Anh",
+      "sinoVietnamese": "Anh quốc"
+    }
+  ]
+}
