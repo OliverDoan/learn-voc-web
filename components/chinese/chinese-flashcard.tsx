@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { HanziAudioButton } from "@/components/chinese/hanzi-audio-button";
-import { strokeSummary } from "@/lib/chinese";
+import { Volume2 } from "lucide-react";
+import { CHINESE_TTS_LANG, strokeSummary } from "@/lib/chinese";
+import { isSpeakable, speak } from "@/lib/tts";
 import type { Card } from "@/lib/types";
 
 interface ChineseFlashcardProps {
@@ -11,97 +12,141 @@ interface ChineseFlashcardProps {
   onFlip: () => void;
 }
 
-// Nút loa phải nằm NGOÀI vùng bấm-để-lật: HTML không cho lồng <button> trong <button>.
+// Cùng nền với thẻ tiếng Anh (components/flashcard/flashcard.tsx) để hai bên đồng bộ.
+const CARD_BG = "#00004F";
 
 /**
- * Thẻ lật tiếng Trung: mặt trước là Hán tự, mặt sau là pinyin + nghĩa + ghi chú chữ.
- * Bấm vào thẻ (hoặc phím Space ở trang cha) để lật.
+ * Thẻ lật tiếng Trung, xoay 3D giống thẻ tiếng Anh: mặt trước là Hán tự,
+ * mặt sau là pinyin + nghĩa + ghi chú chữ. Bấm vào thẻ (hoặc Space) để lật.
  */
-export function ChineseFlashcard({
-  card,
-  flipped,
-  onFlip,
-}: ChineseFlashcardProps) {
-  const strokes = strokeSummary(card);
-
+export function ChineseFlashcard({ card, flipped, onFlip }: ChineseFlashcardProps) {
   return (
-    <div className="w-full max-w-xl">
-      <motion.button
-        type="button"
-        onClick={onFlip}
-        whileTap={{ scale: 0.99 }}
-        className="flex min-h-[320px] w-full flex-col items-center justify-center gap-4 rounded-2xl border bg-card p-8 text-center shadow-md transition-colors hover:border-primary/50"
-        aria-label={flipped ? "Xem mặt trước" : "Xem nghĩa"}
+    <div
+      className="perspective w-full max-w-xl cursor-pointer select-none"
+      onClick={onFlip}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        // Space đã do trang cha xử lý (phím tắt toàn trang) — chỉ bắt Enter để không lật 2 lần.
+        if (e.key === "Enter") {
+          e.preventDefault();
+          onFlip();
+        }
+      }}
+      aria-label={flipped ? "Xem mặt trước" : "Thẻ học - nhấn để lật"}
+    >
+      <motion.div
+        className="preserve-3d relative h-[440px] w-full"
+        animate={{ rotateY: flipped ? 180 : 0 }}
+        transition={{ duration: 0.5, type: "spring", stiffness: 80 }}
+        style={{ transformStyle: "preserve-3d" }}
       >
-        <span lang="zh-CN" className="text-7xl font-semibold leading-none">
+        <FrontFace card={card} />
+        <BackFace card={card} />
+      </motion.div>
+    </div>
+  );
+}
+
+function SpeakBtn({ text, size = 20 }: { text: string; size?: number }) {
+  if (!isSpeakable(text)) return null;
+  return (
+    <button
+      type="button"
+      onClick={(e) => {
+        e.stopPropagation();
+        // Chữ đơn đọc chậm hơn để nghe rõ thanh điệu.
+        speak(text, CHINESE_TTS_LANG, 0.85);
+      }}
+      aria-label={`Phát âm ${text}`}
+      className="text-[#7eb0ff] transition-opacity hover:opacity-80"
+    >
+      <Volume2 style={{ width: size, height: size }} />
+    </button>
+  );
+}
+
+function FaceShell({ back = false, children }: { back?: boolean; children: React.ReactNode }) {
+  return (
+    <div
+      className="backface-hidden absolute inset-0 flex flex-col items-center justify-center overflow-hidden rounded-2xl p-8 text-center shadow-[0_24px_64px_rgba(0,13,139,.24)]"
+      style={{
+        background: CARD_BG,
+        color: "#eaf0ff",
+        ...(back ? { transform: "rotateY(180deg)" } : {}),
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
+function FrontFace({ card }: { card: Card }) {
+  return (
+    <FaceShell>
+      <div className="flex items-center gap-3">
+        <span lang="zh-CN" className="text-7xl font-semibold leading-none text-white">
           {card.word}
         </span>
-
-        {flipped ? (
-          <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.18 }}
-            className="w-full space-y-3 border-t pt-4"
-          >
-            {card.phonetic ? (
-              <p className="font-phonetic text-2xl text-primary">
-                {card.phonetic}
-              </p>
-            ) : null}
-            <p className="text-xl font-medium">{card.meaning}</p>
-
-            <div className="flex flex-wrap justify-center gap-2 text-xs text-muted-foreground">
-              {card.sinoVietnamese ? (
-                <span className="rounded-full bg-muted px-2 py-0.5 italic">
-                  Hán Việt: {card.sinoVietnamese}
-                </span>
-              ) : null}
-              {card.partOfSpeech ? (
-                <span className="rounded-full bg-primary/10 px-2 py-0.5 text-primary">
-                  {card.partOfSpeech}
-                </span>
-              ) : null}
-              {card.hanziFormal ? (
-                <span className="rounded-full bg-muted px-2 py-0.5">
-                  Đại tả: <span lang="zh-CN">{card.hanziFormal}</span>
-                </span>
-              ) : null}
-              {strokes ? (
-                <span className="rounded-full bg-muted px-2 py-0.5">
-                  {strokes}
-                </span>
-              ) : null}
-            </div>
-
-            {card.example ? (
-              <div className="rounded-lg bg-muted/50 p-3 text-sm">
-                <p lang="zh-CN" className="font-medium">
-                  {card.example}
-                </p>
-                {card.examplePinyin ? (
-                  <p className="font-phonetic mt-1 text-xs text-primary/80">
-                    {card.examplePinyin}
-                  </p>
-                ) : null}
-                {card.exampleTranslation ? (
-                  <p className="mt-1 text-xs text-muted-foreground">
-                    {card.exampleTranslation}
-                  </p>
-                ) : null}
-              </div>
-            ) : null}
-          </motion.div>
-        ) : (
-          <p className="text-xs uppercase tracking-wider text-muted-foreground">
-            Bấm để xem nghĩa
-          </p>
-        )}
-      </motion.button>
-
-      <div className="mt-3 flex justify-center">
-        <HanziAudioButton text={card.word} label={`Phát âm ${card.word}`} />
+        <SpeakBtn text={card.word} />
       </div>
-    </div>
+      <p className="absolute bottom-5 text-xs text-white/45">Nhấn để lật (Space)</p>
+    </FaceShell>
+  );
+}
+
+function Chip({ children }: { children: React.ReactNode }) {
+  return (
+    <span
+      className="rounded-full px-2.5 py-0.5 text-[12.5px] text-[#cfe0ff]"
+      style={{ background: "rgba(255,255,255,.08)", border: "1px solid rgba(255,255,255,.16)" }}
+    >
+      {children}
+    </span>
+  );
+}
+
+function BackFace({ card }: { card: Card }) {
+  const strokes = strokeSummary(card);
+  return (
+    <FaceShell back>
+      <div className="flex items-center gap-2.5">
+        <span lang="zh-CN" className="text-5xl font-semibold text-white">
+          {card.word}
+        </span>
+        <SpeakBtn text={card.word} />
+      </div>
+      {card.phonetic ? (
+        <p className="font-phonetic mt-2 text-2xl text-[#9cc2ff]">{card.phonetic}</p>
+      ) : null}
+      <p className="mt-3 text-[22px] font-semibold text-[#dde6ff]">{card.meaning}</p>
+
+      <div className="mt-4 flex flex-wrap justify-center gap-2">
+        {card.sinoVietnamese ? <Chip>Hán Việt: {card.sinoVietnamese}</Chip> : null}
+        {card.partOfSpeech ? <Chip>{card.partOfSpeech}</Chip> : null}
+        {card.hanziFormal ? (
+          <Chip>
+            Đại tả: <span lang="zh-CN">{card.hanziFormal}</span>
+          </Chip>
+        ) : null}
+        {strokes ? <Chip>{strokes}</Chip> : null}
+      </div>
+
+      {card.example ? (
+        <div className="mt-5 max-w-sm">
+          <p lang="zh-CN" className="text-lg text-[#eaf0ff]">
+            {card.example}
+          </p>
+          {card.examplePinyin ? (
+            <p className="font-phonetic mt-1 text-xs text-[#9cc2ff]/80">{card.examplePinyin}</p>
+          ) : null}
+          {card.exampleTranslation ? (
+            <p className="font-serif mt-1 text-xs italic text-white/50">
+              {card.exampleTranslation}
+            </p>
+          ) : null}
+        </div>
+      ) : null}
+    </FaceShell>
   );
 }

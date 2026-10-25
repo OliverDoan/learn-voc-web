@@ -8,6 +8,8 @@ import {
   ArrowRight,
   BookMarked,
   Check,
+  Eye,
+  EyeOff,
   GripVertical,
   List,
   Lock,
@@ -43,6 +45,7 @@ import { DeckActionsMenu } from "@/components/deck/deck-actions-menu";
 import { SelectionActionBar } from "@/components/deck/selection-action-bar";
 import { TestHistoryDialog } from "@/components/deck/test-history-dialog";
 import { DeckStoryPanel } from "@/components/story/deck-story-panel";
+import { useStoryPanelHidden } from "@/components/deck/use-story-panel-hidden";
 import {
   useCards,
   useDeleteCard,
@@ -93,6 +96,7 @@ export default function DeckDetailPage({ params }: PageProps) {
   const [groupByTag, setGroupByTag] = useState(false);
   const [viewMode, setViewMode] = useState<"list" | "table">("list");
   const [openHistory, setOpenHistory] = useState(false);
+  const storyPanel = useStoryPanelHidden();
 
   // Kéo-thả sắp xếp thứ tự (chỉ khi không lọc/tìm kiếm)
 
@@ -580,7 +584,12 @@ export default function DeckDetailPage({ params }: PageProps) {
       <DeckExerciseProgress deckId={deckId} exercises={deck.exercises ?? []} />
 
       {/* Bố cục 2 cột: trái là danh sách từ vựng, phải là truyện chêm (sticky) */}
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_420px]">
+      <div
+        className={cn(
+          "grid gap-6",
+          !storyPanel.hidden && "lg:grid-cols-[minmax(0,1fr)_420px]",
+        )}
+      >
         <div className="min-w-0">
       {/* Tabs chế độ xem + nút lịch sử */}
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
@@ -616,6 +625,17 @@ export default function DeckDetailPage({ params }: PageProps) {
         ) : (
           <div />
         )}
+        <Button
+          type="button"
+          variant="outline"
+          size="sm"
+          className="rounded-full"
+          onClick={storyPanel.toggle}
+          aria-pressed={storyPanel.hidden}
+        >
+          {storyPanel.hidden ? <Eye className="h-4 w-4" /> : <EyeOff className="h-4 w-4" />}
+          {storyPanel.hidden ? "Hiện truyện chêm" : "Ẩn truyện chêm"}
+        </Button>
       </div>
 
       {cards && cards.length > 0 && viewMode !== "table" ? (
@@ -708,7 +728,8 @@ export default function DeckDetailPage({ params }: PageProps) {
         </div>
 
         {/* CỘT PHẢI: truyện chêm — dính theo cuộn trên màn hình lớn */}
-        <aside className="lg:sticky lg:top-6 lg:self-start">
+        {/* Ẩn bằng CSS (không gỡ khỏi cây): panel vẫn báo thứ tự từ trong truyện để xếp thẻ. */}
+        <aside className={cn("lg:sticky lg:top-6 lg:self-start", storyPanel.hidden && "hidden")}>
           <div className="mb-2 flex items-center gap-2">
             <BookMarked className="h-4 w-4 text-primary" />
             <h2 className="text-sm font-semibold">Truyện chêm</h2>
