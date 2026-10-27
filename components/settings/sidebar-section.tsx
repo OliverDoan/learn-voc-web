@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import { toast } from "sonner";
-import { ChevronDown, Eye, Lock, PanelLeft, RotateCcw } from "lucide-react";
+import { Eye, Lock, RotateCcw } from "lucide-react";
 import { NAV_ITEMS } from "@/lib/nav-items";
 import {
   isDefaultHidden,
@@ -13,136 +12,103 @@ import {
 import { useHiddenNavItems } from "@/hooks/use-sidebar-prefs";
 import { cn } from "@/lib/utils";
 
+// Tên các mục hiện sẵn ở bộ mặc định — lấy từ NAV_ITEMS để mô tả không bị lỗi thời.
+const DEFAULT_LABELS = NAV_ITEMS.filter((i) => i.pinned || i.defaultVisible)
+  .map((i) => i.label)
+  .join(", ");
+
 /**
- * Cấu hình mục hiển thị trên thanh bên (sidebar) qua dropdown có toggle bật/tắt.
- * Lưu trực tiếp vào localStorage qua store dùng chung nên sidebar cập nhật ngay.
+ * Tab "Thanh bên" trong Cài đặt: danh sách phẳng các mục điều hướng, mỗi mục một
+ * công tắc bật/tắt. Lưu trực tiếp vào localStorage qua store dùng chung nên sidebar
+ * cập nhật ngay.
  */
 export function SidebarSection() {
   const hidden = useHiddenNavItems();
-  const [open, setOpen] = useState(false);
 
   const shownCount = NAV_ITEMS.filter((i) => i.pinned || !hidden.has(i.href)).length;
-  const hiddenCount = NAV_ITEMS.filter((i) => !i.pinned && hidden.has(i.href)).length;
+  const hiddenCount = NAV_ITEMS.length - shownCount;
   const isDefault = isDefaultHidden(hidden);
 
   const handleReset = () => {
     resetNavItemsToDefault();
-    toast.success("Đã đặt lại thanh bên về mặc định");
+    toast.success("Đã khôi phục thanh bên về mặc định");
   };
 
   return (
-    <section className="rounded-2xl border bg-card p-5">
-      <div className="mb-1 flex items-center gap-2">
-        <PanelLeft className="h-5 w-5 text-primary" />
-        <h2 className="text-lg font-semibold">Thanh bên</h2>
-        <button
-          type="button"
-          onClick={handleReset}
-          disabled={isDefault}
-          title="Chỉ hiện Decks, Truyện chêm và Cài đặt"
-          className={cn(
-            "ml-auto flex items-center gap-1.5 rounded-lg border px-2.5 py-1.5 text-xs font-medium transition-colors",
-            isDefault
-              ? "cursor-not-allowed text-muted-foreground opacity-60"
-              : "hover:bg-accent hover:text-foreground",
-          )}
-        >
-          <RotateCcw className="h-3.5 w-3.5" /> Đặt lại mặc định
-        </button>
+    <section>
+      <div className="mb-2 flex flex-wrap items-center gap-2">
+        <h3 className="font-semibold">Trên thanh điều hướng</h3>
+        <span className="text-sm text-muted-foreground">
+          {shownCount}/{NAV_ITEMS.length} mục
+        </span>
+        <div className="ml-auto flex items-center gap-1">
+          {hiddenCount > 0 ? (
+            <button
+              type="button"
+              onClick={showAllNavItems}
+              className="flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+            >
+              <Eye className="h-3.5 w-3.5" /> Hiện tất cả
+            </button>
+          ) : null}
+          <button
+            type="button"
+            onClick={handleReset}
+            disabled={isDefault}
+            title={`Chỉ hiện ${DEFAULT_LABELS}`}
+            className="flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-transparent"
+          >
+            <RotateCcw className="h-3.5 w-3.5" /> Khôi phục mặc định
+          </button>
+        </div>
       </div>
-      <p className="mb-4 text-sm text-muted-foreground">
-        Chọn mục hiển thị trên thanh điều hướng bên trái. Mục &quot;Cài đặt&quot; luôn hiển thị.
-        Mặc định chỉ hiện Decks, Truyện chêm và Cài đặt.
+      <p className="mb-3 text-xs text-muted-foreground">
+        Mục &quot;Cài đặt&quot; luôn hiển thị. Mặc định hiện: {DEFAULT_LABELS}.
       </p>
 
-      <div className="relative">
-        <button
-          type="button"
-          onClick={() => setOpen((o) => !o)}
-          className="flex w-full items-center justify-between gap-2 rounded-lg border bg-card px-3 py-2.5 text-sm transition-colors hover:bg-accent"
-          aria-haspopup="listbox"
-          aria-expanded={open}
-        >
-          <span className="text-muted-foreground">
-            Đang hiện <strong className="text-foreground">{shownCount}</strong>/{NAV_ITEMS.length}{" "}
-            mục
-          </span>
-          <ChevronDown
-            className={cn("h-4 w-4 shrink-0 text-muted-foreground transition-transform", open && "rotate-180")}
-          />
-        </button>
-
-        {open ? (
-          <>
-            <div className="fixed inset-0 z-20" onClick={() => setOpen(false)} />
-            <div
-              role="group"
-              aria-label="Bật/tắt mục thanh bên"
-              className="absolute left-0 right-0 top-full z-30 mt-1 max-h-80 overflow-y-auto rounded-lg border bg-popover text-popover-foreground p-1.5 shadow-lg"
+      <div role="group" aria-label="Bật/tắt mục thanh bên" className="flex flex-col">
+        {NAV_ITEMS.map((item) => {
+          const shown = item.pinned || !hidden.has(item.href);
+          return (
+            <button
+              key={item.href}
+              type="button"
+              role="switch"
+              aria-checked={shown}
+              aria-label={`${shown ? "Ẩn" : "Hiện"} ${item.label}`}
+              disabled={item.pinned}
+              onClick={() => setNavItemHidden(item.href, shown)}
+              className={cn(
+                "flex w-full items-center gap-3 rounded-lg px-2 py-2.5 text-left text-sm transition-colors",
+                item.pinned ? "cursor-not-allowed" : "hover:bg-accent",
+              )}
             >
-              {NAV_ITEMS.map((item) => {
-                const shown = item.pinned || !hidden.has(item.href);
-                return (
-                  <button
-                    key={item.href}
-                    type="button"
-                    role="switch"
-                    aria-checked={shown}
-                    aria-label={`${shown ? "Ẩn" : "Hiện"} ${item.label}`}
-                    disabled={item.pinned}
-                    onClick={() => setNavItemHidden(item.href, shown)}
-                    className={cn(
-                      "flex w-full items-center gap-3 rounded-md px-2 py-2 text-left text-sm transition-colors",
-                      item.pinned ? "cursor-not-allowed opacity-60" : "hover:bg-accent",
-                    )}
-                  >
-                    <item.icon className="h-4 w-4 shrink-0 text-muted-foreground" />
-                    <span className="flex-1 font-medium">{item.label}</span>
-                    {item.pinned ? (
-                      <Lock className="h-3.5 w-3.5 shrink-0 text-muted-foreground" />
-                    ) : (
-                      <span
-                        className={cn(
-                          "relative inline-flex h-5 w-9 shrink-0 items-center rounded-full transition-colors",
-                          shown ? "bg-primary" : "bg-muted",
-                        )}
-                      >
-                        <span
-                          className={cn(
-                            "inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform",
-                            shown ? "translate-x-[18px]" : "translate-x-0.5",
-                          )}
-                        />
-                      </span>
-                    )}
-                  </button>
-                );
-              })}
-
-              <div className="my-1 h-px bg-border" />
-              {hiddenCount > 0 ? (
-                <button
-                  type="button"
-                  onClick={showAllNavItems}
-                  className="flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
-                >
-                  <Eye className="h-4 w-4" /> Hiện tất cả
-                </button>
-              ) : null}
-              <button
-                type="button"
-                onClick={handleReset}
-                disabled={isDefault}
+              <span className="flex w-4 shrink-0 justify-center text-muted-foreground">
+                {item.pinned ? <Lock className="h-3.5 w-3.5" /> : null}
+              </span>
+              <item.icon
+                className={cn("h-[18px] w-[18px] shrink-0", shown ? "text-foreground" : "text-muted-foreground")}
+              />
+              <span className={cn("flex-1 font-medium", !shown && "text-muted-foreground")}>
+                {item.label}
+              </span>
+              <span
                 className={cn(
-                  "flex w-full items-center gap-2 rounded-md px-2 py-2 text-sm text-muted-foreground transition-colors",
-                  isDefault ? "cursor-not-allowed opacity-60" : "hover:bg-accent hover:text-foreground",
+                  "relative inline-flex h-6 w-11 shrink-0 items-center rounded-full transition-colors",
+                  shown ? "bg-primary" : "bg-muted",
+                  item.pinned && "opacity-50",
                 )}
               >
-                <RotateCcw className="h-4 w-4" /> Đặt lại mặc định
-              </button>
-            </div>
-          </>
-        ) : null}
+                <span
+                  className={cn(
+                    "inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform",
+                    shown ? "translate-x-[22px]" : "translate-x-0.5",
+                  )}
+                />
+              </span>
+            </button>
+          );
+        })}
       </div>
     </section>
   );

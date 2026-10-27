@@ -7,6 +7,7 @@ import {
   Database,
   Loader2,
   Palette,
+  PanelLeft,
   Target,
   User,
   Volume2,
@@ -30,6 +31,7 @@ import { ResetSection } from "@/components/settings/reset-section";
 export type SettingsSectionId =
   | "profile"
   | "appearance"
+  | "sidebar"
   | "study"
   | "pronounce"
   | "reminder"
@@ -50,7 +52,13 @@ export const SETTINGS_SECTIONS: SettingsSection[] = [
     id: "appearance",
     label: "Giao diện",
     icon: Palette,
-    desc: "Chế độ sáng/tối, màu chủ đề và các mục hiện trên thanh bên.",
+    desc: "Chế độ sáng/tối và màu chủ đề.",
+  },
+  {
+    id: "sidebar",
+    label: "Thanh bên",
+    icon: PanelLeft,
+    desc: "Chọn mục hiển thị trên thanh điều hướng bên trái.",
   },
   {
     id: "study",
@@ -126,12 +134,8 @@ export function SettingsPanel({
           <div className="space-y-6">
             {section === "profile" ? <ProfileSection progress={progress} /> : null}
 
-            {section === "appearance" ? (
-              <>
-                <AppearanceSection />
-                <SidebarSection />
-              </>
-            ) : null}
+            {section === "appearance" ? <AppearanceSection /> : null}
+            {section === "sidebar" ? <SidebarSection /> : null}
 
             {section === "study" ? (
               <>
