@@ -3,8 +3,84 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* NewEra Inc. Design System — electric blue đơn sắc, light theme */
+/* Giao diện kiểu Gmail (Material 3) — nền xám xanh nhạt, vùng nội dung trắng */
 :root {
+  --background: #f6f8fc;
+  --foreground: #1f1f1f;
+  --card: #ffffff;
+  --card-foreground: #1f1f1f;
+  --popover: #ffffff;
+  --popover-foreground: #1f1f1f;
+  --primary: #0b57d0;
+  --primary-foreground: #ffffff;
+  --secondary: #c2e7ff;
+  --secondary-foreground: #001d35;
+  --muted: #f2f6fc;
+  --muted-foreground: #5f6368;
+  --accent: #eaf1fb;
+  --accent-foreground: #1f1f1f;
+  --destructive: #d93025;
+  --destructive-foreground: #ffffff;
+  --success: #188038;
+  --warning: #e37400;
+  --border: #eceff1;
+  --input: #c4c7c5;
+  --ring: #0b57d0;
+  --radius: 0.875rem;
+  --app-font: var(--font-roboto);
+  /* Chiều cao top bar Gmail — các thanh sticky trong trang bám dưới nó */
+  --shell-top: 4rem;
+
+  /* Token riêng của khung Gmail */
+  --mail-active: #d3e3fd;
+  --mail-hover: #f2f6fc;
+  --mail-read: #f2f6fc;
+  --mail-search: #e9eef6;
+
+  --royal: #001d35;
+  --electric: #0b57d0;
+}
+
+.dark {
+  --background: #111111;
+  --foreground: #e3e3e3;
+  --card: #1e1f20;
+  --card-foreground: #e3e3e3;
+  --popover: #282a2c;
+  --popover-foreground: #e3e3e3;
+  --primary: #a8c7fa;
+  --primary-foreground: #062e6f;
+  --secondary: #004a77;
+  --secondary-foreground: #c2e7ff;
+  --muted: #282a2c;
+  --muted-foreground: #a8abaf;
+  --accent: #333537;
+  --accent-foreground: #e3e3e3;
+  --destructive: #f2b8b5;
+  --destructive-foreground: #601410;
+  --success: #6dd58c;
+  --warning: #ffb683;
+  --border: #303134;
+  --input: #444746;
+  --ring: #a8c7fa;
+
+  --mail-active: #004a77;
+  --mail-hover: #282a2c;
+  --mail-read: #1b1c1d;
+  --mail-search: #282a2c;
+
+  --royal: #001d35;
+  --electric: #a8c7fa;
+}
+
+/* Giao diện "Cổ điển" (NewEra cũ) — bật bằng <html data-ui="classic"> trong Cài đặt → Giao diện */
+:root[data-ui="classic"] {
+  --app-font: var(--font-be-vietnam);
+  --shell-top: 0px;
+  --mail-active: #e3e9fb;
+  --mail-hover: #f6f7fb;
+  --mail-read: #f6f7fb;
+  --mail-search: #eef1fb;
   --background: #f6f7fb;
   --foreground: #111111;
   --card: #ffffff;
@@ -33,7 +109,11 @@
   --electric: #173dc9;
 }
 
-.dark {
+:root[data-ui="classic"].dark {
+  --mail-active: #1d2766;
+  --mail-hover: #131a45;
+  --mail-read: #070b2b;
+  --mail-search: #131a45;
   --background: #00021f;
   --foreground: #eaf0ff;
   --card: #0a0e33;
@@ -85,9 +165,13 @@
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
+  --color-mail-active: var(--mail-active);
+  --color-mail-hover: var(--mail-hover);
+  --color-mail-read: var(--mail-read);
+  --color-mail-search: var(--mail-search);
   --color-royal: var(--royal);
   --color-electric: var(--electric);
-  --font-sans: var(--font-be-vietnam);
+  --font-sans: var(--app-font), var(--font-be-vietnam);
   --font-mono: var(--font-dm-sans);
   --font-display: var(--font-poppins);
   --font-serif: var(--font-lora);
@@ -101,7 +185,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), Inter, system-ui, -apple-system, sans-serif;
+  font-family: var(--app-font), var(--font-be-vietnam), Roboto, Arial, system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 

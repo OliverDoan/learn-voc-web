@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "VocaLearn — Học từ vựng cá nhân",
-    short_name: "VocaLearn",
+    name: "Gmail — Học từ vựng cá nhân",
+    short_name: "Gmail",
     description: "Ứng dụng học từ vựng cá nhân với Spaced Repetition và truyện chêm.",
     lang: "vi",
     start_url: "/decks",

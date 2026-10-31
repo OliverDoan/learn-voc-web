@@ -34,6 +34,8 @@ import { cn } from "@/lib/utils";
 import { ListSkeleton } from "@/components/ui/list-skeleton";
 import { useCards } from "@/hooks/use-cards";
 import { useDeck, useDecks } from "@/hooks/use-decks";
+import { useUiTheme } from "@/hooks/use-ui-theme";
+import { ChineseDeckMailView } from "@/components/gmail/chinese-deck-mail-view";
 
 type ViewMode = "list" | "table";
 
@@ -59,6 +61,7 @@ export default function ChineseDeckPage({ params }: PageProps) {
   const { data: cards, isLoading } = useCards({ deckId });
   const deleteCard = useDeleteCard();
   const { confirm, confirmDialog } = useConfirm();
+  const uiTheme = useUiTheme();
 
   // `undefined` = dialog đóng; `null` = thêm thẻ mới; có thẻ = sửa thẻ đó.
   const [editing, setEditing] = useState<Card | null | undefined>(undefined);
@@ -86,6 +89,40 @@ export default function ChineseDeckPage({ params }: PageProps) {
   // Mở deck tiếng Anh bằng URL /chinese/... sẽ đọc sai giọng → chỉ sang đúng trang.
   if (deck && !isChineseDeck(deck)) {
     return <WrongLanguageNotice href={`/decks/${deckId}`} deckName={deck.name} />;
+  }
+
+  const dialogs = (
+    <>
+      <ChineseCardFormDialog
+        key={editing === undefined ? "closed" : (editing?.id ?? "new")}
+        open={editing !== undefined}
+        onOpenChange={(next) => setEditing(next ? null : undefined)}
+        deckId={deckId}
+        card={editing ?? undefined}
+      />
+      {confirmDialog}
+    </>
+  );
+
+  // Giao diện Gmail: deck hiển thị như mở một chuỗi thư.
+  if (uiTheme === "gmail") {
+    return (
+      <>
+        <ChineseDeckMailView
+          deckId={deckId}
+          deck={deck}
+          cards={liveCards}
+          isLoading={isLoading}
+          hasReading={hasReading}
+          prevDeck={prevDeck}
+          nextDeck={nextDeck}
+          onAdd={() => setEditing(null)}
+          onEdit={setEditing}
+          onDelete={handleDelete}
+        />
+        {dialogs}
+      </>
+    );
   }
 
   return (
@@ -216,14 +253,7 @@ export default function ChineseDeckPage({ params }: PageProps) {
         </>
       )}
 
-      <ChineseCardFormDialog
-        key={editing === undefined ? "closed" : (editing?.id ?? "new")}
-        open={editing !== undefined}
-        onOpenChange={(next) => setEditing(next ? null : undefined)}
-        deckId={deckId}
-        card={editing ?? undefined}
-      />
-      {confirmDialog}
+      {dialogs}
     </div>
   );
 }

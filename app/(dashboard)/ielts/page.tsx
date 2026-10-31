@@ -3,7 +3,7 @@ import { ArrowRight, Clock, GraduationCap, Target, Trophy } from "lucide-react";
 import { IELTS_OVERVIEW, IELTS_SKILLS } from "@/lib/ielts-content";
 
 export const metadata = {
-  title: "IELTS — VocaLearn",
+  title: "IELTS — Gmail",
   description: "Hướng dẫn ôn IELTS 4 skill cho band 5.0 – 6.5",
 };
 

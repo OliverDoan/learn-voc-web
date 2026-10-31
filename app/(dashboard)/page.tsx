@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 
-// Trang chủ đã bỏ — vào web sẽ vào thẳng danh sách decks.
+// Trang chủ = hộp thư từ vựng (giao diện kiểu Gmail).
 export default function HomePage() {
-  redirect("/decks");
+  redirect("/inbox");
 }

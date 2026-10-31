@@ -81,6 +81,8 @@ export const cardUpdateSchema = cardCreateSchema
   .omit({ deckId: true })
   .extend({
     favorite: z.boolean().optional(),
+    // "Tạm ẩn" ở hộp thư: dời ngày ôn kế tiếp.
+    nextReviewDate: z.coerce.date().optional(),
     // Bỏ .default([]) của cardCreateSchema: khi update mà không gửi field,
     // phải là undefined (không động tới) thay vì [] (vô tình xoá sạch dữ liệu cũ).
     tags: z.array(z.string().trim().min(1).max(30)).max(10).optional(),

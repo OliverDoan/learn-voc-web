@@ -3,6 +3,7 @@
 import { Palette } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { ThemePicker } from "@/components/focus/theme-picker";
+import { UiThemePicker } from "@/components/settings/ui-theme-picker";
 
 /** Khối "Giao diện": chọn sáng/tối và màu chủ đề của toàn ứng dụng. */
 export function AppearanceSection() {
@@ -12,6 +13,13 @@ export function AppearanceSection() {
         <Palette className="h-5 w-5 text-primary" />
         <h2 className="text-lg font-semibold">Giao diện</h2>
       </div>
+      <h3 className="mb-1 text-sm font-semibold">Kiểu giao diện</h3>
+      <p className="mb-3 text-sm text-muted-foreground">
+        Khung giống Gmail, hoặc quay về giao diện cũ. Đổi lúc nào cũng được.
+      </p>
+      <UiThemePicker />
+
+      <h3 className="mb-1 mt-6 border-t pt-5 text-sm font-semibold">Sáng / tối</h3>
       <p className="mb-4 text-sm text-muted-foreground">
         Chọn chế độ hiển thị: sáng, tối, hoặc theo hệ thống của thiết bị.
       </p>

@@ -10,6 +10,8 @@ import { DeckFormDialog } from "@/components/deck/deck-form-dialog";
 import { DeckGroupsSkeleton } from "@/components/ui/list-skeleton";
 import { useDecks } from "@/hooks/use-decks";
 import { CHINESE_DECK_LANGUAGE, sortChineseDecks } from "@/lib/chinese";
+import { useUiTheme } from "@/hooks/use-ui-theme";
+import { DeckMailList } from "@/components/gmail/deck-mail-list";
 
 /** Biểu tượng gợi ý cho deck tiếng Trung. */
 const CHINESE_ICONS = ["🀄", "🔢", "🧧", "🥟", "🐼", "📜", "🏮", "🎋", "☯️", "🍵"];
@@ -18,6 +20,7 @@ export default function ChinesePage() {
   const [openCreate, setOpenCreate] = useState(false);
   const [search, setSearch] = useState("");
   const { data: decks, isLoading } = useDecks(CHINESE_DECK_LANGUAGE);
+  const uiTheme = useUiTheme();
 
   // Xếp theo số bài rồi lọc theo tên/mô tả (không phân biệt hoa thường).
   const filteredDecks = useMemo(() => {
@@ -30,6 +33,38 @@ export default function ChinesePage() {
         (deck.description?.toLowerCase().includes(q) ?? false),
     );
   }, [decks, search]);
+
+  const createDialog = (
+    <DeckFormDialog
+      open={openCreate}
+      onOpenChange={setOpenCreate}
+      language={CHINESE_DECK_LANGUAGE}
+      iconOptions={CHINESE_ICONS}
+    />
+  );
+
+  // Giao diện Gmail: deck hiển thị như các dòng mail.
+  if (uiTheme === "gmail" && decks && decks.length > 0) {
+    return (
+      <>
+        <DeckMailList
+          title="Deck China"
+          decks={filteredDecks}
+          hrefOf={(deck) => `/chinese/${deck.id}`}
+          search={search}
+          onSearchChange={setSearch}
+          onCreate={() => setOpenCreate(true)}
+          fallbackIcon="🀄"
+          empty={
+            <p className="p-12 text-center text-sm text-muted-foreground">
+              Không tìm thấy deck nào khớp &ldquo;{search.trim()}&rdquo;.
+            </p>
+          }
+        />
+        {createDialog}
+      </>
+    );
+  }
 
   return (
     <div className="container mx-auto max-w-6xl p-6">
@@ -112,12 +147,7 @@ export default function ChinesePage() {
         </div>
       )}
 
-      <DeckFormDialog
-        open={openCreate}
-        onOpenChange={setOpenCreate}
-        language={CHINESE_DECK_LANGUAGE}
-        iconOptions={CHINESE_ICONS}
-      />
+      {createDialog}
     </div>
   );
 }

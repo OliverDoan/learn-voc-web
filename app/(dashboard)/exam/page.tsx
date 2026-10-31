@@ -18,6 +18,9 @@ import {
   sortDecksByUnit,
 } from "@/lib/exam";
 import type { Card } from "@/lib/types";
+import { useUiTheme } from "@/hooks/use-ui-theme";
+import { ExamSetupMailView } from "@/components/gmail/exam-setup-mail-view";
+import { IconButton } from "@/components/gmail/icon-button";
 
 export default function ExamPage() {
   const { data: rawDecks, isLoading } = useDecks("en");
@@ -33,6 +36,7 @@ export default function ExamPage() {
   const [examCards, setExamCards] = useState<Card[] | null>(null);
   // Đổi key để CardsTest mount lại (xoá đáp án) khi random bộ mới.
   const [round, setRound] = useState(0);
+  const uiTheme = useUiTheme();
 
   // Unit đang khoá thì không lấy được thẻ (API ẩn thẻ deck khoá) → không cho chọn.
   const openDecks = useMemo(() => decks.filter((d) => !d.locked), [decks]);
@@ -79,6 +83,28 @@ export default function ExamPage() {
     setRound((r) => r + 1);
   };
 
+  if (examCards && uiTheme === "gmail") {
+    return (
+      <section aria-label="Đang kiểm tra">
+        <div className="sticky top-[var(--shell-top)] z-20 flex h-12 items-center gap-1 rounded-t-2xl bg-card px-2 md:px-4">
+          <IconButton label="Chọn lại Unit" onClick={() => setExamCards(null)}>
+            <ArrowLeft className="h-5 w-5" />
+          </IconButton>
+          <IconButton label="Random bộ khác" onClick={start}>
+            <Shuffle className="h-5 w-5" />
+          </IconButton>
+          <h1 className="ml-2 text-lg">Kiểm tra</h1>
+          <span className="ml-auto text-xs text-muted-foreground">
+            {examCards.length} từ ngẫu nhiên · {selected.size} Unit
+          </span>
+        </div>
+        <div className="px-4 pb-6 md:px-6">
+          <CardsTest key={round} cards={examCards} deckId={EXAM_HISTORY_KEY} />
+        </div>
+      </section>
+    );
+  }
+
   if (examCards) {
     return (
       <div className="container mx-auto max-w-4xl px-6 pt-6">
@@ -101,6 +127,28 @@ export default function ExamPage() {
         </div>
         <CardsTest key={round} cards={examCards} deckId={EXAM_HISTORY_KEY} />
       </div>
+    );
+  }
+
+  // Giao diện Gmail: mỗi Unit là một dòng mail có ô tick.
+  if (uiTheme === "gmail") {
+    const selectedOpen = openDecks.filter((d) => selected.has(d.id)).length;
+    return (
+      <ExamSetupMailView
+        decks={decks}
+        isLoading={isLoading}
+        selected={selected}
+        onToggleDeck={toggleDeck}
+        selection={allSelected ? "all" : selectedOpen > 0 ? "some" : "none"}
+        onToggleAll={toggleAll}
+        count={count}
+        onCountChange={setCount}
+        onCountInput={handleCountInput}
+        totalSelectedCards={totalSelectedCards}
+        effectiveCount={effectiveCount}
+        onStart={start}
+        startDisabled={effectiveCount === 0 || cardsLoading}
+      />
     );
   }
 

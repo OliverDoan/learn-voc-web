@@ -4,6 +4,7 @@ import {
   DM_Sans,
   Lora,
   Poppins,
+  Roboto,
   Space_Grotesk,
 } from "next/font/google";
 import "./globals.css";
@@ -12,11 +13,19 @@ import { PwaRegister } from "@/components/pwa-register";
 import { THEME_STORAGE_KEY } from "@/lib/theme";
 import { PALETTE_STORAGE_KEY } from "@/components/theme-provider";
 import { FOCUS_THEMES, PALETTE_VAR_KEYS } from "@/lib/focus-themes";
+import { UI_THEME_STORAGE_KEY } from "@/lib/ui-theme";
 
 // NewEra Inc. Design System fonts
 const beVietnam = Be_Vietnam_Pro({
   variable: "--font-be-vietnam",
   weight: ["400", "500", "600", "700", "800"],
+  subsets: ["latin", "vietnamese"],
+});
+
+// Font chính kiểu Gmail
+const roboto = Roboto({
+  variable: "--font-roboto",
+  weight: ["400", "500", "700"],
   subsets: ["latin", "vietnamese"],
 });
 
@@ -43,15 +52,15 @@ const lora = Lora({
   subsets: ["latin", "vietnamese"],
 });
 
-const fontVars = `${beVietnam.variable} ${poppins.variable} ${dmSans.variable} ${spaceGrotesk.variable} ${lora.variable}`;
+const fontVars = `${roboto.variable} ${beVietnam.variable} ${poppins.variable} ${dmSans.variable} ${spaceGrotesk.variable} ${lora.variable}`;
 
 export const metadata: Metadata = {
-  title: "VocaLearn - Học từ vựng cá nhân",
+  title: "Gmail - Học từ vựng cá nhân",
   description: "Ứng dụng học từ vựng cá nhân với Spaced Repetition và truyện chêm.",
-  applicationName: "VocaLearn",
+  applicationName: "Gmail",
   appleWebApp: {
     capable: true,
-    title: "VocaLearn",
+    title: "Gmail",
     statusBarStyle: "black-translucent",
   },
   // Icon được xử lý qua file convention: app/icon.svg + app/apple-icon.svg
@@ -59,8 +68,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#173dc9" },
-    { media: "(prefers-color-scheme: dark)", color: "#00021f" },
+    { media: "(prefers-color-scheme: light)", color: "#f6f8fc" },
+    { media: "(prefers-color-scheme: dark)", color: "#111111" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -80,6 +89,7 @@ const themeBootstrap = `
 (function(){
   try {
     var root = document.documentElement;
+    root.dataset.ui = localStorage.getItem(${JSON.stringify(UI_THEME_STORAGE_KEY)}) === "classic" ? "classic" : "gmail";
     var palettes = ${JSON.stringify(PALETTE_MAP)};
     var keys = ${JSON.stringify(PALETTE_VAR_KEYS)};
     for (var i = 0; i < keys.length; i++) root.style.removeProperty(keys[i]);

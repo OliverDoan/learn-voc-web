@@ -7,6 +7,7 @@ import {
   ClipboardCheck,
   GraduationCap,
   History,
+  Inbox,
   Languages,
   Layers,
   Library,
@@ -34,6 +35,14 @@ export interface NavItem {
 
 /** Danh sách mục điều hướng dùng chung cho sidebar + trang cấu hình. */
 export const NAV_ITEMS: NavItem[] = [
+  {
+    href: "/inbox",
+    label: "Hộp thư",
+    icon: Inbox,
+    mobile: true,
+    prefetch: true,
+    pinned: true,
+  },
   { href: "/decks", label: "Decks", icon: Layers, mobile: true, prefetch: true, defaultVisible: true },
   {
     href: "/chinese",
