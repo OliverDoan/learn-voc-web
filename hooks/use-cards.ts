@@ -3,6 +3,7 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { apiDelete, apiFetch, apiPatch, apiPost } from "@/lib/api-client";
 import type { Card } from "@/lib/types";
+import { withFavorite } from "@/lib/favorite-cache";
 import type {
   BulkCardsInput,
   CardCreateInput,
@@ -62,16 +63,28 @@ export function useUpdateCard(cardId: string) {
   });
 }
 
-/** Bật/tắt đánh dấu yêu thích cho 1 thẻ. */
+/**
+ * Bật/tắt đánh dấu yêu thích cho 1 thẻ — cập nhật lạc quan: ngôi sao đổi ngay
+ * trong mọi danh sách thẻ đang cache, lỗi thì trả lại. Không tải lại cả danh
+ * sách "Tất cả từ" (~1MB) sau mỗi lần bấm, chỉ làm mới danh sách Yêu thích.
+ */
 export function useToggleFavorite() {
   const qc = useQueryClient();
   return useMutation({
     mutationFn: ({ cardId, favorite }: { cardId: string; favorite: boolean }) =>
       apiPatch<Card>(`/api/cards/${cardId}`, { favorite }),
-    onSuccess: () => {
-      qc.invalidateQueries({ queryKey: ["cards"] });
-      qc.invalidateQueries({ queryKey: FAVORITES_KEY });
+    onMutate: async ({ cardId, favorite }) => {
+      await qc.cancelQueries({ queryKey: ["cards"] });
+      const snapshot = qc.getQueriesData({ queryKey: ["cards"] });
+      qc.setQueriesData({ queryKey: ["cards"] }, (data: unknown) =>
+        withFavorite(data, cardId, favorite),
+      );
+      return { snapshot };
     },
+    onError: (_error, _vars, context) => {
+      context?.snapshot.forEach(([key, data]) => qc.setQueryData(key, data));
+    },
+    onSettled: () => qc.invalidateQueries({ queryKey: FAVORITES_KEY }),
   });
 }
 
