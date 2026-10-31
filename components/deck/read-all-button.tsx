@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import {
   ArrowLeftRight,
   Check,
+  Hash,
   Languages,
   Loader2,
   Repeat,
@@ -28,13 +29,15 @@ interface ReadAllButtonProps {
 const delay = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
 
 const SPEEDS = [
+  { label: "Rất chậm", value: 0.5 },
   { label: "Chậm", value: 0.7 },
   { label: "Vừa", value: 0.95 },
   { label: "Nhanh", value: 1.2 },
 ] as const;
 
 const LS = {
-  rate: "voca-readall-rate",
+  // Đổi khoá (v2) để áp mặc định "Rất chậm" mới thay cho lựa chọn cũ đã lưu
+  rate: "voca-readall-rate-v2",
   loop: "voca-readall-loop",
   favorite: "voca-readall-favorite",
   repeatWord: "voca-readall-repeat-word",
@@ -42,11 +45,12 @@ const LS = {
   vietnameseFirst: "voca-readall-vietnamese-first",
   readPos: "voca-readall-read-pos",
   spell: "voca-readall-spell",
+  readNumber: "voca-readall-read-number",
 };
 
 /** Giá trị mặc định khi chưa có tuỳ chọn lưu trong localStorage. */
 const DEFAULTS = {
-  rate: 0.7, // Chậm
+  rate: 0.5, // Rất chậm
   loop: true,
   favorite: false,
   repeatWord: true,
@@ -54,7 +58,15 @@ const DEFAULTS = {
   vietnameseFirst: true,
   readPos: true,
   spell: false,
+  readNumber: false,
 } as const;
+
+/** Tốc độ gốc để giãn khoảng nghỉ: đọc càng chậm thì nghỉ giữa các phần càng lâu. */
+const BASE_PAUSE_RATE = 0.7;
+
+/** Nghỉ `ms` mili-giây, giãn ra khi tốc độ đọc chậm hơn mức "Chậm". */
+const pause = (rate: number, ms: number) =>
+  delay(ms * Math.max(1, BASE_PAUSE_RATE / rate));
 
 /** Đọc cờ boolean từ localStorage; chưa lưu (null) thì dùng mặc định. */
 const readBool = (key: string, fallback: boolean): boolean => {
@@ -81,6 +93,7 @@ export function ReadAllButton({ cards }: ReadAllButtonProps) {
   const [vietnameseFirst, setVietnameseFirst] = useState<boolean>(DEFAULTS.vietnameseFirst);
   const [readPos, setReadPos] = useState<boolean>(DEFAULTS.readPos);
   const [spellLetters, setSpellLetters] = useState<boolean>(DEFAULTS.spell);
+  const [readNumber, setReadNumber] = useState<boolean>(DEFAULTS.readNumber);
 
   // Refs để vòng lặp phát đọc thấy giá trị mới nhất khi đổi tuỳ chọn giữa chừng
   const cancelRef = useRef(false);
@@ -91,6 +104,7 @@ export function ReadAllButton({ cards }: ReadAllButtonProps) {
   const vietnameseFirstRef = useRef(vietnameseFirst);
   const readPosRef = useRef(readPos);
   const spellLettersRef = useRef(spellLetters);
+  const readNumberRef = useRef(readNumber);
   const panelRef = useRef<HTMLDivElement>(null);
 
   rateRef.current = rate;
@@ -100,6 +114,7 @@ export function ReadAllButton({ cards }: ReadAllButtonProps) {
   vietnameseFirstRef.current = vietnameseFirst;
   readPosRef.current = readPos;
   spellLettersRef.current = spellLetters;
+  readNumberRef.current = readNumber;
 
   // Khôi phục tuỳ chọn đã lưu
   useEffect(() => {
@@ -112,6 +127,7 @@ export function ReadAllButton({ cards }: ReadAllButtonProps) {
     setVietnameseFirst(readBool(LS.vietnameseFirst, DEFAULTS.vietnameseFirst));
     setReadPos(readBool(LS.readPos, DEFAULTS.readPos));
     setSpellLetters(readBool(LS.spell, DEFAULTS.spell));
+    setReadNumber(readBool(LS.readNumber, DEFAULTS.readNumber));
   }, []);
 
   // Cleanup khi rời trang
@@ -181,6 +197,13 @@ export function ReadAllButton({ cards }: ReadAllButtonProps) {
     });
   };
 
+  const toggleReadNumber = () => {
+    setReadNumber((p) => {
+      localStorage.setItem(LS.readNumber, !p ? "1" : "0");
+      return !p;
+    });
+  };
+
   const stop = () => {
     cancelRef.current = true;
     stopSpeaking();
@@ -210,12 +233,25 @@ export function ReadAllButton({ cards }: ReadAllButtonProps) {
         setIndex(i);
         const card = playlist[i];
 
+        // Đọc số thứ tự của từ trong deck (khớp số trong bảng từ) nếu bật
+        if (readNumberRef.current) {
+          const no = cards.indexOf(card) + 1;
+          await speakAsync(
+            englishOnlyRef.current ? `Number ${no}` : `Số ${no}`,
+            englishOnlyRef.current ? "en-US" : "vi-VN",
+            rateRef.current,
+          );
+          if (cancelRef.current) break;
+          await pause(rateRef.current, 300);
+          if (cancelRef.current) break;
+        }
+
         // Đọc từ tiếng Anh (lặp 2 lần nếu bật)
         const speakEnglish = async () => {
           await speakAsync(card.word, "en-US", rateRef.current);
           if (cancelRef.current) return;
           if (repeatWordRef.current) {
-            await delay(200);
+            await pause(rateRef.current, 200);
             if (cancelRef.current) return;
             await speakAsync(card.word, "en-US", rateRef.current);
           }
@@ -224,7 +260,7 @@ export function ReadAllButton({ cards }: ReadAllButtonProps) {
         // Đánh vần từng chữ cái của từ (vd "a, p, p, l, e") nếu bật
         const spellWord = async () => {
           if (!spellLettersRef.current) return;
-          await delay(200);
+          await pause(rateRef.current, 200);
           if (cancelRef.current) return;
           await spellAsync(card.word, "en-US", rateRef.current, () => cancelRef.current);
         };
@@ -242,27 +278,27 @@ export function ReadAllButton({ cards }: ReadAllButtonProps) {
           if (cancelRef.current) break;
           await spellWord();
           if (cancelRef.current) break;
-          await delay(250);
+          await pause(rateRef.current, 250);
         } else if (vietnameseFirstRef.current) {
           // Đọc tiếng Việt trước → tiếng Anh → đánh vần
           await speakVietnamese();
           if (cancelRef.current) break;
-          await delay(250);
+          await pause(rateRef.current, 250);
           await speakEnglish();
           if (cancelRef.current) break;
           await spellWord();
           if (cancelRef.current) break;
-          await delay(450);
+          await pause(rateRef.current, 450);
         } else {
           // Mặc định: tiếng Anh → đánh vần → tiếng Việt
           await speakEnglish();
           if (cancelRef.current) break;
           await spellWord();
           if (cancelRef.current) break;
-          await delay(250);
+          await pause(rateRef.current, 250);
           await speakVietnamese();
           if (cancelRef.current) break;
-          await delay(450);
+          await pause(rateRef.current, 450);
         }
       }
     } while (!cancelRef.current && loopRef.current);
@@ -321,7 +357,7 @@ export function ReadAllButton({ cards }: ReadAllButtonProps) {
                 type="button"
                 onClick={() => setRatePersist(s.value)}
                 className={cn(
-                  "flex-1 rounded-full border px-2 py-1.5 text-xs font-medium transition-colors",
+                  "flex-1 whitespace-nowrap rounded-full border px-1.5 py-1.5 text-xs font-medium transition-colors",
                   rate === s.value
                     ? "border-primary bg-primary/10 text-primary"
                     : "border-input text-muted-foreground hover:text-foreground",
@@ -465,6 +501,23 @@ export function ReadAllButton({ cards }: ReadAllButtonProps) {
             </span>
             <Tag className="h-4 w-4 text-muted-foreground" />
             <span>Đọc kèm từ loại</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={toggleReadNumber}
+            className="mt-1 flex w-full items-center gap-2.5 rounded-lg px-1 py-1.5 text-sm hover:bg-accent"
+          >
+            <span
+              className={cn(
+                "flex h-5 w-5 items-center justify-center rounded-md border",
+                readNumber ? "border-primary bg-primary text-primary-foreground" : "border-input",
+              )}
+            >
+              {readNumber ? <Check className="h-3.5 w-3.5" /> : null}
+            </span>
+            <Hash className="h-4 w-4 text-muted-foreground" />
+            <span>Đọc số thứ tự</span>
           </button>
         </div>
       ) : null}
