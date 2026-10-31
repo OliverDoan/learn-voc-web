@@ -1,62 +1,127 @@
 {
   "unit": 24,
   "deck": "Unit 24: Bệnh tật và triệu chứng",
-  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 24 và ít nhất 1 từ đã học ở Unit trước.",
+  "note": "Câu ví dụ rút gọn 6–8 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
   "items": [
     {
       "word": "cold",
-      "example": "My sister caught a cold after walking home in the heavy shower.",
-      "exampleTranslation": "Chị tôi bị cảm lạnh sau khi đi bộ về nhà dưới cơn mưa rào nặng hạt."
+      "example": "I got a cold from the icy wind.",
+      "exampleTranslation": "Tôi bị cảm lạnh vì gió băng giá."
     },
     {
       "word": "ill",
-      "example": "I felt too ill to attend the important meeting yesterday.",
-      "exampleTranslation": "Tôi thấy quá ốm để tham dự cuộc họp quan trọng hôm qua."
+      "example": "She stayed home because she felt ill.",
+      "exampleTranslation": "Cô ấy ở nhà vì thấy ốm."
     },
     {
       "word": "cough",
-      "example": "I began to cough all night and could hardly breathe.",
-      "exampleTranslation": "Tôi bắt đầu ho suốt đêm và gần như không thở nổi."
+      "example": "The pollution makes me cough every morning.",
+      "exampleTranslation": "Ô nhiễm khiến tôi ho mỗi sáng."
+    },
+    {
+      "word": "throat",
+      "example": "Warm lemon tea is good for my throat.",
+      "exampleTranslation": "Trà chanh ấm rất tốt cho cổ họng tôi."
+    },
+    {
+      "word": "sore",
+      "example": "My legs are sore after the long hike.",
+      "exampleTranslation": "Chân tôi đau nhức sau chuyến đi bộ dài."
+    },
+    {
+      "word": "headache",
+      "example": "Noisy neighbours give me a headache.",
+      "exampleTranslation": "Hàng xóm ồn ào làm tôi đau đầu."
+    },
+    {
+      "word": "ache",
+      "example": "I have a stomach ache after eating seafood.",
+      "exampleTranslation": "Tôi bị đau bụng sau khi ăn hải sản."
+    },
+    {
+      "word": "hurt",
+      "example": "Moving heavy furniture hurts my back.",
+      "exampleTranslation": "Khiêng đồ nội thất nặng làm tôi đau lưng."
     },
     {
       "word": "flu",
-      "example": "Every winter my whole family gets the flu, which is really tiring.",
-      "exampleTranslation": "Mùa đông nào cả nhà tôi cũng bị cúm, điều đó thật sự mệt mỏi."
+      "example": "Many students get flu during the rainy season.",
+      "exampleTranslation": "Nhiều học sinh bị cúm vào mùa mưa."
+    },
+    {
+      "word": "fear",
+      "example": "My biggest fear is huge spiders.",
+      "exampleTranslation": "Nỗi sợ lớn nhất của tôi là những con nhện khổng lồ."
+    },
+    {
+      "word": "disease",
+      "example": "A healthy diet helps prevent heart disease.",
+      "exampleTranslation": "Chế độ ăn lành mạnh giúp ngăn ngừa bệnh tim."
     },
     {
       "word": "seriously",
-      "example": "My uncle was seriously sick last year, but his condition is better now.",
-      "exampleTranslation": "Chú tôi ốm nghiêm trọng hồi năm ngoái, nhưng tình trạng của chú giờ đã khá hơn."
+      "example": "She was seriously ill last winter.",
+      "exampleTranslation": "Mùa đông năm ngoái cô ấy ốm nặng."
+    },
+    {
+      "word": "cancer",
+      "example": "Smoking can damage your lungs and cause cancer.",
+      "exampleTranslation": "Hút thuốc có thể hại phổi và gây ung thư."
+    },
+    {
+      "word": "check",
+      "example": "The nurse checks my blood pressure daily.",
+      "exampleTranslation": "Y tá kiểm tra huyết áp của tôi hằng ngày."
     },
     {
       "word": "curable",
-      "example": "The nurse told me my problem was curable, so I stopped feeling anxious.",
-      "exampleTranslation": "Cô y tá nói với tôi rằng bệnh của tôi chữa được, nên tôi thôi cảm thấy lo lắng."
+      "example": "This condition is curable with proper care.",
+      "exampleTranslation": "Tình trạng này chữa được nếu chăm sóc đúng cách."
     },
     {
       "word": "suffer",
-      "example": "Many old people suffer from poor sight and hardly read at night.",
-      "exampleTranslation": "Nhiều người già phải chịu đựng thị lực kém và hiếm khi đọc sách vào ban đêm."
+      "example": "My grandpa suffers from poor sight.",
+      "exampleTranslation": "Ông tôi phải chịu đựng thị lực kém."
+    },
+    {
+      "word": "diabetes",
+      "example": "Too much sugar can lead to diabetes.",
+      "exampleTranslation": "Quá nhiều đường có thể dẫn đến tiểu đường."
+    },
+    {
+      "word": "autism",
+      "example": "Children with autism need special care.",
+      "exampleTranslation": "Trẻ tự kỷ cần sự chăm sóc đặc biệt."
+    },
+    {
+      "word": "injure",
+      "example": "Don't injure yourself at the gym.",
+      "exampleTranslation": "Đừng để bị thương ở phòng gym."
     },
     {
       "word": "bleed",
-      "example": "My nose started to bleed after a long exercise under the hot sun.",
-      "exampleTranslation": "Mũi tôi bắt đầu chảy máu sau một buổi tập dài dưới trời nắng nóng."
+      "example": "My gums bleed after visiting the dentist.",
+      "exampleTranslation": "Lợi tôi chảy máu sau khi đi nha sĩ."
     },
     {
       "word": "prescription",
-      "example": "The doctor gave me a prescription and told me to avoid oily food.",
-      "exampleTranslation": "Bác sĩ đưa tôi một đơn thuốc và bảo tôi tránh đồ ăn nhiều dầu mỡ."
+      "example": "You need a prescription from the clinic.",
+      "exampleTranslation": "Bạn cần đơn thuốc từ phòng khám."
     },
     {
       "word": "ease",
-      "example": "A hot bath will ease your back after such a tiring day.",
-      "exampleTranslation": "Một bồn tắm nước nóng sẽ làm dịu lưng của bạn sau một ngày mệt mỏi như thế."
+      "example": "Warm soup can ease a sore throat.",
+      "exampleTranslation": "Súp ấm có thể làm dịu cơn đau họng."
+    },
+    {
+      "word": "pain",
+      "example": "Regular exercise can help reduce back pain.",
+      "exampleTranslation": "Tập thể dục đều đặn có thể giúp giảm đau lưng."
     },
     {
       "word": "drop",
-      "example": "The nurse told me to put two drops in each eye every morning.",
-      "exampleTranslation": "Cô y tá bảo tôi nhỏ hai giọt vào mỗi bên mắt mỗi sáng."
+      "example": "Use two drops when your sight is blurry.",
+      "exampleTranslation": "Nhỏ hai giọt khi mắt bạn nhìn mờ."
     }
   ]
 }

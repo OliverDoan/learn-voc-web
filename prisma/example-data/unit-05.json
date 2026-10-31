@@ -1,112 +1,127 @@
 {
   "unit": 5,
   "deck": "Unit 5: Hành trình tìm việc của Naruto",
-  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 5 và ít nhất 1 từ đã học ở Unit trước.",
+  "note": "Câu ví dụ rút gọn 6–8 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
   "items": [
     {
       "word": "jobless",
-      "example": "He was jobless for six months after the small company closed last year.",
-      "exampleTranslation": "Anh ấy thất nghiệp suốt sáu tháng sau khi công ty nhỏ đó đóng cửa năm ngoái."
+      "example": "He was jobless after the company closed.",
+      "exampleTranslation": "Anh ấy thất nghiệp sau khi công ty đóng cửa."
     },
     {
       "word": "career",
-      "example": "A good manager can help you plan a long career in business.",
-      "exampleTranslation": "Một người quản lý giỏi có thể giúp bạn lên kế hoạch cho một sự nghiệp lâu dài trong kinh doanh."
+      "example": "She wants a career as an engineer.",
+      "exampleTranslation": "Cô ấy muốn theo sự nghiệp kỹ sư."
     },
     {
       "word": "prepare",
-      "example": "I always prepare answers about my skills before an important meeting.",
-      "exampleTranslation": "Tôi luôn chuẩn bị câu trả lời về các kỹ năng của mình trước một cuộc gặp quan trọng."
+      "example": "I prepared my answers for the employer.",
+      "exampleTranslation": "Tôi đã chuẩn bị câu trả lời cho nhà tuyển dụng."
     },
     {
       "word": "arrange",
-      "example": "The assistant will arrange a meeting with the employer on Monday morning.",
-      "exampleTranslation": "Người trợ lý sẽ sắp xếp một cuộc gặp với nhà tuyển dụng vào sáng thứ Hai."
+      "example": "The assistant arranged a meeting for us.",
+      "exampleTranslation": "Trợ lý đã sắp xếp một cuộc họp cho chúng tôi."
     },
     {
       "word": "document",
-      "example": "Every document must be signed before the new employee starts work.",
-      "exampleTranslation": "Mọi tài liệu đều phải được ký trước khi nhân viên mới bắt đầu làm việc."
+      "example": "Please sign these documents before Monday.",
+      "exampleTranslation": "Vui lòng ký các tài liệu này trước thứ Hai."
     },
     {
       "word": "file",
-      "example": "The accountant keeps every receipt in a file on her desk.",
-      "exampleTranslation": "Kế toán viên giữ mọi hoá đơn trong một hồ sơ trên bàn làm việc."
+      "example": "The receptionist keeps a file on everyone.",
+      "exampleTranslation": "Lễ tân giữ hồ sơ của mọi người."
+    },
+    {
+      "word": "application",
+      "example": "I sent my application to the company.",
+      "exampleTranslation": "Tôi đã gửi đơn xin việc đến công ty."
     },
     {
       "word": "interview",
-      "example": "Try to be punctual for the interview and dress neatly.",
-      "exampleTranslation": "Hãy cố gắng đến đúng giờ cho buổi phỏng vấn và ăn mặc gọn gàng."
+      "example": "The manager will interview me tomorrow.",
+      "exampleTranslation": "Quản lý sẽ phỏng vấn tôi vào ngày mai."
     },
     {
       "word": "secretary",
-      "example": "The secretary printed the form and gave it to the new employee.",
-      "exampleTranslation": "Cô thư ký in mẫu đơn và đưa nó cho nhân viên mới."
+      "example": "The secretary answers calls for the owner.",
+      "exampleTranslation": "Thư ký trả lời điện thoại cho ông chủ."
     },
     {
       "word": "bank teller",
-      "example": "The bank teller counted the money and asked me to sign the paper.",
-      "exampleTranslation": "Giao dịch viên ngân hàng đếm tiền và đề nghị tôi ký vào tờ giấy."
+      "example": "A bank teller must be punctual and polite.",
+      "exampleTranslation": "Giao dịch viên ngân hàng phải đúng giờ và lịch sự."
     },
     {
       "word": "nurse",
-      "example": "My sister works as a nurse in a hospital near our hometown.",
-      "exampleTranslation": "Chị gái tôi làm y tá tại một bệnh viện gần quê chúng tôi."
+      "example": "The nurse works in a hospital in town.",
+      "exampleTranslation": "Cô y tá làm việc ở một bệnh viện trong thị trấn."
     },
     {
       "word": "film maker",
-      "example": "He dreams of being a film maker and studies art every weekend.",
-      "exampleTranslation": "Anh ấy mơ trở thành nhà làm phim và học mỹ thuật vào mỗi cuối tuần."
+      "example": "The film maker wants to describe our culture.",
+      "exampleTranslation": "Nhà làm phim muốn mô tả văn hóa của chúng tôi."
     },
     {
       "word": "musician",
-      "example": "The young musician became popular after playing at the town festival.",
-      "exampleTranslation": "Nhạc công trẻ tuổi trở nên nổi tiếng sau khi chơi nhạc tại lễ hội thị trấn."
+      "example": "The musician plays beautiful songs every night.",
+      "exampleTranslation": "Người nhạc công chơi những bài hát hay mỗi tối."
     },
     {
       "word": "reporter",
-      "example": "A reporter asked the manager to describe the company's new plan.",
-      "exampleTranslation": "Một phóng viên đề nghị vị quản lý mô tả kế hoạch mới của công ty."
+      "example": "The reporter works with a famous journalist.",
+      "exampleTranslation": "Phóng viên làm việc cùng một nhà báo nổi tiếng."
     },
     {
       "word": "photographer",
-      "example": "The photographer took beautiful pictures of the old town centre.",
-      "exampleTranslation": "Nhiếp ảnh gia đã chụp những bức ảnh đẹp về khu trung tâm thị trấn cổ."
+      "example": "A photographer took photos of our town.",
+      "exampleTranslation": "Một nhiếp ảnh gia đã chụp ảnh thị trấn của chúng tôi."
     },
     {
       "word": "designer",
-      "example": "She is a designer who worked abroad for two years.",
-      "exampleTranslation": "Cô ấy là một nhà thiết kế đã làm việc ở nước ngoài hai năm."
+      "example": "The designer works for a fashion company.",
+      "exampleTranslation": "Nhà thiết kế làm việc cho một công ty thời trang."
     },
     {
       "word": "qualified",
-      "example": "He is qualified for this job because he has a teaching certificate.",
-      "exampleTranslation": "Anh ấy đủ tiêu chuẩn cho công việc này vì anh ấy có chứng chỉ giảng dạy."
+      "example": "She is qualified to be an accountant.",
+      "exampleTranslation": "Cô ấy đủ năng lực để làm kế toán."
     },
     {
       "word": "tool",
-      "example": "A dictionary is a useful tool when you learn new vocabulary.",
-      "exampleTranslation": "Từ điển là một công cụ hữu ích khi bạn học từ vựng mới."
+      "example": "A good cook needs special tools.",
+      "exampleTranslation": "Một đầu bếp giỏi cần những dụng cụ đặc biệt."
+    },
+    {
+      "word": "expert",
+      "example": "He is an expert in engineering.",
+      "exampleTranslation": "Anh ấy là chuyên gia trong ngành kỹ thuật."
     },
     {
       "word": "customer",
-      "example": "The salesperson listened carefully to every customer in the crowded shop.",
-      "exampleTranslation": "Nhân viên bán hàng lắng nghe cẩn thận từng khách hàng trong cửa hàng đông đúc."
+      "example": "The salesperson is kind to every customer.",
+      "exampleTranslation": "Người bán hàng tử tế với mọi khách hàng."
     },
     {
       "word": "builder",
-      "example": "The builder and the architect discussed the plan for the new office.",
-      "exampleTranslation": "Người thợ xây và kiến trúc sư đã thảo luận về kế hoạch cho văn phòng mới."
+      "example": "The builder follows the architect's plan.",
+      "exampleTranslation": "Người thợ xây làm theo bản vẽ của kiến trúc sư."
     },
     {
       "word": "employed",
-      "example": "She has been employed at that company since last summer.",
-      "exampleTranslation": "Cô ấy đã được tuyển dụng ở công ty đó từ mùa hè năm ngoái."
+      "example": "My brother is employed by a big company.",
+      "exampleTranslation": "Anh trai tôi đang làm việc cho một công ty lớn."
+    },
+    {
+      "word": "contract",
+      "example": "Read the contract before you sign it.",
+      "exampleTranslation": "Hãy đọc hợp đồng trước khi ký."
     },
     {
       "word": "freelancer",
-      "example": "As a freelancer, he can choose his own hours and live anywhere.",
-      "exampleTranslation": "Là một người làm việc tự do, anh ấy có thể tự chọn giờ giấc và sống ở bất cứ đâu."
+      "example": "As a freelancer, she has no employer.",
+      "exampleTranslation": "Là người làm tự do, cô ấy không có chủ."
     }
   ]
 }

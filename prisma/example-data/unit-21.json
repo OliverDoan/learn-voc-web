@@ -1,82 +1,127 @@
 {
   "unit": 21,
   "deck": "Unit 21: Thiên nhiên và làng quê",
-  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 21 và ít nhất 1 từ đã học ở Unit trước.",
+  "note": "Câu ví dụ rút gọn 6–8 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
   "items": [
     {
+      "word": "nature",
+      "example": "I love walking in nature on holiday.",
+      "exampleTranslation": "Tôi thích đi dạo giữa thiên nhiên vào kỳ nghỉ."
+    },
+    {
       "word": "valley",
-      "example": "A cool breeze blew through the peaceful valley early every morning.",
-      "exampleTranslation": "Một làn gió mát thổi qua thung lũng yên bình vào sáng sớm mỗi ngày."
+      "example": "The valley has an amazing view.",
+      "exampleTranslation": "Thung lũng có quang cảnh tuyệt vời."
     },
     {
       "word": "quiet",
-      "example": "This quiet neighbourhood is very far from the noisy city centre.",
-      "exampleTranslation": "Khu phố yên tĩnh này cách rất xa trung tâm thành phố ồn ào."
+      "example": "The village is quiet and very peaceful.",
+      "exampleTranslation": "Ngôi làng yên tĩnh và rất thanh bình."
     },
     {
       "word": "range",
-      "example": "From my balcony I can see a huge range of green mountains.",
-      "exampleTranslation": "Từ ban công nhà tôi, tôi có thể nhìn thấy một dãy núi xanh khổng lồ."
+      "example": "We hiked across a long mountain range.",
+      "exampleTranslation": "Chúng tôi đi bộ băng qua một dãy núi dài."
     },
     {
       "word": "steep",
-      "example": "The road was so steep that our old vehicle could not move.",
-      "exampleTranslation": "Con đường dốc đến mức chiếc xe cũ của chúng tôi không thể đi nổi."
+      "example": "This steep road is not safe for cars.",
+      "exampleTranslation": "Con đường dốc này không an toàn cho ô tô."
     },
     {
       "word": "hill",
-      "example": "We climbed a small hill and enjoyed a lovely view of the market.",
-      "exampleTranslation": "Chúng tôi leo lên một ngọn đồi nhỏ và ngắm khung cảnh đáng yêu của khu chợ."
+      "example": "There is a pagoda on the hill.",
+      "exampleTranslation": "Có một ngôi chùa trên ngọn đồi."
     },
     {
       "word": "leisurely",
-      "example": "My grandparents walk leisurely around the pond after their home-cooked dinner.",
-      "exampleTranslation": "Ông bà tôi đi bộ thong thả quanh cái ao sau bữa tối nấu tại nhà."
+      "example": "We enjoyed a leisurely journey through the countryside.",
+      "exampleTranslation": "Chúng tôi tận hưởng một chuyến đi thong thả qua vùng quê."
     },
     {
       "word": "part",
-      "example": "This part of the country is famous for fresh fruit and friendly people.",
-      "exampleTranslation": "Vùng này của đất nước nổi tiếng với trái cây tươi và những con người thân thiện."
+      "example": "The north part of Vietnam has cold winters.",
+      "exampleTranslation": "Vùng phía bắc Việt Nam có mùa đông lạnh."
     },
     {
       "word": "explore",
-      "example": "Tourists love to explore the old temple and the narrow alleys nearby.",
-      "exampleTranslation": "Du khách rất thích khám phá ngôi chùa cổ và những con hẻm nhỏ gần đó."
+      "example": "We rented bikes to explore the village.",
+      "exampleTranslation": "Chúng tôi thuê xe đạp để khám phá ngôi làng."
+    },
+    {
+      "word": "neighbour",
+      "example": "Our neighbours are friendly and generous.",
+      "exampleTranslation": "Hàng xóm của chúng tôi thân thiện và hào phóng."
+    },
+    {
+      "word": "custom",
+      "example": "Visitors should respect the local customs.",
+      "exampleTranslation": "Du khách nên tôn trọng phong tục địa phương."
+    },
+    {
+      "word": "architecture",
+      "example": "The village has beautiful traditional architecture.",
+      "exampleTranslation": "Ngôi làng có kiến trúc truyền thống đẹp."
     },
     {
       "word": "grow",
-      "example": "Local farmers grow rice and many kinds of crops on this land.",
-      "exampleTranslation": "Nông dân địa phương trồng lúa và nhiều loại hoa màu trên mảnh đất này."
+      "example": "Farmers here grow rice and fresh vegetables.",
+      "exampleTranslation": "Nông dân ở đây trồng lúa và rau tươi."
     },
     {
       "word": "handicraft",
-      "example": "My aunt sells beautiful handicrafts at the market near our hometown.",
-      "exampleTranslation": "Dì tôi bán những món đồ thủ công đẹp mắt ở khu chợ gần quê chúng tôi."
+      "example": "Tourists love buying local handicrafts as gifts.",
+      "exampleTranslation": "Khách du lịch thích mua đồ thủ công địa phương làm quà."
+    },
+    {
+      "word": "rely",
+      "example": "Villagers rely on the rice harvest.",
+      "exampleTranslation": "Dân làng dựa vào vụ thu hoạch lúa."
+    },
+    {
+      "word": "permission",
+      "example": "Ask for permission before taking photos in temples.",
+      "exampleTranslation": "Hãy xin phép trước khi chụp ảnh trong đền."
     },
     {
       "word": "buffalo",
-      "example": "Every afternoon a buffalo pulls a heavy cart along the narrow alley.",
-      "exampleTranslation": "Chiều nào cũng có một con trâu kéo chiếc xe nặng dọc con hẻm nhỏ."
+      "example": "Buffaloes are common in the Vietnamese countryside.",
+      "exampleTranslation": "Trâu rất phổ biến ở nông thôn Việt Nam."
+    },
+    {
+      "word": "rainforest",
+      "example": "The rainforest is hot, humid, and green.",
+      "exampleTranslation": "Rừng nhiệt đới nóng, ẩm và xanh tươi."
+    },
+    {
+      "word": "hardly",
+      "example": "I could hardly sleep in the noisy hostel.",
+      "exampleTranslation": "Tôi hầu như không ngủ được trong nhà nghỉ ồn ào."
     },
     {
       "word": "bug",
-      "example": "A tiny bug landed on the leaf while I was drinking my coffee.",
-      "exampleTranslation": "Một con côn trùng bé xíu đậu lên chiếc lá khi tôi đang uống cà phê."
+      "example": "There are so many bugs at the campsite.",
+      "exampleTranslation": "Có rất nhiều côn trùng ở khu cắm trại."
     },
     {
       "word": "dangerous",
-      "example": "Swimming alone in that river is dangerous, especially in the rainy season.",
-      "exampleTranslation": "Bơi một mình ở con sông đó rất nguy hiểm, nhất là vào mùa mưa."
+      "example": "It's dangerous to hike alone at night.",
+      "exampleTranslation": "Đi bộ đường dài một mình vào ban đêm rất nguy hiểm."
+    },
+    {
+      "word": "brave",
+      "example": "You are brave to try durian!",
+      "exampleTranslation": "Bạn thật dũng cảm khi thử sầu riêng!"
     },
     {
       "word": "protect",
-      "example": "The villagers work together to protect their crops from heavy floods.",
-      "exampleTranslation": "Dân làng cùng nhau bảo vệ mùa màng của họ khỏi những trận lụt lớn."
+      "example": "We must protect the rainforest from pollution.",
+      "exampleTranslation": "Chúng ta phải bảo vệ rừng nhiệt đới khỏi ô nhiễm."
     },
     {
       "word": "satisfied",
-      "example": "I felt satisfied after a tasty home-cooked meal at my grandmother's house.",
-      "exampleTranslation": "Tôi thấy hài lòng sau bữa cơm nhà ngon miệng ở nhà bà tôi."
+      "example": "We were satisfied with our homestay.",
+      "exampleTranslation": "Chúng tôi hài lòng với chỗ ở homestay."
     }
   ]
 }

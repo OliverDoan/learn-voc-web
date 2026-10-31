@@ -1,67 +1,127 @@
 {
   "unit": 28,
   "deck": "Unit 28: Rèn luyện thể chất",
-  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 28 và ít nhất 1 từ đã học ở Unit trước.",
+  "note": "Câu ví dụ rút gọn 6–8 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
   "items": [
     {
       "word": "train",
-      "example": "We train together five mornings a week to stay fit and strong.",
-      "exampleTranslation": "Chúng tôi rèn luyện cùng nhau năm buổi sáng một tuần để giữ dáng và khoẻ mạnh."
+      "example": "I train at the gym every weekday.",
+      "exampleTranslation": "Tôi rèn luyện ở phòng gym mọi ngày trong tuần."
+    },
+    {
+      "word": "form",
+      "example": "The team is in great form this season.",
+      "exampleTranslation": "Đội đang có phong độ rất tốt mùa này."
     },
     {
       "word": "timetable",
-      "example": "Our coach gave every athlete a clear timetable for the new season.",
-      "exampleTranslation": "Huấn luyện viên của chúng tôi đưa cho mỗi vận động viên một thời gian biểu rõ ràng cho mùa giải mới."
+      "example": "My training timetable is quite busy.",
+      "exampleTranslation": "Thời gian biểu tập luyện của tôi khá dày đặc."
+    },
+    {
+      "word": "age",
+      "example": "Age is just a number for active people.",
+      "exampleTranslation": "Tuổi tác chỉ là con số với người năng động."
+    },
+    {
+      "word": "ability",
+      "example": "She has the ability to remain calm.",
+      "exampleTranslation": "Cô ấy có khả năng giữ bình tĩnh."
     },
     {
       "word": "jogging",
-      "example": "I go jogging every morning because it keeps my mind wonderfully calm.",
-      "exampleTranslation": "Tôi chạy bộ mỗi sáng vì nó giữ cho đầu óc tôi bình tĩnh một cách tuyệt vời."
+      "example": "Jogging by the lake helps me relax.",
+      "exampleTranslation": "Chạy bộ quanh hồ giúp tôi thư giãn."
     },
     {
       "word": "running",
-      "example": "Running is cheap and easy, so even lazy people should try it.",
-      "exampleTranslation": "Chạy là môn rẻ và dễ, nên ngay cả người lười biếng cũng nên thử nó."
+      "example": "Running is a cheap way to stay fit.",
+      "exampleTranslation": "Chạy là cách rẻ tiền để giữ dáng khỏe mạnh."
     },
     {
       "word": "burn",
-      "example": "A long walk can burn more energy than a stressful hour at work.",
-      "exampleTranslation": "Một chuyến đi bộ dài có thể đốt cháy nhiều năng lượng hơn một giờ căng thẳng ở chỗ làm."
+      "example": "Hiking up hills burns a lot of energy.",
+      "exampleTranslation": "Đi bộ leo đồi đốt cháy rất nhiều năng lượng."
     },
     {
       "word": "tear",
-      "example": "A tear ran down her face when she lifted the golden cup.",
-      "exampleTranslation": "Một giọt nước mắt lăn trên mặt cô ấy khi cô ấy nâng chiếc cúp vàng."
+      "example": "Tears ran down her face after the final.",
+      "exampleTranslation": "Nước mắt lăn trên mặt cô ấy sau trận chung kết."
     },
     {
       "word": "push-up",
-      "example": "He does fifty push-ups without a break and never looks exhausted.",
-      "exampleTranslation": "Anh ấy hít đất năm mươi cái không nghỉ và không bao giờ trông kiệt sức."
+      "example": "I do twenty push-ups to build muscle.",
+      "exampleTranslation": "Tôi hít đất hai mươi cái để xây dựng cơ bắp."
+    },
+    {
+      "word": "lift",
+      "example": "He can lift heavy weights easily.",
+      "exampleTranslation": "Anh ấy có thể nâng tạ nặng một cách dễ dàng."
+    },
+    {
+      "word": "trainer",
+      "example": "My personal trainer is strict but helpful.",
+      "exampleTranslation": "Huấn luyện viên cá nhân của tôi nghiêm khắc nhưng tận tình."
     },
     {
       "word": "beast",
-      "example": "After a year of hard practice he became a real beast.",
-      "exampleTranslation": "Sau một năm luyện tập chăm chỉ, anh ấy trở thành một quái vật thực sự."
+      "example": "At the gym, my brother is a beast.",
+      "exampleTranslation": "Ở phòng gym, anh trai tôi khỏe như quái vật."
     },
     {
       "word": "gain",
-      "example": "I eat more beef and rice because I want to gain weight.",
-      "exampleTranslation": "Tôi ăn nhiều thịt bò và cơm hơn vì tôi muốn tăng cân."
+      "example": "I gained weight during the holiday.",
+      "exampleTranslation": "Tôi đã tăng cân trong kỳ nghỉ."
+    },
+    {
+      "word": "ride",
+      "example": "I ride my bike to work daily.",
+      "exampleTranslation": "Tôi đạp xe đi làm hằng ngày."
     },
     {
       "word": "racing",
-      "example": "Bicycle racing looks exciting, but it is quite dangerous on wet streets.",
-      "exampleTranslation": "Đua xe đạp trông hấp dẫn, nhưng nó khá nguy hiểm trên những con phố ướt."
+      "example": "Car racing is exciting but dangerous.",
+      "exampleTranslation": "Đua xe thú vị nhưng nguy hiểm."
+    },
+    {
+      "word": "swimming",
+      "example": "Swimming is a great exercise for everyone.",
+      "exampleTranslation": "Bơi là môn thể dục tuyệt vời cho mọi người."
+    },
+    {
+      "word": "hiking",
+      "example": "We went hiking in the mountains last weekend.",
+      "exampleTranslation": "Cuối tuần trước chúng tôi đi bộ đường dài trên núi."
+    },
+    {
+      "word": "paddle",
+      "example": "We paddled a small boat across the lake.",
+      "exampleTranslation": "Chúng tôi chèo một chiếc thuyền nhỏ qua hồ."
+    },
+    {
+      "word": "sailing",
+      "example": "Sailing around the bay was amazing.",
+      "exampleTranslation": "Đi thuyền buồm quanh vịnh thật tuyệt vời."
+    },
+    {
+      "word": "brave",
+      "example": "You must be brave to try diving.",
+      "exampleTranslation": "Bạn phải dũng cảm mới dám thử lặn."
+    },
+    {
+      "word": "diving",
+      "example": "Diving near the island is very popular.",
+      "exampleTranslation": "Lặn biển gần hòn đảo rất phổ biến."
     },
     {
       "word": "snorkel",
-      "example": "We snorkel near the island every summer to watch the colourful fish.",
-      "exampleTranslation": "Chúng tôi lặn ống thở gần hòn đảo mỗi mùa hè để ngắm những con cá đầy màu sắc."
+      "example": "Let's snorkel in the clear bay.",
+      "exampleTranslation": "Mình đi lặn với ống thở ở vịnh nước trong nhé."
     },
     {
       "word": "net",
-      "example": "She served the ball into the net and looked quite embarrassed.",
-      "exampleTranslation": "Cô ấy giao bóng vào lưới và trông khá ngượng ngùng."
+      "example": "Fishing with a net is a local custom.",
+      "exampleTranslation": "Đánh cá bằng lưới là một tập quán địa phương."
     }
   ]
 }

@@ -1,122 +1,127 @@
 {
   "unit": 15,
   "deck": "Unit 15: Bạn gái và thời tiết quê tôi",
-  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 15 và ít nhất 1 từ đã học ở Unit trước.",
+  "note": "Câu ví dụ rút gọn 6–8 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
   "items": [
     {
       "word": "climate",
-      "example": "The climate in my hometown is hot and wet for most of the year.",
-      "exampleTranslation": "Khí hậu ở quê tôi nóng và ẩm ướt trong phần lớn thời gian của năm."
+      "example": "The climate in the north is cold.",
+      "exampleTranslation": "Khí hậu ở miền bắc lạnh."
     },
     {
       "word": "season",
-      "example": "The wet season generally lasts for three months in the south.",
-      "exampleTranslation": "Mùa mưa nhìn chung kéo dài ba tháng ở miền Nam."
+      "example": "Summer is the rainy season in the south.",
+      "exampleTranslation": "Mùa hè là mùa mưa ở miền nam."
+    },
+    {
+      "word": "typical",
+      "example": "This is typical weather for my hometown.",
+      "exampleTranslation": "Đây là thời tiết điển hình ở quê tôi."
     },
     {
       "word": "beginning",
-      "example": "Spring is the beginning of a new year, so families tidy their houses.",
-      "exampleTranslation": "Mùa xuân là sự khởi đầu của một năm mới, nên các gia đình dọn dẹp nhà cửa."
+      "example": "The festival is at the beginning of spring.",
+      "exampleTranslation": "Lễ hội diễn ra vào đầu mùa xuân."
     },
     {
       "word": "sunny",
-      "example": "We expect a sunny morning for the outdoor wedding tomorrow.",
-      "exampleTranslation": "Chúng tôi mong đợi một buổi sáng nhiều nắng cho đám cưới ngoài trời ngày mai."
+      "example": "It is sunny, so let's go hiking.",
+      "exampleTranslation": "Trời nắng, vậy đi bộ đường dài thôi."
     },
     {
       "word": "humid",
-      "example": "My girlfriend is not familiar with such humid weather in the north.",
-      "exampleTranslation": "Bạn gái tôi không quen với thời tiết ẩm như vậy ở miền Bắc."
+      "example": "The south is hot and humid.",
+      "exampleTranslation": "Miền nam nóng và ẩm."
     },
     {
       "word": "forecast",
-      "example": "They forecast heavy rain, so the village cancelled the festival parade.",
-      "exampleTranslation": "Họ dự báo mưa lớn, nên ngôi làng đã huỷ cuộc diễu hành lễ hội."
+      "example": "They forecast rain for the festival.",
+      "exampleTranslation": "Họ dự báo trời sẽ mưa vào ngày lễ hội."
     },
     {
       "word": "temperature",
-      "example": "The temperature dropped quickly and every guest felt cold at the party.",
-      "exampleTranslation": "Nhiệt độ giảm nhanh và mọi vị khách đều thấy lạnh trong bữa tiệc."
+      "example": "The temperature decreases at night in the north.",
+      "exampleTranslation": "Nhiệt độ giảm vào ban đêm ở miền bắc."
     },
     {
       "word": "Celsius",
-      "example": "Yesterday it reached forty degrees Celsius in our noisy city.",
-      "exampleTranslation": "Hôm qua nhiệt độ lên tới bốn mươi độ C ở thành phố ồn ào của chúng tôi."
+      "example": "It was forty degrees Celsius in the capital.",
+      "exampleTranslation": "Ở thủ đô nhiệt độ lên tới bốn mươi độ C."
     },
     {
       "word": "breeze",
-      "example": "A cool breeze made the whole afternoon lovely at the temple.",
-      "exampleTranslation": "Một cơn gió nhẹ mát mẻ khiến cả buổi chiều thật dễ chịu ở ngôi đền."
+      "example": "We enjoy the cool breeze on the balcony.",
+      "exampleTranslation": "Chúng tôi tận hưởng làn gió mát trên ban công."
     },
     {
       "word": "pleasant",
-      "example": "Autumn brings pleasant weather, so we often hike in the hills.",
-      "exampleTranslation": "Mùa thu mang đến thời tiết dễ chịu, nên chúng tôi thường đi bộ đường dài trên những ngọn đồi."
+      "example": "The weather here is pleasant and comfortable.",
+      "exampleTranslation": "Thời tiết ở đây dễ chịu và thoải mái."
     },
     {
       "word": "rainy",
-      "example": "We rarely go out on a cold, rainy day during the holiday.",
-      "exampleTranslation": "Chúng tôi hiếm khi ra ngoài vào một ngày lạnh và nhiều mưa trong kỳ nghỉ lễ."
+      "example": "Rainy days are perfect for staying home.",
+      "exampleTranslation": "Những ngày mưa thật hợp để ở nhà."
     },
     {
       "word": "drizzle",
-      "example": "A light drizzle fell while the lovely couple took their photos.",
-      "exampleTranslation": "Một cơn mưa phùn nhẹ rơi trong lúc cặp đôi đáng yêu chụp ảnh."
+      "example": "A light drizzle fell all morning.",
+      "exampleTranslation": "Mưa phùn nhẹ rơi suốt buổi sáng."
     },
     {
       "word": "shower",
-      "example": "A sudden shower surprised the tourists at the outdoor market.",
-      "exampleTranslation": "Một cơn mưa rào bất chợt làm các du khách ở khu chợ ngoài trời giật mình."
+      "example": "A sudden shower ruined our sightseeing tour.",
+      "exampleTranslation": "Một cơn mưa rào bất chợt làm hỏng chuyến ngắm cảnh của chúng tôi."
     },
     {
       "word": "cloud",
-      "example": "A dark cloud covered the sun and the whole area turned grey.",
-      "exampleTranslation": "Một đám mây đen che khuất mặt trời và cả khu vực chuyển sang màu xám."
+      "example": "Dark clouds covered the whole capital.",
+      "exampleTranslation": "Mây đen phủ kín cả thủ đô."
     },
     {
       "word": "approach",
-      "example": "Storms usually approach the local coast in September.",
-      "exampleTranslation": "Bão thường tiếp cận bờ biển địa phương vào tháng Chín."
+      "example": "A storm is approaching our hometown.",
+      "exampleTranslation": "Một cơn bão đang tiến gần quê tôi."
     },
     {
       "word": "nasty",
-      "example": "We had really nasty weather during our journey to the resort.",
-      "exampleTranslation": "Chúng tôi gặp thời tiết thật khó chịu trong chuyến đi đến khu nghỉ dưỡng."
+      "example": "The nasty weather ruined our holiday.",
+      "exampleTranslation": "Thời tiết khó chịu đã làm hỏng kỳ nghỉ của chúng tôi."
     },
     {
       "word": "awful",
-      "example": "The traffic was awful, so we arrived late at the celebration.",
-      "exampleTranslation": "Giao thông thật kinh khủng, nên chúng tôi đến buổi ăn mừng muộn."
+      "example": "The pollution in the city is awful.",
+      "exampleTranslation": "Ô nhiễm trong thành phố thật kinh khủng."
     },
     {
       "word": "middle",
-      "example": "In the middle of the night a strong wind broke our balcony door.",
-      "exampleTranslation": "Vào giữa đêm, một cơn gió mạnh đã làm hỏng cửa ban công nhà chúng tôi."
+      "example": "A temple stands in the middle of town.",
+      "exampleTranslation": "Một ngôi đền nằm ở giữa thị trấn."
     },
     {
       "word": "typhoon",
-      "example": "A strong typhoon hit the coast and delayed every flight.",
-      "exampleTranslation": "Một cơn bão nhiệt đới mạnh đã đổ bộ vào bờ biển và làm hoãn mọi chuyến bay."
+      "example": "The typhoon damaged many houses near the bridge.",
+      "exampleTranslation": "Cơn bão làm hư hại nhiều ngôi nhà gần cây cầu."
     },
     {
       "word": "flood",
-      "example": "The flood damaged many houses in our poor neighbourhood.",
-      "exampleTranslation": "Trận lũ lụt đã làm hư hại nhiều ngôi nhà ở khu phố nghèo của chúng tôi."
+      "example": "The flood destroyed the whole neighbourhood.",
+      "exampleTranslation": "Trận lũ đã phá hủy cả khu phố."
     },
     {
       "word": "last",
-      "example": "A cold spell can last for two weeks in the north.",
-      "exampleTranslation": "Một đợt lạnh có thể kéo dài hai tuần ở miền Bắc."
+      "example": "Our holiday lasted only three days.",
+      "exampleTranslation": "Kỳ nghỉ của chúng tôi chỉ kéo dài ba ngày."
     },
     {
       "word": "period",
-      "example": "There is a quiet period before the festival begins each year.",
-      "exampleTranslation": "Có một khoảng thời gian yên ắng trước khi lễ hội bắt đầu mỗi năm."
+      "example": "We visited during a busy holiday period.",
+      "exampleTranslation": "Chúng tôi đến thăm vào khoảng thời gian nghỉ lễ đông đúc."
     },
     {
       "word": "end",
-      "example": "At the end of the wet season, farmers pray for a good harvest.",
-      "exampleTranslation": "Vào cuối mùa mưa, những người nông dân cầu nguyện cho một vụ mùa bội thu."
+      "example": "We left at the end of the festival.",
+      "exampleTranslation": "Chúng tôi rời đi vào cuối lễ hội."
     }
   ]
 }

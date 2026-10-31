@@ -1,102 +1,127 @@
 {
   "unit": 13,
   "deck": "Unit 13: Mùa cưới và lễ hội",
-  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 13 và ít nhất 1 từ đã học ở Unit trước.",
+  "note": "Câu ví dụ rút gọn 6–8 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
   "items": [
     {
       "word": "generally",
-      "example": "Local weddings generally take place near a temple in early spring.",
-      "exampleTranslation": "Các đám cưới ở địa phương nhìn chung diễn ra gần một ngôi đền vào đầu mùa xuân."
+      "example": "Weddings are generally expensive in my hometown.",
+      "exampleTranslation": "Đám cưới ở quê tôi nhìn chung khá tốn kém."
     },
     {
       "word": "celebration",
-      "example": "The celebration at the resort lasted until midnight and everyone felt excited.",
-      "exampleTranslation": "Buổi ăn mừng ở khu nghỉ dưỡng kéo dài đến nửa đêm và mọi người đều thấy hào hứng."
+      "example": "We had a big celebration at the resort.",
+      "exampleTranslation": "Chúng tôi đã tổ chức ăn mừng lớn ở khu nghỉ dưỡng."
     },
     {
       "word": "occasion",
-      "example": "My parents invite all their neighbours on every important occasion.",
-      "exampleTranslation": "Bố mẹ tôi mời tất cả hàng xóm trong mọi dịp quan trọng."
+      "example": "A wedding is a special occasion.",
+      "exampleTranslation": "Đám cưới là một dịp đặc biệt."
     },
     {
       "word": "wedding",
-      "example": "Her wedding was a lovely moment that our whole family still remembers.",
-      "exampleTranslation": "Đám cưới của cô ấy là một khoảnh khắc đáng yêu mà cả gia đình tôi vẫn còn nhớ."
+      "example": "Their wedding was held at a lovely church.",
+      "exampleTranslation": "Đám cưới của họ được tổ chức ở một nhà thờ xinh xắn."
     },
     {
       "word": "guest",
-      "example": "Every guest received a small postcard with a photo of the bride.",
-      "exampleTranslation": "Mỗi vị khách đều nhận được một tấm bưu thiếp nhỏ có ảnh của cô dâu."
+      "example": "The guests stayed at a local homestay.",
+      "exampleTranslation": "Khách mời ở tại một homestay địa phương."
     },
     {
       "word": "relative",
-      "example": "A distant relative travels from the south to join our family dinner.",
-      "exampleTranslation": "Một người họ hàng xa đi từ miền Nam đến để dự bữa tối gia đình."
+      "example": "My relatives live in the countryside.",
+      "exampleTranslation": "Họ hàng của tôi sống ở nông thôn."
     },
     {
       "word": "congratulations",
-      "example": "Everyone shouted congratulations when the lovely couple walked into the reception.",
-      "exampleTranslation": "Mọi người hô vang lời chúc mừng khi cặp đôi đáng yêu bước vào buổi tiệc chiêu đãi."
+      "example": "Congratulations on your new job at the company!",
+      "exampleTranslation": "Chúc mừng bạn có công việc mới ở công ty!"
     },
     {
       "word": "welcome",
-      "example": "Host families warmly welcome every tourist who stays at their homestay.",
-      "exampleTranslation": "Các gia đình chủ nhà nồng nhiệt chào đón mọi du khách ở lại homestay của họ."
+      "example": "We welcomed the guests at reception.",
+      "exampleTranslation": "Chúng tôi đón tiếp khách ở quầy lễ tân."
     },
     {
       "word": "party",
-      "example": "We party all night whenever we escape the noisy city for a weekend.",
-      "exampleTranslation": "Chúng tôi tiệc tùng cả đêm mỗi khi trốn khỏi thành phố ồn ào vào cuối tuần."
+      "example": "We partied all night at the nightclub.",
+      "exampleTranslation": "Chúng tôi tiệc tùng cả đêm ở hộp đêm."
     },
     {
       "word": "luck",
-      "example": "Many people visit the pagoda at new year to ask for good luck.",
-      "exampleTranslation": "Nhiều người đến thăm ngôi chùa vào dịp năm mới để cầu xin vận may."
+      "example": "Good luck with your job interview tomorrow!",
+      "exampleTranslation": "Chúc bạn may mắn với buổi phỏng vấn ngày mai!"
     },
     {
       "word": "festival",
-      "example": "The spring festival brings a vibrant atmosphere to our small town.",
-      "exampleTranslation": "Lễ hội mùa xuân mang lại bầu không khí sôi động cho thị trấn nhỏ của chúng tôi."
+      "example": "The festival attracts many tourists every year.",
+      "exampleTranslation": "Lễ hội thu hút nhiều du khách mỗi năm."
     },
     {
       "word": "national",
-      "example": "The national day gives us a chance to visit our hometown together.",
-      "exampleTranslation": "Ngày lễ toàn quốc cho chúng tôi cơ hội cùng nhau về thăm quê."
+      "example": "We celebrate National Day in the central square.",
+      "exampleTranslation": "Chúng tôi mừng Quốc khánh ở quảng trường trung tâm."
     },
     {
       "word": "lantern",
-      "example": "Children carry a bright lantern around the market on that special night.",
-      "exampleTranslation": "Trẻ em cầm một chiếc đèn lồng sáng đi quanh khu chợ trong đêm đặc biệt đó."
+      "example": "Children carry lanterns around the neighbourhood.",
+      "exampleTranslation": "Trẻ em mang đèn lồng đi quanh khu phố."
     },
     {
       "word": "firework",
-      "example": "We watched a huge firework display from the balcony of our flat.",
-      "exampleTranslation": "Chúng tôi xem màn pháo hoa khổng lồ từ ban công căn hộ của mình."
+      "example": "We watched the fireworks from the balcony.",
+      "exampleTranslation": "Chúng tôi xem pháo hoa từ ban công."
+    },
+    {
+      "word": "public",
+      "example": "The park is open to the public.",
+      "exampleTranslation": "Công viên mở cửa cho công chúng."
     },
     {
       "word": "pray",
-      "example": "My grandmother goes to the temple to pray for her family every month.",
-      "exampleTranslation": "Bà tôi đến ngôi đền để cầu nguyện cho gia đình mỗi tháng."
+      "example": "People pray for luck at the pagoda.",
+      "exampleTranslation": "Mọi người cầu may ở chùa."
+    },
+    {
+      "word": "offering",
+      "example": "They put offerings on the temple table.",
+      "exampleTranslation": "Họ đặt lễ vật lên bàn thờ trong đền."
+    },
+    {
+      "word": "priest",
+      "example": "The priest welcomed us into the church.",
+      "exampleTranslation": "Vị linh mục chào đón chúng tôi vào nhà thờ."
+    },
+    {
+      "word": "peace",
+      "example": "The temple is a place of peace.",
+      "exampleTranslation": "Ngôi đền là một nơi bình yên."
     },
     {
       "word": "holiday",
-      "example": "During the holiday we always try new food at the local market.",
-      "exampleTranslation": "Trong kỳ nghỉ lễ chúng tôi luôn thử món ăn mới ở chợ địa phương."
+      "example": "We spent the holiday at a resort.",
+      "exampleTranslation": "Chúng tôi nghỉ lễ ở một khu nghỉ dưỡng."
     },
     {
       "word": "tidy",
-      "example": "We tidy every room in the flat before our cousins arrive.",
-      "exampleTranslation": "Chúng tôi dọn dẹp mọi căn phòng trong căn hộ trước khi các anh chị em họ đến."
+      "example": "We tidied every room before the holiday.",
+      "exampleTranslation": "Chúng tôi dọn dẹp mọi phòng trước kỳ nghỉ lễ."
     },
     {
       "word": "exchange",
-      "example": "The two families exchange small gifts and share a peaceful dinner.",
-      "exampleTranslation": "Hai gia đình trao đổi những món quà nhỏ và cùng chia sẻ một bữa tối yên bình."
+      "example": "We exchange gifts with our friendly neighbours.",
+      "exampleTranslation": "Chúng tôi trao đổi quà với những người hàng xóm thân thiện."
+    },
+    {
+      "word": "loved one",
+      "example": "Spend time with a loved one during Tet.",
+      "exampleTranslation": "Hãy dành thời gian bên người thân yêu dịp Tết."
     },
     {
       "word": "anniversary",
-      "example": "My parents celebrate their anniversary at an expensive restaurant every year.",
-      "exampleTranslation": "Bố mẹ tôi kỷ niệm ngày cưới ở một nhà hàng đắt tiền mỗi năm."
+      "example": "We celebrated our anniversary at a lovely resort.",
+      "exampleTranslation": "Chúng tôi kỉ niệm ngày cưới ở một khu nghỉ dưỡng xinh đẹp."
     }
   ]
 }

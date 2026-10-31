@@ -1,117 +1,127 @@
 {
   "unit": 16,
   "deck": "Unit 16: Nấu ăn & bữa tối",
-  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 16 và ít nhất 1 từ đã học ở Unit trước.",
+  "note": "Câu ví dụ rút gọn 6–8 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
   "items": [
     {
+      "word": "prepare",
+      "example": "I always prepare a simple dinner after work.",
+      "exampleTranslation": "Tôi luôn chuẩn bị một bữa tối đơn giản sau giờ làm."
+    },
+    {
       "word": "groceries",
-      "example": "I bought some groceries at the local market before the rainy afternoon.",
-      "exampleTranslation": "Tôi đã mua một ít thực phẩm ở chợ địa phương trước buổi chiều mưa."
+      "example": "We buy groceries at the local market.",
+      "exampleTranslation": "Chúng tôi mua thực phẩm ở chợ địa phương."
+    },
+    {
+      "word": "beef",
+      "example": "This beef is cheap but very tasty.",
+      "exampleTranslation": "Thịt bò này rẻ nhưng rất ngon."
     },
     {
       "word": "pork",
-      "example": "We grilled some pork for the family celebration last Sunday.",
-      "exampleTranslation": "Chúng tôi đã nướng một ít thịt lợn cho buổi ăn mừng của gia đình vào Chủ nhật tuần trước."
+      "example": "My mum likes to cook pork with garlic.",
+      "exampleTranslation": "Mẹ tôi thích nấu thịt lợn với tỏi."
     },
     {
       "word": "bacon",
-      "example": "My girlfriend fried bacon and eggs on a cold, rainy morning.",
-      "exampleTranslation": "Bạn gái tôi đã rán thịt ba chỉ xông khói và trứng vào một buổi sáng lạnh và mưa."
+      "example": "I always eat bacon and eggs for breakfast.",
+      "exampleTranslation": "Tôi luôn ăn thịt ba chỉ xông khói và trứng vào bữa sáng."
     },
     {
       "word": "vegetarian",
-      "example": "My girlfriend is a vegetarian, and her whole family respects that choice.",
-      "exampleTranslation": "Bạn gái tôi là người ăn chay, và cả gia đình cô ấy tôn trọng lựa chọn đó."
+      "example": "Our guest is vegetarian, so no meat tonight.",
+      "exampleTranslation": "Khách của chúng tôi ăn chay, nên tối nay không có thịt."
     },
     {
       "word": "stove",
-      "example": "She put a big pot on the stove before the guests arrived.",
-      "exampleTranslation": "Cô ấy đặt một cái nồi lớn lên bếp trước khi khách đến."
+      "example": "The stove in our flat is quite old.",
+      "exampleTranslation": "Cái bếp trong căn hộ của chúng tôi khá cũ."
     },
     {
       "word": "boil",
-      "example": "Boil the eggs for ten minutes while I tidy the kitchen.",
-      "exampleTranslation": "Hãy luộc trứng trong mười phút trong lúc tôi dọn dẹp bếp."
+      "example": "Boiling tap water makes it safe to drink.",
+      "exampleTranslation": "Đun sôi nước máy giúp nó an toàn để uống."
     },
     {
       "word": "grill",
-      "example": "We grill fish in the garden whenever the weather is pleasant.",
-      "exampleTranslation": "Chúng tôi nướng cá ngoài vườn mỗi khi thời tiết dễ chịu."
+      "example": "We often grill fish at the campsite.",
+      "exampleTranslation": "Chúng tôi thường nướng cá ở khu cắm trại."
     },
     {
       "word": "crispy",
-      "example": "My father loves crispy fried chicken more than any expensive dish.",
-      "exampleTranslation": "Bố tôi thích gà rán giòn hơn bất kỳ món ăn đắt tiền nào."
+      "example": "My favourite snack is crispy fried chicken.",
+      "exampleTranslation": "Món ăn vặt yêu thích của tôi là gà rán giòn."
     },
     {
       "word": "stir-fry",
-      "example": "I stir-fry vegetables with garlic, and my grandmother always adds fish sauce.",
-      "exampleTranslation": "Tôi xào rau với tỏi, và bà tôi luôn thêm nước mắm vào."
+      "example": "My roommate likes to stir-fry noodles.",
+      "exampleTranslation": "Bạn cùng phòng của tôi thích xào mì."
     },
     {
       "word": "chilli",
-      "example": "She added a red chilli to the soup to surprise her brother.",
-      "exampleTranslation": "Cô ấy đã thêm một quả ớt đỏ vào món canh để làm anh trai cô ấy bất ngờ."
+      "example": "Local people put chilli in almost everything.",
+      "exampleTranslation": "Người dân địa phương cho ớt vào hầu hết mọi món."
     },
     {
       "word": "spicy",
-      "example": "This curry is much too spicy for our foreign guests.",
-      "exampleTranslation": "Món cà ri này quá cay đối với những vị khách nước ngoài của chúng tôi."
+      "example": "Spicy food is popular in my hometown.",
+      "exampleTranslation": "Đồ ăn cay rất phổ biến ở quê tôi."
     },
     {
       "word": "hotpot",
-      "example": "We had a hotpot dinner together while a light drizzle fell outside.",
-      "exampleTranslation": "Chúng tôi đã cùng nhau ăn lẩu trong khi một cơn mưa phùn nhẹ rơi bên ngoài."
+      "example": "We share a big hotpot on rainy days.",
+      "exampleTranslation": "Chúng tôi cùng ăn một nồi lẩu lớn vào những ngày mưa."
     },
     {
       "word": "soup",
-      "example": "He made a hot bowl of soup because the temperature dropped suddenly.",
-      "exampleTranslation": "Anh ấy đã nấu một bát canh nóng vì nhiệt độ giảm đột ngột."
+      "example": "Mum's chicken soup always makes me feel better.",
+      "exampleTranslation": "Món súp gà của mẹ luôn làm tôi thấy dễ chịu hơn."
     },
     {
       "word": "sauce",
-      "example": "Pour some sauce over the noodles before your relatives sit down.",
-      "exampleTranslation": "Hãy rưới một ít nước sốt lên mì trước khi họ hàng của bạn ngồi xuống."
+      "example": "This sauce has a strange but nice taste.",
+      "exampleTranslation": "Nước sốt này có vị lạ nhưng ngon."
     },
     {
       "word": "sweet",
-      "example": "The cake at the wedding was very sweet and everyone wanted more.",
-      "exampleTranslation": "Chiếc bánh ở đám cưới rất ngọt và ai cũng muốn ăn thêm."
+      "example": "Too many sweet drinks are unhealthy for you.",
+      "exampleTranslation": "Quá nhiều đồ uống ngọt có hại cho sức khỏe của bạn."
     },
     {
       "word": "savoury",
-      "example": "I prefer savoury food, especially during the cold rainy season.",
-      "exampleTranslation": "Tôi thích đồ ăn đậm đà hơn, đặc biệt là trong mùa mưa lạnh."
+      "example": "Savoury pancakes are a typical local dish.",
+      "exampleTranslation": "Bánh kếp mặn là một món ăn địa phương tiêu biểu."
     },
     {
       "word": "oily",
-      "example": "Street food here is often oily, but it tastes amazing.",
-      "exampleTranslation": "Đồ ăn đường phố ở đây thường nhiều dầu mỡ, nhưng nó có vị rất tuyệt."
+      "example": "I avoid oily food before going to bed.",
+      "exampleTranslation": "Tôi tránh đồ ăn nhiều dầu mỡ trước khi đi ngủ."
     },
     {
       "word": "dry",
-      "example": "The chicken was too dry because she cooked it for a whole hour.",
-      "exampleTranslation": "Con gà quá khô vì cô ấy đã nấu nó suốt một tiếng đồng hồ."
+      "example": "The cake is too dry for my taste.",
+      "exampleTranslation": "Cái bánh này quá khô so với khẩu vị của tôi."
     },
     {
       "word": "stomach",
-      "example": "My stomach hurts after I tried too much street food.",
-      "exampleTranslation": "Dạ dày tôi đau sau khi tôi thử quá nhiều đồ ăn đường phố."
+      "example": "My stomach feels awful after that meal.",
+      "exampleTranslation": "Dạ dày tôi khó chịu kinh khủng sau bữa ăn đó."
     },
     {
       "word": "hangry",
-      "example": "I get hangry when I skip lunch on a busy holiday.",
-      "exampleTranslation": "Tôi cáu vì đói khi bỏ bữa trưa vào một ngày lễ bận rộn."
+      "example": "My housemate gets hangry when dinner is late.",
+      "exampleTranslation": "Bạn ở cùng nhà tôi hay cáu khi bữa tối bị muộn."
     },
     {
       "word": "serve",
-      "example": "They serve dinner at seven o'clock in that lovely little restaurant.",
-      "exampleTranslation": "Họ phục vụ bữa tối lúc bảy giờ trong nhà hàng nhỏ đáng yêu đó."
+      "example": "The homestay serves breakfast at seven o'clock.",
+      "exampleTranslation": "Homestay phục vụ bữa sáng lúc bảy giờ."
     },
     {
       "word": "yummy",
-      "example": "This dessert is so yummy that I want to recommend it to you.",
-      "exampleTranslation": "Món tráng miệng này ngon đến mức tôi muốn giới thiệu nó cho bạn."
+      "example": "Wow, everything at this party looks yummy!",
+      "exampleTranslation": "Wow, mọi món ở bữa tiệc này trông ngon quá!"
     }
   ]
 }

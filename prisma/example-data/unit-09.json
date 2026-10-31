@@ -1,87 +1,127 @@
 {
   "unit": 9,
   "deck": "Unit 9: Căn hộ mới của Hinata",
-  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 9 và ít nhất 1 từ đã học ở Unit trước.",
+  "note": "Câu ví dụ rút gọn 6–8 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
   "items": [
     {
       "word": "drive",
-      "example": "She has to drive along the highway for an hour to reach the city centre.",
-      "exampleTranslation": "Cô ấy phải lái xe trên đường cao tốc một tiếng để đến trung tâm thành phố."
+      "example": "I drive to work on the highway.",
+      "exampleTranslation": "Tôi lái xe đi làm trên đường cao tốc."
     },
     {
       "word": "away",
-      "example": "They moved away from the bustling district because the rent was too expensive.",
-      "exampleTranslation": "Họ chuyển đi xa khỏi khu phố náo nhiệt vì tiền thuê nhà quá đắt."
+      "example": "My flat is far away from the centre.",
+      "exampleTranslation": "Căn hộ của tôi ở xa trung tâm."
+    },
+    {
+      "word": "place",
+      "example": "This is a peaceful place to live.",
+      "exampleTranslation": "Đây là một nơi yên bình để sống."
+    },
+    {
+      "word": "building",
+      "example": "Our building has very good security guards.",
+      "exampleTranslation": "Tòa nhà của chúng tôi có bảo vệ rất tốt."
     },
     {
       "word": "flat",
-      "example": "Their new flat is affordable and very convenient for both of them.",
-      "exampleTranslation": "Căn hộ mới của họ có giá phải chăng và rất tiện lợi cho cả hai người."
+      "example": "The flat is small but affordable.",
+      "exampleTranslation": "Căn hộ nhỏ nhưng giá phải chăng."
     },
     {
       "word": "face",
-      "example": "The windows of my room face the river, so the atmosphere is peaceful.",
-      "exampleTranslation": "Cửa sổ phòng tôi hướng ra sông, nên bầu không khí rất yên bình."
+      "example": "My bedroom faces the busy square.",
+      "exampleTranslation": "Phòng ngủ của tôi hướng ra quảng trường nhộn nhịp."
+    },
+    {
+      "word": "light",
+      "example": "The room gets lots of light.",
+      "exampleTranslation": "Căn phòng có rất nhiều ánh sáng."
     },
     {
       "word": "balcony",
-      "example": "From the balcony we can see the tall tower and the whole square.",
-      "exampleTranslation": "Từ ban công chúng tôi có thể nhìn thấy toà tháp cao và cả quảng trường."
+      "example": "I drink coffee on my balcony daily.",
+      "exampleTranslation": "Tôi uống cà phê trên ban công mỗi ngày."
+    },
+    {
+      "word": "view",
+      "example": "The balcony has a view of the bridge.",
+      "exampleTranslation": "Ban công có tầm nhìn ra cây cầu."
     },
     {
       "word": "fully",
-      "example": "The room is fully furnished, so we do not need to spend much money.",
-      "exampleTranslation": "Căn phòng được trang bị nội thất đầy đủ, nên chúng tôi không cần tiêu nhiều tiền."
+      "example": "The flat is fully furnished and modern.",
+      "exampleTranslation": "Căn hộ được trang bị đầy đủ nội thất và hiện đại."
+    },
+    {
+      "word": "furniture",
+      "example": "The furniture in my flat is cheap.",
+      "exampleTranslation": "Đồ nội thất trong căn hộ của tôi rẻ."
     },
     {
       "word": "bookshelf",
-      "example": "I bought a cheap bookshelf because the wooden one was too pricey.",
-      "exampleTranslation": "Tôi mua một cái kệ sách rẻ vì cái bằng gỗ thì quá đắt."
+      "example": "I found a cheap bookshelf online.",
+      "exampleTranslation": "Tôi tìm được một kệ sách giá rẻ trên mạng."
     },
     {
       "word": "curtain",
-      "example": "We chose thick curtains at a reasonable price to keep the room dark.",
-      "exampleTranslation": "Chúng tôi chọn rèm cửa dày với giá hợp lý để giữ cho căn phòng tối."
+      "example": "Thick curtains block the noise from the highway.",
+      "exampleTranslation": "Rèm dày chặn tiếng ồn từ đường cao tốc."
     },
     {
       "word": "air conditioner",
-      "example": "The old air conditioner costs a lot of money, so the bill is high.",
-      "exampleTranslation": "Cái máy điều hoà cũ tốn rất nhiều tiền, nên hoá đơn rất cao."
+      "example": "The air conditioner is very expensive to run.",
+      "exampleTranslation": "Máy điều hòa chạy rất tốn tiền."
     },
     {
       "word": "carpet",
-      "example": "A soft carpet makes the living room warm, and it was quite cheap.",
-      "exampleTranslation": "Một tấm thảm mềm làm cho phòng khách ấm áp, và nó khá rẻ."
+      "example": "The carpet in our living room is soft.",
+      "exampleTranslation": "Tấm thảm trong phòng khách nhà tôi rất mềm."
     },
     {
       "word": "rug",
-      "example": "A colourful rug lies near the sofa and gives the room a warm atmosphere.",
-      "exampleTranslation": "Một tấm thảm nhỏ nhiều màu nằm cạnh ghế sofa và mang lại cho căn phòng bầu không khí ấm áp."
+      "example": "A colourful rug makes the room cosy.",
+      "exampleTranslation": "Một tấm thảm nhỏ nhiều màu làm căn phòng ấm cúng."
+    },
+    {
+      "word": "share",
+      "example": "I share the rent with my friend.",
+      "exampleTranslation": "Tôi chia tiền thuê nhà với bạn tôi."
     },
     {
       "word": "housemate",
-      "example": "My housemate always throws the rubbish away before eight in the morning.",
-      "exampleTranslation": "Người ở chung nhà với tôi luôn đổ rác trước tám giờ sáng."
+      "example": "My housemate is noisy and selfish.",
+      "exampleTranslation": "Bạn cùng nhà của tôi ồn ào và ích kỷ."
     },
     {
       "word": "roommate",
-      "example": "My roommate borrows money from me whenever he is broke at the weekend.",
-      "exampleTranslation": "Bạn cùng phòng của tôi mượn tiền tôi mỗi khi cậu ấy hết tiền vào cuối tuần."
+      "example": "My roommate never throws away his rubbish.",
+      "exampleTranslation": "Bạn cùng phòng của tôi không bao giờ vứt rác."
     },
     {
       "word": "decorate",
-      "example": "They decorate the flat with cheap plants to make it look more appealing.",
-      "exampleTranslation": "Họ trang trí căn hộ bằng những cây cảnh rẻ tiền để nó trông hấp dẫn hơn."
+      "example": "We decorated the flat with cheap things.",
+      "exampleTranslation": "Chúng tôi trang trí căn hộ bằng đồ rẻ tiền."
+    },
+    {
+      "word": "beautifully",
+      "example": "Her room is beautifully decorated with flowers.",
+      "exampleTranslation": "Phòng của cô ấy được trang trí bằng hoa rất đẹp."
+    },
+    {
+      "word": "antique",
+      "example": "This antique table is very expensive.",
+      "exampleTranslation": "Chiếc bàn cổ này rất đắt."
     },
     {
       "word": "comfortable",
-      "example": "This sofa is comfortable, and the price was very reasonable last month.",
-      "exampleTranslation": "Chiếc ghế sofa này rất thoải mái, và giá của nó rất hợp lý hồi tháng trước."
+      "example": "The sofa is comfortable but too pricey.",
+      "exampleTranslation": "Chiếc ghế sofa thoải mái nhưng quá đắt."
     },
     {
       "word": "cramped",
-      "example": "Our first room was dark and cramped, but the rent was cheap.",
-      "exampleTranslation": "Căn phòng đầu tiên của chúng tôi vừa tối vừa chật chội, nhưng tiền thuê thì rẻ."
+      "example": "The accommodation was small and cramped.",
+      "exampleTranslation": "Chỗ ở vừa nhỏ vừa chật chội."
     }
   ]
 }

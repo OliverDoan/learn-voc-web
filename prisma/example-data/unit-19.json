@@ -1,62 +1,127 @@
 {
   "unit": 19,
   "deck": "Unit 19: Ăn uống lành mạnh",
-  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 19 và ít nhất 1 từ đã học ở Unit trước.",
+  "note": "Câu ví dụ rút gọn 6–8 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
   "items": [
     {
+      "word": "follow",
+      "example": "I follow a healthy recipe every week.",
+      "exampleTranslation": "Mỗi tuần tôi làm theo một công thức món ăn lành mạnh."
+    },
+    {
       "word": "diet",
-      "example": "My brother started a healthy diet and gave up takeaway food.",
-      "exampleTranslation": "Anh trai tôi bắt đầu một chế độ ăn lành mạnh và bỏ đồ ăn mang đi."
+      "example": "My diet has too much oily food.",
+      "exampleTranslation": "Chế độ ăn của tôi có quá nhiều đồ dầu mỡ."
+    },
+    {
+      "word": "strict",
+      "example": "She is on a strict vegetarian diet.",
+      "exampleTranslation": "Cô ấy theo chế độ ăn chay nghiêm ngặt."
+    },
+    {
+      "word": "stay",
+      "example": "I avoid fried food to stay healthy.",
+      "exampleTranslation": "Tôi tránh đồ chiên để giữ sức khoẻ."
+    },
+    {
+      "word": "sugar",
+      "example": "There is too much sugar in this smoothie.",
+      "exampleTranslation": "Ly sinh tố này có quá nhiều đường."
     },
     {
       "word": "crappy",
-      "example": "I felt crappy all morning after eating those oily leftovers.",
-      "exampleTranslation": "Tôi thấy người tồi tệ suốt buổi sáng sau khi ăn chỗ đồ thừa nhiều dầu mỡ đó."
+      "example": "I had a crappy hangover this morning.",
+      "exampleTranslation": "Sáng nay tôi bị dư âm say rượu tệ hại."
+    },
+    {
+      "word": "tiring",
+      "example": "Cooking for ten people is really tiring.",
+      "exampleTranslation": "Nấu ăn cho mười người thật sự rất mệt."
     },
     {
       "word": "ingredient",
-      "example": "Fish sauce is the main ingredient in many Vietnamese dishes.",
-      "exampleTranslation": "Nước mắm là nguyên liệu chính trong nhiều món ăn Việt Nam."
+      "example": "Fresh ingredients make the soup more delicious.",
+      "exampleTranslation": "Nguyên liệu tươi làm món canh ngon hơn."
+    },
+    {
+      "word": "amount",
+      "example": "Add a small amount of chilli.",
+      "exampleTranslation": "Thêm một lượng nhỏ ớt."
+    },
+    {
+      "word": "home-cooked",
+      "example": "Home-cooked meals are cheaper than takeaway.",
+      "exampleTranslation": "Bữa ăn nấu tại nhà rẻ hơn đồ mang đi."
+    },
+    {
+      "word": "efficient",
+      "example": "Grilling is an efficient way to cook meat.",
+      "exampleTranslation": "Nướng là một cách nấu thịt hiệu quả."
     },
     {
       "word": "useful",
-      "example": "This recipe book is very useful when I cook for guests.",
-      "exampleTranslation": "Cuốn sách công thức này rất hữu ích khi tôi nấu ăn cho khách."
+      "example": "This cooking app is really useful for beginners.",
+      "exampleTranslation": "Ứng dụng nấu ăn này rất hữu ích cho người mới bắt đầu."
     },
     {
       "word": "benefit",
-      "example": "Walking after dinner has a real benefit for your stomach.",
-      "exampleTranslation": "Đi bộ sau bữa tối có một lợi ích thật sự cho dạ dày của bạn."
+      "example": "Fresh fruit has many benefits for you.",
+      "exampleTranslation": "Trái cây tươi mang lại nhiều lợi ích cho bạn."
     },
     {
       "word": "ageing",
-      "example": "Fresh vegetables and green tea can slow down ageing.",
-      "exampleTranslation": "Rau tươi và trà xanh có thể làm chậm quá trình lão hóa."
+      "example": "Drinking alcohol can speed up ageing.",
+      "exampleTranslation": "Uống rượu có thể làm lão hóa nhanh hơn."
+    },
+    {
+      "word": "allergic",
+      "example": "My brother is allergic to seafood.",
+      "exampleTranslation": "Em trai tôi bị dị ứng hải sản."
+    },
+    {
+      "word": "peanut",
+      "example": "This sauce contains peanuts, so be careful.",
+      "exampleTranslation": "Nước sốt này có đậu phộng, nên hãy cẩn thận."
     },
     {
       "word": "snack",
-      "example": "I often snack on nuts instead of drinking sweet coffee.",
-      "exampleTranslation": "Tôi hay ăn vặt bằng các loại hạt thay vì uống cà phê ngọt."
+      "example": "I snack on fruit instead of crispy chips.",
+      "exampleTranslation": "Tôi ăn vặt trái cây thay vì khoai tây chiên giòn."
+    },
+    {
+      "word": "breathe",
+      "example": "Breathe deeply and try to stay relaxed.",
+      "exampleTranslation": "Hãy hít thở sâu và cố gắng giữ thư thái."
     },
     {
       "word": "mix",
-      "example": "Mix the lemon juice with honey and stir it well.",
-      "exampleTranslation": "Trộn nước cốt chanh vàng với mật ong rồi khuấy đều."
+      "example": "Mix the beef with a little seasoning.",
+      "exampleTranslation": "Trộn thịt bò với một chút gia vị."
     },
     {
       "word": "crop",
-      "example": "Rice is the most important crop in my hometown every season.",
-      "exampleTranslation": "Lúa là cây trồng quan trọng nhất ở quê tôi mỗi mùa vụ."
+      "example": "Rice is the main crop in my hometown.",
+      "exampleTranslation": "Lúa là cây trồng chính ở quê tôi."
+    },
+    {
+      "word": "variety",
+      "example": "The market sells a variety of fresh fruit.",
+      "exampleTranslation": "Chợ bán rất đa dạng các loại trái cây tươi."
     },
     {
       "word": "pea",
-      "example": "She dropped one green pea into the soup by accident.",
-      "exampleTranslation": "Cô ấy vô tình làm rơi một hạt đậu Hà Lan vào nồi súp."
+      "example": "I add peas to my fried rice.",
+      "exampleTranslation": "Tôi thêm đậu Hà Lan vào cơm chiên."
     },
     {
       "word": "leaf",
-      "example": "Wrap the meat in a banana leaf before you grill it.",
-      "exampleTranslation": "Gói miếng thịt trong một chiếc lá chuối trước khi bạn nướng nó."
+      "example": "Wrap the pork in a banana leaf.",
+      "exampleTranslation": "Gói thịt lợn trong lá chuối."
+    },
+    {
+      "word": "peel",
+      "example": "Don't throw away the lemon peel.",
+      "exampleTranslation": "Đừng vứt vỏ chanh đi."
     }
   ]
 }

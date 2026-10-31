@@ -1,77 +1,127 @@
 {
   "unit": 22,
   "deck": "Unit 22: Cảnh đẹp thiên nhiên",
-  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 22 và ít nhất 1 từ đã học ở Unit trước.",
+  "note": "Câu ví dụ rút gọn 6–8 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
   "items": [
     {
+      "word": "map",
+      "example": "Check the map before you start the hike.",
+      "exampleTranslation": "Xem bản đồ trước khi bắt đầu chuyến đi bộ."
+    },
+    {
       "word": "coast",
-      "example": "We drove along the coast and explored a quiet fishing village.",
-      "exampleTranslation": "Chúng tôi lái xe dọc bờ biển và khám phá một làng chài yên tĩnh."
+      "example": "We stayed in a resort on the coast.",
+      "exampleTranslation": "Chúng tôi ở một khu nghỉ dưỡng bên bờ biển."
+    },
+    {
+      "word": "scenery",
+      "example": "The scenery in the valley is gorgeous.",
+      "exampleTranslation": "Phong cảnh ở thung lũng tuyệt đẹp."
+    },
+    {
+      "word": "bay",
+      "example": "Ha Long Bay is popular with tourists.",
+      "exampleTranslation": "Vịnh Hạ Long được khách du lịch yêu thích."
+    },
+    {
+      "word": "gorgeous",
+      "example": "The view from our balcony is gorgeous.",
+      "exampleTranslation": "Quang cảnh từ ban công của chúng tôi tuyệt đẹp."
     },
     {
       "word": "island",
-      "example": "This tiny island is a perfect place to explore during the holiday.",
-      "exampleTranslation": "Hòn đảo bé nhỏ này là nơi hoàn hảo để khám phá trong kỳ nghỉ."
+      "example": "We took a boat to explore the island.",
+      "exampleTranslation": "Chúng tôi đi thuyền để khám phá hòn đảo."
     },
     {
       "word": "mountain",
-      "example": "A range of high mountains stands behind our peaceful little village.",
-      "exampleTranslation": "Một dãy núi cao đứng sừng sững phía sau ngôi làng nhỏ yên bình của chúng tôi."
+      "example": "The mountain village is quiet and cool.",
+      "exampleTranslation": "Ngôi làng trên núi yên tĩnh và mát mẻ."
     },
     {
       "word": "surround",
-      "example": "Green hills surround the old temple on every side.",
-      "exampleTranslation": "Những ngọn đồi xanh bao quanh ngôi chùa cổ ở mọi phía."
+      "example": "Green hills surround the small village.",
+      "exampleTranslation": "Những ngọn đồi xanh bao quanh ngôi làng nhỏ."
+    },
+    {
+      "word": "wonder",
+      "example": "This cave is a wonder of nature.",
+      "exampleTranslation": "Hang động này là một kỳ quan thiên nhiên."
     },
     {
       "word": "sunbathe",
-      "example": "Many tourists sunbathe on the warm sand for the whole afternoon.",
-      "exampleTranslation": "Nhiều du khách tắm nắng trên bãi cát ấm suốt cả buổi chiều."
+      "example": "Tourists sunbathe on the beach all day.",
+      "exampleTranslation": "Khách du lịch tắm nắng trên bãi biển cả ngày."
+    },
+    {
+      "word": "fishing",
+      "example": "Fishing is a leisurely way to relax.",
+      "exampleTranslation": "Câu cá là một cách thư giãn thong thả."
+    },
+    {
+      "word": "rough",
+      "example": "The hill path is rough and steep.",
+      "exampleTranslation": "Đường lên đồi gồ ghề và dốc."
     },
     {
       "word": "forest",
-      "example": "The forest near my hometown is full of strange sounds at night.",
-      "exampleTranslation": "Khu rừng gần quê tôi đầy những âm thanh kỳ lạ vào ban đêm."
+      "example": "Be careful, the forest is dangerous at night.",
+      "exampleTranslation": "Cẩn thận, khu rừng nguy hiểm vào ban đêm."
     },
     {
       "word": "bamboo",
-      "example": "The villagers make handicrafts from bamboo and sell them at the market.",
-      "exampleTranslation": "Dân làng làm đồ thủ công từ tre và bán chúng ở chợ."
+      "example": "Local people build houses from bamboo.",
+      "exampleTranslation": "Người dân địa phương làm nhà bằng tre."
     },
     {
       "word": "waterfall",
-      "example": "We hiked for an hour to reach a beautiful waterfall in the valley.",
-      "exampleTranslation": "Chúng tôi đi bộ đường dài một tiếng để đến một thác nước tuyệt đẹp trong thung lũng."
+      "example": "We swam under a beautiful waterfall.",
+      "exampleTranslation": "Chúng tôi bơi dưới một thác nước đẹp."
+    },
+    {
+      "word": "cave",
+      "example": "Bring a light when you explore the cave.",
+      "exampleTranslation": "Mang theo đèn khi khám phá hang động."
+    },
+    {
+      "word": "lighter",
+      "example": "Don't forget a lighter for the campsite.",
+      "exampleTranslation": "Đừng quên mang bật lửa khi đi cắm trại."
     },
     {
       "word": "icy",
-      "example": "The icy wind on the steep path made us walk much faster.",
-      "exampleTranslation": "Cơn gió băng giá trên con đường dốc khiến chúng tôi đi nhanh hơn nhiều."
+      "example": "The icy wind made the hike difficult.",
+      "exampleTranslation": "Gió băng giá khiến chuyến đi bộ thêm khó khăn."
     },
     {
       "word": "spider",
-      "example": "A big spider made its web above my balcony last night.",
-      "exampleTranslation": "Một con nhện lớn giăng tơ phía trên ban công nhà tôi tối qua."
+      "example": "I was scared of a huge spider.",
+      "exampleTranslation": "Tôi đã sợ một con nhện khổng lồ."
     },
     {
       "word": "surprisingly",
-      "example": "The cave was surprisingly warm, so we stayed there for an hour.",
-      "exampleTranslation": "Hang động ấm áp một cách đáng ngạc nhiên, nên chúng tôi ở lại đó một tiếng."
+      "example": "The island was surprisingly quiet and clean.",
+      "exampleTranslation": "Hòn đảo yên tĩnh và sạch sẽ một cách đáng ngạc nhiên."
+    },
+    {
+      "word": "sanctuary",
+      "example": "The bird sanctuary protects many rare species.",
+      "exampleTranslation": "Khu bảo tồn chim bảo vệ nhiều loài quý hiếm."
     },
     {
       "word": "wildlife",
-      "example": "The rainforest protects rare wildlife that we hardly ever see.",
-      "exampleTranslation": "Rừng nhiệt đới bảo vệ những loài động vật hoang dã quý hiếm mà chúng ta hiếm khi nhìn thấy."
+      "example": "The rainforest is full of amazing wildlife.",
+      "exampleTranslation": "Rừng nhiệt đới có rất nhiều động vật hoang dã tuyệt vời."
     },
     {
       "word": "lake",
-      "example": "We walked leisurely around the lake and took some lovely photos.",
-      "exampleTranslation": "Chúng tôi đi bộ thong thả quanh hồ và chụp vài bức ảnh đáng yêu."
+      "example": "We had a picnic near a peaceful lake.",
+      "exampleTranslation": "Chúng tôi đi dã ngoại bên một hồ nước yên bình."
     },
     {
       "word": "cliff",
-      "example": "Standing near that cliff can be dangerous when the wind is strong.",
-      "exampleTranslation": "Đứng gần vách đá đó có thể rất nguy hiểm khi gió mạnh."
+      "example": "Brave climbers go up the steep cliff.",
+      "exampleTranslation": "Những người leo núi dũng cảm leo lên vách đá dốc."
     }
   ]
 }

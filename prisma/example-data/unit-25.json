@@ -1,57 +1,127 @@
 {
   "unit": 25,
   "deck": "Unit 25: Thuốc men và hồi phục",
-  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 25 và ít nhất 1 từ đã học ở Unit trước.",
+  "note": "Câu ví dụ rút gọn 6–8 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
   "items": [
     {
+      "word": "nightmare",
+      "example": "I had a nightmare about a dangerous forest.",
+      "exampleTranslation": "Tôi gặp ác mộng về một khu rừng nguy hiểm."
+    },
+    {
+      "word": "painful",
+      "example": "My sore throat is really painful today.",
+      "exampleTranslation": "Hôm nay cổ họng tôi đau rát thật sự."
+    },
+    {
       "word": "exhausted",
-      "example": "I felt completely exhausted after coughing all night long.",
-      "exampleTranslation": "Tôi thấy hoàn toàn kiệt sức sau khi ho suốt cả đêm."
+      "example": "I felt exhausted after the flu.",
+      "exampleTranslation": "Tôi thấy kiệt sức sau khi bị cúm."
     },
     {
       "word": "dehydrated",
-      "example": "After a long day in the sun, the children were dehydrated and thirsty.",
-      "exampleTranslation": "Sau một ngày dài dưới nắng, bọn trẻ bị mất nước và khát."
+      "example": "You get dehydrated if you drink alcohol.",
+      "exampleTranslation": "Bạn sẽ bị mất nước nếu uống rượu."
+    },
+    {
+      "word": "emergency",
+      "example": "Call an ambulance in an emergency.",
+      "exampleTranslation": "Hãy gọi xe cứu thương khi có ca cấp cứu."
+    },
+    {
+      "word": "lose",
+      "example": "Daily exercise helps you lose weight.",
+      "exampleTranslation": "Tập thể dục hằng ngày giúp bạn giảm cân."
     },
     {
       "word": "pharmacy",
-      "example": "There is a small pharmacy right next to the clinic on our street.",
-      "exampleTranslation": "Có một hiệu thuốc nhỏ ngay cạnh phòng khám trên con phố nhà tôi."
+      "example": "There is a pharmacy next to the clinic.",
+      "exampleTranslation": "Có một hiệu thuốc bên cạnh phòng khám."
+    },
+    {
+      "word": "chemist",
+      "example": "Ask the chemist about this prescription.",
+      "exampleTranslation": "Hãy hỏi dược sĩ về đơn thuốc này."
+    },
+    {
+      "word": "patient",
+      "example": "The nurse is caring for the patient.",
+      "exampleTranslation": "Y tá đang chăm sóc bệnh nhân."
     },
     {
       "word": "explain",
-      "example": "The nurse took time to explain everything written on my prescription.",
-      "exampleTranslation": "Cô y tá dành thời gian giải thích mọi thứ được viết trong đơn thuốc của tôi."
+      "example": "The doctor explained my condition clearly.",
+      "exampleTranslation": "Bác sĩ đã giải thích rõ tình trạng của tôi."
+    },
+    {
+      "word": "packet",
+      "example": "Buy a packet of tissues for your cold.",
+      "exampleTranslation": "Hãy mua một gói khăn giấy vì bạn đang bị cảm."
     },
     {
       "word": "pill",
-      "example": "Take one pill after every meal to ease the pain in your stomach.",
-      "exampleTranslation": "Uống một viên thuốc sau mỗi bữa ăn để làm dịu cơn đau trong dạ dày của bạn."
+      "example": "Take one pill twice daily after meals.",
+      "exampleTranslation": "Uống một viên thuốc hai lần mỗi ngày sau bữa ăn."
+    },
+    {
+      "word": "capsule",
+      "example": "Swallow the capsule with a glass of water.",
+      "exampleTranslation": "Nuốt viên nang với một cốc nước."
+    },
+    {
+      "word": "consider",
+      "example": "Consider seeing a dentist about the pain.",
+      "exampleTranslation": "Hãy cân nhắc đi khám nha sĩ về cơn đau."
+    },
+    {
+      "word": "painkiller",
+      "example": "This painkiller helps ease my headache.",
+      "exampleTranslation": "Thuốc giảm đau này giúp làm dịu cơn đau đầu."
     },
     {
       "word": "medicine",
-      "example": "Remember to take your medicine on time, or your cough will get worse.",
-      "exampleTranslation": "Nhớ uống thuốc đúng giờ, nếu không cơn ho của bạn sẽ nặng hơn."
+      "example": "Keep medicine away from small children.",
+      "exampleTranslation": "Để thuốc xa tầm tay trẻ nhỏ."
+    },
+    {
+      "word": "effect",
+      "example": "Coffee has a strong effect on me.",
+      "exampleTranslation": "Cà phê có tác dụng mạnh đối với tôi."
     },
     {
       "word": "slowly",
-      "example": "She drank the warm water slowly because her throat still hurt.",
-      "exampleTranslation": "Cô ấy uống nước ấm chậm rãi vì cổ họng cô ấy vẫn còn đau."
+      "example": "My grandma is recovering slowly from flu.",
+      "exampleTranslation": "Bà tôi đang hồi phục chậm rãi sau cơn cúm."
+    },
+    {
+      "word": "repair",
+      "example": "Good rest helps your body repair itself.",
+      "exampleTranslation": "Nghỉ ngơi tốt giúp cơ thể tự phục hồi."
+    },
+    {
+      "word": "remove",
+      "example": "The doctor removed a bug from my ear.",
+      "exampleTranslation": "Bác sĩ đã lấy một con côn trùng ra khỏi tai tôi."
+    },
+    {
+      "word": "recover",
+      "example": "She fully recovered after the surgery.",
+      "exampleTranslation": "Cô ấy đã hồi phục hoàn toàn sau ca phẫu thuật."
     },
     {
       "word": "admit",
-      "example": "The doctors decided to admit him to hospital because he was seriously ill.",
-      "exampleTranslation": "Các bác sĩ quyết định cho anh ấy nhập viện vì anh ấy ốm nghiêm trọng."
+      "example": "He was admitted to hospital last night.",
+      "exampleTranslation": "Anh ấy đã nhập viện tối qua."
     },
     {
       "word": "speedy",
-      "example": "My friends at the gym wished me a speedy recovery after the surgery.",
-      "exampleTranslation": "Bạn bè tôi ở phòng gym chúc tôi hồi phục nhanh chóng sau ca phẫu thuật."
+      "example": "Best wishes for a speedy recovery, dear neighbour!",
+      "exampleTranslation": "Chúc bạn mau chóng hồi phục, người hàng xóm thân mến!"
     },
     {
       "word": "fit",
-      "example": "After a week of rest, I finally felt fit and satisfied again.",
-      "exampleTranslation": "Sau một tuần nghỉ ngơi, cuối cùng tôi cũng thấy khỏe mạnh và hài lòng trở lại."
+      "example": "I exercise every day to stay fit.",
+      "exampleTranslation": "Tôi tập thể dục mỗi ngày để giữ cơ thể khỏe mạnh."
     }
   ]
 }

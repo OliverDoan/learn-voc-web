@@ -1,0 +1,127 @@
+{
+  "unit": 32,
+  "deck": "Unit 32: Nghệ thuật và sáng tạo",
+  "note": "Câu ví dụ rút gọn 6–8 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
+  "items": [
+    {
+      "word": "artist",
+      "example": "Being an artist is not a stable career.",
+      "exampleTranslation": "Làm nghệ sĩ không phải là một nghề ổn định."
+    },
+    {
+      "word": "well-known",
+      "example": "This restaurant is well-known for its seafood.",
+      "exampleTranslation": "Nhà hàng này nổi tiếng với hải sản."
+    },
+    {
+      "word": "create",
+      "example": "She wants to create a new design.",
+      "exampleTranslation": "Cô ấy muốn tạo ra một thiết kế mới."
+    },
+    {
+      "word": "photography",
+      "example": "Photography became my favourite hobby after that trip.",
+      "exampleTranslation": "Nhiếp ảnh trở thành sở thích yêu thích của tôi sau chuyến đi đó."
+    },
+    {
+      "word": "drawing",
+      "example": "His drawing of the bridge won first prize.",
+      "exampleTranslation": "Bức vẽ cây cầu của anh ấy đoạt giải nhất."
+    },
+    {
+      "word": "frequently",
+      "example": "I frequently visit the local market.",
+      "exampleTranslation": "Tôi thường xuyên ghé chợ địa phương."
+    },
+    {
+      "word": "painter",
+      "example": "The painter loves peaceful country scenery.",
+      "exampleTranslation": "Người hoạ sĩ yêu phong cảnh làng quê yên bình."
+    },
+    {
+      "word": "artistic",
+      "example": "Her artistic skill improved quickly after the course.",
+      "exampleTranslation": "Kỹ năng nghệ thuật của cô ấy tiến bộ nhanh sau khoá học."
+    },
+    {
+      "word": "painting",
+      "example": "That old painting is very expensive.",
+      "exampleTranslation": "Bức tranh cổ đó rất đắt."
+    },
+    {
+      "word": "personally",
+      "example": "Personally, I prefer a quiet holiday.",
+      "exampleTranslation": "Cá nhân tôi thích một kỳ nghỉ yên tĩnh hơn."
+    },
+    {
+      "word": "shout",
+      "example": "Do not shout in the quiet library.",
+      "exampleTranslation": "Đừng la hét trong thư viện yên tĩnh."
+    },
+    {
+      "word": "immerse",
+      "example": "I want to immerse myself in local culture.",
+      "exampleTranslation": "Tôi muốn hoà mình vào văn hoá địa phương."
+    },
+    {
+      "word": "technique",
+      "example": "The chef taught us a simple technique.",
+      "exampleTranslation": "Đầu bếp dạy chúng tôi một kỹ thuật đơn giản."
+    },
+    {
+      "word": "inventive",
+      "example": "An inventive design can make cheap things lovely.",
+      "exampleTranslation": "Một thiết kế sáng tạo có thể biến đồ rẻ thành đồ đáng yêu."
+    },
+    {
+      "word": "value",
+      "example": "Nobody knows the real value of this antique.",
+      "exampleTranslation": "Không ai biết giá trị thật của món đồ cổ này."
+    },
+    {
+      "word": "literature",
+      "example": "She studies English literature at a university abroad.",
+      "exampleTranslation": "Cô ấy học văn học Anh ở một trường đại học nước ngoài."
+    },
+    {
+      "word": "fantastic",
+      "example": "The scenery on the coast was fantastic.",
+      "exampleTranslation": "Phong cảnh ở bờ biển thật tuyệt vời."
+    },
+    {
+      "word": "artwork",
+      "example": "His artwork is displayed in the capital.",
+      "exampleTranslation": "Tác phẩm nghệ thuật của anh ấy được trưng bày ở thủ đô."
+    },
+    {
+      "word": "theatre",
+      "example": "The theatre is far from my hometown.",
+      "exampleTranslation": "Nhà hát ở xa quê tôi."
+    },
+    {
+      "word": "sculpture",
+      "example": "This stone sculpture is a local handicraft.",
+      "exampleTranslation": "Tác phẩm điêu khắc bằng đá này là đồ thủ công địa phương."
+    },
+    {
+      "word": "remember",
+      "example": "I cannot remember the restaurant's address.",
+      "exampleTranslation": "Tôi không thể nhớ địa chỉ của nhà hàng."
+    },
+    {
+      "word": "concert",
+      "example": "The musician invited us to his concert.",
+      "exampleTranslation": "Người nhạc sĩ mời chúng tôi đến buổi hoà nhạc của anh ấy."
+    },
+    {
+      "word": "exhibition",
+      "example": "The exhibition attracts many tourists every season.",
+      "exampleTranslation": "Buổi triển lãm thu hút nhiều du khách mỗi mùa."
+    },
+    {
+      "word": "beauty",
+      "example": "The beauty of this valley surprises visitors.",
+      "exampleTranslation": "Vẻ đẹp của thung lũng này khiến du khách ngạc nhiên."
+    }
+  ]
+}

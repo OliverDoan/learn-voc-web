@@ -1,97 +1,127 @@
 {
   "unit": 11,
   "deck": "Unit 11: Chuyến du lịch đầu tiên của hai người",
-  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 11 và ít nhất 1 từ đã học ở Unit trước.",
+  "note": "Câu ví dụ rút gọn 6–8 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
   "items": [
     {
       "word": "nowadays",
-      "example": "Nowadays most people book their trips online because it is cheap and convenient.",
-      "exampleTranslation": "Ngày nay hầu hết mọi người đặt chuyến đi trực tuyến vì nó rẻ và tiện lợi."
+      "example": "Nowadays, flights are cheap and convenient.",
+      "exampleTranslation": "Ngày nay, các chuyến bay rẻ và tiện lợi."
+    },
+    {
+      "word": "travelling",
+      "example": "Travelling abroad is my favourite hobby.",
+      "exampleTranslation": "Du lịch nước ngoài là sở thích yêu thích của tôi."
     },
     {
       "word": "excited",
-      "example": "The children were excited when they saw the pool at the hotel.",
-      "exampleTranslation": "Bọn trẻ rất hào hứng khi chúng nhìn thấy bể bơi ở khách sạn."
+      "example": "We are excited about our trip abroad.",
+      "exampleTranslation": "Chúng tôi rất hào hứng với chuyến đi nước ngoài."
+    },
+    {
+      "word": "destination",
+      "example": "Our first destination is the capital.",
+      "exampleTranslation": "Điểm đến đầu tiên của chúng tôi là thủ đô."
     },
     {
       "word": "visa",
-      "example": "You need a valid visa, so please prepare your documents at least one month early.",
-      "exampleTranslation": "Bạn cần một thị thực hợp lệ, nên hãy chuẩn bị giấy tờ trước ít nhất một tháng."
+      "example": "I need a visa to travel abroad.",
+      "exampleTranslation": "Tôi cần thị thực để đi du lịch nước ngoài."
     },
     {
       "word": "flight",
-      "example": "Our flight to Tokyo leaves early, so we must drive to the airport at dawn.",
-      "exampleTranslation": "Chuyến bay đến Tokyo của chúng tôi khởi hành sớm, nên chúng tôi phải lái xe ra sân bay lúc rạng sáng."
+      "example": "Our flight to the capital was cheap.",
+      "exampleTranslation": "Chuyến bay của chúng tôi đến thủ đô rất rẻ."
     },
     {
       "word": "reservation",
-      "example": "I made a reservation at a comfortable hotel near the central square.",
-      "exampleTranslation": "Tôi đã đặt chỗ ở một khách sạn thoải mái gần quảng trường trung tâm."
+      "example": "We made a reservation at a cosy hotel.",
+      "exampleTranslation": "Chúng tôi đã đặt chỗ ở một khách sạn ấm cúng."
     },
     {
       "word": "delay",
-      "example": "The flight had a long delay, so we had to wait in the noisy airport.",
-      "exampleTranslation": "Chuyến bay có một sự trì hoãn dài, nên chúng tôi phải đợi trong sân bay ồn ào."
+      "example": "There was a long delay on the highway.",
+      "exampleTranslation": "Đã có một sự chậm trễ kéo dài trên đường cao tốc."
     },
     {
       "word": "disappointed",
-      "example": "We were disappointed because the hotel room was cramped and quite dirty.",
-      "exampleTranslation": "Chúng tôi thất vọng vì căn phòng khách sạn chật chội và khá bẩn."
+      "example": "I was disappointed with the hotel service.",
+      "exampleTranslation": "Tôi thất vọng với dịch vụ của khách sạn."
     },
     {
       "word": "journey",
-      "example": "The journey to the mountain took six hours, but the view was amazing.",
-      "exampleTranslation": "Cuộc hành trình đến ngọn núi mất sáu tiếng, nhưng khung cảnh thật tuyệt vời."
+      "example": "The journey to the north was long.",
+      "exampleTranslation": "Hành trình ra phía bắc rất dài."
     },
     {
       "word": "chance",
-      "example": "This trip is a good chance to leave the noisy city for a week.",
-      "exampleTranslation": "Chuyến đi này là một cơ hội tốt để rời xa thành phố ồn ào trong một tuần."
+      "example": "We had a chance to see the tower.",
+      "exampleTranslation": "Chúng tôi đã có cơ hội ngắm tòa tháp."
     },
     {
       "word": "escape",
-      "example": "Many people travel to the mountains to escape the pollution of the capital.",
-      "exampleTranslation": "Nhiều người đi du lịch lên núi để thoát khỏi ô nhiễm của thủ đô."
+      "example": "We escaped the noisy city for a week.",
+      "exampleTranslation": "Chúng tôi trốn khỏi thành phố ồn ào trong một tuần."
     },
     {
       "word": "reception",
-      "example": "Please leave your key at the reception and inform the staff before leaving.",
-      "exampleTranslation": "Hãy để chìa khoá ở quầy tiếp tân và thông báo cho nhân viên trước khi rời đi."
+      "example": "The hotel reception is always busy.",
+      "exampleTranslation": "Quầy lễ tân khách sạn lúc nào cũng bận rộn."
     },
     {
       "word": "stay",
-      "example": "During our stay, the friendly owner gave us free breakfast every morning.",
-      "exampleTranslation": "Trong thời gian chúng tôi ở đó, người chủ thân thiện đã cho chúng tôi bữa sáng miễn phí mỗi sáng."
+      "example": "Our stay in the capital was short.",
+      "exampleTranslation": "Thời gian chúng tôi ở thủ đô khá ngắn."
     },
     {
       "word": "experience",
-      "example": "I want to experience the vibrant nightlife of this city at least once.",
-      "exampleTranslation": "Tôi muốn trải nghiệm cuộc sống về đêm sôi động của thành phố này ít nhất một lần."
+      "example": "I want to experience the local culture.",
+      "exampleTranslation": "Tôi muốn trải nghiệm văn hóa địa phương."
+    },
+    {
+      "word": "amazing",
+      "example": "The view from the tower was amazing.",
+      "exampleTranslation": "Quang cảnh từ tòa tháp thật đáng kinh ngạc."
+    },
+    {
+      "word": "huge",
+      "example": "The skyscraper is huge and modern.",
+      "exampleTranslation": "Tòa nhà chọc trời rất lớn và hiện đại."
     },
     {
       "word": "adventure",
-      "example": "Our walk through the old alley became a small adventure that afternoon.",
-      "exampleTranslation": "Chuyến đi bộ của chúng tôi qua con hẻm cũ đã trở thành một cuộc phiêu lưu nhỏ vào chiều hôm đó."
+      "example": "Our trip to the north was an adventure.",
+      "exampleTranslation": "Chuyến đi ra phía bắc là một cuộc phiêu lưu."
+    },
+    {
+      "word": "discover",
+      "example": "We discovered a quiet café in the alley.",
+      "exampleTranslation": "Chúng tôi khám phá ra một quán cà phê yên tĩnh trong hẻm."
     },
     {
       "word": "tour",
-      "example": "We joined a city tour and visited every famous area in one day.",
-      "exampleTranslation": "Chúng tôi tham gia một chuyến tham quan thành phố và ghé thăm mọi khu vực nổi tiếng trong một ngày."
+      "example": "We took a tour of the capital.",
+      "exampleTranslation": "Chúng tôi đã đi một chuyến tham quan thủ đô."
     },
     {
       "word": "tourist",
-      "example": "Every tourist wants a photo in front of the tall tower.",
-      "exampleTranslation": "Mọi khách du lịch đều muốn có một bức ảnh trước toà tháp cao."
+      "example": "Many tourists visit the central square.",
+      "exampleTranslation": "Nhiều khách du lịch ghé thăm quảng trường trung tâm."
+    },
+    {
+      "word": "moment",
+      "example": "That was a special moment for us.",
+      "exampleTranslation": "Đó là một khoảnh khắc đặc biệt với chúng tôi."
     },
     {
       "word": "memory",
-      "example": "That quiet beach gave me a beautiful memory of our first holiday together.",
-      "exampleTranslation": "Bãi biển yên tĩnh đó đã cho tôi một kỉ niệm đẹp về kỳ nghỉ đầu tiên của chúng tôi cùng nhau."
+      "example": "I have beautiful memories of my hometown.",
+      "exampleTranslation": "Tôi có những kỉ niệm đẹp về quê hương."
     },
     {
       "word": "postcard",
-      "example": "She sent me a postcard from Paris and wrote about the friendly people.",
-      "exampleTranslation": "Cô ấy gửi cho tôi một tấm bưu thiếp từ Paris và viết về những người dân thân thiện."
+      "example": "I sent a postcard to my roommate.",
+      "exampleTranslation": "Tôi đã gửi một tấm bưu thiếp cho bạn cùng phòng."
     }
   ]
 }

@@ -1,102 +1,127 @@
 {
   "unit": 23,
   "deck": "Unit 23: Sức khỏe thể chất và tinh thần",
-  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 23 và ít nhất 1 từ đã học ở Unit trước.",
+  "note": "Câu ví dụ rút gọn 6–8 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
   "items": [
     {
+      "word": "care",
+      "example": "Always take good care of your health.",
+      "exampleTranslation": "Hãy luôn chăm sóc tốt sức khoẻ của bạn."
+    },
+    {
       "word": "health",
-      "example": "Fresh vegetables and a daily walk are very good for your health.",
-      "exampleTranslation": "Rau tươi và việc đi bộ hàng ngày rất tốt cho sức khỏe của bạn."
+      "example": "Too much sugar is bad for your health.",
+      "exampleTranslation": "Quá nhiều đường không tốt cho sức khỏe của bạn."
     },
     {
       "word": "condition",
-      "example": "Her heart is in good condition because she avoids sugar and oily food.",
-      "exampleTranslation": "Tim của cô ấy ở trong tình trạng tốt vì cô ấy tránh đường và đồ ăn nhiều dầu mỡ."
+      "example": "Her condition improved after a strict diet.",
+      "exampleTranslation": "Tình trạng của cô ấy đã cải thiện sau chế độ ăn nghiêm ngặt."
     },
     {
       "word": "anxious",
-      "example": "I always feel anxious before an important interview.",
-      "exampleTranslation": "Tôi luôn cảm thấy lo lắng trước một buổi phỏng vấn quan trọng."
+      "example": "I feel anxious before every job interview.",
+      "exampleTranslation": "Tôi thấy lo lắng trước mỗi buổi phỏng vấn xin việc."
     },
     {
       "word": "damage",
-      "example": "Too much alcohol can damage your stomach after only a few years.",
-      "exampleTranslation": "Quá nhiều rượu bia có thể làm tổn hại dạ dày của bạn chỉ sau vài năm."
+      "example": "Drinking alcohol can damage your body.",
+      "exampleTranslation": "Uống rượu có thể làm tổn hại cơ thể bạn."
+    },
+    {
+      "word": "body",
+      "example": "Your body needs water when you're thirsty.",
+      "exampleTranslation": "Cơ thể bạn cần nước khi bạn khát."
+    },
+    {
+      "word": "embarrassed",
+      "example": "I felt embarrassed when my stomach growled.",
+      "exampleTranslation": "Tôi thấy xấu hổ khi bụng sôi ùng ục."
     },
     {
       "word": "weight",
-      "example": "She lost a lot of weight after following a strict diet.",
-      "exampleTranslation": "Cô ấy giảm được rất nhiều cân sau khi theo một chế độ ăn nghiêm ngặt."
+      "example": "He lost weight by following a diet.",
+      "exampleTranslation": "Anh ấy đã giảm cân nhờ theo một chế độ ăn."
     },
     {
       "word": "exercise",
-      "example": "We exercise together at the gym every morning before work.",
-      "exampleTranslation": "Chúng tôi tập thể dục cùng nhau ở phòng gym mỗi sáng trước giờ làm."
+      "example": "I exercise at the gym every morning.",
+      "exampleTranslation": "Tôi tập thể dục ở phòng gym mỗi sáng."
     },
     {
       "word": "muscular",
-      "example": "After a year of training, my brother looks muscular and confident.",
-      "exampleTranslation": "Sau một năm luyện tập, anh trai tôi trông cơ bắp và tự tin."
+      "example": "Swimming made her strong and muscular.",
+      "exampleTranslation": "Bơi lội giúp cô ấy khỏe mạnh và có cơ bắp."
     },
     {
       "word": "prevent",
-      "example": "Washing your hands often can prevent many common illnesses.",
-      "exampleTranslation": "Rửa tay thường xuyên có thể ngăn ngừa nhiều căn bệnh thông thường."
+      "example": "A good diet can prevent many problems.",
+      "exampleTranslation": "Một chế độ ăn tốt có thể ngăn ngừa nhiều vấn đề."
     },
     {
       "word": "obviously",
-      "example": "Obviously, a home-cooked meal is better for you than takeaway food.",
-      "exampleTranslation": "Rõ ràng là bữa ăn nấu tại nhà tốt cho bạn hơn đồ ăn mang về."
+      "example": "He was obviously tired after the long journey.",
+      "exampleTranslation": "Rõ ràng anh ấy mệt sau chuyến đi dài."
     },
     {
       "word": "awake",
-      "example": "A strong cup of coffee keeps me awake during long boring meetings.",
-      "exampleTranslation": "Một tách cà phê đậm giúp tôi tỉnh táo trong những cuộc họp dài và nhàm chán."
+      "example": "Strong coffee keeps me awake at night.",
+      "exampleTranslation": "Cà phê đậm khiến tôi tỉnh táo vào ban đêm."
     },
     {
       "word": "heartbeat",
-      "example": "After climbing the steep hill, I could feel my heartbeat getting faster.",
-      "exampleTranslation": "Sau khi leo lên ngọn đồi dốc, tôi có thể cảm nhận nhịp tim mình đập nhanh hơn."
+      "example": "My heartbeat gets fast when I'm nervous.",
+      "exampleTranslation": "Nhịp tim tôi đập nhanh khi tôi hồi hộp."
     },
     {
       "word": "blood",
-      "example": "Walking leisurely every evening helps your blood flow much better.",
-      "exampleTranslation": "Đi bộ thong thả mỗi tối giúp máu lưu thông tốt hơn nhiều."
+      "example": "Eating too much sugar raises blood sugar.",
+      "exampleTranslation": "Ăn quá nhiều đường làm tăng đường trong máu."
     },
     {
       "word": "mind",
-      "example": "A quiet walk in the forest relaxes my mind after a tiring day.",
-      "exampleTranslation": "Một buổi đi dạo yên tĩnh trong rừng làm thư giãn tâm trí tôi sau một ngày mệt mỏi."
+      "example": "A walk in nature clears my mind.",
+      "exampleTranslation": "Đi dạo giữa thiên nhiên giúp tâm trí tôi thư thái."
     },
     {
       "word": "brain",
-      "example": "Reading books every night is useful training for your brain.",
-      "exampleTranslation": "Đọc sách mỗi tối là bài luyện tập hữu ích cho não bộ của bạn."
+      "example": "Learning a language keeps the brain active.",
+      "exampleTranslation": "Học ngoại ngữ giúp não bộ luôn hoạt động."
     },
     {
       "word": "mindful",
-      "example": "Being mindful while eating helps you enjoy every delicious bite.",
-      "exampleTranslation": "Chú tâm khi ăn giúp bạn thưởng thức từng miếng ngon."
+      "example": "Be mindful of what you eat daily.",
+      "exampleTranslation": "Hãy chú tâm vào những gì bạn ăn hằng ngày."
+    },
+    {
+      "word": "remain",
+      "example": "Try to remain calm and confident.",
+      "exampleTranslation": "Hãy cố gắng vẫn giữ bình tĩnh và tự tin."
+    },
+    {
+      "word": "curious",
+      "example": "Tourists are curious about local customs.",
+      "exampleTranslation": "Du khách tò mò về phong tục địa phương."
     },
     {
       "word": "extraordinary",
-      "example": "She made an extraordinary recovery and now feels satisfied with her life.",
-      "exampleTranslation": "Cô ấy hồi phục một cách phi thường và giờ cảm thấy hài lòng với cuộc sống của mình."
+      "example": "She has an extraordinary memory for names.",
+      "exampleTranslation": "Cô ấy có trí nhớ phi thường về tên người."
     },
     {
       "word": "sight",
-      "example": "My grandfather has poor sight, so he hardly reads the newspaper now.",
-      "exampleTranslation": "Ông tôi có thị lực kém, nên giờ ông hiếm khi đọc báo."
+      "example": "My grandpa has poor sight now.",
+      "exampleTranslation": "Thị lực của ông tôi giờ đã kém."
     },
     {
       "word": "dentist",
-      "example": "You should visit the dentist twice a year to avoid serious problems.",
-      "exampleTranslation": "Bạn nên đi khám nha sĩ hai lần một năm để tránh những vấn đề nghiêm trọng."
+      "example": "My dentist says sweet drinks are bad.",
+      "exampleTranslation": "Nha sĩ của tôi bảo đồ uống ngọt có hại."
     },
     {
       "word": "unlikely",
-      "example": "It is unlikely that he will be absent from the gym this week.",
-      "exampleTranslation": "Khó có khả năng anh ấy sẽ vắng mặt ở phòng gym tuần này."
+      "example": "It's unlikely to rain in the dry season.",
+      "exampleTranslation": "Vào mùa khô thì khó có mưa."
     }
   ]
 }

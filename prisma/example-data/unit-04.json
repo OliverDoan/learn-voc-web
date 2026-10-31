@@ -1,117 +1,127 @@
 {
   "unit": 4,
   "deck": "Unit 4: Ngày hội nghề nghiệp",
-  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 4 và ít nhất 1 từ đã học ở Unit trước.",
+  "note": "Câu ví dụ rút gọn 6–8 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
   "items": [
     {
       "word": "company",
-      "example": "My cousin works for a small company in the centre of our town.",
-      "exampleTranslation": "Anh họ tôi làm việc cho một công ty nhỏ ở trung tâm thị trấn của chúng tôi."
+      "example": "She works for a company in town.",
+      "exampleTranslation": "Cô ấy làm việc cho một công ty trong thị trấn."
     },
     {
       "word": "open",
-      "example": "They will open a new training centre near my hometown next month.",
-      "exampleTranslation": "Họ sẽ mở một trung tâm đào tạo mới gần quê tôi vào tháng tới."
+      "example": "The new café opens in our town today.",
+      "exampleTranslation": "Quán cà phê mới khai trương ở thị trấn chúng tôi hôm nay."
     },
     {
       "word": "owner",
-      "example": "The owner of the bookshop is a kind woman who knows everyone in town.",
-      "exampleTranslation": "Chủ tiệm sách là một người phụ nữ tốt bụng biết tất cả mọi người trong thị trấn."
+      "example": "The owner of this shop is very confident.",
+      "exampleTranslation": "Chủ cửa hàng này rất tự tin."
     },
     {
       "word": "employer",
-      "example": "A good employer will tell you clearly what the job requires.",
-      "exampleTranslation": "Một nhà tuyển dụng tốt sẽ nói rõ cho bạn biết công việc đòi hỏi những gì."
+      "example": "My employer is happy with my progress.",
+      "exampleTranslation": "Chủ của tôi hài lòng với sự tiến bộ của tôi."
     },
     {
       "word": "employee",
-      "example": "Every employee must sign the attendance list before eight o'clock.",
-      "exampleTranslation": "Mọi nhân viên đều phải ký vào danh sách chấm công trước tám giờ."
+      "example": "Every new employee must improve their skills.",
+      "exampleTranslation": "Mỗi nhân viên mới phải cải thiện kỹ năng của mình."
     },
     {
       "word": "assistant",
-      "example": "The assistant gave me a paper and asked for my address.",
-      "exampleTranslation": "Người trợ lý đưa cho tôi một tờ giấy và hỏi địa chỉ của tôi."
+      "example": "My assistant can speak three languages.",
+      "exampleTranslation": "Trợ lý của tôi nói được ba ngôn ngữ."
+    },
+    {
+      "word": "design",
+      "example": "She designs beautiful clothes for the company.",
+      "exampleTranslation": "Cô ấy thiết kế quần áo đẹp cho công ty."
     },
     {
       "word": "form",
-      "example": "Please write your surname clearly at the top of this form.",
-      "exampleTranslation": "Vui lòng viết họ của bạn thật rõ ở đầu tờ đơn này."
+      "example": "Please sign this form before the meeting.",
+      "exampleTranslation": "Vui lòng ký vào mẫu đơn này trước buổi họp."
     },
     {
       "word": "acceptable",
-      "example": "Arriving five minutes late is acceptable, but being absent is not.",
-      "exampleTranslation": "Đến muộn năm phút là chấp nhận được, nhưng vắng mặt thì không."
+      "example": "Your grade is acceptable for this course.",
+      "exampleTranslation": "Điểm của bạn chấp nhận được cho khóa học này."
+    },
+    {
+      "word": "offer",
+      "example": "They offered me a job in the south.",
+      "exampleTranslation": "Họ mời tôi một công việc ở phía nam."
     },
     {
       "word": "punctual",
-      "example": "My teacher is always punctual, even when the streets are crowded.",
-      "exampleTranslation": "Giáo viên của tôi luôn đúng giờ, ngay cả khi đường phố đông đúc."
+      "example": "Be punctual when you attend the meeting.",
+      "exampleTranslation": "Hãy đúng giờ khi bạn tham dự cuộc họp."
     },
     {
       "word": "challenging",
-      "example": "Learning a new language is challenging, but it makes you more confident.",
-      "exampleTranslation": "Học một ngôn ngữ mới thật đầy thử thách, nhưng điều đó khiến bạn tự tin hơn."
+      "example": "Learning a new language is challenging.",
+      "exampleTranslation": "Học một ngôn ngữ mới thật đầy thử thách."
     },
     {
       "word": "journalist",
-      "example": "The journalist asked the students to describe their favourite subject.",
-      "exampleTranslation": "Nhà báo đề nghị các học sinh mô tả môn học yêu thích của mình."
+      "example": "The journalist wants to describe our town.",
+      "exampleTranslation": "Nhà báo muốn mô tả thị trấn của chúng tôi."
     },
     {
       "word": "accountant",
-      "example": "She became an accountant because she loved mathematics at school.",
-      "exampleTranslation": "Cô ấy trở thành kế toán vì cô ấy yêu thích môn toán hồi đi học."
+      "example": "My aunt is an accountant in the centre.",
+      "exampleTranslation": "Dì tôi là kế toán ở trung tâm."
     },
     {
       "word": "cook",
-      "example": "The cook at that little restaurant learned his skills abroad.",
-      "exampleTranslation": "Đầu bếp ở nhà hàng nhỏ đó đã học các kỹ năng của mình ở nước ngoài."
+      "example": "The cook makes special food every day.",
+      "exampleTranslation": "Người đầu bếp nấu món ăn đặc biệt mỗi ngày."
     },
     {
       "word": "lawyer",
-      "example": "My neighbour is a lawyer who lives in the north of the city.",
-      "exampleTranslation": "Hàng xóm của tôi là một luật sư sống ở phía bắc thành phố."
+      "example": "Her father is a famous lawyer in town.",
+      "exampleTranslation": "Bố cô ấy là một luật sư nổi tiếng trong thị trấn."
     },
     {
       "word": "architect",
-      "example": "The architect drew a beautiful library for our secondary school.",
-      "exampleTranslation": "Kiến trúc sư đã vẽ một thư viện đẹp cho trường trung học của chúng tôi."
+      "example": "The architect designed a peaceful little park.",
+      "exampleTranslation": "Kiến trúc sư đã thiết kế một công viên nhỏ yên bình."
     },
     {
       "word": "engineer",
-      "example": "My brother studied hard at university and now works as an engineer abroad.",
-      "exampleTranslation": "Anh trai tôi đã học rất chăm ở đại học và giờ làm kỹ sư ở nước ngoài."
+      "example": "He studied engineering to become an engineer.",
+      "exampleTranslation": "Anh ấy học ngành kỹ thuật để trở thành kỹ sư."
     },
     {
       "word": "manager",
-      "example": "Our manager will announce the new schedule at tomorrow's meeting.",
-      "exampleTranslation": "Quản lý của chúng tôi sẽ thông báo lịch làm việc mới trong cuộc họp ngày mai."
+      "example": "The manager will tell you about the job.",
+      "exampleTranslation": "Quản lý sẽ nói cho bạn về công việc."
     },
     {
       "word": "pilot",
-      "example": "He wants to become a pilot, so he is improving his English quickly.",
-      "exampleTranslation": "Anh ấy muốn trở thành phi công nên đang cải thiện tiếng Anh rất nhanh."
+      "example": "The pilot often flies to the north.",
+      "exampleTranslation": "Người phi công thường bay ra phía bắc."
     },
     {
       "word": "salesperson",
-      "example": "A friendly salesperson can communicate well with people from any culture.",
-      "exampleTranslation": "Một nhân viên bán hàng thân thiện có thể giao tiếp tốt với người từ mọi nền văn hoá."
+      "example": "The salesperson is very confident and polite.",
+      "exampleTranslation": "Người bán hàng rất tự tin và lịch sự."
     },
     {
       "word": "housewife",
-      "example": "My aunt is a housewife and she attends a cooking course every Saturday.",
-      "exampleTranslation": "Dì tôi là nội trợ và bà tham gia một khoá học nấu ăn vào mỗi thứ Bảy."
+      "example": "My mother is a housewife in my hometown.",
+      "exampleTranslation": "Mẹ tôi là nội trợ ở quê."
     },
     {
       "word": "receptionist",
-      "example": "The receptionist asked the visitor to sign his name at the desk.",
-      "exampleTranslation": "Lễ tân đề nghị vị khách ký tên vào sổ ở quầy."
+      "example": "The receptionist asked for my contact number.",
+      "exampleTranslation": "Lễ tân hỏi số điện thoại liên lạc của tôi."
     },
     {
       "word": "hairdresser",
-      "example": "My hairdresser is very popular, so I must call her a week earlier.",
-      "exampleTranslation": "Thợ làm tóc của tôi rất được yêu thích, nên tôi phải gọi điện trước một tuần."
+      "example": "My hairdresser knows everyone in town.",
+      "exampleTranslation": "Thợ làm tóc của tôi biết mọi người trong thị trấn."
     }
   ]
 }

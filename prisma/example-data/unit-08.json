@@ -1,102 +1,127 @@
 {
   "unit": 8,
   "deck": "Unit 8: Sự thật về thủ đô",
-  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 8 và ít nhất 1 từ đã học ở Unit trước.",
+  "note": "Câu ví dụ rút gọn 6–8 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
   "items": [
     {
+      "word": "pricey",
+      "example": "Restaurants in the central district are pricey.",
+      "exampleTranslation": "Nhà hàng ở quận trung tâm rất đắt."
+    },
+    {
+      "word": "accommodation",
+      "example": "Accommodation in the capital is very expensive.",
+      "exampleTranslation": "Chỗ ở tại thủ đô rất đắt đỏ."
+    },
+    {
       "word": "room",
-      "example": "The bus was so crowded that there was no room for my bag.",
-      "exampleTranslation": "Xe buýt đông đến nỗi không còn chỗ nào cho chiếc túi của tôi."
+      "example": "The modern office has plenty of room.",
+      "exampleTranslation": "Văn phòng hiện đại có rất nhiều không gian."
     },
     {
       "word": "daily",
-      "example": "Millions of people travel into the capital daily for work.",
-      "exampleTranslation": "Hàng triệu người đi vào thủ đô hàng ngày để làm việc."
+      "example": "I take the bus daily to the centre.",
+      "exampleTranslation": "Tôi đi xe buýt vào trung tâm hàng ngày."
     },
     {
       "word": "pollution",
-      "example": "Pollution in the central district is much worse than in my hometown.",
-      "exampleTranslation": "Ô nhiễm ở quận trung tâm tệ hơn nhiều so với ở quê tôi."
+      "example": "Pollution from the highway makes me sick.",
+      "exampleTranslation": "Ô nhiễm từ đường cao tốc làm tôi bị ốm."
     },
     {
       "word": "vehicle",
-      "example": "Every vehicle must stop before the traffic lights on this highway.",
-      "exampleTranslation": "Mọi phương tiện phải dừng lại trước đèn giao thông trên đường cao tốc này."
+      "example": "Too many vehicles use this highway.",
+      "exampleTranslation": "Quá nhiều phương tiện đi trên đường cao tốc này."
     },
     {
       "word": "rubbish",
-      "example": "People leave rubbish on the pavement after the night market closes.",
-      "exampleTranslation": "Người ta để lại rác trên vỉa hè sau khi chợ đêm đóng cửa."
+      "example": "There is rubbish on the pavement again.",
+      "exampleTranslation": "Lại có rác trên vỉa hè."
     },
     {
       "word": "throw",
-      "example": "Please do not throw plastic bottles into the alley behind our house.",
-      "exampleTranslation": "Xin đừng vứt chai nhựa vào con hẻm phía sau nhà chúng tôi."
+      "example": "Don't throw rubbish in the alley.",
+      "exampleTranslation": "Đừng vứt rác vào con hẻm."
     },
     {
       "word": "unhealthy",
-      "example": "The air in this bustling area is unhealthy for small children.",
-      "exampleTranslation": "Không khí ở khu vực nhộn nhịp này có hại cho sức khỏe của trẻ nhỏ."
+      "example": "Unhealthy food is cheap in this district.",
+      "exampleTranslation": "Đồ ăn không lành mạnh rất rẻ ở quận này."
+    },
+    {
+      "word": "overpopulated",
+      "example": "Many say the capital is overpopulated.",
+      "exampleTranslation": "Nhiều người nói thủ đô đang quá đông dân."
     },
     {
       "word": "population",
-      "example": "The population of this district has doubled in only ten years.",
-      "exampleTranslation": "Dân số của quận này đã tăng gấp đôi chỉ trong mười năm."
+      "example": "The population of the capital keeps growing.",
+      "exampleTranslation": "Dân số của thủ đô không ngừng tăng."
     },
     {
       "word": "lack",
-      "example": "Many old neighbourhoods lack clean water and modern hospitals.",
-      "exampleTranslation": "Nhiều khu phố cũ thiếu nước sạch và bệnh viện hiện đại."
+      "example": "Our neighbourhood lacks parks and green spaces.",
+      "exampleTranslation": "Khu phố của chúng tôi thiếu công viên và cây xanh."
+    },
+    {
+      "word": "facility",
+      "example": "The district has modern sports facilities.",
+      "exampleTranslation": "Quận này có cơ sở vật chất thể thao hiện đại."
     },
     {
       "word": "build",
-      "example": "The city plans to build a new tower near the river.",
-      "exampleTranslation": "Thành phố dự định xây một tòa tháp mới gần con sông."
+      "example": "They plan to build another skyscraper here.",
+      "exampleTranslation": "Họ dự định xây thêm một tòa nhà chọc trời ở đây."
     },
     {
       "word": "bridge",
-      "example": "The old bridge is convenient for students who live on the other side.",
-      "exampleTranslation": "Cây cầu cũ rất tiện lợi cho những học sinh sống ở bờ bên kia."
+      "example": "A new bridge connects the two districts.",
+      "exampleTranslation": "Một cây cầu mới nối hai quận với nhau."
     },
     {
       "word": "beggar",
-      "example": "A beggar sat quietly near the entrance of the nightclub.",
-      "exampleTranslation": "Một người ăn xin ngồi lặng lẽ gần lối vào của hộp đêm."
+      "example": "A beggar sits near the busy square.",
+      "exampleTranslation": "Một người ăn xin ngồi gần quảng trường đông người."
     },
     {
       "word": "poor",
-      "example": "Many poor families cannot pay the high rent in this city.",
-      "exampleTranslation": "Nhiều gia đình nghèo không thể trả tiền thuê nhà cao ở thành phố này."
+      "example": "Poor families cannot afford the rent.",
+      "exampleTranslation": "Những gia đình nghèo không trả nổi tiền thuê nhà."
     },
     {
       "word": "selfish",
-      "example": "Some rich people are selfish and never help anyone around them.",
-      "exampleTranslation": "Một số người giàu có thì ích kỷ và không bao giờ giúp đỡ ai xung quanh họ."
+      "example": "Selfish drivers block the narrow alley.",
+      "exampleTranslation": "Những tài xế ích kỷ chắn lối con hẻm hẹp."
     },
     {
       "word": "pickpocket",
-      "example": "A pickpocket stole her phone on the lively shopping street.",
-      "exampleTranslation": "Một kẻ móc túi đã lấy trộm điện thoại của cô ấy trên con phố mua sắm sống động."
+      "example": "Watch out for pickpockets in crowded places.",
+      "exampleTranslation": "Hãy coi chừng kẻ móc túi ở nơi đông người."
     },
     {
       "word": "crime",
-      "example": "Crime is rising in this area, so people feel nervous at night.",
-      "exampleTranslation": "Tội phạm đang gia tăng ở khu vực này, nên người dân cảm thấy lo lắng vào ban đêm."
+      "example": "Crime is a problem in this district.",
+      "exampleTranslation": "Tội phạm là một vấn đề ở quận này."
     },
     {
       "word": "security",
-      "example": "Security in this neighbourhood improved after the new cameras appeared.",
-      "exampleTranslation": "An ninh ở khu phố này đã được cải thiện sau khi những chiếc camera mới xuất hiện."
+      "example": "The tower has good security at night.",
+      "exampleTranslation": "Tòa tháp có an ninh tốt vào ban đêm."
     },
     {
       "word": "scam",
-      "example": "That cheap tour was a scam, and the visitors lost all their money.",
-      "exampleTranslation": "Chuyến du lịch giá rẻ đó là một trò lừa đảo, và các du khách đã mất hết tiền."
+      "example": "Tourists often fall for this price scam.",
+      "exampleTranslation": "Du khách thường mắc bẫy trò lừa đảo về giá này."
     },
     {
       "word": "affordable",
-      "example": "Young workers need affordable housing near the city centre.",
-      "exampleTranslation": "Những người lao động trẻ cần nhà ở giá phải chăng gần trung tâm thành phố."
+      "example": "Affordable flats are rare in the capital.",
+      "exampleTranslation": "Căn hộ giá phải chăng rất hiếm ở thủ đô."
+    },
+    {
+      "word": "demand",
+      "example": "The demand for cheap rooms is high.",
+      "exampleTranslation": "Nhu cầu thuê phòng giá rẻ rất cao."
     }
   ]
 }

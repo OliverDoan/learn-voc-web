@@ -1,37 +1,127 @@
 {
   "unit": 30,
   "deck": "Unit 30: Xe cộ và sửa chữa",
-  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 30 và ít nhất 1 từ đã học ở Unit trước.",
+  "note": "Câu ví dụ rút gọn 6–8 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
   "items": [
     {
+      "word": "motorbike",
+      "example": "We rode into town on my motorbike.",
+      "exampleTranslation": "Chúng tôi đi vào thị trấn bằng xe máy của tôi."
+    },
+    {
+      "word": "full",
+      "example": "The fuel tank was full before the trip.",
+      "exampleTranslation": "Bình nhiên liệu đã đầy trước chuyến đi."
+    },
+    {
+      "word": "regularly",
+      "example": "You should check your engine oil regularly.",
+      "exampleTranslation": "Bạn nên kiểm tra dầu máy thường xuyên."
+    },
+    {
+      "word": "navigate",
+      "example": "She used a map to navigate the city.",
+      "exampleTranslation": "Cô ấy dùng bản đồ để định hướng trong thành phố."
+    },
+    {
+      "word": "shortcut",
+      "example": "He took a shortcut through the narrow alley.",
+      "exampleTranslation": "Anh ấy đi đường tắt qua con hẻm hẹp."
+    },
+    {
+      "word": "nightmare",
+      "example": "The journey home turned into a nightmare.",
+      "exampleTranslation": "Chuyến đi về nhà biến thành một cơn ác mộng."
+    },
+    {
       "word": "lost",
-      "example": "We got completely lost because the map on my phone stopped working.",
-      "exampleTranslation": "Chúng tôi bị lạc đường hoàn toàn vì bản đồ trên điện thoại của tôi ngừng hoạt động."
+      "example": "We got lost because the map stopped working.",
+      "exampleTranslation": "Chúng tôi bị lạc đường vì bản đồ ngừng hoạt động."
+    },
+    {
+      "word": "turn",
+      "example": "Turn left at the old bridge.",
+      "exampleTranslation": "Hãy rẽ trái ở cây cầu cũ."
+    },
+    {
+      "word": "suddenly",
+      "example": "My motorbike suddenly stopped on the highway.",
+      "exampleTranslation": "Xe máy của tôi đột nhiên chết máy trên đường cao tốc."
     },
     {
       "word": "smoke",
-      "example": "Thick smoke came out of the engine, so we had to push the car away.",
-      "exampleTranslation": "Khói dày bốc ra từ động cơ, nên chúng tôi phải đẩy chiếc xe ra xa."
+      "example": "Black smoke came from the old vehicle.",
+      "exampleTranslation": "Khói đen bốc ra từ chiếc xe cũ."
+    },
+    {
+      "word": "engine",
+      "example": "The engine made a strange noise.",
+      "exampleTranslation": "Động cơ phát ra một tiếng động lạ."
+    },
+    {
+      "word": "brake",
+      "example": "He hit the brake to avoid an accident.",
+      "exampleTranslation": "Anh ấy đạp phanh để tránh một vụ tai nạn."
+    },
+    {
+      "word": "truck",
+      "example": "A heavy truck blocked the whole road.",
+      "exampleTranslation": "Một chiếc xe tải nặng chặn cả con đường."
     },
     {
       "word": "hit",
-      "example": "A fast motorbike almost hit a pedestrian near the petrol station.",
-      "exampleTranslation": "Một chiếc xe máy chạy nhanh suýt đâm vào một người đi bộ gần trạm xăng."
+      "example": "A motorbike almost hit a pedestrian.",
+      "exampleTranslation": "Một chiếc xe máy suýt đâm vào người đi bộ."
+    },
+    {
+      "word": "bicycle",
+      "example": "My girlfriend rides her bicycle to work.",
+      "exampleTranslation": "Bạn gái tôi đạp xe đạp đi làm."
     },
     {
       "word": "tricycle",
-      "example": "An old woman sells sweet snacks from her tricycle beside the market.",
-      "exampleTranslation": "Một bà cụ bán đồ ăn vặt ngọt từ chiếc xe ba bánh của bà bên cạnh chợ."
+      "example": "An old woman sells snacks from her tricycle.",
+      "exampleTranslation": "Một bà cụ bán đồ ăn vặt trên chiếc xe ba bánh."
+    },
+    {
+      "word": "lift",
+      "example": "A kind man offered us a lift.",
+      "exampleTranslation": "Một người đàn ông tốt bụng cho chúng tôi đi nhờ xe."
+    },
+    {
+      "word": "fare",
+      "example": "The taxi fare was quite expensive.",
+      "exampleTranslation": "Tiền vé taxi khá đắt."
+    },
+    {
+      "word": "garage",
+      "example": "We pushed the motorbike to the nearest garage.",
+      "exampleTranslation": "Chúng tôi đẩy xe máy đến xưởng sửa xe gần nhất."
     },
     {
       "word": "boat",
-      "example": "We watched a small boat cross the quiet lake at sunset.",
-      "exampleTranslation": "Chúng tôi ngắm một chiếc thuyền nhỏ băng qua hồ nước yên tĩnh lúc hoàng hôn."
+      "example": "A small boat crossed the quiet lake.",
+      "exampleTranslation": "Một chiếc thuyền nhỏ băng qua mặt hồ yên tĩnh."
+    },
+    {
+      "word": "mechanic",
+      "example": "The mechanic repaired our broken engine quickly.",
+      "exampleTranslation": "Người thợ máy sửa động cơ hỏng của chúng tôi rất nhanh."
     },
     {
       "word": "wheel",
-      "example": "The front wheel was badly damaged, so the repair will be expensive.",
-      "exampleTranslation": "Bánh xe trước bị hỏng nặng, nên việc sửa chữa sẽ tốn kém."
+      "example": "The front wheel was badly damaged.",
+      "exampleTranslation": "Bánh xe trước bị hư hỏng nặng."
+    },
+    {
+      "word": "fix",
+      "example": "He tried to fix the broken lantern.",
+      "exampleTranslation": "Anh ấy cố sửa chiếc đèn lồng bị hỏng."
+    },
+    {
+      "word": "charge",
+      "example": "The garage charged us a reasonable price.",
+      "exampleTranslation": "Xưởng sửa xe tính phí chúng tôi với giá hợp lý."
     }
   ]
 }

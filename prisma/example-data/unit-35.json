@@ -1,0 +1,127 @@
+{
+  "unit": 35,
+  "deck": "Unit 35: Công nghệ và thiết bị",
+  "note": "Câu ví dụ rút gọn 6–8 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
+  "items": [
+    {
+      "word": "lightning",
+      "example": "She can run as fast as lightning.",
+      "exampleTranslation": "Cô ấy có thể chạy nhanh như chớp."
+    },
+    {
+      "word": "advanced",
+      "example": "This laptop has an advanced camera system.",
+      "exampleTranslation": "Chiếc máy tính xách tay này có hệ thống camera tiên tiến."
+    },
+    {
+      "word": "western",
+      "example": "Many western companies make popular software.",
+      "exampleTranslation": "Nhiều công ty phương Tây làm ra phần mềm phổ biến."
+    },
+    {
+      "word": "screen",
+      "example": "My phone screen broke when I dropped it.",
+      "exampleTranslation": "Màn hình điện thoại của tôi bị vỡ khi tôi làm rơi nó."
+    },
+    {
+      "word": "information",
+      "example": "All the information is on their website.",
+      "exampleTranslation": "Tất cả thông tin đều có trên trang web của họ."
+    },
+    {
+      "word": "smart",
+      "example": "My smart watch reminds me to rest.",
+      "exampleTranslation": "Đồng hồ thông minh nhắc tôi nghỉ ngơi."
+    },
+    {
+      "word": "extremely",
+      "example": "This new phone is extremely expensive.",
+      "exampleTranslation": "Chiếc điện thoại mới này cực kỳ đắt."
+    },
+    {
+      "word": "update",
+      "example": "Update your phone to fix that problem.",
+      "exampleTranslation": "Hãy cập nhật điện thoại để sửa lỗi đó."
+    },
+    {
+      "word": "technology",
+      "example": "Modern technology changed how we communicate.",
+      "exampleTranslation": "Công nghệ hiện đại đã thay đổi cách chúng ta giao tiếp."
+    },
+    {
+      "word": "support",
+      "example": "My old laptop doesn't support popular apps.",
+      "exampleTranslation": "Máy tính xách tay cũ của tôi không hỗ trợ các ứng dụng phổ biến."
+    },
+    {
+      "word": "change",
+      "example": "Social media changed the way we share.",
+      "exampleTranslation": "Mạng xã hội đã thay đổi cách chúng ta chia sẻ."
+    },
+    {
+      "word": "nerd",
+      "example": "The computer nerd repairs everyone's laptops.",
+      "exampleTranslation": "Anh chàng mê máy tính sửa máy tính cho mọi người."
+    },
+    {
+      "word": "totally",
+      "example": "My old phone is totally useless now.",
+      "exampleTranslation": "Chiếc điện thoại cũ của tôi giờ hoàn toàn vô dụng."
+    },
+    {
+      "word": "future",
+      "example": "In the future, robots may do dangerous work.",
+      "exampleTranslation": "Trong tương lai, rô-bốt có thể làm những việc nguy hiểm."
+    },
+    {
+      "word": "outdated",
+      "example": "This software is outdated and no longer safe.",
+      "exampleTranslation": "Phần mềm này đã lỗi thời và không còn an toàn."
+    },
+    {
+      "word": "select",
+      "example": "Select the file you want to send.",
+      "exampleTranslation": "Hãy chọn tệp bạn muốn gửi."
+    },
+    {
+      "word": "replace",
+      "example": "I need to replace my weak battery.",
+      "exampleTranslation": "Tôi cần thay cục pin yếu của mình."
+    },
+    {
+      "word": "install",
+      "example": "He installed a new air conditioner.",
+      "exampleTranslation": "Anh ấy lắp một chiếc máy điều hoà mới."
+    },
+    {
+      "word": "delete",
+      "example": "I deleted old photos to save space.",
+      "exampleTranslation": "Tôi xoá ảnh cũ để tiết kiệm dung lượng."
+    },
+    {
+      "word": "button",
+      "example": "Press this button to open the door.",
+      "exampleTranslation": "Nhấn nút này để mở cửa."
+    },
+    {
+      "word": "power",
+      "example": "The computer turned off when the power failed.",
+      "exampleTranslation": "Máy tính tắt khi mất điện."
+    },
+    {
+      "word": "software",
+      "example": "My father works as a software engineer.",
+      "exampleTranslation": "Bố tôi làm kỹ sư phần mềm."
+    },
+    {
+      "word": "hardware",
+      "example": "That shop repairs hardware and sells laptops.",
+      "exampleTranslation": "Cửa hàng đó sửa phần cứng và bán máy tính xách tay."
+    },
+    {
+      "word": "printer",
+      "example": "The printer in our office needs repair.",
+      "exampleTranslation": "Máy in ở văn phòng chúng tôi cần sửa."
+    }
+  ]
+}

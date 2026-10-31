@@ -1,77 +1,127 @@
 {
   "unit": 14,
   "deck": "Unit 14: Khác biệt văn hoá của tôi và bạn gái",
-  "note": "Câu ví dụ viết lại: mỗi câu chứa từ của Unit 14 và ít nhất 1 từ đã học ở Unit trước.",
+  "note": "Câu ví dụ rút gọn 6–8 từ: mỗi câu chứa từ của Unit và ít nhất 1 từ đã học ở Unit trước.",
   "items": [
     {
       "word": "difference",
-      "example": "There is a big difference between a Vietnamese wedding and a Western celebration.",
-      "exampleTranslation": "Có một sự khác biệt lớn giữa đám cưới Việt Nam và một buổi ăn mừng phương Tây."
+      "example": "There is a big culture difference between us.",
+      "exampleTranslation": "Giữa chúng tôi có một sự khác biệt văn hóa lớn."
+    },
+    {
+      "word": "normal",
+      "example": "Eating late is normal in my hometown.",
+      "exampleTranslation": "Ăn khuya là chuyện bình thường ở quê tôi."
+    },
+    {
+      "word": "strange",
+      "example": "Some local customs seem strange to her.",
+      "exampleTranslation": "Một số phong tục địa phương có vẻ kì lạ với cô ấy."
     },
     {
       "word": "respect",
-      "example": "We respect the old customs when we join her family at the festival.",
-      "exampleTranslation": "Chúng tôi tôn trọng những phong tục cũ khi tham gia cùng gia đình cô ấy trong lễ hội."
+      "example": "We should respect our relatives' beliefs.",
+      "exampleTranslation": "Chúng ta nên tôn trọng niềm tin của họ hàng."
+    },
+    {
+      "word": "fair",
+      "example": "It is not fair to judge a foreigner.",
+      "exampleTranslation": "Phán xét người nước ngoài là không công bằng."
     },
     {
       "word": "marriage",
-      "example": "A happy marriage generally needs trust, patience and a little luck.",
-      "exampleTranslation": "Một cuộc hôn nhân hạnh phúc nhìn chung cần sự tin tưởng, kiên nhẫn và một chút may mắn."
+      "example": "Their marriage was celebrated at a temple.",
+      "exampleTranslation": "Hôn lễ của họ được tổ chức tại một ngôi đền."
+    },
+    {
+      "word": "expect",
+      "example": "My parents expect a big wedding.",
+      "exampleTranslation": "Bố mẹ tôi mong đợi một đám cưới lớn."
     },
     {
       "word": "rule",
-      "example": "Her family has a strict rule about inviting every relative to dinner.",
-      "exampleTranslation": "Gia đình cô ấy có một quy tắc nghiêm ngặt về việc mời mọi người họ hàng đến ăn tối."
+      "example": "There are many rules at a traditional wedding.",
+      "exampleTranslation": "Có nhiều quy tắc trong một đám cưới truyền thống."
+    },
+    {
+      "word": "taboo",
+      "example": "Some topics are taboo at the dinner table.",
+      "exampleTranslation": "Một số chủ đề là điều cấm kỵ trong bữa ăn."
+    },
+    {
+      "word": "avoid",
+      "example": "Avoid this topic when talking to guests.",
+      "exampleTranslation": "Hãy tránh chủ đề này khi nói chuyện với khách."
     },
     {
       "word": "familiar",
-      "example": "These old customs are familiar to every guest at the temple.",
-      "exampleTranslation": "Những phong tục cũ này quen thuộc với mọi vị khách ở ngôi đền."
+      "example": "Her hometown looks familiar to me.",
+      "exampleTranslation": "Quê cô ấy trông thật quen thuộc với tôi."
     },
     {
       "word": "angry",
-      "example": "My father got angry when I came home late from the party.",
-      "exampleTranslation": "Bố tôi tức giận khi tôi về nhà muộn từ bữa tiệc."
+      "example": "Her father was angry about the delay.",
+      "exampleTranslation": "Bố cô ấy tức giận vì sự chậm trễ."
     },
     {
       "word": "mean",
-      "example": "I did not mean to upset her relatives during the holiday.",
-      "exampleTranslation": "Tôi không có ý làm phật lòng họ hàng của cô ấy trong kỳ nghỉ lễ."
+      "example": "Sorry, I didn't mean to be selfish.",
+      "exampleTranslation": "Xin lỗi, tôi không có ý ích kỷ."
     },
     {
       "word": "proud",
-      "example": "Her parents are very proud of the beautiful lantern she made.",
-      "exampleTranslation": "Bố mẹ cô ấy rất tự hào về chiếc đèn lồng đẹp mà cô ấy đã làm."
+      "example": "I am proud of my national culture.",
+      "exampleTranslation": "Tôi tự hào về văn hóa dân tộc mình."
+    },
+    {
+      "word": "traditional",
+      "example": "We wore traditional clothes at the festival.",
+      "exampleTranslation": "Chúng tôi mặc trang phục truyền thống ở lễ hội."
+    },
+    {
+      "word": "religion",
+      "example": "Religion is an important part of their culture.",
+      "exampleTranslation": "Tôn giáo là một phần quan trọng trong văn hóa của họ."
     },
     {
       "word": "Buddhist",
-      "example": "My grandmother is a devout Buddhist and prays at the pagoda every week.",
-      "exampleTranslation": "Bà tôi là một Phật tử mộ đạo và cầu nguyện ở chùa mỗi tuần."
+      "example": "Many Buddhists pray at the pagoda daily.",
+      "exampleTranslation": "Nhiều Phật tử cầu nguyện ở chùa mỗi ngày."
     },
     {
       "word": "shrine",
-      "example": "Every home keeps a small shrine where the family prays for a loved one.",
-      "exampleTranslation": "Mỗi ngôi nhà đều giữ một miếu thờ nhỏ nơi gia đình cầu nguyện cho người thân yêu."
+      "example": "We placed offerings on the family shrine.",
+      "exampleTranslation": "Chúng tôi đặt lễ vật lên miếu thờ của gia đình."
     },
     {
       "word": "pillar",
-      "example": "The old wooden pillar was decorated with red paper for the festival.",
-      "exampleTranslation": "Cây cột gỗ cũ được trang trí bằng giấy đỏ cho lễ hội."
+      "example": "The temple has tall wooden pillars.",
+      "exampleTranslation": "Ngôi đền có những cột gỗ cao."
+    },
+    {
+      "word": "believe",
+      "example": "Many people believe in good luck.",
+      "exampleTranslation": "Nhiều người tin vào vận may."
     },
     {
       "word": "care",
-      "example": "She looks after her old parents with great care during every holiday.",
-      "exampleTranslation": "Cô ấy chăm sóc bố mẹ già với sự quan tâm lớn trong mỗi kỳ nghỉ lễ."
+      "example": "She takes care of her relatives.",
+      "exampleTranslation": "Cô ấy chăm lo cho họ hàng của mình."
     },
     {
       "word": "control",
-      "example": "Her father tries to control the guest list for the whole wedding.",
-      "exampleTranslation": "Bố cô ấy cố gắng kiểm soát danh sách khách mời cho cả đám cưới."
+      "example": "She can't control her nervous feelings.",
+      "exampleTranslation": "Cô ấy không kiểm soát được cảm giác lo lắng."
+    },
+    {
+      "word": "persuade",
+      "example": "I persuaded her to try local food.",
+      "exampleTranslation": "Tôi đã thuyết phục cô ấy thử đồ ăn địa phương."
     },
     {
       "word": "surprise",
-      "example": "They wanted to surprise their mother on her wedding anniversary.",
-      "exampleTranslation": "Họ muốn làm mẹ mình bất ngờ vào ngày kỷ niệm đám cưới của bà."
+      "example": "I surprised her on our anniversary.",
+      "exampleTranslation": "Tôi đã làm cô ấy bất ngờ vào ngày kỉ niệm."
     }
   ]
 }
