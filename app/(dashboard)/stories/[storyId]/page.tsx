@@ -9,15 +9,19 @@ import { Button } from "@/components/ui/button";
 import { useConfirm } from "@/components/ui/confirm-dialog";
 import { ImageLightbox } from "@/components/ui/image-lightbox";
 import { PageLoader } from "@/components/ui/page-loader";
-import { StoryRenderer } from "@/components/story/story-renderer";
-import { StoryProse } from "@/components/story/story-prose";
-import { StoryModeToggle, type StoryViewMode } from "@/components/story/story-mode-toggle";
+import { StoryViewContent } from "@/components/story/story-view-content";
+import { StoryModeToggle } from "@/components/story/story-mode-toggle";
 import { ReadingSpeedControl } from "@/components/story/reading-speed-control";
 import { useDeleteStory, useStories, useStory, isStoryLockedError } from "@/hooks/use-stories";
 import { DeckLockedScreen } from "@/components/deck/deck-locked-screen";
 import { useFavorites } from "@/hooks/use-cards";
 import { useReadingRate } from "@/hooks/use-reading-rate";
-import { countWordTokens, firstMeaning, parseStory, toVietnamese } from "@/lib/story-parser";
+import { countWordTokens, firstMeaning, parseStory } from "@/lib/story-parser";
+import {
+  DEFAULT_STORY_VIEW_MODE,
+  resolveStoryViewMode,
+  type StoryViewMode,
+} from "@/lib/story-view";
 import { isSpeakable, speakAsync, stopSpeaking } from "@/lib/tts";
 
 interface PageProps {
@@ -35,10 +39,10 @@ export default function StoryViewPage({ params }: PageProps) {
   const router = useRouter();
   const [showMeanings, setShowMeanings] = useState(false);
   const [hideWords, setHideWords] = useState(false);
-  // Chế độ hiển thị: chêm (mặc định) / full tiếng Việt / full tiếng Anh
-  const [viewMode, setViewMode] = useState<StoryViewMode>("cham");
-  // Chế độ đọc: "mixed" (văn Việt + từ chêm tiếng Anh) | "vi" (đọc toàn bộ tiếng Việt) | null
-  const [readMode, setReadMode] = useState<"mixed" | "vi" | null>(null);
+  // Chế độ hiển thị: full tiếng Anh (mặc định) / chêm / full tiếng Việt
+  const [viewMode, setViewMode] = useState<StoryViewMode>(DEFAULT_STORY_VIEW_MODE);
+  // Chế độ đọc: "mixed" (văn Việt + từ chêm tiếng Anh) | "vi" (toàn bộ tiếng Việt) | "en" (bản tiếng Anh) | null
+  const [readMode, setReadMode] = useState<"mixed" | "vi" | "en" | null>(null);
   // Mỗi lần bắt đầu/huỷ đọc tăng generation để vòng đọc cũ tự dừng, tránh đọc chồng.
   const readGenRef = useRef(0);
   const { rate, setRate } = useReadingRate();
@@ -49,6 +53,10 @@ export default function StoryViewPage({ params }: PageProps) {
   }, [rate]);
 
   const { data: story, isLoading, error } = useStory(storyId);
+  // Chọn English mà truyện chưa có bản tiếng Anh → hiện chêm.
+  const mode = resolveStoryViewMode(viewMode, story?.contentEn);
+  // Nút "Đọc to" đọc đúng thứ đang hiện: bản tiếng Anh ở chế độ English, song ngữ ở chế độ còn lại.
+  const aloudMode: "mixed" | "en" = mode === "en" ? "en" : "mixed";
   // Toàn bộ truyện (mọi deck) để điều hướng sang truyện kế tiếp, kể cả khi deck chỉ có 1 truyện.
   const { data: allStories } = useStories();
   const { data: favorites } = useFavorites();
@@ -93,10 +101,11 @@ export default function StoryViewPage({ params }: PageProps) {
   // Đọc truyện theo chế độ:
   // - "mixed": văn tiếng Việt (vi-VN) + từ chêm đọc tiếng Anh (en-US)
   // - "vi": đọc toàn bộ bằng tiếng Việt, từ chêm đọc nghĩa tiếng Việt (nghĩa đầu tiên)
-  const startReading = async (mode: "mixed" | "vi") => {
+  // - "en": đọc bản full tiếng Anh từng đoạn (en-US)
+  const startReading = async (readAs: "mixed" | "vi" | "en") => {
     if (!story) return;
     // Bấm lại đúng nút đang đọc → dừng.
-    if (readMode === mode) {
+    if (readMode === readAs) {
       readGenRef.current++;
       stopSpeaking();
       setReadMode(null);
@@ -105,14 +114,23 @@ export default function StoryViewPage({ params }: PageProps) {
     // Bắt đầu (hoặc chuyển) chế độ đọc — huỷ vòng đọc cũ bằng generation mới.
     const gen = ++readGenRef.current;
     stopSpeaking();
-    setReadMode(mode);
+    setReadMode(readAs);
+    if (readAs === "en") {
+      for (const para of (story.contentEn ?? "").split(/\n+/)) {
+        if (readGenRef.current !== gen) return;
+        const text = para.trim();
+        if (isSpeakable(text)) await speakAsync(text, "en-US", rateRef.current);
+      }
+      if (readGenRef.current === gen) setReadMode(null);
+      return;
+    }
     const tokens = parseStory(story.content);
     for (const tok of tokens) {
       if (readGenRef.current !== gen) return; // đã bị huỷ hoặc đổi chế độ
       if (tok.type === "text") {
         const text = tok.text.trim();
         if (isSpeakable(text)) await speakAsync(text, "vi-VN", rateRef.current);
-      } else if (mode === "vi") {
+      } else if (readAs === "vi") {
         await speakAsync(firstMeaning(tok.meaning), "vi-VN", rateRef.current);
       } else {
         await speakAsync(tok.word, "en-US", rateRef.current);
@@ -198,17 +216,17 @@ export default function StoryViewPage({ params }: PageProps) {
 
       <div className="mb-6 flex flex-wrap justify-center gap-2">
         <Button
-          variant={readMode === "mixed" ? "default" : "outline"}
+          variant={readMode === aloudMode ? "default" : "outline"}
           size="sm"
           className="rounded-full"
-          onClick={() => startReading("mixed")}
+          onClick={() => startReading(aloudMode)}
         >
-          {readMode === "mixed" ? (
+          {readMode === aloudMode ? (
             <Square className="h-4 w-4 fill-current" />
           ) : (
             <Volume2 className="h-4 w-4" />
           )}
-          {readMode === "mixed" ? "Dừng" : "Đọc to"}
+          {readMode === aloudMode ? "Dừng" : "Đọc to"}
         </Button>
         <Button
           variant={readMode === "vi" ? "default" : "outline"}
@@ -223,7 +241,7 @@ export default function StoryViewPage({ params }: PageProps) {
           )}
           {readMode === "vi" ? "Dừng" : "Đọc tiếng Việt"}
         </Button>
-        {viewMode === "cham" ? (
+        {mode !== "vi" ? (
           <>
             <Button
               variant="outline"
@@ -252,7 +270,7 @@ export default function StoryViewPage({ params }: PageProps) {
         </Link>
         <ReadingSpeedControl rate={rate} onChange={setRate} />
         <StoryModeToggle
-          value={viewMode}
+          value={mode}
           onChange={setViewMode}
           enAvailable={!!story.contentEn}
         />
@@ -270,23 +288,15 @@ export default function StoryViewPage({ params }: PageProps) {
       </div>
 
       <article className="rounded-2xl border bg-card p-8 shadow-[0_24px_64px_rgba(0,13,139,.08)] md:px-12">
-        {viewMode === "cham" ? (
-          <StoryRenderer
-            content={story.content}
-            showMeanings={showMeanings}
-            hideWords={hideWords}
-            favoriteWords={favoriteWords}
-          />
-        ) : viewMode === "vi" ? (
-          <StoryProse text={toVietnamese(story.content)} />
-        ) : story.contentEn ? (
-          <StoryProse text={story.contentEn} />
-        ) : (
-          <p className="text-center text-sm text-muted-foreground">
-            Truyện này chưa có bản tiếng Anh.
-          </p>
-        )}
-        {viewMode === "cham" ? (
+        <StoryViewContent
+          mode={mode}
+          content={story.content}
+          contentEn={story.contentEn}
+          showMeanings={showMeanings}
+          hideWords={hideWords}
+          favoriteWords={favoriteWords}
+        />
+        {mode !== "vi" ? (
           <div className="font-mono mt-8 flex flex-wrap items-center justify-center gap-2 text-[12.5px] text-muted-foreground">
             <span className="inline-flex items-center gap-1.5">
               <span className="inline-block h-3 w-3 rounded bg-primary/15 [border-bottom:2px_solid_var(--primary)]" />

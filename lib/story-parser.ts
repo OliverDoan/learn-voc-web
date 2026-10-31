@@ -1,6 +1,13 @@
 export type StoryToken =
   | { type: "text"; text: string }
-  | { type: "word"; word: string; meaning: string };
+  | {
+      type: "word";
+      /** Chữ hiển thị (trong bản tiếng Anh có thể là dạng biến đổi, vd "learned"). */
+      word: string;
+      meaning: string;
+      /** Từ gốc của thẻ khi `word` là dạng biến đổi — dùng để tra từ loại / yêu thích / phát âm. */
+      lemma?: string;
+    };
 
 const TOKEN_RE = /\[\[([^|\]]+)\|([^\]]+)\]\]/g;
 

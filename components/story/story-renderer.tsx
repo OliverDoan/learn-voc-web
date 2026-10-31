@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { Volume2, X } from "lucide-react";
-import { parseStory } from "@/lib/story-parser";
+import { parseStory, type StoryToken } from "@/lib/story-parser";
 import { speak } from "@/lib/tts";
 import { cn } from "@/lib/utils";
 import { useAllWords } from "@/hooks/use-cards";
@@ -29,6 +29,8 @@ function shortPos(pos: string): string {
 
 interface StoryRendererProps {
   content: string;
+  /** Token dựng sẵn (vd bản tiếng Anh đã đánh dấu từ vựng) — có thì bỏ qua `content`. */
+  tokens?: readonly StoryToken[];
   showMeanings?: boolean;
   hideWords?: boolean;
   /** Tập từ được đánh dấu sao (viết thường) — tô màu khác để nổi bật. */
@@ -40,13 +42,14 @@ interface StoryRendererProps {
 
 export function StoryRenderer({
   content,
+  tokens: presetTokens,
   showMeanings = false,
   hideWords = false,
   favoriteWords,
   className,
   style,
 }: StoryRendererProps) {
-  const tokens = parseStory(content);
+  const tokens = presetTokens ?? parseStory(content);
   const [opened, setOpened] = useState<number | null>(null);
   // Hướng mở tooltip: mặc định lên trên, tự lật xuống dưới khi phía trên thiếu chỗ.
   const [below, setBelow] = useState(false);
@@ -86,9 +89,11 @@ export function StoryRenderer({
           return <span key={i}>{tok.text}</span>;
         }
         const open = opened === i;
+        // Tra theo từ gốc của thẻ (bản tiếng Anh có thể hiện dạng biến đổi như "learned").
+        const key = (tok.lemma ?? tok.word).trim().toLowerCase();
         // Từ được đánh dấu sao → tô màu amber thay vì xanh để nổi bật.
-        const fav = !!favoriteWords && favoriteWords.has(tok.word.trim().toLowerCase());
-        const pos = posMap.get(tok.word.trim().toLowerCase());
+        const fav = !!favoriteWords && favoriteWords.has(key);
+        const pos = posMap.get(key);
         return (
           <span key={i} className="relative inline-block align-baseline">
             <button
@@ -140,17 +145,15 @@ export function StoryRenderer({
                   <X className="h-3.5 w-3.5" />
                 </button>
                 <span className="flex items-center gap-2 pr-5">
-                  <span className="text-base font-bold">{tok.word}</span>
-                  {posMap.get(tok.word.trim().toLowerCase()) ? (
-                    <span className="text-xs font-medium italic text-[#9cc2ff]">
-                      {posMap.get(tok.word.trim().toLowerCase())}
-                    </span>
+                  <span className="text-base font-bold">{tok.lemma ?? tok.word}</span>
+                  {pos ? (
+                    <span className="text-xs font-medium italic text-[#9cc2ff]">{pos}</span>
                   ) : null}
                   <button
                     type="button"
                     onClick={(e) => {
                       e.stopPropagation();
-                      speak(tok.word);
+                      speak(tok.lemma ?? tok.word);
                     }}
                     className="ml-auto text-[#9cc2ff] hover:opacity-80"
                     aria-label="Phát âm"

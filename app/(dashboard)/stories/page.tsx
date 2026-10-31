@@ -5,9 +5,7 @@ import Link from "next/link";
 import { BookOpen, Library, Play, Settings2, Square } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { StoryRenderer } from "@/components/story/story-renderer";
-import { StoryProse } from "@/components/story/story-prose";
-import type { StoryViewMode } from "@/components/story/story-mode-toggle";
+import { StoryViewContent } from "@/components/story/story-view-content";
 import { StoryImageFlashcard } from "@/components/story/story-image-flashcard";
 import { StoryImageLightbox } from "@/components/story/story-image-lightbox";
 import { StoryImageManager } from "@/components/story/story-image-manager";
@@ -18,7 +16,12 @@ import { PageLoader } from "@/components/ui/page-loader";
 import { useStories } from "@/hooks/use-stories";
 import { useFavorites } from "@/hooks/use-cards";
 import { useReadingRate } from "@/hooks/use-reading-rate";
-import { countWordTokens, firstMeaning, parseStory, toVietnamese } from "@/lib/story-parser";
+import { countWordTokens, firstMeaning, parseStory } from "@/lib/story-parser";
+import {
+  DEFAULT_STORY_VIEW_MODE,
+  resolveStoryViewMode,
+  type StoryViewMode,
+} from "@/lib/story-view";
 import { isSpeakable, speakAsync, stopSpeaking } from "@/lib/tts";
 import { cn } from "@/lib/utils";
 import type { StoryListItem } from "@/lib/types";
@@ -40,7 +43,7 @@ export default function AllStoriesPage() {
   const [showMeanings, setShowMeanings] = useState(false);
   const [hideWords, setHideWords] = useState(false);
   // Chế độ hiển thị áp dụng cho toàn bộ truyện: chêm / full tiếng Việt / full tiếng Anh
-  const [viewMode, setViewMode] = useState<StoryViewMode>("cham");
+  const [viewMode, setViewMode] = useState<StoryViewMode>(DEFAULT_STORY_VIEW_MODE);
   // Chế độ chỉ xem ảnh: ẩn tiêu đề + từ chêm + văn bản, chỉ hiện ảnh truyện
   const [imageOnly, setImageOnly] = useState(false);
   // Index ảnh đang mở trong lightbox toàn màn hình (null = đóng), tính trên danh sách truyện có ảnh.
@@ -463,22 +466,14 @@ export default function AllStoriesPage() {
                   </Badge>
                 </div>
 
-                {viewMode === "cham" ? (
-                  <StoryRenderer
-                    content={story.content}
-                    showMeanings={showMeanings}
-                    hideWords={hideWords}
-                    favoriteWords={favoriteWords}
-                  />
-                ) : viewMode === "vi" ? (
-                  <StoryProse text={toVietnamese(story.content)} />
-                ) : story.contentEn ? (
-                  <StoryProse text={story.contentEn} />
-                ) : (
-                  <p className="text-center text-sm text-muted-foreground">
-                    Truyện này chưa có bản tiếng Anh.
-                  </p>
-                )}
+                <StoryViewContent
+                  mode={resolveStoryViewMode(viewMode, story.contentEn)}
+                  content={story.content}
+                  contentEn={story.contentEn}
+                  showMeanings={showMeanings}
+                  hideWords={hideWords}
+                  favoriteWords={favoriteWords}
+                />
               </article>
             );
           })}

@@ -15,9 +15,15 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { StoryRenderer } from "@/components/story/story-renderer";
+import { StoryViewContent } from "@/components/story/story-view-content";
+import { StoryModeToggle } from "@/components/story/story-mode-toggle";
 import { ReadingSpeedControl } from "@/components/story/reading-speed-control";
-import { useStoryReader } from "@/hooks/use-story-reader";
+import { useStoryReader, type StoryReadMode } from "@/hooks/use-story-reader";
+import {
+  DEFAULT_STORY_VIEW_MODE,
+  resolveStoryViewMode,
+  type StoryViewMode,
+} from "@/lib/story-view";
 import type { StoryListItem } from "@/lib/types";
 
 /** Cỡ chữ đọc truyện (px) — bước nhảy đủ rõ trên màn hình điện thoại. */
@@ -48,6 +54,9 @@ interface StoryFullscreenReaderProps {
   onNavigate: (index: number) => void;
   onClose: () => void;
   favoriteWords?: ReadonlySet<string>;
+  /** Chế độ hiển thị (dùng chung với nơi mở trình đọc); bỏ trống → tự quản, mặc định English. */
+  viewMode?: StoryViewMode;
+  onViewModeChange?: (mode: StoryViewMode) => void;
 }
 
 /**
@@ -63,6 +72,8 @@ export function StoryFullscreenReader({
   onNavigate,
   onClose,
   favoriteWords,
+  viewMode: viewModeProp,
+  onViewModeChange,
 }: StoryFullscreenReaderProps) {
   const [showMeanings, setShowMeanings] = useState(false);
   const [hideWords, setHideWords] = useState(false);
@@ -73,6 +84,18 @@ export function StoryFullscreenReader({
 
   const total = stories.length;
   const story = stories[index];
+  const [localViewMode, setLocalViewMode] = useState<StoryViewMode>(DEFAULT_STORY_VIEW_MODE);
+  const viewMode = viewModeProp ?? localViewMode;
+  const mode = resolveStoryViewMode(viewMode, story?.contentEn);
+  const readModeForView: StoryReadMode = mode === "cham" ? "mixed" : mode;
+  const readText = mode === "en" ? (story?.contentEn ?? "") : (story?.content ?? "");
+  const reading = readMode === readModeForView;
+
+  const changeViewMode = (next: StoryViewMode) => {
+    stopReading();
+    setLocalViewMode(next);
+    onViewModeChange?.(next);
+  };
 
   const changeFont = (delta: number) => {
     setFontIndex((prev) => {
@@ -145,16 +168,16 @@ export function StoryFullscreenReader({
         </div>
         <button
           type="button"
-          onClick={() => toggleRead(story.content, "mixed")}
+          onClick={() => toggleRead(readText, readModeForView)}
           className={cn(
             "flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-colors",
-            readMode === "mixed"
+            reading
               ? "bg-primary text-primary-foreground"
               : "text-muted-foreground hover:bg-accent hover:text-foreground",
           )}
-          aria-label={readMode === "mixed" ? "Dừng đọc" : "Đọc to"}
+          aria-label={reading ? "Dừng đọc" : "Đọc to"}
         >
-          {readMode === "mixed" ? (
+          {reading ? (
             <Square className="h-4 w-4 fill-current" />
           ) : (
             <Volume2 className="h-5 w-5" />
@@ -162,26 +185,36 @@ export function StoryFullscreenReader({
         </button>
       </header>
 
-      {/* Thanh công cụ: nghĩa · ẩn từ · cỡ chữ · tốc độ đọc */}
+      {/* Thanh công cụ: ngôn ngữ · nghĩa · ẩn từ (chỉ khi chêm) · cỡ chữ · tốc độ đọc */}
       <div className="flex flex-wrap items-center gap-1.5 border-b px-3 py-2">
-        <Button
-          variant="outline"
-          size="sm"
-          className="h-7 rounded-full px-2.5 text-xs"
-          onClick={() => setShowMeanings((v) => !v)}
-        >
-          {showMeanings ? <EyeOff className="h-3.5 w-3.5" /> : <Eye className="h-3.5 w-3.5" />}
-          {showMeanings ? "Ẩn nghĩa" : "Nghĩa"}
-        </Button>
-        <Button
-          variant={hideWords ? "default" : "outline"}
-          size="sm"
-          className="h-7 rounded-full px-2.5 text-xs"
-          onClick={() => setHideWords((v) => !v)}
-        >
-          <Target className="h-3.5 w-3.5" />
-          {hideWords ? "Hiện" : "Ẩn từ"}
-        </Button>
+        <StoryModeToggle
+          value={mode}
+          onChange={changeViewMode}
+          enAvailable={Boolean(story.contentEn?.trim())}
+          className="[&>button]:px-2.5 [&>button]:py-0.5 [&>button]:text-xs"
+        />
+        {mode !== "vi" ? (
+          <>
+            <Button
+              variant="outline"
+              size="sm"
+              className="h-7 rounded-full px-2.5 text-xs"
+              onClick={() => setShowMeanings((v) => !v)}
+            >
+              {showMeanings ? <EyeOff className="h-3.5 w-3.5" /> : <Eye className="h-3.5 w-3.5" />}
+              {showMeanings ? "Ẩn nghĩa" : "Nghĩa"}
+            </Button>
+            <Button
+              variant={hideWords ? "default" : "outline"}
+              size="sm"
+              className="h-7 rounded-full px-2.5 text-xs"
+              onClick={() => setHideWords((v) => !v)}
+            >
+              <Target className="h-3.5 w-3.5" />
+              {hideWords ? "Hiện" : "Ẩn từ"}
+            </Button>
+          </>
+        ) : null}
 
         <div className="flex items-center gap-0.5 rounded-full border px-1">
           <button
@@ -221,8 +254,10 @@ export function StoryFullscreenReader({
               className="mb-6 h-auto w-full rounded-xl object-contain"
             />
           ) : null}
-          <StoryRenderer
+          <StoryViewContent
+            mode={mode}
             content={story.content}
+            contentEn={story.contentEn}
             showMeanings={showMeanings}
             hideWords={hideWords}
             favoriteWords={favoriteWords}

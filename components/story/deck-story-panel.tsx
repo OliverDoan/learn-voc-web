@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import {
   BookOpenText,
@@ -17,25 +17,38 @@ import {
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ImageLightbox } from "@/components/ui/image-lightbox";
-import { StoryRenderer } from "@/components/story/story-renderer";
+import { StoryViewContent } from "@/components/story/story-view-content";
+import { StoryModeToggle } from "@/components/story/story-mode-toggle";
 import { StoryFullscreenReader } from "@/components/story/story-fullscreen-reader";
 import { ReadingSpeedControl } from "@/components/story/reading-speed-control";
 import { useStories } from "@/hooks/use-stories";
 import { useFavorites } from "@/hooks/use-cards";
-import { useStoryReader } from "@/hooks/use-story-reader";
+import { useStoryReader, type StoryReadMode } from "@/hooks/use-story-reader";
+import {
+  DEFAULT_STORY_VIEW_MODE,
+  resolveStoryViewMode,
+  type StoryViewMode,
+} from "@/lib/story-view";
+import { storyWordOrder } from "@/lib/story-order";
 
 interface DeckStoryPanelProps {
   deckId: string;
   /** Gọn: chỉ giữ chức năng đọc, ẩn các nút "Nghĩa" và "Ẩn từ chêm". */
   compact?: boolean;
+  /** Báo thứ tự từ trong truyện đang hiển thị — gọi lại mỗi khi đổi truyện / đổi chế độ xem. */
+  onWordOrderChange?: (order: string[]) => void;
 }
 
 /**
  * Panel truyện chêm hiển thị ngay trong cột phải của trang deck:
- * ảnh nhỏ phía trên, nút đọc (Anh / Việt), nội dung có highlight từ chêm,
- * và nút chuyển giữa các truyện của deck.
+ * ảnh nhỏ phía trên, nút đọc to, nội dung theo chế độ (mặc định full tiếng Anh,
+ * lùi về chêm nếu truyện chưa có bản tiếng Anh) và nút chuyển giữa các truyện của deck.
  */
-export function DeckStoryPanel({ deckId, compact = false }: DeckStoryPanelProps) {
+export function DeckStoryPanel({
+  deckId,
+  compact = false,
+  onWordOrderChange,
+}: DeckStoryPanelProps) {
   const { data: stories, isLoading } = useStories(deckId);
   const { data: favorites } = useFavorites();
   const { readMode, toggleRead, stopReading, rate, setRate } = useStoryReader();
@@ -44,6 +57,7 @@ export function DeckStoryPanel({ deckId, compact = false }: DeckStoryPanelProps)
   const [index, setIndex] = useState(0);
   const [showMeanings, setShowMeanings] = useState(false);
   const [hideWords, setHideWords] = useState(false);
+  const [viewMode, setViewMode] = useState<StoryViewMode>(DEFAULT_STORY_VIEW_MODE);
   // Mở trình đọc toàn màn hình (tiện cho điện thoại).
   const [fullscreen, setFullscreen] = useState(false);
 
@@ -56,6 +70,22 @@ export function DeckStoryPanel({ deckId, compact = false }: DeckStoryPanelProps)
   // Kẹp index trong khoảng hợp lệ khi danh sách đổi.
   const safeIndex = total > 0 ? Math.min(index, total - 1) : 0;
   const story = stories?.[safeIndex];
+  const mode = resolveStoryViewMode(viewMode, story?.contentEn);
+  // Đọc to theo đúng thứ đang hiển thị: English → bản tiếng Anh, Tiếng Việt → toàn Việt, Chêm → song ngữ.
+  const readModeForView: StoryReadMode = mode === "cham" ? "mixed" : mode;
+  const readText = mode === "en" ? (story?.contentEn ?? "") : (story?.content ?? "");
+  const reading = readMode === readModeForView;
+
+  const storyContent = story?.content ?? "";
+  const storyContentEn = story?.contentEn;
+  useEffect(() => {
+    onWordOrderChange?.(storyWordOrder(storyContent, storyContentEn, mode));
+  }, [onWordOrderChange, storyContent, storyContentEn, mode]);
+
+  const changeViewMode = (next: StoryViewMode) => {
+    stopReading();
+    setViewMode(next);
+  };
 
   const goPrev = () => {
     stopReading();
@@ -107,7 +137,7 @@ export function DeckStoryPanel({ deckId, compact = false }: DeckStoryPanelProps)
       ) : null}
 
       {/* Tiêu đề (nhấn để mở trang đọc đầy đủ) + nút đọc to + chuyển truyện */}
-      <div className={cn("flex items-start justify-between gap-2 px-4 pt-3", compact && "pb-3")}>
+      <div className="flex items-start justify-between gap-2 px-4 pt-3">
         <Link href={`/stories/${story.id}`} className="group min-w-0" title="Mở trang đọc đầy đủ">
           <h3 className="truncate font-semibold leading-tight group-hover:text-primary group-hover:underline">
             {story.title}
@@ -133,17 +163,17 @@ export function DeckStoryPanel({ deckId, compact = false }: DeckStoryPanelProps)
           </button>
           <button
             type="button"
-            onClick={() => toggleRead(story.content, "mixed")}
+            onClick={() => toggleRead(readText, readModeForView)}
             className={cn(
               "flex h-8 w-8 items-center justify-center rounded-full transition-colors",
-              readMode === "mixed"
+              reading
                 ? "bg-primary text-primary-foreground"
                 : "text-muted-foreground hover:bg-accent hover:text-foreground",
             )}
-            aria-label={readMode === "mixed" ? "Dừng đọc" : "Đọc to"}
-            title={readMode === "mixed" ? "Dừng" : "Đọc to"}
+            aria-label={reading ? "Dừng đọc" : "Đọc to"}
+            title={reading ? "Dừng" : "Đọc to"}
           >
-            {readMode === "mixed" ? (
+            {reading ? (
               <Square className="h-4 w-4 fill-current" />
             ) : (
               <Volume2 className="h-4 w-4" />
@@ -174,35 +204,51 @@ export function DeckStoryPanel({ deckId, compact = false }: DeckStoryPanelProps)
         </div>
       </div>
 
+      {/* Chọn ngôn ngữ hiển thị — luôn có, kể cả trong deck */}
+      <div className={cn("px-4 pt-2.5", compact && "pb-3")}>
+        <StoryModeToggle
+          value={mode}
+          onChange={changeViewMode}
+          enAvailable={Boolean(story.contentEn?.trim())}
+          className="[&>button]:px-2.5 [&>button]:py-0.5 [&>button]:text-xs"
+        />
+      </div>
+
       {/* Thanh điều khiển phụ — chỉ ở chế độ đầy đủ (không phải trong deck) */}
       {!compact ? (
         <div className="flex flex-wrap items-center gap-1.5 px-4 pb-3 pt-2.5">
-          <Button
-            variant="outline"
-            size="sm"
-            className="h-7 rounded-full px-2.5 text-xs"
-            onClick={() => setShowMeanings((v) => !v)}
-          >
-            {showMeanings ? <EyeOff className="h-3.5 w-3.5" /> : <Eye className="h-3.5 w-3.5" />}
-            {showMeanings ? "Ẩn nghĩa" : "Nghĩa"}
-          </Button>
-          <Button
-            variant={hideWords ? "default" : "outline"}
-            size="sm"
-            className="h-7 rounded-full px-2.5 text-xs"
-            onClick={() => setHideWords((v) => !v)}
-          >
-            <Target className="h-3.5 w-3.5" />
-            {hideWords ? "Hiện" : "Ẩn từ"}
-          </Button>
+          {mode !== "vi" ? (
+            <>
+              <Button
+                variant="outline"
+                size="sm"
+                className="h-7 rounded-full px-2.5 text-xs"
+                onClick={() => setShowMeanings((v) => !v)}
+              >
+                {showMeanings ? <EyeOff className="h-3.5 w-3.5" /> : <Eye className="h-3.5 w-3.5" />}
+                {showMeanings ? "Ẩn nghĩa" : "Nghĩa"}
+              </Button>
+              <Button
+                variant={hideWords ? "default" : "outline"}
+                size="sm"
+                className="h-7 rounded-full px-2.5 text-xs"
+                onClick={() => setHideWords((v) => !v)}
+              >
+                <Target className="h-3.5 w-3.5" />
+                {hideWords ? "Hiện" : "Ẩn từ"}
+              </Button>
+            </>
+          ) : null}
           <ReadingSpeedControl rate={rate} onChange={setRate} />
         </div>
       ) : null}
 
       {/* Nội dung truyện — cuộn riêng khi dài */}
       <div className="flex-1 overflow-y-auto border-t px-4 py-4">
-        <StoryRenderer
+        <StoryViewContent
+          mode={mode}
           content={story.content}
+          contentEn={story.contentEn}
           showMeanings={showMeanings}
           hideWords={hideWords}
           favoriteWords={favoriteWords}
@@ -217,6 +263,8 @@ export function DeckStoryPanel({ deckId, compact = false }: DeckStoryPanelProps)
           onNavigate={setIndex}
           onClose={() => setFullscreen(false)}
           favoriteWords={favoriteWords}
+          viewMode={viewMode}
+          onViewModeChange={setViewMode}
         />
       ) : null}
     </div>

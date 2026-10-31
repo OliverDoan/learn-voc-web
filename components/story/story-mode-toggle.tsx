@@ -1,9 +1,9 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import type { StoryViewMode } from "@/lib/story-view";
 
-/** Chế độ hiển thị truyện: chêm (mặc định) / full tiếng Việt / full tiếng Anh. */
-export type StoryViewMode = "cham" | "vi" | "en";
+export type { StoryViewMode };
 
 const OPTIONS: { key: StoryViewMode; label: string }[] = [
   { key: "cham", label: "Chêm" },

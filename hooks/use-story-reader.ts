@@ -5,8 +5,11 @@ import { firstMeaning, parseStory } from "@/lib/story-parser";
 import { isSpeakable, speakAsync, stopSpeaking } from "@/lib/tts";
 import { useReadingRate } from "@/hooks/use-reading-rate";
 
-/** "mixed" = văn tiếng Việt + từ chêm đọc tiếng Anh; "vi" = đọc toàn bộ bằng tiếng Việt. */
-export type StoryReadMode = "mixed" | "vi";
+/**
+ * "mixed" = văn tiếng Việt + từ chêm đọc tiếng Anh; "vi" = đọc toàn bộ bằng tiếng Việt;
+ * "en" = đọc bản full tiếng Anh (khi đó `content` là văn bản tiếng Anh thuần, không markup).
+ */
+export type StoryReadMode = "mixed" | "vi" | "en";
 
 export interface StoryReader {
   /** Chế độ đang đọc, null = đang im lặng. */
@@ -62,6 +65,16 @@ export function useStoryReader(): StoryReader {
       setReadMode(mode);
 
       void (async () => {
+        if (mode === "en") {
+          // Đọc từng đoạn để có thể dừng giữa chừng khi người dùng bấm dừng/chuyển truyện.
+          for (const para of content.split(/\n+/)) {
+            if (!alive()) return;
+            const text = para.trim();
+            if (isSpeakable(text)) await speakAsync(text, "en-US", rateRef.current);
+          }
+          if (alive()) setReadMode(null);
+          return;
+        }
         for (const tok of parseStory(content)) {
           if (!alive()) return;
           if (tok.type === "text") {

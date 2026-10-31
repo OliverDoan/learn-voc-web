@@ -46,6 +46,7 @@ import { SelectionActionBar } from "@/components/deck/selection-action-bar";
 import { TestHistoryDialog } from "@/components/deck/test-history-dialog";
 import { DeckStoryPanel } from "@/components/story/deck-story-panel";
 import { useStoryPanelHidden } from "@/components/deck/use-story-panel-hidden";
+import { sortCardsByStoryOrder } from "@/lib/story-order";
 import {
   useCards,
   useDeleteCard,
@@ -96,6 +97,7 @@ export default function DeckDetailPage({ params }: PageProps) {
   const [groupByTag, setGroupByTag] = useState(false);
   const [viewMode, setViewMode] = useState<"list" | "table">("list");
   const [openHistory, setOpenHistory] = useState(false);
+  const [storyWordOrder, setStoryWordOrder] = useState<string[]>([]);
   const storyPanel = useStoryPanelHidden();
 
   // Kéo-thả sắp xếp thứ tự (chỉ khi không lọc/tìm kiếm)
@@ -205,8 +207,13 @@ export default function DeckDetailPage({ params }: PageProps) {
     !favoriteOnly &&
     !groupByTag;
 
+  // Ngoài lúc kéo-thả, thẻ xếp theo thứ tự từ xuất hiện trong truyện chêm đang xem.
+  const storySortedCards = useMemo(
+    () => sortCardsByStoryOrder(filteredCards, storyWordOrder),
+    [filteredCards, storyWordOrder],
+  );
   const displayCards =
-    canReorder && orderedCards.length > 0 ? orderedCards : filteredCards;
+    canReorder && orderedCards.length > 0 ? orderedCards : storySortedCards;
 
   // Nhóm các từ đang hiển thị theo tag chủ đề (giữ thứ tự xuất hiện của tag)
   const groupedCards = useMemo<{ tag: string; cards: CardType[] }[]>(() => {
@@ -734,7 +741,7 @@ export default function DeckDetailPage({ params }: PageProps) {
             <BookMarked className="h-4 w-4 text-primary" />
             <h2 className="text-sm font-semibold">Truyện chêm</h2>
           </div>
-          <DeckStoryPanel deckId={deckId} compact />
+          <DeckStoryPanel deckId={deckId} compact onWordOrderChange={setStoryWordOrder} />
         </aside>
       </div>
 

@@ -163,7 +163,8 @@ export function ReadingSettingsPanel(props: ReadingSettingsPanelProps) {
 
   if (!open) return null;
 
-  const chamOnly = viewMode !== "cham";
+  // Nghĩa / tập trung chỉ có ý nghĩa khi có từ tô sáng (chêm hoặc English), không áp cho full tiếng Việt.
+  const chamOnly = viewMode === "vi";
   const q = deckQuery.trim().toLowerCase();
   const filteredDecks = q ? decks.filter((d) => d.name.toLowerCase().includes(q)) : decks;
   const selectedCount = decks.filter((d) => !excludedDeckIds.has(d.id)).length;

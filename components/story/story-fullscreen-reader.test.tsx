@@ -68,6 +68,25 @@ describe("StoryFullscreenReader", () => {
     expect(onNavigate).toHaveBeenCalledWith(1);
   });
 
+  it("mặc định hiện bản tiếng Anh khi truyện có contentEn", () => {
+    const withEn = [{ ...STORIES[0], contentEn: "I like apples every morning." }, STORIES[1]];
+    renderReader({ stories: withEn });
+    // Từ vựng "apple" được tô sáng ngay trong bản tiếng Anh (dạng số nhiều "apples").
+    expect(screen.getByRole("button", { name: /apples — quả táo/ })).toBeTruthy();
+    expect(screen.getByText("Nghĩa")).toBeTruthy();
+
+    // Chuyển sang Tiếng Việt → văn xuôi thuần, ẩn nút Nghĩa.
+    fireEvent.click(screen.getByText("Tiếng Việt"));
+    expect(screen.getByText(/Tôi thích quả táo/)).toBeTruthy();
+    expect(screen.queryByText("Nghĩa")).toBeNull();
+  });
+
+  it("truyện chưa có bản tiếng Anh thì lùi về chêm", () => {
+    renderReader();
+    expect(screen.getByText("apple")).toBeTruthy();
+    expect(screen.getByText("English").closest("button")?.disabled).toBe(true);
+  });
+
   it("nút X và phím Esc đều đóng", () => {
     const { onClose } = renderReader();
     fireEvent.click(screen.getByLabelText("Đóng toàn màn hình"));
